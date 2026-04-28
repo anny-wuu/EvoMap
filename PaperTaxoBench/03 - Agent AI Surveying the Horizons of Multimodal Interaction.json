@@ -1,0 +1,1968 @@
+{
+  "track": "AI Agents",
+  "paper_title": "AGENT AI: SURVEYING THE HORIZONS OF MULTIMODAL INTERACTION",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "Introduction",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "1.1",
+          "sec_title": "Motivation",
+          "citations": [
+            {
+              "title": "GPT-4 technical report",
+              "citation": "OpenAI, 'GPT-4 technical report,' OpenAI, Tech. Rep., 2023."
+            },
+            {
+              "title": "The rise and potential of large language model based agents: A survey",
+              "citation": "Z. Xi, W. Chen, X. Guo, W. He, Y. Ding, B. Hong, M. Zhang, J. Wang, S. Jin, E. Zhou et al. , 'The rise and potential of large language model based agents: A survey,' arXiv preprint arXiv:2309.07864 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "1.2",
+          "sec_title": "Background",
+          "citations": [
+            {
+              "title": "Sparks of artificial general intelligence: Early experiments with gpt-4",
+              "citation": "S. Bubeck, V. Chandrasekaran, R. Eldan, J. Gehrke, E. Horvitz, E. Kamar, P. Lee, Y. T. Lee, Y. Li, S. Lundberg et al. , 'Sparks of artificial general intelligence: Early experiments with gpt-4,' arXiv preprint arXiv:2303.12712 , 2023."
+            },
+            {
+              "title": "Large language models as general pattern machines",
+              "citation": "S. Mirchandani, F. Xia, P. Florence, B. Ichter, D. Driess, M. G. Arenas, K. Rao, D. Sadigh, and A. Zeng, 'Large language models as general pattern machines,' arXiv preprint arXiv:2307.04721 , 2023."
+            },
+            {
+              "title": "Mathprompter: Mathematical reasoning using large language models",
+              "citation": "S. Imani, L. Du, and H. Shrivastava, 'Mathprompter: Mathematical reasoning using large language models,' arXiv preprint arXiv:2303.05398 , 2023."
+            },
+            {
+              "title": "Chain-of-thought prompting elicits reasoning in large language models",
+              "citation": "J. Wei, X. Wang, D. Schuurmans, M. Bosma, F. Xia, E. Chi, Q. V. Le, D. Zhou et al. , 'Chain-of-thought prompting elicits reasoning in large language models,' Advances in Neural Information Processing Systems , vol. 35, pp. 24 824-24 837, 2022."
+            },
+            {
+              "title": "Solving math word problem via cooperative reasoning induced language models",
+              "citation": "X. Zhu, J. Wang, L. Zhang, Y. Zhang, R. Gan, J. Zhang, and Y. Yang, 'Solving math word problem via cooperative reasoning induced language models,' arXiv preprint arXiv:2210.16257 , 2022."
+            },
+            {
+              "title": "Can gpt-3 perform statutory reasoning?",
+              "citation": "A. Blair-Stanek, N. Holzenberger, and B. Van Durme, 'Can gpt-3 perform statutory reasoning?' arXiv preprint arXiv:2302.06100 , 2023."
+            },
+            {
+              "title": "Chatgpt goes to law school",
+              "citation": "J. H. Choi, K. E. Hickman, A. Monahan, and D. Schwarcz, 'Chatgpt goes to law school,' Available at SSRN , 2023."
+            },
+            {
+              "title": "Law informs code: A legal informatics approach to aligning artificial intelligence with humans",
+              "citation": "J. J. Nay, 'Law informs code: A legal informatics approach to aligning artificial intelligence with humans,' Nw. J. Tech. &amp;Intell. Prop. , vol. 20, p. 309, 2022."
+            },
+            {
+              "title": "Code as policies: Language model programs for embodied control",
+              "citation": "J. Liang, W. Huang, F. Xia, P. Xu, K. Hausman, B. Ichter, P. Florence, and A. Zeng, 'Code as policies: Language model programs for embodied control,' in arXiv preprint arXiv:2209.07753 , 2022."
+            },
+            {
+              "title": "React: Synergizing reasoning and acting in language models",
+              "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao, 'React: Synergizing reasoning and acting in language models,' 2023."
+            },
+            {
+              "title": "Ark: Augmented reality with knowledge interactive emergent ability",
+              "citation": "Q. Huang, J. S. Park, A. Gupta, P. Bennett, R. Gong, S. Som, B. Peng, O. K. Mohammed, C. Pal, Y. Choi et al. , 'Ark: Augmented reality with knowledge interactive emergent ability,' arXiv preprint arXiv:2305.00970 , 2023."
+            },
+            {
+              "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+              "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch, 'Language models as zero-shot planners: Extracting actionable knowledge for embodied agents,' in Proceedings of the 39th International Conference on Machine Learning , ser. Proceedings of Machine Learning Research, K. Chaudhuri, S. Jegelka, L. Song, C. Szepesvari, G. Niu, and S. Sabato, Eds., vol. 162. PMLR, 17-23 Jul 2022, pp. 9118-9147. [Online]. Available: https://proceedings.mlr.press/v162/huang22a.html"
+            },
+            {
+              "title": "Voyager: An open-ended embodied agent with large language models",
+              "citation": "G. Wang, Y. Xie, Y. Jiang, A. Mandlekar, C. Xiao, Y. Zhu, L. Fan, and A. Anandkumar, 'Voyager: An open-ended embodied agent with large language models,' arXiv preprint arXiv:2305.16291 , 2023."
+            },
+            {
+              "title": "React: Synergizing reasoning and acting in language models",
+              "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao, 'React: Synergizing reasoning and acting in language models,' 2023."
+            },
+            {
+              "title": "Llava-med: Training a large language-and-vision assistant for biomedicine in one day",
+              "citation": "C. Li, C. Wong, S. Zhang, N. Usuyama, H. Liu, J. Yang, T. Naumann, H. Poon, and J. Gao, 'Llava-med: Training a large language-and-vision assistant for biomedicine in one day,' arXiv preprint arXiv:2306.00890 , 2023."
+            },
+            {
+              "title": "Do as i can, not as i say: Grounding language in robotic affordances",
+              "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, K. Gopalakrishnan, K. Hausman, A. Herzog et al. , 'Do as i can, not as i say: Grounding language in robotic affordances,' arXiv preprint arXiv:2204.01691 , 2022."
+            },
+            {
+              "title": "Inner monologue: Embodied reasoning through planning with language models",
+              "citation": "W. Huang, F. Xia, T. Xiao, H. Chan, J. Liang, P. Florence, A. Zeng, J. Tompson, I. Mordatch, Y. Chebotar, P. Sermanet, N. Brown, T. Jackson, L. Luu, S. Levine, K. Hausman, and B. Ichter, 'Inner monologue: Embodied reasoning through planning with language models,' in arXiv preprint arXiv:2207.05608 , 2022."
+            },
+            {
+              "title": "Code as policies: Language model programs for embodied control",
+              "citation": "J. Liang, W. Huang, F. Xia, P. Xu, K. Hausman, B. Ichter, P. Florence, and A. Zeng, 'Code as policies: Language model programs for embodied control,' in arXiv preprint arXiv:2209.07753 , 2022."
+            },
+            {
+              "title": "Inner monologue: Embodied reasoning through planning with language models",
+              "citation": "W. Huang, F. Xia, T. Xiao, H. Chan, J. Liang, P. Florence, A. Zeng, J. Tompson, I. Mordatch, Y. Chebotar, P. Sermanet, N. Brown, T. Jackson, L. Luu, S. Levine, K. Hausman, and B. Ichter, 'Inner monologue: Embodied reasoning through planning with language models,' in arXiv preprint arXiv:2207.05608 , 2022."
+            },
+            {
+              "title": "Code as policies: Language model programs for embodied control",
+              "citation": "J. Liang, W. Huang, F. Xia, P. Xu, K. Hausman, B. Ichter, P. Florence, and A. Zeng, 'Code as policies: Language model programs for embodied control,' in arXiv preprint arXiv:2209.07753 , 2022."
+            },
+            {
+              "title": "Retrieve what you need: A mutual learning framework for open-domain question answering",
+              "citation": "D. Wang, Q. Huang, M. Jackson, and J. Gao, 'Retrieve what you need: A mutual learning framework for open-domain question answering,' March 2023. [Online]. Available: https://www.microsoft.com/en-us/research/publication/ retrieve-what-you-need-a-mutual-learning-framework-for-open-domain-question-answering/"
+            },
+            {
+              "title": "Applying learning-from-observation to household service robots: three common-sense formulation",
+              "citation": "K. Ikeuchi, J. Takamatsu, K. Sasabuchi, N. Wake, and A. Kanehiro, 'Applying learning-from-observation to household service robots: three common-sense formulation,' arXiv preprint arXiv:2304.09966 , 2023."
+            },
+            {
+              "title": "Camel: Communicative agents for \"mind\" exploration of large scale language model society",
+              "citation": "G. Li, H. A. A. K. Hammoud, H. Itani, D. Khizbullin, and B. Ghanem, 'Camel: Communicative agents for\" mind\" exploration of large scale language model society,' arXiv preprint arXiv:2303.17760 , 2023."
+            },
+            {
+              "title": "Language to rewards for robotic skill synthesis",
+              "citation": "W. Yu, N. Gileadi, C. Fu, S. Kirmani, K.-H. Lee, M. G. Arenas, H.-T. L. Chiang, T. Erez, L. Hasenclever, J. Humplik et al. , 'Language to rewards for robotic skill synthesis,' arXiv preprint arXiv:2306.08647 , 2023."
+            },
+            {
+              "title": "Human-assisted continual robot learning with foundation models",
+              "citation": "M. Parakh, A. Fong, A. Simeonov, A. Gupta, T. Chen, and P. Agrawal, 'Human-assisted continual robot learning with foundation models,' arXiv preprint arXiv:2309.14321 , 2023."
+            },
+            {
+              "title": "Distilling and retrieving generalizable knowledge for robot manipulation via language corrections",
+              "citation": "L. Zha, Y. Cui, L.-H. Lin, M. Kwon, M. G. Arenas, A. Zeng, F. Xia, and D. Sadigh, 'Distilling and retrieving generalizable knowledge for robot manipulation via language corrections,' arXiv preprint arXiv:2311.10678 , 2023."
+            },
+            {
+              "title": "Distilling and retrieving generalizable knowledge for robot manipulation via language corrections",
+              "citation": "L. Zha, Y. Cui, L.-H. Lin, M. Kwon, M. G. Arenas, A. Zeng, F. Xia, and D. Sadigh, 'Distilling and retrieving generalizable knowledge for robot manipulation via language corrections,' arXiv preprint arXiv:2311.10678 , 2023."
+            },
+            {
+              "title": "Visual instruction tuning",
+              "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "1.3",
+          "sec_title": "Overview",
+          "citations": [],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "Agent AI Integration",
+      "citations": [
+        {
+          "title": "Ark: Augmented reality with knowledge interactive emergent ability",
+          "citation": "Q. Huang, J. S. Park, A. Gupta, P. Bennett, R. Gong, S. Som, B. Peng, O. K. Mohammed, C. Pal, Y. Choi et al. , 'Ark: Augmented reality with knowledge interactive emergent ability,' arXiv preprint arXiv:2305.00970 , 2023."
+        },
+        {
+          "title": "Agenttuning: Enabling generalized agent abilities for llms",
+          "citation": "A. Zeng, M. Liu, R. Lu, B. Wang, X. Liu, Y. Dong, and J. Tang, 'Agenttuning: Enabling generalized agent abilities for llms,' 2023."
+        },
+        {
+          "title": "The rise and potential of large language model based agents: A survey",
+          "citation": "Z. Xi, W. Chen, X. Guo, W. He, Y. Ding, B. Hong, M. Zhang, J. Wang, S. Jin, E. Zhou et al. , 'The rise and potential of large language model based agents: A survey,' arXiv preprint arXiv:2309.07864 , 2023."
+        },
+        {
+          "title": "A survey on large language model based autonomous agents",
+          "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin et al. , 'A survey on large language model based autonomous agents,' arXiv preprint arXiv:2308.11432 , 2023."
+        },
+        {
+          "title": "Mindagent: Emergent gaming interaction",
+          "citation": "R. Gong, Q. Huang, X. Ma, H. Vo, Z. Durante, Y. Noda, Z. Zheng, S.-C. Zhu, D. Terzopoulos, L. Fei-Fei et al. , 'Mindagent: Emergent gaming interaction,' arXiv preprint arXiv:2309.09971 , 2023."
+        },
+        {
+          "title": "Autogen: Enabling next-gen llm applications via multi-agent conversation",
+          "citation": "Q. Wu, G. Bansal, J. Zhang, Y. Wu, S. Zhang, E. E. Zhu, B. Li, L. Jiang, X. Zhang, and C. Wang, 'Autogen: Enabling next-gen llm applications via multi-agent conversation,' Microsoft, Tech. Rep. MSR-TR-2023-33, August 2023. [Online]. Available: https://www.microsoft.com/en-us/research/publication/ autogen-enabling-next-gen-llm-applications-via-multi-agent-conversation-framework/"
+        },
+        {
+          "title": "Ark: Augmented reality with knowledge interactive emergent ability",
+          "citation": "Q. Huang, J. S. Park, A. Gupta, P. Bennett, R. Gong, S. Som, B. Peng, O. K. Mohammed, C. Pal, Y. Choi et al. , 'Ark: Augmented reality with knowledge interactive emergent ability,' arXiv preprint arXiv:2305.00970 , 2023."
+        },
+        {
+          "title": "Ark: Augmented reality with knowledge interactive emergent ability",
+          "citation": "Q. Huang, J. S. Park, A. Gupta, P. Bennett, R. Gong, S. Som, B. Peng, O. K. Mohammed, C. Pal, Y. Choi et al. , 'Ark: Augmented reality with knowledge interactive emergent ability,' arXiv preprint arXiv:2305.00970 , 2023."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Infinite AI agent",
+          "citations": [
+            {
+              "title": "Internvid: A large-scale video-text dataset for multimodal understanding and generation",
+              "citation": "Y. Wang, Y. He, Y. Li, K. Li, J. Yu, X. Ma, X. Chen, Y. Wang, P. Luo, Z. Liu, Y . Wang, L. Wang, and Y. Qiao, 'Internvid: A large-scale video-text dataset for multimodal understanding and generation,' 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Agent AI with Large Foundation Models",
+          "citations": [
+            {
+              "title": "Zero-shot robotic manipulation with pretrained image-editing diffusion models",
+              "citation": "K. Black, M. Nakamoto, P. Atreya, H. Walke, C. Finn, A. Kumar, and S. Levine, 'Zero-shot robotic manipulation with pretrained image-editing diffusion models,' arXiv preprint arXiv:2310.10639 , 2023."
+            },
+            {
+              "title": "Learning to act from actionless videos through dense correspondences",
+              "citation": "P.-C. Ko, J. Mao, Y. Du, S.-H. Sun, and J. B. Tenenbaum, 'Learning to act from actionless videos through dense correspondences,' arXiv preprint arXiv:2310.08576 , 2023."
+            },
+            {
+              "title": "Mutex: Learning unified policies from multimodal task specifications",
+              "citation": "R. Shah, R. Martín-Martín, and Y. Zhu, 'Mutex: Learning unified policies from multimodal task specifications,' arXiv preprint arXiv:2309.14320 , 2023."
+            },
+            {
+              "title": "Generalizable long-horizon manipulations with large language models",
+              "citation": "H. Zhou, M. Ding, W. Peng, M. Tomizuka, L. Shao, and C. Gan, 'Generalizable long-horizon manipulations with large language models,' arXiv preprint arXiv:2310.02264 , 2023."
+            },
+            {
+              "title": "Zero-shot robotic manipulation with pretrained image-editing diffusion models",
+              "citation": "K. Black, M. Nakamoto, P. Atreya, H. Walke, C. Finn, A. Kumar, and S. Levine, 'Zero-shot robotic manipulation with pretrained image-editing diffusion models,' arXiv preprint arXiv:2310.10639 , 2023."
+            },
+            {
+              "title": "Mutex: Learning unified policies from multimodal task specifications",
+              "citation": "R. Shah, R. Martín-Martín, and Y. Zhu, 'Mutex: Learning unified policies from multimodal task specifications,' arXiv preprint arXiv:2309.14320 , 2023."
+            },
+            {
+              "title": "Flame: Free-form language-based motion synthesis & editing",
+              "citation": "J. Kim, J. Kim, and S. Choi, 'Flame: Free-form language-based motion synthesis &amp; editing,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 37, no. 7, 2023, pp. 8255-8263."
+            },
+            {
+              "title": "Motiondiffuse: Text-driven human motion generation with diffusion model",
+              "citation": "M. Zhang, Z. Cai, L. Pan, F. Hong, X. Guo, L. Yang, and Z. Liu, 'Motiondiffuse: Text-driven human motion generation with diffusion model,' arXiv preprint arXiv:2208.15001 , 2022."
+            },
+            {
+              "title": "Human motion diffusion model",
+              "citation": "G. Tevet, S. Raab, B. Gordon, Y. Shafir, D. Cohen-Or, and A. H. Bermano, 'Human motion diffusion model,' arXiv preprint arXiv:2209.14916 , 2022."
+            },
+            {
+              "title": "Humanise: Language-conditioned human motion generation in 3d scenes",
+              "citation": "Z. Wang, Y. Chen, T. Liu, Y. Zhu, W. Liang, and S. Huang, 'Humanise: Language-conditioned human motion generation in 3d scenes,' in Advances in Neural Information Processing Systems , S. Koyejo, S. Mohamed, A. Agarwal, D. Belgrave, K. Cho, and A. Oh, Eds., vol. 35. Curran Associates, Inc., 2022, pp. 14959-14971. [Online]. Available: https://proceedings.neurips.cc/paper\\_files/paper/2022/file/ 6030db5195150ac86d942186f4abdad8-Paper-Conference.pdf"
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "2.2.1",
+              "sec_title": "Hallucinations",
+              "citations": [
+                {
+                  "title": "The curious case of hallucinations in neural machine translation",
+                  "citation": "V. Raunak, A. Menezes, and M. Junczys-Dowmunt, 'The curious case of hallucinations in neural machine translation,' arXiv preprint arXiv:2104.06683 , 2021."
+                },
+                {
+                  "title": "On faithfulness and factuality in abstractive summarization",
+                  "citation": "J. Maynez, S. Narayan, B. Bohnet, and R. McDonald, 'On faithfulness and factuality in abstractive summarization,' in Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics , D. Jurafsky, J. Chai, N. Schluter, and J. Tetreault, Eds. Online: Association for Computational Linguistics, Jul. 2020, pp. 1906-1919. [Online]. Available: https://aclanthology.org/2020.acl-main.173"
+                },
+                {
+                  "title": "Survey of hallucination in natural language generation",
+                  "citation": "Z. Ji, N. Lee, R. Frieske, T. Yu, D. Su, Y . Xu, E. Ishii, Y . J. Bang, A. Madotto, and P. Fung, 'Survey of hallucination in natural language generation,' ACM Computing Surveys , vol. 55, no. 12, pp. 1-38, 2023."
+                },
+                {
+                  "title": "Retrieval-augmented generation for knowledge-intensive nlp tasks",
+                  "citation": "P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. Küttler, M. Lewis, W.-t. Yih, T. Rocktäschel et al., 'Retrieval-augmented generation for knowledge-intensive nlp tasks,' Advances in Neural Information Processing Systems, vol. 33, pp. 9459-9474, 2020."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.2",
+              "sec_title": "Biases and Inclusivity",
+              "citations": [
+                {
+                  "title": "The weirdest people in the world?",
+                  "citation": "J. Henrich, S. J. Heine, and A. Norenzayan, 'The weirdest people in the world?' Behavioral and Brain Sciences , vol. 33, no. 2-3, p. 61-83, 2010."
+                },
+                {
+                  "title": "Dada: Dialect adaptation via dynamic aggregation of linguistic rules",
+                  "citation": "Y. Liu, W. Held, and D. Yang, 'Dada: Dialect adaptation via dynamic aggregation of linguistic rules,' in Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.3",
+              "sec_title": "Data Privacy and Usage",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.4",
+              "sec_title": "Interpretability and Explainability",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.5",
+              "sec_title": "Inference Augmentation",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.6",
+              "sec_title": "Regulation",
+              "citations": [
+                {
+                  "title": "Generating executable action plans with environmentally-aware language models",
+                  "citation": "M. Gramopadhye and D. Szafir, 'Generating executable action plans with environmentally-aware language models,' arXiv preprint arXiv:2210.04964 , 2022."
+                },
+                {
+                  "title": "Interactive task encoding system for learning-from-observation",
+                  "citation": "N. Wake, A. Kanehira, K. Sasabuchi, J. Takamatsu, and K. Ikeuchi, 'Interactive task encoding system for learning-from-observation,' in 2023 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), 2023, pp. 1061-1066."
+                },
+                {
+                  "title": "Minsky's frame system theory",
+                  "citation": "M. L. Minsky, 'Minsky's frame system theory,' in Proceedings of the 1975 Workshop on Theoretical Issues in Natural Language Processing , ser. TINLAP '75. USA: Association for Computational Linguistics, 1975, p. 104-116. [Online]. Available: https://doi.org/10.3115/980190.980222"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.3",
+          "sec_title": "Agent AI for Emergent Abilities",
+          "citations": [],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "Agent AI Paradigm",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "LLMs and VLMs",
+          "citations": [
+            {
+              "title": "Mindagent: Emergent gaming interaction",
+              "citation": "R. Gong, Q. Huang, X. Ma, H. Vo, Z. Durante, Y. Noda, Z. Zheng, S.-C. Zhu, D. Terzopoulos, L. Fei-Fei et al. , 'Mindagent: Emergent gaming interaction,' arXiv preprint arXiv:2309.09971 , 2023."
+            },
+            {
+              "title": "Kola: Carefully benchmarking world knowledge of large language models",
+              "citation": "J. Yu, X. Wang, S. Tu, S. Cao, D. Zhang-Li, X. Lv, H. Peng, Z. Yao, X. Zhang, H. Li et al., 'Kola: Carefully benchmarking world knowledge of large language models,' arXiv preprint arXiv:2306.09296, 2023."
+            },
+            {
+              "title": "Selection-inference: Exploiting large language models for interpretable logical reasoning",
+              "citation": "A. Creswell, M. Shanahan, and I. Higgins, 'Selection-inference: Exploiting large language models for interpretable logical reasoning,' arXiv preprint arXiv:2205.09712 , 2022."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark et al. , 'Learning transferable visual models from natural language supervision,' in International conference on machine learning . PMLR, 2021, pp. 8748-8763."
+            },
+            {
+              "title": "Visual instruction tuning",
+              "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' arXiv preprint arXiv:2304.08485, 2023."
+            },
+            {
+              "title": "Instructblip: Towards generalpurpose vision-language models with instruction tuning",
+              "citation": "W. Dai, J. Li, D. Li, A. M. H. Tiong, J. Zhao, W. Wang, B. Li, P. Fung, and S. Hoi, 'Instructblip: Towards generalpurpose vision-language models with instruction tuning,' 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Agent Transformer Definition",
+          "citations": [
+            {
+              "title": "A generalist agent",
+              "citation": "S. Reed, K. Zolna, E. Parisotto, S. G. Colmenarejo, A. Novikov, G. Barth-Maron, M. Gimenez, Y. Sulsky, J. Kay, J. T. Springenberg et al. , 'A generalist agent,' arXiv preprint arXiv:2205.06175 , 2022."
+            },
+            {
+              "title": "Flamingo: a visual language model for few-shot learning",
+              "citation": "J.-B. Alayrac, J. Donahue, P. Luc, A. Miech, I. Barr, Y. Hasson, K. Lenc, A. Mensch, K. Millican, M. Reynolds et al. , 'Flamingo: a visual language model for few-shot learning,' Advances in Neural Information Processing Systems , vol. 35, pp. 23 716-23 736, 2022."
+            },
+            {
+              "title": "Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models",
+              "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,' arXiv preprint arXiv:2301.12597 , 2023."
+            },
+            {
+              "title": "Instructblip: Towards generalpurpose vision-language models with instruction tuning",
+              "citation": "W. Dai, J. Li, D. Li, A. M. H. Tiong, J. Zhao, W. Wang, B. Li, P. Fung, and S. Hoi, 'Instructblip: Towards generalpurpose vision-language models with instruction tuning,' 2023."
+            },
+            {
+              "title": "Visual instruction tuning",
+              "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' arXiv preprint arXiv:2304.08485, 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "Agent Transformer Creation",
+          "citations": [],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "Agent AI Learning",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Strategy and Mechanism",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Reinforcement Learning (RL)",
+              "citations": [
+                {
+                  "title": "Language to rewards for robotic skill synthesis",
+                  "citation": "W. Yu, N. Gileadi, C. Fu, S. Kirmani, K.-H. Lee, M. G. Arenas, H.-T. L. Chiang, T. Erez, L. Hasenclever, J. Humplik et al. , 'Language to rewards for robotic skill synthesis,' arXiv preprint arXiv:2306.08647 , 2023."
+                },
+                {
+                  "title": "Gen2sim: Scaling up robot learning in simulation with generative models",
+                  "citation": "P. Katara, Z. Xian, and K. Fragkiadaki, 'Gen2sim: Scaling up robot learning in simulation with generative models,' arXiv preprint arXiv:2310.18308 , 2023."
+                },
+                {
+                  "title": "Eureka: Human-level reward design via coding large language models",
+                  "citation": "Y. J. Ma, W. Liang, G. Wang, D.-A. Huang, O. Bastani, D. Jayaraman, Y. Zhu, L. Fan, and A. Anandkumar, 'Eureka: Human-level reward design via coding large language models,' arXiv preprint arXiv:2310.12931 , 2023."
+                },
+                {
+                  "title": "Open x-embodiment: Robotic learning datasets and rt-x models",
+                  "citation": "A. Padalkar, A. Pooley, A. Jain, A. Bewley, A. Herzog, A. Irpan, A. Khazatsky, A. Rai, A. Singh, A. Brohan et al. , 'Open x-embodiment: Robotic learning datasets and rt-x models,' arXiv preprint arXiv:2310.08864 , 2023."
+                },
+                {
+                  "title": "Words into action: Learning diverse humanoid robot behaviors using language guided iterative motion refinement",
+                  "citation": "K. N. Kumar, I. Essa, and S. Ha, 'Words into action: Learning diverse humanoid robot behaviors using language guided iterative motion refinement,' arXiv preprint arXiv:2310.06226 , 2023."
+                },
+                {
+                  "title": "Video language planning",
+                  "citation": "Y. Du, M. Yang, P. Florence, F. Xia, A. Wahid, B. Ichter, P. Sermanet, T. Yu, P. Abbeel, J. B. Tenenbaum et al. , 'Video language planning,' arXiv preprint arXiv:2310.10625 , 2023."
+                },
+                {
+                  "title": "Roboclip: One demonstration is enough to learn robot policies",
+                  "citation": "S. A. Sontakke, J. Zhang, S. M. Arnold, K. Pertsch, E. Bıyık, D. Sadigh, C. Finn, and L. Itti, 'Roboclip: One demonstration is enough to learn robot policies,' arXiv preprint arXiv:2310.07899 , 2023."
+                },
+                {
+                  "title": "Graspgpt: Leveraging semantic knowledge from a large language model for task-oriented grasping",
+                  "citation": "C. Tang, D. Huang, W. Ge, W. Liu, and H. Zhang, 'Graspgpt: Leveraging semantic knowledge from a large language model for task-oriented grasping,' IEEE Robotics and Automation Letters , 2023."
+                },
+                {
+                  "title": "Mastering robot manipulation with multimodal prompts through pretraining and multi-task fine-tuning",
+                  "citation": "J. Li, Q. Gao, M. Johnston, X. Gao, X. He, S. Shakiah, H. Shi, R. Ghanadan, and W. Y. Wang, 'Mastering robot manipulation with multimodal prompts through pretraining and multi-task fine-tuning,' arXiv preprint arXiv:2310.09676 , 2023."
+                },
+                {
+                  "title": "Unleashing the power of pre-trained language models for offline reinforcement learning",
+                  "citation": "R. Shi, Y. Liu, Y. Ze, S. S. Du, and H. Xu, 'Unleashing the power of pre-trained language models for offline reinforcement learning,' arXiv preprint arXiv:2310.20587 , 2023."
+                },
+                {
+                  "title": "Learning-from-observation system considering hardware-level reusability",
+                  "citation": "J. Takamatsu, K. Sasabuchi, N. Wake, A. Kanehira, and K. Ikeuchi, 'Learning-from-observation system considering hardware-level reusability,' arXiv preprint arXiv:2212.09242 , 2022."
+                },
+                {
+                  "title": "Integrated task and motion planning",
+                  "citation": "C. R. Garrett, R. Chitnis, R. Holladay, B. Kim, T. Silver, L. P. Kaelbling, and T. Lozano-Pérez, 'Integrated task and motion planning,' Annual review of control, robotics, and autonomous systems , vol. 4, pp. 265-293, 2021."
+                },
+                {
+                  "title": "Creative robot tool use with large language models",
+                  "citation": "M. Xu, P. Huang, W. Yu, S. Liu, X. Zhang, Y. Niu, T. Zhang, F. Xia, J. Tan, and D. Zhao, 'Creative robot tool use with large language models,' arXiv preprint arXiv:2310.13065 , 2023."
+                },
+                {
+                  "title": "Eva-clip: Improved training techniques for clip at scale",
+                  "citation": "Q. Sun, Y. Fang, L. Wu, X. Wang, and Y. Cao, 'Eva-clip: Improved training techniques for clip at scale,' arXiv preprint arXiv:2303.15389 , 2023."
+                },
+                {
+                  "title": "Camel: Communicative agents for \"mind\" exploration of large scale language model society",
+                  "citation": "G. Li, H. A. A. K. Hammoud, H. Itani, D. Khizbullin, and B. Ghanem, 'Camel: Communicative agents for\" mind\" exploration of large scale language model society,' arXiv preprint arXiv:2303.17760 , 2023."
+                },
+                {
+                  "title": "Human-assisted continual robot learning with foundation models",
+                  "citation": "M. Parakh, A. Fong, A. Simeonov, A. Gupta, T. Chen, and P. Agrawal, 'Human-assisted continual robot learning with foundation models,' arXiv preprint arXiv:2309.14321 , 2023."
+                },
+                {
+                  "title": "Interactive task encoding system for learning-from-observation",
+                  "citation": "N. Wake, A. Kanehira, K. Sasabuchi, J. Takamatsu, and K. Ikeuchi, 'Interactive task encoding system for learning-from-observation,' in 2023 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), 2023, pp. 1061-1066."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.2",
+              "sec_title": "Imitation Learning (IL)",
+              "citations": [
+                {
+                  "title": "Rt-1: Robotics transformer for real-world control at scale",
+                  "citation": "A. Brohan, N. Brown, J. Carbajal, Y. Chebotar, J. Dabis, C. Finn, K. Gopalakrishnan, K. Hausman, A. Herzog, J. Hsu et al. , 'Rt-1: Robotics transformer for real-world control at scale,' arXiv preprint arXiv:2212.06817 , 2022."
+                },
+                {
+                  "title": "Rt-2: Vision-language-action models transfer web knowledge to robotic control",
+                  "citation": "A. Brohan, N. Brown, J. Carbajal, Y. Chebotar, X. Chen, K. Choromanski, T. Ding, D. Driess, A. Dubey, C. Finn et al. , 'Rt-2: Vision-language-action models transfer web knowledge to robotic control,' arXiv preprint arXiv:2307.15818 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.3",
+              "sec_title": "Traditional RGB",
+              "citations": [
+                {
+                  "title": "Human-level control through deep reinforcement learning",
+                  "citation": "V. Mnih, K. Kavukcuoglu, D. Silver, A. A. Rusu, J. Veness, M. G. Bellemare, A. Graves, M. Riedmiller, A. K. Fidjeland, G. Ostrovski et al., 'Human-level control through deep reinforcement learning,' Nature, vol. 518, no. 7540, pp. 529-533, 2015."
+                },
+                {
+                  "title": "Bc-z: Zero-shot task generalization with robotic imitation learning",
+                  "citation": "E. Jang, A. Irpan, M. Khansari, D. Kappler, F. Ebert, C. Lynch, S. Levine, and C. Finn, 'Bc-z: Zero-shot task generalization with robotic imitation learning,' in Conference on Robot Learning . PMLR, 2022, pp. 991-1002."
+                },
+                {
+                  "title": "Scaling up and distilling down: Language-guided robot skill acquisition",
+                  "citation": "H. Ha, P. Florence, and S. Song, 'Scaling up and distilling down: Language-guided robot skill acquisition,' arXiv preprint arXiv:2307.14535 , 2023."
+                },
+                {
+                  "title": "Transporter networks: Rearranging the visual world for robotic manipulation",
+                  "citation": "A. Zeng, P. Florence, J. Tompson, S. Welker, J. Chien, M. Attarian, T. Armstrong, I. Krasin, D. Duong, V. Sindhwani et al. , 'Transporter networks: Rearranging the visual world for robotic manipulation,' in Conference on Robot Learning . PMLR, 2021, pp. 726-747."
+                },
+                {
+                  "title": "Perceiver-actor: A multi-task transformer for robotic manipulation",
+                  "citation": "M. Shridhar, L. Manuelli, and D. Fox, 'Perceiver-actor: A multi-task transformer for robotic manipulation,' in Conference on Robot Learning . PMLR, 2023, pp. 785-799."
+                },
+                {
+                  "title": "Rvt: Robotic view transformer for 3d object manipulation",
+                  "citation": "A. Goyal, J. Xu, Y. Guo, V. Blukis, Y.-W. Chao, and D. Fox, 'Rvt: Robotic view transformer for 3d object manipulation,' arXiv preprint arXiv:2306.14896 , 2023."
+                },
+                {
+                  "title": "Q-attention: Enabling efficient learning for vision-based robotic manipulation",
+                  "citation": "S. James and A. J. Davison, Q-attention: Enabling efficient learning for vision-based robotic manipulation, IEEE Robotics and Automation Letters, vol. 7, no. 2, pp. 1612-1619, 2022."
+                },
+                {
+                  "title": "Nerf-slam: Real-time dense monocular slam with neural radiance fields",
+                  "citation": "A. Rosinol, J. J. Leonard, and L. Carlone, 'Nerf-slam: Real-time dense monocular slam with neural radiance fields,' arXiv preprint arXiv:2210.13641 , 2022."
+                },
+                {
+                  "title": "Maniskill: Generalizable manipulation skill benchmark with large-scale demonstrations",
+                  "citation": "T. Mu, Z. Ling, F. Xiang, D. Yang, X. Li, S. Tao, Z. Huang, Z. Jia, and H. Su, 'Maniskill: Generalizable manipulation skill benchmark with large-scale demonstrations,' arXiv preprint arXiv:2107.14483 , 2021."
+                },
+                {
+                  "title": "Arnold: A benchmark for language-grounded task learning with continuous states in realistic 3D scenes",
+                  "citation": "R. Gong, J. Huang, Y. Zhao, H. Geng, X. Gao, Q. Wu, W. Ai, Z. Zhou, D. Terzopoulos, S.-C. Zhu et al., 'Arnold: A benchmark for language-grounded task learning with continuous states in realistic 3D scenes,' in Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2023."
+                },
+                {
+                  "title": "Domain randomization for transferring deep neural networks from simulation to the real world",
+                  "citation": "J. Tobin, R. Fong, A. Ray, J. Schneider, W. Zaremba, and P. Abbeel, 'Domain randomization for transferring deep neural networks from simulation to the real world,' in 2017 IEEE/RSJ international conference on intelligent robots and systems (IROS) . IEEE, 2017, pp. 23-30."
+                },
+                {
+                  "title": "Cad2rl: Real single-image flight without a single real image",
+                  "citation": "F. Sadeghi and S. Levine, 'Cad2rl: Real single-image flight without a single real image,' arXiv preprint arXiv:1611.04201 , 2016."
+                },
+                {
+                  "title": "Sim-to-real transfer of robotic control with dynamics randomization",
+                  "citation": "X. B. Peng, M. Andrychowicz, W. Zaremba, and P. Abbeel, 'Sim-to-real transfer of robotic control with dynamics randomization,' in 2018 IEEE international conference on robotics and automation (ICRA) . IEEE, 2018, pp. 3803-3810."
+                },
+                {
+                  "title": "Open x-embodiment: Robotic learning datasets and rt-x models",
+                  "citation": "A. Padalkar, A. Pooley, A. Jain, A. Bewley, A. Herzog, A. Irpan, A. Khazatsky, A. Rai, A. Singh, A. Brohan et al. , 'Open x-embodiment: Robotic learning datasets and rt-x models,' arXiv preprint arXiv:2310.08864 , 2023."
+                },
+                {
+                  "title": "Rt-2: Vision-language-action models transfer web knowledge to robotic control",
+                  "citation": "A. Brohan, N. Brown, J. Carbajal, Y. Chebotar, X. Chen, K. Choromanski, T. Ding, D. Driess, A. Dubey, C. Finn et al. , 'Rt-2: Vision-language-action models transfer web knowledge to robotic control,' arXiv preprint arXiv:2307.15818 , 2023."
+                },
+                {
+                  "title": "Transporter networks: Rearranging the visual world for robotic manipulation",
+                  "citation": "A. Zeng, P. Florence, J. Tompson, S. Welker, J. Chien, M. Attarian, T. Armstrong, I. Krasin, D. Duong, V. Sindhwani et al. , 'Transporter networks: Rearranging the visual world for robotic manipulation,' in Conference on Robot Learning . PMLR, 2021, pp. 726-747."
+                },
+                {
+                  "title": "Rl-cyclegan: Reinforcement learning aware simulation-to-real",
+                  "citation": "K. Rao, C. Harris, A. Irpan, S. Levine, J. Ibarz, and M. Khansari, 'Rl-cyclegan: Reinforcement learning aware simulation-to-real,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 11 157-11 166."
+                },
+                {
+                  "title": "Learning agile soccer skills for a bipedal robot with deep reinforcement learning",
+                  "citation": "T. Haarnoja, B. Moran, G. Lever, S. H. Huang, D. Tirumala, M. Wulfmeier, J. Humplik, S. Tunyasuvunakool, N. Y. Siegel, R. Hafner et al. , 'Learning agile soccer skills for a bipedal robot with deep reinforcement learning,' arXiv preprint arXiv:2304.13653 , 2023."
+                },
+                {
+                  "title": "Steve-1: A generative model for text-to-behavior in minecraft",
+                  "citation": "S. Lifshitz, K. Paster, H. Chan, J. Ba, and S. McIlraith, 'Steve-1: A generative model for text-to-behavior in minecraft,' arXiv preprint arXiv:2306.00937 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.4",
+              "sec_title": "In-context Learning",
+              "citations": [
+                {
+                  "title": "Language models are few-shot learners",
+                  "citation": "T. B. Brown, B. Mann, N. Ryder, M. Subbiah, J. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell et al., 'Language models are few-shot learners,' Advances in Neural Information Processing Systems, vol. 33, pp. 1877-1901, 2020."
+                },
+                {
+                  "title": "Rethinking the role of demonstrations: What makes in-context learning work?",
+                  "citation": "S. Min, X. Lyu, A. Holtzman, M. Artetxe, M. Lewis, H. Hajishirzi, and L. Zettlemoyer, 'Rethinking the role of demonstrations: What makes in-context learning work?' arXiv preprint arXiv:2202.12837 , 2022."
+                },
+                {
+                  "title": "How do in-context examples affect compositional generalization?",
+                  "citation": "S. An, Z. Lin, Q. Fu, B. Chen, N. Zheng, J.-G. Lou, and D. Zhang, 'How do in-context examples affect compositional generalization?' arXiv preprint arXiv:2305.04835 , 2023."
+                },
+                {
+                  "title": "A survey for in-context learning",
+                  "citation": "Q. Dong, L. Li, D. Dai, C. Zheng, Z. Wu, B. Chang, X. Sun, J. Xu, and Z. Sui, 'A survey for in-context learning,' arXiv preprint arXiv:2301.00234 , 2022."
+                },
+                {
+                  "title": "Flamingo: a visual language model for few-shot learning",
+                  "citation": "J.-B. Alayrac, J. Donahue, P. Luc, A. Miech, I. Barr, Y. Hasson, K. Lenc, A. Mensch, K. Millican, M. Reynolds et al. , 'Flamingo: a visual language model for few-shot learning,' Advances in Neural Information Processing Systems , vol. 35, pp. 23 716-23 736, 2022."
+                },
+                {
+                  "title": "Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models",
+                  "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,' arXiv preprint arXiv:2301.12597 , 2023."
+                },
+                {
+                  "title": "Mindagent: Emergent gaming interaction",
+                  "citation": "R. Gong, Q. Huang, X. Ma, H. Vo, Z. Durante, Y. Noda, Z. Zheng, S.-C. Zhu, D. Terzopoulos, L. Fei-Fei et al. , 'Mindagent: Emergent gaming interaction,' arXiv preprint arXiv:2309.09971 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.5",
+              "sec_title": "Optimization in the Agent System",
+              "citations": [
+                {
+                  "title": "An extensible, data-oriented architecture for high-performance, many-world simulation",
+                  "citation": "B. Shacklett, L. G. Rosenzweig, Z. Xie, B. Sarkar, A. Szot, E. Wijmans, V. Koltun, D. Batra, and K. Fatahalian, 'An extensible, data-oriented architecture for high-performance, many-world simulation,' ACM Trans. Graph. , vol. 42, no. 4, 2023."
+                },
+                {
+                  "title": "Adversarial diversity in hanabi",
+                  "citation": "B. Cui, A. Lupu, S. Sokota, H. Hu, D. J. Wu, and J. N. Foerster, 'Adversarial diversity in hanabi,' in The Eleventh International Conference on Learning Representations , 2023. [Online]. Available: https://openreview.net/forum?id=uLE3WF3-H\\_5"
+                },
+                {
+                  "title": "Diverse conventions for human-AI collaboration",
+                  "citation": "B. Sarkar, A. Shih, and D. Sadigh, 'Diverse conventions for human-AI collaboration,' in Thirty-seventh Conference on Neural Information Processing Systems , 2023."
+                },
+                {
+                  "title": "Analyzing and mitigating object hallucination in large vision-language models",
+                  "citation": "Y. Zhou, C. Cui, J. Yoon, L. Zhang, Z. Deng, C. Finn, M. Bansal, and H. Yao, 'Analyzing and mitigating object hallucination in large vision-language models,' arXiv preprint arXiv:2310.00754, 2023."
+                },
+                {
+                  "title": "Dynamic planning with a llm",
+                  "citation": "G. Dagan, F. Keller, and A. Lascarides, 'Dynamic planning with a llm,' arXiv preprint arXiv:2308.06391 , 2023."
+                },
+                {
+                  "title": "React: Synergizing reasoning and acting in language models",
+                  "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao, 'React: Synergizing reasoning and acting in language models,' 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Agent Systems (zero-shot and few-shot level)",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.2.1",
+              "sec_title": "Agent Modules",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.2",
+              "sec_title": "Agent Infrastructure",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.3",
+          "sec_title": "Agentic Foundation Models (pretraining and finetune level)",
+          "citations": [
+            {
+              "title": "Mutex: Learning unified policies from multimodal task specifications",
+              "citation": "R. Shah, R. Martín-Martín, and Y. Zhu, 'Mutex: Learning unified policies from multimodal task specifications,' arXiv preprint arXiv:2309.14320 , 2023."
+            },
+            {
+              "title": "Detecting twenty-thousand classes using image-level supervision",
+              "citation": "X. Zhou, R. Girdhar, A. Joulin, P. Krähenbühl, and I. Misra, 'Detecting twenty-thousand classes using image-level supervision,' in ECCV , 2022."
+            },
+            {
+              "title": "GPT models meet robotic applications: Co-speech gesturing chat system",
+              "citation": "N. Wake, 'GPT models meet robotic applications: Co-speech gesturing chat system,' arXiv preprint arXiv:2306.01741, 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "Agent AI Categorization",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "Generalist Agent Areas",
+          "citations": [
+            {
+              "title": "Mindagent: Emergent gaming interaction",
+              "citation": "R. Gong, Q. Huang, X. Ma, H. Vo, Z. Durante, Y. Noda, Z. Zheng, S.-C. Zhu, D. Terzopoulos, L. Fei-Fei et al. , 'Mindagent: Emergent gaming interaction,' arXiv preprint arXiv:2309.09971 , 2023."
+            },
+            {
+              "title": "MOMA-LRG: Language-refined graphs for multi-object multi-actor activity parsing",
+              "citation": "Z. Luo, Z. Durante, L. Li, W. Xie, R. Liu, E. Jin, Z. Huang, L. Y. Li, J. Wu, J. C. Niebles et al., 'MOMA-LRG: Language-refined graphs for multi-object multi-actor activity parsing,' Advances in Neural Information Processing Systems, vol. 35, pp. 5282-5298, 2022."
+            },
+            {
+              "title": "Do as i can, not as i say: Grounding language in robotic affordances",
+              "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, K. Gopalakrishnan, K. Hausman, A. Herzog et al., 'Do as i can, not as i say: Grounding language in robotic affordances,' arXiv preprint arXiv:2204.01691, 2022."
+            },
+            {
+              "title": "Rt-2: Vision-language-action models transfer web knowledge to robotic control",
+              "citation": "A. Brohan, N. Brown, J. Carbajal, Y. Chebotar, X. Chen, K. Choromanski, T. Ding, D. Driess, A. Dubey, C. Finn et al. , 'Rt-2: Vision-language-action models transfer web knowledge to robotic control,' arXiv preprint arXiv:2307.15818 , 2023."
+            },
+            {
+              "title": "Check your facts and try again: Improving large language models with external knowledge and automated feedback",
+              "citation": "B. Peng, M. Galley, P. He, H. Cheng, Y. Xie, Y. Hu, Q. Huang, L. Liden, Z. Yu, W. Chen et al. , 'Check your facts and try again: Improving large language models with external knowledge and automated feedback,' arXiv preprint arXiv:2302.12813 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Embodied Agents",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "5.2.1",
+              "sec_title": "Action Agents",
+              "citations": [
+                {
+                  "title": "Multimodal agent - localized symbolic knowledge distillation for visual commonsense models",
+                  "citation": "J. S. Park, J. Hessel, K. Chandu, P. P. Liang, X. Lu, P. West, Q. Huang, J. Gao, A. Farhadi, and Y. Choi, 'Multimodal agent - localized symbolic knowledge distillation for visual commonsense models,' in NeurIPS 2023 , October 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.2.2",
+              "sec_title": "Interactive Agents",
+              "citations": [
+                {
+                  "title": "Benefits, limits, and risks of gpt-4 as an ai chatbot for medicine",
+                  "citation": "P. Lee, S. Bubeck, and J. Petro, 'Benefits, limits, and risks of gpt-4 as an ai chatbot for medicine,' New England Journal of Medicine, vol. 388, no. 13, pp. 1233-1239, 2023."
+                },
+                {
+                  "title": "Check your facts and try again: Improving large language models with external knowledge and automated feedback",
+                  "citation": "B. Peng, M. Galley, P. He, H. Cheng, Y. Xie, Y. Hu, Q. Huang, L. Liden, Z. Yu, W. Chen et al. , 'Check your facts and try again: Improving large language models with external knowledge and automated feedback,' arXiv preprint arXiv:2302.12813 , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.3",
+          "sec_title": "Simulation and Environments Agents",
+          "citations": [
+            {
+              "title": "Scalable deep reinforcement learning for vision-based robotic manipulation",
+              "citation": "D. Kalashnikov, A. Irpan, P. Pastor, J. Ibarz, A. Herzog, E. Jang, D. Quillen, E. Holly, M. Kalakrishnan, V. Vanhoucke et al. , 'Scalable deep reinforcement learning for vision-based robotic manipulation,' in Conference on Robot Learning . PMLR, 2018, pp. 651-673."
+            },
+            {
+              "title": "Sean 2.0: Formalizing and generating social situations for robot navigation",
+              "citation": "N. Tsoi, A. Xiang, P. Yu, S. S. Sohn, G. Schwartz, S. Ramesh, M. Hussein, A. W. Gupta, M. Kapadia, and M. Vázquez, 'Sean 2.0: Formalizing and generating social situations for robot navigation,' IEEE Robotics and Automation Letters , vol. 7, no. 4, pp. 11 047-11 054, 2022."
+            },
+            {
+              "title": "Robothor: An open simulation-to-real embodied ai platform",
+              "citation": "M. Deitke, W. Han, A. Herrasti, A. Kembhavi, E. Kolve, R. Mottaghi, J. Salvador, D. Schwenk, E. VanderBilt, M. Wallingford et al. , 'Robothor: An open simulation-to-real embodied ai platform,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2020, pp. 3164-3174."
+            },
+            {
+              "title": "Ai2-thor: An interactive 3d environment for visual ai",
+              "citation": "E. Kolve, R. Mottaghi, W. Han, E. VanderBilt, L. Weihs, A. Herrasti, M. Deitke, K. Ehsani, D. Gordon, Y. Zhu et al. , 'Ai2-thor: An interactive 3d environment for visual ai,' arXiv preprint arXiv:1712.05474 , 2017."
+            },
+            {
+              "title": "Internvid: A large-scale video-text dataset for multimodal understanding and generation",
+              "citation": "Y. Wang, Y. He, Y. Li, K. Li, J. Yu, X. Ma, X. Chen, Y. Wang, P. Luo, Z. Liu, Y . Wang, L. Wang, and Y. Qiao, 'Internvid: A large-scale video-text dataset for multimodal understanding and generation,' 2023."
+            },
+            {
+              "title": "CALVIN: A benchmark for language-conditioned policy learning for long-horizon robot manipulation tasks",
+              "citation": "O. Mees, L. Hermann, E. Rosete-Beas, and W. Burgard, 'CALVIN: A benchmark for language-conditioned policy learning for long-horizon robot manipulation tasks,' IEEE Robotics and Automation Letters, vol. 7, no. 3, pp. 7327-7334, 2022."
+            },
+            {
+              "title": "On the evaluations of chatgpt and emotion-enhanced prompting for mental health analysis",
+              "citation": "K. Yang, S. Ji, T. Zhang, Q. Xie, and S. Ananiadou, 'On the evaluations of chatgpt and emotion-enhanced prompting for mental health analysis,' arXiv preprint arXiv:2304.03347 , 2023."
+            },
+            {
+              "title": "Manipulathor: A framework for visual object manipulation",
+              "citation": "K. Ehsani, W. Han, A. Herrasti, E. VanderBilt, L. Weihs, E. Kolve, A. Kembhavi, and R. Mottaghi, 'Manipulathor: A framework for visual object manipulation,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2021, pp. 4497-4506."
+            },
+            {
+              "title": "Habitat: A platform for embodied ai research",
+              "citation": "M. Savva, A. Kadian, O. Maksymets, Y. Zhao, E. Wijmans, B. Jain, J. Straub, J. Liu, V. Koltun, J. Malik et al. , 'Habitat: A platform for embodied ai research,' in Proceedings of the IEEE/CVF international conference on computer vision , 2019, pp. 9339-9347."
+            },
+            {
+              "title": "Habitat 2.0: Training home assistants to rearrange their habitat",
+              "citation": "A. Szot, A. Clegg, E. Undersander, E. Wijmans, Y. Zhao, J. Turner, N. Maestre, M. Mukadam, D. Chaplot, O. Maksymets, A. Gokaslan, V. Vondrus, S. Dharur, F. Meier, W. Galuba, A. Chang, Z. Kira, V. Koltun, J. Malik, M. Savva, and D. Batra, 'Habitat 2.0: Training home assistants to rearrange their habitat,' in Advances in Neural Information Processing Systems (NeurIPS) , 2021."
+            },
+            {
+              "title": "Virtualhome: Simulating household activities via programs",
+              "citation": "X. Puig, K. Ra, M. Boben, J. Li, T. Wang, S. Fidler, and A. Torralba, 'Virtualhome: Simulating household activities via programs,' in 2018 IEEE International Conference on Computer Vision and Pattern Recognition (CVPR) , 2018, pp. 8494-8502."
+            },
+            {
+              "title": "On the utility of learning about humans for human-ai coordination",
+              "citation": "M. Carroll, R. Shah, M. K. Ho, T. Griffiths, S. Seshia, P. Abbeel, and A. Dragan, 'On the utility of learning about humans for human-ai coordination,' Advances in neural information processing systems , vol. 32, 2019."
+            },
+            {
+              "title": "Habitat 3.0: A co-habitat for humans, avatars and robots",
+              "citation": "X. Puig, E. Undersander, A. Szot, M. D. Cote, T.-Y. Yang, R. Partsey, R. Desai, A. W. Clegg, M. Hlavac, S. Y. Min et al. , 'Habitat 3.0: A co-habitat for humans, avatars and robots,' arXiv preprint arXiv:2310.13724 , 2023."
+            },
+            {
+              "title": "Value: A multi-task benchmark for video-and-language understanding evaluation",
+              "citation": "L. Li, J. Lei, Z. Gan, L. Yu, Y .-C. Chen, R. Pillai, Y . Cheng, L. Zhou, X. E. Wang, W. Y . Wang, T. L. Berg, M. Bansal, J. Liu, L. Wang, and Z. Liu, 'Value: A multi-task benchmark for video-and-language understanding evaluation,' 2021."
+            },
+            {
+              "title": "Behavior: Benchmark for everyday household activities in virtual, interactive, and ecological environments",
+              "citation": "S. Srivastava, C. Li, M. Lingelbach, R. Martín-Martín, F. Xia, K. E. Vainio, Z. Lian, C. Gokmen, S. Buch, K. Liu et al. , 'Behavior: Benchmark for everyday household activities in virtual, interactive, and ecological environments,' in Conference on Robot Learning . PMLR, 2022, pp. 477-490."
+            },
+            {
+              "title": "Orbit: A unified simulation framework for interactive robot learning environments",
+              "citation": "M. Mittal, C. Yu, Q. Yu, J. Liu, N. Rudin, D. Hoeller, J. L. Yuan, R. Singh, Y. Guo, H. Mazhar et al. , 'Orbit: A unified simulation framework for interactive robot learning environments,' IEEE Robotics and Automation Letters , 2023."
+            },
+            {
+              "title": "Assist: Interactive scene nodes for scalable and realistic indoor simulation",
+              "citation": "Z. Zhong, J. Cao, S. Gu, S. Xie, W. Gao, L. Luo, Z. Yan, H. Zhao, and G. Zhou, 'Assist: Interactive scene nodes for scalable and realistic indoor simulation,' arXiv preprint arXiv:2311.06211 , 2023."
+            },
+            {
+              "title": "The role of physics-based simulators in robotics",
+              "citation": "C. K. Liu and D. Negrut, 'The role of physics-based simulators in robotics,' Annual Review of Control, Robotics, and Autonomous Systems , vol. 4, pp. 35-58, 2021."
+            },
+            {
+              "title": "Constraint-aware policy for compliant manipulation",
+              "citation": "D. Saito, K. Sasabuchi, N. Wake, A. Kanehira, J. Takamatsu, H. Koike, and K. Ikeuchi, 'Constraint-aware policy for compliant manipulation,' 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.4",
+          "sec_title": "Generative Agents",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "5.4.1",
+              "sec_title": "AR/VR/mixed-reality Agents",
+              "citations": [
+                {
+                  "title": "Ark: Augmented reality with knowledge interactive emergent ability",
+                  "citation": "Q. Huang, J. S. Park, A. Gupta, P. Bennett, R. Gong, S. Som, B. Peng, O. K. Mohammed, C. Pal, Y. Choi et al. , 'Ark: Augmented reality with knowledge interactive emergent ability,' arXiv preprint arXiv:2305.00970 , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.5",
+          "sec_title": "Knowledge and Logical Inference Agents",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "5.5.1",
+              "sec_title": "Knowledge Agent",
+              "citations": [
+                {
+                  "title": "Language models are few-shot learners",
+                  "citation": "T. B. Brown, B. Mann, N. Ryder, M. Subbiah, J. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell et al., 'Language models are few-shot learners,' Advances in Neural Information Processing Systems, vol. 33, pp. 1877-1901, 2020."
+                },
+                {
+                  "title": "GPT-4 technical report",
+                  "citation": "OpenAI, 'GPT-4 technical report,' OpenAI, Tech. Rep., 2023."
+                },
+                {
+                  "title": "Retrieval-augmented generation for knowledge-intensive nlp tasks",
+                  "citation": "P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. Kuttler, M. Lewis, W.-t. Yih, T. Rocktaschel et al., 'Retrieval-augmented generation for knowledge-intensive nlp tasks,' Advances in Neural Information Processing Systems, vol. 33, pp. 9459-9474, 2020."
+                },
+                {
+                  "title": "Check your facts and try again: Improving large language models with external knowledge and automated feedback",
+                  "citation": "B. Peng, M. Galley, P. He, H. Cheng, Y. Xie, Y. Hu, Q. Huang, L. Liden, Z. Yu, W. Chen et al. , 'Check your facts and try again: Improving large language models with external knowledge and automated feedback,' arXiv preprint arXiv:2302.12813 , 2023."
+                },
+                {
+                  "title": "Neural approaches to conversational information retrieval",
+                  "citation": "J. Gao, C. Xiong, P. Bennett, and N. Craswell, 'Neural approaches to conversational information retrieval,' arXiv preprint arXiv:2201.05176 , 2022."
+                },
+                {
+                  "title": "Rebooting AI: Building artificial intelligence we can trust",
+                  "citation": "G. Marcus and E. Davis, Rebooting AI: Building artificial intelligence we can trust . Pantheon, 2019."
+                },
+                {
+                  "title": "Robust conversational ai with grounded text generation",
+                  "citation": "J. Gao, B. Peng, C. Li, J. Li, S. Shayandeh, L. Liden, and H.-Y. Shum, 'Robust conversational ai with grounded text generation,' arXiv preprint arXiv:2009.03457 , 2020."
+                },
+                {
+                  "title": "The next decade in ai: four steps towards robust artificial intelligence",
+                  "citation": "G. Marcus, 'The next decade in ai: four steps towards robust artificial intelligence,' arXiv preprint arXiv:2002.06177 , 2020."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.5.2",
+              "sec_title": "Logic Agents",
+              "citations": [
+                {
+                  "title": "Robogen: Towards unleashing infinite data for automated robot learning via generative simulation",
+                  "citation": "Y. Wang, Z. Xian, F. Chen, T.-H. Wang, Y. Wang, K. Fragkiadaki, Z. Erickson, D. Held, and C. Gan, 'Robogen: Towards unleashing infinite data for automated robot learning via generative simulation,' arXiv preprint arXiv:2311.01455 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.5.3",
+              "sec_title": "Agents for Emotional Reasoning",
+              "citations": [
+                {
+                  "title": "Nice: Neural image commenting with empathy",
+                  "citation": "K. Chen, Q. Huang, D. McDuff, X. Gao, H. Palangi, J. Wang, K. Forbus, and J. Gao, 'Nice: Neural image commenting with empathy,' in EMNLP 2021 , October 2021. [Online]. Available: https: //www.microsoft.com/en-us/research/publication/nice-neural-image-commenting-with-empathy/"
+                },
+                {
+                  "title": "Nice: Neural image commenting with empathy",
+                  "citation": "K. Chen, Q. Huang, D. McDuff, X. Gao, H. Palangi, J. Wang, K. Forbus, and J. Gao, 'Nice: Neural image commenting with empathy,' in EMNLP 2021 , October 2021. [Online]. Available: https: //www.microsoft.com/en-us/research/publication/nice-neural-image-commenting-with-empathy/"
+                },
+                {
+                  "title": "The biases of pre-trained language models: An empirical study on prompt-based sentiment analysis and emotion detection",
+                  "citation": "R. Mao, Q. Liu, K. He, W. Li, and E. Cambria, 'The biases of pre-trained language models: An empirical study on prompt-based sentiment analysis and emotion detection,' IEEE Transactions on Affective Computing , 2022."
+                },
+                {
+                  "title": "Text-driven object affordance for guiding grasp-type recognition in multimodal robot teaching",
+                  "citation": "N. Wake, D. Saito, K. Sasabuchi, H. Koike, and K. Ikeuchi, 'Text-driven object affordance for guiding grasp-type recognition in multimodal robot teaching,' Machine Vision and Applications, vol. 34, no. 4, p. 58, 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.5.4",
+              "sec_title": "Neuro-Symbolic Agents",
+              "citations": [
+                {
+                  "title": "Reasoning about reasoning and actions for autonomous agents",
+                  "citation": "A. S. dAvila Garcez and L. C. Lamb, Reasoning about reasoning and actions for autonomous agents, arXiv preprint arXiv:2006.11025, 2020."
+                },
+                {
+                  "title": "Mapping natural-language problems to formal-language solutions using structured neural representations",
+                  "citation": "K. Chen, Q. Huang, H. Palangi, P. Smolensky, K. D. Forbus, and J. Gao, 'Mapping natural-language problems to formal-language solutions using structured neural representations,' in ICML 2020 , July 2020."
+                },
+                {
+                  "title": "Localized symbolic knowledge distillation for visual commonsense models",
+                  "citation": "J. S. Park, J. Hessel, K. Chandu, P. P. Liang, X. Lu, P. West, Y. Yu, Q. Huang, J. Gao, A. Farhadi, and Y. Choi, 'Localized symbolic knowledge distillation for visual commonsense models,' in Thirty-seventh Conference on Neural Information Processing Systems , 2023. [Online]. Available: https://openreview.net/forum?id=V5eG47pyVl"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.6",
+          "sec_title": "LLMs and VLMs Agent",
+          "citations": [
+            {
+              "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+              "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch, 'Language models as zero-shot planners: Extracting actionable knowledge for embodied agents,' in Proceedings of the 39th International Conference on Machine Learning , ser. Proceedings of Machine Learning Research, K. Chaudhuri, S. Jegelka, L. Song, C. Szepesvari, G. Niu, and S. Sabato, Eds., vol. 162. PMLR, 17-23 Jul 2022, pp. 9118-9147. [Online]. Available: https://proceedings.mlr.press/v162/huang22a.html"
+            },
+            {
+              "title": "Voyager: An open-ended embodied agent with large language models",
+              "citation": "G. Wang, Y. Xie, Y. Jiang, A. Mandlekar, C. Xiao, Y. Zhu, L. Fan, and A. Anandkumar, 'Voyager: An open-ended embodied agent with large language models,' arXiv preprint arXiv:2305.16291 , 2023."
+            },
+            {
+              "title": "React: Synergizing reasoning and acting in language models",
+              "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao, 'React: Synergizing reasoning and acting in language models,' 2023."
+            },
+            {
+              "title": "Llava-med: Training a large language-and-vision assistant for biomedicine in one day",
+              "citation": "C. Li, C. Wong, S. Zhang, N. Usuyama, H. Liu, J. Yang, T. Naumann, H. Poon, and J. Gao, 'Llava-med: Training a large language-and-vision assistant for biomedicine in one day,' arXiv preprint arXiv:2306.00890 , 2023."
+            },
+            {
+              "title": "Do as i can, not as i say: Grounding language in robotic affordances",
+              "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, K. Gopalakrishnan, K. Hausman, A. Herzog et al. , 'Do as i can, not as i say: Grounding language in robotic affordances,' arXiv preprint arXiv:2204.01691 , 2022."
+            },
+            {
+              "title": "Inner monologue: Embodied reasoning through planning with language models",
+              "citation": "W. Huang, F. Xia, T. Xiao, H. Chan, J. Liang, P. Florence, A. Zeng, J. Tompson, I. Mordatch, Y. Chebotar, P. Sermanet, N. Brown, T. Jackson, L. Luu, S. Levine, K. Hausman, and B. Ichter, 'Inner monologue: Embodied reasoning through planning with language models,' in arXiv preprint arXiv:2207.05608 , 2022."
+            },
+            {
+              "title": "Code as policies: Language model programs for embodied control",
+              "citation": "J. Liang, W. Huang, F. Xia, P. Xu, K. Hausman, B. Ichter, P. Florence, and A. Zeng, 'Code as policies: Language model programs for embodied control,' in arXiv preprint arXiv:2209.07753 , 2022."
+            },
+            {
+              "title": "Inner monologue: Embodied reasoning through planning with language models",
+              "citation": "W. Huang, F. Xia, T. Xiao, H. Chan, J. Liang, P. Florence, A. Zeng, J. Tompson, I. Mordatch, Y. Chebotar, P. Sermanet, N. Brown, T. Jackson, L. Luu, S. Levine, K. Hausman, and B. Ichter, 'Inner monologue: Embodied reasoning through planning with language models,' in arXiv preprint arXiv:2207.05608 , 2022."
+            },
+            {
+              "title": "Code as policies: Language model programs for embodied control",
+              "citation": "J. Liang, W. Huang, F. Xia, P. Xu, K. Hausman, B. Ichter, P. Florence, and A. Zeng, 'Code as policies: Language model programs for embodied control,' in arXiv preprint arXiv:2209.07753 , 2022."
+            },
+            {
+              "title": "Retrieve what you need: A mutual learning framework for open-domain question answering",
+              "citation": "D. Wang, Q. Huang, M. Jackson, and J. Gao, 'Retrieve what you need: A mutual learning framework for open-domain question answering,' March 2023. [Online]. Available: https://www.microsoft.com/en-us/research/publication/ retrieve-what-you-need-a-mutual-learning-framework-for-open-domain-question-answering/"
+            },
+            {
+              "title": "Video pretraining (vpt): Learning to act by watching unlabeled online videos",
+              "citation": "B. Baker, I. Akkaya, P. Zhokov, J. Huizinga, J. Tang, A. Ecoffet, B. Houghton, R. Sampedro, and J. Clune, 'Video pretraining (vpt): Learning to act by watching unlabeled online videos,' Advances in Neural Information Processing Systems , vol. 35, pp. 24 639-24 654, 2022."
+            },
+            {
+              "title": "Palm-e: An embodied multimodal language model",
+              "citation": "D. Driess, F. Xia, M. S. Sajjadi, C. Lynch, A. Chowdhery, B. Ichter, A. Wahid, J. Tompson, Q. Vuong, T. Yu et al. , 'Palm-e: An embodied multimodal language model,' arXiv preprint arXiv:2303.03378 , 2023."
+            },
+            {
+              "title": "Rt-2: Vision-language-action models transfer web knowledge to robotic control",
+              "citation": "A. Brohan, N. Brown, J. Carbajal, Y. Chebotar, X. Chen, K. Choromanski, T. Ding, D. Driess, A. Dubey, C. Finn et al. , 'Rt-2: Vision-language-action models transfer web knowledge to robotic control,' arXiv preprint arXiv:2307.15818 , 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "Agent AI Application Tasks",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "6.1",
+          "sec_title": "Agents for Gaming",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "6.1.1",
+              "sec_title": "NPC Behavior",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.1.2",
+              "sec_title": "Human-NPC Interaction",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.1.3",
+              "sec_title": "Agent-based Analysis of Gaming",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.1.4",
+              "sec_title": "Scene Synthesis for Gaming",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.1.5",
+              "sec_title": "Experiments and Results",
+              "citations": [
+                {
+                  "title": "A learning-from-observation framework: One-shot robot teaching for grasp-manipulation-release household operations",
+                  "citation": "N. Wake, R. Arakawa, I. Yanokura, T. Kiyokawa, K. Sasabuchi, J. Takamatsu, and K. Ikeuchi, 'A learning-fromobservation framework: One-shot robot teaching for grasp-manipulation-release household operations,' in 2021 IEEE/SICE International Symposium on System Integration (SII) . IEEE, 2021."
+                },
+                {
+                  "title": "Virtualhome: Simulating household activities via programs",
+                  "citation": "X. Puig, K. Ra, M. Boben, J. Li, T. Wang, S. Fidler, and A. Torralba, 'Virtualhome: Simulating household activities via programs,' in 2018 IEEE International Conference on Computer Vision and Pattern Recognition (CVPR) , 2018, pp. 8494-8502."
+                },
+                {
+                  "title": "Verbal focus-of-attention system for learning-from-observation",
+                  "citation": "N. Wake, I. Yanokura, K. Sasabuchi, and K. Ikeuchi, 'Verbal focus-of-attention system for learning-from-observation,' in 2021 IEEE International Conference on Robotics and Automation (ICRA), 2021, pp. 10377-10384."
+                },
+                {
+                  "title": "Text-driven object affordance for guiding grasp-type recognition in multimodal robot teaching",
+                  "citation": "N. Wake, D. Saito, K. Sasabuchi, H. Koike, and K. Ikeuchi, 'Text-driven object affordance for guiding grasp-type recognition in multimodal robot teaching,' Machine Vision and Applications , vol. 34, no. 4, p. 58, 2023."
+                },
+                {
+                  "title": "Text-driven object affordance for guiding grasp-type recognition in multimodal robot teaching",
+                  "citation": "N. Wake, D. Saito, K. Sasabuchi, H. Koike, and K. Ikeuchi, 'Text-driven object affordance for guiding grasp-type recognition in multimodal robot teaching,' Machine Vision and Applications, vol. 34, no. 4, p. 58, 2023."
+                },
+                {
+                  "title": "Task-oriented motion mapping on robots of various configuration using body role division",
+                  "citation": "K. Sasabuchi, N. Wake, and K. Ikeuchi, 'Task-oriented motion mapping on robots of various configuration using body role division,' IEEE Robotics and Automation Letters , vol. 6, no. 2, pp. 413-420, 2021."
+                },
+                {
+                  "title": "A learning-from-observation framework: One-shot robot teaching for grasp-manipulation-release household operations",
+                  "citation": "N. Wake, R. Arakawa, I. Yanokura, T. Kiyokawa, K. Sasabuchi, J. Takamatsu, and K. Ikeuchi, 'A learning-fromobservation framework: One-shot robot teaching for grasp-manipulation-release household operations,' in 2021 IEEE/SICE International Symposium on System Integration (SII) . IEEE, 2021."
+                },
+                {
+                  "title": "Learning-from-observation system considering hardware-level reusability",
+                  "citation": "J. Takamatsu, K. Sasabuchi, N. Wake, A. Kanehira, and K. Ikeuchi, 'Learning-from-observation system considering hardware-level reusability,' arXiv preprint arXiv:2212.09242 , 2022."
+                },
+                {
+                  "title": "Interactive task encoding system for learning-from-observation",
+                  "citation": "N. Wake, A. Kanehira, K. Sasabuchi, J. Takamatsu, and K. Ikeuchi, 'Interactive task encoding system for learning-from-observation,' in 2023 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), 2023, pp. 1061-1066."
+                },
+                {
+                  "title": "Fast model identification via physics engines for data-efficient policy search",
+                  "citation": "S. Zhu, A. Kimmel, K. E. Bekris, and A. Boularias, 'Fast model identification via physics engines for data-efficient policy search,' arXiv preprint arXiv:1710.08893 , 2017."
+                },
+                {
+                  "title": "Learning to navigate in complex environments",
+                  "citation": "P. Mirowski, R. Pascanu, F. Viola, H. Soyer, A. J. Ballard, A. Banino, M. Denil, R. Goroshin, L. Sifre, K. Kavukcuoglu et al. , 'Learning to navigate in complex environments,' arXiv preprint arXiv:1611.03673 , 2016."
+                },
+                {
+                  "title": "Visual representations for semantic target driven navigation",
+                  "citation": "A. Mousavian, A. Toshev, M. Fiser, J. Kosecka, and J. Davidson, 'Visual representations for semantic target driven navigation,' arXiv preprint arXiv:1805.06066 , 2018."
+                },
+                {
+                  "title": "Learning models for following natural language directions in unknown environments",
+                  "citation": "S. Hemachandra, F. Duvallet, T. M. Howard, N. Roy, A. Stentz, and M. R. Walter, 'Learning models for following natural language directions in unknown environments,' arXiv preprint arXiv:1503.05079 , 2015."
+                },
+                {
+                  "title": "Minos: Multimodal indoor simulator for navigation in complex environments",
+                  "citation": "M. Savva, A. X. Chang, A. Dosovitskiy, T. Funkhouser, and V. Koltun, 'Minos: Multimodal indoor simulator for navigation in complex environments,' arXiv preprint arXiv:1712.03931 , 2017."
+                },
+                {
+                  "title": "Ai2-thor: An interactive 3d environment for visual ai",
+                  "citation": "E. Kolve, R. Mottaghi, W. Han, E. VanderBilt, L. Weihs, A. Herrasti, M. Deitke, K. Ehsani, D. Gordon, Y. Zhu et al. , 'Ai2-thor: An interactive 3d environment for visual ai,' arXiv preprint arXiv:1712.05474 , 2017."
+                },
+                {
+                  "title": "Semantic scene completion from a single depth image",
+                  "citation": "S. Song, F. Yu, A. Zeng, A. X. Chang, M. Savva, and T. Funkhouser, 'Semantic scene completion from a single depth image,' IEEE Conference on Computer Vision and Pattern Recognition , 2017."
+                },
+                {
+                  "title": "Gibson Env: real-world perception for embodied agents",
+                  "citation": "F. Xia, A. R. Zamir, Z.-Y. He, A. Sax, J. Malik, and S. Savarese, 'Gibson Env: real-world perception for embodied agents,' in Computer Vision and Pattern Recognition (CVPR), 2018 IEEE Conference on . IEEE, 2018."
+                },
+                {
+                  "title": "Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments",
+                  "citation": "P. Anderson, Q. Wu, D. Teney, J. Bruce, M. Johnson, N. Sünderhauf, I. Reid, S. Gould, and A. Van Den Hengel, 'Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments,' in Proceedings of the IEEE conference on computer vision and pattern recognition , 2018, pp. 3674-3683."
+                },
+                {
+                  "title": "Spice: Semantic propositional image caption evaluation",
+                  "citation": "P. Anderson, B. Fernando, M. Johnson, and S. Gould, 'Spice: Semantic propositional image caption evaluation,' in European Conference on Computer Vision, 2016, pp. 382-398."
+                },
+                {
+                  "title": "Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments",
+                  "citation": "P. Anderson, Q. Wu, D. Teney, J. Bruce, M. Johnson, N. Sünderhauf, I. Reid, S. Gould, and A. Van Den Hengel, 'Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments,' in Proceedings of the IEEE conference on computer vision and pattern recognition , 2018, pp. 3674-3683."
+                },
+                {
+                  "title": "Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments",
+                  "citation": "P. Anderson, Q. Wu, D. Teney, J. Bruce, M. Johnson, N. Sünderhauf, I. Reid, S. Gould, and A. Van Den Hengel, 'Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments,' in Proceedings of the IEEE conference on computer vision and pattern recognition , 2018, pp. 3674-3683."
+                },
+                {
+                  "title": "Look before you leap: Bridging model-free and model-based reinforcement learning for planned-ahead vision-and-language navigation",
+                  "citation": "X. Wang, W. Xiong, H. Wang, and W. Y. Wang, 'Look before you leap: Bridging model-free and model-based reinforcement learning for planned-ahead vision-and-language navigation,' in The European Conference on Computer Vision (ECCV) , September 2018."
+                },
+                {
+                  "title": "Speaker-follower models for vision-and-language navigation",
+                  "citation": "D. Fried, R. Hu, V. Cirik, A. Rohrbach, J. Andreas, L.-P. Morency, T. Berg-Kirkpatrick, K. Saenko, D. Klein, and T. Darrell, 'Speaker-follower models for vision-and-language navigation,' in Advances in Neural Information Processing Systems (NIPS) , 2018."
+                },
+                {
+                  "title": "Reinforced cross-modal matching and self-supervised imitation learning for vision-language navigation",
+                  "citation": "X. Wang, Q. Huang, A. Celikyilmaz, J. Gao, D. Shen, Y.-F. Weng, W. Y. Wang, and L. Zhang, 'Reinforced cross-modal matching and self-supervised imitation learning for vision-language navigation,' in CVPR 2019 , June 2019."
+                },
+                {
+                  "title": "Speaker-follower models for vision-and-language navigation",
+                  "citation": "D. Fried, R. Hu, V. Cirik, A. Rohrbach, J. Andreas, L.-P. Morency, T. Berg-Kirkpatrick, K. Saenko, D. Klein, and T. Darrell, 'Speaker-follower models for vision-and-language navigation,' in Advances in Neural Information Processing Systems (NIPS) , 2018."
+                },
+                {
+                  "title": "Speaker-follower models for vision-and-language navigation",
+                  "citation": "D. Fried, R. Hu, V. Cirik, A. Rohrbach, J. Andreas, L.-P. Morency, T. Berg-Kirkpatrick, K. Saenko, D. Klein, and T. Darrell, 'Speaker-follower models for vision-and-language navigation,' in Advances in Neural Information Processing Systems (NIPS) , 2018."
+                },
+                {
+                  "title": "Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments",
+                  "citation": "P. Anderson, Q. Wu, D. Teney, J. Bruce, M. Johnson, N. Sünderhauf, I. Reid, S. Gould, and A. Van Den Hengel, 'Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments,' in Proceedings of the IEEE conference on computer vision and pattern recognition , 2018, pp. 3674-3683."
+                },
+                {
+                  "title": "Reinforced cross-modal matching and self-supervised imitation learning for vision-language navigation",
+                  "citation": "X. Wang, Q. Huang, A. Celikyilmaz, J. Gao, D. Shen, Y.-F. Weng, W. Y. Wang, and L. Zhang, 'Reinforced cross-modal matching and self-supervised imitation learning for vision-language navigation,' in CVPR 2019 , June 2019."
+                },
+                {
+                  "title": "Reinforced cross-modal matching and self-supervised imitation learning for vision-language navigation",
+                  "citation": "X. Wang, Q. Huang, A. Celikyilmaz, J. Gao, D. Shen, Y.-F. Weng, W. Y. Wang, and L. Zhang, 'Reinforced cross-modal matching and self-supervised imitation learning for vision-language navigation,' in CVPR 2019 , June 2019."
+                },
+                {
+                  "title": "Reinforced cross-modal matching and self-supervised imitation learning for vision-language navigation",
+                  "citation": "X. Wang, Q. Huang, A. Celikyilmaz, J. Gao, D. Shen, Y.-F. Weng, W. Y. Wang, and L. Zhang, 'Reinforced cross-modal matching and self-supervised imitation learning for vision-language navigation,' in CVPR 2019 , June 2019."
+                },
+                {
+                  "title": "Shifting the baseline: Single modality performance on visual navigation & qa",
+                  "citation": "J. Thomason, D. Gordan, and Y. Bisk, 'Shifting the baseline: Single modality performance on visual navigation &amp; qa,' arXiv preprint arXiv:1811.00613 , 2018."
+                },
+                {
+                  "title": "Tactical rewind: Selfcorrection via backtracking in vision-and-language navigation",
+                  "citation": "L. Ke, X. Li, B. Yonatan, A. Holtzman, Z. Gan, J. Liu, J. Gao, Y. Choi, and S. Srinivasa, 'Tactical rewind: Selfcorrection via backtracking in vision-and-language navigation,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR) , 2019."
+                },
+                {
+                  "title": "Vision-based navigation with language-based assistance via imitation learning with indirect intervention",
+                  "citation": "K. Nguyen, D. Dey, C. Brockett, and B. Dolan, 'Vision-based navigation with language-based assistance via imitation learning with indirect intervention,' arXiv preprint arXiv:1812.04155 , 2018."
+                }
+              ],
+              "subsections": [
+                {
+                  "sec_id": "6.1.5.1",
+                  "sec_title": "Zero-shot/Few-shot Learning with LLM or LVM",
+                  "citations": [
+                    {
+                      "title": "Mm-vid: Advancing video understanding with gpt-4v(ision)",
+                      "citation": "K. Lin, F. Ahmed, L. Li, C.-C. Lin, E. Azarnasab, Z. Yang, J. Wang, L. Liang, Z. Liu, Y. Lu, C. Liu, and L. Wang, 'Mm-vid: Advancing video understanding with gpt-4v(ision),' 2023."
+                    },
+                    {
+                      "title": "BLIP-2: Bootstrapping language-image pre-training with frozen image encoders and large language models",
+                      "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'BLIP-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,' arXiv preprint arXiv:2301.12597, 2023."
+                    }
+                  ],
+                  "subsections": []
+                },
+                {
+                  "sec_id": "6.1.5.2",
+                  "sec_title": "Small Agent Pretraining Model",
+                  "citations": [],
+                  "subsections": []
+                },
+                {
+                  "sec_id": "6.1.5.3",
+                  "sec_title": "Multi-Agent Infrastructure",
+                  "citations": [
+                    {
+                      "title": "Mindagent: Emergent gaming interaction",
+                      "citation": "R. Gong, Q. Huang, X. Ma, H. Vo, Z. Durante, Y. Noda, Z. Zheng, S.-C. Zhu, D. Terzopoulos, L. Fei-Fei et al., 'Mindagent: Emergent gaming interaction,' arXiv preprint arXiv:2309.09971, 2023."
+                    }
+                  ],
+                  "subsections": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sec_id": "6.2",
+          "sec_title": "Robotics",
+          "citations": [
+            {
+              "title": "Interactive task encoding system for learning-from-observation",
+              "citation": "N. Wake, A. Kanehira, K. Sasabuchi, J. Takamatsu, and K. Ikeuchi, 'Interactive task encoding system for learning-from-observation,' in 2023 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), 2023, pp. 1061-1066."
+            },
+            {
+              "title": "Integrated task and motion planning",
+              "citation": "C. R. Garrett, R. Chitnis, R. Holladay, B. Kim, T. Silver, L. P. Kaelbling, and T. Lozano-Pérez, 'Integrated task and motion planning,' Annual review of control, robotics, and autonomous systems , vol. 4, pp. 265-293, 2021."
+            },
+            {
+              "title": "Text-driven object affordance for guiding grasp-type recognition in multimodal robot teaching",
+              "citation": "N. Wake, D. Saito, K. Sasabuchi, H. Koike, and K. Ikeuchi, 'Text-driven object affordance for guiding grasp-type recognition in multimodal robot teaching,' Machine Vision and Applications, vol. 34, no. 4, p. 58, 2023."
+            },
+            {
+              "title": "Task-oriented motion mapping on robots of various configuration using body role division",
+              "citation": "K. Sasabuchi, N. Wake, and K. Ikeuchi, 'Task-oriented motion mapping on robots of various configuration using body role division,' IEEE Robotics and Automation Letters , vol. 6, no. 2, pp. 413-420, 2021."
+            },
+            {
+              "title": "Internvid: A large-scale video-text dataset for multimodal understanding and generation",
+              "citation": "Y. Wang, Y. He, Y. Li, K. Li, J. Yu, X. Ma, X. Chen, Y. Wang, P. Luo, Z. Liu, Y . Wang, L. Wang, and Y. Qiao, 'Internvid: A large-scale video-text dataset for multimodal understanding and generation,' 2023."
+            },
+            {
+              "title": "Open x-embodiment: Robotic learning datasets and rt-x models",
+              "citation": "A. Padalkar, A. Pooley, A. Jain, A. Bewley, A. Herzog, A. Irpan, A. Khazatsky, A. Rai, A. Singh, A. Brohan et al. , 'Open x-embodiment: Robotic learning datasets and rt-x models,' arXiv preprint arXiv:2310.08864 , 2023."
+            },
+            {
+              "title": "A learning-from-observation framework: One-shot robot teaching for grasp-manipulation-release household operations",
+              "citation": "N. Wake, R. Arakawa, I. Yanokura, T. Kiyokawa, K. Sasabuchi, J. Takamatsu, and K. Ikeuchi, 'A learning-fromobservation framework: One-shot robot teaching for grasp-manipulation-release household operations,' in 2021 IEEE/SICE International Symposium on System Integration (SII) . IEEE, 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "6.2.1",
+              "sec_title": "LLM/VLM Agent for Robotics",
+              "citations": [
+                {
+                  "title": "Vima: General robot manipulation with multimodal prompts",
+                  "citation": "Y. Jiang, A. Gupta, Z. Zhang, G. Wang, Y. Dou, Y. Chen, L. Fei-Fei, A. Anandkumar, Y. Zhu, and L. Fan, 'Vima: General robot manipulation with multimodal prompts,' arXiv , 2022."
+                },
+                {
+                  "title": "Rt-1: Robotics transformer for real-world control at scale",
+                  "citation": "A. Brohan, N. Brown, J. Carbajal, Y. Chebotar, J. Dabis, C. Finn, K. Gopalakrishnan, K. Hausman, A. Herzog, J. Hsu et al. , 'Rt-1: Robotics transformer for real-world control at scale,' arXiv preprint arXiv:2212.06817 , 2022."
+                },
+                {
+                  "title": "Mastering robot manipulation with multimodal prompts through pretraining and multi-task fine-tuning",
+                  "citation": "J. Li, Q. Gao, M. Johnston, X. Gao, X. He, S. Shakiah, H. Shi, R. Ghanadan, and W. Y. Wang, 'Mastering robot manipulation with multimodal prompts through pretraining and multi-task fine-tuning,' arXiv preprint arXiv:2310.09676 , 2023."
+                },
+                {
+                  "title": "Do as i can, not as i say: Grounding language in robotic affordances",
+                  "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, K. Gopalakrishnan, K. Hausman, A. Herzog et al., 'Do as i can, not as i say: Grounding language in robotic affordances,' arXiv preprint arXiv:2204.01691, 2022."
+                },
+                {
+                  "title": "LM-Nav: Robotic navigation with large pre-trained models of language, vision, and action",
+                  "citation": "D. Shah, B. Osiński, S. Levine et al., 'LM-Nav: Robotic navigation with large pre-trained models of language, vision, and action,' in Conference on Robot Learning, 2023, pp. 492-504."
+                },
+                {
+                  "title": "Videochat: Chat-centric video understanding",
+                  "citation": "K. Li, Y. He, W. Yi, Y. Li, W. Wang, P. Luo, Y. Wang, L. Wang, and Y. Qiao, 'Videochat: Chat-centric video understanding,' arXiv preprint arXiv:2305.06355 , 2023."
+                },
+                {
+                  "title": "Grid: Scene-graph-based instruction-driven robotic task planning",
+                  "citation": "Z. Ni, X.-X. Deng, C. Tai, X.-Y. Zhu, X. Wu, Y.-J. Liu, and L. Zeng, 'Grid: Scene-graph-based instruction-driven robotic task planning,' arXiv preprint arXiv:2309.07726 , 2023."
+                },
+                {
+                  "title": "Camel: Communicative agents for \"mind\" exploration of large scale language model society",
+                  "citation": "G. Li, H. A. A. K. Hammoud, H. Itani, D. Khizbullin, and B. Ghanem, 'Camel: Communicative agents for\" mind\" exploration of large scale language model society,' arXiv preprint arXiv:2303.17760 , 2023."
+                },
+                {
+                  "title": "Human-assisted continual robot learning with foundation models",
+                  "citation": "M. Parakh, A. Fong, A. Simeonov, A. Gupta, T. Chen, and P. Agrawal, 'Human-assisted continual robot learning with foundation models,' arXiv preprint arXiv:2309.14321 , 2023."
+                },
+                {
+                  "title": "Interactive task encoding system for learning-from-observation",
+                  "citation": "N. Wake, A. Kanehira, K. Sasabuchi, J. Takamatsu, and K. Ikeuchi, 'Interactive task encoding system for learning-from-observation,' in 2023 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), 2023, pp. 1061-1066."
+                },
+                {
+                  "title": "Language to rewards for robotic skill synthesis",
+                  "citation": "W. Yu, N. Gileadi, C. Fu, S. Kirmani, K.-H. Lee, M. G. Arenas, H.-T. L. Chiang, T. Erez, L. Hasenclever, J. Humplik et al. , 'Language to rewards for robotic skill synthesis,' arXiv preprint arXiv:2306.08647 , 2023."
+                },
+                {
+                  "title": "Gen2sim: Scaling up robot learning in simulation with generative models",
+                  "citation": "P. Katara, Z. Xian, and K. Fragkiadaki, 'Gen2sim: Scaling up robot learning in simulation with generative models,' arXiv preprint arXiv:2310.18308 , 2023."
+                },
+                {
+                  "title": "Eureka: Human-level reward design via coding large language models",
+                  "citation": "Y. J. Ma, W. Liang, G. Wang, D.-A. Huang, O. Bastani, D. Jayaraman, Y. Zhu, L. Fan, and A. Anandkumar, 'Eureka: Human-level reward design via coding large language models,' arXiv preprint arXiv:2310.12931 , 2023."
+                },
+                {
+                  "title": "Words into action: Learning diverse humanoid robot behaviors using language guided iterative motion refinement",
+                  "citation": "K. N. Kumar, I. Essa, and S. Ha, 'Words into action: Learning diverse humanoid robot behaviors using language guided iterative motion refinement,' arXiv preprint arXiv:2310.06226 , 2023."
+                },
+                {
+                  "title": "Video language planning",
+                  "citation": "Y. Du, M. Yang, P. Florence, F. Xia, A. Wahid, B. Ichter, P. Sermanet, T. Yu, P. Abbeel, J. B. Tenenbaum et al. , 'Video language planning,' arXiv preprint arXiv:2310.10625 , 2023."
+                },
+                {
+                  "title": "Roboclip: One demonstration is enough to learn robot policies",
+                  "citation": "S. A. Sontakke, J. Zhang, S. M. Arnold, K. Pertsch, E. Bıyık, D. Sadigh, C. Finn, and L. Itti, 'Roboclip: One demonstration is enough to learn robot policies,' arXiv preprint arXiv:2310.07899 , 2023."
+                },
+                {
+                  "title": "Do as i can, not as i say: Grounding language in robotic affordances",
+                  "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, K. Gopalakrishnan, K. Hausman, A. Herzog et al., 'Do as i can, not as i say: Grounding language in robotic affordances,' arXiv preprint arXiv:2204.01691, 2022."
+                },
+                {
+                  "title": "Analyzing and mitigating object hallucination in large vision-language models",
+                  "citation": "Y. Zhou, C. Cui, J. Yoon, L. Zhang, Z. Deng, C. Finn, M. Bansal, and H. Yao, 'Analyzing and mitigating object hallucination in large vision-language models,' arXiv preprint arXiv:2310.00754, 2023."
+                },
+                {
+                  "title": "Cape: Corrective actions from precondition errors using large language models",
+                  "citation": "S. S. Raman, V. Cohen, D. Paulius, I. Idrees, E. Rosen, R. Mooney, and S. Tellex, 'Cape: Corrective actions from precondition errors using large language models,' in 2nd Workshop on Language and Robot Learning: Language as Grounding , 2023."
+                },
+                {
+                  "title": "Improved trust in human-robot collaboration with chatgpt",
+                  "citation": "Y. Ye, H. You, and J. Du, 'Improved trust in human-robot collaboration with chatgpt,' IEEE Access , 2023."
+                },
+                {
+                  "title": "Bias in emotion recognition with chatgpt",
+                  "citation": "N. Wake, 'Bias in emotion recognition with chatgpt,' arXiv preprint arXiv:2310.11753, 2023."
+                },
+                {
+                  "title": "Large language models in textual analysis for gesture selection",
+                  "citation": "L. B. Hensel, N. Yongsatianchot, P. Torshizi, E. Minucci, and S. Marsella, 'Large language models in textual analysis for gesture selection,' in INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION , 2023, pp. 378-387."
+                },
+                {
+                  "title": "Deep gesture generation for social robots using type-specific libraries",
+                  "citation": "H. Teshima, N. Wake, D. Thomas, Y. Nakashima, H. Kawasaki, and K. Ikeuchi, 'Deep gesture generation for social robots using type-specific libraries,' in 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) . IEEE, 2022, pp. 8286-8291."
+                },
+                {
+                  "title": "Is chatgpt equipped with emotional dialogue capabilities?",
+                  "citation": "W. Zhao, Y. Zhao, X. Lu, S. Wang, Y. Tong, and B. Qin, 'Is chatgpt equipped with emotional dialogue capabilities?' arXiv preprint arXiv:2304.09582 , 2023."
+                },
+                {
+                  "title": "Mm-react: Prompting chatgpt for multimodal reasoning and action",
+                  "citation": "Z. Yang, L. Li, J. Wang, K. Lin, E. Azarnasab, F. Ahmed, Z. Liu, C. Liu, M. Zeng, and L. Wang, 'Mm-react: Prompting chatgpt for multimodal reasoning and action,' 2023."
+                },
+                {
+                  "title": "Text-driven object affordance for guiding grasp-type recognition in multimodal robot teaching",
+                  "citation": "N. Wake, D. Saito, K. Sasabuchi, H. Koike, and K. Ikeuchi, 'Text-driven object affordance for guiding grasp-type recognition in multimodal robot teaching,' Machine Vision and Applications, vol. 34, no. 4, p. 58, 2023."
+                },
+                {
+                  "title": "Ros navigation: Concepts and tutorial",
+                  "citation": "R. L. Guimarães, A. S. de Oliveira, J. A. Fabro, T. Becker, and V. A. Brenner, 'Ros navigation: Concepts and tutorial,' Robot Operating System (ROS) The Complete Reference (Volume 1) , pp. 121-160, 2016."
+                },
+                {
+                  "title": "Object goal navigation using goal-oriented semantic exploration",
+                  "citation": "D. S. Chaplot, D. Gandhi, A. Gupta, and R. Salakhutdinov, 'Object goal navigation using goal-oriented semantic exploration,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2020, pp. 10104-10112."
+                },
+                {
+                  "title": "Objectnav revisited: On evaluation of embodied agents navigating to objects",
+                  "citation": "D. Batra, A. Gokaslan, A. Kembhavi, O. Maksymets, R. Mottaghi, M. Savva, A. Toshev, and E. Wijmans, 'Objectnav revisited: On evaluation of embodied agents navigating to objects,' arXiv preprint arXiv:2006.13171 , 2020."
+                },
+                {
+                  "title": "Navigating to objects in the real world",
+                  "citation": "T. Gervet, S. Chintala, D. Batra, J. Malik, and D. S. Chaplot, 'Navigating to objects in the real world,' Science Robotics , vol. 8, no. 79, p. eadf6991, 2023."
+                },
+                {
+                  "title": "Poni: Potential functions for objectgoal navigation with interaction-free learning",
+                  "citation": "S. K. Ramakrishnan, D. S. Chaplot, Z. Al-Halah, J. Malik, and K. Grauman, 'Poni: Potential functions for objectgoal navigation with interaction-free learning,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 18 890-18 900."
+                },
+                {
+                  "title": "Hierarchical object-to-zone graph for object navigation",
+                  "citation": "S. Zhang, X. Song, Y. Bai, W. Li, Y. Chu, and S. Jiang, 'Hierarchical object-to-zone graph for object navigation,' in Proceedings of the IEEE/CVF international conference on computer vision , 2021, pp. 15 130-15 140."
+                },
+                {
+                  "title": "Cows on pasture: Baselines and benchmarks for language-driven zero-shot object navigation",
+                  "citation": "S. Y. Gadre, M. Wortsman, G. Ilharco, L. Schmidt, and S. Song, 'Cows on pasture: Baselines and benchmarks for language-driven zero-shot object navigation,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2023, pp. 23 171-23 181."
+                },
+                {
+                  "title": "Can an embodied agent find your\" cat-shaped mug? llm-based zero-shot object navigation",
+                  "citation": "V. S. Dorbala, J. F. Mullen Jr, and D. Manocha, 'Can an embodied agent find your\" cat-shaped mug\"? llm-based zero-shot object navigation,' arXiv preprint arXiv:2303.03480 , 2023."
+                },
+                {
+                  "title": "Bridging zero-shot object navigation and foundation models through pixel-guided navigation skill",
+                  "citation": "W. Cai, S. Huang, G. Cheng, Y. Long, P. Gao, C. Sun, and H. Dong, 'Bridging zero-shot object navigation and foundation models through pixel-guided navigation skill,' arXiv preprint arXiv:2309.10309 , 2023."
+                },
+                {
+                  "title": "Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments",
+                  "citation": "P. Anderson, Q. Wu, D. Teney, J. Bruce, M. Johnson, N. Sünderhauf, I. Reid, S. Gould, and A. Van Den Hengel, 'Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments,' in Proceedings of the IEEE conference on computer vision and pattern recognition , 2018, pp. 3674-3683."
+                },
+                {
+                  "title": "Mutex: Learning unified policies from multimodal task specifications",
+                  "citation": "R. Shah, R. Martín-Martín, and Y. Zhu, 'Mutex: Learning unified policies from multimodal task specifications,' arXiv preprint arXiv:2309.14320 , 2023."
+                },
+                {
+                  "title": "Generalizable long-horizon manipulations with large language models",
+                  "citation": "H. Zhou, M. Ding, W. Peng, M. Tomizuka, L. Shao, and C. Gan, 'Generalizable long-horizon manipulations with large language models,' arXiv preprint arXiv:2310.02264 , 2023."
+                },
+                {
+                  "title": "Clip-nav: Using clip for zero-shot vision-and-language navigation",
+                  "citation": "V. S. Dorbala, G. Sigurdsson, R. Piramuthu, J. Thomason, and G. S. Sukhatme, 'Clip-nav: Using clip for zero-shot vision-and-language navigation,' arXiv preprint arXiv:2211.16649 , 2022."
+                },
+                {
+                  "title": "Mo-vln: A multi-task benchmark for open-set zero-shot vision-and-language navigation",
+                  "citation": "X. Liang, L. Ma, S. Guo, J. Han, H. Xu, S. Ma, and X. Liang, 'Mo-vln: A multi-task benchmark for open-set zero-shot vision-and-language navigation,' arXiv preprint arXiv:2306.10322 , 2023."
+                },
+                {
+                  "title": "Dolphin: General video interaction platform based on llms",
+                  "citation": "Z. Huang, H. Feng, Z. Chongzhi, L. Sheng, L. Ziwei, and J. Shao, 'Dolphin: General video interaction platform based on llms,' 2023, https://github.com/kaleido-lab/dolphin."
+                },
+                {
+                  "title": "Reinforced cross-modal matching and self-supervised imitation learning for vision-language navigation",
+                  "citation": "X. Wang, Q. Huang, A. Celikyilmaz, J. Gao, D. Shen, Y.-F. Weng, W. Y. Wang, and L. Zhang, 'Reinforced cross-modal matching and self-supervised imitation learning for vision-language navigation,' in CVPR 2019 , June 2019."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.2.2",
+              "sec_title": "Experiments and Results (1)",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "6.3",
+          "sec_title": "Healthcare",
+          "citations": [
+            {
+              "title": "Benefits, limits, and risks of gpt-4 as an ai chatbot for medicine",
+              "citation": "P. Lee, S. Bubeck, and J. Petro, 'Benefits, limits, and risks of gpt-4 as an ai chatbot for medicine,' New England Journal of Medicine, vol. 388, no. 13, pp. 1233-1239, 2023."
+            },
+            {
+              "title": "Tracking universal health coverage: First global monitoring report",
+              "citation": "World Health Organization and World Bank, 'Tracking universal health coverage: First global monitoring report,' www.who.int/healthinfo/universal\\_health\\_coverage/report/2015/en, Jun 2015."
+            },
+            {
+              "title": "Vision-language foundation models as effective robot imitators",
+              "citation": "X. Li, M. Liu, H. Zhang, C. Yu, J. Xu, H. Wu, C. Cheang, Y. Jing, W. Zhang, H. Liu et al. , 'Vision-language foundation models as effective robot imitators,' arXiv preprint arXiv:2311.01378 , 2023."
+            },
+            {
+              "title": "Check your facts and try again: Improving large language models with external knowledge and automated feedback",
+              "citation": "B. Peng, M. Galley, P. He, H. Cheng, Y. Xie, Y. Hu, Q. Huang, L. Liden, Z. Yu, W. Chen et al. , 'Check your facts and try again: Improving large language models with external knowledge and automated feedback,' arXiv preprint arXiv:2302.12813 , 2023."
+            },
+            {
+              "title": "Retrieval augmented language model pre-training",
+              "citation": "K. Guu, K. Lee, Z. Tung, P. Pasupat, and M. Chang, 'Retrieval augmented language model pre-training,' in International conference on machine learning . PMLR, 2020, pp. 3929-3938."
+            },
+            {
+              "title": "A comprehensive survey on graph-based recommender systems",
+              "citation": "M. Amjad, 'A comprehensive survey on graph-based recommender systems,' arXiv preprint arXiv:2301.00967, 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "6.3.1",
+              "sec_title": "Current Healthcare Capabilities",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "6.4",
+          "sec_title": "Multimodal Agents",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "6.4.1",
+              "sec_title": "Image-Language Understanding and Generation",
+              "citations": [
+                {
+                  "title": "Microsoft coco: Common objects in context",
+                  "citation": "T.-Y. Lin, M. Maire, S. Belongie, L. Bourdev, R. Girshick, J. Hays, P. Perona, D. Ramanan, C. L. Zitnick, and P. Dollár, 'Microsoft coco: Common objects in context,' Proceedings of ECCV , 2014."
+                },
+                {
+                  "title": "Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning",
+                  "citation": "P. Sharma, N. Ding, S. Goodman, and R. Soricut, 'Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning,' Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics , 2018."
+                },
+                {
+                  "title": "From image descriptions to visual denotations: New similarity metrics for semantic inference over event descriptions",
+                  "citation": "P. Young, A. Lai, M. Hodosh, and J. Hockenmaier, 'From image descriptions to visual denotations: New similarity metrics for semantic inference over event descriptions,' Proceedings of the Annual Meeting of the Association for Computational Linguistics , 2014."
+                },
+                {
+                  "title": "Visual genome: Connecting language and vision using crowdsourced dense image annotations",
+                  "citation": "R. Krishna, Y. Zhu, O. Groth, J. Johnson, K. Hata, J. Kravitz, S. Chen, Y. Kalantidis, L.-J. Li, D. A. Shamma, M. Bernstein, and L. Fei-Fei, 'Visual genome: Connecting language and vision using crowdsourced dense image annotations,' in arXiv:1602.07332 , 2016."
+                },
+                {
+                  "title": "Modeling context in referring expressions",
+                  "citation": "L. Yu, P. Poirson, S. Yang, A. C. Berg, and T. L. Berg, 'Modeling context in referring expressions,' in Computer Vision-ECCV 2016: 14th European Conference, Amsterdam, The Netherlands, October 11-14, 2016, Proceedings, Part II 14 . Springer, 2016, pp. 69-85."
+                },
+                {
+                  "title": "Deep fragment embeddings for bidirectional image sentence mapping",
+                  "citation": "A. Karpathy, A. Joulin, and L. F. Fei-Fei, 'Deep fragment embeddings for bidirectional image sentence mapping,' Advances in neural information processing systems , vol. 27, 2014."
+                },
+                {
+                  "title": "Vqa: Visual question answering",
+                  "citation": "S. Antol, A. Agrawal, J. Lu, M. Mitchell, D. Batra, C. L. Zitnick, and D. Parikh, 'Vqa: Visual question answering,' in Proceedings of the IEEE international conference on computer vision , 2015, pp. 2425-2433."
+                },
+                {
+                  "title": "Exploring models and data for image question answering",
+                  "citation": "M. Ren, R. Kiros, and R. Zemel, 'Exploring models and data for image question answering,' Advances in neural information processing systems , vol. 28, 2015."
+                },
+                {
+                  "title": "Towards vqa models that can read",
+                  "citation": "A. Singh, V. Natarajan, M. Shah, Y. Jiang, X. Chen, D. Batra, D. Parikh, and M. Rohrbach, 'Towards vqa models that can read,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2019, pp. 8317-8326."
+                },
+                {
+                  "title": "Ok-vqa: A visual question answering benchmark requiring external knowledge",
+                  "citation": "K. Marino, M. Rastegari, A. Farhadi, and R. Mottaghi, 'Ok-vqa: A visual question answering benchmark requiring external knowledge,' in CVPR , 2019."
+                },
+                {
+                  "title": "Explicit knowledge-based reasoning for visual question answering",
+                  "citation": "P. Wang, Q. Wu, C. Shen, A. v. d. Hengel, and A. Dick, Explicit knowledge-based reasoning for visual question answering, arXiv preprint arXiv:1511.02570, 2015."
+                },
+                {
+                  "title": "Look before you leap: Bridging model-free and model-based reinforcement learning for planned-ahead vision-and-language navigation",
+                  "citation": "X. Wang, W. Xiong, H. Wang, and W. Y. Wang, 'Look before you leap: Bridging model-free and model-based reinforcement learning for planned-ahead vision-and-language navigation,' in The European Conference on Computer Vision (ECCV), September 2018."
+                },
+                {
+                  "title": "WebQA: Multihop and Multimodal QA",
+                  "citation": "Y. Chang, M. Narang, H. Suzuki, G. Cao, J. Gao, and Y. Bisk, 'WebQA: Multihop and Multimodal QA,' arXiv preprint arXiv:2109.00590 , 2021."
+                },
+                {
+                  "title": "Skin lesion analysis toward melanoma detection: A challenge at the 2017 international symposium on biomedical imaging (isbi), hosted by the international skin imaging collaboration (isic)",
+                  "citation": "N. C. F. Codella, D. Gutman, M. E. Celebi, B. Helba, M. A. Marchetti, S. W. Dusza, A. Kalloo, K. Liopyris, N. Mishra, H. Kittler, and A. Halpern, 'Skin lesion analysis toward melanoma detection: A challenge at the 2017 international symposium on biomedical imaging (isbi), hosted by the international skin imaging collaboration (isic),' in 2018 IEEE 15th International Symposium on Biomedical Imaging (ISBI 2018) , 2018, pp. 168-172."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.4.2",
+              "sec_title": "Video and Language Understanding and Generation",
+              "citations": [
+                {
+                  "title": "HERO: Hierarchical encoder for video+language omnirepresentation pre-training",
+                  "citation": "L. Li, Y.-C. Chen, Y. Cheng, Z. Gan, L. Yu, and J. Liu, HERO: Hierarchical encoder for video+language omnirepresentation pre-training, 2020."
+                },
+                {
+                  "title": "Violet : End-to-end video-language transformers with masked visual-token modeling",
+                  "citation": "T.-J. Fu, L. Li, Z. Gan, K. Lin, W. Y. Wang, L. Wang, and Z. Liu, 'Violet : End-to-end video-language transformers with masked visual-token modeling,' 2022."
+                },
+                {
+                  "title": "Frozen in time: A joint video and image encoder for end-to-end retrieval",
+                  "citation": "M. Bain, A. Nagrani, G. Varol, and A. Zisserman, 'Frozen in time: A joint video and image encoder for end-to-end retrieval,' in Proceedings of the IEEE/CVF International Conference on Computer Vision , 2021, pp. 1728-1738."
+                },
+                {
+                  "title": "Merlot reserve: Neural script knowledge through vision and language and sound",
+                  "citation": "R. Zellers, J. Lu, X. Lu, Y. Yu, Y. Zhao, M. Salehi, A. Kusupati, J. Hessel, A. Farhadi, and Y. Choi, 'Merlot reserve: Neural script knowledge through vision and language and sound,' 2022."
+                },
+                {
+                  "title": "Unsupervised body-language generation",
+                  "citation": "Y. Fu, C. Xiong, and Y. Miao, 'Unsupervised body-language generation,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023."
+                },
+                {
+                  "title": "Ark: Augmented reality with knowledge interactive emergent ability",
+                  "citation": "Q. Huang, J. S. Park, A. Gupta, P. Bennett, R. Gong, S. Som, B. Peng, O. K. Mohammed, C. Pal, Y. Choi et al., 'Ark: Augmented reality with knowledge interactive emergent ability,' arXiv preprint arXiv:2305.00970, 2023."
+                },
+                {
+                  "title": "BLIP-2: Bootstrapping language-image pre-training with frozen image encoders and large language models",
+                  "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'BLIP-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,' arXiv preprint arXiv:2301.12597, 2023."
+                },
+                {
+                  "title": "Mm-vid: Advancing video understanding with gpt-4v(ision)",
+                  "citation": "K. Lin, F. Ahmed, L. Li, C.-C. Lin, E. Azarnasab, Z. Yang, J. Wang, L. Liang, Z. Liu, Y. Lu, C. Liu, and L. Wang, 'Mm-vid: Advancing video understanding with gpt-4v(ision),' 2023."
+                },
+                {
+                  "title": "Visual instruction tuning",
+                  "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' arXiv preprint arXiv:2304.08485, 2023."
+                },
+                {
+                  "title": "Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models",
+                  "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,' arXiv preprint arXiv:2301.12597 , 2023."
+                },
+                {
+                  "title": "Minigpt-4: Enhancing vision-language understanding with advanced large language models",
+                  "citation": "D. Zhu, J. Chen, X. Shen, X. Li, and M. Elhoseiny, 'Minigpt-4: Enhancing vision-language understanding with advanced large language models,' 2023."
+                },
+                {
+                  "title": "BLIP-2: Bootstrapping language-image pre-training with frozen image encoders and large language models",
+                  "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'BLIP-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,' arXiv preprint arXiv:2301.12597, 2023."
+                },
+                {
+                  "title": "Video-chatgpt: Towards detailed video understanding via large vision and language models",
+                  "citation": "M. Maaz, H. Rasheed, S. Khan, and F. S. Khan, 'Video-chatgpt: Towards detailed video understanding via large vision and language models,' 2023."
+                },
+                {
+                  "title": "Videollm: Modeling video sequence with large language models",
+                  "citation": "G. Chen, Y.-D. Zheng, J. Wang, J. Xu, Y. Huang, J. Pan, Y. Wang, Y. Wang, Y. Qiao, T. Lu, and L. Wang, 'Videollm: Modeling video sequence with large language models,' 2023."
+                },
+                {
+                  "title": "Describe, explain, plan and select: Interactive planning with large language models enables open-world multi-task agents",
+                  "citation": "Z. Wang, S. Cai, A. Liu, X. Ma, and Y. Liang, 'Describe, explain, plan and select: Interactive planning with large language models enables open-world multi-task agents,' arXiv preprint arXiv:2302.01560 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.4.3",
+              "sec_title": "Experiments and Results (2)",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "6.5",
+          "sec_title": "Video-language Experiments",
+          "citations": [
+            {
+              "title": "Instructblip: Towards generalpurpose vision-language models with instruction tuning",
+              "citation": "W. Dai, J. Li, D. Li, A. M. H. Tiong, J. Zhao, W. Wang, B. Li, P. Fung, and S. Hoi, 'Instructblip: Towards generalpurpose vision-language models with instruction tuning,' 2023."
+            },
+            {
+              "title": "Eva-clip: Improved training techniques for clip at scale",
+              "citation": "Q. Sun, Y. Fang, L. Wu, X. Wang, and Y. Cao, 'Eva-clip: Improved training techniques for clip at scale,' arXiv preprint arXiv:2303.15389, 2023."
+            },
+            {
+              "title": "Frozen in time: A joint video and image encoder for end-to-end retrieval",
+              "citation": "M. Bain, A. Nagrani, G. Varol, and A. Zisserman, 'Frozen in time: A joint video and image encoder for end-to-end retrieval,' in Proceedings of the IEEE/CVF International Conference on Computer Vision , 2021, pp. 1728-1738."
+            },
+            {
+              "title": "Scaling instruction-finetuned language models",
+              "citation": "H. W. Chung, L. Hou, S. Longpre, B. Zoph, Y. Tay, W. Fedus, Y. Li, X. Wang, M. Dehghani, S. Brahma et al. , 'Scaling instruction-finetuned language models,' arXiv preprint arXiv:2210.11416 , 2022."
+            },
+            {
+              "title": "Frozen in time: A joint video and image encoder for end-to-end retrieval",
+              "citation": "M. Bain, A. Nagrani, G. Varol, and A. Zisserman, 'Frozen in time: A joint video and image encoder for end-to-end retrieval,' in Proceedings of the IEEE/CVF International Conference on Computer Vision , 2021, pp. 1728-1738."
+            },
+            {
+              "title": "Mm-vid: Advancing video understanding with gpt-4v(ision)",
+              "citation": "K. Lin, F. Ahmed, L. Li, C.-C. Lin, E. Azarnasab, Z. Yang, J. Wang, L. Liang, Z. Liu, Y. Lu, C. Liu, and L. Wang, 'Mm-vid: Advancing video understanding with gpt-4v(ision),' 2023."
+            },
+            {
+              "title": "BLIP-2: Bootstrapping language-image pre-training with frozen image encoders and large language models",
+              "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'BLIP-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,' arXiv preprint arXiv:2301.12597, 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "6.5.1",
+              "sec_title": "Audio-Video-Language Agents with GPT-4V",
+              "citations": [
+                {
+                  "title": "Mm-vid: Advancing video understanding with gpt-4v(ision)",
+                  "citation": "K. Lin, F. Ahmed, L. Li, C.-C. Lin, E. Azarnasab, Z. Yang, J. Wang, L. Liang, Z. Liu, Y. Lu, C. Liu, and L. Wang, 'Mm-vid: Advancing video understanding with gpt-4v(ision),' 2023."
+                },
+                {
+                  "title": "BLIP-2: Bootstrapping language-image pre-training with frozen image encoders and large language models",
+                  "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'BLIP-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,' arXiv preprint arXiv:2301.12597, 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.5.2",
+              "sec_title": "Embodied Multi-modal Agents with GPT-4V",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "6.6",
+          "sec_title": "Agent for NLP",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "6.6.1",
+              "sec_title": "LLMagent",
+              "citations": [
+                {
+                  "title": "Toolformer: Language models can teach themselves to use tools",
+                  "citation": "T. Schick, J. Dwivedi-Yu, R. Dessì, R. Raileanu, M. Lomeli, L. Zettlemoyer, N. Cancedda, and T. Scialom, 'Toolformer: Language models can teach themselves to use tools,' 2023."
+                },
+                {
+                  "title": "Internvid: A large-scale video-text dataset for multimodal understanding and generation",
+                  "citation": "Y. Wang, Y. He, Y. Li, K. Li, J. Yu, X. Ma, X. Chen, Y. Wang, P. Luo, Z. Liu, Y. Wang, L. Wang, and Y. Qiao, 'Internvid: A large-scale video-text dataset for multimodal understanding and generation,' 2023."
+                },
+                {
+                  "title": "React: Synergizing reasoning and acting in language models",
+                  "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao, 'React: Synergizing reasoning and acting in language models,' 2023."
+                },
+                {
+                  "title": "Tree of thoughts: Deliberate problem solving with large language models",
+                  "citation": "S. Yao, D. Yu, J. Zhao, I. Shafran, T. L. Griffiths, Y. Cao, and K. Narasimhan, 'Tree of thoughts: Deliberate problem solving with large language models,' 2023."
+                },
+                {
+                  "title": "Autogen: Enabling next-gen llm applications via multi-agent conversation",
+                  "citation": "Q. Wu, G. Bansal, J. Zhang, Y. Wu, S. Zhang, E. E. Zhu, B. Li, L. Jiang, X. Zhang, and C. Wang, 'Autogen: Enabling next-gen llm applications via multi-agent conversation,' Microsoft, Tech. Rep. MSR-TR-2023-33, August 2023. [Online]. Available: https://www.microsoft.com/en-us/research/publication/ autogen-enabling-next-gen-llm-applications-via-multi-agent-conversation-framework/"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.6.2",
+              "sec_title": "General LLM agent",
+              "citations": [
+                {
+                  "title": "Stanford alpaca: An instruction-following llama model",
+                  "citation": "R. Taori, I. Gulrajani, T. Zhang, Y. Dubois, X. Li, C. Guestrin, P. Liang, and T. B. Hashimoto, 'Stanford alpaca: An instruction-following llama model,' https://github.com/tatsu-lab/stanford\\_alpaca, 2023."
+                },
+                {
+                  "title": "Autogen: Enabling next-gen llm applications via multi-agent conversation",
+                  "citation": "Q. Wu, G. Bansal, J. Zhang, Y. Wu, S. Zhang, E. E. Zhu, B. Li, L. Jiang, X. Zhang, and C. Wang, 'Autogen: Enabling next-gen llm applications via multi-agent conversation,' Microsoft, Tech. Rep. MSR-TR-2023-33, August 2023. [Online]. Available: https://www.microsoft.com/en-us/research/publication/ autogen-enabling-next-gen-llm-applications-via-multi-agent-conversation-framework/"
+                },
+                {
+                  "title": "Internvid: A large-scale video-text dataset for multimodal understanding and generation",
+                  "citation": "Y. Wang, Y. He, Y. Li, K. Li, J. Yu, X. Ma, X. Chen, Y. Wang, P. Luo, Z. Liu, Y. Wang, L. Wang, and Y. Qiao, 'Internvid: A large-scale video-text dataset for multimodal understanding and generation,' 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.6.3",
+              "sec_title": "Instruction-following LLM agents",
+              "citations": [
+                {
+                  "title": "Training language models to follow instructions with human feedback",
+                  "citation": "L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray et al. , 'Training language models to follow instructions with human feedback,' Advances in Neural Information Processing Systems , vol. 35, pp. 27 730-27 744, 2022."
+                },
+                {
+                  "title": "Stanford alpaca: An instruction-following llama model",
+                  "citation": "R. Taori, I. Gulrajani, T. Zhang, Y. Dubois, X. Li, C. Guestrin, P. Liang, and T. B. Hashimoto, 'Stanford alpaca: An instruction-following llama model,' https://github.com/tatsu-lab/stanford\\_alpaca, 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.6.4",
+              "sec_title": "Experiments and Results (3)",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "Agent AI Across Modalities, Domains, and Realities",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "7.1",
+          "sec_title": "Agents for Cross-modal Understanding",
+          "citations": [
+            {
+              "title": "Flamingo: a visual language model for few-shot learning",
+              "citation": "J.-B. Alayrac, J. Donahue, P. Luc, A. Miech, I. Barr, Y. Hasson, K. Lenc, A. Mensch, K. Millican, M. Reynolds et al. , 'Flamingo: a visual language model for few-shot learning,' Advances in Neural Information Processing Systems , vol. 35, pp. 23 716-23 736, 2022."
+            },
+            {
+              "title": "Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models",
+              "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,' arXiv preprint arXiv:2301.12597 , 2023."
+            },
+            {
+              "title": "Visual instruction tuning",
+              "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' arXiv preprint arXiv:2304.08485, 2023."
+            },
+            {
+              "title": "Rt-2: Vision-language-action models transfer web knowledge to robotic control",
+              "citation": "A. Brohan, N. Brown, J. Carbajal, Y. Chebotar, X. Chen, K. Choromanski, T. Ding, D. Driess, A. Dubey, C. Finn et al. , 'Rt-2: Vision-language-action models transfer web knowledge to robotic control,' arXiv preprint arXiv:2307.15818 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.2",
+          "sec_title": "Agents for Cross-domain Understanding",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.3",
+          "sec_title": "Interactive agent for cross-modality and cross-reality",
+          "citations": [
+            {
+              "title": "Ark: Augmented reality with knowledge interactive emergent ability",
+              "citation": "Q. Huang, J. S. Park, A. Gupta, P. Bennett, R. Gong, S. Som, B. Peng, O. K. Mohammed, C. Pal, Y. Choi et al. , 'Ark: Augmented reality with knowledge interactive emergent ability,' arXiv preprint arXiv:2305.00970 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.4",
+          "sec_title": "Sim to Real Transfer",
+          "citations": [
+            {
+              "title": "Domain randomization for transferring deep neural networks from simulation to the real world",
+              "citation": "J. Tobin, R. Fong, A. Ray, J. Schneider, W. Zaremba, and P. Abbeel, 'Domain randomization for transferring deep neural networks from simulation to the real world,' in 2017 IEEE/RSJ international conference on intelligent robots and systems (IROS) . IEEE, 2017, pp. 23-30."
+            },
+            {
+              "title": "Task-grasping from a demonstrated human strategy",
+              "citation": "D. Saito, K. Sasabuchi, N. Wake, J. Takamatsu, H. Koike, and K. Ikeuchi, 'Task-grasping from a demonstrated human strategy,' in 2022 IEEE-RAS 21st International Conference on Humanoid Robots (Humanoids) , 2022, pp. 880-887."
+            },
+            {
+              "title": "Target-driven visual navigation in indoor scenes using deep reinforcement learning",
+              "citation": "Y. Zhu, R. Mottaghi, E. Kolve, J. J. Lim, A. Gupta, L. Fei-Fei, and A. Farhadi, 'Target-driven visual navigation in indoor scenes using deep reinforcement learning,' in Robotics and Automation (ICRA), 2017 IEEE International Conference on . IEEE, 2017, pp. 3357-3364."
+            },
+            {
+              "title": "Rl-cyclegan: Reinforcement learning aware simulation-to-real",
+              "citation": "K. Rao, C. Harris, A. Irpan, S. Levine, J. Ibarz, and M. Khansari, 'Rl-cyclegan: Reinforcement learning aware simulation-to-real,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 11 157-11 166."
+            },
+            {
+              "title": "Retinagan: An object-aware approach to sim-to-real transfer",
+              "citation": "D. Ho, K. Rao, Z. Xu, E. Jang, M. Khansari, and Y. Bai, 'Retinagan: An object-aware approach to sim-to-real transfer,' in 2021 IEEE International Conference on Robotics and Automation (ICRA) . IEEE, 2021, pp. 10 920-10 926."
+            },
+            {
+              "title": "Target-driven visual navigation in indoor scenes using deep reinforcement learning",
+              "citation": "Y. Zhu, R. Mottaghi, E. Kolve, J. J. Lim, A. Gupta, L. Fei-Fei, and A. L. Yuille, 'Target-driven visual navigation in indoor scenes using deep reinforcement learning,' in 2017 IEEE international conference on robotics and automation (ICRA), 2017, pp. 3357-3364."
+            },
+            {
+              "title": "Tunenet: One-shot residual tuning for system identification and sim-to-real robot task transfer",
+              "citation": "A. Allevato, E. S. Short, M. Pryor, and A. Thomaz, 'Tunenet: One-shot residual tuning for system identification and sim-to-real robot task transfer,' in Conference on Robot Learning . PMLR, 2020, pp. 445-455."
+            },
+            {
+              "title": "Unrealrox: an extremely photorealistic virtual reality environment for robotics simulations and synthetic data generation",
+              "citation": "P. Martinez-Gonzalez, S. Oprea, A. Garcia-Garcia, A. Jover-Alvarez, S. Orts-Escolano, and J. Garcia-Rodriguez, 'Unrealrox: an extremely photorealistic virtual reality environment for robotics simulations and synthetic data generation,' Virtual Reality, vol. 24, pp. 271-288, 2020."
+            },
+            {
+              "title": "Sim4cv: A photo-realistic simulator for computer vision applications",
+              "citation": "M. Müller, V. Casser, J. Lahoud, N. Smith, and B. Ghanem, 'Sim4cv: A photo-realistic simulator for computer vision applications,' International Journal of Computer Vision , vol. 126, pp. 902-919, 2018."
+            },
+            {
+              "title": "Airsim: High-fidelity visual and physical simulation for autonomous vehicles",
+              "citation": "S. Shah, D. Dey, C. Lovett, and A. Kapoor, 'Airsim: High-fidelity visual and physical simulation for autonomous vehicles,' in Field and Service Robotics: Results of the 11th International Conference . Springer, 2018, pp. 621-635."
+            },
+            {
+              "title": "Task-sequencing simulator: Integrated machine learning to execution simulation for robot manipulation",
+              "citation": "K. Sasabuchi, D. Saito, A. Kanehira, N. Wake, J. Takamatsu, and K. Ikeuchi, 'Task-sequencing simulator: Integrated machine learning to execution simulation for robot manipulation,' arXiv preprint arXiv:2301.01382 , 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "Continuous and Self-improvement for Agent AI",
+      "citations": [
+        {
+          "title": "Robocat: A self-improving foundation agent for robotic manipulation",
+          "citation": "K. Bousmalis, G. Vezzani, D. Rao, C. Devin, A. X. Lee, M. Bauza, T. Davchev, Y. Zhou, A. Gupta, A. Raju et al. , 'Robocat: A self-improving foundation agent for robotic manipulation,' arXiv preprint arXiv:2306.11706 , 2023."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "8.1",
+          "sec_title": "Human-based Interaction Data",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "8.2",
+          "sec_title": "Foundation Model Generated Data",
+          "citations": [
+            {
+              "title": "Humanise: Language-conditioned human motion generation in 3d scenes",
+              "citation": "Z. Wang, Y. Chen, T. Liu, Y. Zhu, W. Liang, and S. Huang, 'Humanise: Language-conditioned human motion generation in 3d scenes,' in Advances in Neural Information Processing Systems, 2022, pp. 14959-14971."
+            },
+            {
+              "title": "Stanford alpaca: An instruction-following llama model",
+              "citation": "R. Taori, I. Gulrajani, T. Zhang, Y. Dubois, X. Li, C. Guestrin, P. Liang, and T. B. Hashimoto, 'Stanford alpaca: An instruction-following llama model,' https://github.com/tatsu-lab/stanford\\_alpaca, 2023."
+            },
+            {
+              "title": "Judging llm-as-a-judge with mt-bench and chatbot arena",
+              "citation": "L. Zheng, W.-L. Chiang, Y. Sheng, S. Zhuang, Z. Wu, Y. Zhuang, Z. Lin, Z. Li, D. Li, E. P. Xing, H. Zhang, J. E. Gonzalez, and I. Stoica, 'Judging llm-as-a-judge with mt-bench and chatbot arena,' 2023."
+            },
+            {
+              "title": "Llama: Open and efficient foundation language models",
+              "citation": "H. Touvron, T. Lavril, G. Izacard, X. Martinet, M.-A. Lachaux, T. Lacroix, B. Rozière, N. Goyal, E. Hambro, F. Azhar et al. , 'Llama: Open and efficient foundation language models,' arXiv preprint arXiv:2302.13971 , 2023."
+            },
+            {
+              "title": "The false promise of imitating proprietary llms",
+              "citation": "A. Gudibande, E. Wallace, C. Snell, X. Geng, H. Liu, P. Abbeel, S. Levine, and D. Song, 'The false promise of imitating proprietary llms,' arXiv preprint arXiv:2305.15717 , 2023."
+            },
+            {
+              "title": "Visual instruction tuning",
+              "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' arXiv preprint arXiv:2304.08485, 2023."
+            },
+            {
+              "title": "A picture is worth a thousand words: Principled recaptioning improves image generation",
+              "citation": "E. Segalis, D. Valevski, D. Lumen, Y. Matias, and Y. Leviathan, 'A picture is worth a thousand words: Principled recaptioning improves image generation,' arXiv preprint arXiv:2310.16656 , 2023."
+            },
+            {
+              "title": "Describe, explain, plan and select: Interactive planning with large language models enables open-world multi-task agents",
+              "citation": "Z. Wang, S. Cai, A. Liu, X. Ma, and Y. Liang, 'Describe, explain, plan and select: Interactive planning with large language models enables open-world multi-task agents,' arXiv preprint arXiv:2302.01560 , 2023."
+            },
+            {
+              "title": "Learning video representations from large language models",
+              "citation": "Y. Zhao, I. Misra, P. Krähenbühl, and R. Girdhar, 'Learning video representations from large language models,' in arXiv preprint arXiv:2212.04501 , 2022."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "9",
+      "sec_title": "Agent Dataset and Leaderboard",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "9.1",
+          "sec_title": "'CuisineWorld' Dataset for Multi-agent Gaming",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "9.1.1",
+              "sec_title": "Benchmark",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "9.1.2",
+              "sec_title": "Task",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "9.1.3",
+              "sec_title": "Metrics and Judging",
+              "citations": [
+                {
+                  "title": "Mindagent: Emergent gaming interaction",
+                  "citation": "R. Gong, Q. Huang, X. Ma, H. Vo, Z. Durante, Y. Noda, Z. Zheng, S.-C. Zhu, D. Terzopoulos, L. Fei-Fei et al. , 'Mindagent: Emergent gaming interaction,' arXiv preprint arXiv:2309.09971 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "9.1.4",
+              "sec_title": "Evaluation",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "9.2",
+          "sec_title": "Audio-Video-Language Pre-training Dataset",
+          "citations": [],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

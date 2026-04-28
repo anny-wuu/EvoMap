@@ -1,0 +1,1834 @@
+{
+  "track": "Graph Neural Networks",
+  "paper_title": "Graph Transformers: A Survey",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "INTRODUCTION",
+      "citations": [
+        {
+          "title": "Everything is connected: Graph neural networks",
+          "citation": "P. Veliˇ ckovi´ c, 'Everything is connected: Graph neural networks,' Current Opinion in Structural Biology , vol. 79, p. 102538, 2023."
+        },
+        {
+          "title": "Graph Neural Networks in Recommender Systems: A Survey",
+          "citation": "S. Wu, F. Sun, W. Zhang, X. Xie, and B. Cui, 'Graph Neural Networks in Recommender Systems: A Survey,' ACM Computing Surveys , vol. 55, no. 5, pp. 1-37, May 2023."
+        },
+        {
+          "title": "Graph neural networks for visual question answering: A systematic review",
+          "citation": "A. A. Yusuf, C. Feng, X. Mao, R. Ally Duma, M. S. Abood, and A. H. A. Chukkol, 'Graph neural networks for visual question answering: A systematic review,' Multimedia Tools and Applications , Nov. 2023."
+        },
+        {
+          "title": "A comprehensive survey on graph anomaly detection with deep learning",
+          "citation": "X. Ma, J. Wu, S. Xue, J. Yang, C. Zhou, Q. Z. Sheng, H. Xiong, and L. Akoglu, 'A comprehensive survey on graph anomaly detection with deep learning,' IEEE Transactions on Knowledge and Data Engineering , 2021."
+        },
+        {
+          "title": "Integrating sentiment analysis with graph neural networks for enhanced stock prediction: A comprehensive survey",
+          "citation": "N. Das, B. Sadhukhan, R. Chatterjee, and S. Chakrabarti, 'Integrating sentiment analysis with graph neural networks for enhanced stock prediction: A comprehensive survey,' Decision Analytics Journal , p. 100417, 2024."
+        },
+        {
+          "title": "A survey on neural data-to-text generation",
+          "citation": "Y. Lin, T. Ruan, J. Liu, and H. Wang, 'A survey on neural data-to-text generation,' IEEE Transactions on Knowledge and Data Engineering , 2023."
+        },
+        {
+          "title": "Machine Learning for Subgraph Extraction: Methods, Applications and Challenges",
+          "citation": "K. S. Yow, N. Liao, S. Luo, and R. Cheng, 'Machine Learning for Subgraph Extraction: Methods, Applications and Challenges,' Proceedings of the VLDB Endowment , vol. 16, no. 12, pp. 3864-3867, Aug. 2023."
+        },
+        {
+          "title": "Deep learning on graphs: A survey",
+          "citation": "Z. Zhang, P. Cui, and W. Zhu, 'Deep learning on graphs: A survey,' IEEE Transactions on Knowledge and Data Engineering , vol. 34, no. 1, pp. 249-270, 2020."
+        },
+        {
+          "title": "A comprehensive survey on graph neural networks",
+          "citation": "Z. Wu, S. Pan, F. Chen, G. Long, C. Zhang, and S. Y. Philip, 'A comprehensive survey on graph neural networks,' IEEE Transactions on Neural Networks and Learning Systems , vol. 32, no. 1, pp. 4-24, 2020."
+        },
+        {
+          "title": "A comprehensive survey of graph neural networks for knowledge graphs",
+          "citation": "Z. Ye, Y. J. Kumar, G. O. Sing, F. Song, and J. Wang, 'A comprehensive survey of graph neural networks for knowledge graphs,' IEEE Access , vol. 10, pp. 75 729-75 741, 2022."
+        },
+        {
+          "title": "Do transformers really perform badly for graph representation?",
+          "citation": "C. Ying, T. Cai, S. Luo, S. Zheng, G. Ke, D. He, Y. Shen, and T.-Y. Liu, 'Do transformers really perform badly for graph representation?' Advances in Neural Information Processing Systems , vol. 34, pp. 28 877-28 888, 2021."
+        },
+        {
+          "title": "Attending to graph transformers",
+          "citation": "L. M¨ uller, M. Galkin, C. Morris, and L. Ramp´ aˇ sek, 'Attending to graph transformers,' Transactions on Machine Learning Research , 2024."
+        },
+        {
+          "title": "Attention is all you need",
+          "citation": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, 'Attention is all you need,' Advances in Neural Information Processing Systems , vol. 30, 2017."
+        },
+        {
+          "title": "A survey of transformers",
+          "citation": "T. Lin, Y. Wang, X. Liu, and X. Qiu, 'A survey of transformers,' AI Open , 2022."
+        },
+        {
+          "title": "Pure transformers are powerful graph learners",
+          "citation": "J. Kim, D. Nguyen, S. Min, S. Cho, M. Lee, H. Lee, and S. Hong, 'Pure transformers are powerful graph learners,' Advances in Neural Information Processing Systems , vol. 35, pp. 14 582-14 595, 2022."
+        },
+        {
+          "title": "A generalization of transformer networks to graphs",
+          "citation": "V. P. Dwivedi and X. Bresson, 'A generalization of transformer networks to graphs,' AAAI Workshop on Deep Learning on Graphs: Methods and Applications , 2021."
+        },
+        {
+          "title": "Graph learning: A survey",
+          "citation": "F. Xia, K. Sun, S. Yu, A. Aziz, L. Wan, S. Pan, and H. Liu, 'Graph learning: A survey,' IEEE Transactions on Artificial Intelligence , vol. 2, no. 2, pp. 109-127, 2021."
+        },
+        {
+          "title": "A survey on graph neural networks and graph transformers in computer vision: A task-oriented perspective",
+          "citation": "C. Chen, Y. Wu, Q. Dai, H.-Y. Zhou, M. Xu, S. Yang, X. Han, and Y. Yu, 'A survey on graph neural networks and graph transformers in computer vision: A task-oriented perspective,' arXiv preprint arXiv:2209.13232 , 2022."
+        },
+        {
+          "title": "Attending to graph transformers",
+          "citation": "L. M¨ uller, M. Galkin, C. Morris, and L. Ramp´ aˇ sek, 'Attending to graph transformers,' Transactions on Machine Learning Research , 2024."
+        },
+        {
+          "title": "Transformer for graphs: An overview from architecture perspective",
+          "citation": "E. Min, R. Chen, Y. Bian, T. Xu, K. Zhao, W. Huang, P. Zhao, J. Huang, S. Ananiadou, and Y. Rong, 'Transformer for graphs: An overview from architecture perspective,' arXiv preprint arXiv:2202.08455 , 2022."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "NOTATIONS AND PRELIMINARIES",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Graphs and Graph Neural Networks",
+          "citations": [
+            {
+              "title": "Graph representation learning: A survey",
+              "citation": "F. Chen, Y.-C. Wang, B. Wang, and C.-C. J. Kuo, 'Graph representation learning: A survey,' APSIPA Transactions on Signal and Information Processing , vol. 9, p. e15, 2020."
+            },
+            {
+              "title": "How powerful are graph neural networks?",
+              "citation": "K. Xu, W. Hu, J. Leskovec, and S. Jegelka, 'How powerful are graph neural networks?' in 7th International Conference on Learning Representations, ICLR 2019, New Orleans, LA, USA, May 6-9, 2019 . OpenReview.net, 2019."
+            },
+            {
+              "title": "How powerful are spectral graph neural networks",
+              "citation": "X. Wang and M. Zhang, 'How powerful are spectral graph neural networks,' in International Conference on Machine Learning . PMLR, 2022, pp. 23 341-23 362."
+            },
+            {
+              "title": "A Survey on Spectral Graph Neural Networks",
+              "citation": "D. Bo, X. Wang, Y. Liu, Y. Fang, Y. Li, and C. Shi, 'A Survey on Spectral Graph Neural Networks,' arXiv preprint arXiv:2302.05631 , 2023."
+            },
+            {
+              "title": "Deep learning on graphs: A survey",
+              "citation": "Z. Zhang, P. Cui, and W. Zhu, 'Deep learning on graphs: A survey,' IEEE Transactions on Knowledge and Data Engineering , vol. 34, no. 1, pp. 249-270, 2020."
+            },
+            {
+              "title": "A gentle introduction to deep learning for graphs",
+              "citation": "D. Bacciu, F. Errica, A. Micheli, and M. Podda, 'A gentle introduction to deep learning for graphs,' Neural Networks , vol. 129, pp. 203-221, 2020."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Self-attention and Transformers",
+          "citations": [
+            {
+              "title": "Self-attention with relative position representations",
+              "citation": "P. Shaw, J. Uszkoreit, and A. Vaswani, 'Self-attention with relative position representations,' in Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL), New Orleans, Louisiana, USA, June 1-6 , 2018, pp. 464-468."
+            },
+            {
+              "title": "Attention is all you need",
+              "citation": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, 'Attention is all you need,' Advances in Neural Information Processing Systems , vol. 30, 2017."
+            },
+            {
+              "title": "A survey on multimodal bidirectional machine learning translation of image and natural language processing",
+              "citation": "W. Nam and B. Jang, 'A survey on multimodal bidirectional machine learning translation of image and natural language processing,' Expert Systems with Applications , p. 121168, 2023."
+            },
+            {
+              "title": "Memorization vs. generalization: Quantifying data leakage in nlp performance evaluation",
+              "citation": "A. Elangovan, J. He, and K. Verspoor, 'Memorization vs. generalization: Quantifying data leakage in nlp performance evaluation,' in Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics (ECL) , 2021, pp. 13251335."
+            },
+            {
+              "title": "Effects of human adversarial and affable samples on BERT generalization",
+              "citation": "A. Elangovan, E. He, Y. Li, and K. Verspoor, 'Effects of human adversarial and affable samples on BERT generalization,' in Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP) , 2023."
+            },
+            {
+              "title": "Image transformer",
+              "citation": "N. Parmar, A. Vaswani, J. Uszkoreit, L. Kaiser, N. Shazeer, A. Ku, and D. Tran, 'Image transformer,' in International Conference on Machine Learning . PMLR, 2018, pp. 4055-4064."
+            },
+            {
+              "title": "Graph neural networks for visual question answering: A systematic review",
+              "citation": "A. A. Yusuf, C. Feng, X. Mao, R. Ally Duma, M. S. Abood, and A. H. A. Chukkol, 'Graph neural networks for visual question answering: A systematic review,' Multimedia Tools and Applications , Nov. 2023."
+            },
+            {
+              "title": "Transforming Image Generation from Scene Graphs",
+              "citation": "R. Sortino, S. Palazzo, and C. Spampinato, 'Transforming Image Generation from Scene Graphs,' in 2022 26th International Conference on Pattern Recognition (ICPR) . IEEE, 2022, pp. 4118-4124."
+            },
+            {
+              "title": "Graph transformer networks",
+              "citation": "S. Yun, M. Jeong, R. Kim, J. Kang, and H. J. Kim, 'Graph transformer networks,' Advances in Neural Information Processing Systems , vol. 32, 2019."
+            },
+            {
+              "title": "Attending to graph transformers",
+              "citation": "L. M¨ uller, M. Galkin, C. Morris, and L. Ramp´ aˇ sek, 'Attending to graph transformers,' Transactions on Machine Learning Research , 2024."
+            },
+            {
+              "title": "CHIEF: Clustering with higherorder motifs in big networks",
+              "citation": "F. Xia, S. Yu, C. Liu, J. Li, and I. Lee, 'CHIEF: Clustering with higherorder motifs in big networks,' IEEE Transactions on Network Science and Engineering , vol. 9, no. 3, pp. 990-1005, 2021."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "DESIGN PERSPECTIVES OF GRAPH TRANSFORMERS",
+      "citations": [
+        {
+          "title": "Attention is all you need",
+          "citation": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, 'Attention is all you need,' Advances in Neural Information Processing Systems , vol. 30, 2017."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Graph Inductive Bias",
+          "citations": [
+            {
+              "title": "A generalization of transformer networks to graphs",
+              "citation": "V. P. Dwivedi and X. Bresson, 'A generalization of transformer networks to graphs,' AAAI Workshop on Deep Learning on Graphs: Methods and Applications , 2021."
+            },
+            {
+              "title": "Novel positional encodings to enable tree-based transformers",
+              "citation": "V. Shiv and C. Quirk, 'Novel positional encodings to enable tree-based transformers,' Advances in Neural Information Processing Systems , vol. 32, 2019."
+            },
+            {
+              "title": "Recipe for a general, powerful, scalable graph transformer",
+              "citation": "L. Ramp´ aˇ sek, M. Galkin, V. P. Dwivedi, A. T. Luu, G. Wolf, and D. Beaini, 'Recipe for a general, powerful, scalable graph transformer,' Advances in Neural Information Processing Systems , vol. 35, pp. 14 501-14 515, 2022."
+            },
+            {
+              "title": "A simple and effective positional encoding for transformers",
+              "citation": "P. Chen, H. Tsai, S. Bhojanapalli, H. W. Chung, Y. Chang, and C. Ferng, 'A simple and effective positional encoding for transformers,' in Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP), Virtual Event / Punta Cana, Dominican Republic, 7-11 November , 2021, pp. 2974-2988."
+            },
+            {
+              "title": "GRPE: Relative positional encoding for graph transformer",
+              "citation": "W. Park, W.-G. Chang, D. Lee, J. Kim, and seung-won hwang, 'GRPE: Relative positional encoding for graph transformer,' in ICLR2022 Machine Learning for Drug Discovery , 2022."
+            },
+            {
+              "title": "Do transformers really perform badly for graph representation?",
+              "citation": "C. Ying, T. Cai, S. Luo, S. Zheng, G. Ke, D. He, Y. Shen, and T.-Y. Liu, 'Do transformers really perform badly for graph representation?' Advances in Neural Information Processing Systems , vol. 34, pp. 28 877-28 888, 2021."
+            },
+            {
+              "title": "Graph attention networks",
+              "citation": "P. Veliˇ ckovi´ c, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in International Conference on Learning Representations , 2018."
+            },
+            {
+              "title": "Graph attention networks with positional embeddings",
+              "citation": "L. Ma, R. Rabbany, and A. Romero-Soriano, 'Graph attention networks with positional embeddings,' in Pacific-Asia Conference on Knowledge Discovery and Data Mining . Springer, 2021, pp. 514-527."
+            },
+            {
+              "title": "Shifu2: A network representation learning based model for advisoradvisee relationship mining",
+              "citation": "J. Liu, F. Xia, L. Wang, B. Xu, X. Kong, H. Tong, and I. King, 'Shifu2: A network representation learning based model for advisoradvisee relationship mining,' IEEE Transactions on Knowledge and Data Engineering , vol. 33, no. 4, pp. 1763-1777, 2019."
+            },
+            {
+              "title": "CHIEF: Clustering with higherorder motifs in big networks",
+              "citation": "F. Xia, S. Yu, C. Liu, J. Li, and I. Lee, 'CHIEF: Clustering with higherorder motifs in big networks,' IEEE Transactions on Network Science and Engineering , vol. 9, no. 3, pp. 990-1005, 2021."
+            },
+            {
+              "title": "Deformable Graph Transformer",
+              "citation": "J. Park, S. Yun, H. Park, J. Kang, J. Jeong, K.-M. Kim, J.-w. Ha, and H. J. Kim, 'Deformable Graph Transformer,' arXiv preprint arXiv:2206.14337 , 2022."
+            },
+            {
+              "title": "GraphiT: Encoding graph structure in transformers",
+              "citation": "G. Mialon, D. Chen, M. Selosse, and J. Mairal, 'GraphiT: Encoding graph structure in transformers,' arXiv preprint arXiv:2106.05667 , 2021."
+            },
+            {
+              "title": "Transformer language models without positional encodings still learn positional information",
+              "citation": "A. Haviv, O. Ram, O. Press, P. Izsak, and O. Levy, 'Transformer language models without positional encodings still learn positional information,' in Findings of the Association for Computational Linguistics: EMNLP 2022 , 2022, pp. 1382-1390."
+            },
+            {
+              "title": "Rethinking Positional Encoding in Tree Transformer for Code Representation",
+              "citation": "H. Peng, G. Li, Y. Zhao, and Z. Jin, 'Rethinking Positional Encoding in Tree Transformer for Code Representation,' in Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing , 2022, pp. 3204-3214."
+            },
+            {
+              "title": "Recipe for a general, powerful, scalable graph transformer",
+              "citation": "L. Ramp´ aˇ sek, M. Galkin, V. P. Dwivedi, A. T. Luu, G. Wolf, and D. Beaini, 'Recipe for a general, powerful, scalable graph transformer,' Advances in Neural Information Processing Systems , vol. 35, pp. 14 501-14 515, 2022."
+            },
+            {
+              "title": "Transformers meet directed graphs",
+              "citation": "S. Geisler, Y. Li, D. J. Mankowitz, A. T. Cemgil, S. G¨ unnemann, and C. Paduraru, 'Transformers meet directed graphs,' in International Conference on Machine Learning . PMLR, 2023, pp. 11 144-11 172."
+            },
+            {
+              "title": "Random walks: A review of algorithms and applications",
+              "citation": "F. Xia, J. Liu, H. Nie, Y. Fu, L. Wan, and X. Kong, 'Random walks: A review of algorithms and applications,' IEEE Transactions on Emerging Topics in Computational Intelligence , vol. 4, no. 2, pp. 95-107, 2019."
+            },
+            {
+              "title": "Exploring Dimensionality Reduction Techniques in Multilingual Transformers",
+              "citation": "´ A. Huertas-Garc´ ıa, A. Mart´ ın, J. Huertas-Tato, and D. Camacho, 'Exploring Dimensionality Reduction Techniques in Multilingual Transformers,' Cognitive Computation , vol. 15, no. 2, pp. 590-612, 2023."
+            },
+            {
+              "title": "Structure-aware transformer for graph representation learning",
+              "citation": "D. Chen, L. O'Bray, and K. Borgwardt, 'Structure-aware transformer for graph representation learning,' in International Conference on Machine Learning . PMLR, 2022, pp. 3469-3489."
+            },
+            {
+              "title": "Nodeformer: A scalable graph structure learning transformer for node classification",
+              "citation": "Q. Wu, W. Zhao, Z. Li, D. P. Wipf, and J. Yan, 'Nodeformer: A scalable graph structure learning transformer for node classification,' Advances in Neural Information Processing Systems , vol. 35, pp. 27 387-27 401, 2022."
+            },
+            {
+              "title": "BGT-Net: Bidirectional GRU transformer network for scene graph generation",
+              "citation": "N. Dhingra, F. Ritter, and A. Kunz, 'BGT-Net: Bidirectional GRU transformer network for scene graph generation,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2021, pp. 2150-2159."
+            },
+            {
+              "title": "Structure-aware transformer for graph representation learning",
+              "citation": "D. Chen, L. O'Bray, and K. Borgwardt, 'Structure-aware transformer for graph representation learning,' in International Conference on Machine Learning . PMLR, 2022, pp. 3469-3489."
+            },
+            {
+              "title": "Transformer in transformer",
+              "citation": "K. Han, A. Xiao, E. Wu, J. Guo, C. Xu, and Y. Wang, 'Transformer in transformer,' Advances in Neural Information Processing Systems , vol. 34, pp. 15 908-15 919, 2021."
+            },
+            {
+              "title": "GraphiT: Encoding graph structure in transformers",
+              "citation": "G. Mialon, D. Chen, M. Selosse, and J. Mairal, 'GraphiT: Encoding graph structure in transformers,' arXiv preprint arXiv:2106.05667 , 2021."
+            },
+            {
+              "title": "EdgeBERT: Sentence-level energy optimizations for latency-aware multi-task nlp inference",
+              "citation": "T. Tambe, C. Hooper, L. Pentecost, T. Jia, E.-Y. Yang, M. Donato, V. Sanh, P. Whatmough, A. M. Rush, and D. Brooks, 'EdgeBERT: Sentence-level energy optimizations for latency-aware multi-task nlp inference,' in MICRO-54: 54th Annual IEEE/ACM International Symposium on Microarchitecture , 2021, pp. 830-844."
+            },
+            {
+              "title": "Global self-attention as a replacement for graph convolution",
+              "citation": "M. S. Hussain, M. J. Zaki, and D. Subramanian, 'Global self-attention as a replacement for graph convolution,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 655-665."
+            },
+            {
+              "title": "Multi-scale vision LongFormer: A new vision transformer for highresolution image encoding",
+              "citation": "P. Zhang, X. Dai, J. Yang, B. Xiao, L. Yuan, L. Zhang, and J. Gao, 'Multi-scale vision LongFormer: A new vision transformer for highresolution image encoding,' in Proceedings of the IEEE/CVF International Conference on Computer Vision , 2021, pp. 2998-3008."
+            },
+            {
+              "title": "GPT-GNN: Generative pre-training of graph neural networks",
+              "citation": "Z. Hu, Y. Dong, K. Wang, K.-W. Chang, and Y. Sun, 'GPT-GNN: Generative pre-training of graph neural networks,' in Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , 2020, pp. 1857-1867."
+            },
+            {
+              "title": "Do transformers really perform badly for graph representation?",
+              "citation": "C. Ying, T. Cai, S. Luo, S. Zheng, G. Ke, D. He, Y. Shen, and T.-Y. Liu, 'Do transformers really perform badly for graph representation?' Advances in Neural Information Processing Systems , vol. 34, pp. 28 877-28 888, 2021."
+            },
+            {
+              "title": "GRPE: Relative positional encoding for graph transformer",
+              "citation": "W. Park, W.-G. Chang, D. Lee, J. Kim, and seung-won hwang, 'GRPE: Relative positional encoding for graph transformer,' in ICLR2022 Machine Learning for Drug Discovery , 2022."
+            },
+            {
+              "title": "Recipe for a general, powerful, scalable graph transformer",
+              "citation": "L. Ramp´ aˇ sek, M. Galkin, V. P. Dwivedi, A. T. Luu, G. Wolf, and D. Beaini, 'Recipe for a general, powerful, scalable graph transformer,' Advances in Neural Information Processing Systems , vol. 35, pp. 14 501-14 515, 2022."
+            },
+            {
+              "title": "Lidar-based online 3D video object detection with graph-based message passing and spatiotemporal transformer attention",
+              "citation": "J. Yin, J. Shen, C. Guan, D. Zhou, and R. Yang, 'Lidar-based online 3D video object detection with graph-based message passing and spatiotemporal transformer attention,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 11 495-11 504."
+            },
+            {
+              "title": "Graph transformer networks",
+              "citation": "S. Yun, M. Jeong, R. Kim, J. Kang, and H. J. Kim, 'Graph transformer networks,' Advances in Neural Information Processing Systems , vol. 32, 2019."
+            },
+            {
+              "title": "A generalization of transformer networks to graphs",
+              "citation": "V. P. Dwivedi and X. Bresson, 'A generalization of transformer networks to graphs,' AAAI Workshop on Deep Learning on Graphs: Methods and Applications , 2021."
+            },
+            {
+              "title": "Graph transformer for graph-to-sequence learning",
+              "citation": "D. Cai and W. Lam, 'Graph transformer for graph-to-sequence learning,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 34, 2020, pp. 7464-7471."
+            },
+            {
+              "title": "GATE: Graph attention transformer encoder for cross-lingual relation and event extraction",
+              "citation": "W. U. Ahmad, N. Peng, and K.-W. Chang, 'GATE: Graph attention transformer encoder for cross-lingual relation and event extraction,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 35, 2021, pp. 12 462-12 470."
+            },
+            {
+              "title": "Global self-attention as a replacement for graph convolution",
+              "citation": "M. S. Hussain, M. J. Zaki, and D. Subramanian, 'Global self-attention as a replacement for graph convolution,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 655-665."
+            },
+            {
+              "title": "Graph Inductive Biases in Transformers without Message Passing",
+              "citation": "L. Ma, C. Lin, D. Lim, A. Romero-Soriano, P. K. Dokania, M. Coates, P. Torr, and S.-N. Lim, 'Graph Inductive Biases in Transformers without Message Passing,' arXiv preprint arXiv:2305.17589 , 2023."
+            },
+            {
+              "title": "Recipe for a general, powerful, scalable graph transformer",
+              "citation": "L. Ramp´ aˇ sek, M. Galkin, V. P. Dwivedi, A. T. Luu, G. Wolf, and D. Beaini, 'Recipe for a general, powerful, scalable graph transformer,' Advances in Neural Information Processing Systems , vol. 35, pp. 14 501-14 515, 2022."
+            },
+            {
+              "title": "Coupled attention networks for multivariate time series anomaly detection",
+              "citation": "F. Xia, X. Chen, S. Yu, M. Hou, M. Liu, and L. You, 'Coupled attention networks for multivariate time series anomaly detection,' IEEE Transactions on Emerging Topics in Computing , vol. 12, no. 1, pp. 240-253, 2024."
+            },
+            {
+              "title": "Rethinking graph transformers with spectral attention",
+              "citation": "D. Kreuzer, D. Beaini, W. Hamilton, V. L´ etourneau, and P. Tossou, 'Rethinking graph transformers with spectral attention,' Advances in Neural Information Processing Systems , vol. 34, pp. 21 618-21 629, 2021."
+            },
+            {
+              "title": "Graph transformer networks",
+              "citation": "S. Yun, M. Jeong, R. Kim, J. Kang, and H. J. Kim, 'Graph transformer networks,' Advances in Neural Information Processing Systems , vol. 32, 2019."
+            },
+            {
+              "title": "Graph attention networks",
+              "citation": "P. Veliˇ ckovi´ c, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in International Conference on Learning Representations , 2018."
+            },
+            {
+              "title": "Differentiable window for dynamic local attention",
+              "citation": "T. Nguyen, X. Nguyen, S. R. Joty, and X. Li, 'Differentiable window for dynamic local attention,' in Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, ACL 2020, Online, July 5-10, 2020 , D. Jurafsky, J. Chai, N. Schluter, and J. R. Tetreault, Eds. Association for Computational Linguistics, 2020, pp. 6589-6599."
+            },
+            {
+              "title": "Graph Inductive Biases in Transformers without Message Passing",
+              "citation": "L. Ma, C. Lin, D. Lim, A. Romero-Soriano, P. K. Dokania, M. Coates, P. Torr, and S.-N. Lim, 'Graph Inductive Biases in Transformers without Message Passing,' arXiv preprint arXiv:2305.17589 , 2023."
+            },
+            {
+              "title": "Twins: Revisiting the design of spatial attention in vision transformers",
+              "citation": "X. Chu, Z. Tian, Y. Wang, B. Zhang, H. Ren, X. Wei, H. Xia, and C. Shen, 'Twins: Revisiting the design of spatial attention in vision transformers,' Advances in Neural Information Processing Systems , vol. 34, pp. 9355-9366, 2021."
+            },
+            {
+              "title": "Global self-attention as a replacement for graph convolution",
+              "citation": "M. S. Hussain, M. J. Zaki, and D. Subramanian, 'Global self-attention as a replacement for graph convolution,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 655-665."
+            },
+            {
+              "title": "GraphiT: Encoding graph structure in transformers",
+              "citation": "G. Mialon, D. Chen, M. Selosse, and J. Mairal, 'GraphiT: Encoding graph structure in transformers,' arXiv preprint arXiv:2106.05667 , 2021."
+            },
+            {
+              "title": "Self-attention graph pooling",
+              "citation": "J. Lee, I. Lee, and J. Kang, 'Self-attention graph pooling,' in International Conference on Machine Learning . PMLR, 2019, pp. 37343743."
+            },
+            {
+              "title": "Self-attention graph pooling",
+              "citation": "J. Lee, I. Lee, and J. Kang, 'Self-attention graph pooling,' in International Conference on Machine Learning . PMLR, 2019, pp. 37343743."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.1.1",
+              "sec_title": "Local Node Positional encoding.",
+              "citations": [
+                {
+                  "title": "A simple and effective positional encoding for transformers",
+                  "citation": "P. Chen, H. Tsai, S. Bhojanapalli, H. W. Chung, Y. Chang, and C. Ferng, 'A simple and effective positional encoding for transformers,' in Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP), Virtual Event / Punta Cana, Dominican Republic, 7-11 November , 2021, pp. 2974-2988."
+                },
+                {
+                  "title": "GRPE: Relative positional encoding for graph transformer",
+                  "citation": "W. Park, W.-G. Chang, D. Lee, J. Kim, and seung-won hwang, 'GRPE: Relative positional encoding for graph transformer,' in ICLR2022 Machine Learning for Drug Discovery , 2022."
+                },
+                {
+                  "title": "Do transformers really perform badly for graph representation",
+                  "citation": "C. Ying, T. Cai, S. Luo, S. Zheng, G. Ke, D. He, Y. Shen, and T.-Y. Liu, 'Do transformers really perform badly for graph representation?' Advances in Neural Information Processing Systems , vol. 34, pp. 28 877-28 888, 2021."
+                },
+                {
+                  "title": "Graph attention networks,",
+                  "citation": "P. Veliˇ ckovi´ c, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in International Conference on Learning Representations , 2018."
+                },
+                {
+                  "title": "Graph attention networks with positional embeddings",
+                  "citation": "L. Ma, R. Rabbany, and A. Romero-Soriano, 'Graph attention networks with positional embeddings,' in Pacific-Asia Conference on Knowledge Discovery and Data Mining . Springer, 2021, pp. 514-527."
+                },
+                {
+                  "title": "Shifu2: A network representation learning based model for advisor-advisee relationship mining",
+                  "citation": "J. Liu, F. Xia, L. Wang, B. Xu, X. Kong, H. Tong, and I. King, 'Shifu2: A network representation learning based model for advisoradvisee relationship mining,' IEEE Transactions on Knowledge and Data Engineering , vol. 33, no. 4, pp. 1763-1777, 2019."
+                },
+                {
+                  "title": "CHIEF: Clustering with higher-order motifs in big networks",
+                  "citation": "F. Xia, S. Yu, C. Liu, J. Li, and I. Lee, 'CHIEF: Clustering with higherorder motifs in big networks,' IEEE Transactions on Network Science and Engineering , vol. 9, no. 3, pp. 990-1005, 2021."
+                },
+                {
+                  "title": "Deformable Graph Transformer",
+                  "citation": "J. Park, S. Yun, H. Park, J. Kang, J. Jeong, K.-M. Kim, J.-w. Ha, and H. J. Kim, 'Deformable Graph Transformer,' arXiv preprint arXiv:2206.14337 , 2022."
+                },
+                {
+                  "title": "GraphiT: Encoding graph structure in transformers",
+                  "citation": "G. Mialon, D. Chen, M. Selosse, and J. Mairal, 'GraphiT: Encoding graph structure in transformers,' arXiv preprint arXiv:2106.05667 , 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.2",
+              "sec_title": "Global Node Positional encoding.",
+              "citations": [
+                {
+                  "title": "Transformer language models without positional encodings still learn positional information",
+                  "citation": "A. Haviv, O. Ram, O. Press, P. Izsak, and O. Levy, 'Transformer language models without positional encodings still learn positional information,' in Findings of the Association for Computational Linguistics: EMNLP 2022 , 2022, pp. 1382-1390."
+                },
+                {
+                  "title": "Rethinking Positional Encoding in Tree Transformer for Code Representation",
+                  "citation": "H. Peng, G. Li, Y. Zhao, and Z. Jin, 'Rethinking Positional Encoding in Tree Transformer for Code Representation,' in Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing , 2022, pp. 3204-3214."
+                },
+                {
+                  "title": "Recipe for a general, powerful, scalable graph transformer,",
+                  "citation": "L. Ramp´ aˇ sek, M. Galkin, V. P. Dwivedi, A. T. Luu, G. Wolf, and D. Beaini, 'Recipe for a general, powerful, scalable graph transformer,' Advances in Neural Information Processing Systems , vol. 35, pp. 14 501-14 515, 2022."
+                },
+                {
+                  "title": "Transformers meet directed graphs",
+                  "citation": "S. Geisler, Y. Li, D. J. Mankowitz, A. T. Cemgil, S. G¨ unnemann, and C. Paduraru, 'Transformers meet directed graphs,' in International Conference on Machine Learning . PMLR, 2023, pp. 11 144-11 172."
+                },
+                {
+                  "title": "Random walks: A review of algorithms and applications",
+                  "citation": "F. Xia, J. Liu, H. Nie, Y. Fu, L. Wan, and X. Kong, 'Random walks: A review of algorithms and applications,' IEEE Transactions on Emerging Topics in Computational Intelligence , vol. 4, no. 2, pp. 95-107, 2019."
+                },
+                {
+                  "title": "Exploring Dimensionality Reduction Techniques in Multilingual Transformers,",
+                  "citation": "´ A. Huertas-Garc´ ıa, A. Mart´ ın, J. Huertas-Tato, and D. Camacho, 'Exploring Dimensionality Reduction Techniques in Multilingual Transformers,' Cognitive Computation , vol. 15, no. 2, pp. 590-612, 2023."
+                },
+                {
+                  "title": "Structure-aware transformer for graph representation learning",
+                  "citation": "D. Chen, L. O'Bray, and K. Borgwardt, 'Structure-aware transformer for graph representation learning,' in International Conference on Machine Learning . PMLR, 2022, pp. 3469-3489."
+                },
+                {
+                  "title": "Nodeformer: A scalable graph structure learning transformer for node classification",
+                  "citation": "Q. Wu, W. Zhao, Z. Li, D. P. Wipf, and J. Yan, 'Nodeformer: A scalable graph structure learning transformer for node classification,' Advances in Neural Information Processing Systems , vol. 35, pp. 27 387-27 401, 2022."
+                },
+                {
+                  "title": "EDTER: Edge detection with transformer",
+                  "citation": "M. Pu, Y. Huang, Y. Liu, Q. Guan, and H. Ling, 'EDTER: Edge detection with transformer,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 1402-1412."
+                },
+                {
+                  "title": "BGT-Net: Bidirectional GRU transformer network for scene graph generation",
+                  "citation": "N. Dhingra, F. Ritter, and A. Kunz, 'BGT-Net: Bidirectional GRU transformer network for scene graph generation,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2021, pp. 2150-2159."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.3",
+              "sec_title": "Local Edge Structural encoding.",
+              "citations": [
+                {
+                  "title": "Structure-aware transformer for graph representation learning",
+                  "citation": "D. Chen, L. O'Bray, and K. Borgwardt, 'Structure-aware transformer for graph representation learning,' in International Conference on Machine Learning . PMLR, 2022, pp. 3469-3489."
+                },
+                {
+                  "title": "Transformer in transformer",
+                  "citation": "K. Han, A. Xiao, E. Wu, J. Guo, C. Xu, and Y. Wang, 'Transformer in transformer,' Advances in Neural Information Processing Systems , vol. 34, pp. 15 908-15 919, 2021."
+                },
+                {
+                  "title": "GraphiT: Encoding graph structure in transformers",
+                  "citation": "G. Mialon, D. Chen, M. Selosse, and J. Mairal, 'GraphiT: Encoding graph structure in transformers,' arXiv preprint arXiv:2106.05667 , 2021."
+                },
+                {
+                  "title": "EdgeBERT: Sentence-level energy optimizations for latency-aware multi-task nlp inference",
+                  "citation": "T. Tambe, C. Hooper, L. Pentecost, T. Jia, E.-Y. Yang, M. Donato, V. Sanh, P. Whatmough, A. M. Rush, and D. Brooks, 'EdgeBERT: Sentence-level energy optimizations for latency-aware multi-task nlp inference,' in MICRO-54: 54th Annual IEEE/ACM International Symposium on Microarchitecture , 2021, pp. 830-844."
+                },
+                {
+                  "title": "Global self-attention as a replacement for graph convolution",
+                  "citation": "M. S. Hussain, M. J. Zaki, and D. Subramanian, 'Global self-attention as a replacement for graph convolution,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 655-665."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.4",
+              "sec_title": "Global Edge Structural encoding.",
+              "citations": [
+                {
+                  "title": "Multi-scale vision LongFormer: A new vision transformer for highresolution image encoding",
+                  "citation": "P. Zhang, X. Dai, J. Yang, B. Xiao, L. Yuan, L. Zhang, and J. Gao, 'Multi-scale vision LongFormer: A new vision transformer for highresolution image encoding,' in Proceedings of the IEEE/CVF International Conference on Computer Vision , 2021, pp. 2998-3008."
+                },
+                {
+                  "title": "GPT-GNN: Generative pre-training of graph neural networks",
+                  "citation": "Z. Hu, Y. Dong, K. Wang, K.-W. Chang, and Y. Sun, 'GPT-GNN: Generative pre-training of graph neural networks,' in Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , 2020, pp. 1857-1867."
+                },
+                {
+                  "title": "Do transformers really perform badly for graph representation",
+                  "citation": "C. Ying, T. Cai, S. Luo, S. Zheng, G. Ke, D. He, Y. Shen, and T.-Y. Liu, 'Do transformers really perform badly for graph representation?' Advances in Neural Information Processing Systems , vol. 34, pp. 28 877-28 888, 2021."
+                },
+                {
+                  "title": "GRPE: Relative positional encoding for graph transformer",
+                  "citation": "W. Park, W.-G. Chang, D. Lee, J. Kim, and seung-won hwang, 'GRPE: Relative positional encoding for graph transformer,' in ICLR2022 Machine Learning for Drug Discovery , 2022."
+                },
+                {
+                  "title": "Recipe for a general, powerful, scalable graph transformer,",
+                  "citation": "L. Ramp´ aˇ sek, M. Galkin, V. P. Dwivedi, A. T. Luu, G. Wolf, and D. Beaini, 'Recipe for a general, powerful, scalable graph transformer,' Advances in Neural Information Processing Systems , vol. 35, pp. 14 501-14 515, 2022."
+                },
+                {
+                  "title": "Lidar-based online 3D video object detection with graph-based message passing and spatiotemporal transformer attention",
+                  "citation": "J. Yin, J. Shen, C. Guan, D. Zhou, and R. Yang, 'Lidar-based online 3D video object detection with graph-based message passing and spatiotemporal transformer attention,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 11 495-11 504."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.5",
+              "sec_title": "Preprocessing.",
+              "citations": [
+                {
+                  "title": "Graph transformer networks",
+                  "citation": "S. Yun, M. Jeong, R. Kim, J. Kang, and H. J. Kim, 'Graph transformer networks,' Advances in Neural Information Processing Systems , vol. 32, 2019."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.6",
+              "sec_title": "Interleaving.",
+              "citations": [
+                {
+                  "title": "A generalization of transformer networks to graphs",
+                  "citation": "V. P. Dwivedi and X. Bresson, 'A generalization of transformer networks to graphs,' AAAI Workshop on Deep Learning on Graphs: Methods and Applications , 2021."
+                },
+                {
+                  "title": "Graph transformer for graph-to-sequence learning",
+                  "citation": "D. Cai and W. Lam, 'Graph transformer for graph-to-sequence learning,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 34, 2020, pp. 7464-7471."
+                },
+                {
+                  "title": "GATE: Graph attention transformer encoder for cross-lingual relation and event extraction",
+                  "citation": "W. U. Ahmad, N. Peng, and K.-W. Chang, 'GATE: Graph attention transformer encoder for cross-lingual relation and event extraction,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 35, 2021, pp. 12 462-12 470."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.7",
+              "sec_title": "Post-processing.",
+              "citations": [
+                {
+                  "title": "Global self-attention as a replacement for graph convolution",
+                  "citation": "M. S. Hussain, M. J. Zaki, and D. Subramanian, 'Global self-attention as a replacement for graph convolution,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 655-665."
+                },
+                {
+                  "title": "Graph Inductive Biases in Transformers without Message Passing",
+                  "citation": "L. Ma, C. Lin, D. Lim, A. Romero-Soriano, P. K. Dokania, M. Coates, P. Torr, and S.-N. Lim, 'Graph Inductive Biases in Transformers without Message Passing,' arXiv preprint arXiv:2305.17589 , 2023."
+                },
+                {
+                  "title": "Recipe for a general, powerful, scalable graph transformer,",
+                  "citation": "L. Ramp´ aˇ sek, M. Galkin, V. P. Dwivedi, A. T. Luu, G. Wolf, and D. Beaini, 'Recipe for a general, powerful, scalable graph transformer,' Advances in Neural Information Processing Systems , vol. 35, pp. 14 501-14 515, 2022."
+                },
+                {
+                  "title": "Coupled attention networks for multivariate time series anomaly detection",
+                  "citation": "F. Xia, X. Chen, S. Yu, M. Hou, M. Liu, and L. You, 'Coupled attention networks for multivariate time series anomaly detection,' IEEE Transactions on Emerging Topics in Computing , vol. 12, no. 1, pp. 240-253, 2024."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.8",
+              "sec_title": "Local Attention Bias.",
+              "citations": [
+                {
+                  "title": "Rethinking graph transformers with spectral attention",
+                  "citation": "D. Kreuzer, D. Beaini, W. Hamilton, V. L´ etourneau, and P. Tossou, 'Rethinking graph transformers with spectral attention,' Advances in Neural Information Processing Systems , vol. 34, pp. 21 618-21 629, 2021."
+                },
+                {
+                  "title": "Graph transformer networks",
+                  "citation": "S. Yun, M. Jeong, R. Kim, J. Kang, and H. J. Kim, 'Graph transformer networks,' Advances in Neural Information Processing Systems , vol. 32, 2019."
+                },
+                {
+                  "title": "Graph attention networks,",
+                  "citation": "P. Veliˇ ckovi´ c, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in International Conference on Learning Representations , 2018."
+                },
+                {
+                  "title": "Differentiable window for dynamic local attention",
+                  "citation": "T. Nguyen, X. Nguyen, S. R. Joty, and X. Li, 'Differentiable window for dynamic local attention,' in Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, ACL 2020, Online, July 5-10, 2020 , D. Jurafsky, J. Chai, N. Schluter, and J. R. Tetreault, Eds. Association for Computational Linguistics, 2020, pp. 6589-6599."
+                },
+                {
+                  "title": "Graph Inductive Biases in Transformers without Message Passing",
+                  "citation": "L. Ma, C. Lin, D. Lim, A. Romero-Soriano, P. K. Dokania, M. Coates, P. Torr, and S.-N. Lim, 'Graph Inductive Biases in Transformers without Message Passing,' arXiv preprint arXiv:2305.17589 , 2023."
+                },
+                {
+                  "title": "Twins: Revisiting the design of spatial attention in vision transformers",
+                  "citation": "X. Chu, Z. Tian, Y. Wang, B. Zhang, H. Ren, X. Wei, H. Xia, and C. Shen, 'Twins: Revisiting the design of spatial attention in vision transformers,' Advances in Neural Information Processing Systems , vol. 34, pp. 9355-9366, 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.9",
+              "sec_title": "Global Attention Bias.",
+              "citations": [
+                {
+                  "title": "Global self-attention as a replacement for graph convolution",
+                  "citation": "M. S. Hussain, M. J. Zaki, and D. Subramanian, 'Global self-attention as a replacement for graph convolution,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 655-665."
+                },
+                {
+                  "title": "GraphiT: Encoding graph structure in transformers",
+                  "citation": "G. Mialon, D. Chen, M. Selosse, and J. Mairal, 'GraphiT: Encoding graph structure in transformers,' arXiv preprint arXiv:2106.05667 , 2021."
+                },
+                {
+                  "title": "Self-attention graph pooling",
+                  "citation": "J. Lee, I. Lee, and J. Kang, 'Self-attention graph pooling,' in International Conference on Machine Learning . PMLR, 2019, pp. 37343743."
+                },
+                {
+                  "title": "Attention mechanism in neural networks: Where it comes and where it goes",
+                  "citation": "D. Soydaner, 'Attention mechanism in neural networks: Where it comes and where it goes,' Neural Computing and Applications , vol. 34, no. 16, pp. 13 371-13 385, 2022."
+                },
+                {
+                  "title": "Factor graph attention",
+                  "citation": "I. Schwartz, S. Yu, T. Hazan, and A. G. Schwing, 'Factor graph attention,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2019, pp. 2039-2048."
+                },
+                {
+                  "title": "EGAT: Edge-featured graph attention network",
+                  "citation": "Z. Wang, J. Chen, and H. Chen, 'EGAT: Edge-featured graph attention network,' in Artificial Neural Networks and Machine Learning-ICANN 2021: 30th International Conference on Artificial Neural Networks, Bratislava, Slovakia, September 14-17, 2021, Proceedings, Part I 30 . Springer, 2021, pp. 253-264."
+                },
+                {
+                  "title": "Graph attention multi-layer perceptron",
+                  "citation": "W. Zhang, Z. Yin, Z. Sheng, Y. Li, W. Ouyang, X. Li, Y. Tao, Z. Yang, and B. Cui, 'Graph attention multi-layer perceptron,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 4560-4570."
+                },
+                {
+                  "title": "A review on the attention mechanism of deep learning",
+                  "citation": "Z. Niu, G. Zhong, and H. Yu, 'A review on the attention mechanism of deep learning,' Neurocomputing , vol. 452, pp. 48-62, 2021."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Graph Attention Mechanisms",
+          "citations": [
+            {
+              "title": "Attention mechanism in neural networks: Where it comes and where it goes",
+              "citation": "D. Soydaner, 'Attention mechanism in neural networks: Where it comes and where it goes,' Neural Computing and Applications , vol. 34, no. 16, pp. 13 371-13 385, 2022."
+            },
+            {
+              "title": "Factor graph attention",
+              "citation": "I. Schwartz, S. Yu, T. Hazan, and A. G. Schwing, 'Factor graph attention,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2019, pp. 2039-2048."
+            },
+            {
+              "title": "EGAT: Edge-featured graph attention network",
+              "citation": "Z. Wang, J. Chen, and H. Chen, 'EGAT: Edge-featured graph attention network,' in Artificial Neural Networks and Machine Learning-ICANN 2021: 30th International Conference on Artificial Neural Networks, Bratislava, Slovakia, September 14-17, 2021, Proceedings, Part I 30 . Springer, 2021, pp. 253-264."
+            },
+            {
+              "title": "Graph attention multi-layer perceptron",
+              "citation": "W. Zhang, Z. Yin, Z. Sheng, Y. Li, W. Ouyang, X. Li, Y. Tao, Z. Yang, and B. Cui, 'Graph attention multi-layer perceptron,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 4560-4570."
+            },
+            {
+              "title": "A review on the attention mechanism of deep learning",
+              "citation": "Z. Niu, G. Zhong, and H. Yu, 'A review on the attention mechanism of deep learning,' Neurocomputing , vol. 452, pp. 48-62, 2021."
+            },
+            {
+              "title": "Graph attention networks",
+              "citation": "P. Veliˇ ckovi´ c, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in International Conference on Learning Representations , 2018."
+            },
+            {
+              "title": "From block-Toeplitz matrices to differential equations on graphs: Towards a general theory for scalable masked Transformers",
+              "citation": "K. Choromanski, H. Lin, H. Chen, T. Zhang, A. Sehanobish, V. Likhosherstov, J. Parker-Holder, T. Sarlos, A. Weller, and T. Weingarten, 'From block-Toeplitz matrices to differential equations on graphs: Towards a general theory for scalable masked Transformers,' in International Conference on Machine Learning . PMLR, 2022, pp. 3962-3983."
+            },
+            {
+              "title": "Graph transformer networks",
+              "citation": "S. Yun, M. Jeong, R. Kim, J. Kang, and H. J. Kim, 'Graph transformer networks,' Advances in Neural Information Processing Systems , vol. 32, 2019."
+            },
+            {
+              "title": "Efficient transformers: A survey",
+              "citation": "Y. Tay, M. Dehghani, D. Bahri, and D. Metzler, 'Efficient transformers: A survey,' ACM Computing Surveys , vol. 55, no. 6, pp. 1-28, 2022."
+            },
+            {
+              "title": "EcoFormer: Energysaving attention with linear complexity",
+              "citation": "J. Liu, Z. Pan, H. He, J. Cai, and B. Zhuang, 'EcoFormer: Energysaving attention with linear complexity,' Advances in Neural Information Processing Systems , vol. 35, pp. 10 295-10 308, 2022."
+            },
+            {
+              "title": "Kernel Multimodal Continuous Attention",
+              "citation": "A. Moreno, Z. Wu, S. Nagesh, W. Dempsey, and J. M. Rehg, 'Kernel Multimodal Continuous Attention,' Advances in Neural Information Processing Systems , vol. 35, pp. 18 046-18 059, 2022."
+            },
+            {
+              "title": "Transformers are RNNs: Fast autoregressive transformers with linear attention",
+              "citation": "A. Katharopoulos, A. Vyas, N. Pappas, and F. Fleuret, 'Transformers are RNNs: Fast autoregressive transformers with linear attention,' in International Conference on Machine Learning . PMLR, 2020, pp. 5156-5165."
+            },
+            {
+              "title": "KNN local attention for image restoration",
+              "citation": "H. Lee, H. Choi, K. Sohn, and D. Min, 'KNN local attention for image restoration,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 2139-2149."
+            },
+            {
+              "title": "SMYRF: Efficient attention using asymmetric clustering",
+              "citation": "G. Daras, N. Kitaev, A. Odena, and A. G. Dimakis, 'SMYRF: Efficient attention using asymmetric clustering,' Advances in Neural Information Processing Systems , vol. 33, pp. 6476-6489, 2020."
+            },
+            {
+              "title": "Reformer: The efficient transformer",
+              "citation": "N. Kitaev, L. Kaiser, and A. Levskaya, 'Reformer: The efficient transformer,' in 8th International Conference on Learning Representations, ICLR 2020, Addis Ababa, Ethiopia, April 26-30, 2020 . OpenReview.net, 2020."
+            },
+            {
+              "title": "Attention mechanism in neural networks: Where it comes and where it goes",
+              "citation": "D. Soydaner, 'Attention mechanism in neural networks: Where it comes and where it goes,' Neural Computing and Applications , vol. 34, no. 16, pp. 13 371-13 385, 2022."
+            },
+            {
+              "title": "Message passing neural networks",
+              "citation": "J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, 'Message passing neural networks,' Machine learning meets quantum physics , pp. 199-214, 2020."
+            },
+            {
+              "title": "Recipe for a general, powerful, scalable graph transformer",
+              "citation": "L. Ramp´ aˇ sek, M. Galkin, V. P. Dwivedi, A. T. Luu, G. Wolf, and D. Beaini, 'Recipe for a general, powerful, scalable graph transformer,' Advances in Neural Information Processing Systems , vol. 35, pp. 14 501-14 515, 2022."
+            },
+            {
+              "title": "Lidar-based online 3D video object detection with graph-based message passing and spatiotemporal transformer attention",
+              "citation": "J. Yin, J. Shen, C. Guan, D. Zhou, and R. Yang, 'Lidar-based online 3D video object detection with graph-based message passing and spatiotemporal transformer attention,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 11 495-11 504."
+            },
+            {
+              "title": "ABT-MPNN: An atom-bond transformer-based message-passing neural network for molecular property prediction",
+              "citation": "C. Liu, Y. Sun, R. Davis, S. T. Cardona, and P. Hu, 'ABT-MPNN: An atom-bond transformer-based message-passing neural network for molecular property prediction,' Journal of Cheminformatics , vol. 15, no. 1, p. 29, 2023."
+            },
+            {
+              "title": "Point transformer",
+              "citation": "H. Zhao, L. Jiang, J. Jia, P. H. Torr, and V . Koltun, 'Point transformer,' in Proceedings of the IEEE/CVF International Conference on Computer Vision , 2021, pp. 16 259-16 268."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' Advances in Neural Information Processing Systems , vol. 30, 2017."
+            },
+            {
+              "title": "Learnable graph convolutional attention networks",
+              "citation": "A. Javaloy, P. S´ anchez-Mart´ ın, A. Levi, and I. Valera, 'Learnable graph convolutional attention networks,' in The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023."
+            },
+            {
+              "title": "Learning to pay attention on spectral domain: A spectral attention module-based convolutional network for hyperspectral image classification",
+              "citation": "L. Mou and X. X. Zhu, 'Learning to pay attention on spectral domain: A spectral attention module-based convolutional network for hyperspectral image classification,' IEEE Transactions on Geoscience and Remote Sensing , vol. 58, no. 1, pp. 110-122, 2019."
+            },
+            {
+              "title": "Specformer: Spectral graph neural networks meet transformers",
+              "citation": "D. Bo, C. Shi, L. Wang, and R. Liao, 'Specformer: Spectral graph neural networks meet transformers,' in The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023."
+            },
+            {
+              "title": "How powerful are spectral graph neural networks",
+              "citation": "X. Wang and M. Zhang, 'How powerful are spectral graph neural networks,' in International Conference on Machine Learning . PMLR, 2022, pp. 23 341-23 362."
+            },
+            {
+              "title": "Universal graph transformer self-attention networks",
+              "citation": "D. Q. Nguyen, T. D. Nguyen, and D. Phung, 'Universal graph transformer self-attention networks,' in Companion Proceedings of the Web Conference 2022 , 2022, pp. 193-196."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.2.1",
+              "sec_title": "Quadratic Attention.",
+              "citations": [
+                {
+                  "title": "Graph attention networks,",
+                  "citation": "P. Veliˇ ckovi´ c, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in International Conference on Learning Representations , 2018."
+                },
+                {
+                  "title": "From block-Toeplitz matrices to differential equations on graphs: Towards a general theory for scalable masked Transformers",
+                  "citation": "K. Choromanski, H. Lin, H. Chen, T. Zhang, A. Sehanobish, V. Likhosherstov, J. Parker-Holder, T. Sarlos, A. Weller, and T. Weingarten, 'From block-Toeplitz matrices to differential equations on graphs: Towards a general theory for scalable masked Transformers,' in International Conference on Machine Learning . PMLR, 2022, pp. 3962-3983."
+                },
+                {
+                  "title": "Graph transformer networks",
+                  "citation": "S. Yun, M. Jeong, R. Kim, J. Kang, and H. J. Kim, 'Graph transformer networks,' Advances in Neural Information Processing Systems , vol. 32, 2019."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.2",
+              "sec_title": "Linear Attention.",
+              "citations": [
+                {
+                  "title": "Efficient transformers: A survey",
+                  "citation": "Y. Tay, M. Dehghani, D. Bahri, and D. Metzler, 'Efficient transformers: A survey,' ACM Computing Surveys , vol. 55, no. 6, pp. 1-28, 2022."
+                },
+                {
+                  "title": "EcoFormer: Energy-saving attention with linear complexity",
+                  "citation": "J. Liu, Z. Pan, H. He, J. Cai, and B. Zhuang, 'EcoFormer: Energysaving attention with linear complexity,' Advances in Neural Information Processing Systems , vol. 35, pp. 10 295-10 308, 2022."
+                },
+                {
+                  "title": "Kernel Multimodal Continuous Attention",
+                  "citation": "A. Moreno, Z. Wu, S. Nagesh, W. Dempsey, and J. M. Rehg, 'Kernel Multimodal Continuous Attention,' Advances in Neural Information Processing Systems , vol. 35, pp. 18 046-18 059, 2022."
+                },
+                {
+                  "title": "Transformers are RNNs: Fast autoregressive transformers with linear attention",
+                  "citation": "A. Katharopoulos, A. Vyas, N. Pappas, and F. Fleuret, 'Transformers are RNNs: Fast autoregressive transformers with linear attention,' in International Conference on Machine Learning . PMLR, 2020, pp. 5156-5165."
+                },
+                {
+                  "title": "KNN local attention for image restoration",
+                  "citation": "H. Lee, H. Choi, K. Sohn, and D. Min, 'KNN local attention for image restoration,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 2139-2149."
+                },
+                {
+                  "title": "Image super-resolution with non-local sparse attention",
+                  "citation": "Y. Mei, Y. Fan, and Y. Zhou, 'Image super-resolution with non-local sparse attention,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2021, pp. 3517-3526."
+                },
+                {
+                  "title": "SMYRF: Efficient attention using asymmetric clustering",
+                  "citation": "G. Daras, N. Kitaev, A. Odena, and A. G. Dimakis, 'SMYRF: Efficient attention using asymmetric clustering,' Advances in Neural Information Processing Systems , vol. 33, pp. 6476-6489, 2020."
+                },
+                {
+                  "title": "Reformer: The efficient transformer",
+                  "citation": "N. Kitaev, L. Kaiser, and A. Levskaya, 'Reformer: The efficient transformer,' in 8th International Conference on Learning Representations, ICLR 2020, Addis Ababa, Ethiopia, April 26-30, 2020 . OpenReview.net, 2020."
+                },
+                {
+                  "title": "Attention mechanism in neural networks: Where it comes and where it goes",
+                  "citation": "D. Soydaner, 'Attention mechanism in neural networks: Where it comes and where it goes,' Neural Computing and Applications , vol. 34, no. 16, pp. 13 371-13 385, 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.3",
+              "sec_title": "Message-passing Attention.",
+              "citations": [
+                {
+                  "title": "Recipe for a general, powerful, scalable graph transformer,",
+                  "citation": "L. Ramp´ aˇ sek, M. Galkin, V. P. Dwivedi, A. T. Luu, G. Wolf, and D. Beaini, 'Recipe for a general, powerful, scalable graph transformer,' Advances in Neural Information Processing Systems , vol. 35, pp. 14 501-14 515, 2022."
+                },
+                {
+                  "title": "Lidar-based online 3D video object detection with graph-based message passing and spatiotemporal transformer attention",
+                  "citation": "J. Yin, J. Shen, C. Guan, D. Zhou, and R. Yang, 'Lidar-based online 3D video object detection with graph-based message passing and spatiotemporal transformer attention,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 11 495-11 504."
+                },
+                {
+                  "title": "Message passing neural networks",
+                  "citation": "J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, 'Message passing neural networks,' Machine learning meets quantum physics , pp. 199-214, 2020."
+                },
+                {
+                  "title": "ABT-MPNN: An atom-bond transformer-based message-passing neural network for molecular property prediction",
+                  "citation": "C. Liu, Y. Sun, R. Davis, S. T. Cardona, and P. Hu, 'ABT-MPNN: An atom-bond transformer-based message-passing neural network for molecular property prediction,' Journal of Cheminformatics , vol. 15, no. 1, p. 29, 2023."
+                },
+                {
+                  "title": "Point transformer",
+                  "citation": "H. Zhao, L. Jiang, J. Jia, P. H. Torr, and V . Koltun, 'Point transformer,' in Proceedings of the IEEE/CVF International Conference on Computer Vision , 2021, pp. 16 259-16 268."
+                },
+                {
+                  "title": "Inductive representation learning on large graphs",
+                  "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' Advances in Neural Information Processing Systems , vol. 30, 2017."
+                },
+                {
+                  "title": "Learnable graph convolutional attention networks",
+                  "citation": "A. Javaloy, P. S´ anchez-Mart´ ın, A. Levi, and I. Valera, 'Learnable graph convolutional attention networks,' in The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.4",
+              "sec_title": "Spectral Attention.",
+              "citations": [
+                {
+                  "title": "Learning to pay attention on spectral domain: A spectral attention module-based convolutional network for hyperspectral image classification",
+                  "citation": "L. Mou and X. X. Zhu, 'Learning to pay attention on spectral domain: A spectral attention module-based convolutional network for hyperspectral image classification,' IEEE Transactions on Geoscience and Remote Sensing , vol. 58, no. 1, pp. 110-122, 2019."
+                },
+                {
+                  "title": "Specformer: Spectral graph neural networks meet transformers",
+                  "citation": "D. Bo, C. Shi, L. Wang, and R. Liao, 'Specformer: Spectral graph neural networks meet transformers,' in The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023."
+                },
+                {
+                  "title": "How powerful are spectral graph neural networks",
+                  "citation": "X. Wang and M. Zhang, 'How powerful are spectral graph neural networks,' in International Conference on Machine Learning . PMLR, 2022, pp. 23 341-23 362."
+                },
+                {
+                  "title": "Universal graph transformer self-attention networks",
+                  "citation": "D. Q. Nguyen, T. D. Nguyen, and D. Phung, 'Universal graph transformer self-attention networks,' in Companion Proceedings of the Web Conference 2022 , 2022, pp. 193-196."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "TAXONOMY OF GRAPH TRANSFORMERS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Shallow Graph Transformers",
+          "citations": [
+            {
+              "title": "Are more layers beneficial to graph transformers?",
+              "citation": "H. Zhao, S. Ma, D. Zhang, Z. Deng, and F. Wei, 'Are more layers beneficial to graph transformers?' in The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023."
+            },
+            {
+              "title": "Graph attention networks",
+              "citation": "P. Veliˇ ckovi´ c, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in International Conference on Learning Representations , 2018."
+            },
+            {
+              "title": "How attentive are graph attention networks?",
+              "citation": "S. Brody, U. Alon, and E. Yahav, 'How attentive are graph attention networks?' in The Tenth International Conference on Learning Representations, ICLR 2022, Virtual Event, April 25-29, 2022 . OpenReview.net, 2022."
+            },
+            {
+              "title": "Graph transformer networks",
+              "citation": "S. Yun, M. Jeong, R. Kim, J. Kang, and H. J. Kim, 'Graph transformer networks,' Advances in Neural Information Processing Systems , vol. 32, 2019."
+            },
+            {
+              "title": "GATE: Graph attention transformer encoder for cross-lingual relation and event extraction",
+              "citation": "W. U. Ahmad, N. Peng, and K.-W. Chang, 'GATE: Graph attention transformer encoder for cross-lingual relation and event extraction,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 35, 2021, pp. 12 462-12 470."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Recent years have seen a surge of interest in graph transformers.",
+              "citations": [
+                {
+                  "title": "Are more layers beneficial to graph transformers?",
+                  "citation": "H. Zhao, S. Ma, D. Zhang, Z. Deng, and F. Wei, 'Are more layers beneficial to graph transformers?' in The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023."
+                },
+                {
+                  "title": "Graph transformer networks",
+                  "citation": "S. Yun, M. Jeong, R. Kim, J. Kang, and H. J. Kim, 'Graph transformer networks,' Advances in Neural Information Processing Systems , vol. 32, 2019."
+                },
+                {
+                  "title": "GATE: Graph attention transformer encoder for cross-lingual relation and event extraction",
+                  "citation": "W. U. Ahmad, N. Peng, and K.-W. Chang, 'GATE: Graph attention transformer encoder for cross-lingual relation and event extraction,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 35, 2021, pp. 12 462-12 470."
+                },
+                {
+                  "title": "Hierarchical graph transformer-based deep learning model for large-scale multi-label text classification",
+                  "citation": "J. Gong, Z. Teng, Q. Teng, H. Zhang, L. Du, S. Chen, M. Z. A. Bhuiyan, J. Li, M. Liu, and H. Ma, 'Hierarchical graph transformerbased deep learning model for large-scale multi-label text classification,' IEEE Access , vol. 8, pp. 30 885-30 896, 2020."
+                },
+                {
+                  "title": "Transformers from an optimization perspective",
+                  "citation": "Y. Yang and D. P. Wipf, 'Transformers from an optimization perspective,' Advances in Neural Information Processing Systems , vol. 35, pp. 36 958-36 971, 2022."
+                },
+                {
+                  "title": "Object counting via group and graph attention network",
+                  "citation": "X. Guo, M. Gao, G. Zou, A. Bruno, A. Chehri, and G. Jeon, 'Object counting via group and graph attention network,' IEEE Transactions on Neural Networks and Learning Systems , vol. 35, no. 9, p. 11884-11895, Sep. 2024."
+                },
+                {
+                  "title": "DeeperGCN: All you need to train deeper GCNs",
+                  "citation": "G. Li, C. Xiong, A. Thabet, and B. Ghanem, 'DeeperGCN: All you need to train deeper gcns,' arXiv preprint arXiv:2006.07739 , 2020."
+                },
+                {
+                  "title": "Recipe for a general, powerful, scalable graph transformer,",
+                  "citation": "L. Ramp´ aˇ sek, M. Galkin, V. P. Dwivedi, A. T. Luu, G. Wolf, and D. Beaini, 'Recipe for a general, powerful, scalable graph transformer,' Advances in Neural Information Processing Systems , vol. 35, pp. 14 501-14 515, 2022."
+                },
+                {
+                  "title": "Nodeformer: A scalable graph structure learning transformer for node classification",
+                  "citation": "Q. Wu, W. Zhao, Z. Li, D. P. Wipf, and J. Yan, 'Nodeformer: A scalable graph structure learning transformer for node classification,' Advances in Neural Information Processing Systems , vol. 35, pp. 27 387-27 401, 2022."
+                },
+                {
+                  "title": "CenGCN: Centralized convolutional networks with vertex imbalance for scale-free graphs",
+                  "citation": "F. Xia, L. Wang, T. Tang, X. Chen, X. Kong, G. Oatley, and I. King, 'CenGCN: Centralized convolutional networks with vertex imbalance for scale-free graphs,' IEEE Transactions on Knowledge and Data Engineering , vol. 35, no. 5, pp. 4555-4569, 2022."
+                },
+                {
+                  "title": "Difformer: Scalable (graph) transformers induced by energy constrained diffusion",
+                  "citation": "Q. Wu, C. Yang, W. Zhao, Y. He, D. Wipf, and J. Yan, 'Difformer: Scalable (graph) transformers induced by energy constrained diffusion,' in The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023."
+                },
+                {
+                  "title": "Attending to graph transformers,",
+                  "citation": "L. M¨ uller, M. Galkin, C. Morris, and L. Ramp´ aˇ sek, 'Attending to graph transformers,' Transactions on Machine Learning Research , 2024."
+                },
+                {
+                  "title": "DyFormer: A Scalable Dynamic Graph Transformer with Provable Benefits on Generalization Ability",
+                  "citation": "W. Cong, Y. Wu, Y. Tian, M. Gu, Y. Xia, C.-c. J. Chen, and M. Mahdavi, 'DyFormer: A Scalable Dynamic Graph Transformer with Provable Benefits on Generalization Ability,' in Proceedings of the 2023 SIAM International Conference on Data Mining (SDM) . SIAM, 2023, pp. 442-450."
+                },
+                {
+                  "title": "Graph attention networks,",
+                  "citation": "P. Veliˇ ckovi´ c, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in International Conference on Learning Representations , 2018."
+                },
+                {
+                  "title": "How attentive are graph attention networks?",
+                  "citation": "S. Brody, U. Alon, and E. Yahav, 'How attentive are graph attention networks?' in The Tenth International Conference on Learning Representations, ICLR 2022, Virtual Event, April 25-29, 2022 . OpenReview.net, 2022."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Deep Graph Transformers",
+          "citations": [
+            {
+              "title": "Hierarchical graph transformerbased deep learning model for large-scale multi-label text classification",
+              "citation": "J. Gong, Z. Teng, Q. Teng, H. Zhang, L. Du, S. Chen, M. Z. A. Bhuiyan, J. Li, M. Liu, and H. Ma, 'Hierarchical graph transformerbased deep learning model for large-scale multi-label text classification,' IEEE Access , vol. 8, pp. 30 885-30 896, 2020."
+            },
+            {
+              "title": "Transformers from an optimization perspective",
+              "citation": "Y. Yang and D. P. Wipf, 'Transformers from an optimization perspective,' Advances in Neural Information Processing Systems , vol. 35, pp. 36 958-36 971, 2022."
+            },
+            {
+              "title": "Object counting via group and graph attention network",
+              "citation": "X. Guo, M. Gao, G. Zou, A. Bruno, A. Chehri, and G. Jeon, 'Object counting via group and graph attention network,' IEEE Transactions on Neural Networks and Learning Systems , vol. 35, no. 9, p. 11884-11895, Sep. 2024."
+            },
+            {
+              "title": "DeeperGCN: All you need to train deeper GCNs",
+              "citation": "G. Li, C. Xiong, A. Thabet, and B. Ghanem, 'DeeperGCN: All you need to train deeper gcns,' arXiv preprint arXiv:2006.07739 , 2020."
+            },
+            {
+              "title": "Are more layers beneficial to graph transformers?",
+              "citation": "H. Zhao, S. Ma, D. Zhang, Z. Deng, and F. Wei, 'Are more layers beneficial to graph transformers?' in The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.3",
+          "sec_title": "Scalable Graph Transformers",
+          "citations": [
+            {
+              "title": "Recipe for a general, powerful, scalable graph transformer",
+              "citation": "L. Ramp´ aˇ sek, M. Galkin, V. P. Dwivedi, A. T. Luu, G. Wolf, and D. Beaini, 'Recipe for a general, powerful, scalable graph transformer,' Advances in Neural Information Processing Systems , vol. 35, pp. 14 501-14 515, 2022."
+            },
+            {
+              "title": "Nodeformer: A scalable graph structure learning transformer for node classification",
+              "citation": "Q. Wu, W. Zhao, Z. Li, D. P. Wipf, and J. Yan, 'Nodeformer: A scalable graph structure learning transformer for node classification,' Advances in Neural Information Processing Systems , vol. 35, pp. 27 387-27 401, 2022."
+            },
+            {
+              "title": "CenGCN: Centralized convolutional networks with vertex imbalance for scale-free graphs",
+              "citation": "F. Xia, L. Wang, T. Tang, X. Chen, X. Kong, G. Oatley, and I. King, 'CenGCN: Centralized convolutional networks with vertex imbalance for scale-free graphs,' IEEE Transactions on Knowledge and Data Engineering , vol. 35, no. 5, pp. 4555-4569, 2022."
+            },
+            {
+              "title": "Difformer: Scalable (graph) transformers induced by energy constrained diffusion",
+              "citation": "Q. Wu, C. Yang, W. Zhao, Y. He, D. Wipf, and J. Yan, 'Difformer: Scalable (graph) transformers induced by energy constrained diffusion,' in The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023."
+            },
+            {
+              "title": "Attending to graph transformers",
+              "citation": "L. M¨ uller, M. Galkin, C. Morris, and L. Ramp´ aˇ sek, 'Attending to graph transformers,' Transactions on Machine Learning Research , 2024."
+            },
+            {
+              "title": "Difformer: Scalable (graph) transformers induced by energy constrained diffusion",
+              "citation": "Q. Wu, C. Yang, W. Zhao, Y. He, D. Wipf, and J. Yan, 'Difformer: Scalable (graph) transformers induced by energy constrained diffusion,' in The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023."
+            },
+            {
+              "title": "Recipe for a general, powerful, scalable graph transformer",
+              "citation": "L. Ramp´ aˇ sek, M. Galkin, V. P. Dwivedi, A. T. Luu, G. Wolf, and D. Beaini, 'Recipe for a general, powerful, scalable graph transformer,' Advances in Neural Information Processing Systems , vol. 35, pp. 14 501-14 515, 2022."
+            },
+            {
+              "title": "DyFormer: A Scalable Dynamic Graph Transformer with Provable Benefits on Generalization Ability",
+              "citation": "W. Cong, Y. Wu, Y. Tian, M. Gu, Y. Xia, C.-c. J. Chen, and M. Mahdavi, 'DyFormer: A Scalable Dynamic Graph Transformer with Provable Benefits on Generalization Ability,' in Proceedings of the 2023 SIAM International Conference on Data Mining (SDM) . SIAM, 2023, pp. 442-450."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.4",
+          "sec_title": "Pre-trained Graph Transformers",
+          "citations": [
+            {
+              "title": "Pre-training of graph augmented transformers for medication recommendation",
+              "citation": "J. Shang, T. Ma, C. Xiao, and J. Sun, 'Pre-training of graph augmented transformers for medication recommendation,' in 28th International Joint Conference on Artificial Intelligence (IJCAI) , 2019, pp. 59535959."
+            },
+            {
+              "title": "Self-supervised graph transformer on large-scale molecular data",
+              "citation": "Y. Rong, Y. Bian, T. Xu, W. Xie, Y. Wei, W. Huang, and J. Huang, 'Self-supervised graph transformer on large-scale molecular data,' Advances in Neural Information Processing Systems , vol. 33, pp. 12 559-12 571, 2020."
+            },
+            {
+              "title": "ChemBERTa: Largescale self-supervised pretraining for molecular property prediction",
+              "citation": "S. Chithrananda, G. Grand, and B. Ramsundar, 'ChemBERTa: Largescale self-supervised pretraining for molecular property prediction,' arXiv preprint arXiv:2010.09885 , 2020."
+            },
+            {
+              "title": "HEAT: Holistic Edge Attention Transformer for Structured Reconstruction",
+              "citation": "J. Chen, Y. Qian, and Y. Furukawa, 'HEAT: Holistic Edge Attention Transformer for Structured Reconstruction,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 3866-3875."
+            },
+            {
+              "title": "FormNetV2: Multimodal graph contrastive learning for form document information extraction",
+              "citation": "C.-Y. Lee, C.-L. Li, H. Zhang, T. Dozat, V. Perot, G. Su, X. Zhang, K. Sohn, N. Glushnev, R. Wang et al. , 'FormNetV2: Multimodal graph contrastive learning for form document information extraction,' in Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , 2023, pp. 90119026."
+            },
+            {
+              "title": "Selfsupervised teaching and learning of representations on graphs",
+              "citation": "L. Wan, Z. Fu, L. Sun, X. Wang, G. Xu, X. Yan, and F. Xia, 'Selfsupervised teaching and learning of representations on graphs,' in Proceedings of the ACM Web Conference 2023 , 2023, pp. 489-498."
+            },
+            {
+              "title": "Towards effective and generalizable fine-tuning for pre-trained molecular graph models",
+              "citation": "J. Xia, J. Zheng, C. Tan, G. Wang, and S. Z. Li, 'Towards effective and generalizable fine-tuning for pre-trained molecular graph models,' bioRxiv , pp. 2022-02, 2022."
+            },
+            {
+              "title": "KPGT: Knowledge-guided pre-training of graph transformer for molecular property prediction",
+              "citation": "H. Li, D. Zhao, and J. Zeng, 'KPGT: Knowledge-guided pre-training of graph transformer for molecular property prediction,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 857-867."
+            },
+            {
+              "title": "Structure Pretraining and Prompt Tuning for Knowledge Graph Transfer",
+              "citation": "W. Zhang, Y. Zhu, M. Chen, Y. Geng, Y. Huang, Y. Xu, W. Song, and H. Chen, 'Structure Pretraining and Prompt Tuning for Knowledge Graph Transfer,' in Proceedings of the ACM Web Conference 2023 , 2023, pp. 2581-2590."
+            },
+            {
+              "title": "A generalization of transformer networks to graphs",
+              "citation": "V. P. Dwivedi and X. Bresson, 'A generalization of transformer networks to graphs,' AAAI Workshop on Deep Learning on Graphs: Methods and Applications , 2021."
+            },
+            {
+              "title": "Graph attention networks",
+              "citation": "P. Veliˇ ckovi´ c, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in International Conference on Learning Representations , 2018."
+            },
+            {
+              "title": "How attentive are graph attention networks?",
+              "citation": "S. Brody, U. Alon, and E. Yahav, 'How attentive are graph attention networks?' in The Tenth International Conference on Learning Representations, ICLR 2022, Virtual Event, April 25-29, 2022 . OpenReview.net, 2022."
+            },
+            {
+              "title": "Graph transformer networks",
+              "citation": "S. Yun, M. Jeong, R. Kim, J. Kang, and H. J. Kim, 'Graph transformer networks,' Advances in Neural Information Processing Systems , vol. 32, 2019."
+            },
+            {
+              "title": "GATE: Graph attention transformer encoder for cross-lingual relation and event extraction",
+              "citation": "W. U. Ahmad, N. Peng, and K.-W. Chang, 'GATE: Graph attention transformer encoder for cross-lingual relation and event extraction,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 35, 2021, pp. 12 462-12 470."
+            },
+            {
+              "title": "Uncovering more shallow heuristics: Probing the natural language inference capacities of Transformerbased pre-trained language models using syllogistic patterns",
+              "citation": "R. Gubelmann and S. Handschuh, 'Uncovering more shallow heuristics: Probing the natural language inference capacities of Transformerbased pre-trained language models using syllogistic patterns,' arXiv preprint arXiv:2201.07614 , 2022."
+            },
+            {
+              "title": "Anomaly Detection in Dynamic Graphs via Transformer",
+              "citation": "Y. Liu, S. Pan, Y. G. Wang, F. Xiong, L. Wang, Q. Chen, and V. C. Lee, 'Anomaly Detection in Dynamic Graphs via Transformer,' IEEE Transactions on Knowledge and Data Engineering , pp. 1-1, 2021."
+            },
+            {
+              "title": "Novel positional encodings to enable tree-based transformers",
+              "citation": "V. Shiv and C. Quirk, 'Novel positional encodings to enable tree-based transformers,' Advances in Neural Information Processing Systems , vol. 32, 2019."
+            },
+            {
+              "title": "Graph attention networks with positional embeddings",
+              "citation": "L. Ma, R. Rabbany, and A. Romero-Soriano, 'Graph attention networks with positional embeddings,' in Pacific-Asia Conference on Knowledge Discovery and Data Mining . Springer, 2021, pp. 514-527."
+            },
+            {
+              "title": "Deformable Graph Transformer",
+              "citation": "J. Park, S. Yun, H. Park, J. Kang, J. Jeong, K.-M. Kim, J.-w. Ha, and H. J. Kim, 'Deformable Graph Transformer,' arXiv preprint arXiv:2206.14337 , 2022."
+            },
+            {
+              "title": "EDTER: Edge detection with transformer",
+              "citation": "M. Pu, Y. Huang, Y. Liu, Q. Guan, and H. Ling, 'EDTER: Edge detection with transformer,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 1402-1412."
+            },
+            {
+              "title": "BGT-Net: Bidirectional GRU transformer network for scene graph generation",
+              "citation": "N. Dhingra, F. Ritter, and A. Kunz, 'BGT-Net: Bidirectional GRU transformer network for scene graph generation,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2021, pp. 2150-2159."
+            },
+            {
+              "title": "Lidar-based online 3D video object detection with graph-based message passing and spatiotemporal transformer attention",
+              "citation": "J. Yin, J. Shen, C. Guan, D. Zhou, and R. Yang, 'Lidar-based online 3D video object detection with graph-based message passing and spatiotemporal transformer attention,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 11 495-11 504."
+            },
+            {
+              "title": "Graph attention multi-layer perceptron",
+              "citation": "W. Zhang, Z. Yin, Z. Sheng, Y. Li, W. Ouyang, X. Li, Y. Tao, Z. Yang, and B. Cui, 'Graph attention multi-layer perceptron,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 4560-4570."
+            },
+            {
+              "title": "Higher-order interaction goes neural: A substructure assembling graph attention network for graph classification",
+              "citation": "J. Gao, J. Gao, X. Ying, M. Lu, and J. Wang, 'Higher-order interaction goes neural: A substructure assembling graph attention network for graph classification,' IEEE Transactions on Knowledge and Data Engineering , 2021."
+            },
+            {
+              "title": "From block-Toeplitz matrices to differential equations on graphs: Towards a general theory for scalable masked Transformers",
+              "citation": "K. Choromanski, H. Lin, H. Chen, T. Zhang, A. Sehanobish, V. Likhosherstov, J. Parker-Holder, T. Sarlos, A. Weller, and T. Weingarten, 'From block-Toeplitz matrices to differential equations on graphs: Towards a general theory for scalable masked Transformers,' in International Conference on Machine Learning . PMLR, 2022, pp. 3962-3983."
+            },
+            {
+              "title": "EcoFormer: Energysaving attention with linear complexity",
+              "citation": "J. Liu, Z. Pan, H. He, J. Cai, and B. Zhuang, 'EcoFormer: Energysaving attention with linear complexity,' Advances in Neural Information Processing Systems , vol. 35, pp. 10 295-10 308, 2022."
+            },
+            {
+              "title": "Reformer: The efficient transformer",
+              "citation": "N. Kitaev, L. Kaiser, and A. Levskaya, 'Reformer: The efficient transformer,' in 8th International Conference on Learning Representations, ICLR 2020, Addis Ababa, Ethiopia, April 26-30, 2020 . OpenReview.net, 2020."
+            },
+            {
+              "title": "Attention mechanism in neural networks: Where it comes and where it goes",
+              "citation": "D. Soydaner, 'Attention mechanism in neural networks: Where it comes and where it goes,' Neural Computing and Applications , vol. 34, no. 16, pp. 13 371-13 385, 2022."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "APPLICATION PERSPECTIVES OF GRAPH TRANSFORMERS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "Node-level Tasks",
+          "citations": [
+            {
+              "title": "A survey of graph neural networks in various learning paradigms: Methods, applications, and challenges",
+              "citation": "L. Waikhom and R. Patgiri, 'A survey of graph neural networks in various learning paradigms: Methods, applications, and challenges,' Artificial Intelligence Review , vol. 56, no. 7, pp. 6295-6364, 2023."
+            },
+            {
+              "title": "Are more layers beneficial to graph transformers?",
+              "citation": "H. Zhao, S. Ma, D. Zhang, Z. Deng, and F. Wei, 'Are more layers beneficial to graph transformers?' in The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023."
+            },
+            {
+              "title": "Text generation from knowledge graphs with graph transformers",
+              "citation": "R. Koncel-Kedziorski, D. Bekal, Y. Luan, M. Lapata, and H. Hajishirzi, 'Text generation from knowledge graphs with graph transformers,' in Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, NAACL-HLT 2019, Minneapolis, MN, USA, June 2-7, 2019, Volume 1 (Long and Short Papers) , J. Burstein, C. Doran, and T. Solorio, Eds. Association for Computational Linguistics, 2019, pp. 2284-2293."
+            },
+            {
+              "title": "Self-supervised graph-level representation learning with local and global structure",
+              "citation": "M. Xu, H. Wang, B. Ni, H. Guo, and J. Tang, 'Self-supervised graph-level representation learning with local and global structure,' in International Conference on Machine Learning . PMLR, 2021, pp. 11 548-11 558."
+            },
+            {
+              "title": "A simple and effective positional encoding for transformers",
+              "citation": "P. Chen, H. Tsai, S. Bhojanapalli, H. W. Chung, Y. Chang, and C. Ferng, 'A simple and effective positional encoding for transformers,' in Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP), Virtual Event / Punta Cana, Dominican Republic, 7-11 November , 2021, pp. 2974-2988."
+            },
+            {
+              "title": "GRPE: Relative positional encoding for graph transformer",
+              "citation": "W. Park, W.-G. Chang, D. Lee, J. Kim, and seung-won hwang, 'GRPE: Relative positional encoding for graph transformer,' in ICLR2022 Machine Learning for Drug Discovery , 2022."
+            },
+            {
+              "title": "Do transformers really perform badly for graph representation?",
+              "citation": "C. Ying, T. Cai, S. Luo, S. Zheng, G. Ke, D. He, Y. Shen, and T.-Y. Liu, 'Do transformers really perform badly for graph representation?' Advances in Neural Information Processing Systems , vol. 34, pp. 28 877-28 888, 2021."
+            },
+            {
+              "title": "Self-attention with relative position representations",
+              "citation": "P. Shaw, J. Uszkoreit, and A. Vaswani, 'Self-attention with relative position representations,' in Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL), New Orleans, Louisiana, USA, June 1-6 , 2018, pp. 464-468."
+            },
+            {
+              "title": "GraphiT: Encoding graph structure in transformers",
+              "citation": "G. Mialon, D. Chen, M. Selosse, and J. Mairal, 'GraphiT: Encoding graph structure in transformers,' arXiv preprint arXiv:2106.05667 , 2021."
+            },
+            {
+              "title": "Transformers meet directed graphs",
+              "citation": "S. Geisler, Y. Li, D. J. Mankowitz, A. T. Cemgil, S. G¨ unnemann, and C. Paduraru, 'Transformers meet directed graphs,' in International Conference on Machine Learning . PMLR, 2023, pp. 11 144-11 172."
+            },
+            {
+              "title": "Structure-aware transformer for graph representation learning",
+              "citation": "D. Chen, L. O'Bray, and K. Borgwardt, 'Structure-aware transformer for graph representation learning,' in International Conference on Machine Learning . PMLR, 2022, pp. 3469-3489."
+            },
+            {
+              "title": "Systematic generalization with edge transformers",
+              "citation": "L. Bergen, T. O'Donnell, and D. Bahdanau, 'Systematic generalization with edge transformers,' Advances in Neural Information Processing Systems , vol. 34, pp. 1390-1402, 2021."
+            },
+            {
+              "title": "Graph transformer for graph-to-sequence learning",
+              "citation": "D. Cai and W. Lam, 'Graph transformer for graph-to-sequence learning,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 34, 2020, pp. 7464-7471."
+            },
+            {
+              "title": "Rethinking graph transformers with spectral attention",
+              "citation": "D. Kreuzer, D. Beaini, W. Hamilton, V. L´ etourneau, and P. Tossou, 'Rethinking graph transformers with spectral attention,' Advances in Neural Information Processing Systems , vol. 34, pp. 21 618-21 629, 2021."
+            },
+            {
+              "title": "ABT-MPNN: An atom-bond transformer-based message-passing neural network for molecular property prediction",
+              "citation": "C. Liu, Y. Sun, R. Davis, S. T. Cardona, and P. Hu, 'ABT-MPNN: An atom-bond transformer-based message-passing neural network for molecular property prediction,' Journal of Cheminformatics , vol. 15, no. 1, p. 29, 2023."
+            },
+            {
+              "title": "Large-scale chemical-genetics yields new M. tuberculosis inhibitor classes",
+              "citation": "E. O. Johnson, E. LaVerriere, E. Office, M. Stanley, E. Meyer, T. Kawate, J. E. Gomez, R. E. Audette, N. Bandyopadhyay, N. Betancourt et al. , 'Large-scale chemical-genetics yields new M. tuberculosis inhibitor classes,' Nature , vol. 571, no. 7763, pp. 72-78, 2019."
+            },
+            {
+              "title": "Universal graph transformer self-attention networks",
+              "citation": "D. Q. Nguyen, T. D. Nguyen, and D. Phung, 'Universal graph transformer self-attention networks,' in Companion Proceedings of the Web Conference 2022 , 2022, pp. 193-196."
+            },
+            {
+              "title": "A novel method for drug-target interaction prediction based on graph transformers model",
+              "citation": "H. Wang, F. Guo, M. Du, G. Wang, and C. Cao, 'A novel method for drug-target interaction prediction based on graph transformers model,' BMC Bioinformatics , vol. 23, no. 1, p. 459, Nov. 2022."
+            },
+            {
+              "title": "A learning-based method for drug-target interaction prediction based on feature representation learning and deep neural network",
+              "citation": "J. Peng, J. Li, and X. Shang, 'A learning-based method for drug-target interaction prediction based on feature representation learning and deep neural network,' BMC Bioinformatics , vol. 21, no. Suppl 13, p. 394, 2020."
+            },
+            {
+              "title": "Dual Graph Convolutional Networks with Transformer and Curriculum Learning for Image Captioning",
+              "citation": "X. Dong, C. Long, W. Xu, and C. Xiao, 'Dual Graph Convolutional Networks with Transformer and Curriculum Learning for Image Captioning,' in Proceedings of the 29th ACM International Conference on Multimedia , ser. MM '21. New York, NY, USA: Association for Computing Machinery, Oct. 2021, pp. 2615-2624."
+            },
+            {
+              "title": "Transformerbased image generation from scene graphs",
+              "citation": "R. Sortino, S. Palazzo, F. Rundo, and C. Spampinato, 'Transformerbased image generation from scene graphs,' Computer Vision and Image Understanding , vol. 233, p. 103721, 2023."
+            },
+            {
+              "title": "Endto-End Video Scene Graph Generation with Temporal Propagation Transformer",
+              "citation": "Y. Zhang, Y. Pan, T. Yao, R. Huang, T. Mei, and C.-W. Chen, 'Endto-End Video Scene Graph Generation with Temporal Propagation Transformer,' IEEE Transactions on Multimedia , pp. 1-13, 2023."
+            },
+            {
+              "title": "The prospects and opportunities of protein structure prediction with AI",
+              "citation": "K. Tunyasuvunakool, 'The prospects and opportunities of protein structure prediction with AI,' Nature Reviews Molecular Cell Biology , vol. 23, no. 7, pp. 445-446, 2022."
+            },
+            {
+              "title": "Hierarchical graph transformer with contrastive learning for protein function prediction",
+              "citation": "Z. Gu, X. Luo, J. Chen, M. Deng, and L. Lai, 'Hierarchical graph transformer with contrastive learning for protein function prediction,' Bioinformatics , vol. 39, no. 7, p. btad410, 2023."
+            },
+            {
+              "title": "Using a Graph Transformer Network to Predict 3D Coordinates of Proteins via Geometric Algebra Modelling",
+              "citation": "A. Pepe, J. Lasenby, and P. Chac´ on, 'Using a Graph Transformer Network to Predict 3D Coordinates of Proteins via Geometric Algebra Modelling,' in Empowering Novel Geometric Algebra for Graphics and Engineering , E. Hitzer, G. Papagiannakis, and P. Vasik, Eds. Cham: Springer Nature Switzerland, 2023, vol. 13862, pp. 83-95."
+            },
+            {
+              "title": "DProQ: a gated-graph transformer for protein complex structure assessment",
+              "citation": "X. Chen, A. Morehead, J. Liu, and J. Cheng, 'DProQ: a gated-graph transformer for protein complex structure assessment,' arXiv preprint arXiv:2205.10627 , 2022."
+            },
+            {
+              "title": "A gated graph transformer for protein complex structure quality assessment and its performance in CASP15",
+              "citation": "--, 'A gated graph transformer for protein complex structure quality assessment and its performance in CASP15,' Bioinformatics , vol. 39, no. Supplement 1, pp. i308-i317, 2023."
+            },
+            {
+              "title": "Efficient Entity Resolution on Heterogeneous Records",
+              "citation": "Y. Lin, H. Wang, J. Li, and H. Gao, 'Efficient Entity Resolution on Heterogeneous Records,' IEEE Transactions on Knowledge and Data Engineering , vol. 32, no. 5, pp. 912-926, May 2020."
+            },
+            {
+              "title": "Recipe for a general, powerful, scalable graph transformer",
+              "citation": "L. Ramp´ aˇ sek, M. Galkin, V. P. Dwivedi, A. T. Luu, G. Wolf, and D. Beaini, 'Recipe for a general, powerful, scalable graph transformer,' Advances in Neural Information Processing Systems , vol. 35, pp. 14 501-14 515, 2022."
+            },
+            {
+              "title": "Nodeformer: A scalable graph structure learning transformer for node classification",
+              "citation": "Q. Wu, W. Zhao, Z. Li, D. P. Wipf, and J. Yan, 'Nodeformer: A scalable graph structure learning transformer for node classification,' Advances in Neural Information Processing Systems , vol. 35, pp. 27 387-27 401, 2022."
+            },
+            {
+              "title": "Difformer: Scalable (graph) transformers induced by energy constrained diffusion",
+              "citation": "Q. Wu, C. Yang, W. Zhao, Y. He, D. Wipf, and J. Yan, 'Difformer: Scalable (graph) transformers induced by energy constrained diffusion,' in The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023."
+            },
+            {
+              "title": "DyFormer: A Scalable Dynamic Graph Transformer with Provable Benefits on Generalization Ability",
+              "citation": "W. Cong, Y. Wu, Y. Tian, M. Gu, Y. Xia, C.-c. J. Chen, and M. Mahdavi, 'DyFormer: A Scalable Dynamic Graph Transformer with Provable Benefits on Generalization Ability,' in Proceedings of the 2023 SIAM International Conference on Data Mining (SDM) . SIAM, 2023, pp. 442-450."
+            },
+            {
+              "title": "Digress: Discrete denoising diffusion for graph generation",
+              "citation": "C. Vignac, I. Krawczuk, A. Siraudin, B. Wang, V. Cevher, and P. Frossard, 'Digress: Discrete denoising diffusion for graph generation,' in The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023 , 2023."
+            },
+            {
+              "title": "Exphormer: Sparse transformers for graphs",
+              "citation": "H. Shirzad, A. Velingker, B. Venkatachalam, D. J. Sutherland, and A. K. Sinop, 'Exphormer: Sparse transformers for graphs,' in International Conference on Machine Learning . PMLR, 2023, pp. 31 61331 632."
+            },
+            {
+              "title": "Global self-attention as a replacement for graph convolution",
+              "citation": "M. S. Hussain, M. J. Zaki, and D. Subramanian, 'Global self-attention as a replacement for graph convolution,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 655-665."
+            },
+            {
+              "title": "Graph inductive biases in transformers without message passing",
+              "citation": "L. Ma, C. Lin, D. Lim, A. Romero-Soriano, P. K. Dokania, M. Coates, P. Torr, and S.-N. Lim, 'Graph inductive biases in transformers without message passing,' in International Conference on Machine Learning , 2023, pp. 23 321-23 337."
+            },
+            {
+              "title": "Hierarchical transformer for scalable graph learning",
+              "citation": "W. Zhu, T. Wen, G. Song, X. Ma, and L. Wang, 'Hierarchical transformer for scalable graph learning,' in Proceedings of the ThirtySecond International Joint Conference on Artificial Intelligence, IJCAI 2023, 19th-25th August 2023, Macao, SAR, China , 2023, pp. 47024710."
+            },
+            {
+              "title": "EGAT: Edge-featured graph attention network",
+              "citation": "Z. Wang, J. Chen, and H. Chen, 'EGAT: Edge-featured graph attention network,' in Artificial Neural Networks and Machine Learning-ICANN 2021: 30th International Conference on Artificial Neural Networks, Bratislava, Slovakia, September 14-17, 2021, Proceedings, Part I 30 . Springer, 2021, pp. 253-264."
+            },
+            {
+              "title": "Point transformer",
+              "citation": "H. Zhao, L. Jiang, J. Jia, P. H. Torr, and V . Koltun, 'Point transformer,' in Proceedings of the IEEE/CVF International Conference on Computer Vision , 2021, pp. 16 259-16 268."
+            },
+            {
+              "title": "Specformer: Spectral graph neural networks meet transformers",
+              "citation": "D. Bo, C. Shi, L. Wang, and R. Liao, 'Specformer: Spectral graph neural networks meet transformers,' in The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023."
+            },
+            {
+              "title": "Entity resolution with hierarchical graph attention networks",
+              "citation": "D. Yao, Y. Gu, G. Cong, H. Jin, and X. Lv, 'Entity resolution with hierarchical graph attention networks,' in Proceedings of the 2022 International Conference on Management of Data , 2022, pp. 429-442."
+            },
+            {
+              "title": "Graph Transformer for drug response prediction",
+              "citation": "T. Chu, T. T. Nguyen, B. D. Hai, Q. H. Nguyen, and T. Nguyen, 'Graph Transformer for drug response prediction,' IEEE/ACM Transactions on Computational Biology and Bioinformatics , vol. 20, no. 2, pp. 10651072, Mar. 2023."
+            },
+            {
+              "title": "A simple and efficient graph Transformer architecture for molecular properties prediction",
+              "citation": "Y. Lu, K. Zeng, Q. Zhang, J. Zhang, L. Cai, and J. Tian, 'A simple and efficient graph Transformer architecture for molecular properties prediction,' Chemical Engineering Science , vol. 280, p. 119057, Oct. 2023."
+            },
+            {
+              "title": "Transforming graphs for enhanced attribute-based clustering: An innovative graph transformer method",
+              "citation": "S. Han, J. Liu, J. Wu, Y. Chen, and L. Tao, 'Transforming graphs for enhanced attribute-based clustering: An innovative graph transformer method,' arXiv preprint arXiv:2306.11307 , 2023."
+            },
+            {
+              "title": "Hierarchical graph transformer with adaptive node sampling",
+              "citation": "Z. Zhang, Q. Liu, Q. Hu, and C.-K. Lee, 'Hierarchical graph transformer with adaptive node sampling,' Advances in Neural Information Processing Systems , vol. 35, pp. 21 171-21 183, 2022."
+            },
+            {
+              "title": "RelTR: Relation transformer for scene graph generation",
+              "citation": "Y. Cong, M. Y. Yang, and B. Rosenhahn, 'RelTR: Relation transformer for scene graph generation,' IEEE Transactions on Pattern Analysis and Machine Intelligence , 2023."
+            },
+            {
+              "title": "BSTG-Trans: A Bayesian Spatial-Temporal Graph Transformer for Long-term Pose Forecasting",
+              "citation": "S. Mo and M. Xin, 'BSTG-Trans: A Bayesian Spatial-Temporal Graph Transformer for Long-term Pose Forecasting,' IEEE Transactions on Multimedia , pp. 1-13, 2023."
+            },
+            {
+              "title": "Leveraging graph to improve abstractive multi-document summarization",
+              "citation": "W. Li, X. Xiao, J. Liu, H. Wu, H. Wang, and J. Du, 'Leveraging graph to improve abstractive multi-document summarization,' in Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics , 2020, pp. 6232-6243."
+            },
+            {
+              "title": "BERT-MK: Integrating graph contextualized knowledge into pretrained language models",
+              "citation": "B. He, D. Zhou, J. Xiao, X. Jiang, Q. Liu, N. J. Yuan, and T. Xu, 'BERT-MK: Integrating graph contextualized knowledge into pretrained language models,' in Findings of the Association for Computational Linguistics: EMNLP , 2020, pp. 2281-2290."
+            },
+            {
+              "title": "Entity Resolution with Hierarchical Graph Attention Networks",
+              "citation": "D. Yao, Y. Gu, G. Cong, H. Jin, and X. Lv, 'Entity Resolution with Hierarchical Graph Attention Networks,' in Proceedings of the 2022 International Conference on Management of Data . Philadelphia PA USA: ACM, Jun. 2022, pp. 429-442."
+            },
+            {
+              "title": "Do transformers really perform badly for graph representation?",
+              "citation": "C. Ying, T. Cai, S. Luo, S. Zheng, G. Ke, D. He, Y. Shen, and T.-Y. Liu, 'Do transformers really perform badly for graph representation?' Advances in Neural Information Processing Systems , vol. 34, pp. 28 877-28 888, 2021."
+            },
+            {
+              "title": "Graphix-T5: Mixing pre-trained transformers with graph-aware layers for text-to-SQL parsing",
+              "citation": "J. Li, B. Hui, R. Cheng, B. Qin, C. Ma, N. Huo, F. Huang, W. Du, L. Si, and Y. Li, 'Graphix-T5: Mixing pre-trained transformers with graph-aware layers for text-to-SQL parsing,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 37, no. 11, 2023, pp. 13 076-13 084."
+            },
+            {
+              "title": "Self-supervised graph transformer on large-scale molecular data",
+              "citation": "Y. Rong, Y. Bian, T. Xu, W. Xie, Y. Wei, W. Huang, and J. Huang, 'Self-supervised graph transformer on large-scale molecular data,' Advances in Neural Information Processing Systems , vol. 33, pp. 12 559-12 571, 2020."
+            },
+            {
+              "title": "Pre-training of graph augmented transformers for medication recommendation",
+              "citation": "J. Shang, T. Ma, C. Xiao, and J. Sun, 'Pre-training of graph augmented transformers for medication recommendation,' in 28th International Joint Conference on Artificial Intelligence (IJCAI) , 2019, pp. 59535959."
+            },
+            {
+              "title": "ChemBERTa: Largescale self-supervised pretraining for molecular property prediction",
+              "citation": "S. Chithrananda, G. Grand, and B. Ramsundar, 'ChemBERTa: Largescale self-supervised pretraining for molecular property prediction,' arXiv preprint arXiv:2010.09885 , 2020."
+            },
+            {
+              "title": "HEAT: Holistic Edge Attention Transformer for Structured Reconstruction",
+              "citation": "J. Chen, Y. Qian, and Y. Furukawa, 'HEAT: Holistic Edge Attention Transformer for Structured Reconstruction,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 3866-3875."
+            },
+            {
+              "title": "Towards effective and generalizable fine-tuning for pre-trained molecular graph models",
+              "citation": "J. Xia, J. Zheng, C. Tan, G. Wang, and S. Z. Li, 'Towards effective and generalizable fine-tuning for pre-trained molecular graph models,' bioRxiv , pp. 2022-02, 2022."
+            },
+            {
+              "title": "KPGT: Knowledge-guided pre-training of graph transformer for molecular property prediction",
+              "citation": "H. Li, D. Zhao, and J. Zeng, 'KPGT: Knowledge-guided pre-training of graph transformer for molecular property prediction,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 857-867."
+            },
+            {
+              "title": "LightGT: A Light Graph Transformer for Multimedia Recommendation",
+              "citation": "Y. Wei, W. Liu, F. Liu, X. Wang, L. Nie, and T.-S. Chua, 'LightGT: A Light Graph Transformer for Multimedia Recommendation,' in Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval , 2023, pp. 15081517."
+            },
+            {
+              "title": "Structure Pretraining and Prompt Tuning for Knowledge Graph Transfer",
+              "citation": "W. Zhang, Y. Zhu, M. Chen, Y. Geng, Y. Huang, Y. Xu, W. Song, and H. Chen, 'Structure Pretraining and Prompt Tuning for Knowledge Graph Transfer,' in Proceedings of the ACM Web Conference 2023 , 2023, pp. 2581-2590."
+            },
+            {
+              "title": "Contrastive video question answering via video graph transformer",
+              "citation": "J. Xiao, P. Zhou, A. Yao, Y. Li, R. Hong, S. Yan, and T.-S. Chua, 'Contrastive video question answering via video graph transformer,' IEEE Transactions on Pattern Analysis and Machine Intelligence , 2023."
+            },
+            {
+              "title": "G-adapter: Towards structure-aware parameter-efficient transfer learning for graph transformer networks",
+              "citation": "A. Gui, J. Ye, and H. Xiao, 'G-adapter: Towards structure-aware parameter-efficient transfer learning for graph transformer networks,' arXiv preprint arXiv:2305.10329 , 2023."
+            },
+            {
+              "title": "Mask and reason: Pre-training knowledge graph transformers for complex logical queries",
+              "citation": "X. Liu, S. Zhao, K. Su, Y. Cen, J. Qiu, M. Zhang, W. Wu, Y. Dong, and J. Tang, 'Mask and reason: Pre-training knowledge graph transformers for complex logical queries,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 1120-1130."
+            },
+            {
+              "title": "Mask and reason: Pre-training knowledge graph transformers for complex logical queries",
+              "citation": "X. Liu, S. Zhao, K. Su, Y. Cen, J. Qiu, M. Zhang, W. Wu, Y. Dong, and J. Tang, 'Mask and reason: Pre-training knowledge graph transformers for complex logical queries,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 1120-1130."
+            },
+            {
+              "title": "Unsupervised pre-training of graph transformers on patient population graphs",
+              "citation": "C. Pellegrini, N. Navab, and A. Kazi, 'Unsupervised pre-training of graph transformers on patient population graphs,' Medical Image Analysis , vol. 89, p. 102895, 2023."
+            },
+            {
+              "title": "Video graph transformer for video question answering",
+              "citation": "J. Xiao, P. Zhou, T.-S. Chua, and S. Yan, 'Video graph transformer for video question answering,' in European Conference on Computer Vision . Springer, 2022, pp. 39-58."
+            },
+            {
+              "title": "Virtual node tuning for fewshot node classification",
+              "citation": "Z. Tan, R. Guo, K. Ding, and H. Liu, 'Virtual node tuning for fewshot node classification,' in Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2023, pp. 2177-2188."
+            },
+            {
+              "title": "GPT-GNN: Generative pre-training of graph neural networks",
+              "citation": "Z. Hu, Y. Dong, K. Wang, K.-W. Chang, and Y. Sun, 'GPT-GNN: Generative pre-training of graph neural networks,' in Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , 2020, pp. 1857-1867."
+            },
+            {
+              "title": "Empowering transformer with hybrid matching knowledge for entity matching",
+              "citation": "W. Dou, D. Shen, T. Nie, Y. Kou, C. Sun, H. Cui, and G. Yu, 'Empowering transformer with hybrid matching knowledge for entity matching,' in International Conference on Database Systems for Advanced Applications , 2022, pp. 52-67."
+            },
+            {
+              "title": "Coupled attention networks for multivariate time series anomaly detection",
+              "citation": "F. Xia, X. Chen, S. Yu, M. Hou, M. Liu, and L. You, 'Coupled attention networks for multivariate time series anomaly detection,' IEEE Transactions on Emerging Topics in Computing , vol. 12, no. 1, pp. 240-253, 2024."
+            },
+            {
+              "title": "A survey on graph neural networks for time series: Forecasting, classification, imputation, and anomaly detection",
+              "citation": "M. Jin, H. Y. Koh, Q. Wen, D. Zambon, C. Alippi, G. I. Webb, I. King, and S. Pan, 'A survey on graph neural networks for time series: Forecasting, classification, imputation, and anomaly detection,' arXiv preprint arXiv:2307.03759 , 2023."
+            },
+            {
+              "title": "Anomaly detection in dynamic graphs via transformer",
+              "citation": "Y. Liu, S. Pan, Y. G. Wang, F. Xiong, L. Wang, Q. Chen, and V. C. Lee, 'Anomaly detection in dynamic graphs via transformer,' IEEE Transactions on Knowledge and Data Engineering , 2021."
+            },
+            {
+              "title": "Anomaly transformer: Time series anomaly detection with association discrepancy",
+              "citation": "J. Xu, H. Wu, J. Wang, and M. Long, 'Anomaly transformer: Time series anomaly detection with association discrepancy,' in The Tenth International Conference on Learning Representations, ICLR 2022, Virtual Event, April 25-29, 2022 . OpenReview.net, 2022."
+            },
+            {
+              "title": "Learning graph structures with transformer for multivariate time-series anomaly detection in IoT",
+              "citation": "Z. Chen, D. Chen, X. Zhang, Z. Yuan, and X. Cheng, 'Learning graph structures with transformer for multivariate time-series anomaly detection in IoT,' IEEE Internet of Things Journal , vol. 9, no. 12, pp. 9179-9189, 2021."
+            },
+            {
+              "title": "TranAD: Deep transformer networks for anomaly detection in multivariate time series data",
+              "citation": "S. Tuli, G. Casale, and N. R. Jennings, 'TranAD: Deep transformer networks for anomaly detection in multivariate time series data,' Proc. VLDB Endow. , vol. 15, no. 6, pp. 1201-1214, 2022."
+            },
+            {
+              "title": "Neuromorphic camera denoising using graph neural network-driven transformers",
+              "citation": "Y. Alkendi, R. Azzam, A. Ayyad, S. Javed, L. Seneviratne, and Y. Zweiri, 'Neuromorphic camera denoising using graph neural network-driven transformers,' IEEE Transactions on Neural Networks and Learning Systems , vol. 35, no. 3, p. 4110-4124, Mar. 2024."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Edge-level Tasks",
+          "citations": [
+            {
+              "title": "Enabling all in-edge deep learning: A literature review",
+              "citation": "P. Joshi, M. Hasanuzzaman, C. Thapa, H. Afli, and T. Scully, 'Enabling all in-edge deep learning: A literature review,' IEEE Access , 2023."
+            },
+            {
+              "title": "OpenGDA: Graph domain adaptation benchmark for cross-network learning",
+              "citation": "B. Shi, Y. Wang, F. Guo, J. Shao, H. Shen, and X. Cheng, 'OpenGDA: Graph domain adaptation benchmark for cross-network learning,' in Proceedings of the 32nd ACM International Conference on Information and Knowledge Management , 2023, pp. 5396-5400."
+            },
+            {
+              "title": "Artificial intelligence and data mining for the pharmacovigilance of drug-drug interactions",
+              "citation": "M. Hauben, 'Artificial intelligence and data mining for the pharmacovigilance of drug-drug interactions,' Clinical Therapeutics , 2023."
+            },
+            {
+              "title": "A novel method for drug-target interaction prediction based on graph transformers model",
+              "citation": "H. Wang, F. Guo, M. Du, G. Wang, and C. Cao, 'A novel method for drug-target interaction prediction based on graph transformers model,' BMC Bioinformatics , vol. 23, no. 1, p. 459, Nov. 2022."
+            },
+            {
+              "title": "Advancing drugtarget interaction prediction: A comprehensive graph-based approach integrating knowledge graph embedding and ProtBERT pretraining",
+              "citation": "W. E. Djeddi, K. Hermi, S. Ben Yahia, and G. Diallo, 'Advancing drugtarget interaction prediction: A comprehensive graph-based approach integrating knowledge graph embedding and ProtBERT pretraining,' BMC Bioinformatics , vol. 24, no. 1, p. 488, Dec. 2023."
+            },
+            {
+              "title": "Improved drug-target interaction prediction with intermolecular graph transformer",
+              "citation": "S. Liu, Y. Wang, Y. Deng, L. He, B. Shao, J. Yin, N. Zheng, T.-Y. Liu, and T. Wang, 'Improved drug-target interaction prediction with intermolecular graph transformer,' Briefings in Bioinformatics , vol. 23, no. 5, p. bbac162, 2022."
+            },
+            {
+              "title": "Prediction of drug-drug interaction events using graph neural networks based feature extraction",
+              "citation": "M. H. Al-Rabeah and A. Lakizadeh, 'Prediction of drug-drug interaction events using graph neural networks based feature extraction,' Scientific Reports , vol. 12, no. 1, p. 15590, 2022."
+            },
+            {
+              "title": "Position-aware relational transformer for knowledge graph embedding",
+              "citation": "G. Li, Z. Sun, W. Hu, G. Cheng, and Y. Qu, 'Position-aware relational transformer for knowledge graph embedding,' IEEE Transactions on Neural Networks and Learning Systems , vol. 35, no. 8, p. 11580-11594, Aug. 2024."
+            },
+            {
+              "title": "Pretraining transformers for knowledge graph completion",
+              "citation": "S. Chen, H. Cheng, X. Liu, J. Jiao, Y. Ji, and J. Gao, 'Pretraining transformers for knowledge graph completion,' arXiv preprint arXiv:2303.15682 , 2023."
+            },
+            {
+              "title": "Generative Transformer with Knowledge-Guided Decoding for Academic Knowledge Graph Completion",
+              "citation": "X. Liu, S. Mao, X. Wang, and J. Bu, 'Generative Transformer with Knowledge-Guided Decoding for Academic Knowledge Graph Completion,' Mathematics , vol. 11, no. 5, p. 1073, 2023."
+            },
+            {
+              "title": "Hybrid Transformer with Multi-level Fusion for Multimodal Knowledge Graph Completion",
+              "citation": "X. Chen, N. Zhang, L. Li, S. Deng, C. Tan, C. Xu, F. Huang, L. Si, and H. Chen, 'Hybrid Transformer with Multi-level Fusion for Multimodal Knowledge Graph Completion,' in Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval . Madrid Spain: ACM, Jul. 2022, pp. 904-915."
+            },
+            {
+              "title": "Self-supervised learning for recommender systems: A survey",
+              "citation": "J. Yu, H. Yin, X. Xia, T. Chen, J. Li, and Z. Huang, 'Self-supervised learning for recommender systems: A survey,' IEEE Transactions on Knowledge and Data Engineering , 2023."
+            },
+            {
+              "title": "Self-Supervised Hypergraph Transformer for Recommender Systems",
+              "citation": "L. Xia, C. Huang, and C. Zhang, 'Self-Supervised Hypergraph Transformer for Recommender Systems,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining . Washington DC USA: ACM, Aug. 2022, pp. 2100-2109."
+            },
+            {
+              "title": "Graph Transformer for Recommendation",
+              "citation": "C. Li, L. Xia, X. Ren, Y. Ye, Y. Xu, and C. Huang, 'Graph Transformer for Recommendation,' in Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval , Jul. 2023, pp. 1680-1689."
+            },
+            {
+              "title": "Automatic graph topology-aware transformer",
+              "citation": "C. Wang, J. Zhao, L. Li, L. Jiao, F. Liu, and S. Yang, 'Automatic graph topology-aware transformer,' IEEE Transactions on Neural Networks and Learning Systems , p. 1-15, 2024."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.3",
+          "sec_title": "Graph-level Tasks",
+          "citations": [
+            {
+              "title": "Molecular property prediction: Recent trends in the era of artificial intelligence",
+              "citation": "J. Shen and C. A. Nicolaou, 'Molecular property prediction: Recent trends in the era of artificial intelligence,' Drug Discovery Today: Technologies , vol. 32, pp. 29-36, 2019."
+            },
+            {
+              "title": "Algebraic graph-assisted bidirectional transformers for molecular property prediction",
+              "citation": "D. Chen, K. Gao, D. D. Nguyen, X. Chen, Y. Jiang, G.-W. Wei, and F. Pan, 'Algebraic graph-assisted bidirectional transformers for molecular property prediction,' Nature communications , vol. 12, no. 1, p. 3521, 2021."
+            },
+            {
+              "title": "KPGT: Knowledge-guided pre-training of graph transformer for molecular property prediction",
+              "citation": "H. Li, D. Zhao, and J. Zeng, 'KPGT: Knowledge-guided pre-training of graph transformer for molecular property prediction,' in Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , 2022, pp. 857-867."
+            },
+            {
+              "title": "Transfer learning with graph neural networks for improved molecular property prediction in the multi-fidelity setting",
+              "citation": "D. Buterez, J. P. Janet, S. J. Kiddle, D. Oglic, and P. Li´ o, 'Transfer learning with graph neural networks for improved molecular property prediction in the multi-fidelity setting,' Nature Communications , vol. 15, no. 1, p. 1517, 2024."
+            },
+            {
+              "title": "STGlow: A flow-based generative framework with dual-graphormer for pedestrian trajectory prediction",
+              "citation": "R. Liang, Y. Li, J. Zhou, and X. Li, 'STGlow: A flow-based generative framework with dual-graphormer for pedestrian trajectory prediction,' IEEE Transactions on Neural Networks and Learning Systems , vol. 35, no. 11, p. 16504-16517, Nov. 2024."
+            },
+            {
+              "title": "Graph transformer networks",
+              "citation": "S. Yun, M. Jeong, R. Kim, J. Kang, and H. J. Kim, 'Graph transformer networks,' Advances in neural information processing systems , vol. 32, 2019."
+            },
+            {
+              "title": "PatchGT: Transformer over Non-trainable Clusters for Learning Graph Representations",
+              "citation": "H. Gao, X. Han, J. Huang, J.-X. Wang, and L. Liu, 'PatchGT: Transformer over Non-trainable Clusters for Learning Graph Representations,' in Learning on Graphs Conference . PMLR, 2022, pp. 27-1."
+            },
+            {
+              "title": "A generalization of transformer networks to graphs",
+              "citation": "V. P. Dwivedi and X. Bresson, 'A generalization of transformer networks to graphs,' AAAI Workshop on Deep Learning on Graphs: Methods and Applications , 2021."
+            },
+            {
+              "title": "Rethinking Structural Encodings: Adaptive Graph Transformer for Node Classification Task",
+              "citation": "X. Ma, Q. Chen, Y. Wu, G. Song, L. Wang, and B. Zheng, 'Rethinking Structural Encodings: Adaptive Graph Transformer for Node Classification Task,' in Proceedings of the ACM Web Conference 2023 . Austin TX USA: ACM, Apr. 2023, pp. 533-544."
+            },
+            {
+              "title": "AGFormer: Efficient graph representation with anchor-graph transformer",
+              "citation": "B. Jiang, F. Xu, Z. Zhang, J. Tang, and F. Nie, 'AGFormer: Efficient graph representation with anchor-graph transformer,' arXiv preprint arXiv:2305.07521 , 2023."
+            },
+            {
+              "title": "Hierarchical transformer for scalable graph learning",
+              "citation": "W. Zhu, T. Wen, G. Song, X. Ma, and L. Wang, 'Hierarchical transformer for scalable graph learning,' in Proceedings of the ThirtySecond International Joint Conference on Artificial Intelligence, IJCAI 2023, 19th-25th August 2023, Macao, SAR, China , 2023, pp. 47024710."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.4",
+          "sec_title": "Other Application Scenarios",
+          "citations": [
+            {
+              "title": "A survey on graph neural networks and graph transformers in computer vision: A task-oriented perspective",
+              "citation": "C. Chen, Y. Wu, Q. Dai, H.-Y. Zhou, M. Xu, S. Yang, X. Han, and Y. Yu, 'A survey on graph neural networks and graph transformers in computer vision: A task-oriented perspective,' arXiv preprint arXiv:2209.13232 , 2022."
+            },
+            {
+              "title": "Automatic text summarization: A comprehensive survey",
+              "citation": "W. S. El-Kassas, C. R. Salama, A. A. Rafea, and H. K. Mohamed, 'Automatic text summarization: A comprehensive survey,' Expert systems with applications , vol. 165, p. 113679, 2021."
+            },
+            {
+              "title": "Toward subgraph-guided knowledge graph question generation with graph neural networks",
+              "citation": "Y. Chen, L. Wu, and M. J. Zaki, 'Toward subgraph-guided knowledge graph question generation with graph neural networks,' IEEE Transactions on Neural Networks and Learning Systems , vol. 35, no. 9, p. 12706-12717, Sep. 2024."
+            },
+            {
+              "title": "Automated News Summarization Using Transformers",
+              "citation": "A. Gupta, D. Chugh, Anjum, and R. Katarya, 'Automated News Summarization Using Transformers,' in Sustainable Advanced Computing , S. Aurelia, S. S. Hiremath, K. Subramanian, and S. K. Biswas, Eds. Singapore: Springer Singapore, 2022, vol. 840, pp. 249-259."
+            },
+            {
+              "title": "Recent Progress on Text Summarisation Based on BERT and GPT",
+              "citation": "B. Yang, X. Luo, K. Sun, and M. Y. Luo, 'Recent Progress on Text Summarisation Based on BERT and GPT,' in Knowledge Science, Engineering and Management . Cham: Springer Nature Switzerland, 2023, vol. 14120, pp. 225-241."
+            },
+            {
+              "title": "An abstractive text summarization technique using transformer model with self-attention mechanism",
+              "citation": "S. Kumar and A. Solanki, 'An abstractive text summarization technique using transformer model with self-attention mechanism,' Neural Computing and Applications , vol. 35, no. 25, pp. 18 603-18 622, Sep. 2023."
+            },
+            {
+              "title": "A comprehensive survey of deep learning for image captioning",
+              "citation": "M. Z. Hossain, F. Sohel, M. F. Shiratuddin, and H. Laga, 'A comprehensive survey of deep learning for image captioning,' ACM Computing Surveys (CsUR) , vol. 51, no. 6, pp. 1-36, 2019."
+            },
+            {
+              "title": "Adaptive semantic-enhanced transformer for image captioning",
+              "citation": "J. Zhang, Z. Fang, H. Sun, and Z. Wang, 'Adaptive semantic-enhanced transformer for image captioning,' IEEE Transactions on Neural Networks and Learning Systems , vol. 35, no. 2, p. 1785-1796, Feb. 2024."
+            },
+            {
+              "title": "Transforming Visual Scene Graphs to Image Captions",
+              "citation": "X. Yang, J. Peng, Z. Wang, H. Xu, Q. Ye, C. Li, S. Huang, F. Huang, Z. Li, and Y. Zhang, 'Transforming Visual Scene Graphs to Image Captions,' in Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , 2023, pp. 12 427-12 440."
+            },
+            {
+              "title": "End-to-end transformer based model for image captioning",
+              "citation": "Y. Wang, J. Xu, and Y. Sun, 'End-to-end transformer based model for image captioning,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 36, 2022, pp. 2585-2594."
+            },
+            {
+              "title": "Text-to-image cross-modal generation: A systematic review",
+              "citation": "M. ˙ Zelaszczyk and J. Ma´ ndziuk, 'Text-to-image cross-modal generation: A systematic review,' arXiv preprint arXiv:2401.11631 , 2024."
+            },
+            {
+              "title": "Transforming Image Generation from Scene Graphs",
+              "citation": "R. Sortino, S. Palazzo, and C. Spampinato, 'Transforming Image Generation from Scene Graphs,' in 2022 26th International Conference on Pattern Recognition (ICPR) . IEEE, 2022, pp. 4118-4124."
+            },
+            {
+              "title": "StyleSwin: Transformer-based GAN for high-resolution image generation",
+              "citation": "B. Zhang, S. Gu, B. Zhang, J. Bao, D. Chen, F. Wen, Y. Wang, and B. Guo, 'StyleSwin: Transformer-based GAN for high-resolution image generation,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 11 304-11 314."
+            },
+            {
+              "title": "RelTR: Relation transformer for scene graph generation",
+              "citation": "Y. Cong, M. Y. Yang, and B. Rosenhahn, 'RelTR: Relation transformer for scene graph generation,' IEEE Transactions on Pattern Analysis and Machine Intelligence , 2023."
+            },
+            {
+              "title": "SGTR: End-to-end scene graph generation with transformer",
+              "citation": "R. Li, S. Zhang, and X. He, 'SGTR: End-to-end scene graph generation with transformer,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 19 486-19 496."
+            },
+            {
+              "title": "Video Graph Transformer for Video Question Answering",
+              "citation": "J. Xiao, P. Zhou, T.-S. Chua, and S. Yan, 'Video Graph Transformer for Video Question Answering,' in Computer Vision - ECCV 2022 , ser. Lecture Notes in Computer Science, S. Avidan, G. Brostow, M. Ciss´ e, G. M. Farinella, and T. Hassner, Eds. Springer Nature Switzerland, 2022, pp. 39-58."
+            },
+            {
+              "title": "Generative video transformer: Can objects be the words?",
+              "citation": "Y.-F. Wu, J. Yoon, and S. Ahn, 'Generative video transformer: Can objects be the words?' in International Conference on Machine Learning . PMLR, 2021, pp. 11 307-11 318."
+            },
+            {
+              "title": "VideoGPT: Video generation using vq-vae and transformers",
+              "citation": "W. Yan, Y. Zhang, P. Abbeel, and A. Srinivas, 'VideoGPT: Video generation using vq-vae and transformers,' arXiv preprint arXiv:2104.10157 , 2021."
+            },
+            {
+              "title": "MocoGAN: Decomposing motion and content for video generation",
+              "citation": "S. Tulyakov, M.-Y. Liu, X. Yang, and J. Kautz, 'MocoGAN: Decomposing motion and content for video generation,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2018, pp. 1526-1535."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "DESIGN GUIDE FOR GRAPH TRANSFORMERS",
+      "citations": [
+        {
+          "title": "A survey on the densest subgraph problem and its variants",
+          "citation": "T. Lanciano, A. Miyauchi, A. Fazzone, and F. Bonchi, 'A survey on the densest subgraph problem and its variants,' ACM Computing Surveys , vol. 56, no. 8, p. 1-40, Apr. 2024."
+        },
+        {
+          "title": "A comprehensive survey of graph embedding: Problems, techniques, and applications",
+          "citation": "H. Cai, V. W. Zheng, and K. C.-C. Chang, 'A comprehensive survey of graph embedding: Problems, techniques, and applications,' IEEE Transactions on Knowledge and Data Engineering , vol. 30, no. 9, p. 1616-1637, Sep. 2018."
+        },
+        {
+          "title": "A survey on heterogeneous graph embedding: Methods, techniques, applications and sources",
+          "citation": "X. Wang, D. Bo, C. Shi, S. Fan, Y. Ye, and P. S. Yu, 'A survey on heterogeneous graph embedding: Methods, techniques, applications and sources,' IEEE Transactions on Big Data , vol. 9, no. 2, p. 415-436, Apr. 2023."
+        },
+        {
+          "title": "Attention mechanism in neural networks: where it comes and where it goes",
+          "citation": "D. Soydaner, 'Attention mechanism in neural networks: where it comes and where it goes,' Neural Computing and Applications , vol. 34, no. 16, p. 13371-13385, May 2022."
+        },
+        {
+          "title": "Inductive representation learning on large graphs",
+          "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' Advances in Neural Information Processing Systems , vol. 30, 2017."
+        },
+        {
+          "title": "DropEdge: Towards deep graph convolutional networks on node classification",
+          "citation": "Y. Rong, W. Huang, T. Xu, and J. Huang, 'DropEdge: Towards deep graph convolutional networks on node classification,' in International Conference on Learning Representations , 2020."
+        },
+        {
+          "title": "A comprehensive survey on graph reduction: Sparsification, coarsening, and condensation",
+          "citation": "M. Hashemi, S. Gong, J. Ni, W. Fan, B. A. Prakash, and W. Jin, 'A comprehensive survey on graph reduction: Sparsification, coarsening, and condensation,' in Proceedings of the Thirty-ThirdInternational Joint Conference on Artificial Intelligence , ser. IJCAI-2024. International Joint Conferences on Artificial Intelligence Organization, Aug. 2024, p. 8058-8066."
+        },
+        {
+          "title": "A fast and high quality multilevel scheme for partitioning irregular graphs",
+          "citation": "G. Karypis and V. Kumar, 'A fast and high quality multilevel scheme for partitioning irregular graphs,' SIAM Journal on Scientific Computing , vol. 20, no. 1, p. 359-392, Jan. 1998. [Online]. Available: http://dx.doi.org/10.1137/S1064827595287997"
+        },
+        {
+          "title": "More recent advances in (hyper)graph partitioning",
+          "citation": "U. undefinedataly¨ urek, K. Devine, M. Faraj, L. Gottesb¨ uren, T. Heuer, H. Meyerhenke, P. Sanders, S. Schlag, C. Schulz, D. Seemaier, and D. Wagner, 'More recent advances in (hyper)graph partitioning,' ACM Computing Surveys , vol. 55, no. 12, p. 1-38, Mar. 2023."
+        },
+        {
+          "title": "An overview of cross-media retrieval: Concepts, methodologies, benchmarks, and challenges",
+          "citation": "Y. Peng, X. Huang, and Y. Zhao, 'An overview of cross-media retrieval: Concepts, methodologies, benchmarks, and challenges,' IEEE Transactions on Circuits and Systems for Video Technology , vol. 28, no. 9, p. 2372-2385, Sep. 2018."
+        },
+        {
+          "title": "Graph contrastive learning with augmentations",
+          "citation": "Y. You, T. Chen, Y. Sui, T. Chen, Z. Wang, and Y. Shen, 'Graph contrastive learning with augmentations,' in Advances in Neural Information Processing Systems , H. Larochelle, M. Ranzato, R. Hadsell, M. F. Balcan, and H. Lin, Eds., vol. 33. Curran Associates, Inc., 2020, pp. 5812-5823."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "OPEN ISSUES AND FUTURE DIRECTIONS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "7.1",
+          "sec_title": "Scalability and Efficiency",
+          "citations": [
+            {
+              "title": "CenGCN: Centralized convolutional networks with vertex imbalance for scale-free graphs",
+              "citation": "F. Xia, L. Wang, T. Tang, X. Chen, X. Kong, G. Oatley, and I. King, 'CenGCN: Centralized convolutional networks with vertex imbalance for scale-free graphs,' IEEE Transactions on Knowledge and Data Engineering , vol. 35, no. 5, pp. 4555-4569, 2022."
+            },
+            {
+              "title": "Attributed graph force learning",
+              "citation": "K. Sun, F. Xia, J. Liu, B. Xu, V. Saikrishna, and C. C. Aggarwal, 'Attributed graph force learning,' IEEE Transactions on Neural Networks and Learning Systems , vol. 35, no. 4, pp. 4502-4515, 2024."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.2",
+          "sec_title": "Generalization and Robustness",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.3",
+          "sec_title": "Interpretability and Explainability",
+          "citations": [
+            {
+              "title": "Bilinear graph networks for visual question answering",
+              "citation": "D. Guo, C. Xu, and D. Tao, 'Bilinear graph networks for visual question answering,' IEEE Transactions on Neural Networks and Learning Systems , vol. 34, no. 2, p. 1023-1034, Feb. 2023."
+            },
+            {
+              "title": "Effects of human adversarial and affable samples on BERT generalization",
+              "citation": "A. Elangovan, E. He, Y. Li, and K. Verspoor, 'Effects of human adversarial and affable samples on BERT generalization,' in Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP) , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.4",
+          "sec_title": "Learning on Dynamic Graphs",
+          "citations": [
+            {
+              "title": "Graph lifelong learning: A survey",
+              "citation": "F. G. Febrinanto, F. Xia, K. Moore, C. Thapa, and C. Aggarwal, 'Graph lifelong learning: A survey,' IEEE Computational Intelligence Magazine , vol. 18, no. 1, pp. 32-51, 2023."
+            },
+            {
+              "title": "Learning joint 2-D and 3D graph diffusion models for complete molecule generation",
+              "citation": "H. Huang, L. Sun, B. Du, and W. Lv, 'Learning joint 2-D and 3D graph diffusion models for complete molecule generation,' IEEE Transactions on Neural Networks and Learning Systems , vol. 35, no. 9, p. 11857-11871, Sep. 2024."
+            },
+            {
+              "title": "Bidirectional spatialtemporal adaptive transformer for urban traffic flow forecasting",
+              "citation": "C. Chen, Y. Liu, L. Chen, and C. Zhang, 'Bidirectional spatialtemporal adaptive transformer for urban traffic flow forecasting,' IEEE Transactions on Neural Networks and Learning Systems , vol. 34, no. 10, p. 6913-6925, Oct. 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "CONCLUSION",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

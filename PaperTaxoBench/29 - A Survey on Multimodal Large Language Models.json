@@ -1,0 +1,1688 @@
+{
+  "track": "Multimodal Learning",
+  "paper_title": "A Survey on Multimodal Large Language Models",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "1 INTRODUCTION",
+      "citations": [
+        {
+          "title": "A survey of large language models",
+          "citation": "W. X. Zhao, K. Zhou, J. Li, T. Tang, X. Wang, Y. Hou, Y. Min, B. Zhang, J. Zhang, Z. Dong et al. , 'A survey of large language models,' arXiv:2303.18223 , 2023. 1"
+        },
+        {
+          "title": "Chatgpt: A language model for conversational ai",
+          "citation": "OpenAI, 'Chatgpt: A language model for conversational ai,' OpenAI, Tech. Rep., 2023. [Online]. Available: https: //www.openai.com/research/chatgpt 1, 6"
+        },
+        {
+          "title": "Gpt-4 technical report",
+          "citation": "--, 'Gpt-4 technical report,' arXiv:2303.08774 , 2023. 1"
+        },
+        {
+          "title": "Vicuna: An open-source chatbot impressing gpt-4 with 90% chatgpt quality",
+          "citation": "W.-L. Chiang, Z. Li, Z. Lin, Y. Sheng, Z. Wu, H. Zhang, L. Zheng, S. Zhuang, Y. Zhuang, J. E. Gonzalez et al. , 'Vicuna: An open-source chatbot impressing gpt-4 with 90% chatgpt quality,' 2023. [Online]. Available: https://vicuna.lmsys.org 1, 3, 4"
+        },
+        {
+          "title": "Llama: Open and efficient foundation language models",
+          "citation": "H. Touvron, T. Lavril, G. Izacard, X. Martinet, M.-A. Lachaux, T. Lacroix, B. Rozière, N. Goyal, E. Hambro, F. Azhar et al. , 'Llama: Open and efficient foundation language models,' arXiv:2302.13971 , 2023. 1, 3, 4"
+        },
+        {
+          "title": "Instruction tuning with gpt-4",
+          "citation": "B. Peng, C. Li, P. He, M. Galley, and J. Gao, 'Instruction tuning with gpt-4,' arXiv:2304.03277 , 2023. 1"
+        },
+        {
+          "title": "Language models are few-shot learners",
+          "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell et al. , 'Language models are few-shot learners,' NeurIPS , 2020. 1, 3, 6"
+        },
+        {
+          "title": "Chain of thought prompting elicits reasoning in large language models",
+          "citation": "J. Wei, X. Wang, D. Schuurmans, M. Bosma, E. Chi, Q. Le, and D. Zhou, 'Chain of thought prompting elicits reasoning in large language models,' arXiv:2201.11903 , 2022. 1, 12"
+        },
+        {
+          "title": "Segment anything",
+          "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv:2304.02643 , 2023. 1, 9"
+        },
+        {
+          "title": "Aligning and prompting everything all at once for universal visual perception",
+          "citation": "Y. Shen, C. Fu, P. Chen, M. Zhang, K. Li, X. Sun, Y. Wu, S. Lin, and R. Ji, 'Aligning and prompting everything all at once for universal visual perception,' in CVPR , 2024. 1"
+        },
+        {
+          "title": "Dino: Detr with improved denoising anchor boxes for end-to-end object detection",
+          "citation": "H. Zhang, F. Li, S. Liu, L. Zhang, H. Su, J. Zhu, L. M. Ni, and H.-Y. Shum, 'Dino: Detr with improved denoising anchor boxes for end-to-end object detection,' arXiv:2203.03605 , 2022. 1"
+        },
+        {
+          "title": "Dinov2: Learning robust visual features without supervision",
+          "citation": "M. Oquab, T. Darcet, T. Moutakanni, H. Vo, M. Szafraniec, V. Khalidov, P. Fernandez, D. Haziza, F. Massa, A. El-Nouby et al. , 'Dinov2: Learning robust visual features without supervision,' arXiv:2304.07193 , 2023. 1"
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021. 1, 2, 3, 5"
+        },
+        {
+          "title": "Align before fuse: Vision and language representation learning with momentum distillation",
+          "citation": "J. Li, R. Selvaraju, A. Gotmare, S. Joty, C. Xiong, and S. C. H. Hoi, 'Align before fuse: Vision and language representation learning with momentum distillation,' NeurIPS , 2021. 1"
+        },
+        {
+          "title": "Uniter: Universal image-text representation learning",
+          "citation": "Y.-C. Chen, L. Li, L. Yu, A. El Kholy, F. Ahmed, Z. Gan, Y. Cheng, and J. Liu, 'Uniter: Universal image-text representation learning,' in ECCV , 2020. 1"
+        },
+        {
+          "title": "Ofa: Unifying architectures, tasks, and modalities through a simple sequence-to-sequence learning framework",
+          "citation": "P. Wang, A. Yang, R. Men, J. Lin, S. Bai, Z. Li, J. Ma, C. Zhou, J. Zhou, and H. Yang, 'Ofa: Unifying architectures, tasks, and modalities through a simple sequence-to-sequence learning framework,' in ICML , 2022. 1"
+        },
+        {
+          "title": "Unifying vision-and-language tasks via text generation",
+          "citation": "J. Cho, J. Lei, H. Tan, and M. Bansal, 'Unifying vision-andlanguage tasks via text generation,' in ICML , 2021. 1"
+        },
+        {
+          "title": "Simvlm: Simple visual language model pretraining with weak supervision",
+          "citation": "Z. Wang, J. Yu, A. W. Yu, Z. Dai, Y. Tsvetkov, and Y. Cao, 'Simvlm: Simple visual language model pretraining with weak supervision,' arXiv:2108.10904 , 2021. 1"
+        },
+        {
+          "title": "Finetuned language models are zeroshot learners",
+          "citation": "J. Wei, M. Bosma, V. Y. Zhao, K. Guu, A. W. Yu, B. Lester, N. Du, A. M. Dai, and Q. V. Le, 'Finetuned language models are zeroshot learners,' arXiv:2109.01652 , 2021. 1, 6, 11"
+        },
+        {
+          "title": "Visual instruction tuning",
+          "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' arXiv:2304.08485 , 2023. 1, 4, 6, 7, 8, 9, 10"
+        },
+        {
+          "title": "Minigpt-4: Enhancing vision-language understanding with advanced large language models",
+          "citation": "D. Zhu, J. Chen, X. Shen, X. Li, and M. Elhoseiny, 'Minigpt-4: Enhancing vision-language understanding with advanced large language models,' arXiv:2304.10592 , 2023. 1, 2, 6, 7"
+        },
+        {
+          "title": "MM-React: Prompting ChatGPT for Multimodal Reasoning and Action",
+          "citation": "Z. Yang, L. Li, J. Wang, K. Lin, E. Azarnasab, F. Ahmed, Z. Liu, C. Liu, M. Zeng, and L. Wang, 'Mm-react: Prompting chatgpt for multimodal reasoning and action,' arXiv:2303.11381 , 2023. 1, 11, 12, 13"
+        },
+        {
+          "title": "Palm-e: An embodied multimodal language model",
+          "citation": "D. Driess, F. Xia, M. S. Sajjadi, C. Lynch, A. Chowdhery, B. Ichter, A. Wahid, J. Tompson, Q. Vuong, T. Yu et al. , 'Palm-e: An embodied multimodal language model,' arXiv:2303.03378 , 2023. 1"
+        },
+        {
+          "title": "Openflamingo: An open-source framework for training large autoregressive vision-language models",
+          "citation": "A. Awadalla, I. Gao, J. Gardner, J. Hessel, Y. Hanafy, W. Zhu, K. Marathe, Y. Bitton, S. Gadre, S. Sagawa et al. , 'Openflamingo: An open-source framework for training large autoregressive vision-language models,' arXiv:2308.01390 , 2023. 1"
+        },
+        {
+          "title": "Videochat: Chat-centric video understanding",
+          "citation": "K. Li, Y. He, Y. Wang, Y. Li, W. Wang, P. Luo, Y. Wang, L. Wang, and Y. Qiao, 'Videochat: Chat-centric video understanding,' arXiv:2305.06355 , 2023. 1, 4, 6"
+        },
+        {
+          "title": "Video-llama: An instructiontuned audio-visual language model for video understanding",
+          "citation": "H. Zhang, X. Li, and L. Bing, 'Video-llama: An instructiontuned audio-visual language model for video understanding,' arXiv:2306.02858 , 2023. 1, 4"
+        },
+        {
+          "title": "Pengi: An audio language model for audio tasks",
+          "citation": "S. Deshmukh, B. Elizalde, R. Singh, and H. Wang, 'Pengi: An audio language model for audio tasks,' NeurIPS , 2024. 1, 3"
+        },
+        {
+          "title": "Shikra: Unleashing multimodal llm's referential dialogue magic",
+          "citation": "K. Chen, Z. Zhang, W. Zeng, R. Zhang, F. Zhu, and R. Zhao, 'Shikra: Unleashing multimodal llm's referential dialogue magic,' arXiv:2306.15195 . 1, 9"
+        },
+        {
+          "title": "Osprey: Pixel understanding with visual instruction tuning",
+          "citation": "Y. Yuan, W. Li, J. Liu, D. Tang, X. Luo, C. Qin, L. Zhang, and J. Zhu, 'Osprey: Pixel understanding with visual instruction tuning,' arXiv:2312.10032 . 1, 2, 9"
+        },
+        {
+          "title": "Imagebind-llm: Multi-modality instruction tuning",
+          "citation": "J. Han, R. Zhang, W. Shao, P. Gao, P. Xu, H. Xiao, K. Zhang, C. Liu, S. Wen, Z. Guo et al. , 'Imagebind-llm: Multi-modality instruction tuning,' arXiv:2309.03905 , 2023. 1, 3"
+        },
+        {
+          "title": "Anymal: An efficient and scalable any-modality augmented language model",
+          "citation": "S. Moon, A. Madotto, Z. Lin, T. Nagarajan, M. Smith, S. Jain, C.-F. Yeh, P. Murugesan, P. Heidari, Y. Liu et al. , 'Anymal: An efficient and scalable any-modality augmented language model,' arXiv:2309.16058 , 2023. 1"
+        },
+        {
+          "title": "Next-gpt: Any-to-any multimodal llm",
+          "citation": "S. Wu, H. Fei, L. Qu, W. Ji, and T.-S. Chua, 'Next-gpt: Any-to-any multimodal llm,' arXiv:2309.05519 , 2023. 1, 9"
+        },
+        {
+          "title": "Large multilingual models pivot zeroshot multimodal learning across languages",
+          "citation": "J. Hu, Y. Yao, C. Wang, S. Wang, Y. Pan, Q. Chen, T. Yu, H. Wu, Y. Zhao, H. Zhang et al. , 'Large multilingual models pivot zeroshot multimodal learning across languages,' arXiv:2308.12038 , 2023. 1, 10"
+        },
+        {
+          "title": "Qwen-vl: A frontier large vision-language model with versatile abilities",
+          "citation": "J. Bai, S. Bai, S. Yang, S. Wang, S. Tan, P. Wang, J. Lin, C. Zhou, and J. Zhou, 'Qwen-vl: A frontier large vision-language model with versatile abilities,' arXiv:2308.12966 , 2023. 1, 3, 4, 10"
+        },
+        {
+          "title": "Llava-med: Training a large language-and-vision assistant for biomedicine in one day",
+          "citation": "C. Li, C. Wong, S. Zhang, N. Usuyama, H. Liu, J. Yang, T. Naumann, H. Poon, and J. Gao, 'Llava-med: Training a large language-and-vision assistant for biomedicine in one day,' arXiv:2306.00890 , 2023. 1, 4, 6, 8, 9, 10"
+        },
+        {
+          "title": "Med-flamingo: a multimodal medical few-shot learner",
+          "citation": "M. Moor, Q. Huang, S. Wu, M. Yasunaga, Y. Dalmia, J. Leskovec, C. Zakka, E. P. Reis, and P. Rajpurkar, 'Med-flamingo: a multimodal medical few-shot learner,' in Machine Learning for Health (ML4H) , 2023. 1, 10"
+        },
+        {
+          "title": "Pmc-vqa: Visual instruction tuning for medical visual question answering",
+          "citation": "X. Zhang, C. Wu, Z. Zhao, W. Lin, Y. Zhang, Y. Wang, and W. Xie, 'Pmc-vqa: Visual instruction tuning for medical visual question answering,' arXiv:2305.10415 , 2023. 1, 4, 6, 10"
+        },
+        {
+          "title": "mplug-docowl: Modularized multimodal large language model for document understanding",
+          "citation": "J. Ye, A. Hu, H. Xu, Q. Ye, M. Yan, Y. Dan, C. Zhao, G. Xu, C. Li, J. Tian et al. , 'mplug-docowl: Modularized multimodal large language model for document understanding,' arXiv:2307.02499 , 2023. 1, 10"
+        },
+        {
+          "title": "Textmonkey: An ocr-free large multimodal model for understanding document",
+          "citation": "Y. Liu, B. Yang, Q. Liu, Z. Li, Z. Ma, S. Zhang, and X. Bai, 'Textmonkey: An ocr-free large multimodal model for understanding document,' arXiv:2403.04473 , 2024. 1, 10"
+        },
+        {
+          "title": "mplug-paperowl: Scientific diagram analysis with the multimodal large language model",
+          "citation": "A. Hu, Y. Shi, H. Xu, J. Ye, Q. Ye, M. Yan, C. Li, Q. Qian, J. Zhang, and F. Huang, 'mplug-paperowl: Scientific diagram analysis with the multimodal large language model,' arXiv:2311.18248 , 2023. 1"
+        },
+        {
+          "title": "An embodied generalist agent in 3d world",
+          "citation": "J. Huang, S. Yong, X. Ma, X. Linghu, P. Li, Y. Wang, Q. Li, S.-C. Zhu, B. Jia, and S. Huang, 'An embodied generalist agent in 3d world,' arXiv:2311.12871 , 2023. 1, 9, 10"
+        },
+        {
+          "title": "Kosmos-2: Grounding multimodal large language models to the world",
+          "citation": "Z. Peng, W. Wang, L. Dong, Y. Hao, S. Huang, S. Ma, and F. Wei, 'Kosmos-2: Grounding multimodal large language models to the world,' arXiv:2306.14824 , 2023. 1"
+        },
+        {
+          "title": "Appagent: Multimodal agents as smartphone users",
+          "citation": "Z. Yang, J. Liu, Y. Han, X. Chen, Z. Huang, B. Fu, and G. Yu, 'Appagent: Multimodal agents as smartphone users,' arXiv:2312.13771 , 2023. 1, 10"
+        },
+        {
+          "title": "Cogagent: A visual language model for gui agents",
+          "citation": "W. Hong, W. Wang, Q. Lv, J. Xu, W. Yu, J. Ji, Y. Wang, Z. Wang, Y. Dong, M. Ding et al. , 'Cogagent: A visual language model for gui agents,' arXiv:2312.08914 , 2023. 1, 3, 10"
+        },
+        {
+          "title": "Mobile-agent: Autonomous multi-modal mobile device agent with visual perception",
+          "citation": "J. Wang, H. Xu, J. Ye, M. Yan, W. Shen, J. Zhang, F. Huang, and J. Sang, 'Mobile-agent: Autonomous multi-modal mobile device agent with visual perception,' arXiv:2401.16158 , 2024. 1, 10"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "2.1 Modality encoder",
+      "citations": [
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021. 1, 2, 3, 5"
+        },
+        {
+          "title": "Minigpt-4: Enhancing vision-language understanding with advanced large language models",
+          "citation": "D. Zhu, J. Chen, X. Shen, X. Li, and M. Elhoseiny, 'Minigpt-4: Enhancing vision-language understanding with advanced large language models,' arXiv:2304.10592 , 2023. 1, 2, 6, 7"
+        },
+        {
+          "title": "Pengi: An audio language model for audio tasks",
+          "citation": "S. Deshmukh, B. Elizalde, R. Singh, and H. Wang, 'Pengi: An audio language model for audio tasks,' NeurIPS , 2024. 1, 3"
+        },
+        {
+          "title": "Osprey: Pixel understanding with visual instruction tuning",
+          "citation": "Y. Yuan, W. Li, J. Liu, D. Tang, X. Luo, C. Qin, L. Zhang, and J. Zhu, 'Osprey: Pixel understanding with visual instruction tuning,' arXiv:2312.10032 . 1, 2, 9"
+        },
+        {
+          "title": "Imagebind-llm: Multi-modality instruction tuning",
+          "citation": "J. Han, R. Zhang, W. Shao, P. Gao, P. Xu, H. Xiao, K. Zhang, C. Liu, S. Wen, Z. Guo et al. , 'Imagebind-llm: Multi-modality instruction tuning,' arXiv:2309.03905 , 2023. 1, 3"
+        },
+        {
+          "title": "Qwen-vl: A frontier large vision-language model with versatile abilities",
+          "citation": "J. Bai, S. Bai, S. Yang, S. Wang, S. Tan, P. Wang, J. Lin, C. Zhou, and J. Zhou, 'Qwen-vl: A frontier large vision-language model with versatile abilities,' arXiv:2308.12966 , 2023. 1, 3, 4, 10"
+        },
+        {
+          "title": "Cogagent: A visual language model for gui agents",
+          "citation": "W. Hong, W. Wang, Q. Lv, J. Xu, W. Yu, J. Ji, Y. Wang, Z. Wang, Y. Dong, M. Ding et al. , 'Cogagent: A visual language model for gui agents,' arXiv:2312.08914 , 2023. 1, 3, 10"
+        },
+        {
+          "title": "Reproducible scaling laws for contrastive language-image learning",
+          "citation": "M. Cherti, R. Beaumont, R. Wightman, M. Wortsman, G. Ilharco, C. Gordon, C. Schuhmann, L. Schmidt, and J. Jitsev, 'Reproducible scaling laws for contrastive language-image learning,' in CVPR , 2023. 2, 3"
+        },
+        {
+          "title": "Eva-clip: Improved training techniques for clip at scale",
+          "citation": "Q. Sun, Y. Fang, L. Wu, X. Wang, and Y. Cao, 'Eva-clip: Improved training techniques for clip at scale,' arXiv:2303.15389 , 2023. 2, 3"
+        },
+        {
+          "title": "Eva: Exploring the limits of masked visual representation learning at scale",
+          "citation": "Y. Fang, W. Wang, B. Xie, Q. Sun, L. Wu, X. Wang, T. Huang, X. Wang, and Y. Cao, 'Eva: Exploring the limits of masked visual representation learning at scale,' in CVPR , 2023. 2"
+        },
+        {
+          "title": "Introducing our multimodal models",
+          "citation": "R. Bavishi, E. Elsen, C. Hawthorne, M. Nye, A. Odena, A. Somani, and S. Ta¸ sırlar, 'Introducing our multimodal models,' 2023. [Online]. Available: https://www.adept.ai/blog/fuyu-8b 2"
+        },
+        {
+          "title": "Improved baselines with visual instruction tuning",
+          "citation": "H. Liu, C. Li, Y. Li, and Y. J. Lee, 'Improved baselines with visual instruction tuning,' arXiv:2310.03744 , 2023. 3, 4"
+        },
+        {
+          "title": "Monkey: Image resolution and text label are important things for large multi-modal models",
+          "citation": "Z. Li, B. Yang, Q. Liu, Z. Ma, S. Zhang, J. Yang, Y. Sun, Y. Liu, and X. Bai, 'Monkey: Image resolution and text label are important things for large multi-modal models,' arXiv:2311.06607 , 2023. 3"
+        },
+        {
+          "title": "Mm1: Methods, analysis & insights from multimodal llm pre-training",
+          "citation": "B. McKinzie, Z. Gan, J.-P . Fauconnier, S. Dodge, B. Zhang, P. Dufter, D. Shah, X. Du, F. Peng, F. Weers et al. , 'Mm1: Methods, analysis &amp; insights from multimodal llm pre-training,' arXiv:2403.09611 , 2024. 3, 4"
+        },
+        {
+          "title": "Sphinx: The joint mixing of weights, tasks, and visual embeddings for multi-modal large language models",
+          "citation": "Z. Lin, C. Liu, R. Zhang, P. Gao, L. Qiu, H. Xiao, H. Qiu, C. Lin, W. Shao, K. Chen et al. , 'Sphinx: The joint mixing of weights, tasks, and visual embeddings for multi-modal large language models,' arXiv:2311.07575 , 2023. 3"
+        },
+        {
+          "title": "Clap learning audio concepts from natural language supervision",
+          "citation": "B. Elizalde, S. Deshmukh, M. Al Ismail, and H. Wang, 'Clap learning audio concepts from natural language supervision,' in ICASSP , 2023. 3"
+        },
+        {
+          "title": "Imagebind: One embedding space to bind them all",
+          "citation": "R. Girdhar, A. El-Nouby, Z. Liu, M. Singh, K. V. Alwala, A. Joulin, and I. Misra, 'Imagebind: One embedding space to bind them all,' in CVPR , 2023. 3"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "2.2 Pre-trained LLM",
+      "citations": [
+        {
+          "title": "Vicuna: An open-source chatbot impressing gpt-4 with 90% chatgpt quality",
+          "citation": "W.-L. Chiang, Z. Li, Z. Lin, Y. Sheng, Z. Wu, H. Zhang, L. Zheng, S. Zhuang, Y. Zhuang, J. E. Gonzalez et al. , 'Vicuna: An open-source chatbot impressing gpt-4 with 90% chatgpt quality,' 2023. [Online]. Available: https://vicuna.lmsys.org 1, 3, 4"
+        },
+        {
+          "title": "Llama: Open and efficient foundation language models",
+          "citation": "H. Touvron, T. Lavril, G. Izacard, X. Martinet, M.-A. Lachaux, T. Lacroix, B. Rozière, N. Goyal, E. Hambro, F. Azhar et al. , 'Llama: Open and efficient foundation language models,' arXiv:2302.13971 , 2023. 1, 3, 4"
+        },
+        {
+          "title": "Language models are few-shot learners",
+          "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell et al. , 'Language models are few-shot learners,' NeurIPS , 2020. 1, 3, 6"
+        },
+        {
+          "title": "Improved baselines with visual instruction tuning",
+          "citation": "H. Liu, C. Li, Y. Li, and Y. J. Lee, 'Improved baselines with visual instruction tuning,' arXiv:2310.03744 , 2023. 3, 4"
+        },
+        {
+          "title": "Mm1: Methods, analysis & insights from multimodal llm pre-training",
+          "citation": "B. McKinzie, Z. Gan, J.-P . Fauconnier, S. Dodge, B. Zhang, P. Dufter, D. Shah, X. Du, F. Peng, F. Weers et al. , 'Mm1: Methods, analysis &amp; insights from multimodal llm pre-training,' arXiv:2403.09611 , 2024. 3, 4"
+        },
+        {
+          "title": "Scaling instruction-finetuned language models",
+          "citation": "H. W. Chung, L. Hou, S. Longpre, B. Zoph, Y. Tay, W. Fedus, E. Li, X. Wang, M. Dehghani, S. Brahma et al. , 'Scaling instructionfinetuned language models,' arXiv:2210.11416 , 2022. 3, 4, 6"
+        },
+        {
+          "title": "Llama 2: Open foundation and fine-tuned chat models",
+          "citation": "H. Touvron, L. Martin, K. Stone, P. Albert, A. Almahairi, Y. Babaei, N. Bashlykov, S. Batra, P. Bhargava, S. Bhosale et al. , 'Llama 2: Open foundation and fine-tuned chat models,' arXiv:2307.09288 , 2023. 3, 4"
+        },
+        {
+          "title": "Qwen technical report",
+          "citation": "J. Bai, S. Bai, Y. Chu, Z. Cui, K. Dang, X. Deng, Y. Fan, W. Ge, Y. Han, F. Huang et al. , 'Qwen technical report,' arXiv:2309.16609 , 2023. 3, 4, 10"
+        },
+        {
+          "title": "Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models",
+          "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,' arXiv:2301.12597 , 2023. 3, 4"
+        },
+        {
+          "title": "Instructblip: Towards general-purpose vision-language models with instruction tuning",
+          "citation": "W. Dai, J. Li, D. Li, A. M. H. Tiong, J. Zhao, W. Wang, B. Li, P. Fung, and S. Hoi, 'Instructblip: Towards generalpurpose vision-language models with instruction tuning,' arXiv:2305.06500 , 2023. 3, 4, 6, 7, 8"
+        },
+        {
+          "title": "Llava-next: Improved reasoning, ocr, and world knowledge",
+          "citation": "H. Liu, C. Li, Y. Li, B. Li, Y. Zhang, S. Shen, and Y. J. Lee, 'Llava-next: Improved reasoning, ocr, and world knowledge,' January 2024. [Online]. Available: https://llava-vl.github.io/ blog/2024-01-30-llava-next/ 3"
+        },
+        {
+          "title": "An empirical study of scaling instruct-tuned large multimodal models",
+          "citation": "Y. Lu, C. Li, H. Liu, J. Yang, J. Gao, and Y. Shen, 'An empirical study of scaling instruct-tuned large multimodal models,' arXiv:2309.09958 , 2023. 3"
+        },
+        {
+          "title": "MobileVLM: A Fast, Reproducible and Strong Vision Language Assistant for Mobile Devices",
+          "citation": "X. Chu, L. Qiao, X. Lin, S. Xu, Y. Yang, Y. Hu, F. Wei, X. Zhang, B. Zhang, X. Wei et al. , 'Mobilevlm: A fast, reproducible and strong vision language assistant for mobile devices,' arXiv:2312.16886 , 2023. 3, 10"
+        },
+        {
+          "title": "MobileVLM V2: Faster and Stronger Baseline for Vision Language Model",
+          "citation": "X. Chu, L. Qiao, X. Zhang, S. Xu, F. Wei, Y. Yang, X. Sun, Y. Hu, X. Lin, B. Zhang et al. , 'Mobilevlm v2: Faster and stronger baseline for vision language model,' arXiv:2402.03766 , 2024. 3"
+        },
+        {
+          "title": "Mixture-of-experts meets instruction tuning: A winning combination for large language models",
+          "citation": "S. Shen, L. Hou, Y. Zhou, N. Du, S. Longpre, J. Wei, H. W. Chung, B. Zoph, W. Fedus, X. Chen et al. , 'Mixture-of-experts meets instruction tuning: A winning combination for large language models,' arXiv:2305.14705 , 2023. 3"
+        },
+        {
+          "title": "Mixtral of experts",
+          "citation": "A. Q. Jiang, A. Sablayrolles, A. Roux, A. Mensch, B. Savary, C. Bamford, D. S. Chaplot, D. d. l. Casas, E. B. Hanna, F. Bressand et al. , 'Mixtral of experts,' arXiv:2401.04088 , 2024. 3"
+        },
+        {
+          "title": "Switch transformers: Scaling to trillion parameter models with simple and efficient sparsity",
+          "citation": "W. Fedus, B. Zoph, and N. Shazeer, 'Switch transformers: Scaling to trillion parameter models with simple and efficient sparsity,' JMLR , 2022. 3"
+        },
+        {
+          "title": "Moe-llava: Mixture of experts for large vision-language models",
+          "citation": "B. Lin, Z. Tang, Y. Ye, J. Cui, B. Zhu, P. Jin, J. Zhang, M. Ning, and L. Yuan, 'Moe-llava: Mixture of experts for large vision-language models,' arXiv:2401.15947 , 2024. 3"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "2.3 Modality interface",
+      "citations": [
+        {
+          "title": "Visual instruction tuning",
+          "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' arXiv:2304.08485 , 2023. 1, 4, 6, 7, 8, 9, 10"
+        },
+        {
+          "title": "Videochat: Chat-centric video understanding",
+          "citation": "K. Li, Y. He, Y. Wang, Y. Li, W. Wang, P. Luo, Y. Wang, L. Wang, and Y. Qiao, 'Videochat: Chat-centric video understanding,' arXiv:2305.06355 , 2023. 1, 4, 6"
+        },
+        {
+          "title": "Video-llama: An instructiontuned audio-visual language model for video understanding",
+          "citation": "H. Zhang, X. Li, and L. Bing, 'Video-llama: An instructiontuned audio-visual language model for video understanding,' arXiv:2306.02858 , 2023. 1, 4"
+        },
+        {
+          "title": "Qwen-vl: A frontier large vision-language model with versatile abilities",
+          "citation": "J. Bai, S. Bai, S. Yang, S. Wang, S. Tan, P. Wang, J. Lin, C. Zhou, and J. Zhou, 'Qwen-vl: A frontier large vision-language model with versatile abilities,' arXiv:2308.12966 , 2023. 1, 3, 4, 10"
+        },
+        {
+          "title": "Pmc-vqa: Visual instruction tuning for medical visual question answering",
+          "citation": "X. Zhang, C. Wu, Z. Zhao, W. Lin, Y. Zhang, Y. Wang, and W. Xie, 'Pmc-vqa: Visual instruction tuning for medical visual question answering,' arXiv:2305.10415 , 2023. 1, 4, 6, 10"
+        },
+        {
+          "title": "Improved baselines with visual instruction tuning",
+          "citation": "H. Liu, C. Li, Y. Li, and Y. J. Lee, 'Improved baselines with visual instruction tuning,' arXiv:2310.03744 , 2023. 3, 4"
+        },
+        {
+          "title": "Mm1: Methods, analysis & insights from multimodal llm pre-training",
+          "citation": "B. McKinzie, Z. Gan, J.-P . Fauconnier, S. Dodge, B. Zhang, P. Dufter, D. Shah, X. Du, F. Peng, F. Weers et al. , 'Mm1: Methods, analysis &amp; insights from multimodal llm pre-training,' arXiv:2403.09611 , 2024. 3, 4"
+        },
+        {
+          "title": "Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models",
+          "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,' arXiv:2301.12597 , 2023. 3, 4"
+        },
+        {
+          "title": "Instructblip: Towards general-purpose vision-language models with instruction tuning",
+          "citation": "W. Dai, J. Li, D. Li, A. M. H. Tiong, J. Zhao, W. Wang, B. Li, P. Fung, and S. Hoi, 'Instructblip: Towards generalpurpose vision-language models with instruction tuning,' arXiv:2305.06500 , 2023. 3, 4, 6, 7, 8"
+        },
+        {
+          "title": "End-to-end object detection with transformers",
+          "citation": "N. Carion, F. Massa, G. Synnaeve, N. Usunier, A. Kirillov, and S. Zagoruyko, 'End-to-end object detection with transformers,' in ECCV , 2020. 4"
+        },
+        {
+          "title": "Xllm: Bootstrapping advanced large language models by treating multi-modalities as foreign languages",
+          "citation": "F. Chen, M. Han, H. Zhao, Q. Zhang, J. Shi, S. Xu, and B. Xu, 'Xllm: Bootstrapping advanced large language models by treating multi-modalities as foreign languages,' arXiv:2305.04160 , 2023. 4, 6, 8, 9"
+        },
+        {
+          "title": "Pandagpt: One model to instruction-follow them all",
+          "citation": "Y. Su, T. Lan, H. Li, J. Xu, Y. Wang, and D. Cai, 'Pandagpt: One model to instruction-follow them all,' arXiv:2305.16355 , 2023. 4, 6"
+        },
+        {
+          "title": "DetGPT: Detect what you need via reasoning",
+          "citation": "R. Pi, J. Gao, S. Diao, R. Pan, H. Dong, J. Zhang, L. Yao, J. Han, H. Xu, and L. K. T. Zhang, 'Detgpt: Detect what you need via reasoning,' arXiv:2305.14167 , 2023. 4, 7"
+        },
+        {
+          "title": "What matters in training a gpt4-style language model with multimodal inputs?",
+          "citation": "Y. Zeng, H. Zhang, J. Zheng, J. Xia, G. Wei, Y. Wei, Y. Zhang, and T. Kong, 'What matters in training a gpt4-style language model with multimodal inputs?' arXiv:2307.02469 , 2023. 4, 7"
+        },
+        {
+          "title": "Flamingo: a visual language model for few-shot learning",
+          "citation": "J.-B. Alayrac, J. Donahue, P. Luc, A. Miech, I. Barr, Y. Hasson, K. Lenc, A. Mensch, K. Millican, M. Reynolds et al. , 'Flamingo: a visual language model for few-shot learning,' NeurIPS , 2022. 4, 11, 12"
+        },
+        {
+          "title": "Cogvlm: Visual expert for pretrained language models",
+          "citation": "W. Wang, Q. Lv, W. Yu, W. Hong, J. Qi, Y. Wang, J. Ji, Z. Yang, L. Zhao, X. Song et al. , 'Cogvlm: Visual expert for pretrained language models,' arXiv:2311.03079 , 2023. 4"
+        },
+        {
+          "title": "Llama-adapter: Efficient fine-tuning of language models with zero-init attention",
+          "citation": "R. Zhang, J. Han, A. Zhou, X. Hu, S. Yan, P. Lu, H. Li, P. Gao, and Y. Qiao, 'Llama-adapter: Efficient fine-tuning of language models with zero-init attention,' arXiv:2303.16199 , 2023. 4, 6, 8, 9"
+        },
+        {
+          "title": "Woodpecker: Hallucination correction for multimodal large language models",
+          "citation": "S. Yin, C. Fu, S. Zhao, T. Xu, H. Wang, D. Sui, Y. Shen, K. Li, X. Sun, and E. Chen, 'Woodpecker: Hallucination correction for multimodal large language models,' arXiv:2310.16045 , 2023. 4, 9, 10, 11"
+        },
+        {
+          "title": "From images to textual prompts: Zero-shot visual question answering with frozen large language models",
+          "citation": "J. Guo, J. Li, D. Li, A. M. H. Tiong, B. Li, D. Tao, and S. Hoi, 'From images to textual prompts: Zero-shot visual question answering with frozen large language models,' in CVPR , 2023. 4"
+        },
+        {
+          "title": "Caption anything: Interactive image description with diverse multimodal controls",
+          "citation": "T. Wang, J. Zhang, J. Fei, Y. Ge, H. Zheng, Y. Tang, Z. Li, M. Gao, S. Zhao, Y. Shan et al. , 'Caption anything: Interactive image description with diverse multimodal controls,' arXiv:2305.02677 , 2023. 4, 12, 13"
+        },
+        {
+          "title": "Chatgpt asks, blip-2 answers: Automatic questioning towards enriched visual descriptions",
+          "citation": "D. Zhu, J. Chen, K. Haydarov, X. Shen, W. Zhang, and M. Elhoseiny, 'Chatgpt asks, blip-2 answers: Automatic questioning towards enriched visual descriptions,' arXiv:2303.06594 , 2023. 4, 12"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "3.1.1 Training Detail",
+      "citations": [
+        {
+          "title": "Visual instruction tuning",
+          "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' arXiv:2304.08485 , 2023. 1, 4, 6, 7, 8, 9, 10"
+        },
+        {
+          "title": "Qwen-vl: A frontier large vision-language model with versatile abilities",
+          "citation": "J. Bai, S. Bai, S. Yang, S. Wang, S. Tan, P. Wang, J. Lin, C. Zhou, and J. Zhou, 'Qwen-vl: A frontier large vision-language model with versatile abilities,' arXiv:2308.12966 , 2023. 1, 3, 4, 10"
+        },
+        {
+          "title": "Llava-med: Training a large language-and-vision assistant for biomedicine in one day",
+          "citation": "C. Li, C. Wong, S. Zhang, N. Usuyama, H. Liu, J. Yang, T. Naumann, H. Poon, and J. Gao, 'Llava-med: Training a large language-and-vision assistant for biomedicine in one day,' arXiv:2306.00890 , 2023. 1, 4, 6, 8, 9, 10"
+        },
+        {
+          "title": "DetGPT: Detect what you need via reasoning",
+          "citation": "R. Pi, J. Gao, S. Diao, R. Pan, H. Dong, J. Zhang, L. Yao, J. Han, H. Xu, and L. K. T. Zhang, 'Detgpt: Detect what you need via reasoning,' arXiv:2305.14167 , 2023. 4, 7"
+        },
+        {
+          "title": "mplug-owl: Modularization empowers large language models with multimodality",
+          "citation": "Q. Ye, H. Xu, G. Xu, J. Ye, M. Yan, Y. Zhou, J. Wang, A. Hu, P. Shi, Y. Shi et al. , 'mplug-owl: Modularization empowers large language models with multimodality,' arXiv:2304.14178 , 2023. 4, 7, 9"
+        },
+        {
+          "title": "Visionllm: Large language model is also an open-ended decoder for vision-centric tasks",
+          "citation": "W. Wang, Z. Chen, X. Chen, J. Wu, X. Zhu, G. Zeng, P. Luo, T. Lu, J. Zhou, Y. Qiao et al. , 'Visionllm: Large language model is also an open-ended decoder for vision-centric tasks,' arXiv:2305.11175 , 2023. 4, 6"
+        },
+        {
+          "title": "Sharegpt4v: Improving large multi-modal models with better captions",
+          "citation": "L. Chen, J. Li, X. Dong, P. Zhang, C. He, J. Wang, F. Zhao, and D. Lin, 'Sharegpt4v: Improving large multi-modal models with better captions,' arXiv:2311.12793 , 2023. 5"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "3.1.2 Data",
+      "citations": [
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021. 1, 2, 3, 5"
+        },
+        {
+          "title": "Finetuned language models are zeroshot learners",
+          "citation": "J. Wei, M. Bosma, V. Y. Zhao, K. Guu, A. W. Yu, B. Lester, N. Du, A. M. Dai, and Q. V. Le, 'Finetuned language models are zeroshot learners,' arXiv:2109.01652 , 2021. 1, 6, 11"
+        },
+        {
+          "title": "Sharegpt4v: Improving large multi-modal models with better captions",
+          "citation": "L. Chen, J. Li, X. Dong, P. Zhang, C. He, J. Wang, F. Zhao, and D. Lin, 'Sharegpt4v: Improving large multi-modal models with better captions,' arXiv:2311.12793 , 2023. 5"
+        },
+        {
+          "title": "Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning",
+          "citation": "P. Sharma, N. Ding, S. Goodman, and R. Soricut, 'Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning,' in ACL , 2018. 5"
+        },
+        {
+          "title": "Conceptual 12m: Pushing web-scale image-text pre-training to recognize long-tail visual concepts",
+          "citation": "S. Changpinyo, P. Sharma, N. Ding, and R. Soricut, 'Conceptual 12m: Pushing web-scale image-text pre-training to recognize long-tail visual concepts,' in CVPR , 2021. 5"
+        },
+        {
+          "title": "Im2text: Describing images using 1 million captioned photographs",
+          "citation": "V. Ordonez, G. Kulkarni, and T. Berg, 'Im2text: Describing images using 1 million captioned photographs,' NeurIPS , 2011. 5"
+        },
+        {
+          "title": "Laion-5b: An open large-scale dataset for training next generation image-text models",
+          "citation": "C. Schuhmann, R. Beaumont, R. Vencu, C. Gordon, R. Wightman, M. Cherti, T. Coombes, A. Katta, C. Mullis, M. Wortsman et al. , 'Laion-5b: An open large-scale dataset for training next generation image-text models,' NeurIPS , 2022. 5"
+        },
+        {
+          "title": "Laion coco: 600m synthetic captions from laion2b-en",
+          "citation": "C. Schuhmann, A. Köpf, R. Vencu, T. Coombes, and R. Beaumont, 'Laion coco: 600m synthetic captions from laion2b-en.' https://laion.ai/blog/laion-coco/ , 2022. 5"
+        },
+        {
+          "title": "Blip: Bootstrapping languageimage pre-training for unified vision-language understanding and generation",
+          "citation": "J. Li, D. Li, C. Xiong, and S. Hoi, 'Blip: Bootstrapping languageimage pre-training for unified vision-language understanding and generation,' in ICML , 2022. 5"
+        },
+        {
+          "title": "Coyo-700m: Image-text pair dataset",
+          "citation": "M. Byeon, B. Park, H. Kim, S. Lee, W. Baek, and S. Kim, 'Coyo-700m: Image-text pair dataset,' https://github.com/ kakaobrain/coyo-dataset, 2022. 5"
+        },
+        {
+          "title": "To see is to believe: Prompting gpt-4v for better visual instruction tuning",
+          "citation": "J. Wang, L. Meng, Z. Weng, B. He, Z. Wu, and Y.-G. Jiang, 'To see is to believe: Prompting gpt-4v for better visual instruction tuning,' arXiv:2311.07574 , 2023. 5, 7"
+        },
+        {
+          "title": "Allava: Harnessing gpt4v-synthesized data for a lite vision-language model",
+          "citation": "G. H. Chen, S. Chen, R. Zhang, J. Chen, X. Wu, Z. Zhang, Z. Chen, J. Li, X. Wan, and B. Wang, 'Allava: Harnessing gpt4v-synthesized data for a lite vision-language model,' arXiv:2402.11684 , 2024. 5, 7"
+        },
+        {
+          "title": "Msr-vtt: A large video description dataset for bridging video and language",
+          "citation": "J. Xu, T. Mei, T. Yao, and Y. Rui, 'Msr-vtt: A large video description dataset for bridging video and language,' in CVPR , 2016. 5"
+        },
+        {
+          "title": "Wavcaps: A chatgpt-assisted weaklylabelled audio captioning dataset for audio-language multimodal research",
+          "citation": "X. Mei, C. Meng, H. Liu, Q. Kong, T. Ko, C. Zhao, M. D. Plumbley, Y. Zou, and W. Wang, 'Wavcaps: A chatgpt-assisted weaklylabelled audio captioning dataset for audio-language multimodal research,' arXiv:2303.17395 , 2023. 5"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "3.2.1 Introduction",
+      "citations": [
+        {
+          "title": "Chatgpt: A language model for conversational ai",
+          "citation": "OpenAI, 'Chatgpt: A language model for conversational ai,' OpenAI, Tech. Rep., 2023. [Online]. Available: https: //www.openai.com/research/chatgpt 1, 6"
+        },
+        {
+          "title": "Language models are few-shot learners",
+          "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell et al. , 'Language models are few-shot learners,' NeurIPS , 2020. 1, 3, 6"
+        },
+        {
+          "title": "Finetuned language models are zeroshot learners",
+          "citation": "J. Wei, M. Bosma, V. Y. Zhao, K. Guu, A. W. Yu, B. Lester, N. Du, A. M. Dai, and Q. V. Le, 'Finetuned language models are zeroshot learners,' arXiv:2109.01652 , 2021. 1, 6, 11"
+        },
+        {
+          "title": "Scaling instruction-finetuned language models",
+          "citation": "H. W. Chung, L. Hou, S. Longpre, B. Zoph, Y. Tay, W. Fedus, E. Li, X. Wang, M. Dehghani, S. Brahma et al. , 'Scaling instructionfinetuned language models,' arXiv:2210.11416 , 2022. 3, 4, 6"
+        },
+        {
+          "title": "Training language models to follow instructions with human feedback",
+          "citation": "L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray et al. , 'Training language models to follow instructions with human feedback,' NeurIPS , 2022. 6, 8"
+        },
+        {
+          "title": "Opt-iml: Scaling language model instruction meta learning through the lens of generalization",
+          "citation": "S. Iyer, X. V. Lin, R. Pasunuru, T. Mihaylov, D. Simig, P. Yu, K. Shuster, T. Wang, Q. Liu, P. S. Koura et al. , 'Opt-iml: Scaling language model instruction meta learning through the lens of generalization,' arXiv:2212.12017 , 2022. 6"
+        },
+        {
+          "title": "Multitask prompted training enables zero-shot task generalization",
+          "citation": "V. Sanh, A. Webson, C. Raffel, S. H. Bach, L. Sutawika, Z. Alyafeai, A. Chaffin, A. Stiegler, T. L. Scao, A. Raja et al. , 'Multitask prompted training enables zero-shot task generalization,' arXiv:2110.08207 , 2021. 6"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "3.2.2 Training Detail",
+      "citations": [
+        {
+          "title": "Visual instruction tuning",
+          "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' arXiv:2304.08485 , 2023. 1, 4, 6, 7, 8, 9, 10"
+        },
+        {
+          "title": "Videochat: Chat-centric video understanding",
+          "citation": "K. Li, Y. He, Y. Wang, Y. Li, W. Wang, P. Luo, Y. Wang, L. Wang, and Y. Qiao, 'Videochat: Chat-centric video understanding,' arXiv:2305.06355 , 2023. 1, 4, 6"
+        },
+        {
+          "title": "Pmc-vqa: Visual instruction tuning for medical visual question answering",
+          "citation": "X. Zhang, C. Wu, Z. Zhao, W. Lin, Y. Zhang, Y. Wang, and W. Xie, 'Pmc-vqa: Visual instruction tuning for medical visual question answering,' arXiv:2305.10415 , 2023. 1, 4, 6, 10"
+        },
+        {
+          "title": "Pandagpt: One model to instruction-follow them all",
+          "citation": "Y. Su, T. Lan, H. Li, J. Xu, Y. Wang, and D. Cai, 'Pandagpt: One model to instruction-follow them all,' arXiv:2305.16355 , 2023. 4, 6"
+        },
+        {
+          "title": "Multimodal-gpt: A vision and language model for dialogue with humans",
+          "citation": "T. Gong, C. Lyu, S. Zhang, Y. Wang, M. Zheng, Q. Zhao, K. Liu, W. Zhang, P. Luo, and K. Chen, 'Multimodal-gpt: A vision and language model for dialogue with humans,' arXiv:2305.04790 , 2023. 6, 7, 11"
+        },
+        {
+          "title": "Vqa: Visual question answering",
+          "citation": "S. Antol, A. Agrawal, J. Lu, M. Mitchell, D. Batra, C. L. Zitnick, and D. Parikh, 'Vqa: Visual question answering,' in ICCV , 2015. 6"
+        },
+        {
+          "title": "Deep visual-semantic alignments for generating image descriptions",
+          "citation": "A. Karpathy and L. Fei-Fei, 'Deep visual-semantic alignments for generating image descriptions,' in CVPR , 2015. 6"
+        },
+        {
+          "title": "Cheap and quick: Efficient vision-language instruction tuning for large language models",
+          "citation": "G. Luo, Y. Zhou, T. Ren, S. Chen, X. Sun, and R. Ji, 'Cheap and quick: Efficient vision-language instruction tuning for large language models,' arXiv:2305.15023 , 2023. 6, 7, 8, 9"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "9",
+      "sec_title": "3.2.3 Data Collection",
+      "citations": [
+        {
+          "title": "Visual instruction tuning",
+          "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' arXiv:2304.08485 , 2023. 1, 4, 6, 7, 8, 9, 10"
+        },
+        {
+          "title": "Minigpt-4: Enhancing vision-language understanding with advanced large language models",
+          "citation": "D. Zhu, J. Chen, X. Shen, X. Li, and M. Elhoseiny, 'Minigpt-4: Enhancing vision-language understanding with advanced large language models,' arXiv:2304.10592 , 2023. 1, 2, 6, 7"
+        },
+        {
+          "title": "Videochat: Chat-centric video understanding",
+          "citation": "K. Li, Y. He, Y. Wang, Y. Li, W. Wang, P. Luo, Y. Wang, L. Wang, and Y. Qiao, 'Videochat: Chat-centric video understanding,' arXiv:2305.06355 , 2023. 1, 4, 6"
+        },
+        {
+          "title": "Llava-med: Training a large language-and-vision assistant for biomedicine in one day",
+          "citation": "C. Li, C. Wong, S. Zhang, N. Usuyama, H. Liu, J. Yang, T. Naumann, H. Poon, and J. Gao, 'Llava-med: Training a large language-and-vision assistant for biomedicine in one day,' arXiv:2306.00890 , 2023. 1, 4, 6, 8, 9, 10"
+        },
+        {
+          "title": "Instructblip: Towards general-purpose vision-language models with instruction tuning",
+          "citation": "W. Dai, J. Li, D. Li, A. M. H. Tiong, J. Zhao, W. Wang, B. Li, P. Fung, and S. Hoi, 'Instructblip: Towards generalpurpose vision-language models with instruction tuning,' arXiv:2305.06500 , 2023. 3, 4, 6, 7, 8"
+        },
+        {
+          "title": "Xllm: Bootstrapping advanced large language models by treating multi-modalities as foreign languages",
+          "citation": "F. Chen, M. Han, H. Zhao, Q. Zhang, J. Shi, S. Xu, and B. Xu, 'Xllm: Bootstrapping advanced large language models by treating multi-modalities as foreign languages,' arXiv:2305.04160 , 2023. 4, 6, 8, 9"
+        },
+        {
+          "title": "DetGPT: Detect what you need via reasoning",
+          "citation": "R. Pi, J. Gao, S. Diao, R. Pan, H. Dong, J. Zhang, L. Yao, J. Han, H. Xu, and L. K. T. Zhang, 'Detgpt: Detect what you need via reasoning,' arXiv:2305.14167 , 2023. 4, 7"
+        },
+        {
+          "title": "Llama-adapter: Efficient fine-tuning of language models with zero-init attention",
+          "citation": "R. Zhang, J. Han, A. Zhou, X. Hu, S. Yan, P. Lu, H. Li, P. Gao, and Y. Qiao, 'Llama-adapter: Efficient fine-tuning of language models with zero-init attention,' arXiv:2303.16199 , 2023. 4, 6, 8, 9"
+        },
+        {
+          "title": "mplug-owl: Modularization empowers large language models with multimodality",
+          "citation": "Q. Ye, H. Xu, G. Xu, J. Ye, M. Yan, Y. Zhou, J. Wang, A. Hu, P. Shi, Y. Shi et al. , 'mplug-owl: Modularization empowers large language models with multimodality,' arXiv:2304.14178 , 2023. 4, 7, 9"
+        },
+        {
+          "title": "Visionllm: Large language model is also an open-ended decoder for vision-centric tasks",
+          "citation": "W. Wang, Z. Chen, X. Chen, J. Wu, X. Zhu, G. Zeng, P. Luo, T. Lu, J. Zhou, Y. Qiao et al. , 'Visionllm: Large language model is also an open-ended decoder for vision-centric tasks,' arXiv:2305.11175 , 2023. 4, 6"
+        },
+        {
+          "title": "To see is to believe: Prompting gpt-4v for better visual instruction tuning",
+          "citation": "J. Wang, L. Meng, Z. Weng, B. He, Z. Wu, and Y.-G. Jiang, 'To see is to believe: Prompting gpt-4v for better visual instruction tuning,' arXiv:2311.07574 , 2023. 5, 7"
+        },
+        {
+          "title": "Allava: Harnessing gpt4v-synthesized data for a lite vision-language model",
+          "citation": "G. H. Chen, S. Chen, R. Zhang, J. Chen, X. Wu, Z. Zhang, Z. Chen, J. Li, X. Wan, and B. Wang, 'Allava: Harnessing gpt4v-synthesized data for a lite vision-language model,' arXiv:2402.11684 , 2024. 5, 7"
+        },
+        {
+          "title": "Multimodal-gpt: A vision and language model for dialogue with humans",
+          "citation": "T. Gong, C. Lyu, S. Zhang, Y. Wang, M. Zheng, Q. Zhao, K. Liu, W. Zhang, P. Luo, and K. Chen, 'Multimodal-gpt: A vision and language model for dialogue with humans,' arXiv:2305.04790 , 2023. 6, 7, 11"
+        },
+        {
+          "title": "Cheap and quick: Efficient vision-language instruction tuning for large language models",
+          "citation": "G. Luo, Y. Zhou, T. Ren, S. Chen, X. Sun, and R. Ji, 'Cheap and quick: Efficient vision-language instruction tuning for large language models,' arXiv:2305.15023 , 2023. 6, 7, 8, 9"
+        },
+        {
+          "title": "Multiinstruct: Improving multi-modal zero-shot learning via instruction tuning",
+          "citation": "Z. Xu, Y. Shen, and L. Huang, 'Multiinstruct: Improving multi-modal zero-shot learning via instruction tuning,' arXiv:2212.10773 , 2022. 6, 7, 8, 9"
+        },
+        {
+          "title": "Llama-adapter v2: Parameter-efficient visual instruction model",
+          "citation": "P. Gao, J. Han, R. Zhang, Z. Lin, S. Geng, A. Zhou, W. Zhang, P. Lu, C. He, X. Yue et al. , 'Llama-adapter v2: Parameter-efficient visual instruction model,' arXiv:2304.15010 , 2023. 6, 7, 8, 9"
+        },
+        {
+          "title": "Chatbridge: Bridging modalities with large language model as a language catalyst",
+          "citation": "Z. Zhao, L. Guo, T. Yue, S. Chen, S. Shao, X. Zhu, Z. Yuan, and J. Liu, 'Chatbridge: Bridging modalities with large language model as a language catalyst,' arXiv:2305.16103 , 2023. 6, 7, 8, 9"
+        },
+        {
+          "title": "M 3 it: A large-scale dataset towards multi-modal multilingual instruction tuning",
+          "citation": "L. Li, Y. Yin, S. Li, L. Chen, P. Wang, S. Ren, M. Li, Y. Yang, J. Xu, X. Sun, L. Kong, and Q. Liu, 'M 3 it: A large-scale dataset towards multi-modal multilingual instruction tuning,' arXiv:2306.04387 , 2023. 6, 8, 9"
+        },
+        {
+          "title": "Self-instruct: Aligning language model with self generated instructions",
+          "citation": "Y. Wang, Y. Kordi, S. Mishra, A. Liu, N. A. Smith, D. Khashabi, and H. Hajishirzi, 'Self-instruct: Aligning language model with self generated instructions,' arXiv:2212.10560 , 2022. 7"
+        },
+        {
+          "title": "Gpt4tools: Teaching large language model to use tools via self-instruction",
+          "citation": "R. Yang, L. Song, Y. Li, S. Zhao, Y. Ge, X. Li, and Y. Shan, 'Gpt4tools: Teaching large language model to use tools via selfinstruction,' arXiv:2305.18752 , 2023. 7, 9, 12, 13"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "10",
+      "sec_title": "3.2.4 Data Quality",
+      "citations": [
+        {
+          "title": "What matters in training a gpt4-style language model with multimodal inputs?",
+          "citation": "Y. Zeng, H. Zhang, J. Zheng, J. Xia, G. Wei, Y. Wei, Y. Zhang, and T. Kong, 'What matters in training a gpt4-style language model with multimodal inputs?' arXiv:2307.02469 , 2023. 4, 7"
+        },
+        {
+          "title": "Instructiongpt4: A 200-instruction paradigm for fine-tuning minigpt-4",
+          "citation": "L. Wei, Z. Jiang, W. Huang, and L. Sun, 'Instructiongpt4: A 200-instruction paradigm for fine-tuning minigpt-4,' arXiv:2308.12067 , 2023. 7"
+        },
+        {
+          "title": "What makes for good visual instructions? synthesizing complex visual reasoning instructions for visual instruction tuning",
+          "citation": "Y. Du, H. Guo, K. Zhou, W. X. Zhao, J. Wang, C. Wang, M. Cai, R. Song, and J.-R. Wen, 'What makes for good visual instructions? synthesizing complex visual reasoning instructions for visual instruction tuning,' arXiv:2311.01487 , 2023. 7"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "11",
+      "sec_title": "3.3.2 Training Detail",
+      "citations": [
+        {
+          "title": "Visual instruction tuning",
+          "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' arXiv:2304.08485 , 2023. 1, 4, 6, 7, 8, 9, 10"
+        },
+        {
+          "title": "Training language models to follow instructions with human feedback",
+          "citation": "L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray et al. , 'Training language models to follow instructions with human feedback,' NeurIPS , 2022. 6, 8"
+        },
+        {
+          "title": "Fine-tuning language models from human preferences",
+          "citation": "D. M. Ziegler, N. Stiennon, J. Wu, T. B. Brown, A. Radford, D. Amodei, P. Christiano, and G. Irving, 'Fine-tuning language models from human preferences,' arXiv:1909.08593 , 2019. 8"
+        },
+        {
+          "title": "Learning to summarize with human feedback",
+          "citation": "N. Stiennon, L. Ouyang, J. Wu, D. Ziegler, R. Lowe, C. Voss, A. Radford, D. Amodei, and P. F. Christiano, 'Learning to summarize with human feedback,' NeurIPS , 2020. 8"
+        },
+        {
+          "title": "Aligning large multimodal models with factually augmented rlhf",
+          "citation": "Z. Sun, S. Shen, S. Cao, H. Liu, C. Li, Y. Shen, C. Gan, L.-Y. Gui, Y.-X. Wang, Y. Yang et al. , 'Aligning large multimodal models with factually augmented rlhf,' arXiv:2309.14525 , 2023. 8, 11"
+        },
+        {
+          "title": "Direct preference optimization: Your language model is secretly a reward model",
+          "citation": "R. Rafailov, A. Sharma, E. Mitchell, S. Ermon, C. D. Manning, and C. Finn, 'Direct preference optimization: Your language model is secretly a reward model,' NeurIPS , 2023. 8"
+        },
+        {
+          "title": "Rlhf-v: Towards trustworthy mllms via behavior alignment from fine-grained correctional human feedback",
+          "citation": "T. Yu, Y. Yao, H. Zhang, T. He, Y. Han, G. Cui, J. Hu, Z. Liu, H.-T. Zheng, M. Sun et al. , 'Rlhf-v: Towards trustworthy mllms via behavior alignment from fine-grained correctional human feedback,' arXiv:2312.00849 , 2023. 8"
+        },
+        {
+          "title": "Silkie: Preference distillation for large visual language models",
+          "citation": "L. Li, Z. Xie, M. Li, S. Chen, P. Wang, L. Chen, Y. Yang, B. Wang, and L. Kong, 'Silkie: Preference distillation for large visual language models,' arXiv:2312.10665 , 2023. 8"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "12",
+      "sec_title": "3.3.3 Data",
+      "citations": [
+        {
+          "title": "Aligning large multimodal models with factually augmented rlhf",
+          "citation": "Z. Sun, S. Shen, S. Cao, H. Liu, C. Li, Y. Shen, C. Gan, L.-Y. Gui, Y.-X. Wang, Y. Yang et al. , 'Aligning large multimodal models with factually augmented rlhf,' arXiv:2309.14525 , 2023. 8, 11"
+        },
+        {
+          "title": "Rlhf-v: Towards trustworthy mllms via behavior alignment from fine-grained correctional human feedback",
+          "citation": "T. Yu, Y. Yao, H. Zhang, T. He, Y. Han, G. Cui, J. Hu, Z. Liu, H.-T. Zheng, M. Sun et al. , 'Rlhf-v: Towards trustworthy mllms via behavior alignment from fine-grained correctional human feedback,' arXiv:2312.00849 , 2023. 8"
+        },
+        {
+          "title": "Silkie: Preference distillation for large visual language models",
+          "citation": "L. Li, Z. Xie, M. Li, S. Chen, P. Wang, L. Chen, Y. Yang, B. Wang, and L. Kong, 'Silkie: Preference distillation for large visual language models,' arXiv:2312.10665 , 2023. 8"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "13",
+      "sec_title": "4.1 Closed-set",
+      "citations": [
+        {
+          "title": "Visual instruction tuning",
+          "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' arXiv:2304.08485 , 2023. 1, 4, 6, 7, 8, 9, 10"
+        },
+        {
+          "title": "Llava-med: Training a large language-and-vision assistant for biomedicine in one day",
+          "citation": "C. Li, C. Wong, S. Zhang, N. Usuyama, H. Liu, J. Yang, T. Naumann, H. Poon, and J. Gao, 'Llava-med: Training a large language-and-vision assistant for biomedicine in one day,' arXiv:2306.00890 , 2023. 1, 4, 6, 8, 9, 10"
+        },
+        {
+          "title": "Instructblip: Towards general-purpose vision-language models with instruction tuning",
+          "citation": "W. Dai, J. Li, D. Li, A. M. H. Tiong, J. Zhao, W. Wang, B. Li, P. Fung, and S. Hoi, 'Instructblip: Towards generalpurpose vision-language models with instruction tuning,' arXiv:2305.06500 , 2023. 3, 4, 6, 7, 8"
+        },
+        {
+          "title": "Xllm: Bootstrapping advanced large language models by treating multi-modalities as foreign languages",
+          "citation": "F. Chen, M. Han, H. Zhao, Q. Zhang, J. Shi, S. Xu, and B. Xu, 'Xllm: Bootstrapping advanced large language models by treating multi-modalities as foreign languages,' arXiv:2305.04160 , 2023. 4, 6, 8, 9"
+        },
+        {
+          "title": "Llama-adapter: Efficient fine-tuning of language models with zero-init attention",
+          "citation": "R. Zhang, J. Han, A. Zhou, X. Hu, S. Yan, P. Lu, H. Li, P. Gao, and Y. Qiao, 'Llama-adapter: Efficient fine-tuning of language models with zero-init attention,' arXiv:2303.16199 , 2023. 4, 6, 8, 9"
+        },
+        {
+          "title": "Cheap and quick: Efficient vision-language instruction tuning for large language models",
+          "citation": "G. Luo, Y. Zhou, T. Ren, S. Chen, X. Sun, and R. Ji, 'Cheap and quick: Efficient vision-language instruction tuning for large language models,' arXiv:2305.15023 , 2023. 6, 7, 8, 9"
+        },
+        {
+          "title": "Multiinstruct: Improving multi-modal zero-shot learning via instruction tuning",
+          "citation": "Z. Xu, Y. Shen, and L. Huang, 'Multiinstruct: Improving multi-modal zero-shot learning via instruction tuning,' arXiv:2212.10773 , 2022. 6, 7, 8, 9"
+        },
+        {
+          "title": "Llama-adapter v2: Parameter-efficient visual instruction model",
+          "citation": "P. Gao, J. Han, R. Zhang, Z. Lin, S. Geng, A. Zhou, W. Zhang, P. Lu, C. He, X. Yue et al. , 'Llama-adapter v2: Parameter-efficient visual instruction model,' arXiv:2304.15010 , 2023. 6, 7, 8, 9"
+        },
+        {
+          "title": "Chatbridge: Bridging modalities with large language model as a language catalyst",
+          "citation": "Z. Zhao, L. Guo, T. Yue, S. Chen, S. Shao, X. Zhu, Z. Yuan, and J. Liu, 'Chatbridge: Bridging modalities with large language model as a language catalyst,' arXiv:2305.16103 , 2023. 6, 7, 8, 9"
+        },
+        {
+          "title": "M 3 it: A large-scale dataset towards multi-modal multilingual instruction tuning",
+          "citation": "L. Li, Y. Yin, S. Li, L. Chen, P. Wang, S. Ren, M. Li, Y. Yang, J. Xu, X. Sun, L. Kong, and Q. Liu, 'M 3 it: A large-scale dataset towards multi-modal multilingual instruction tuning,' arXiv:2306.04387 , 2023. 6, 8, 9"
+        },
+        {
+          "title": "Learn to explain: Multimodal reasoning via thought chains for science question answering",
+          "citation": "P. Lu, S. Mishra, T. Xia, L. Qiu, K.-W. Chang, S.-C. Zhu, O. Tafjord, P. Clark, and A. Kalyan, 'Learn to explain: Multimodal reasoning via thought chains for science question answering,' NeurIPS , 2022. 8, 9, 12"
+        },
+        {
+          "title": "Cider: Consensus-based image description evaluation",
+          "citation": "R. Vedantam, C. Lawrence Zitnick, and D. Parikh, 'Cider: Consensus-based image description evaluation,' in CVPR , 2015. 8"
+        },
+        {
+          "title": "Nocaps: Novel object captioning at scale",
+          "citation": "H. Agrawal, K. Desai, Y. Wang, X. Chen, R. Jain, M. Johnson, D. Batra, D. Parikh, S. Lee, and P. Anderson, 'Nocaps: Novel object captioning at scale,' in ICCV , 2019. 8"
+        },
+        {
+          "title": "From image descriptions to visual denotations: New similarity metrics for semantic inference over event descriptions",
+          "citation": "P. Young, A. Lai, M. Hodosh, and J. Hockenmaier, 'From image descriptions to visual denotations: New similarity metrics for semantic inference over event descriptions,' TACL , 2014. 8"
+        },
+        {
+          "title": "Pathvqa: 30000+ questions for medical visual question answering",
+          "citation": "X. He, Y. Zhang, L. Mou, E. Xing, and P. Xie, 'Pathvqa: 30000+ questions for medical visual question answering,' arXiv:2003.10286 , 2020. 9"
+        },
+        {
+          "title": "A dataset of clinically generated visual questions and answers about radiology images",
+          "citation": "J. J. Lau, S. Gayen, A. Ben Abacha, and D. Demner-Fushman, 'A dataset of clinically generated visual questions and answers about radiology images,' Sci. Data , 2018. 9"
+        },
+        {
+          "title": "Slake: A semantically-labeled knowledge-enhanced dataset for medical visual question answering",
+          "citation": "B. Liu, L.-M. Zhan, L. Xu, L. Ma, Y. Yang, and X.-M. Wu, 'Slake: A semantically-labeled knowledge-enhanced dataset for medical visual question answering,' in ISBI , 2021. 9"
+        },
+        {
+          "title": "Mme: A comprehensive evaluation benchmark for multimodal large language models",
+          "citation": "C. Fu, P. Chen, Y. Shen, Y. Qin, M. Zhang, X. Lin, Z. Qiu, W. Lin, Z. Qiu, W. Lin et al. , 'Mme: A comprehensive evaluation benchmark for multimodal large language models,' arXiv:2306.13394 , 2023. 9, 10"
+        },
+        {
+          "title": "MMBench: Is your multi-modal model an all-around player?",
+          "citation": "Y. Liu, H. Duan, Y. Zhang, B. Li, S. Zhang, W. Zhao, Y. Yuan, J. Wang, C. He, Z. Liu et al. , 'Mmbench: Is your multi-modal model an all-around player?' arXiv:2307.06281 , 2023. 9"
+        },
+        {
+          "title": "Mm-vet: Evaluating large multimodal models for integrated capabilities",
+          "citation": "W. Yu, Z. Yang, L. Li, J. Wang, K. Lin, Z. Liu, X. Wang, and L. Wang, 'Mm-vet: Evaluating large multimodal models for integrated capabilities,' arXiv:2308.02490 , 2023. 9"
+        },
+        {
+          "title": "Seedbench: Benchmarking multimodal llms with generative comprehension",
+          "citation": "B. Li, R. Wang, G. Wang, Y. Ge, Y. Ge, and Y. Shan, 'Seedbench: Benchmarking multimodal llms with generative comprehension,' in CVPR , 2024. 9"
+        },
+        {
+          "title": "Mathvista: Evaluating mathematical reasoning of foundation models in visual contexts",
+          "citation": "P. Lu, H. Bansal, T. Xia, J. Liu, C. Li, H. Hajishirzi, H. Cheng, K.-W. Chang, M. Galley, and J. Gao, 'Mathvista: Evaluating mathematical reasoning of foundation models in visual contexts,' in ICLR , 2024. 9"
+        },
+        {
+          "title": "MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI",
+          "citation": "X. Yue, Y. Ni, K. Zhang, T. Zheng, R. Liu, G. Zhang, S. Stevens, D. Jiang, W. Ren, Y. Sun et al. , 'Mmmu: A massive multidiscipline multimodal understanding and reasoning benchmark for expert agi,' arXiv:2311.16502 , 2023. 9"
+        },
+        {
+          "title": "Hallusionbench: You see what you think? or you think what you see? an image-context reasoning benchmark challenging for gpt-4v (ision), llava-1.5, and other multi-modality models",
+          "citation": "F. Liu, T. Guan, Z. Li, L. Chen, Y. Yacoob, D. Manocha, and T. Zhou, 'Hallusionbench: You see what you think? or you think what you see? an image-context reasoning benchmark challenging for gpt-4v (ision), llava-1.5, and other multi-modality models,' in CVPR , 2024. 9"
+        },
+        {
+          "title": "Video-chatgpt: Towards detailed video understanding via large vision and language models",
+          "citation": "M. Maaz, H. Rasheed, S. Khan, and F. S. Khan, 'Video-chatgpt: Towards detailed video understanding via large vision and language models,' arXiv:2306.05424 , 2023. 9"
+        },
+        {
+          "title": "Video-bench: A comprehensive benchmark and toolkit for evaluating video-based large language models",
+          "citation": "M. Ning, B. Zhu, Y. Xie, B. Lin, J. Cui, L. Yuan, D. Chen, and L. Yuan, 'Video-bench: A comprehensive benchmark and toolkit for evaluating video-based large language models,' arXiv:2311.16103 , 2023. 9"
+        },
+        {
+          "title": "Evaluating object hallucination in large vision-language models",
+          "citation": "Y. Li, Y. Du, K. Zhou, J. Wang, W. X. Zhao, and J.-R. Wen, 'Evaluating object hallucination in large vision-language models,' arXiv:2305.10355 , 2023. 9, 10"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "14",
+      "sec_title": "4.2 Open-set",
+      "citations": [
+        {
+          "title": "Visual instruction tuning",
+          "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' arXiv:2304.08485 , 2023. 1, 4, 6, 7, 8, 9, 10"
+        },
+        {
+          "title": "Llava-med: Training a large language-and-vision assistant for biomedicine in one day",
+          "citation": "C. Li, C. Wong, S. Zhang, N. Usuyama, H. Liu, J. Yang, T. Naumann, H. Poon, and J. Gao, 'Llava-med: Training a large language-and-vision assistant for biomedicine in one day,' arXiv:2306.00890 , 2023. 1, 4, 6, 8, 9, 10"
+        },
+        {
+          "title": "Xllm: Bootstrapping advanced large language models by treating multi-modalities as foreign languages",
+          "citation": "F. Chen, M. Han, H. Zhao, Q. Zhang, J. Shi, S. Xu, and B. Xu, 'Xllm: Bootstrapping advanced large language models by treating multi-modalities as foreign languages,' arXiv:2305.04160 , 2023. 4, 6, 8, 9"
+        },
+        {
+          "title": "Woodpecker: Hallucination correction for multimodal large language models",
+          "citation": "S. Yin, C. Fu, S. Zhao, T. Xu, H. Wang, D. Sui, Y. Shen, K. Li, X. Sun, and E. Chen, 'Woodpecker: Hallucination correction for multimodal large language models,' arXiv:2310.16045 , 2023. 4, 9, 10, 11"
+        },
+        {
+          "title": "mplug-owl: Modularization empowers large language models with multimodality",
+          "citation": "Q. Ye, H. Xu, G. Xu, J. Ye, M. Yan, Y. Zhou, J. Wang, A. Hu, P. Shi, Y. Shi et al. , 'mplug-owl: Modularization empowers large language models with multimodality,' arXiv:2304.14178 , 2023. 4, 7, 9"
+        },
+        {
+          "title": "Cheap and quick: Efficient vision-language instruction tuning for large language models",
+          "citation": "G. Luo, Y. Zhou, T. Ren, S. Chen, X. Sun, and R. Ji, 'Cheap and quick: Efficient vision-language instruction tuning for large language models,' arXiv:2305.15023 , 2023. 6, 7, 8, 9"
+        },
+        {
+          "title": "Llama-adapter v2: Parameter-efficient visual instruction model",
+          "citation": "P. Gao, J. Han, R. Zhang, Z. Lin, S. Geng, A. Zhou, W. Zhang, P. Lu, C. He, X. Yue et al. , 'Llama-adapter v2: Parameter-efficient visual instruction model,' arXiv:2304.15010 , 2023. 6, 7, 8, 9"
+        },
+        {
+          "title": "Chatbridge: Bridging modalities with large language model as a language catalyst",
+          "citation": "Z. Zhao, L. Guo, T. Yue, S. Chen, S. Shao, X. Zhu, Z. Yuan, and J. Liu, 'Chatbridge: Bridging modalities with large language model as a language catalyst,' arXiv:2305.16103 , 2023. 6, 7, 8, 9"
+        },
+        {
+          "title": "M 3 it: A large-scale dataset towards multi-modal multilingual instruction tuning",
+          "citation": "L. Li, Y. Yin, S. Li, L. Chen, P. Wang, S. Ren, M. Li, Y. Yang, J. Xu, X. Sun, L. Kong, and Q. Liu, 'M 3 it: A large-scale dataset towards multi-modal multilingual instruction tuning,' arXiv:2306.04387 , 2023. 6, 8, 9"
+        },
+        {
+          "title": "Gpt4tools: Teaching large language model to use tools via self-instruction",
+          "citation": "R. Yang, L. Song, Y. Li, S. Zhao, Y. Ge, X. Li, and Y. Shan, 'Gpt4tools: Teaching large language model to use tools via selfinstruction,' arXiv:2305.18752 , 2023. 7, 9, 12, 13"
+        },
+        {
+          "title": "Microsoft coco: Common objects in context",
+          "citation": "T.-Y. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Dollár, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014. 9"
+        },
+        {
+          "title": "Red teaming visual language models",
+          "citation": "M. Li, L. Li, Y. Yin, M. Ahmed, Z. Liu, and Q. Liu, 'Red teaming visual language models,' arXiv:2401.12915 , 2024. 9"
+        },
+        {
+          "title": "The dawn of lmms: Preliminary explorations with gpt-4v (ision)",
+          "citation": "Z. Yang, L. Li, K. Lin, J. Wang, C.-C. Lin, Z. Liu, and L. Wang, 'The dawn of lmms: Preliminary explorations with gpt-4v (ision),' arXiv:2309.17421 . 9"
+        },
+        {
+          "title": "On the road with gpt-4v(ision): Early explorations of visual-language model on autonomous driving",
+          "citation": "L. Wen, X. Yang, D. Fu, X. Wang, P. Cai, X. Li, T. Ma, Y. Li, L. Xu, D. Shang et al. , 'On the road with gpt-4v (ision): Early explorations of visual-language model on autonomous driving,' arXiv:2311.05332 . 9"
+        },
+        {
+          "title": "A challenger to gpt-4v? early explorations of gemini in visual expertise",
+          "citation": "C. Fu, R. Zhang, H. Lin, Z. Wang, T. Gao, Y. Luo, Y. Huang, Z. Zhang, L. Qiu, G. Ye et al. , 'A challenger to gpt-4v? early explorations of gemini in visual expertise,' arXiv:2312.12436 . 9"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "15",
+      "sec_title": "5 EXTENSIONS",
+      "citations": [
+        {
+          "title": "Segment anything",
+          "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv:2304.02643 , 2023. 1, 9"
+        },
+        {
+          "title": "Visual instruction tuning",
+          "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee, 'Visual instruction tuning,' arXiv:2304.08485 , 2023. 1, 4, 6, 7, 8, 9, 10"
+        },
+        {
+          "title": "Shikra: Unleashing multimodal llm's referential dialogue magic",
+          "citation": "K. Chen, Z. Zhang, W. Zeng, R. Zhang, F. Zhu, and R. Zhao, 'Shikra: Unleashing multimodal llm's referential dialogue magic,' arXiv:2306.15195 . 1, 9"
+        },
+        {
+          "title": "Osprey: Pixel understanding with visual instruction tuning",
+          "citation": "Y. Yuan, W. Li, J. Liu, D. Tang, X. Luo, C. Qin, L. Zhang, and J. Zhu, 'Osprey: Pixel understanding with visual instruction tuning,' arXiv:2312.10032 . 1, 2, 9"
+        },
+        {
+          "title": "Next-gpt: Any-to-any multimodal llm",
+          "citation": "S. Wu, H. Fei, L. Qu, W. Ji, and T.-S. Chua, 'Next-gpt: Any-to-any multimodal llm,' arXiv:2309.05519 , 2023. 1, 9"
+        },
+        {
+          "title": "Large multilingual models pivot zeroshot multimodal learning across languages",
+          "citation": "J. Hu, Y. Yao, C. Wang, S. Wang, Y. Pan, Q. Chen, T. Yu, H. Wu, Y. Zhao, H. Zhang et al. , 'Large multilingual models pivot zeroshot multimodal learning across languages,' arXiv:2308.12038 , 2023. 1, 10"
+        },
+        {
+          "title": "Qwen-vl: A frontier large vision-language model with versatile abilities",
+          "citation": "J. Bai, S. Bai, S. Yang, S. Wang, S. Tan, P. Wang, J. Lin, C. Zhou, and J. Zhou, 'Qwen-vl: A frontier large vision-language model with versatile abilities,' arXiv:2308.12966 , 2023. 1, 3, 4, 10"
+        },
+        {
+          "title": "Llava-med: Training a large language-and-vision assistant for biomedicine in one day",
+          "citation": "C. Li, C. Wong, S. Zhang, N. Usuyama, H. Liu, J. Yang, T. Naumann, H. Poon, and J. Gao, 'Llava-med: Training a large language-and-vision assistant for biomedicine in one day,' arXiv:2306.00890 , 2023. 1, 4, 6, 8, 9, 10"
+        },
+        {
+          "title": "Med-flamingo: a multimodal medical few-shot learner",
+          "citation": "M. Moor, Q. Huang, S. Wu, M. Yasunaga, Y. Dalmia, J. Leskovec, C. Zakka, E. P. Reis, and P. Rajpurkar, 'Med-flamingo: a multimodal medical few-shot learner,' in Machine Learning for Health (ML4H) , 2023. 1, 10"
+        },
+        {
+          "title": "Pmc-vqa: Visual instruction tuning for medical visual question answering",
+          "citation": "X. Zhang, C. Wu, Z. Zhao, W. Lin, Y. Zhang, Y. Wang, and W. Xie, 'Pmc-vqa: Visual instruction tuning for medical visual question answering,' arXiv:2305.10415 , 2023. 1, 4, 6, 10"
+        },
+        {
+          "title": "mplug-docowl: Modularized multimodal large language model for document understanding",
+          "citation": "J. Ye, A. Hu, H. Xu, Q. Ye, M. Yan, Y. Dan, C. Zhao, G. Xu, C. Li, J. Tian et al. , 'mplug-docowl: Modularized multimodal large language model for document understanding,' arXiv:2307.02499 , 2023. 1, 10"
+        },
+        {
+          "title": "Textmonkey: An ocr-free large multimodal model for understanding document",
+          "citation": "Y. Liu, B. Yang, Q. Liu, Z. Li, Z. Ma, S. Zhang, and X. Bai, 'Textmonkey: An ocr-free large multimodal model for understanding document,' arXiv:2403.04473 , 2024. 1, 10"
+        },
+        {
+          "title": "An embodied generalist agent in 3d world",
+          "citation": "J. Huang, S. Yong, X. Ma, X. Linghu, P. Li, Y. Wang, Q. Li, S.-C. Zhu, B. Jia, and S. Huang, 'An embodied generalist agent in 3d world,' arXiv:2311.12871 , 2023. 1, 9, 10"
+        },
+        {
+          "title": "Appagent: Multimodal agents as smartphone users",
+          "citation": "Z. Yang, J. Liu, Y. Han, X. Chen, Z. Huang, B. Fu, and G. Yu, 'Appagent: Multimodal agents as smartphone users,' arXiv:2312.13771 , 2023. 1, 10"
+        },
+        {
+          "title": "Cogagent: A visual language model for gui agents",
+          "citation": "W. Hong, W. Wang, Q. Lv, J. Xu, W. Yu, J. Ji, Y. Wang, Z. Wang, Y. Dong, M. Ding et al. , 'Cogagent: A visual language model for gui agents,' arXiv:2312.08914 , 2023. 1, 3, 10"
+        },
+        {
+          "title": "Mobile-agent: Autonomous multi-modal mobile device agent with visual perception",
+          "citation": "J. Wang, H. Xu, J. Ye, M. Yan, W. Shen, J. Zhang, F. Huang, and J. Sang, 'Mobile-agent: Autonomous multi-modal mobile device agent with visual perception,' arXiv:2401.16158 , 2024. 1, 10"
+        },
+        {
+          "title": "Qwen technical report",
+          "citation": "J. Bai, S. Bai, Y. Chu, Z. Cui, K. Dang, X. Deng, Y. Fan, W. Ge, Y. Han, F. Huang et al. , 'Qwen technical report,' arXiv:2309.16609 , 2023. 3, 4, 10"
+        },
+        {
+          "title": "MobileVLM: A Fast, Reproducible and Strong Vision Language Assistant for Mobile Devices",
+          "citation": "X. Chu, L. Qiao, X. Lin, S. Xu, Y. Yang, Y. Hu, F. Wei, X. Zhang, B. Zhang, X. Wei et al. , 'Mobilevlm: A fast, reproducible and strong vision language assistant for mobile devices,' arXiv:2312.16886 , 2023. 3, 10"
+        },
+        {
+          "title": "Gpt4roi: Instruction tuning large language model on region-of-interest",
+          "citation": "S. Zhang, P. Sun, S. Chen, M. Xiao, W. Shao, W. Zhang, K. Chen, and P. Luo, 'Gpt4roi: Instruction tuning large language model on region-of-interest,' arXiv:2307.03601 , 2023. 9"
+        },
+        {
+          "title": "Pink: Unveiling the power of referential comprehension for multi-modal llms",
+          "citation": "S. Xuan, Q. Guo, M. Yang, and S. Zhang, 'Pink: Unveiling the power of referential comprehension for multi-modal llms,' arXiv:2310.00582 , 2023. 9"
+        },
+        {
+          "title": "Glamm: Pixel grounding large multimodal model",
+          "citation": "H. Rasheed, M. Maaz, S. Shaji, A. Shaker, S. Khan, H. Cholakkal, R. M. Anwer, E. Xing, M.-H. Yang, and F. S. Khan, 'Glamm: Pixel grounding large multimodal model,' arXiv:2311.03356 . 9"
+        },
+        {
+          "title": "Ferret: Refer and ground anything anywhere at any granularity",
+          "citation": "H. You, H. Zhang, Z. Gan, X. Du, B. Zhang, Z. Wang, L. Cao, S.-F. Chang, and Y. Yang, 'Ferret: Refer and ground anything anywhere at any granularity,' arXiv:2310.07704 , 2023. 9"
+        },
+        {
+          "title": "Lisa: Reasoning segmentation via large language model",
+          "citation": "X. Lai, Z. Tian, Y. Chen, Y. Li, Y. Yuan, S. Liu, and J. Jia, 'Lisa: Reasoning segmentation via large language model,' arXiv:2308.00692 , 2023. 9, 13"
+        },
+        {
+          "title": "Pointllm: Empowering large language models to understand point clouds",
+          "citation": "R. Xu, X. Wang, T. Wang, Y. Chen, J. Pang, and D. Lin, 'Pointllm: Empowering large language models to understand point clouds,' arXiv:2308.16911 , 2023. 9"
+        },
+        {
+          "title": "Ll3da: Visual interactive instruction tuning for omni-3d understanding, reasoning, and planning",
+          "citation": "S. Chen, X. Chen, C. Zhang, M. Li, G. Yu, H. Fei, H. Zhu, J. Fan, and T. Chen, 'Ll3da: Visual interactive instruction tuning for omni-3d understanding, reasoning, and planning,' arXiv:2311.18651 , 2023. 9"
+        },
+        {
+          "title": "3d-llm: Injecting the 3d world into large language models",
+          "citation": "Y. Hong, H. Zhen, P. Chen, S. Zheng, Y. Du, Z. Chen, and C. Gan, '3d-llm: Injecting the 3d world into large language models,' NeurIPS , 2023. 9"
+        },
+        {
+          "title": "Generative pretraining in multimodality",
+          "citation": "Q. Sun, Q. Yu, Y. Cui, F. Zhang, X. Zhang, Y. Wang, H. Gao, J. Liu, T. Huang, and X. Wang, 'Generative pretraining in multimodality,' in ICLR , 2024. 9"
+        },
+        {
+          "title": "Anygpt: Unified multimodal llm with discrete sequence modeling",
+          "citation": "J. Zhan, J. Dai, J. Ye, Y. Zhou, D. Zhang, Z. Liu, X. Zhang, R. Yuan, G. Zhang, L. Li et al. , 'Anygpt: Unified multimodal llm with discrete sequence modeling,' arXiv:2402.12226 , 2024. 9"
+        },
+        {
+          "title": "Jointly training large autoregressive multimodal models",
+          "citation": "E. Aiello, L. Yu, Y. Nie, A. Aghajanyan, and B. Oguz, 'Jointly training large autoregressive multimodal models,' arXiv:2309.15564 , 2023. 9"
+        },
+        {
+          "title": "Speechgpt: Empowering large language models with intrinsic cross-modal conversational abilities",
+          "citation": "D. Zhang, S. Li, X. Zhang, J. Zhan, P. Wang, Y. Zhou, and X. Qiu, 'Speechgpt: Empowering large language models with intrinsic cross-modal conversational abilities,' arXiv:2305.11000 , 2023. 9"
+        },
+        {
+          "title": "Audiopalm: A large language model that can speak and listen",
+          "citation": "P. K. Rubenstein, C. Asawaroengchai, D. D. Nguyen, A. Bapna, Z. Borsos, F. d. C. Quitry, P. Chen, D. E. Badawy, W. Han, E. Kharitonov et al. , 'Audiopalm: A large language model that can speak and listen,' arXiv:2306.12925 , 2023. 9"
+        },
+        {
+          "title": "Modaverse: Efficiently transforming modalities with llms",
+          "citation": "X. Wang, B. Zhuang, and Q. Wu, 'Modaverse: Efficiently transforming modalities with llms,' arXiv:2401.06395 , 2024. 9"
+        },
+        {
+          "title": "Denoising diffusion probabilistic models",
+          "citation": "J. Ho, A. Jain, and P. Abbeel, 'Denoising diffusion probabilistic models,' NeurIPS , 2020. 10"
+        },
+        {
+          "title": "High-resolution image synthesis with latent diffusion models",
+          "citation": "R. Rombach, A. Blattmann, D. Lorenz, P. Esser, and B. Ommer, 'High-resolution image synthesis with latent diffusion models,' in CVPR , 2022. 10"
+        },
+        {
+          "title": "Mindagent: Emergent gaming interaction",
+          "citation": "R. Gong, Q. Huang, X. Ma, H. Vo, Z. Durante, Y. Noda, Z. Zheng, S.-C. Zhu, D. Terzopoulos, L. Fei-Fei et al. , 'Mindagent: Emergent gaming interaction,' arXiv:2309.09971 , 2023. 10"
+        },
+        {
+          "title": "Embodiedgpt: Vision-language pre-training via embodied chain of thought",
+          "citation": "Y. Mu, Q. Zhang, M. Hu, W. Wang, M. Ding, J. Jin, B. Wang, J. Dai, Y. Qiao, and P. Luo, 'Embodiedgpt: Vision-language pre-training via embodied chain of thought,' arXiv:2305.15021 , 2023. 10"
+        },
+        {
+          "title": "mplug-docowl 1.5: Unified structure learning for ocr-free document understanding",
+          "citation": "A. Hu, H. Xu, J. Ye, M. Yan, L. Zhang, B. Zhang, C. Li, J. Zhang, Q. Jin, F. Huang et al. , 'mplug-docowl 1.5: Unified structure learning for ocr-free document understanding,' arXiv:2403.12895 , 2024. 10"
+        },
+        {
+          "title": "Ureader: Universal ocr-free visually-situated language understanding with multimodal large language model",
+          "citation": "J. Ye, A. Hu, H. Xu, Q. Ye, M. Yan, G. Xu, C. Li, J. Tian, Q. Qian, J. Zhang et al. , 'Ureader: Universal ocr-free visually-situated language understanding with multimodal large language model,' in EMNLP , 2023. 10"
+        },
+        {
+          "title": "Llava-med: Training a",
+          "citation": "C. Li, C. Wong, S. Zhang, N. Usuyama, H. Liu, J. Yang, T. Naumann, H. Poon, and J. Gao, 'Llava-med: Training a"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "16",
+      "sec_title": "6 MULTIMODAL HALLUCINATION",
+      "citations": [
+        {
+          "title": "Woodpecker: Hallucination correction for multimodal large language models",
+          "citation": "S. Yin, C. Fu, S. Zhao, T. Xu, H. Wang, D. Sui, Y. Shen, K. Li, X. Sun, and E. Chen, 'Woodpecker: Hallucination correction for multimodal large language models,' arXiv:2310.16045 , 2023. 4, 9, 10, 11"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "17",
+      "sec_title": "6.1 Preliminaries",
+      "citations": [
+        {
+          "title": "Halle-switch: Rethinking and controlling object existence hallucinations in large vision language models for detailed caption",
+          "citation": "B. Zhai, S. Yang, X. Zhao, C. Xu, S. Shen, D. Zhao, K. Keutzer, M. Li, T. Yan, and X. Fan, 'Halle-switch: Rethinking and controlling object existence hallucinations in large vision language models for detailed caption,' arXiv:2310.01779 , 2023. 10, 11"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "18",
+      "sec_title": "6.2 Evaluation Methods",
+      "citations": [
+        {
+          "title": "Woodpecker: Hallucination correction for multimodal large language models",
+          "citation": "S. Yin, C. Fu, S. Zhao, T. Xu, H. Wang, D. Sui, Y. Shen, K. Li, X. Sun, and E. Chen, 'Woodpecker: Hallucination correction for multimodal large language models,' arXiv:2310.16045 , 2023. 4, 9, 10, 11"
+        },
+        {
+          "title": "Mme: A comprehensive evaluation benchmark for multimodal large language models",
+          "citation": "C. Fu, P. Chen, Y. Shen, Y. Qin, M. Zhang, X. Lin, Z. Qiu, W. Lin, Z. Qiu, W. Lin et al. , 'Mme: A comprehensive evaluation benchmark for multimodal large language models,' arXiv:2306.13394 , 2023. 9, 10"
+        },
+        {
+          "title": "Evaluating object hallucination in large vision-language models",
+          "citation": "Y. Li, Y. Du, K. Zhou, J. Wang, W. X. Zhao, and J.-R. Wen, 'Evaluating object hallucination in large vision-language models,' arXiv:2305.10355 , 2023. 9, 10"
+        },
+        {
+          "title": "Object hallucination in image captioning",
+          "citation": "A. Rohrbach, L. A. Hendricks, K. Burns, T. Darrell, and K. Saenko, 'Object hallucination in image captioning,' in EMNLP , 2018. 10"
+        },
+        {
+          "title": "Evaluation and analysis of hallucination in large vision-language models",
+          "citation": "J. Wang, Y. Zhou, G. Xu, P. Shi, C. Zhao, H. Xu, Q. Ye, M. Yan, J. Zhang, J. Zhu et al. , 'Evaluation and analysis of hallucination in large vision-language models,' arXiv:2308.15126 , 2023. 10"
+        },
+        {
+          "title": "Faithscore: Evaluating hallucinations in large vision-language models",
+          "citation": "L. Jing, R. Li, Y. Chen, M. Jia, and X. Du, 'Faithscore: Evaluating hallucinations in large vision-language models,' arXiv:2311.01477 , 2023. 10"
+        },
+        {
+          "title": "An llm-free multi-dimensional benchmark for mllms hallucination evaluation",
+          "citation": "J. Wang, Y. Wang, G. Xu, J. Zhang, Y. Gu, H. Jia, M. Yan, J. Zhang, and J. Sang, 'An llm-free multi-dimensional benchmark for mllms hallucination evaluation,' arXiv:2311.07397 , 2023. 10"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "19",
+      "sec_title": "6.3 Mitigation Methods",
+      "citations": [
+        {
+          "title": "Woodpecker: Hallucination correction for multimodal large language models",
+          "citation": "S. Yin, C. Fu, S. Zhao, T. Xu, H. Wang, D. Sui, Y. Shen, K. Li, X. Sun, and E. Chen, 'Woodpecker: Hallucination correction for multimodal large language models,' arXiv:2310.16045 , 2023. 4, 9, 10, 11"
+        },
+        {
+          "title": "Aligning large multimodal models with factually augmented rlhf",
+          "citation": "Z. Sun, S. Shen, S. Cao, H. Liu, C. Li, Y. Shen, C. Gan, L.-Y. Gui, Y.-X. Wang, Y. Yang et al. , 'Aligning large multimodal models with factually augmented rlhf,' arXiv:2309.14525 , 2023. 8, 11"
+        },
+        {
+          "title": "Halle-switch: Rethinking and controlling object existence hallucinations in large vision language models for detailed caption",
+          "citation": "B. Zhai, S. Yang, X. Zhao, C. Xu, S. Shen, D. Zhao, K. Keutzer, M. Li, T. Yan, and X. Fan, 'Halle-switch: Rethinking and controlling object existence hallucinations in large vision language models for detailed caption,' arXiv:2310.01779 , 2023. 10, 11"
+        },
+        {
+          "title": "Mitigating hallucination in large multi-modal models via robust instruction tuning",
+          "citation": "F. Liu, K. Lin, L. Li, J. Wang, Y. Yacoob, and L. Wang, 'Mitigating hallucination in large multi-modal models via robust instruction tuning,' in ICLR , 2024. 11"
+        },
+        {
+          "title": "Mitigating object hallucinations in large vision-language models through visual contrastive decoding",
+          "citation": "S. Leng, H. Zhang, G. Chen, X. Li, S. Lu, C. Miao, and L. Bing, 'Mitigating object hallucinations in large vision-language models through visual contrastive decoding,' in CVPR , 2024. 11"
+        },
+        {
+          "title": "Hallucination augmented contrastive learning for multimodal large language model",
+          "citation": "C. Jiang, H. Xu, M. Dong, J. Chen, W. Ye, M. Yan, Q. Ye, J. Zhang, F. Huang, and S. Zhang, 'Hallucination augmented contrastive learning for multimodal large language model,' arXiv:2312.06968 , 2023. 11"
+        },
+        {
+          "title": "Analyzing and mitigating object hallucination in large vision-language models",
+          "citation": "Y. Zhou, C. Cui, J. Yoon, L. Zhang, Z. Deng, C. Finn, M. Bansal, and H. Yao, 'Analyzing and mitigating object hallucination in large vision-language models,' arXiv:2310.00754 , 2023. 11"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "20",
+      "sec_title": "7.1 Multimodal In-Context Learning",
+      "citations": [
+        {
+          "title": "Finetuned language models are zeroshot learners",
+          "citation": "J. Wei, M. Bosma, V. Y. Zhao, K. Guu, A. W. Yu, B. Lester, N. Du, A. M. Dai, and Q. V. Le, 'Finetuned language models are zeroshot learners,' arXiv:2109.01652 , 2021. 1, 6, 11"
+        },
+        {
+          "title": "MM-React: Prompting ChatGPT for Multimodal Reasoning and Action",
+          "citation": "Z. Yang, L. Li, J. Wang, K. Lin, E. Azarnasab, F. Ahmed, Z. Liu, C. Liu, M. Zeng, and L. Wang, 'Mm-react: Prompting chatgpt for multimodal reasoning and action,' arXiv:2303.11381 , 2023. 1, 11, 12, 13"
+        },
+        {
+          "title": "Multimodal-gpt: A vision and language model for dialogue with humans",
+          "citation": "T. Gong, C. Lyu, S. Zhang, Y. Wang, M. Zheng, Q. Zhao, K. Liu, W. Zhang, P. Luo, and K. Chen, 'Multimodal-gpt: A vision and language model for dialogue with humans,' arXiv:2305.04790 , 2023. 6, 7, 11"
+        },
+        {
+          "title": "A survey for in-context learning",
+          "citation": "Q. Dong, L. Li, D. Dai, C. Zheng, Z. Wu, B. Chang, X. Sun, J. Xu, and Z. Sui, 'A survey for in-context learning,' arXiv:2301.00234 , 2022. 11"
+        },
+        {
+          "title": "Chameleon: Plug-and-play compositional reasoning with large language models",
+          "citation": "P. Lu, B. Peng, H. Cheng, M. Galley, K.-W. Chang, Y. N. Wu, S.C. Zhu, and J. Gao, 'Chameleon: Plug-and-play compositional reasoning with large language models,' arXiv:2304.09842 , 2023. 11, 12, 13"
+        },
+        {
+          "title": "Visual programming: Compositional visual reasoning without training",
+          "citation": "T. Gupta and A. Kembhavi, 'Visual programming: Compositional visual reasoning without training,' in CVPR , 2023. 11, 12, 13"
+        },
+        {
+          "title": "Fantastically ordered prompts and where to find them: Overcoming few-shot prompt order sensitivity",
+          "citation": "Y. Lu, M. Bartolo, A. Moore, S. Riedel, and P. Stenetorp, 'Fantastically ordered prompts and where to find them: Overcoming few-shot prompt order sensitivity,' arXiv:2104.08786 , 2021. 11"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "21",
+      "sec_title": "7.1.1 Improvement on ICL capabilities",
+      "citations": [
+        {
+          "title": "Flamingo: a visual language model for few-shot learning",
+          "citation": "J.-B. Alayrac, J. Donahue, P. Luc, A. Miech, I. Barr, Y. Hasson, K. Lenc, A. Mensch, K. Millican, M. Reynolds et al. , 'Flamingo: a visual language model for few-shot learning,' NeurIPS , 2022. 4, 11, 12"
+        },
+        {
+          "title": "Mimic-it: Multi-modal in-context instruction tuning",
+          "citation": "B. Li, Y. Zhang, L. Chen, J. Wang, F. Pu, J. Yang, C. Li, and Z. Liu, 'Mimic-it: Multi-modal in-context instruction tuning,' arXiv:2306.05425 , 2023. 11"
+        },
+        {
+          "title": "Generative pretraining in multimodality",
+          "citation": "Q. Sun, Q. Yu, Y. Cui, F. Zhang, X. Zhang, Y. Wang, H. Gao, J. Liu, T. Huang, and X. Wang, 'Generative pretraining in multimodality,' arXiv:2307.05222 , 2023. 11"
+        },
+        {
+          "title": "Towards more unified in-context visual understanding",
+          "citation": "D. Sheng, D. Chen, Z. Tan, Q. Liu, Q. Chu, J. Bao, T. Gong, B. Liu, S. Xu, and N. Yu, 'Towards more unified in-context visual understanding,' arXiv:2312.02520 , 2023. 12"
+        },
+        {
+          "title": "Linkcontext learning for multimodal llms",
+          "citation": "Y. Tai, W. Fan, Z. Zhang, F. Zhu, R. Zhao, and Z. Liu, 'Linkcontext learning for multimodal llms,' arXiv:2308.07891 , 2023. 12"
+        },
+        {
+          "title": "Mmicl: Empowering vision-language model with multi-modal in-context learning",
+          "citation": "H. Zhao, Z. Cai, S. Si, X. Ma, K. An, L. Chen, Z. Liu, S. Wang, W. Han, and B. Chang, 'Mmicl: Empowering vision-language model with multi-modal in-context learning,' arXiv:2309.07915 , 2023. 12"
+        },
+        {
+          "title": "Hijacking context in large multi-modal models",
+          "citation": "J. Jeong, 'Hijacking context in large multi-modal models,' arXiv:2312.07553 , 2023. 12, 14"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "22",
+      "sec_title": "7.1.2 Applications",
+      "citations": [
+        {
+          "title": "MM-React: Prompting ChatGPT for Multimodal Reasoning and Action",
+          "citation": "Z. Yang, L. Li, J. Wang, K. Lin, E. Azarnasab, F. Ahmed, Z. Liu, C. Liu, M. Zeng, and L. Wang, 'Mm-react: Prompting chatgpt for multimodal reasoning and action,' arXiv:2303.11381 , 2023. 1, 11, 12, 13"
+        },
+        {
+          "title": "Flamingo: a visual language model for few-shot learning",
+          "citation": "J.-B. Alayrac, J. Donahue, P. Luc, A. Miech, I. Barr, Y. Hasson, K. Lenc, A. Mensch, K. Millican, M. Reynolds et al. , 'Flamingo: a visual language model for few-shot learning,' NeurIPS , 2022. 4, 11, 12"
+        },
+        {
+          "title": "Chameleon: Plug-and-play compositional reasoning with large language models",
+          "citation": "P. Lu, B. Peng, H. Cheng, M. Galley, K.-W. Chang, Y. N. Wu, S.C. Zhu, and J. Gao, 'Chameleon: Plug-and-play compositional reasoning with large language models,' arXiv:2304.09842 , 2023. 11, 12, 13"
+        },
+        {
+          "title": "Visual programming: Compositional visual reasoning without training",
+          "citation": "T. Gupta and A. Kembhavi, 'Visual programming: Compositional visual reasoning without training,' in CVPR , 2023. 11, 12, 13"
+        },
+        {
+          "title": "An empirical study of gpt-3 for few-shot knowledge-based vqa",
+          "citation": "Z. Yang, Z. Gan, J. Wang, X. Hu, Y. Lu, Z. Liu, and L. Wang, 'An empirical study of gpt-3 for few-shot knowledge-based vqa,' in AAAI , 2022. 12"
+        },
+        {
+          "title": "Multimodal few-shot learning with frozen language models",
+          "citation": "M. Tsimpoukelli, J. L. Menick, S. Cabi, S. Eslami, O. Vinyals, and F. Hill, 'Multimodal few-shot learning with frozen language models,' NeurIPS , 2021. 12"
+        },
+        {
+          "title": "Otter: A multi-modal model with in-context instruction tuning",
+          "citation": "B. Li, Y. Zhang, L. Chen, J. Wang, J. Yang, and Z. Liu, 'Otter: A multi-modal model with in-context instruction tuning,' arXiv:2305.03726 , 2023. 12"
+        },
+        {
+          "title": "Hugginggpt: Solving ai tasks with chatgpt and its friends in huggingface",
+          "citation": "Y. Shen, K. Song, X. Tan, D. Li, W. Lu, and Y. Zhuang, 'Hugginggpt: Solving ai tasks with chatgpt and its friends in huggingface,' arXiv:2303.17580 , 2023. 12, 13"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "23",
+      "sec_title": "7.2 Multimodal Chain of Thought",
+      "citations": [
+        {
+          "title": "Chain of thought prompting elicits reasoning in large language models",
+          "citation": "J. Wei, X. Wang, D. Schuurmans, M. Bosma, E. Chi, Q. Le, and D. Zhou, 'Chain of thought prompting elicits reasoning in large language models,' arXiv:2201.11903 , 2022. 1, 12"
+        },
+        {
+          "title": "Large language models are zero-shot reasoners",
+          "citation": "T. Kojima, S. S. Gu, M. Reid, Y. Matsuo, and Y. Iwasawa, 'Large language models are zero-shot reasoners,' arXiv:2205.11916 , 2022. 12"
+        },
+        {
+          "title": "Automatic chain of thought prompting in large language models",
+          "citation": "Z. Zhang, A. Zhang, M. Li, and A. Smola, 'Automatic chain of thought prompting in large language models,' arXiv:2210.03493 , 2022. 12"
+        },
+        {
+          "title": "Visual chain of thought: Bridging logical gaps with multimodal infillings",
+          "citation": "D. Rose, V. Himakunthala, A. Ouyang, R. He, A. Mei, Y. Lu, M. Saxon, C. Sonar, D. Mirza, and W. Y. Wang, 'Visual chain of thought: Bridging logical gaps with multimodal infillings,' arXiv:2305.02317 , 2023. 12"
+        },
+        {
+          "title": "Multimodal chain-of-thought reasoning in language models",
+          "citation": "Z. Zhang, A. Zhang, M. Li, H. Zhao, G. Karypis, and A. Smola, 'Multimodal chain-of-thought reasoning in language models,' arXiv:2302.00923 , 2023. 12"
+        },
+        {
+          "title": "Let's think frame by frame: Evaluating video chain of thought with video infilling and prediction",
+          "citation": "V. Himakunthala, A. Ouyang, D. Rose, R. He, A. Mei, Y. Lu, C. Sonar, M. Saxon, and W. Y. Wang, 'Let's think frame by frame: Evaluating video chain of thought with video infilling and prediction,' arXiv:2305.13903 , 2023. 12"
+        },
+        {
+          "title": "Chain of thought prompt tuning in vision language models",
+          "citation": "J. Ge, H. Luo, S. Qian, Y. Gan, J. Fu, and S. Zhan, 'Chain of thought prompt tuning in vision language models,' arXiv:2304.07919 , 2023. 12"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "24",
+      "sec_title": "7.2.1 Learning Paradigms",
+      "citations": [
+        {
+          "title": "MM-React: Prompting ChatGPT for Multimodal Reasoning and Action",
+          "citation": "Z. Yang, L. Li, J. Wang, K. Lin, E. Azarnasab, F. Ahmed, Z. Liu, C. Liu, M. Zeng, and L. Wang, 'Mm-react: Prompting chatgpt for multimodal reasoning and action,' arXiv:2303.11381 , 2023. 1, 11, 12, 13"
+        },
+        {
+          "title": "Learn to explain: Multimodal reasoning via thought chains for science question answering",
+          "citation": "P. Lu, S. Mishra, T. Xia, L. Qiu, K.-W. Chang, S.-C. Zhu, O. Tafjord, P. Clark, and A. Kalyan, 'Learn to explain: Multimodal reasoning via thought chains for science question answering,' NeurIPS , 2022. 8, 9, 12"
+        },
+        {
+          "title": "Visual chain of thought: Bridging logical gaps with multimodal infillings",
+          "citation": "D. Rose, V. Himakunthala, A. Ouyang, R. He, A. Mei, Y. Lu, M. Saxon, C. Sonar, D. Mirza, and W. Y. Wang, 'Visual chain of thought: Bridging logical gaps with multimodal infillings,' arXiv:2305.02317 , 2023. 12"
+        },
+        {
+          "title": "Multimodal chain-of-thought reasoning in language models",
+          "citation": "Z. Zhang, A. Zhang, M. Li, H. Zhao, G. Karypis, and A. Smola, 'Multimodal chain-of-thought reasoning in language models,' arXiv:2302.00923 , 2023. 12"
+        },
+        {
+          "title": "Let's think frame by frame: Evaluating video chain of thought with video infilling and prediction",
+          "citation": "V. Himakunthala, A. Ouyang, D. Rose, R. He, A. Mei, Y. Lu, C. Sonar, M. Saxon, and W. Y. Wang, 'Let's think frame by frame: Evaluating video chain of thought with video infilling and prediction,' arXiv:2305.13903 , 2023. 12"
+        },
+        {
+          "title": "Chain of thought prompt tuning in vision language models",
+          "citation": "J. Ge, H. Luo, S. Qian, Y. Gan, J. Fu, and S. Zhan, 'Chain of thought prompt tuning in vision language models,' arXiv:2304.07919 , 2023. 12"
+        },
+        {
+          "title": "Visual chatgpt: Talking, drawing and editing with visual foundation models",
+          "citation": "C. Wu, S. Yin, W. Qi, X. Wang, Z. Tang, and N. Duan, 'Visual chatgpt: Talking, drawing and editing with visual foundation models,' arXiv:2303.04671 , 2023. 12, 13"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "25",
+      "sec_title": "7.2.2 Chain Configuration",
+      "citations": [
+        {
+          "title": "MM-React: Prompting ChatGPT for Multimodal Reasoning and Action",
+          "citation": "Z. Yang, L. Li, J. Wang, K. Lin, E. Azarnasab, F. Ahmed, Z. Liu, C. Liu, M. Zeng, and L. Wang, 'Mm-react: Prompting chatgpt for multimodal reasoning and action,' arXiv:2303.11381 , 2023. 1, 11, 12, 13"
+        },
+        {
+          "title": "Caption anything: Interactive image description with diverse multimodal controls",
+          "citation": "T. Wang, J. Zhang, J. Fei, Y. Ge, H. Zheng, Y. Tang, Z. Li, M. Gao, S. Zhao, Y. Shan et al. , 'Caption anything: Interactive image description with diverse multimodal controls,' arXiv:2305.02677 , 2023. 4, 12, 13"
+        },
+        {
+          "title": "Learn to explain: Multimodal reasoning via thought chains for science question answering",
+          "citation": "P. Lu, S. Mishra, T. Xia, L. Qiu, K.-W. Chang, S.-C. Zhu, O. Tafjord, P. Clark, and A. Kalyan, 'Learn to explain: Multimodal reasoning via thought chains for science question answering,' NeurIPS , 2022. 8, 9, 12"
+        },
+        {
+          "title": "Chameleon: Plug-and-play compositional reasoning with large language models",
+          "citation": "P. Lu, B. Peng, H. Cheng, M. Galley, K.-W. Chang, Y. N. Wu, S.C. Zhu, and J. Gao, 'Chameleon: Plug-and-play compositional reasoning with large language models,' arXiv:2304.09842 , 2023. 11, 12, 13"
+        },
+        {
+          "title": "Visual programming: Compositional visual reasoning without training",
+          "citation": "T. Gupta and A. Kembhavi, 'Visual programming: Compositional visual reasoning without training,' in CVPR , 2023. 11, 12, 13"
+        },
+        {
+          "title": "Visual chain of thought: Bridging logical gaps with multimodal infillings",
+          "citation": "D. Rose, V. Himakunthala, A. Ouyang, R. He, A. Mei, Y. Lu, M. Saxon, C. Sonar, D. Mirza, and W. Y. Wang, 'Visual chain of thought: Bridging logical gaps with multimodal infillings,' arXiv:2305.02317 , 2023. 12"
+        },
+        {
+          "title": "Multimodal chain-of-thought reasoning in language models",
+          "citation": "Z. Zhang, A. Zhang, M. Li, H. Zhao, G. Karypis, and A. Smola, 'Multimodal chain-of-thought reasoning in language models,' arXiv:2302.00923 , 2023. 12"
+        },
+        {
+          "title": "Let's think frame by frame: Evaluating video chain of thought with video infilling and prediction",
+          "citation": "V. Himakunthala, A. Ouyang, D. Rose, R. He, A. Mei, Y. Lu, C. Sonar, M. Saxon, and W. Y. Wang, 'Let's think frame by frame: Evaluating video chain of thought with video infilling and prediction,' arXiv:2305.13903 , 2023. 12"
+        },
+        {
+          "title": "Chain of thought prompt tuning in vision language models",
+          "citation": "J. Ge, H. Luo, S. Qian, Y. Gan, J. Fu, and S. Zhan, 'Chain of thought prompt tuning in vision language models,' arXiv:2304.07919 , 2023. 12"
+        },
+        {
+          "title": "Visual chatgpt: Talking, drawing and editing with visual foundation models",
+          "citation": "C. Wu, S. Yin, W. Qi, X. Wang, Z. Tang, and N. Duan, 'Visual chatgpt: Talking, drawing and editing with visual foundation models,' arXiv:2303.04671 , 2023. 12, 13"
+        },
+        {
+          "title": "Ddcot: Duty-distinct chain-of-thought prompting for multimodal reasoning in language models",
+          "citation": "G. Zheng, B. Yang, J. Tang, H.-Y. Zhou, and S. Yang, 'Ddcot: Duty-distinct chain-of-thought prompting for multimodal reasoning in language models,' in NeurIPS , 2023. 12"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "26",
+      "sec_title": "7.2.3 Generation Patterns",
+      "citations": [
+        {
+          "title": "MM-React: Prompting ChatGPT for Multimodal Reasoning and Action",
+          "citation": "Z. Yang, L. Li, J. Wang, K. Lin, E. Azarnasab, F. Ahmed, Z. Liu, C. Liu, M. Zeng, and L. Wang, 'Mm-react: Prompting chatgpt for multimodal reasoning and action,' arXiv:2303.11381 , 2023. 1, 11, 12, 13"
+        },
+        {
+          "title": "Learn to explain: Multimodal reasoning via thought chains for science question answering",
+          "citation": "P. Lu, S. Mishra, T. Xia, L. Qiu, K.-W. Chang, S.-C. Zhu, O. Tafjord, P. Clark, and A. Kalyan, 'Learn to explain: Multimodal reasoning via thought chains for science question answering,' NeurIPS , 2022. 8, 9, 12"
+        },
+        {
+          "title": "Chameleon: Plug-and-play compositional reasoning with large language models",
+          "citation": "P. Lu, B. Peng, H. Cheng, M. Galley, K.-W. Chang, Y. N. Wu, S.C. Zhu, and J. Gao, 'Chameleon: Plug-and-play compositional reasoning with large language models,' arXiv:2304.09842 , 2023. 11, 12, 13"
+        },
+        {
+          "title": "Visual programming: Compositional visual reasoning without training",
+          "citation": "T. Gupta and A. Kembhavi, 'Visual programming: Compositional visual reasoning without training,' in CVPR , 2023. 11, 12, 13"
+        },
+        {
+          "title": "Visual chain of thought: Bridging logical gaps with multimodal infillings",
+          "citation": "D. Rose, V. Himakunthala, A. Ouyang, R. He, A. Mei, Y. Lu, M. Saxon, C. Sonar, D. Mirza, and W. Y. Wang, 'Visual chain of thought: Bridging logical gaps with multimodal infillings,' arXiv:2305.02317 , 2023. 12"
+        },
+        {
+          "title": "Multimodal chain-of-thought reasoning in language models",
+          "citation": "Z. Zhang, A. Zhang, M. Li, H. Zhao, G. Karypis, and A. Smola, 'Multimodal chain-of-thought reasoning in language models,' arXiv:2302.00923 , 2023. 12"
+        },
+        {
+          "title": "Let's think frame by frame: Evaluating video chain of thought with video infilling and prediction",
+          "citation": "V. Himakunthala, A. Ouyang, D. Rose, R. He, A. Mei, Y. Lu, C. Sonar, M. Saxon, and W. Y. Wang, 'Let's think frame by frame: Evaluating video chain of thought with video infilling and prediction,' arXiv:2305.13903 , 2023. 12"
+        },
+        {
+          "title": "Visual chatgpt: Talking, drawing and editing with visual foundation models",
+          "citation": "C. Wu, S. Yin, W. Qi, X. Wang, Z. Tang, and N. Duan, 'Visual chatgpt: Talking, drawing and editing with visual foundation models,' arXiv:2303.04671 , 2023. 12, 13"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "27",
+      "sec_title": "7.3.1 Introduction",
+      "citations": [
+        {
+          "title": "MM-React: Prompting ChatGPT for Multimodal Reasoning and Action",
+          "citation": "Z. Yang, L. Li, J. Wang, K. Lin, E. Azarnasab, F. Ahmed, Z. Liu, C. Liu, M. Zeng, and L. Wang, 'Mm-react: Prompting chatgpt for multimodal reasoning and action,' arXiv:2303.11381 , 2023. 1, 11, 12, 13"
+        },
+        {
+          "title": "Caption anything: Interactive image description with diverse multimodal controls",
+          "citation": "T. Wang, J. Zhang, J. Fei, Y. Ge, H. Zheng, Y. Tang, Z. Li, M. Gao, S. Zhao, Y. Shan et al. , 'Caption anything: Interactive image description with diverse multimodal controls,' arXiv:2305.02677 , 2023. 4, 12, 13"
+        },
+        {
+          "title": "Chatgpt asks, blip-2 answers: Automatic questioning towards enriched visual descriptions",
+          "citation": "D. Zhu, J. Chen, K. Haydarov, X. Shen, W. Zhang, and M. Elhoseiny, 'Chatgpt asks, blip-2 answers: Automatic questioning towards enriched visual descriptions,' arXiv:2303.06594 , 2023. 4, 12"
+        },
+        {
+          "title": "Gpt4tools: Teaching large language model to use tools via self-instruction",
+          "citation": "R. Yang, L. Song, Y. Li, S. Zhao, Y. Ge, X. Li, and Y. Shan, 'Gpt4tools: Teaching large language model to use tools via selfinstruction,' arXiv:2305.18752 , 2023. 7, 9, 12, 13"
+        },
+        {
+          "title": "Chameleon: Plug-and-play compositional reasoning with large language models",
+          "citation": "P. Lu, B. Peng, H. Cheng, M. Galley, K.-W. Chang, Y. N. Wu, S.C. Zhu, and J. Gao, 'Chameleon: Plug-and-play compositional reasoning with large language models,' arXiv:2304.09842 , 2023. 11, 12, 13"
+        },
+        {
+          "title": "Visual programming: Compositional visual reasoning without training",
+          "citation": "T. Gupta and A. Kembhavi, 'Visual programming: Compositional visual reasoning without training,' in CVPR , 2023. 11, 12, 13"
+        },
+        {
+          "title": "Hugginggpt: Solving ai tasks with chatgpt and its friends in huggingface",
+          "citation": "Y. Shen, K. Song, X. Tan, D. Li, W. Lu, and Y. Zhuang, 'Hugginggpt: Solving ai tasks with chatgpt and its friends in huggingface,' arXiv:2303.17580 , 2023. 12, 13"
+        },
+        {
+          "title": "Visual chatgpt: Talking, drawing and editing with visual foundation models",
+          "citation": "C. Wu, S. Yin, W. Qi, X. Wang, Z. Tang, and N. Duan, 'Visual chatgpt: Talking, drawing and editing with visual foundation models,' arXiv:2303.04671 , 2023. 12, 13"
+        },
+        {
+          "title": "Talm: Tool augmented language models",
+          "citation": "A. Parisi, Y. Zhao, and N. Fiedel, 'Talm: Tool augmented language models,' arXiv:2205.12255 , 2022. 12"
+        },
+        {
+          "title": "Pal: Program-aided language models",
+          "citation": "L. Gao, A. Madaan, S. Zhou, U. Alon, P. Liu, Y. Yang, J. Callan, and G. Neubig, 'Pal: Program-aided language models,' arXiv:2211.10435 , 2022. 12"
+        },
+        {
+          "title": "Toolformer: Language models can teach themselves to use tools",
+          "citation": "T. Schick, J. Dwivedi-Yu, R. Dessì, R. Raileanu, M. Lomeli, L. Zettlemoyer, N. Cancedda, and T. Scialom, 'Toolformer: Language models can teach themselves to use tools,' arXiv:2302.04761 , 2023. 12"
+        },
+        {
+          "title": "Webgpt: Browser-assisted question-answering with human feedback",
+          "citation": "R. Nakano, J. Hilton, S. Balaji, J. Wu, L. Ouyang, C. Kim, C. Hesse, S. Jain, V. Kosaraju, W. Saunders et al. , 'Webgpt: Browser-assisted question-answering with human feedback,' arXiv:2112.09332 , 2021. 12"
+        },
+        {
+          "title": "Socratic models: Composing zero-shot multimodal reasoning with language",
+          "citation": "A. Zeng, A. Wong, S. Welker, K. Choromanski, F. Tombari, A. Purohit, M. Ryoo, V. Sindhwani, J. Lee, V. Vanhoucke et al. , 'Socratic models: Composing zero-shot multimodal reasoning with language,' arXiv:2204.00598 , 2022. 12"
+        },
+        {
+          "title": "Idealgpt: Iteratively decomposing vision and language reasoning via large language models",
+          "citation": "H. You, R. Sun, Z. Wang, L. Chen, G. Wang, H. A. Ayyubi, K.-W. Chang, and S.-F. Chang, 'Idealgpt: Iteratively decomposing vision and language reasoning via large language models,' arXiv:2305.14985 , 2023. 12, 13"
+        },
+        {
+          "title": "Sus-x: Training-free name-only transfer of vision-language models",
+          "citation": "V. Udandarao, A. Gupta, and S. Albanie, 'Sus-x: Trainingfree name-only transfer of vision-language models,' arXiv:2211.16198 , 2022. 12"
+        },
+        {
+          "title": "Pointclip v2: Adapting clip for powerful 3d open-world learning",
+          "citation": "X. Zhu, R. Zhang, B. He, Z. Zeng, S. Zhang, and P. Gao, 'Pointclip v2: Adapting clip for powerful 3d open-world learning,' arXiv:2211.11682 , 2022. 13"
+        },
+        {
+          "title": "Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners",
+          "citation": "R. Zhang, X. Hu, B. Li, S. Huang, H. Deng, Y. Qiao, P. Gao, and H. Li, 'Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners,' in CVPR , 2023. 13"
+        },
+        {
+          "title": "Bottom-up and top-down attention for image captioning and visual question answering",
+          "citation": "P. Anderson, X. He, C. Buehler, D. Teney, M. Johnson, S. Gould, and L. Zhang, 'Bottom-up and top-down attention for image captioning and visual question answering,' in CVPR , 2018. 13"
+        },
+        {
+          "title": "Deep modular coattention networks for visual question answering",
+          "citation": "Z. Yu, J. Yu, Y. Cui, D. Tao, and Q. Tian, 'Deep modular coattention networks for visual question answering,' in CVPR , 2019. 13"
+        },
+        {
+          "title": "Dynamic fusion with intra-and inter-modality attention flow for visual question answering",
+          "citation": "P. Gao, Z. Jiang, H. You, P. Lu, S. C. Hoi, X. Wang, and H. Li, 'Dynamic fusion with intra-and inter-modality attention flow for visual question answering,' in CVPR , 2019. 13"
+        },
+        {
+          "title": "Socratic models: Composing zero-shot multimodal reasoning with language",
+          "citation": "A. Zeng, A. Wong, S. Welker, K. Choromanski, F. Tombari, A. Purohit, M. Ryoo, V. Sindhwani, J. Lee, V. Vanhoucke et al. , 'Socratic models: Composing zero-shot multimodal reasoning with language,' arXiv:2204.00598 , 2022. 13"
+        },
+        {
+          "title": "Stylenet: Generating attractive visual captions with styles",
+          "citation": "C. Gan, Z. Gan, X. He, J. Gao, and L. Deng, 'Stylenet: Generating attractive visual captions with styles,' in CVPR , 2017. 13"
+        },
+        {
+          "title": "Senticap: Generating image descriptions with sentiments",
+          "citation": "A. Mathews, L. Xie, and X. He, 'Senticap: Generating image descriptions with sentiments,' in AAAI , 2016. 13"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "28",
+      "sec_title": "7.3.2 Training Paradigms",
+      "citations": [
+        {
+          "title": "MM-React: Prompting ChatGPT for Multimodal Reasoning and Action",
+          "citation": "Z. Yang, L. Li, J. Wang, K. Lin, E. Azarnasab, F. Ahmed, Z. Liu, C. Liu, M. Zeng, and L. Wang, 'Mm-react: Prompting chatgpt for multimodal reasoning and action,' arXiv:2303.11381 , 2023. 1, 11, 12, 13"
+        },
+        {
+          "title": "Caption anything: Interactive image description with diverse multimodal controls",
+          "citation": "T. Wang, J. Zhang, J. Fei, Y. Ge, H. Zheng, Y. Tang, Z. Li, M. Gao, S. Zhao, Y. Shan et al. , 'Caption anything: Interactive image description with diverse multimodal controls,' arXiv:2305.02677 , 2023. 4, 12, 13"
+        },
+        {
+          "title": "Gpt4tools: Teaching large language model to use tools via self-instruction",
+          "citation": "R. Yang, L. Song, Y. Li, S. Zhao, Y. Ge, X. Li, and Y. Shan, 'Gpt4tools: Teaching large language model to use tools via selfinstruction,' arXiv:2305.18752 , 2023. 7, 9, 12, 13"
+        },
+        {
+          "title": "Lisa: Reasoning segmentation via large language model",
+          "citation": "X. Lai, Z. Tian, Y. Chen, Y. Li, Y. Yuan, S. Liu, and J. Jia, 'Lisa: Reasoning segmentation via large language model,' arXiv:2308.00692 , 2023. 9, 13"
+        },
+        {
+          "title": "Chameleon: Plug-and-play compositional reasoning with large language models",
+          "citation": "P. Lu, B. Peng, H. Cheng, M. Galley, K.-W. Chang, Y. N. Wu, S.C. Zhu, and J. Gao, 'Chameleon: Plug-and-play compositional reasoning with large language models,' arXiv:2304.09842 , 2023. 11, 12, 13"
+        },
+        {
+          "title": "Visual programming: Compositional visual reasoning without training",
+          "citation": "T. Gupta and A. Kembhavi, 'Visual programming: Compositional visual reasoning without training,' in CVPR , 2023. 11, 12, 13"
+        },
+        {
+          "title": "Hugginggpt: Solving ai tasks with chatgpt and its friends in huggingface",
+          "citation": "Y. Shen, K. Song, X. Tan, D. Li, W. Lu, and Y. Zhuang, 'Hugginggpt: Solving ai tasks with chatgpt and its friends in huggingface,' arXiv:2303.17580 , 2023. 12, 13"
+        },
+        {
+          "title": "Pointclip v2: Adapting clip for powerful 3d open-world learning",
+          "citation": "X. Zhu, R. Zhang, B. He, Z. Zeng, S. Zhang, and P. Gao, 'Pointclip v2: Adapting clip for powerful 3d open-world learning,' arXiv:2211.11682 , 2022. 13"
+        },
+        {
+          "title": "V*: Guided visual search as a core mechanism in multimodal llms",
+          "citation": "P. Wu and S. Xie, 'V*: Guided visual search as a core mechanism in multimodal llms,' arXiv:2312.14135 , 2023. 13"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "29",
+      "sec_title": "7.3.3 Functions",
+      "citations": [
+        {
+          "title": "Caption anything: Interactive image description with diverse multimodal controls",
+          "citation": "T. Wang, J. Zhang, J. Fei, Y. Ge, H. Zheng, Y. Tang, Z. Li, M. Gao, S. Zhao, Y. Shan et al. , 'Caption anything: Interactive image description with diverse multimodal controls,' arXiv:2305.02677 , 2023. 4, 12, 13"
+        },
+        {
+          "title": "Gpt4tools: Teaching large language model to use tools via self-instruction",
+          "citation": "R. Yang, L. Song, Y. Li, S. Zhao, Y. Ge, X. Li, and Y. Shan, 'Gpt4tools: Teaching large language model to use tools via selfinstruction,' arXiv:2305.18752 , 2023. 7, 9, 12, 13"
+        },
+        {
+          "title": "Chameleon: Plug-and-play compositional reasoning with large language models",
+          "citation": "P. Lu, B. Peng, H. Cheng, M. Galley, K.-W. Chang, Y. N. Wu, S.C. Zhu, and J. Gao, 'Chameleon: Plug-and-play compositional reasoning with large language models,' arXiv:2304.09842 , 2023. 11, 12, 13"
+        },
+        {
+          "title": "Visual programming: Compositional visual reasoning without training",
+          "citation": "T. Gupta and A. Kembhavi, 'Visual programming: Compositional visual reasoning without training,' in CVPR , 2023. 11, 12, 13"
+        },
+        {
+          "title": "Hugginggpt: Solving ai tasks with chatgpt and its friends in huggingface",
+          "citation": "Y. Shen, K. Song, X. Tan, D. Li, W. Lu, and Y. Zhuang, 'Hugginggpt: Solving ai tasks with chatgpt and its friends in huggingface,' arXiv:2303.17580 , 2023. 12, 13"
+        },
+        {
+          "title": "Idealgpt: Iteratively decomposing vision and language reasoning via large language models",
+          "citation": "H. You, R. Sun, Z. Wang, L. Chen, G. Wang, H. A. Ayyubi, K.-W. Chang, and S.-F. Chang, 'Idealgpt: Iteratively decomposing vision and language reasoning via large language models,' arXiv:2305.14985 , 2023. 12, 13"
+        },
+        {
+          "title": "Pointclip v2: Adapting clip for powerful 3d open-world learning",
+          "citation": "X. Zhu, R. Zhang, B. He, Z. Zeng, S. Zhang, and P. Gao, 'Pointclip v2: Adapting clip for powerful 3d open-world learning,' arXiv:2211.11682 , 2022. 13"
+        },
+        {
+          "title": "Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners",
+          "citation": "R. Zhang, X. Hu, B. Li, S. Huang, H. Deng, Y. Qiao, P. Gao, and H. Li, 'Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners,' in CVPR , 2023. 13"
+        },
+        {
+          "title": "Socratic models: Composing zero-shot multimodal reasoning with language",
+          "citation": "A. Zeng, A. Wong, S. Welker, K. Choromanski, F. Tombari, A. Purohit, M. Ryoo, V. Sindhwani, J. Lee, V. Vanhoucke et al. , 'Socratic models: Composing zero-shot multimodal reasoning with language,' arXiv:2204.00598 , 2022. 13"
+        },
+        {
+          "title": "Least-to-most prompting enables complex reasoning in large language models",
+          "citation": "D. Zhou, N. Schärli, L. Hou, J. Wei, N. Scales, X. Wang, D. Schuurmans, O. Bousquet, Q. Le, and E. Chi, 'Least-tomost prompting enables complex reasoning in large language models,' arXiv:2205.10625 , 2022. 13"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "30",
+      "sec_title": "8 CHALLENGES AND FUTURE DIRECTIONS",
+      "citations": [
+        {
+          "title": "Hijacking context in large multi-modal models",
+          "citation": "J. Jeong, 'Hijacking context in large multi-modal models,' arXiv:2312.07553 , 2023. 12, 14"
+        },
+        {
+          "title": "On evaluating adversarial robustness of large vision-language models",
+          "citation": "Y. Zhao, T. Pang, C. Du, X. Yang, C. Li, N.-M. Cheung, and M. Lin, 'On evaluating adversarial robustness of large vision-language models,' arXiv:2305.16934 , 2023. 14"
+        },
+        {
+          "title": "Jailbreak in pieces: Compositional adversarial attacks on multi-modal language models",
+          "citation": "E. Shayegani, Y. Dong, and N. Abu-Ghazaleh, 'Jailbreak in pieces: Compositional adversarial attacks on multi-modal language models,' in ICLR , 2023. 14"
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

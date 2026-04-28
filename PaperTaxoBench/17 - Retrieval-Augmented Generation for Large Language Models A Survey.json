@@ -1,0 +1,2490 @@
+{
+  "track": "Information Retrieval",
+  "paper_title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "INTRODUCTION",
+      "citations": [
+        {
+          "title": "Large language models struggle to learn long-tail knowledge",
+          "citation": "N. Kandpal, H. Deng, A. Roberts, E. Wallace, and C. Raffel, 'Large language models struggle to learn long-tail knowledge,' in International Conference on Machine Learning . PMLR, 2023, pp. 15 69615 707."
+        },
+        {
+          "title": "Siren's song in the ai ocean: A survey on hallucination in large language models",
+          "citation": "Y. Zhang, Y. Li, L. Cui, D. Cai, L. Liu, T. Fu, X. Huang, E. Zhao, Y. Zhang, Y. Chen et al. , 'Siren's song in the ai ocean: A survey on hallucination in large language models,' arXiv preprint arXiv:2309.01219 , 2023."
+        },
+        {
+          "title": "Gar-meets-rag paradigm for zero-shot information retrieval",
+          "citation": "D. Arora, A. Kini, S. R. Chowdhury, N. Natarajan, G. Sinha, and A. Sharma, 'Gar-meets-rag paradigm for zero-shot information retrieval,' arXiv preprint arXiv:2310.20158 , 2023."
+        },
+        {
+          "title": "Improving language models by retrieving from trillions of tokens",
+          "citation": "S. Borgeaud, A. Mensch, J. Hoffmann, T. Cai, E. Rutherford, K. Millican, G. B. Van Den Driessche, J.-B. Lespiau, B. Damoc, A. Clark et al. , 'Improving language models by retrieving from trillions of tokens,' in International conference on machine learning . PMLR, 2022, pp. 2206-2240."
+        },
+        {
+          "title": "Training language models to follow instructions with human feedback",
+          "citation": "L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray et al. , 'Training language models to follow instructions with human feedback,' Advances in neural information processing systems , vol. 35, pp. 27 730-27 744, 2022."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "OVERVIEW OF RAG",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Naive RAG",
+          "citations": [
+            {
+              "title": "Query rewriting for retrieval-augmented large language models",
+              "citation": "X. Ma, Y. Gong, P. He, H. Zhao, and N. Duan, 'Query rewriting for retrieval-augmented large language models,' arXiv preprint arXiv:2305.14283 , 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "2.1.1",
+              "sec_title": "Augmentation Hurdles .",
+              "citations": [
+                {
+                  "title": "Advanced rag techniques: an illustrated overview",
+                  "citation": "I. ILIN, 'Advanced rag techniques: an illustrated overview,' https://pub.towardsai.net/ advanced-rag-techniques-an-illustrated-overview-04d193d8fec6, 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Advanced RAG",
+          "citations": [
+            {
+              "title": "Advanced rag techniques: an illustrated overview",
+              "citation": "I. ILIN, 'Advanced rag techniques: an illustrated overview,' https://pub.towardsai.net/ advanced-rag-techniques-an-illustrated-overview-04d193d8fec6, 2023."
+            },
+            {
+              "title": "Query rewriting for retrieval-augmented large language models",
+              "citation": "X. Ma, Y. Gong, P. He, H. Zhao, and N. Duan, 'Query rewriting for retrieval-augmented large language models,' arXiv preprint arXiv:2305.14283 , 2023."
+            },
+            {
+              "title": "Large language model based long-tail query rewriting in taobao search",
+              "citation": "W. Peng, G. Li, Y. Jiang, Z. Wang, D. Ou, X. Zeng, E. Chen et al. , 'Large language model based long-tail query rewriting in taobao search,' arXiv preprint arXiv:2311.03758 , 2023."
+            },
+            {
+              "title": "Precise zero-shot dense retrieval without relevance labels",
+              "citation": "L. Gao, X. Ma, J. Lin, and J. Callan, 'Precise zero-shot dense retrieval without relevance labels,' arXiv preprint arXiv:2212.10496 , 2022."
+            },
+            {
+              "title": "Enhancing rag pipelines in haystack: Introducing diversityranker and lostinthemiddleranker",
+              "citation": "V. Blagojevi, 'Enhancing rag pipelines in haystack: Introducing diversityranker and lostinthemiddleranker,' https://towardsdatascience.com/ enhancing-rag-pipelines-in-haystack-45f14e2bc9f5, 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "2.2.1",
+              "sec_title": "Pre-retrieval process .",
+              "citations": [
+                {
+                  "title": "Query rewriting for retrieval-augmented large language models",
+                  "citation": "X. Ma, Y. Gong, P. He, H. Zhao, and N. Duan, 'Query rewriting for retrieval-augmented large language models,' arXiv preprint arXiv:2305.14283 , 2023."
+                },
+                {
+                  "title": "Large language model based long-tail query rewriting in taobao search",
+                  "citation": "W. Peng, G. Li, Y. Jiang, Z. Wang, D. Ou, X. Zeng, E. Chen et al. , 'Large language model based long-tail query rewriting in taobao search,' arXiv preprint arXiv:2311.03758 , 2023."
+                },
+                {
+                  "title": "Take a step back: Evoking reasoning via abstraction in large language models",
+                  "citation": "H. S. Zheng, S. Mishra, X. Chen, H.-T. Cheng, E. H. Chi, Q. V. Le, and D. Zhou, 'Take a step back: Evoking reasoning via abstraction in large language models,' arXiv preprint arXiv:2310.06117 , 2023."
+                },
+                {
+                  "title": "Precise zero-shot dense retrieval without relevance labels",
+                  "citation": "L. Gao, X. Ma, J. Lin, and J. Callan, 'Precise zero-shot dense retrieval without relevance labels,' arXiv preprint arXiv:2212.10496 , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.2",
+              "sec_title": "Post-Retrieval Process .",
+              "citations": [
+                {
+                  "title": "Siren's song in the ai ocean: A survey on hallucination in large language models",
+                  "citation": "Y. Zhang, Y. Li, L. Cui, D. Cai, L. Liu, T. Fu, X. Huang, E. Zhao, Y. Zhang, Y. Chen et al. , 'Siren's song in the ai ocean: A survey on hallucination in large language models,' arXiv preprint arXiv:2309.01219 , 2023."
+                },
+                {
+                  "title": "Gar-meets-rag paradigm for zero-shot information retrieval",
+                  "citation": "D. Arora, A. Kini, S. R. Chowdhury, N. Natarajan, G. Sinha, and A. Sharma, 'Gar-meets-rag paradigm for zero-shot information retrieval,' arXiv preprint arXiv:2310.20158 , 2023."
+                },
+                {
+                  "title": "Enhancing rag pipelines in haystack: Introducing diversityranker and lostinthemiddleranker",
+                  "citation": "V. Blagojevi, 'Enhancing rag pipelines in haystack: Introducing diversityranker and lostinthemiddleranker,' https://towardsdatascience.com/ enhancing-rag-pipelines-in-haystack-45f14e2bc9f5, 2023."
+                },
+                {
+                  "title": "Generate rather than retrieve: Large language models are strong context generators",
+                  "citation": "W. Yu, D. Iter, S. Wang, Y. Xu, M. Ju, S. Sanyal, C. Zhu, M. Zeng, and M. Jiang, 'Generate rather than retrieve: Large language models are strong context generators,' arXiv preprint arXiv:2209.10063 , 2022."
+                },
+                {
+                  "title": "Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy",
+                  "citation": "Z. Shao, Y. Gong, Y. Shen, M. Huang, N. Duan, and W. Chen, 'Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy,' arXiv preprint arXiv:2305.15294 , 2023."
+                },
+                {
+                  "title": "Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases",
+                  "citation": "X. Wang, Q. Yang, Y. Qiu, J. Liang, Q. He, Z. Gu, Y. Xiao, and W. Wang, 'Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases,' arXiv preprint arXiv:2308.11761 , 2023."
+                },
+                {
+                  "title": "Forget rag, the future is rag-fusion",
+                  "citation": "A. H. Raudaschl, 'Forget rag, the future is rag-fusion,' https://towardsdatascience.com/ forget-rag-the-future-is-rag-fusion-1147298d8ad1, 2023."
+                },
+                {
+                  "title": "Lift yourself up: Retrieval-augmented text generation with self memory",
+                  "citation": "X. Cheng, D. Luo, X. Chen, L. Liu, D. Zhao, and R. Yan, 'Lift yourself up: Retrieval-augmented text generation with self memory,' arXiv preprint arXiv:2305.02437 , 2023."
+                },
+                {
+                  "title": "Training data is more valuable than you think: A simple and effective method by retrieving from training data",
+                  "citation": "S. Wang, Y. Xu, Y. Fang, Y. Liu, S. Sun, R. Xu, C. Zhu, and M. Zeng, 'Training data is more valuable than you think: A simple and effective method by retrieving from training data,' arXiv preprint arXiv:2203.08773 , 2022."
+                },
+                {
+                  "title": "From classification to generation: Insights into crosslingual retrieval augmented icl",
+                  "citation": "X. Li, E. Nie, and S. Liang, 'From classification to generation: Insights into crosslingual retrieval augmented icl,' arXiv preprint arXiv:2311.06595 , 2023."
+                },
+                {
+                  "title": "Uprise: Universal prompt retrieval for improving zero-shot evaluation",
+                  "citation": "D. Cheng, S. Huang, J. Bi, Y. Zhan, J. Liu, Y. Wang, H. Sun, F. Wei, D. Deng, and Q. Zhang, 'Uprise: Universal prompt retrieval for improving zero-shot evaluation,' arXiv preprint arXiv:2303.08518 , 2023."
+                },
+                {
+                  "title": "Promptagator: Few-shot dense retrieval from 8 examples",
+                  "citation": "Z. Dai, V. Y. Zhao, J. Ma, Y. Luan, J. Ni, J. Lu, A. Bakalov, K. Guu, K. B. Hall, and M.-W. Chang, 'Promptagator: Few-shot dense retrieval from 8 examples,' arXiv preprint arXiv:2209.11755 , 2022."
+                },
+                {
+                  "title": "Query rewriting for retrieval-augmented large language models",
+                  "citation": "X. Ma, Y. Gong, P. He, H. Zhao, and N. Duan, 'Query rewriting for retrieval-augmented large language models,' arXiv preprint arXiv:2305.14283 , 2023."
+                },
+                {
+                  "title": "Generate rather than retrieve: Large language models are strong context generators",
+                  "citation": "W. Yu, D. Iter, S. Wang, Y. Xu, M. Ju, S. Sanyal, C. Zhu, M. Zeng, and M. Jiang, 'Generate rather than retrieve: Large language models are strong context generators,' arXiv preprint arXiv:2209.10063 , 2022."
+                },
+                {
+                  "title": "Recitation-augmented language models",
+                  "citation": "Z. Sun, X. Wang, Y. Tay, Y. Yang, and D. Zhou, 'Recitation-augmented language models,' arXiv preprint arXiv:2210.01296 , 2022."
+                },
+                {
+                  "title": "Precise zero-shot dense retrieval without relevance labels",
+                  "citation": "L. Gao, X. Ma, J. Lin, and J. Callan, 'Precise zero-shot dense retrieval without relevance labels,' arXiv preprint arXiv:2212.10496 , 2022."
+                },
+                {
+                  "title": "Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive nlp",
+                  "citation": "O. Khattab, K. Santhanam, X. L. Li, D. Hall, P. Liang, C. Potts, and M. Zaharia, 'Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive nlp,' arXiv preprint arXiv:2212.14024 , 2022."
+                },
+                {
+                  "title": "Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy",
+                  "citation": "Z. Shao, Y. Gong, Y. Shen, M. Huang, N. Duan, and W. Chen, 'Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy,' arXiv preprint arXiv:2305.15294 , 2023."
+                },
+                {
+                  "title": "Active retrieval augmented generation",
+                  "citation": "Z. Jiang, F. F. Xu, L. Gao, Z. Sun, Q. Liu, J. Dwivedi-Yu, Y. Yang, J. Callan, and G. Neubig, 'Active retrieval augmented generation,' arXiv preprint arXiv:2305.06983 , 2023."
+                },
+                {
+                  "title": "Self-rag: Learning to retrieve, generate, and critique through self-reflection",
+                  "citation": "A. Asai, Z. Wu, Y. Wang, A. Sil, and H. Hajishirzi, 'Self-rag: Learning to retrieve, generate, and critique through self-reflection,' arXiv preprint arXiv:2310.11511 , 2023."
+                },
+                {
+                  "title": "Bridging the preference gap between retrievers and llms",
+                  "citation": "Z. Ke, W. Kong, C. Li, M. Zhang, Q. Mei, and M. Bendersky, 'Bridging the preference gap between retrievers and llms,' arXiv preprint arXiv:2401.06954 , 2024."
+                },
+                {
+                  "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+                  "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.3",
+          "sec_title": "Modular RAG",
+          "citations": [
+            {
+              "title": "Generate rather than retrieve: Large language models are strong context generators",
+              "citation": "W. Yu, D. Iter, S. Wang, Y. Xu, M. Ju, S. Sanyal, C. Zhu, M. Zeng, and M. Jiang, 'Generate rather than retrieve: Large language models are strong context generators,' arXiv preprint arXiv:2209.10063 , 2022."
+            },
+            {
+              "title": "Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy",
+              "citation": "Z. Shao, Y. Gong, Y. Shen, M. Huang, N. Duan, and W. Chen, 'Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy,' arXiv preprint arXiv:2305.15294 , 2023."
+            },
+            {
+              "title": "Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases",
+              "citation": "X. Wang, Q. Yang, Y. Qiu, J. Liang, Q. He, Z. Gu, Y. Xiao, and W. Wang, 'Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases,' arXiv preprint arXiv:2308.11761 , 2023."
+            },
+            {
+              "title": "Forget rag, the future is rag-fusion",
+              "citation": "A. H. Raudaschl, 'Forget rag, the future is rag-fusion,' https://towardsdatascience.com/ forget-rag-the-future-is-rag-fusion-1147298d8ad1, 2023."
+            },
+            {
+              "title": "Lift yourself up: Retrieval-augmented text generation with self memory",
+              "citation": "X. Cheng, D. Luo, X. Chen, L. Liu, D. Zhao, and R. Yan, 'Lift yourself up: Retrieval-augmented text generation with self memory,' arXiv preprint arXiv:2305.02437 , 2023."
+            },
+            {
+              "title": "Training data is more valuable than you think: A simple and effective method by retrieving from training data",
+              "citation": "S. Wang, Y. Xu, Y. Fang, Y. Liu, S. Sun, R. Xu, C. Zhu, and M. Zeng, 'Training data is more valuable than you think: A simple and effective method by retrieving from training data,' arXiv preprint arXiv:2203.08773 , 2022."
+            },
+            {
+              "title": "From classification to generation: Insights into crosslingual retrieval augmented icl",
+              "citation": "X. Li, E. Nie, and S. Liang, 'From classification to generation: Insights into crosslingual retrieval augmented icl,' arXiv preprint arXiv:2311.06595 , 2023."
+            },
+            {
+              "title": "Generate rather than retrieve: Large language models are strong context generators",
+              "citation": "W. Yu, D. Iter, S. Wang, Y. Xu, M. Ju, S. Sanyal, C. Zhu, M. Zeng, and M. Jiang, 'Generate rather than retrieve: Large language models are strong context generators,' arXiv preprint arXiv:2209.10063 , 2022."
+            },
+            {
+              "title": "Uprise: Universal prompt retrieval for improving zero-shot evaluation",
+              "citation": "D. Cheng, S. Huang, J. Bi, Y. Zhan, J. Liu, Y. Wang, H. Sun, F. Wei, D. Deng, and Q. Zhang, 'Uprise: Universal prompt retrieval for improving zero-shot evaluation,' arXiv preprint arXiv:2303.08518 , 2023."
+            },
+            {
+              "title": "Promptagator: Few-shot dense retrieval from 8 examples",
+              "citation": "Z. Dai, V. Y. Zhao, J. Ma, Y. Luan, J. Ni, J. Lu, A. Bakalov, K. Guu, K. B. Hall, and M.-W. Chang, 'Promptagator: Few-shot dense retrieval from 8 examples,' arXiv preprint arXiv:2209.11755 , 2022."
+            },
+            {
+              "title": "Query rewriting for retrieval-augmented large language models",
+              "citation": "X. Ma, Y. Gong, P. He, H. Zhao, and N. Duan, 'Query rewriting for retrieval-augmented large language models,' arXiv preprint arXiv:2305.14283 , 2023."
+            },
+            {
+              "title": "Generate rather than retrieve: Large language models are strong context generators",
+              "citation": "W. Yu, D. Iter, S. Wang, Y. Xu, M. Ju, S. Sanyal, C. Zhu, M. Zeng, and M. Jiang, 'Generate rather than retrieve: Large language models are strong context generators,' arXiv preprint arXiv:2209.10063 , 2022."
+            },
+            {
+              "title": "Recitation-augmented language models",
+              "citation": "Z. Sun, X. Wang, Y. Tay, Y. Yang, and D. Zhou, 'Recitation-augmented language models,' arXiv preprint arXiv:2210.01296 , 2022."
+            },
+            {
+              "title": "Precise zero-shot dense retrieval without relevance labels",
+              "citation": "L. Gao, X. Ma, J. Lin, and J. Callan, 'Precise zero-shot dense retrieval without relevance labels,' arXiv preprint arXiv:2212.10496 , 2022."
+            },
+            {
+              "title": "Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive nlp",
+              "citation": "O. Khattab, K. Santhanam, X. L. Li, D. Hall, P. Liang, C. Potts, and M. Zaharia, 'Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive nlp,' arXiv preprint arXiv:2212.14024 , 2022."
+            },
+            {
+              "title": "Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy",
+              "citation": "Z. Shao, Y. Gong, Y. Shen, M. Huang, N. Duan, and W. Chen, 'Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy,' arXiv preprint arXiv:2305.15294 , 2023."
+            },
+            {
+              "title": "Active retrieval augmented generation",
+              "citation": "Z. Jiang, F. F. Xu, L. Gao, Z. Sun, Q. Liu, J. Dwivedi-Yu, Y. Yang, J. Callan, and G. Neubig, 'Active retrieval augmented generation,' arXiv preprint arXiv:2305.06983 , 2023."
+            },
+            {
+              "title": "Self-rag: Learning to retrieve, generate, and critique through self-reflection",
+              "citation": "A. Asai, Z. Wu, Y. Wang, A. Sil, and H. Hajishirzi, 'Self-rag: Learning to retrieve, generate, and critique through self-reflection,' arXiv preprint arXiv:2310.11511 , 2023."
+            },
+            {
+              "title": "Bridging the preference gap between retrievers and llms",
+              "citation": "Z. Ke, W. Kong, C. Li, M. Zhang, Q. Mei, and M. Bendersky, 'Bridging the preference gap between retrievers and llms,' arXiv preprint arXiv:2401.06954 , 2024."
+            },
+            {
+              "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+              "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.4",
+          "sec_title": "RAG vs Fine-tuning",
+          "citations": [
+            {
+              "title": "Fine-tuning or retrieval? comparing knowledge injection in llms",
+              "citation": "O. Ovadia, M. Brief, M. Mishaeli, and O. Elisha, 'Fine-tuning or retrieval? comparing knowledge injection in llms,' arXiv preprint arXiv:2312.05934 , 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "RETRIEVAL",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Retrieval Source",
+          "citations": [
+            {
+              "title": "Copy is all you need",
+              "citation": "T. Lan, D. Cai, Y. Wang, H. Huang, and X.-L. Mao, 'Copy is all you need,' in The Eleventh International Conference on Learning Representations , 2022."
+            },
+            {
+              "title": "Dense x retrieval: What retrieval granularity should we use?",
+              "citation": "T. Chen, H. Wang, S. Chen, W. Yu, K. Ma, X. Zhao, D. Yu, and H. Zhang, 'Dense x retrieval: What retrieval granularity should we use?' arXiv preprint arXiv:2312.06648 , 2023."
+            },
+            {
+              "title": "Divide & conquer for entailment-aware multi-hop evidence retrieval",
+              "citation": "F. Luo and M. Surdeanu, 'Divide &amp; conquer for entailment-aware multi-hop evidence retrieval,' arXiv preprint arXiv:2311.02616 , 2023."
+            },
+            {
+              "title": "Uprise: Universal prompt retrieval for improving zero-shot evaluation",
+              "citation": "D. Cheng, S. Huang, J. Bi, Y. Zhan, J. Liu, Y. Wang, H. Sun, F. Wei, D. Deng, and Q. Zhang, 'Uprise: Universal prompt retrieval for improving zero-shot evaluation,' arXiv preprint arXiv:2303.08518 , 2023."
+            },
+            {
+              "title": "Diversify question generation with retrieval-augmented style transfer",
+              "citation": "Q. Gou, Z. Xia, B. Yu, H. Yu, F. Huang, Y. Li, and N. Cam-Tu, 'Diversify question generation with retrieval-augmented style transfer,' arXiv preprint arXiv:2310.14503 , 2023."
+            },
+            {
+              "title": "Lift yourself up: Retrieval-augmented text generation with self memory",
+              "citation": "X. Cheng, D. Luo, X. Chen, L. Liu, D. Zhao, and R. Yan, 'Lift yourself up: Retrieval-augmented text generation with self memory,' arXiv preprint arXiv:2305.02437 , 2023."
+            },
+            {
+              "title": "Active retrieval augmented generation",
+              "citation": "Z. Jiang, F. F. Xu, L. Gao, Z. Sun, Q. Liu, J. Dwivedi-Yu, Y. Yang, J. Callan, and G. Neubig, 'Active retrieval augmented generation,' arXiv preprint arXiv:2305.06983 , 2023."
+            },
+            {
+              "title": "Prompt-guided retrieval augmentation for non-knowledge-intensive tasks",
+              "citation": "Z. Guo, S. Cheng, Y. Wang, P. Li, and Y. Liu, 'Prompt-guided retrieval augmentation for non-knowledge-intensive tasks,' arXiv preprint arXiv:2305.17653 , 2023."
+            },
+            {
+              "title": "Learning to filter context for retrieval-augmented generation",
+              "citation": "Z. Wang, J. Araki, Z. Jiang, M. R. Parvez, and G. Neubig, 'Learning to filter context for retrieval-augmented generation,' arXiv preprint arXiv:2311.08377 , 2023."
+            },
+            {
+              "title": "Retrieval-augmented data augmentation for low-resource domain tasks",
+              "citation": "M. Seo, J. Baek, J. Thorne, and S. J. Hwang, 'Retrieval-augmented data augmentation for low-resource domain tasks,' arXiv preprint arXiv:2402.13482 , 2024."
+            },
+            {
+              "title": "Large language model is not a good few-shot information extractor, but a good reranker for hard samples!",
+              "citation": "Y. Ma, Y. Cao, Y. Hong, and A. Sun, 'Large language model is not a good few-shot information extractor, but a good reranker for hard samples!' arXiv preprint arXiv:2303.08559 , 2023."
+            },
+            {
+              "title": "Retrieval-augmented generative question answering for event argument extraction",
+              "citation": "X. Du and H. Ji, 'Retrieval-augmented generative question answering for event argument extraction,' arXiv preprint arXiv:2211.07067 , 2022."
+            },
+            {
+              "title": "Learning to retrieve in-context examples for large language models",
+              "citation": "L. Wang, N. Yang, and F. Wei, 'Learning to retrieve in-context examples for large language models,' arXiv preprint arXiv:2307.07164 , 2023."
+            },
+            {
+              "title": "Recommender systems with generative retrieval",
+              "citation": "S. Rajput, N. Mehta, A. Singh, R. H. Keshavan, T. Vu, L. Heldt, L. Hong, Y. Tay, V. Q. Tran, J. Samost et al. , 'Recommender systems with generative retrieval,' arXiv preprint arXiv:2305.05065 , 2023."
+            },
+            {
+              "title": "Language models as semantic indexers",
+              "citation": "B. Jin, H. Zeng, G. Wang, X. Chen, T. Wei, R. Li, Z. Wang, Z. Li, Y. Li, H. Lu et al. , 'Language models as semantic indexers,' arXiv preprint arXiv:2310.07815 , 2023."
+            },
+            {
+              "title": "Large language model based long-tail query rewriting in taobao search",
+              "citation": "W. Peng, G. Li, Y. Jiang, Z. Wang, D. Ou, X. Zeng, E. Chen et al. , 'Large language model based long-tail query rewriting in taobao search,' arXiv preprint arXiv:2311.03758 , 2023."
+            },
+            {
+              "title": "Context tuning for retrieval augmented generation",
+              "citation": "R. Anantha, T. Bethi, D. Vodianik, and S. Chappidi, 'Context tuning for retrieval augmented generation,' arXiv preprint arXiv:2312.05708 , 2023."
+            },
+            {
+              "title": "Few-shot learning with retrieval augmented language models",
+              "citation": "G. Izacard, P. Lewis, M. Lomeli, L. Hosseini, F. Petroni, T. Schick, J. Dwivedi-Yu, A. Joulin, S. Riedel, and E. Grave, 'Few-shot learning with retrieval augmented language models,' arXiv preprint arXiv:2208.03299 , 2022."
+            },
+            {
+              "title": "Raven: In-context learning with retrieval augmented encoderdecoder language models",
+              "citation": "J. Huang, W. Ping, P. Xu, M. Shoeybi, K. C.-C. Chang, and B. Catanzaro, 'Raven: In-context learning with retrieval augmented encoderdecoder language models,' arXiv preprint arXiv:2308.07922 , 2023."
+            },
+            {
+              "title": "Shall we pretrain autoregressive language models with retrieval? a comprehensive study",
+              "citation": "B. Wang, W. Ping, P. Xu, L. McAfee, Z. Liu, M. Shoeybi, Y. Dong, O. Kuchaiev, B. Li, C. Xiao et al. , 'Shall we pretrain autoregressive language models with retrieval? a comprehensive study,' arXiv preprint arXiv:2304.06762 , 2023."
+            },
+            {
+              "title": "Instructretro: Instruction tuning post retrieval-augmented pretraining",
+              "citation": "B. Wang, W. Ping, L. McAfee, P. Xu, B. Li, M. Shoeybi, and B. Catanzaro, 'Instructretro: Instruction tuning post retrieval-augmented pretraining,' arXiv preprint arXiv:2310.07713 , 2023."
+            },
+            {
+              "title": "Query rewriting for retrieval-augmented large language models",
+              "citation": "X. Ma, Y. Gong, P. He, H. Zhao, and N. Duan, 'Query rewriting for retrieval-augmented large language models,' arXiv preprint arXiv:2305.14283 , 2023."
+            },
+            {
+              "title": "Improving the domain adaptation of retrieval augmented generation (rag) models for open domain question answering",
+              "citation": "S. Siriwardhana, R. Weerasekera, E. Wen, T. Kaluarachchi, R. Rana, and S. Nanayakkara, 'Improving the domain adaptation of retrieval augmented generation (rag) models for open domain question answering,' Transactions of the Association for Computational Linguistics , vol. 11, pp. 1-17, 2023."
+            },
+            {
+              "title": "Promptagator: Few-shot dense retrieval from 8 examples",
+              "citation": "Z. Dai, V. Y. Zhao, J. Ma, Y. Luan, J. Ni, J. Lu, A. Bakalov, K. Guu, K. B. Hall, and M.-W. Chang, 'Promptagator: Few-shot dense retrieval from 8 examples,' arXiv preprint arXiv:2209.11755 , 2022."
+            },
+            {
+              "title": "Augmentation-adapted retriever improves generalization of language models as generic plug-in",
+              "citation": "Z. Yu, C. Xiong, S. Yu, and Z. Liu, 'Augmentation-adapted retriever improves generalization of language models as generic plug-in,' arXiv preprint arXiv:2305.17331 , 2023."
+            },
+            {
+              "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+              "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+            },
+            {
+              "title": "Making retrieval-augmented language models robust to irrelevant context",
+              "citation": "O. Yoran, T. Wolfson, O. Ram, and J. Berant, 'Making retrievalaugmented language models robust to irrelevant context,' arXiv preprint arXiv:2310.01558 , 2023."
+            },
+            {
+              "title": "Understanding retrieval augmentation for long-form question answering",
+              "citation": "H.-T. Chen, F. Xu, S. A. Arora, and E. Choi, 'Understanding retrieval augmentation for long-form question answering,' arXiv preprint arXiv:2310.12150 , 2023."
+            },
+            {
+              "title": "Chain-of-note: Enhancing robustness in retrieval-augmented language models",
+              "citation": "W. Yu, H. Zhang, X. Pan, K. Ma, H. Wang, and D. Yu, 'Chain-of-note: Enhancing robustness in retrieval-augmented language models,' arXiv preprint arXiv:2311.09210 , 2023."
+            },
+            {
+              "title": "Self-rag: Learning to retrieve, generate, and critique through self-reflection",
+              "citation": "A. Asai, Z. Wu, Y. Wang, A. Sil, and H. Hajishirzi, 'Self-rag: Learning to retrieve, generate, and critique through self-reflection,' arXiv preprint arXiv:2310.11511 , 2023."
+            },
+            {
+              "title": "Bridging the preference gap between retrievers and llms",
+              "citation": "Z. Ke, W. Kong, C. Li, M. Zhang, Q. Mei, and M. Bendersky, 'Bridging the preference gap between retrievers and llms,' arXiv preprint arXiv:2401.06954 , 2024."
+            },
+            {
+              "title": "Search-in-thechain: Towards accurate, credible and traceable large language models for knowledgeintensive tasks",
+              "citation": "S. Xu, L. Pang, H. Shen, X. Cheng, and T.-S. Chua, 'Search-in-thechain: Towards accurate, credible and traceable large language models for knowledgeintensive tasks,' CoRR, vol. abs/2304.14732 , 2023."
+            },
+            {
+              "title": "Optimizing retrieval-augmented reader models via token elimination",
+              "citation": "M. Berchansky, P. Izsak, A. Caciularu, I. Dagan, and M. Wasserblat, 'Optimizing retrieval-augmented reader models via token elimination,' arXiv preprint arXiv:2310.13682 , 2023."
+            },
+            {
+              "title": "Paperqa: Retrieval-augmented generative agent for scientific research",
+              "citation": "J. L´ ala, O. O'Donoghue, A. Shtedritski, S. Cox, S. G. Rodriques, and A. D. White, 'Paperqa: Retrieval-augmented generative agent for scientific research,' arXiv preprint arXiv:2312.07559 , 2023."
+            },
+            {
+              "title": "The power of noise: Redefining retrieval for rag systems",
+              "citation": "F. Cuconasu, G. Trappolini, F. Siciliano, S. Filice, C. Campagnano, Y. Maarek, N. Tonellotto, and F. Silvestri, 'The power of noise: Redefining retrieval for rag systems,' arXiv preprint arXiv:2401.14887 , 2024."
+            },
+            {
+              "title": "Iag: Induction-augmented generation framework for answering reasoning questions",
+              "citation": "Z. Zhang, X. Zhang, Y. Ren, S. Shi, M. Han, Y. Wu, R. Lai, and Z. Cao, 'Iag: Induction-augmented generation framework for answering reasoning questions,' in Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing , 2023, pp. 1-14."
+            },
+            {
+              "title": "Nomiracl: Knowing when you don't know for robust multilingual retrieval-augmented generation",
+              "citation": "N. Thakur, L. Bonifacio, X. Zhang, O. Ogundepo, E. Kamalloo, D. Alfonso-Hermelo, X. Li, Q. Liu, B. Chen, M. Rezagholizadeh et al. , 'Nomiracl: Knowing when you don't know for robust multilingual retrieval-augmented generation,' arXiv preprint arXiv:2312.11361 , 2023."
+            },
+            {
+              "title": "Tree of clarifications: Answering ambiguous questions with retrieval-augmented large language models",
+              "citation": "G. Kim, S. Kim, B. Jeon, J. Park, and J. Kang, 'Tree of clarifications: Answering ambiguous questions with retrieval-augmented large language models,' arXiv preprint arXiv:2310.14696 , 2023."
+            },
+            {
+              "title": "Self-knowledge guided retrieval augmentation for large language models",
+              "citation": "Y. Wang, P. Li, M. Sun, and Y. Liu, 'Self-knowledge guided retrieval augmentation for large language models,' arXiv preprint arXiv:2310.05002 , 2023."
+            },
+            {
+              "title": "Retrievalgeneration synergy augmented large language models",
+              "citation": "Z. Feng, X. Feng, D. Zhao, M. Yang, and B. Qin, 'Retrievalgeneration synergy augmented large language models,' arXiv preprint arXiv:2310.05149 , 2023."
+            },
+            {
+              "title": "Retrieval meets long context large language models",
+              "citation": "P. Xu, W. Ping, X. Wu, L. McAfee, C. Zhu, Z. Liu, S. Subramanian, E. Bakhturina, M. Shoeybi, and B. Catanzaro, 'Retrieval meets long context large language models,' arXiv preprint arXiv:2310.03025 , 2023."
+            },
+            {
+              "title": "Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy",
+              "citation": "Z. Shao, Y. Gong, Y. Shen, M. Huang, N. Duan, and W. Chen, 'Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy,' arXiv preprint arXiv:2305.15294 , 2023."
+            },
+            {
+              "title": "Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions",
+              "citation": "H. Trivedi, N. Balasubramanian, T. Khot, and A. Sabharwal, 'Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions,' arXiv preprint arXiv:2212.10509 , 2022."
+            },
+            {
+              "title": "Investigating the factual knowledge boundary of large language models with retrieval augmentation",
+              "citation": "R. Ren, Y. Wang, Y. Qu, W. X. Zhao, J. Liu, H. Tian, H. Wu, J.R. Wen, and H. Wang, 'Investigating the factual knowledge boundary of large language models with retrieval augmentation,' arXiv preprint arXiv:2307.11019 , 2023."
+            },
+            {
+              "title": "Raptor: Recursive abstractive processing for tree-organized retrieval",
+              "citation": "P. Sarthi, S. Abdullah, A. Tuli, S. Khanna, A. Goldie, and C. D. Manning, 'Raptor: Recursive abstractive processing for tree-organized retrieval,' arXiv preprint arXiv:2401.18059 , 2024."
+            },
+            {
+              "title": "Recitation-augmented language models",
+              "citation": "Z. Sun, X. Wang, Y. Tay, Y. Yang, and D. Zhou, 'Recitation-augmented language models,' arXiv preprint arXiv:2210.01296 , 2022."
+            },
+            {
+              "title": "In-context retrieval-augmented language models",
+              "citation": "O. Ram, Y. Levine, I. Dalmedigos, D. Muhlgay, A. Shashua, K. LeytonBrown, and Y. Shoham, 'In-context retrieval-augmented language models,' arXiv preprint arXiv:2302.00083 , 2023."
+            },
+            {
+              "title": "Retrieve-and-sample: Document-level event argument extraction via hybrid retrieval augmentation",
+              "citation": "Y. Ren, Y. Cao, P. Guo, F. Fang, W. Ma, and Z. Lin, 'Retrieve-andsample: Document-level event argument extraction via hybrid retrieval augmentation,' in Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , 2023, pp. 293-306."
+            },
+            {
+              "title": "Zemi: Learning zero-shot semi-parametric language models from multiple tasks",
+              "citation": "Z. Wang, X. Pan, D. Yu, D. Yu, J. Chen, and H. Ji, 'Zemi: Learning zero-shot semi-parametric language models from multiple tasks,' arXiv preprint arXiv:2210.00185 , 2022."
+            },
+            {
+              "title": "Corrective retrieval augmented generation",
+              "citation": "S.-Q. Yan, J.-C. Gu, Y. Zhu, and Z.-H. Ling, 'Corrective retrieval augmented generation,' arXiv preprint arXiv:2401.15884 , 2024."
+            },
+            {
+              "title": "1-pager: One pass answer generation and evidence retrieval",
+              "citation": "P. Jain, L. B. Soares, and T. Kwiatkowski, '1-pager: One pass answer generation and evidence retrieval,' arXiv preprint arXiv:2310.16568 , 2023."
+            },
+            {
+              "title": "Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter",
+              "citation": "H. Yang, Z. Li, Y. Zhang, J. Wang, N. Cheng, M. Li, and J. Xiao, 'Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter,' arXiv preprint arXiv:2310.18347 , 2023."
+            },
+            {
+              "title": "Open-source large language models are strong zero-shot query likelihood models for document ranking",
+              "citation": "S. Zhuang, B. Liu, B. Koopman, and G. Zuccon, 'Open-source large language models are strong zero-shot query likelihood models for document ranking,' arXiv preprint arXiv:2310.13243 , 2023."
+            },
+            {
+              "title": "Recomp: Improving retrieval-augmented lms with compression and selective augmentation",
+              "citation": "F. Xu, W. Shi, and E. Choi, 'Recomp: Improving retrieval-augmented lms with compression and selective augmentation,' arXiv preprint arXiv:2310.04408 , 2023."
+            },
+            {
+              "title": "Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive nlp",
+              "citation": "O. Khattab, K. Santhanam, X. L. Li, D. Hall, P. Liang, C. Potts, and M. Zaharia, 'Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive nlp,' arXiv preprint arXiv:2212.14024 , 2022."
+            },
+            {
+              "title": "Replug: Retrieval-augmented black-box language models",
+              "citation": "W. Shi, S. Min, M. Yasunaga, M. Seo, R. James, M. Lewis, L. Zettlemoyer, and W.-t. Yih, 'Replug: Retrieval-augmented black-box language models,' arXiv preprint arXiv:2301.12652 , 2023."
+            },
+            {
+              "title": "Enhancing llm intelligence with arm-rag: Auxiliary rationale memory for retrieval augmented generation",
+              "citation": "E. Melz, 'Enhancing llm intelligence with arm-rag: Auxiliary rationale memory for retrieval augmented generation,' arXiv preprint arXiv:2311.04177 , 2023."
+            },
+            {
+              "title": "Generate rather than retrieve: Large language models are strong context generators",
+              "citation": "W. Yu, D. Iter, S. Wang, Y. Xu, M. Ju, S. Sanyal, C. Zhu, M. Zeng, and M. Jiang, 'Generate rather than retrieve: Large language models are strong context generators,' arXiv preprint arXiv:2209.10063 , 2022."
+            },
+            {
+              "title": "Unims-rag: A unified multi-source retrieval-augmented generation for personalized dialogue systems",
+              "citation": "H. Wang, W. Huang, Y. Deng, R. Wang, Z. Wang, Y. Wang, F. Mi, J. Z. Pan, and K.-F. Wong, 'Unims-rag: A unified multi-source retrieval-augmented generation for personalized dialogue systems,' arXiv preprint arXiv:2401.13256 , 2024."
+            },
+            {
+              "title": "From classification to generation: Insights into crosslingual retrieval augmented icl",
+              "citation": "X. Li, E. Nie, and S. Liang, 'From classification to generation: Insights into crosslingual retrieval augmented icl,' arXiv preprint arXiv:2311.06595 , 2023."
+            },
+            {
+              "title": "Augmented large language models with parametric knowledge guiding",
+              "citation": "Z. Luo, C. Xu, P. Zhao, X. Geng, C. Tao, J. Ma, Q. Lin, and D. Jiang, 'Augmented large language models with parametric knowledge guiding,' arXiv preprint arXiv:2305.04757 , 2023."
+            },
+            {
+              "title": "Structureaware language model pretraining improves dense retrieval on structured data",
+              "citation": "X. Li, Z. Liu, C. Xiong, S. Yu, Y. Gu, Z. Liu, and G. Yu, 'Structureaware language model pretraining improves dense retrieval on structured data,' arXiv preprint arXiv:2305.19912 , 2023."
+            },
+            {
+              "title": "Knowledge graph-augmented language models for knowledge-grounded dialogue generation",
+              "citation": "M. Kang, J. M. Kwak, J. Baek, and S. J. Hwang, 'Knowledge graph-augmented language models for knowledge-grounded dialogue generation,' arXiv preprint arXiv:2305.18846 , 2023."
+            },
+            {
+              "title": "Retrievalgeneration alignment for end-to-end task-oriented dialogue system",
+              "citation": "W. Shen, Y. Gao, C. Huang, F. Wan, X. Quan, and W. Bi, 'Retrievalgeneration alignment for end-to-end task-oriented dialogue system,' arXiv preprint arXiv:2310.08877 , 2023."
+            },
+            {
+              "title": "Dual-feedback knowledge retrieval for task-oriented dialogue systems",
+              "citation": "T. Shi, L. Li, Z. Lin, T. Yang, X. Quan, and Q. Wang, 'Dual-feedback knowledge retrieval for task-oriented dialogue systems,' arXiv preprint arXiv:2310.14528 , 2023."
+            },
+            {
+              "title": "Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases",
+              "citation": "X. Wang, Q. Yang, Y. Qiu, J. Liang, Q. He, Z. Gu, Y. Xiao, and W. Wang, 'Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases,' arXiv preprint arXiv:2308.11761 , 2023."
+            },
+            {
+              "title": "Fabula: Intelligence report generation using retrieval-augmented narrative construction",
+              "citation": "P. Ranade and A. Joshi, 'Fabula: Intelligence report generation using retrieval-augmented narrative construction,' arXiv preprint arXiv:2310.13848 , 2023."
+            },
+            {
+              "title": "Think and retrieval: A hypothesis knowledge graph enhanced medical large language models",
+              "citation": "X. Jiang, R. Zhang, Y. Xu, R. Qiu, Y. Fang, Z. Wang, J. Tang, H. Ding, X. Chu, J. Zhao et al. , 'Think and retrieval: A hypothesis knowledge graph enhanced medical large language models,' arXiv preprint arXiv:2312.15883 , 2023."
+            },
+            {
+              "title": "Knowledge-augmented language model verification",
+              "citation": "J. Baek, S. Jeong, M. Kang, J. C. Park, and S. J. Hwang, 'Knowledge-augmented language model verification,' arXiv preprint arXiv:2310.12836 , 2023."
+            },
+            {
+              "title": "Reasoning on graphs: Faithful and interpretable large language model reasoning",
+              "citation": "L. Luo, Y.-F. Li, G. Haffari, and S. Pan, 'Reasoning on graphs: Faithful and interpretable large language model reasoning,' arXiv preprint arXiv:2310.01061 , 2023."
+            },
+            {
+              "title": "G-retriever: Retrieval-augmented generation for textual graph understanding and question answering",
+              "citation": "X. He, Y. Tian, Y. Sun, N. V. Chawla, T. Laurent, Y. LeCun, X. Bresson, and B. Hooi, 'G-retriever: Retrieval-augmented generation for textual graph understanding and question answering,' arXiv preprint arXiv:2402.07630 , 2024."
+            },
+            {
+              "title": "From classification to generation: Insights into crosslingual retrieval augmented icl",
+              "citation": "X. Li, E. Nie, and S. Liang, 'From classification to generation: Insights into crosslingual retrieval augmented icl,' arXiv preprint arXiv:2311.06595 , 2023."
+            },
+            {
+              "title": "Corrective retrieval augmented generation",
+              "citation": "S.-Q. Yan, J.-C. Gu, Y. Zhu, and Z.-H. Ling, 'Corrective retrieval augmented generation,' arXiv preprint arXiv:2401.15884 , 2024."
+            },
+            {
+              "title": "Copy is all you need",
+              "citation": "T. Lan, D. Cai, Y. Wang, H. Huang, and X.-L. Mao, 'Copy is all you need,' in The Eleventh International Conference on Learning Representations , 2022."
+            },
+            {
+              "title": "Tablegpt: Towards unifying tables, nature language and commands into one gpt",
+              "citation": "L. Zha, J. Zhou, L. Li, R. Wang, Q. Huang, S. Yang, J. Yuan, C. Su, X. Li, A. Su et al. , 'Tablegpt: Towards unifying tables, nature language and commands into one gpt,' arXiv preprint arXiv:2307.08674 , 2023."
+            },
+            {
+              "title": "Augmented large language models with parametric knowledge guiding",
+              "citation": "Z. Luo, C. Xu, P. Zhao, X. Geng, C. Tao, J. Ma, Q. Lin, and D. Jiang, 'Augmented large language models with parametric knowledge guiding,' arXiv preprint arXiv:2305.04757 , 2023."
+            },
+            {
+              "title": "Iseeq: Information seeking question generation using dynamic meta-information retrieval and knowledge graphs",
+              "citation": "M. Gaur, K. Gunaratna, V. Srinivasan, and H. Jin, 'Iseeq: Information seeking question generation using dynamic meta-information retrieval and knowledge graphs,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 36, no. 10, 2022, pp. 10 672-10 680."
+            },
+            {
+              "title": "Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases",
+              "citation": "X. Wang, Q. Yang, Y. Qiu, J. Liang, Q. He, Z. Gu, Y. Xiao, and W. Wang, 'Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases,' arXiv preprint arXiv:2308.11761 , 2023."
+            },
+            {
+              "title": "G-retriever: Retrieval-augmented generation for textual graph understanding and question answering",
+              "citation": "X. He, Y. Tian, Y. Sun, N. V. Chawla, T. Laurent, Y. LeCun, X. Bresson, and B. Hooi, 'G-retriever: Retrieval-augmented generation for textual graph understanding and question answering,' arXiv preprint arXiv:2402.07630 , 2024."
+            },
+            {
+              "title": "Self-knowledge guided retrieval augmentation for large language models",
+              "citation": "Y. Wang, P. Li, M. Sun, and Y. Liu, 'Self-knowledge guided retrieval augmentation for large language models,' arXiv preprint arXiv:2310.05002 , 2023."
+            },
+            {
+              "title": "Generate rather than retrieve: Large language models are strong context generators",
+              "citation": "W. Yu, D. Iter, S. Wang, Y. Xu, M. Ju, S. Sanyal, C. Zhu, M. Zeng, and M. Jiang, 'Generate rather than retrieve: Large language models are strong context generators,' arXiv preprint arXiv:2209.10063 , 2022."
+            },
+            {
+              "title": "Lift yourself up: Retrieval-augmented text generation with self memory",
+              "citation": "X. Cheng, D. Luo, X. Chen, L. Liu, D. Zhao, and R. Yan, 'Lift yourself up: Retrieval-augmented text generation with self memory,' arXiv preprint arXiv:2305.02437 , 2023."
+            },
+            {
+              "title": "Chain-of-note: Enhancing robustness in retrieval-augmented language models",
+              "citation": "W. Yu, H. Zhang, X. Pan, K. Ma, H. Wang, and D. Yu, 'Chain-of-note: Enhancing robustness in retrieval-augmented language models,' arXiv preprint arXiv:2311.09210 , 2023."
+            },
+            {
+              "title": "Large language models can be easily distracted by irrelevant context",
+              "citation": "F. Shi, X. Chen, K. Misra, N. Scales, D. Dohan, E. H. Chi, N. Sch¨ arli, and D. Zhou, 'Large language models can be easily distracted by irrelevant context,' in International Conference on Machine Learning . PMLR, 2023, pp. 31 210-31 227."
+            },
+            {
+              "title": "Dense x retrieval: What retrieval granularity should we use?",
+              "citation": "T. Chen, H. Wang, S. Chen, W. Yu, K. Ma, X. Zhao, D. Yu, and H. Zhang, 'Dense x retrieval: What retrieval granularity should we use?' arXiv preprint arXiv:2312.06648 , 2023."
+            },
+            {
+              "title": "Language models as semantic indexers",
+              "citation": "B. Jin, H. Zeng, G. Wang, X. Chen, T. Wei, R. Li, Z. Wang, Z. Li, Y. Li, H. Lu et al. , 'Language models as semantic indexers,' arXiv preprint arXiv:2310.07815 , 2023."
+            },
+            {
+              "title": "Learning to retrieve in-context examples for large language models",
+              "citation": "L. Wang, N. Yang, and F. Wei, 'Learning to retrieve in-context examples for large language models,' arXiv preprint arXiv:2307.07164 , 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.1.1",
+              "sec_title": "Semi-structured data .",
+              "citations": [
+                {
+                  "title": "Tablegpt: Towards unifying tables, nature language and commands into one gpt",
+                  "citation": "L. Zha, J. Zhou, L. Li, R. Wang, Q. Huang, S. Yang, J. Yuan, C. Su, X. Li, A. Su et al. , 'Tablegpt: Towards unifying tables, nature language and commands into one gpt,' arXiv preprint arXiv:2307.08674 , 2023."
+                },
+                {
+                  "title": "Augmented large language models with parametric knowledge guiding",
+                  "citation": "Z. Luo, C. Xu, P. Zhao, X. Geng, C. Tao, J. Ma, Q. Lin, and D. Jiang, 'Augmented large language models with parametric knowledge guiding,' arXiv preprint arXiv:2305.04757 , 2023."
+                },
+                {
+                  "title": "Iseeq: Information seeking question generation using dynamic meta-information retrieval and knowledge graphs",
+                  "citation": "M. Gaur, K. Gunaratna, V. Srinivasan, and H. Jin, 'Iseeq: Information seeking question generation using dynamic meta-information retrieval and knowledge graphs,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 36, no. 10, 2022, pp. 10 672-10 680."
+                },
+                {
+                  "title": "Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases",
+                  "citation": "X. Wang, Q. Yang, Y. Qiu, J. Liang, Q. He, Z. Gu, Y. Xiao, and W. Wang, 'Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases,' arXiv preprint arXiv:2308.11761 , 2023."
+                },
+                {
+                  "title": "G-retriever: Retrieval-augmented generation for textual graph understanding and question answering",
+                  "citation": "X. He, Y. Tian, Y. Sun, N. V. Chawla, T. Laurent, Y. LeCun, X. Bresson, and B. Hooi, 'G-retriever: Retrieval-augmented generation for textual graph understanding and question answering,' arXiv preprint arXiv:2402.07630 , 2024."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.2",
+              "sec_title": "LLMs-Generated Content.",
+              "citations": [
+                {
+                  "title": "Generate rather than retrieve: Large language models are strong context generators",
+                  "citation": "W. Yu, D. Iter, S. Wang, Y. Xu, M. Ju, S. Sanyal, C. Zhu, M. Zeng, and M. Jiang, 'Generate rather than retrieve: Large language models are strong context generators,' arXiv preprint arXiv:2209.10063 , 2022."
+                },
+                {
+                  "title": "Lift yourself up: Retrieval-augmented text generation with self memory",
+                  "citation": "X. Cheng, D. Luo, X. Chen, L. Liu, D. Zhao, and R. Yan, 'Lift yourself up: Retrieval-augmented text generation with self memory,' arXiv preprint arXiv:2305.02437 , 2023."
+                },
+                {
+                  "title": "Dense x retrieval: What retrieval granularity should we use?",
+                  "citation": "T. Chen, H. Wang, S. Chen, W. Yu, K. Ma, X. Zhao, D. Yu, and H. Zhang, 'Dense x retrieval: What retrieval granularity should we use?' arXiv preprint arXiv:2312.06648 , 2023."
+                },
+                {
+                  "title": "Learning to retrieve in-context examples for large language models",
+                  "citation": "L. Wang, N. Yang, and F. Wei, 'Learning to retrieve in-context examples for large language models,' arXiv preprint arXiv:2307.07164 , 2023."
+                },
+                {
+                  "title": "Language models as semantic indexers",
+                  "citation": "B. Jin, H. Zeng, G. Wang, X. Chen, T. Wei, R. Li, Z. Wang, Z. Li, Y. Li, H. Lu et al. , 'Language models as semantic indexers,' arXiv preprint arXiv:2310.07815 , 2023."
+                },
+                {
+                  "title": "Chain-of-note: Enhancing robustness in retrieval-augmented language models",
+                  "citation": "W. Yu, H. Zhang, X. Pan, K. Ma, H. Wang, and D. Yu, 'Chain-of-note: Enhancing robustness in retrieval-augmented language models,' arXiv preprint arXiv:2311.09210 , 2023."
+                },
+                {
+                  "title": "Self-knowledge guided retrieval augmentation for large language models",
+                  "citation": "Y. Wang, P. Li, M. Sun, and Y. Liu, 'Self-knowledge guided retrieval augmentation for large language models,' arXiv preprint arXiv:2310.05002 , 2023."
+                },
+                {
+                  "title": "Large language models can be easily distracted by irrelevant context",
+                  "citation": "F. Shi, X. Chen, K. Misra, N. Scales, D. Dohan, E. H. Chi, N. Sch¨ arli, and D. Zhou, 'Large language models can be easily distracted by irrelevant context,' in International Conference on Machine Learning . PMLR, 2023, pp. 31 210-31 227."
+                },
+                {
+                  "title": "Evaluating the ideal chunk size for a rag system using llamaindex",
+                  "citation": "R. Teja, 'Evaluating the ideal chunk size for a rag system using llamaindex,' https://www.llamaindex.ai/blog/ evaluating-the-ideal-chunk-size-for-a-rag-system-using-llamaindex-6207e5d3fec5, 2023."
+                },
+                {
+                  "title": "Recursively split by character",
+                  "citation": "Langchain, 'Recursively split by character,' https://python.langchain. com/docs/modules/data connection/document transformers/recursive text splitter, 2023."
+                },
+                {
+                  "title": "Advanced rag 01: Small-tobig retrieval",
+                  "citation": "S. Yang, 'Advanced rag 01: Small-tobig retrieval,' https://towardsdatascience.com/ advanced-rag-01-small-to-big-retrieval-172181b396d4, 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Indexing Optimization",
+          "citations": [
+            {
+              "title": "Evaluating the ideal chunk size for a rag system using llamaindex",
+              "citation": "R. Teja, 'Evaluating the ideal chunk size for a rag system using llamaindex,' https://www.llamaindex.ai/blog/ evaluating-the-ideal-chunk-size-for-a-rag-system-using-llamaindex-6207e5d3fec5, 2023."
+            },
+            {
+              "title": "Recursively split by character",
+              "citation": "Langchain, 'Recursively split by character,' https://python.langchain. com/docs/modules/data connection/document transformers/recursive text splitter, 2023."
+            },
+            {
+              "title": "Advanced rag 01: Small-tobig retrieval",
+              "citation": "S. Yang, 'Advanced rag 01: Small-tobig retrieval,' https://towardsdatascience.com/ advanced-rag-01-small-to-big-retrieval-172181b396d4, 2023."
+            },
+            {
+              "title": "Knowledge graph prompting for multi-document question answering",
+              "citation": "Y. Wang, N. Lipka, R. A. Rossi, A. Siu, R. Zhang, and T. Derr, 'Knowledge graph prompting for multi-document question answering,' arXiv preprint arXiv:2308.11730 , 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.2.1",
+              "sec_title": "Knowledge Graph index .",
+              "citations": [
+                {
+                  "title": "Knowledge graph prompting for multi-document question answering",
+                  "citation": "Y. Wang, N. Lipka, R. A. Rossi, A. Siu, R. Zhang, and T. Derr, 'Knowledge graph prompting for multi-document question answering,' arXiv preprint arXiv:2308.11730 , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "Query Optimization",
+          "citations": [
+            {
+              "title": "Least-to-most prompting enables complex reasoning in large language models",
+              "citation": "D. Zhou, N. Sch¨ arli, L. Hou, J. Wei, N. Scales, X. Wang, D. Schuurmans, C. Cui, O. Bousquet, Q. Le et al. , 'Least-to-most prompting enables complex reasoning in large language models,' arXiv preprint arXiv:2205.10625 , 2022."
+            },
+            {
+              "title": "Chain-of-verification reduces hallucination in large language models",
+              "citation": "S. Dhuliawala, M. Komeili, J. Xu, R. Raileanu, X. Li, A. Celikyilmaz, and J. Weston, 'Chain-of-verification reduces hallucination in large language models,' arXiv preprint arXiv:2309.11495 , 2023."
+            },
+            {
+              "title": "Query rewriting for retrieval-augmented large language models",
+              "citation": "X. Ma, Y. Gong, P. He, H. Zhao, and N. Duan, 'Query rewriting for retrieval-augmented large language models,' arXiv preprint arXiv:2305.14283 , 2023."
+            },
+            {
+              "title": "Large language model based long-tail query rewriting in taobao search",
+              "citation": "W. Peng, G. Li, Y. Jiang, Z. Wang, D. Ou, X. Zeng, E. Chen et al. , 'Large language model based long-tail query rewriting in taobao search,' arXiv preprint arXiv:2311.03758 , 2023."
+            },
+            {
+              "title": "Precise zero-shot dense retrieval without relevance labels",
+              "citation": "L. Gao, X. Ma, J. Lin, and J. Callan, 'Precise zero-shot dense retrieval without relevance labels,' arXiv preprint arXiv:2212.10496 , 2022."
+            },
+            {
+              "title": "Take a step back: Evoking reasoning via abstraction in large language models",
+              "citation": "H. S. Zheng, S. Mishra, X. Chen, H.-T. Cheng, E. H. Chi, Q. V. Le, and D. Zhou, 'Take a step back: Evoking reasoning via abstraction in large language models,' arXiv preprint arXiv:2310.06117 , 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.3.1",
+              "sec_title": "Sub-Query .",
+              "citations": [
+                {
+                  "title": "Least-to-most prompting enables complex reasoning in large language models",
+                  "citation": "D. Zhou, N. Sch¨ arli, L. Hou, J. Wei, N. Scales, X. Wang, D. Schuurmans, C. Cui, O. Bousquet, Q. Le et al. , 'Least-to-most prompting enables complex reasoning in large language models,' arXiv preprint arXiv:2205.10625 , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.3.2",
+              "sec_title": "Chain-of-Verification(CoVe) .",
+              "citations": [
+                {
+                  "title": "Query rewriting for retrieval-augmented large language models",
+                  "citation": "X. Ma, Y. Gong, P. He, H. Zhao, and N. Duan, 'Query rewriting for retrieval-augmented large language models,' arXiv preprint arXiv:2305.14283 , 2023."
+                },
+                {
+                  "title": "Large language model based long-tail query rewriting in taobao search",
+                  "citation": "W. Peng, G. Li, Y. Jiang, Z. Wang, D. Ou, X. Zeng, E. Chen et al. , 'Large language model based long-tail query rewriting in taobao search,' arXiv preprint arXiv:2311.03758 , 2023."
+                },
+                {
+                  "title": "Take a step back: Evoking reasoning via abstraction in large language models",
+                  "citation": "H. S. Zheng, S. Mishra, X. Chen, H.-T. Cheng, E. H. Chi, Q. V. Le, and D. Zhou, 'Take a step back: Evoking reasoning via abstraction in large language models,' arXiv preprint arXiv:2310.06117 , 2023."
+                },
+                {
+                  "title": "Precise zero-shot dense retrieval without relevance labels",
+                  "citation": "L. Gao, X. Ma, J. Lin, and J. Callan, 'Precise zero-shot dense retrieval without relevance labels,' arXiv preprint arXiv:2212.10496 , 2022."
+                },
+                {
+                  "title": "Chain-of-verification reduces hallucination in large language models",
+                  "citation": "S. Dhuliawala, M. Komeili, J. Xu, R. Raileanu, X. Li, A. Celikyilmaz, and J. Weston, 'Chain-of-verification reduces hallucination in large language models,' arXiv preprint arXiv:2309.11495 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.3.3",
+              "sec_title": "Metadata Router/ Filter .",
+              "citations": [
+                {
+                  "title": "Training language models to follow instructions with human feedback",
+                  "citation": "L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray et al. , 'Training language models to follow instructions with human feedback,' Advances in neural information processing systems , vol. 35, pp. 27 730-27 744, 2022."
+                },
+                {
+                  "title": "Query rewriting for retrieval-augmented large language models",
+                  "citation": "X. Ma, Y. Gong, P. He, H. Zhao, and N. Duan, 'Query rewriting for retrieval-augmented large language models,' arXiv preprint arXiv:2305.14283 , 2023."
+                },
+                {
+                  "title": "Promptagator: Few-shot dense retrieval from 8 examples",
+                  "citation": "Z. Dai, V. Y. Zhao, J. Ma, Y. Luan, J. Ni, J. Lu, A. Bakalov, K. Guu, K. B. Hall, and M.-W. Chang, 'Promptagator: Few-shot dense retrieval from 8 examples,' arXiv preprint arXiv:2209.11755 , 2022."
+                },
+                {
+                  "title": "Augmentation-adapted retriever improves generalization of language models as generic plug-in",
+                  "citation": "Z. Yu, C. Xiong, S. Yu, and Z. Liu, 'Augmentation-adapted retriever improves generalization of language models as generic plug-in,' arXiv preprint arXiv:2305.17331 , 2023."
+                },
+                {
+                  "title": "Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter",
+                  "citation": "H. Yang, Z. Li, Y. Zhang, J. Wang, N. Cheng, M. Li, and J. Xiao, 'Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter,' arXiv preprint arXiv:2310.18347 , 2023."
+                },
+                {
+                  "title": "Replug: Retrieval-augmented black-box language models",
+                  "citation": "W. Shi, S. Min, M. Yasunaga, M. Seo, R. James, M. Lewis, L. Zettlemoyer, and W.-t. Yih, 'Replug: Retrieval-augmented black-box language models,' arXiv preprint arXiv:2301.12652 , 2023."
+                },
+                {
+                  "title": "Augmented large language models with parametric knowledge guiding",
+                  "citation": "Z. Luo, C. Xu, P. Zhao, X. Geng, C. Tao, J. Ma, Q. Lin, and D. Jiang, 'Augmented large language models with parametric knowledge guiding,' arXiv preprint arXiv:2305.04757 , 2023."
+                },
+                {
+                  "title": "Angle-optimized text embeddings",
+                  "citation": "X. Li and J. Li, 'Angle-optimized text embeddings,' arXiv preprint arXiv:2309.12871 , 2023."
+                },
+                {
+                  "title": "Voyage's embedding models",
+                  "citation": "VoyageAI, 'Voyage's embedding models,' https://docs.voyageai.com/ embeddings/, 2023."
+                },
+                {
+                  "title": "Flagembedding",
+                  "citation": "BAAI, 'Flagembedding,' https://github.com/FlagOpen/ FlagEmbedding, 2023."
+                },
+                {
+                  "title": "Retrieve anything to augment large language models",
+                  "citation": "P. Zhang, S. Xiao, Z. Liu, Z. Dou, and J.-Y. Nie, 'Retrieve anything to augment large language models,' arXiv preprint arXiv:2310.07554 , 2023."
+                },
+                {
+                  "title": "Lost in the middle: How language models use long contexts",
+                  "citation": "N. F. Liu, K. Lin, J. Hewitt, A. Paranjape, M. Bevilacqua, F. Petroni, and P. Liang, 'Lost in the middle: How language models use long contexts,' arXiv preprint arXiv:2307.03172 , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.4",
+          "sec_title": "Embedding",
+          "citations": [
+            {
+              "title": "Angle-optimized text embeddings",
+              "citation": "X. Li and J. Li, 'Angle-optimized text embeddings,' arXiv preprint arXiv:2309.12871 , 2023."
+            },
+            {
+              "title": "Flagembedding",
+              "citation": "BAAI, 'Flagembedding,' https://github.com/FlagOpen/ FlagEmbedding, 2023."
+            },
+            {
+              "title": "Promptagator: Few-shot dense retrieval from 8 examples",
+              "citation": "Z. Dai, V. Y. Zhao, J. Ma, Y. Luan, J. Ni, J. Lu, A. Bakalov, K. Guu, K. B. Hall, and M.-W. Chang, 'Promptagator: Few-shot dense retrieval from 8 examples,' arXiv preprint arXiv:2209.11755 , 2022."
+            },
+            {
+              "title": "Retrieve anything to augment large language models",
+              "citation": "P. Zhang, S. Xiao, Z. Liu, Z. Dou, and J.-Y. Nie, 'Retrieve anything to augment large language models,' arXiv preprint arXiv:2310.07554 , 2023."
+            },
+            {
+              "title": "Replug: Retrieval-augmented black-box language models",
+              "citation": "W. Shi, S. Min, M. Yasunaga, M. Seo, R. James, M. Lewis, L. Zettlemoyer, and W.-t. Yih, 'Replug: Retrieval-augmented black-box language models,' arXiv preprint arXiv:2301.12652 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.5",
+          "sec_title": "Adapter",
+          "citations": [
+            {
+              "title": "Uprise: Universal prompt retrieval for improving zero-shot evaluation",
+              "citation": "D. Cheng, S. Huang, J. Bi, Y. Zhan, J. Liu, Y. Wang, H. Sun, F. Wei, D. Deng, and Q. Zhang, 'Uprise: Universal prompt retrieval for improving zero-shot evaluation,' arXiv preprint arXiv:2303.08518 , 2023."
+            },
+            {
+              "title": "Augmentation-adapted retriever improves generalization of language models as generic plug-in",
+              "citation": "Z. Yu, C. Xiong, S. Yu, and Z. Liu, 'Augmentation-adapted retriever improves generalization of language models as generic plug-in,' arXiv preprint arXiv:2305.17331 , 2023."
+            },
+            {
+              "title": "Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter",
+              "citation": "H. Yang, Z. Li, Y. Zhang, J. Wang, N. Cheng, M. Li, and J. Xiao, 'Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter,' arXiv preprint arXiv:2310.18347 , 2023."
+            },
+            {
+              "title": "Bridging the preference gap between retrievers and llms",
+              "citation": "Z. Ke, W. Kong, C. Li, M. Zhang, Q. Mei, and M. Bendersky, 'Bridging the preference gap between retrievers and llms,' arXiv preprint arXiv:2401.06954 , 2024."
+            },
+            {
+              "title": "Augmented large language models with parametric knowledge guiding",
+              "citation": "Z. Luo, C. Xu, P. Zhao, X. Geng, C. Tao, J. Ma, Q. Lin, and D. Jiang, 'Augmented large language models with parametric knowledge guiding,' arXiv preprint arXiv:2305.04757 , 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "GENERATION",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Context Curation",
+          "citations": [
+            {
+              "title": "Lost in the middle: How language models use long contexts",
+              "citation": "N. F. Liu, K. Lin, J. Hewitt, A. Paranjape, M. Bevilacqua, F. Petroni, and P. Liang, 'Lost in the middle: How language models use long contexts,' arXiv preprint arXiv:2307.03172 , 2023."
+            },
+            {
+              "title": "Open-source large language models are strong zero-shot query likelihood models for document ranking",
+              "citation": "S. Zhuang, B. Liu, B. Koopman, and G. Zuccon, 'Open-source large language models are strong zero-shot query likelihood models for document ranking,' arXiv preprint arXiv:2310.13243 , 2023."
+            },
+            {
+              "title": "Enhancing rag pipelines in haystack: Introducing diversityranker and lostinthemiddleranker",
+              "citation": "V. Blagojevi, 'Enhancing rag pipelines in haystack: Introducing diversityranker and lostinthemiddleranker,' https://towardsdatascience.com/ enhancing-rag-pipelines-in-haystack-45f14e2bc9f5, 2023."
+            },
+            {
+              "title": "Chatrec: Towards interactive and explainable llms-augmented recommender system",
+              "citation": "Y. Gao, T. Sheng, Y. Xiang, Y. Xiong, H. Wang, and J. Zhang, 'Chatrec: Towards interactive and explainable llms-augmented recommender system,' arXiv preprint arXiv:2303.14524 , 2023."
+            },
+            {
+              "title": "Lingua: Addressing scenarios for live interpretation and automatic dubbing",
+              "citation": "N. Anderson, C. Wilson, and S. D. Richardson, 'Lingua: Addressing scenarios for live interpretation and automatic dubbing,' in Proceedings of the 15th Biennial Conference of the Association for Machine Translation in the Americas (Volume 2: Users and Providers Track and Government Track) , J. Campbell, S. Larocca, J. Marciano, K. Savenkov, and A. Yanishevsky, Eds. Orlando, USA: Association for Machine Translation in the Americas, Sep. 2022, pp. 202-209. [Online]. Available: https://aclanthology.org/2022.amta-upg.14"
+            },
+            {
+              "title": "Longllmlingua: Accelerating and enhancing llms in long context scenarios via prompt compression",
+              "citation": "H. Jiang, Q. Wu, X. Luo, D. Li, C.-Y. Lin, Y. Yang, and L. Qiu, 'Longllmlingua: Accelerating and enhancing llms in long context scenarios via prompt compression,' arXiv preprint arXiv:2310.06839 , 2023."
+            },
+            {
+              "title": "Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter",
+              "citation": "H. Yang, Z. Li, Y. Zhang, J. Wang, N. Cheng, M. Li, and J. Xiao, 'Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter,' arXiv preprint arXiv:2310.18347 , 2023."
+            },
+            {
+              "title": "Recomp: Improving retrieval-augmented lms with compression and selective augmentation",
+              "citation": "F. Xu, W. Shi, and E. Choi, 'Recomp: Improving retrieval-augmented lms with compression and selective augmentation,' arXiv preprint arXiv:2310.04408 , 2023."
+            },
+            {
+              "title": "Dense passage retrieval for open-domain question answering",
+              "citation": "V. Karpukhin, B. O˘ guz, S. Min, P. Lewis, L. Wu, S. Edunov, D. Chen, and W.-t. Yih, 'Dense passage retrieval for open-domain question answering,' arXiv preprint arXiv:2004.04906 , 2020."
+            },
+            {
+              "title": "Large language model is not a good few-shot information extractor, but a good reranker for hard samples!",
+              "citation": "Y. Ma, Y. Cao, Y. Hong, and A. Sun, 'Large language model is not a good few-shot information extractor, but a good reranker for hard samples!' ArXiv , vol. abs/2303.08559, 2023. [Online]. Available: https://api.semanticscholar.org/CorpusID:257532405"
+            },
+            {
+              "title": "Chatlaw: Open-source legal large language model with integrated external knowledge bases",
+              "citation": "J. Cui, Z. Li, Y. Yan, B. Chen, and L. Yuan, 'Chatlaw: Open-source legal large language model with integrated external knowledge bases,' arXiv preprint arXiv:2306.16092 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "LLM Fine-tuning",
+          "citations": [
+            {
+              "title": "Retrieval-augmented generative question answering for event argument extraction",
+              "citation": "X. Du and H. Ji, 'Retrieval-augmented generative question answering for event argument extraction,' arXiv preprint arXiv:2211.07067 , 2022."
+            },
+            {
+              "title": "Structureaware language model pretraining improves dense retrieval on structured data",
+              "citation": "X. Li, Z. Liu, C. Xiong, S. Yu, Y. Gu, Z. Liu, and G. Yu, 'Structureaware language model pretraining improves dense retrieval on structured data,' arXiv preprint arXiv:2305.19912 , 2023."
+            },
+            {
+              "title": "Dual-feedback knowledge retrieval for task-oriented dialogue systems",
+              "citation": "T. Shi, L. Li, Z. Lin, T. Yang, X. Quan, and Q. Wang, 'Dual-feedback knowledge retrieval for task-oriented dialogue systems,' arXiv preprint arXiv:2310.14528 , 2023."
+            },
+            {
+              "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+              "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "AUGMENTATION PROCESS IN RAG",
+      "citations": [
+        {
+          "title": "Making retrieval-augmented language models robust to irrelevant context",
+          "citation": "O. Yoran, T. Wolfson, O. Ram, and J. Berant, 'Making retrievalaugmented language models robust to irrelevant context,' arXiv preprint arXiv:2310.01558 , 2023."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "Iterative Retrieval",
+          "citations": [
+            {
+              "title": "Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy",
+              "citation": "Z. Shao, Y. Gong, Y. Shen, M. Huang, N. Duan, and W. Chen, 'Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy,' arXiv preprint arXiv:2305.15294 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Recursive Retrieval",
+          "citations": [
+            {
+              "title": "Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions",
+              "citation": "H. Trivedi, N. Balasubramanian, T. Khot, and A. Sabharwal, 'Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions,' arXiv preprint arXiv:2212.10509 , 2022."
+            },
+            {
+              "title": "Tree of clarifications: Answering ambiguous questions with retrieval-augmented large language models",
+              "citation": "G. Kim, S. Kim, B. Jeon, J. Park, and J. Kang, 'Tree of clarifications: Answering ambiguous questions with retrieval-augmented large language models,' arXiv preprint arXiv:2310.14696 , 2023."
+            },
+            {
+              "title": "Chain of knowledge: A framework for grounding large language models with structured knowledge bases",
+              "citation": "X. Li, R. Zhao, Y. K. Chia, B. Ding, L. Bing, S. Joty, and S. Poria, 'Chain of knowledge: A framework for grounding large language models with structured knowledge bases,' arXiv preprint arXiv:2305.13269 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.3",
+          "sec_title": "Adaptive Retrieval",
+          "citations": [
+            {
+              "title": "Active retrieval augmented generation",
+              "citation": "Z. Jiang, F. F. Xu, L. Gao, Z. Sun, Q. Liu, J. Dwivedi-Yu, Y. Yang, J. Callan, and G. Neubig, 'Active retrieval augmented generation,' arXiv preprint arXiv:2305.06983 , 2023."
+            },
+            {
+              "title": "Self-rag: Learning to retrieve, generate, and critique through self-reflection",
+              "citation": "A. Asai, Z. Wu, Y. Wang, A. Sil, and H. Hajishirzi, 'Self-rag: Learning to retrieve, generate, and critique through self-reflection,' arXiv preprint arXiv:2310.11511 , 2023."
+            },
+            {
+              "title": "Auto-gpt for online decision making: Benchmarks and additional opinions",
+              "citation": "H. Yang, S. Yue, and Y. He, 'Auto-gpt for online decision making: Benchmarks and additional opinions,' arXiv preprint arXiv:2306.02224 , 2023."
+            },
+            {
+              "title": "Graph-toolformer: To empower llms with graph reasoning ability via prompt augmented by chatgpt",
+              "citation": "J. Zhang, 'Graph-toolformer: To empower llms with graph reasoning ability via prompt augmented by chatgpt,' arXiv preprint arXiv:2304.11116 , 2023."
+            },
+            {
+              "title": "Webgpt: Browser-assisted question-answering with human feedback",
+              "citation": "R. Nakano, J. Hilton, S. Balaji, J. Wu, L. Ouyang, C. Kim, C. Hesse, S. Jain, V. Kosaraju, W. Saunders et al. , 'Webgpt: Browserassisted question-answering with human feedback,' arXiv preprint arXiv:2112.09332 , 2021."
+            },
+            {
+              "title": "Active retrieval augmented generation",
+              "citation": "Z. Jiang, F. F. Xu, L. Gao, Z. Sun, Q. Liu, J. Dwivedi-Yu, Y. Yang, J. Callan, and G. Neubig, 'Active retrieval augmented generation,' arXiv preprint arXiv:2305.06983 , 2023."
+            },
+            {
+              "title": "Self-rag: Learning to retrieve, generate, and critique through self-reflection",
+              "citation": "A. Asai, Z. Wu, Y. Wang, A. Sil, and H. Hajishirzi, 'Self-rag: Learning to retrieve, generate, and critique through self-reflection,' arXiv preprint arXiv:2310.11511 , 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "TASK AND EVALUATION",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "6.1",
+          "sec_title": "Downstream Task",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.2",
+          "sec_title": "Evaluation Target",
+          "citations": [
+            {
+              "title": "Query rewriting for retrieval-augmented large language models",
+              "citation": "X. Ma, Y. Gong, P. He, H. Zhao, and N. Duan, 'Query rewriting for retrieval-augmented large language models,' arXiv preprint arXiv:2305.14283 , 2023."
+            },
+            {
+              "title": "Instructretro: Instruction tuning post retrieval-augmented pretraining",
+              "citation": "B. Wang, W. Ping, L. McAfee, P. Xu, B. Li, M. Shoeybi, and B. Catanzaro, 'Instructretro: Instruction tuning post retrieval-augmented pretraining,' arXiv preprint arXiv:2310.07713 , 2023."
+            },
+            {
+              "title": "Retrievalgeneration synergy augmented large language models",
+              "citation": "Z. Feng, X. Feng, D. Zhao, M. Yang, and B. Qin, 'Retrievalgeneration synergy augmented large language models,' arXiv preprint arXiv:2310.05149 , 2023."
+            },
+            {
+              "title": "Replug: Retrieval-augmented black-box language models",
+              "citation": "W. Shi, S. Min, M. Yasunaga, M. Seo, R. James, M. Lewis, L. Zettlemoyer, and W.-t. Yih, 'Replug: Retrieval-augmented black-box language models,' arXiv preprint arXiv:2301.12652 , 2023."
+            },
+            {
+              "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+              "citation": "P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. K¨ uttler, M. Lewis, W.-t. Yih, T. Rockt¨ aschel et al. , 'Retrievalaugmented generation for knowledge-intensive nlp tasks,' Advances in Neural Information Processing Systems , vol. 33, pp. 9459-9474, 2020."
+            },
+            {
+              "title": "Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy",
+              "citation": "Z. Shao, Y. Gong, Y. Shen, M. Huang, N. Duan, and W. Chen, 'Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy,' arXiv preprint arXiv:2305.15294 , 2023."
+            },
+            {
+              "title": "Few-shot learning with retrieval augmented language models",
+              "citation": "G. Izacard, P. Lewis, M. Lomeli, L. Hosseini, F. Petroni, T. Schick, J. Dwivedi-Yu, A. Joulin, S. Riedel, and E. Grave, 'Few-shot learning with retrieval augmented language models,' arXiv preprint arXiv:2208.03299 , 2022."
+            },
+            {
+              "title": "Bridging the preference gap between retrievers and llms",
+              "citation": "Z. Ke, W. Kong, C. Li, M. Zhang, Q. Mei, and M. Bendersky, 'Bridging the preference gap between retrievers and llms,' arXiv preprint arXiv:2401.06954 , 2024."
+            },
+            {
+              "title": "Diversify question generation with retrieval-augmented style transfer",
+              "citation": "Q. Gou, Z. Xia, B. Yu, H. Yu, F. Huang, Y. Li, and N. Cam-Tu, 'Diversify question generation with retrieval-augmented style transfer,' arXiv preprint arXiv:2310.14503 , 2023."
+            },
+            {
+              "title": "Optimizing retrieval-augmented reader models via token elimination",
+              "citation": "M. Berchansky, P. Izsak, A. Caciularu, I. Dagan, and M. Wasserblat, 'Optimizing retrieval-augmented reader models via token elimination,' arXiv preprint arXiv:2310.13682 , 2023."
+            },
+            {
+              "title": "Retrievalgeneration alignment for end-to-end task-oriented dialogue system",
+              "citation": "W. Shen, Y. Gao, C. Huang, F. Wan, X. Quan, and W. Bi, 'Retrievalgeneration alignment for end-to-end task-oriented dialogue system,' arXiv preprint arXiv:2310.08877 , 2023."
+            },
+            {
+              "title": "Ralle: A framework for developing and evaluating retrieval-augmented large language models",
+              "citation": "Y. Hoshi, D. Miyashita, Y. Ng, K. Tatsuno, Y. Morioka, O. Torii, and J. Deguchi, 'Ralle: A framework for developing and evaluating retrieval-augmented large language models,' arXiv preprint arXiv:2308.10633 , 2023."
+            },
+            {
+              "title": "Building production-ready rag applications",
+              "citation": "J. Liu, 'Building production-ready rag applications,' https://www.ai. engineer/summit/schedule/building-production-ready-rag-applications, 2023."
+            },
+            {
+              "title": "Evaluating rag part i: How to evaluate document retrieval",
+              "citation": "I. Nguyen, 'Evaluating rag part i: How to evaluate document retrieval,' https://www.deepset.ai/blog/rag-evaluation-retrieval, 2023."
+            },
+            {
+              "title": "Building production-ready rag applications",
+              "citation": "J. Liu, 'Building production-ready rag applications,' https://www.ai. engineer/summit/schedule/building-production-ready-rag-applications, 2023."
+            },
+            {
+              "title": "Copy is all you need",
+              "citation": "T. Lan, D. Cai, Y. Wang, H. Huang, and X.-L. Mao, 'Copy is all you need,' in The Eleventh International Conference on Learning Representations , 2022."
+            },
+            {
+              "title": "Building production-ready rag applications",
+              "citation": "J. Liu, 'Building production-ready rag applications,' https://www.ai. engineer/summit/schedule/building-production-ready-rag-applications, 2023."
+            },
+            {
+              "title": "Best practices for llm evaluation of rag applications",
+              "citation": "Q. Leng, K. Uhlenhuth, and A. Polyzotis, 'Best practices for llm evaluation of rag applications,' https://www.databricks.com/blog/ LLM-auto-eval-best-practices-RAG, 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "6.2.1",
+              "sec_title": "Retrieval Quality .",
+              "citations": [
+                {
+                  "title": "Building production-ready rag applications",
+                  "citation": "J. Liu, 'Building production-ready rag applications,' https://www.ai. engineer/summit/schedule/building-production-ready-rag-applications, 2023."
+                },
+                {
+                  "title": "Evaluating rag part i: How to evaluate document retrieval",
+                  "citation": "I. Nguyen, 'Evaluating rag part i: How to evaluate document retrieval,' https://www.deepset.ai/blog/rag-evaluation-retrieval, 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.2.2",
+              "sec_title": "Generation Quality .",
+              "citations": [
+                {
+                  "title": "Copy is all you need",
+                  "citation": "T. Lan, D. Cai, Y. Wang, H. Huang, and X.-L. Mao, 'Copy is all you need,' in The Eleventh International Conference on Learning Representations , 2022."
+                },
+                {
+                  "title": "Building production-ready rag applications",
+                  "citation": "J. Liu, 'Building production-ready rag applications,' https://www.ai. engineer/summit/schedule/building-production-ready-rag-applications, 2023."
+                },
+                {
+                  "title": "Best practices for llm evaluation of rag applications",
+                  "citation": "Q. Leng, K. Uhlenhuth, and A. Polyzotis, 'Best practices for llm evaluation of rag applications,' https://www.databricks.com/blog/ LLM-auto-eval-best-practices-RAG, 2023."
+                },
+                {
+                  "title": "Ragas: Automated evaluation of retrieval augmented generation",
+                  "citation": "S. Es, J. James, L. Espinosa-Anke, and S. Schockaert, 'Ragas: Automated evaluation of retrieval augmented generation,' arXiv preprint arXiv:2309.15217 , 2023."
+                },
+                {
+                  "title": "Ares: An automated evaluation framework for retrieval-augmented generation systems",
+                  "citation": "J. Saad-Falcon, O. Khattab, C. Potts, and M. Zaharia, 'Ares: An automated evaluation framework for retrieval-augmented generation systems,' arXiv preprint arXiv:2311.09476 , 2023."
+                },
+                {
+                  "title": "A survey of techniques for maximizing llm performance",
+                  "citation": "C. Jarvis and J. Allard, 'A survey of techniques for maximizing llm performance,' https://community.openai. com/t/openai-dev-day-2023-breakout-sessions/505213# a-survey-of-techniques-for-maximizing-llm-performance-2, 2023."
+                },
+                {
+                  "title": "Benchmarking large language models in retrieval-augmented generation",
+                  "citation": "J. Chen, H. Lin, X. Han, and L. Sun, 'Benchmarking large language models in retrieval-augmented generation,' arXiv preprint arXiv:2309.01431 , 2023."
+                },
+                {
+                  "title": "Recall: A benchmark for llms robustness against external counterfactual knowledge",
+                  "citation": "Y. Liu, L. Huang, S. Li, S. Chen, H. Zhou, F. Meng, J. Zhou, and X. Sun, 'Recall: A benchmark for llms robustness against external counterfactual knowledge,' arXiv preprint arXiv:2311.08147 , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "6.3",
+          "sec_title": "Evaluation Aspects",
+          "citations": [
+            {
+              "title": "Ragas: Automated evaluation of retrieval augmented generation",
+              "citation": "S. Es, J. James, L. Espinosa-Anke, and S. Schockaert, 'Ragas: Automated evaluation of retrieval augmented generation,' arXiv preprint arXiv:2309.15217 , 2023."
+            },
+            {
+              "title": "A survey of techniques for maximizing llm performance",
+              "citation": "C. Jarvis and J. Allard, 'A survey of techniques for maximizing llm performance,' https://community.openai. com/t/openai-dev-day-2023-breakout-sessions/505213# a-survey-of-techniques-for-maximizing-llm-performance-2, 2023."
+            },
+            {
+              "title": "Benchmarking large language models in retrieval-augmented generation",
+              "citation": "J. Chen, H. Lin, X. Han, and L. Sun, 'Benchmarking large language models in retrieval-augmented generation,' arXiv preprint arXiv:2309.01431 , 2023."
+            },
+            {
+              "title": "Recall: A benchmark for llms robustness against external counterfactual knowledge",
+              "citation": "Y. Liu, L. Huang, S. Li, S. Chen, H. Zhou, F. Meng, J. Zhou, and X. Sun, 'Recall: A benchmark for llms robustness against external counterfactual knowledge,' arXiv preprint arXiv:2311.08147 , 2023."
+            },
+            {
+              "title": "Natural questions: a benchmark for question answering research",
+              "citation": "T. Kwiatkowski, J. Palomaki, O. Redfield, M. Collins, A. Parikh, C. Alberti, D. Epstein, I. Polosukhin, J. Devlin, K. Lee et al. , 'Natural questions: a benchmark for question answering research,' Transactions"
+            },
+            {
+              "title": "Bridging the preference gap between retrievers and llms",
+              "citation": "Z. Ke, W. Kong, C. Li, M. Zhang, Q. Mei, and M. Bendersky, 'Bridging the preference gap between retrievers and llms,' arXiv preprint arXiv:2401.06954 , 2024."
+            },
+            {
+              "title": "Dense x retrieval: What retrieval granularity should we use?",
+              "citation": "T. Chen, H. Wang, S. Chen, W. Yu, K. Ma, X. Zhao, D. Yu, and H. Zhang, 'Dense x retrieval: What retrieval granularity should we use?' arXiv preprint arXiv:2312.06648 , 2023."
+            },
+            {
+              "title": "Learning to filter context for retrieval-augmented generation",
+              "citation": "Z. Wang, J. Araki, Z. Jiang, M. R. Parvez, and G. Neubig, 'Learning to filter context for retrieval-augmented generation,' arXiv preprint arXiv:2311.08377 , 2023."
+            },
+            {
+              "title": "Few-shot learning with retrieval augmented language models",
+              "citation": "G. Izacard, P. Lewis, M. Lomeli, L. Hosseini, F. Petroni, T. Schick, J. Dwivedi-Yu, A. Joulin, S. Riedel, and E. Grave, 'Few-shot learning with retrieval augmented language models,' arXiv preprint arXiv:2208.03299 , 2022."
+            },
+            {
+              "title": "Instructretro: Instruction tuning post retrieval-augmented pretraining",
+              "citation": "B. Wang, W. Ping, L. McAfee, P. Xu, B. Li, M. Shoeybi, and B. Catanzaro, 'Instructretro: Instruction tuning post retrieval-augmented pretraining,' arXiv preprint arXiv:2310.07713 , 2023."
+            },
+            {
+              "title": "Chain-of-note: Enhancing robustness in retrieval-augmented language models",
+              "citation": "W. Yu, H. Zhang, X. Pan, K. Ma, H. Wang, and D. Yu, 'Chain-of-note: Enhancing robustness in retrieval-augmented language models,' arXiv preprint arXiv:2311.09210 , 2023."
+            },
+            {
+              "title": "Optimizing retrieval-augmented reader models via token elimination",
+              "citation": "M. Berchansky, P. Izsak, A. Caciularu, I. Dagan, and M. Wasserblat, 'Optimizing retrieval-augmented reader models via token elimination,' arXiv preprint arXiv:2310.13682 , 2023."
+            },
+            {
+              "title": "Retrievalgeneration synergy augmented large language models",
+              "citation": "Z. Feng, X. Feng, D. Zhao, M. Yang, and B. Qin, 'Retrievalgeneration synergy augmented large language models,' arXiv preprint arXiv:2310.05149 , 2023."
+            },
+            {
+              "title": "In-context retrieval-augmented language models",
+              "citation": "O. Ram, Y. Levine, I. Dalmedigos, D. Muhlgay, A. Shashua, K. LeytonBrown, and Y. Shoham, 'In-context retrieval-augmented language models,' arXiv preprint arXiv:2302.00083 , 2023."
+            },
+            {
+              "title": "Knowledge-augmented language model verification",
+              "citation": "J. Baek, S. Jeong, M. Kang, J. C. Park, and S. J. Hwang, 'Knowledge-augmented language model verification,' arXiv preprint arXiv:2310.12836 , 2023."
+            },
+            {
+              "title": "Gar-meets-rag paradigm for zero-shot information retrieval",
+              "citation": "D. Arora, A. Kini, S. R. Chowdhury, N. Natarajan, G. Sinha, and A. Sharma, 'Gar-meets-rag paradigm for zero-shot information retrieval,' arXiv preprint arXiv:2310.20158 , 2023."
+            },
+            {
+              "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+              "citation": "P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. K¨ uttler, M. Lewis, W.-t. Yih, T. Rockt¨ aschel et al. , 'Retrievalaugmented generation for knowledge-intensive nlp tasks,' Advances in Neural Information Processing Systems , vol. 33, pp. 9459-9474, 2020."
+            },
+            {
+              "title": "Recitation-augmented language models",
+              "citation": "Z. Sun, X. Wang, Y. Tay, Y. Yang, and D. Zhou, 'Recitation-augmented language models,' arXiv preprint arXiv:2210.01296 , 2022."
+            },
+            {
+              "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+              "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+            },
+            {
+              "title": "Language models as semantic indexers",
+              "citation": "B. Jin, H. Zeng, G. Wang, X. Chen, T. Wei, R. Li, Z. Wang, Z. Li, Y. Li, H. Lu et al. , 'Language models as semantic indexers,' arXiv preprint arXiv:2310.07815 , 2023."
+            },
+            {
+              "title": "Raven: In-context learning with retrieval augmented encoderdecoder language models",
+              "citation": "J. Huang, W. Ping, P. Xu, M. Shoeybi, K. C.-C. Chang, and B. Catanzaro, 'Raven: In-context learning with retrieval augmented encoderdecoder language models,' arXiv preprint arXiv:2308.07922 , 2023."
+            },
+            {
+              "title": "The power of noise: Redefining retrieval for rag systems",
+              "citation": "F. Cuconasu, G. Trappolini, F. Siciliano, S. Filice, C. Campagnano, Y. Maarek, N. Tonellotto, and F. Silvestri, 'The power of noise: Redefining retrieval for rag systems,' arXiv preprint arXiv:2401.14887 , 2024."
+            },
+            {
+              "title": "Investigating the factual knowledge boundary of large language models with retrieval augmentation",
+              "citation": "R. Ren, Y. Wang, Y. Qu, W. X. Zhao, J. Liu, H. Tian, H. Wu, J.R. Wen, and H. Wang, 'Investigating the factual knowledge boundary of large language models with retrieval augmentation,' arXiv preprint arXiv:2307.11019 , 2023."
+            },
+            {
+              "title": "Recomp: Improving retrieval-augmented lms with compression and selective augmentation",
+              "citation": "F. Xu, W. Shi, and E. Choi, 'Recomp: Improving retrieval-augmented lms with compression and selective augmentation,' arXiv preprint arXiv:2310.04408 , 2023."
+            },
+            {
+              "title": "Exploring the integration strategies of retriever and large language models",
+              "citation": "Y. Liu, S. Yavuz, R. Meng, M. Moorthy, S. Joty, C. Xiong, and Y. Zhou, 'Exploring the integration strategies of retriever and large language models,' arXiv preprint arXiv:2308.12574 , 2023."
+            },
+            {
+              "title": "Uprise: Universal prompt retrieval for improving zero-shot evaluation",
+              "citation": "D. Cheng, S. Huang, J. Bi, Y. Zhan, J. Liu, Y. Wang, H. Sun, F. Wei, D. Deng, and Q. Zhang, 'Uprise: Universal prompt retrieval for improving zero-shot evaluation,' arXiv preprint arXiv:2303.08518 , 2023."
+            },
+            {
+              "title": "Shall we pretrain autoregressive language models with retrieval? a comprehensive study",
+              "citation": "B. Wang, W. Ping, P. Xu, L. McAfee, Z. Liu, M. Shoeybi, Y. Dong, O. Kuchaiev, B. Li, C. Xiao et al. , 'Shall we pretrain autoregressive language models with retrieval? a comprehensive study,' arXiv preprint arXiv:2304.06762 , 2023."
+            },
+            {
+              "title": "Replug: Retrieval-augmented black-box language models",
+              "citation": "W. Shi, S. Min, M. Yasunaga, M. Seo, R. James, M. Lewis, L. Zettlemoyer, and W.-t. Yih, 'Replug: Retrieval-augmented black-box language models,' arXiv preprint arXiv:2301.12652 , 2023."
+            },
+            {
+              "title": "Triviaqa: A large scale distantly supervised challenge dataset for reading comprehension",
+              "citation": "M. Joshi, E. Choi, D. S. Weld, and L. Zettlemoyer, 'Triviaqa: A large scale distantly supervised challenge dataset for reading comprehension,' arXiv preprint arXiv:1705.03551 , 2017."
+            },
+            {
+              "title": "Generate rather than retrieve: Large language models are strong context generators",
+              "citation": "W. Yu, D. Iter, S. Wang, Y. Xu, M. Ju, S. Sanyal, C. Zhu, M. Zeng, and M. Jiang, 'Generate rather than retrieve: Large language models are strong context generators,' arXiv preprint arXiv:2209.10063 , 2022."
+            },
+            {
+              "title": "Dense x retrieval: What retrieval granularity should we use?",
+              "citation": "T. Chen, H. Wang, S. Chen, W. Yu, K. Ma, X. Zhao, D. Yu, and H. Zhang, 'Dense x retrieval: What retrieval granularity should we use?' arXiv preprint arXiv:2312.06648 , 2023."
+            },
+            {
+              "title": "Learning to filter context for retrieval-augmented generation",
+              "citation": "Z. Wang, J. Araki, Z. Jiang, M. R. Parvez, and G. Neubig, 'Learning to filter context for retrieval-augmented generation,' arXiv preprint arXiv:2311.08377 , 2023."
+            },
+            {
+              "title": "Instructretro: Instruction tuning post retrieval-augmented pretraining",
+              "citation": "B. Wang, W. Ping, L. McAfee, P. Xu, B. Li, M. Shoeybi, and B. Catanzaro, 'Instructretro: Instruction tuning post retrieval-augmented pretraining,' arXiv preprint arXiv:2310.07713 , 2023."
+            },
+            {
+              "title": "Chain-of-note: Enhancing robustness in retrieval-augmented language models",
+              "citation": "W. Yu, H. Zhang, X. Pan, K. Ma, H. Wang, and D. Yu, 'Chain-of-note: Enhancing robustness in retrieval-augmented language models,' arXiv preprint arXiv:2311.09210 , 2023."
+            },
+            {
+              "title": "In-context retrieval-augmented language models",
+              "citation": "O. Ram, Y. Levine, I. Dalmedigos, D. Muhlgay, A. Shashua, K. LeytonBrown, and Y. Shoham, 'In-context retrieval-augmented language models,' arXiv preprint arXiv:2302.00083 , 2023."
+            },
+            {
+              "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+              "citation": "P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. K¨ uttler, M. Lewis, W.-t. Yih, T. Rockt¨ aschel et al. , 'Retrievalaugmented generation for knowledge-intensive nlp tasks,' Advances in Neural Information Processing Systems , vol. 33, pp. 9459-9474, 2020."
+            },
+            {
+              "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+              "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+            },
+            {
+              "title": "Retrievalgeneration synergy augmented large language models",
+              "citation": "Z. Feng, X. Feng, D. Zhao, M. Yang, and B. Qin, 'Retrievalgeneration synergy augmented large language models,' arXiv preprint arXiv:2310.05149 , 2023."
+            },
+            {
+              "title": "Investigating the factual knowledge boundary of large language models with retrieval augmentation",
+              "citation": "R. Ren, Y. Wang, Y. Qu, W. X. Zhao, J. Liu, H. Tian, H. Wu, J.R. Wen, and H. Wang, 'Investigating the factual knowledge boundary of large language models with retrieval augmentation,' arXiv preprint arXiv:2307.11019 , 2023."
+            },
+            {
+              "title": "Exploring the integration strategies of retriever and large language models",
+              "citation": "Y. Liu, S. Yavuz, R. Meng, M. Moorthy, S. Joty, C. Xiong, and Y. Zhou, 'Exploring the integration strategies of retriever and large language models,' arXiv preprint arXiv:2308.12574 , 2023."
+            },
+            {
+              "title": "Recitation-augmented language models",
+              "citation": "Z. Sun, X. Wang, Y. Tay, Y. Yang, and D. Zhou, 'Recitation-augmented language models,' arXiv preprint arXiv:2210.01296 , 2022."
+            },
+            {
+              "title": "Self-rag: Learning to retrieve, generate, and critique through self-reflection",
+              "citation": "A. Asai, Z. Wu, Y. Wang, A. Sil, and H. Hajishirzi, 'Self-rag: Learning to retrieve, generate, and critique through self-reflection,' arXiv preprint arXiv:2310.11511 , 2023."
+            },
+            {
+              "title": "Raven: In-context learning with retrieval augmented encoderdecoder language models",
+              "citation": "J. Huang, W. Ping, P. Xu, M. Shoeybi, K. C.-C. Chang, and B. Catanzaro, 'Raven: In-context learning with retrieval augmented encoderdecoder language models,' arXiv preprint arXiv:2308.07922 , 2023."
+            },
+            {
+              "title": "Shall we pretrain autoregressive language models with retrieval? a comprehensive study",
+              "citation": "B. Wang, W. Ping, P. Xu, L. McAfee, Z. Liu, M. Shoeybi, Y. Dong, O. Kuchaiev, B. Li, C. Xiao et al. , 'Shall we pretrain autoregressive language models with retrieval? a comprehensive study,' arXiv preprint arXiv:2304.06762 , 2023."
+            },
+            {
+              "title": "Recomp: Improving retrieval-augmented lms with compression and selective augmentation",
+              "citation": "F. Xu, W. Shi, and E. Choi, 'Recomp: Improving retrieval-augmented lms with compression and selective augmentation,' arXiv preprint arXiv:2310.04408 , 2023."
+            },
+            {
+              "title": "Replug: Retrieval-augmented black-box language models",
+              "citation": "W. Shi, S. Min, M. Yasunaga, M. Seo, R. James, M. Lewis, L. Zettlemoyer, and W.-t. Yih, 'Replug: Retrieval-augmented black-box language models,' arXiv preprint arXiv:2301.12652 , 2023."
+            },
+            {
+              "title": "Squad: 100,000+ questions for machine comprehension of text",
+              "citation": "P. Rajpurkar, J. Zhang, K. Lopyrev, and P. Liang, 'Squad: 100,000+ questions for machine comprehension of text,' arXiv preprint arXiv:1606.05250 , 2016."
+            },
+            {
+              "title": "Uprise: Universal prompt retrieval for improving zero-shot evaluation",
+              "citation": "D. Cheng, S. Huang, J. Bi, Y. Zhan, J. Liu, Y. Wang, H. Sun, F. Wei, D. Deng, and Q. Zhang, 'Uprise: Universal prompt retrieval for improving zero-shot evaluation,' arXiv preprint arXiv:2303.08518 , 2023."
+            },
+            {
+              "title": "Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive nlp",
+              "citation": "O. Khattab, K. Santhanam, X. L. Li, D. Hall, P. Liang, C. Potts, and M. Zaharia, 'Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive nlp,' arXiv preprint arXiv:2212.14024 , 2022."
+            },
+            {
+              "title": "Dense x retrieval: What retrieval granularity should we use?",
+              "citation": "T. Chen, H. Wang, S. Chen, W. Yu, K. Ma, X. Zhao, D. Yu, and H. Zhang, 'Dense x retrieval: What retrieval granularity should we use?' arXiv preprint arXiv:2312.06648 , 2023."
+            },
+            {
+              "title": "Diversify question generation with retrieval-augmented style transfer",
+              "citation": "Q. Gou, Z. Xia, B. Yu, H. Yu, F. Huang, Y. Li, and N. Cam-Tu, 'Diversify question generation with retrieval-augmented style transfer,' arXiv preprint arXiv:2310.14503 , 2023."
+            },
+            {
+              "title": "Instructretro: Instruction tuning post retrieval-augmented pretraining",
+              "citation": "B. Wang, W. Ping, L. McAfee, P. Xu, B. Li, M. Shoeybi, and B. Catanzaro, 'Instructretro: Instruction tuning post retrieval-augmented pretraining,' arXiv preprint arXiv:2310.07713 , 2023."
+            },
+            {
+              "title": "Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter",
+              "citation": "H. Yang, Z. Li, Y. Zhang, J. Wang, N. Cheng, M. Li, and J. Xiao, 'Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter,' arXiv preprint arXiv:2310.18347 , 2023."
+            },
+            {
+              "title": "Exploring the integration strategies of retriever and large language models",
+              "citation": "Y. Liu, S. Yavuz, R. Meng, M. Moorthy, S. Joty, C. Xiong, and Y. Zhou, 'Exploring the integration strategies of retriever and large language models,' arXiv preprint arXiv:2308.12574 , 2023."
+            },
+            {
+              "title": "Semantic parsing on freebase from question-answer pairs",
+              "citation": "J. Berant, A. Chou, R. Frostig, and P. Liang, 'Semantic parsing on freebase from question-answer pairs,' in Proceedings of the 2013 conference on empirical methods in natural language processing , 2013, pp. 1533-1544."
+            },
+            {
+              "title": "Gar-meets-rag paradigm for zero-shot information retrieval",
+              "citation": "D. Arora, A. Kini, S. R. Chowdhury, N. Natarajan, G. Sinha, and A. Sharma, 'Gar-meets-rag paradigm for zero-shot information retrieval,' arXiv preprint arXiv:2310.20158 , 2023."
+            },
+            {
+              "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+              "citation": "P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. K¨ uttler, M. Lewis, W.-t. Yih, T. Rockt¨ aschel et al. , 'Retrievalaugmented generation for knowledge-intensive nlp tasks,' Advances in Neural Information Processing Systems , vol. 33, pp. 9459-9474, 2020."
+            },
+            {
+              "title": "Generate rather than retrieve: Large language models are strong context generators",
+              "citation": "W. Yu, D. Iter, S. Wang, Y. Xu, M. Ju, S. Sanyal, C. Zhu, M. Zeng, and M. Jiang, 'Generate rather than retrieve: Large language models are strong context generators,' arXiv preprint arXiv:2209.10063 , 2022."
+            },
+            {
+              "title": "Dense x retrieval: What retrieval granularity should we use?",
+              "citation": "T. Chen, H. Wang, S. Chen, W. Yu, K. Ma, X. Zhao, D. Yu, and H. Zhang, 'Dense x retrieval: What retrieval granularity should we use?' arXiv preprint arXiv:2312.06648 , 2023."
+            },
+            {
+              "title": "Chain-of-note: Enhancing robustness in retrieval-augmented language models",
+              "citation": "W. Yu, H. Zhang, X. Pan, K. Ma, H. Wang, and D. Yu, 'Chain-of-note: Enhancing robustness in retrieval-augmented language models,' arXiv preprint arXiv:2311.09210 , 2023."
+            },
+            {
+              "title": "1-pager: One pass answer generation and evidence retrieval",
+              "citation": "P. Jain, L. B. Soares, and T. Kwiatkowski, '1-pager: One pass answer generation and evidence retrieval,' arXiv preprint arXiv:2310.16568 , 2023."
+            },
+            {
+              "title": "When not to trust language models: Investigating effectiveness and limitations of parametric and non-parametric memories",
+              "citation": "A. Mallen, A. Asai, V. Zhong, R. Das, H. Hajishirzi, and D. Khashabi, 'When not to trust language models: Investigating effectiveness and limitations of parametric and non-parametric memories,' arXiv preprint arXiv:2212.10511 , 2022."
+            },
+            {
+              "title": "Query rewriting for retrieval-augmented large language models",
+              "citation": "X. Ma, Y. Gong, P. He, H. Zhao, and N. Duan, 'Query rewriting for retrieval-augmented large language models,' arXiv preprint arXiv:2305.14283 , 2023."
+            },
+            {
+              "title": "Self-rag: Learning to retrieve, generate, and critique through self-reflection",
+              "citation": "A. Asai, Z. Wu, Y. Wang, A. Sil, and H. Hajishirzi, 'Self-rag: Learning to retrieve, generate, and critique through self-reflection,' arXiv preprint arXiv:2310.11511 , 2023."
+            },
+            {
+              "title": "Corrective retrieval augmented generation",
+              "citation": "S.-Q. Yan, J.-C. Gu, Y. Zhu, and Z.-H. Ling, 'Corrective retrieval augmented generation,' arXiv preprint arXiv:2401.15884 , 2024."
+            },
+            {
+              "title": "Ms marco: A human-generated machine reading comprehension dataset",
+              "citation": "T. Nguyen, M. Rosenberg, X. Song, J. Gao, S. Tiwary, R. Majumder, and L. Deng, 'Ms marco: A human-generated machine reading comprehension dataset,' 2016."
+            },
+            {
+              "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+              "citation": "P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. K¨ uttler, M. Lewis, W.-t. Yih, T. Rockt¨ aschel et al. , 'Retrievalaugmented generation for knowledge-intensive nlp tasks,' Advances in Neural Information Processing Systems , vol. 33, pp. 9459-9474, 2020."
+            },
+            {
+              "title": "Language models as semantic indexers",
+              "citation": "B. Jin, H. Zeng, G. Wang, X. Chen, T. Wei, R. Li, Z. Wang, Z. Li, Y. Li, H. Lu et al. , 'Language models as semantic indexers,' arXiv preprint arXiv:2310.07815 , 2023."
+            },
+            {
+              "title": "Optimizing retrieval-augmented reader models via token elimination",
+              "citation": "M. Berchansky, P. Izsak, A. Caciularu, I. Dagan, and M. Wasserblat, 'Optimizing retrieval-augmented reader models via token elimination,' arXiv preprint arXiv:2310.13682 , 2023."
+            },
+            {
+              "title": "Hotpotqa: A dataset for diverse, explainable multi-hop question answering",
+              "citation": "Z. Yang, P. Qi, S. Zhang, Y. Bengio, W. W. Cohen, R. Salakhutdinov, and C. D. Manning, 'Hotpotqa: A dataset for diverse, explainable multi-hop question answering,' arXiv preprint arXiv:1809.09600 , 2018."
+            },
+            {
+              "title": "Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive nlp",
+              "citation": "O. Khattab, K. Santhanam, X. L. Li, D. Hall, P. Liang, C. Potts, and M. Zaharia, 'Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive nlp,' arXiv preprint arXiv:2212.14024 , 2022."
+            },
+            {
+              "title": "Bridging the preference gap between retrievers and llms",
+              "citation": "Z. Ke, W. Kong, C. Li, M. Zhang, Q. Mei, and M. Bendersky, 'Bridging the preference gap between retrievers and llms,' arXiv preprint arXiv:2401.06954 , 2024."
+            },
+            {
+              "title": "Divide & conquer for entailment-aware multi-hop evidence retrieval",
+              "citation": "F. Luo and M. Surdeanu, 'Divide &amp; conquer for entailment-aware multi-hop evidence retrieval,' arXiv preprint arXiv:2311.02616 , 2023."
+            },
+            {
+              "title": "Learning to filter context for retrieval-augmented generation",
+              "citation": "Z. Wang, J. Araki, Z. Jiang, M. R. Parvez, and G. Neubig, 'Learning to filter context for retrieval-augmented generation,' arXiv preprint arXiv:2311.08377 , 2023."
+            },
+            {
+              "title": "Augmentation-adapted retriever improves generalization of language models as generic plug-in",
+              "citation": "Z. Yu, C. Xiong, S. Yu, and Z. Liu, 'Augmentation-adapted retriever improves generalization of language models as generic plug-in,' arXiv preprint arXiv:2305.17331 , 2023."
+            },
+            {
+              "title": "Search-in-thechain: Towards accurate, credible and traceable large language models for knowledgeintensive tasks",
+              "citation": "S. Xu, L. Pang, H. Shen, X. Cheng, and T.-S. Chua, 'Search-in-thechain: Towards accurate, credible and traceable large language models for knowledgeintensive tasks,' CoRR, vol. abs/2304.14732 , 2023."
+            },
+            {
+              "title": "Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions",
+              "citation": "H. Trivedi, N. Balasubramanian, T. Khot, and A. Sabharwal, 'Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions,' arXiv preprint arXiv:2212.10509 , 2022."
+            },
+            {
+              "title": "Knowledge-augmented language model verification",
+              "citation": "J. Baek, S. Jeong, M. Kang, J. C. Park, and S. J. Hwang, 'Knowledge-augmented language model verification,' arXiv preprint arXiv:2310.12836 , 2023."
+            },
+            {
+              "title": "Query rewriting for retrieval-augmented large language models",
+              "citation": "X. Ma, Y. Gong, P. He, H. Zhao, and N. Duan, 'Query rewriting for retrieval-augmented large language models,' arXiv preprint arXiv:2305.14283 , 2023."
+            },
+            {
+              "title": "Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy",
+              "citation": "Z. Shao, Y. Gong, Y. Shen, M. Huang, N. Duan, and W. Chen, 'Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy,' arXiv preprint arXiv:2305.15294 , 2023."
+            },
+            {
+              "title": "Recitation-augmented language models",
+              "citation": "Z. Sun, X. Wang, Y. Tay, Y. Yang, and D. Zhou, 'Recitation-augmented language models,' arXiv preprint arXiv:2210.01296 , 2022."
+            },
+            {
+              "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+              "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+            },
+            {
+              "title": "Retrievalgeneration synergy augmented large language models",
+              "citation": "Z. Feng, X. Feng, D. Zhao, M. Yang, and B. Qin, 'Retrievalgeneration synergy augmented large language models,' arXiv preprint arXiv:2310.05149 , 2023."
+            },
+            {
+              "title": "Investigating the factual knowledge boundary of large language models with retrieval augmentation",
+              "citation": "R. Ren, Y. Wang, Y. Qu, W. X. Zhao, J. Liu, H. Tian, H. Wu, J.R. Wen, and H. Wang, 'Investigating the factual knowledge boundary of large language models with retrieval augmentation,' arXiv preprint arXiv:2307.11019 , 2023."
+            },
+            {
+              "title": "Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter",
+              "citation": "H. Yang, Z. Li, Y. Zhang, J. Wang, N. Cheng, M. Li, and J. Xiao, 'Prca: Fitting black-box large language models for retrieval question answering via pluggable reward-driven contextual adapter,' arXiv preprint arXiv:2310.18347 , 2023."
+            },
+            {
+              "title": "Recomp: Improving retrieval-augmented lms with compression and selective augmentation",
+              "citation": "F. Xu, W. Shi, and E. Choi, 'Recomp: Improving retrieval-augmented lms with compression and selective augmentation,' arXiv preprint arXiv:2310.04408 , 2023."
+            },
+            {
+              "title": "Knowledge graph prompting for multi-document question answering",
+              "citation": "Y. Wang, N. Lipka, R. A. Rossi, A. Siu, R. Zhang, and T. Derr, 'Knowledge graph prompting for multi-document question answering,' arXiv preprint arXiv:2308.11730 , 2023."
+            },
+            {
+              "title": "Constructing a multi-hop qa dataset for comprehensive evaluation of reasoning steps",
+              "citation": "X. Ho, A.-K. D. Nguyen, S. Sugawara, and A. Aizawa, 'Constructing a multi-hop qa dataset for comprehensive evaluation of reasoning steps,' arXiv preprint arXiv:2011.01060 , 2020."
+            },
+            {
+              "title": "Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy",
+              "citation": "Z. Shao, Y. Gong, Y. Shen, M. Huang, N. Duan, and W. Chen, 'Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy,' arXiv preprint arXiv:2305.15294 , 2023."
+            },
+            {
+              "title": "Active retrieval augmented generation",
+              "citation": "Z. Jiang, F. F. Xu, L. Gao, Z. Sun, Q. Liu, J. Dwivedi-Yu, Y. Yang, J. Callan, and G. Neubig, 'Active retrieval augmented generation,' arXiv preprint arXiv:2305.06983 , 2023."
+            },
+            {
+              "title": "Making retrieval-augmented language models robust to irrelevant context",
+              "citation": "O. Yoran, T. Wolfson, O. Ram, and J. Berant, 'Making retrievalaugmented language models robust to irrelevant context,' arXiv preprint arXiv:2310.01558 , 2023."
+            },
+            {
+              "title": "Retrievalgeneration synergy augmented large language models",
+              "citation": "Z. Feng, X. Feng, D. Zhao, M. Yang, and B. Qin, 'Retrievalgeneration synergy augmented large language models,' arXiv preprint arXiv:2310.05149 , 2023."
+            },
+            {
+              "title": "Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions",
+              "citation": "H. Trivedi, N. Balasubramanian, T. Khot, and A. Sabharwal, 'Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions,' arXiv preprint arXiv:2212.10509 , 2022."
+            },
+            {
+              "title": "Knowledge graph prompting for multi-document question answering",
+              "citation": "Y. Wang, N. Lipka, R. A. Rossi, A. Siu, R. Zhang, and T. Derr, 'Knowledge graph prompting for multi-document question answering,' arXiv preprint arXiv:2308.11730 , 2023."
+            },
+            {
+              "title": "Musique: Multihop questions via single-hop question composition",
+              "citation": "H. Trivedi, N. Balasubramanian, T. Khot, and A. Sabharwal, 'Musique: Multihop questions via single-hop question composition,' Transactions of the Association for Computational Linguistics , vol. 10, pp. 539-554, 2022."
+            },
+            {
+              "title": "Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy",
+              "citation": "Z. Shao, Y. Gong, Y. Shen, M. Huang, N. Duan, and W. Chen, 'Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy,' arXiv preprint arXiv:2305.15294 , 2023."
+            },
+            {
+              "title": "Search-in-thechain: Towards accurate, credible and traceable large language models for knowledgeintensive tasks",
+              "citation": "S. Xu, L. Pang, H. Shen, X. Cheng, and T.-S. Chua, 'Search-in-thechain: Towards accurate, credible and traceable large language models for knowledgeintensive tasks,' CoRR, vol. abs/2304.14732 , 2023."
+            },
+            {
+              "title": "Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions",
+              "citation": "H. Trivedi, N. Balasubramanian, T. Khot, and A. Sabharwal, 'Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions,' arXiv preprint arXiv:2212.10509 , 2022."
+            },
+            {
+              "title": "Knowledge graph prompting for multi-document question answering",
+              "citation": "Y. Wang, N. Lipka, R. A. Rossi, A. Siu, R. Zhang, and T. Derr, 'Knowledge graph prompting for multi-document question answering,' arXiv preprint arXiv:2308.11730 , 2023."
+            },
+            {
+              "title": "Eli5: Long form question answering",
+              "citation": "A. Fan, Y. Jernite, E. Perez, D. Grangier, J. Weston, and M. Auli, 'Eli5: Long form question answering,' arXiv preprint arXiv:1907.09190 , 2019."
+            },
+            {
+              "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+              "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+            },
+            {
+              "title": "Learning to filter context for retrieval-augmented generation",
+              "citation": "Z. Wang, J. Araki, Z. Jiang, M. R. Parvez, and G. Neubig, 'Learning to filter context for retrieval-augmented generation,' arXiv preprint arXiv:2311.08377 , 2023."
+            },
+            {
+              "title": "Raven: In-context learning with retrieval augmented encoderdecoder language models",
+              "citation": "J. Huang, W. Ping, P. Xu, M. Shoeybi, K. C.-C. Chang, and B. Catanzaro, 'Raven: In-context learning with retrieval augmented encoderdecoder language models,' arXiv preprint arXiv:2308.07922 , 2023."
+            },
+            {
+              "title": "Understanding retrieval augmentation for long-form question answering",
+              "citation": "H.-T. Chen, F. Xu, S. A. Arora, and E. Choi, 'Understanding retrieval augmentation for long-form question answering,' arXiv preprint arXiv:2310.12150 , 2023."
+            },
+            {
+              "title": "Search-in-thechain: Towards accurate, credible and traceable large language models for knowledgeintensive tasks",
+              "citation": "S. Xu, L. Pang, H. Shen, X. Cheng, and T.-S. Chua, 'Search-in-thechain: Towards accurate, credible and traceable large language models for knowledgeintensive tasks,' CoRR, vol. abs/2304.14732 , 2023."
+            },
+            {
+              "title": "The NarrativeQA Reading Comprehension Challenge",
+              "citation": "T. Koˇ cisk` y, J. Schwarz, P. Blunsom, C. Dyer, K. M. Hermann, G. Melis, and E. Grefenstette, 'The narrativeqa reading comprehension challenge,' Transactions of the Association for Computational Linguistics , vol. 6, pp. 317-328, 2018."
+            },
+            {
+              "title": "Instructretro: Instruction tuning post retrieval-augmented pretraining",
+              "citation": "B. Wang, W. Ping, L. McAfee, P. Xu, B. Li, M. Shoeybi, and B. Catanzaro, 'Instructretro: Instruction tuning post retrieval-augmented pretraining,' arXiv preprint arXiv:2310.07713 , 2023."
+            },
+            {
+              "title": "Retrieval meets long context large language models",
+              "citation": "P. Xu, W. Ping, X. Wu, L. McAfee, C. Zhu, Z. Liu, S. Subramanian, E. Bakhturina, M. Shoeybi, and B. Catanzaro, 'Retrieval meets long context large language models,' arXiv preprint arXiv:2310.03025 , 2023."
+            },
+            {
+              "title": "Raptor: Recursive abstractive processing for tree-organized retrieval",
+              "citation": "P. Sarthi, S. Abdullah, A. Tuli, S. Khanna, A. Goldie, and C. D. Manning, 'Raptor: Recursive abstractive processing for tree-organized retrieval,' arXiv preprint arXiv:2401.18059 , 2024."
+            },
+            {
+              "title": "A humaninspired reading agent with gist memory of very long contexts",
+              "citation": "K.-H. Lee, X. Chen, H. Furuta, J. Canny, and I. Fischer, 'A humaninspired reading agent with gist memory of very long contexts,' arXiv preprint arXiv:2402.09727 , 2024."
+            },
+            {
+              "title": "Asqa: Factoid questions meet long-form answers",
+              "citation": "I. Stelmakh, Y. Luan, B. Dhingra, and M.-W. Chang, 'Asqa: Factoid questions meet long-form answers,' arXiv preprint arXiv:2204.06092 , 2022."
+            },
+            {
+              "title": "Active retrieval augmented generation",
+              "citation": "Z. Jiang, F. F. Xu, L. Gao, Z. Sun, Q. Liu, J. Dwivedi-Yu, Y. Yang, J. Callan, and G. Neubig, 'Active retrieval augmented generation,' arXiv preprint arXiv:2305.06983 , 2023."
+            },
+            {
+              "title": "Tree of clarifications: Answering ambiguous questions with retrieval-augmented large language models",
+              "citation": "G. Kim, S. Kim, B. Jeon, J. Park, and J. Kang, 'Tree of clarifications: Answering ambiguous questions with retrieval-augmented large language models,' arXiv preprint arXiv:2310.14696 , 2023."
+            },
+            {
+              "title": "Qmsum: A new benchmark for query-based multi-domain meeting summarization",
+              "citation": "M. Zhong, D. Yin, T. Yu, A. Zaidi, M. Mutuma, R. Jha, A. H. Awadallah, A. Celikyilmaz, Y. Liu, X. Qiu et al. , 'Qmsum: A new benchmark for query-based multi-domain meeting summarization,' arXiv preprint arXiv:2104.05938 , 2021."
+            },
+            {
+              "title": "Retrieval meets long context large language models",
+              "citation": "P. Xu, W. Ping, X. Wu, L. McAfee, C. Zhu, Z. Liu, S. Subramanian, E. Bakhturina, M. Shoeybi, and B. Catanzaro, 'Retrieval meets long context large language models,' arXiv preprint arXiv:2310.03025 , 2023."
+            },
+            {
+              "title": "A humaninspired reading agent with gist memory of very long contexts",
+              "citation": "K.-H. Lee, X. Chen, H. Furuta, J. Canny, and I. Fischer, 'A humaninspired reading agent with gist memory of very long contexts,' arXiv preprint arXiv:2402.09727 , 2024."
+            },
+            {
+              "title": "A dataset of information-seeking questions and answers anchored in research papers",
+              "citation": "P. Dasigi, K. Lo, I. Beltagy, A. Cohan, N. A. Smith, and M. Gardner, 'A dataset of information-seeking questions and answers anchored in research papers,' arXiv preprint arXiv:2105.03011 , 2021."
+            },
+            {
+              "title": "Retrieval meets long context large language models",
+              "citation": "P. Xu, W. Ping, X. Wu, L. McAfee, C. Zhu, Z. Liu, S. Subramanian, E. Bakhturina, M. Shoeybi, and B. Catanzaro, 'Retrieval meets long context large language models,' arXiv preprint arXiv:2310.03025 , 2023."
+            },
+            {
+              "title": "Raptor: Recursive abstractive processing for tree-organized retrieval",
+              "citation": "P. Sarthi, S. Abdullah, A. Tuli, S. Khanna, A. Goldie, and C. D. Manning, 'Raptor: Recursive abstractive processing for tree-organized retrieval,' arXiv preprint arXiv:2401.18059 , 2024."
+            },
+            {
+              "title": "Covid-qa: A question answering dataset for covid-19",
+              "citation": "T. M¨ oller, A. Reina, R. Jayakumar, and M. Pietsch, 'Covid-qa: A question answering dataset for covid-19,' in ACL 2020 Workshop on Natural Language Processing for COVID-19 (NLP-COVID) , 2020."
+            },
+            {
+              "title": "Retrieval-augmented data augmentation for low-resource domain tasks",
+              "citation": "M. Seo, J. Baek, J. Thorne, and S. J. Hwang, 'Retrieval-augmented data augmentation for low-resource domain tasks,' arXiv preprint arXiv:2402.13482 , 2024."
+            },
+            {
+              "title": "Improving the domain adaptation of retrieval augmented generation (rag) models for open domain question answering",
+              "citation": "S. Siriwardhana, R. Weerasekera, E. Wen, T. Kaluarachchi, R. Rana, and S. Nanayakkara, 'Improving the domain adaptation of retrieval augmented generation (rag) models for open domain question answering,' Transactions of the Association for Computational Linguistics , vol. 11, pp. 1-17, 2023."
+            },
+            {
+              "title": "Cmb: A comprehensive medical benchmark in chinese",
+              "citation": "X. Wang, G. H. Chen, D. Song, Z. Zhang, Z. Chen, Q. Xiao, F. Jiang, J. Li, X. Wan, B. Wang et al. , 'Cmb: A comprehensive medical benchmark in chinese,' arXiv preprint arXiv:2308.08833 , 2023."
+            },
+            {
+              "title": "Measuring massive multitask chinese understanding",
+              "citation": "H. Zeng, 'Measuring massive multitask chinese understanding,' arXiv preprint arXiv:2304.12986 , 2023."
+            },
+            {
+              "title": "Think and retrieval: A hypothesis knowledge graph enhanced medical large language models",
+              "citation": "X. Jiang, R. Zhang, Y. Xu, R. Qiu, Y. Fang, Z. Wang, J. Tang, H. Ding, X. Chu, J. Zhao et al. , 'Think and retrieval: A hypothesis knowledge graph enhanced medical large language models,' arXiv preprint arXiv:2312.15883 , 2023."
+            },
+            {
+              "title": "Quality: Question answering with long input texts, yes!",
+              "citation": "R. Y. Pang, A. Parrish, N. Joshi, N. Nangia, J. Phang, A. Chen, V. Padmakumar, J. Ma, J. Thompson, H. He et al. , 'Quality: Question answering with long input texts, yes!' arXiv preprint arXiv:2112.08608 , 2021."
+            },
+            {
+              "title": "Retrieval meets long context large language models",
+              "citation": "P. Xu, W. Ping, X. Wu, L. McAfee, C. Zhu, Z. Liu, S. Subramanian, E. Bakhturina, M. Shoeybi, and B. Catanzaro, 'Retrieval meets long context large language models,' arXiv preprint arXiv:2310.03025 , 2023."
+            },
+            {
+              "title": "Raptor: Recursive abstractive processing for tree-organized retrieval",
+              "citation": "P. Sarthi, S. Abdullah, A. Tuli, S. Khanna, A. Goldie, and C. D. Manning, 'Raptor: Recursive abstractive processing for tree-organized retrieval,' arXiv preprint arXiv:2401.18059 , 2024."
+            },
+            {
+              "title": "Think you have solved question answering? try arc, the ai2 reasoning challenge",
+              "citation": "P. Clark, I. Cowhey, O. Etzioni, T. Khot, A. Sabharwal, C. Schoenick, and O. Tafjord, 'Think you have solved question answering? try arc, the ai2 reasoning challenge,' arXiv preprint arXiv:1803.05457 , 2018."
+            },
+            {
+              "title": "Self-rag: Learning to retrieve, generate, and critique through self-reflection",
+              "citation": "A. Asai, Z. Wu, Y. Wang, A. Sil, and H. Hajishirzi, 'Self-rag: Learning to retrieve, generate, and critique through self-reflection,' arXiv preprint arXiv:2310.11511 , 2023."
+            },
+            {
+              "title": "Corrective retrieval augmented generation",
+              "citation": "S.-Q. Yan, J.-C. Gu, Y. Zhu, and Z.-H. Ling, 'Corrective retrieval augmented generation,' arXiv preprint arXiv:2401.15884 , 2024."
+            },
+            {
+              "title": "Commonsenseqa: A question answering challenge targeting commonsense knowledge",
+              "citation": "A. Talmor, J. Herzig, N. Lourie, and J. Berant, 'Commonsenseqa: A question answering challenge targeting commonsense knowledge,' arXiv preprint arXiv:1811.00937 , 2018."
+            },
+            {
+              "title": "Self-knowledge guided retrieval augmentation for large language models",
+              "citation": "Y. Wang, P. Li, M. Sun, and Y. Liu, 'Self-knowledge guided retrieval augmentation for large language models,' arXiv preprint arXiv:2310.05002 , 2023."
+            },
+            {
+              "title": "Zemi: Learning zero-shot semi-parametric language models from multiple tasks",
+              "citation": "Z. Wang, X. Pan, D. Yu, D. Yu, J. Chen, and H. Ji, 'Zemi: Learning zero-shot semi-parametric language models from multiple tasks,' arXiv preprint arXiv:2210.00185 , 2022."
+            },
+            {
+              "title": "G-retriever: Retrieval-augmented generation for textual graph understanding and question answering",
+              "citation": "X. He, Y. Tian, Y. Sun, N. V. Chawla, T. Laurent, Y. LeCun, X. Bresson, and B. Hooi, 'G-retriever: Retrieval-augmented generation for textual graph understanding and question answering,' arXiv preprint arXiv:2402.07630 , 2024."
+            },
+            {
+              "title": "G-retriever: Retrieval-augmented generation for textual graph understanding and question answering",
+              "citation": "X. He, Y. Tian, Y. Sun, N. V. Chawla, T. Laurent, Y. LeCun, X. Bresson, and B. Hooi, 'G-retriever: Retrieval-augmented generation for textual graph understanding and question answering,' arXiv preprint arXiv:2402.07630 , 2024."
+            },
+            {
+              "title": "Wizard of wikipedia: Knowledge-powered conversational agents",
+              "citation": "E. Dinan, S. Roller, K. Shuster, A. Fan, M. Auli, and J. Weston, 'Wizard of wikipedia: Knowledge-powered conversational agents,' arXiv preprint arXiv:1811.01241 , 2018."
+            },
+            {
+              "title": "Generate rather than retrieve: Large language models are strong context generators",
+              "citation": "W. Yu, D. Iter, S. Wang, Y. Xu, M. Ju, S. Sanyal, C. Zhu, M. Zeng, and M. Jiang, 'Generate rather than retrieve: Large language models are strong context generators,' arXiv preprint arXiv:2209.10063 , 2022."
+            },
+            {
+              "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+              "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+            },
+            {
+              "title": "Learning to filter context for retrieval-augmented generation",
+              "citation": "Z. Wang, J. Araki, Z. Jiang, M. R. Parvez, and G. Neubig, 'Learning to filter context for retrieval-augmented generation,' arXiv preprint arXiv:2311.08377 , 2023."
+            },
+            {
+              "title": "Few-shot learning with retrieval augmented language models",
+              "citation": "G. Izacard, P. Lewis, M. Lomeli, L. Hosseini, F. Petroni, T. Schick, J. Dwivedi-Yu, A. Joulin, S. Riedel, and E. Grave, 'Few-shot learning with retrieval augmented language models,' arXiv preprint arXiv:2208.03299 , 2022."
+            },
+            {
+              "title": "Large language models as source\n\nplanner for personalized knowledge-grounded dialogue",
+              "citation": "H. Wang, M. Hu, Y. Deng, R. Wang, F. Mi, W. Wang, Y. Wang, W.C. Kwan, I. King, and K.-F. Wong, 'Large language models as source\n\nplanner for personalized knowledge-grounded dialogue,' arXiv preprint arXiv:2310.08840 , 2023."
+            },
+            {
+              "title": "Unims-rag: A unified multi-source retrieval-augmented generation for personalized dialogue systems",
+              "citation": "H. Wang, W. Huang, Y. Deng, R. Wang, Z. Wang, Y. Wang, F. Mi, J. Z. Pan, and K.-F. Wong, 'Unims-rag: A unified multi-source retrieval-augmented generation for personalized dialogue systems,' arXiv preprint arXiv:2401.13256 , 2024."
+            },
+            {
+              "title": "Large language models as source planner for personalized knowledge-grounded dialogue",
+              "citation": "--, 'Large language models as source planner for personalized knowledge-grounded dialogue,' arXiv preprint arXiv:2310.08840 , 2023."
+            },
+            {
+              "title": "Long time no see! open-domain conversation with long-term persona memory",
+              "citation": "X. Xu, Z. Gou, W. Wu, Z.-Y. Niu, H. Wu, H. Wang, and S. Wang, 'Long time no see! open-domain conversation with long-term persona memory,' arXiv preprint arXiv:2203.05797 , 2022."
+            },
+            {
+              "title": "Unims-rag: A unified multi-source retrieval-augmented generation for personalized dialogue systems",
+              "citation": "H. Wang, W. Huang, Y. Deng, R. Wang, Z. Wang, Y. Wang, F. Mi, J. Z. Pan, and K.-F. Wong, 'Unims-rag: A unified multi-source retrieval-augmented generation for personalized dialogue systems,' arXiv preprint arXiv:2401.13256 , 2024."
+            },
+            {
+              "title": "Conditional generation and snapshot learning in neural dialogue systems",
+              "citation": "T.-H. Wen, M. Gasic, N. Mrksic, L. M. Rojas-Barahona, P.-H. Su, S. Ultes, D. Vandyke, and S. Young, 'Conditional generation and snapshot learning in neural dialogue systems,' arXiv preprint arXiv:1606.03352 , 2016."
+            },
+            {
+              "title": "Retrievalgeneration alignment for end-to-end task-oriented dialogue system",
+              "citation": "W. Shen, Y. Gao, C. Huang, F. Wan, X. Quan, and W. Bi, 'Retrievalgeneration alignment for end-to-end task-oriented dialogue system,' arXiv preprint arXiv:2310.08877 , 2023."
+            },
+            {
+              "title": "Dual-feedback knowledge retrieval for task-oriented dialogue systems",
+              "citation": "T. Shi, L. Li, Z. Lin, T. Yang, X. Quan, and Q. Wang, 'Dual-feedback knowledge retrieval for task-oriented dialogue systems,' arXiv preprint arXiv:2310.14528 , 2023."
+            },
+            {
+              "title": "Ups and downs: Modeling the visual evolution of fashion trends with one-class collaborative filtering",
+              "citation": "R. He and J. McAuley, 'Ups and downs: Modeling the visual evolution of fashion trends with one-class collaborative filtering,' in proceedings of the 25th international conference on world wide web , 2016, pp. 507-517."
+            },
+            {
+              "title": "Recommender systems with generative retrieval",
+              "citation": "S. Rajput, N. Mehta, A. Singh, R. H. Keshavan, T. Vu, L. Heldt, L. Hong, Y. Tay, V. Q. Tran, J. Samost et al. , 'Recommender systems with generative retrieval,' arXiv preprint arXiv:2305.05065 , 2023."
+            },
+            {
+              "title": "Language models as semantic indexers",
+              "citation": "B. Jin, H. Zeng, G. Wang, X. Chen, T. Wei, R. Li, Z. Wang, Z. Li, Y. Li, H. Lu et al. , 'Language models as semantic indexers,' arXiv preprint arXiv:2310.07815 , 2023."
+            },
+            {
+              "title": "Document-level event argument extraction by conditional generation",
+              "citation": "S. Li, H. Ji, and J. Han, 'Document-level event argument extraction by conditional generation,' arXiv preprint arXiv:2104.05919 , 2021."
+            },
+            {
+              "title": "Generate rather than retrieve: Large language models are strong context generators",
+              "citation": "W. Yu, D. Iter, S. Wang, Y. Xu, M. Ju, S. Sanyal, C. Zhu, M. Zeng, and M. Jiang, 'Generate rather than retrieve: Large language models are strong context generators,' arXiv preprint arXiv:2209.10063 , 2022."
+            },
+            {
+              "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+              "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+            },
+            {
+              "title": "Retrieval-augmented generative question answering for event argument extraction",
+              "citation": "X. Du and H. Ji, 'Retrieval-augmented generative question answering for event argument extraction,' arXiv preprint arXiv:2211.07067 , 2022."
+            },
+            {
+              "title": "Few-shot learning with retrieval augmented language models",
+              "citation": "G. Izacard, P. Lewis, M. Lomeli, L. Hosseini, F. Petroni, T. Schick, J. Dwivedi-Yu, A. Joulin, S. Riedel, and E. Grave, 'Few-shot learning with retrieval augmented language models,' arXiv preprint arXiv:2208.03299 , 2022."
+            },
+            {
+              "title": "Multisentence argument linking",
+              "citation": "S. Ebner, P. Xia, R. Culkin, K. Rawlins, and B. Van Durme, 'Multisentence argument linking,' arXiv preprint arXiv:1911.03766 , 2019."
+            },
+            {
+              "title": "Large language model is not a good few-shot information extractor, but a good reranker for hard samples!",
+              "citation": "Y. Ma, Y. Cao, Y. Hong, and A. Sun, 'Large language model is not a good few-shot information extractor, but a good reranker for hard samples!' arXiv preprint arXiv:2303.08559 , 2023."
+            },
+            {
+              "title": "Retrieval-augmented generative question answering for event argument extraction",
+              "citation": "X. Du and H. Ji, 'Retrieval-augmented generative question answering for event argument extraction,' arXiv preprint arXiv:2211.07067 , 2022."
+            },
+            {
+              "title": "T-rex: A large scale alignment of natural language with knowledge base triples",
+              "citation": "H. Elsahar, P. Vougiouklis, A. Remaci, C. Gravier, J. Hare, F. Laforest, and E. Simperl, 'T-rex: A large scale alignment of natural language with knowledge base triples,' in Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018) , 2018."
+            },
+            {
+              "title": "Zero-shot relation extraction via reading comprehension",
+              "citation": "O. Levy, M. Seo, E. Choi, and L. Zettlemoyer, 'Zero-shot relation extraction via reading comprehension,' arXiv preprint arXiv:1706.04115 , 2017."
+            },
+            {
+              "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+              "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+            },
+            {
+              "title": "Search-in-thechain: Towards accurate, credible and traceable large language models for knowledgeintensive tasks",
+              "citation": "S. Xu, L. Pang, H. Shen, X. Cheng, and T.-S. Chua, 'Search-in-thechain: Towards accurate, credible and traceable large language models for knowledgeintensive tasks,' CoRR, vol. abs/2304.14732 , 2023."
+            },
+            {
+              "title": "Hellaswag: Can a machine really finish your sentence?",
+              "citation": "R. Zellers, A. Holtzman, Y. Bisk, A. Farhadi, and Y. Choi, 'Hellaswag: Can a machine really finish your sentence?' arXiv preprint arXiv:1905.07830 , 2019."
+            },
+            {
+              "title": "Uprise: Universal prompt retrieval for improving zero-shot evaluation",
+              "citation": "D. Cheng, S. Huang, J. Bi, Y. Zhan, J. Liu, Y. Wang, H. Sun, F. Wei, D. Deng, and Q. Zhang, 'Uprise: Universal prompt retrieval for improving zero-shot evaluation,' arXiv preprint arXiv:2303.08518 , 2023."
+            },
+            {
+              "title": "Zemi: Learning zero-shot semi-parametric language models from multiple tasks",
+              "citation": "Z. Wang, X. Pan, D. Yu, D. Yu, J. Chen, and H. Ji, 'Zemi: Learning zero-shot semi-parametric language models from multiple tasks,' arXiv preprint arXiv:2210.00185 , 2022."
+            },
+            {
+              "title": "The cot collection: Improving zero-shot and few-shot learning of language models via chain-of-thought fine-tuning",
+              "citation": "S. Kim, S. J. Joo, D. Kim, J. Jang, S. Ye, J. Shin, and M. Seo, 'The cot collection: Improving zero-shot and few-shot learning of language models via chain-of-thought fine-tuning,' arXiv preprint arXiv:2305.14045 , 2023."
+            },
+            {
+              "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+              "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+            },
+            {
+              "title": "Complex sequential question answering: Towards learning to converse over linked question answer pairs with a knowledge graph",
+              "citation": "A. Saha, V. Pahuja, M. Khapra, K. Sankaranarayanan, and S. Chandar, 'Complex sequential question answering: Towards learning to converse over linked question answer pairs with a knowledge graph,' in Proceedings of the AAAI conference on artificial intelligence , vol. 32, no. 1, 2018."
+            },
+            {
+              "title": "Iag: Induction-augmented generation framework for answering reasoning questions",
+              "citation": "Z. Zhang, X. Zhang, Y. Ren, S. Shi, M. Han, Y. Wu, R. Lai, and Z. Cao, 'Iag: Induction-augmented generation framework for answering reasoning questions,' in Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing , 2023, pp. 1-14."
+            },
+            {
+              "title": "Measuring massive multitask language understanding",
+              "citation": "D. Hendrycks, C. Burns, S. Basart, A. Zou, M. Mazeika, D. Song, and J. Steinhardt, 'Measuring massive multitask language understanding,' arXiv preprint arXiv:2009.03300 , 2020."
+            },
+            {
+              "title": "Query rewriting for retrieval-augmented large language models",
+              "citation": "X. Ma, Y. Gong, P. He, H. Zhao, and N. Duan, 'Query rewriting for retrieval-augmented large language models,' arXiv preprint arXiv:2305.14283 , 2023."
+            },
+            {
+              "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+              "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+            },
+            {
+              "title": "Fine-tuning or retrieval? comparing knowledge injection in llms",
+              "citation": "O. Ovadia, M. Brief, M. Mishaeli, and O. Elisha, 'Fine-tuning or retrieval? comparing knowledge injection in llms,' arXiv preprint arXiv:2312.05934 , 2023."
+            },
+            {
+              "title": "Few-shot learning with retrieval augmented language models",
+              "citation": "G. Izacard, P. Lewis, M. Lomeli, L. Hosseini, F. Petroni, T. Schick, J. Dwivedi-Yu, A. Joulin, S. Riedel, and E. Grave, 'Few-shot learning with retrieval augmented language models,' arXiv preprint arXiv:2208.03299 , 2022."
+            },
+            {
+              "title": "Raven: In-context learning with retrieval augmented encoderdecoder language models",
+              "citation": "J. Huang, W. Ping, P. Xu, M. Shoeybi, K. C.-C. Chang, and B. Catanzaro, 'Raven: In-context learning with retrieval augmented encoderdecoder language models,' arXiv preprint arXiv:2308.07922 , 2023."
+            },
+            {
+              "title": "Augmentation-adapted retriever improves generalization of language models as generic plug-in",
+              "citation": "Z. Yu, C. Xiong, S. Yu, and Z. Liu, 'Augmentation-adapted retriever improves generalization of language models as generic plug-in,' arXiv preprint arXiv:2305.17331 , 2023."
+            },
+            {
+              "title": "Replug: Retrieval-augmented black-box language models",
+              "citation": "W. Shi, S. Min, M. Yasunaga, M. Seo, R. James, M. Lewis, L. Zettlemoyer, and W.-t. Yih, 'Replug: Retrieval-augmented black-box language models,' arXiv preprint arXiv:2301.12652 , 2023."
+            },
+            {
+              "title": "Pointer sentinel mixture models",
+              "citation": "S. Merity, C. Xiong, J. Bradbury, and R. Socher, 'Pointer sentinel mixture models,' arXiv preprint arXiv:1609.07843 , 2016."
+            },
+            {
+              "title": "Improving language models by retrieving from trillions of tokens",
+              "citation": "S. Borgeaud, A. Mensch, J. Hoffmann, T. Cai, E. Rutherford, K. Millican, G. B. Van Den Driessche, J.-B. Lespiau, B. Damoc, A. Clark et al. , 'Improving language models by retrieving from trillions of tokens,' in International conference on machine learning . PMLR, 2022, pp. 2206-2240."
+            },
+            {
+              "title": "Copy is all you need",
+              "citation": "T. Lan, D. Cai, Y. Wang, H. Huang, and X.-L. Mao, 'Copy is all you need,' in The Eleventh International Conference on Learning Representations , 2022."
+            },
+            {
+              "title": "In-context retrieval-augmented language models",
+              "citation": "O. Ram, Y. Levine, I. Dalmedigos, D. Muhlgay, A. Shashua, K. LeytonBrown, and Y. Shoham, 'In-context retrieval-augmented language models,' arXiv preprint arXiv:2302.00083 , 2023."
+            },
+            {
+              "title": "Recomp: Improving retrieval-augmented lms with compression and selective augmentation",
+              "citation": "F. Xu, W. Shi, and E. Choi, 'Recomp: Improving retrieval-augmented lms with compression and selective augmentation,' arXiv preprint arXiv:2310.04408 , 2023."
+            },
+            {
+              "title": "Did aristotle use a laptop? a question answering benchmark with implicit reasoning strategies",
+              "citation": "M. Geva, D. Khashabi, E. Segal, T. Khot, D. Roth, and J. Berant, 'Did aristotle use a laptop? a question answering benchmark with implicit reasoning strategies,' Transactions of the Association for Computational Linguistics , vol. 9, pp. 346-361, 2021."
+            },
+            {
+              "title": "Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy",
+              "citation": "Z. Shao, Y. Gong, Y. Shen, M. Huang, N. Duan, and W. Chen, 'Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy,' arXiv preprint arXiv:2305.15294 , 2023."
+            },
+            {
+              "title": "Active retrieval augmented generation",
+              "citation": "Z. Jiang, F. F. Xu, L. Gao, Z. Sun, Q. Liu, J. Dwivedi-Yu, Y. Yang, J. Callan, and G. Neubig, 'Active retrieval augmented generation,' arXiv preprint arXiv:2305.06983 , 2023."
+            },
+            {
+              "title": "Making retrieval-augmented language models robust to irrelevant context",
+              "citation": "O. Yoran, T. Wolfson, O. Ram, and J. Berant, 'Making retrievalaugmented language models robust to irrelevant context,' arXiv preprint arXiv:2310.01558 , 2023."
+            },
+            {
+              "title": "Search-in-thechain: Towards accurate, credible and traceable large language models for knowledgeintensive tasks",
+              "citation": "S. Xu, L. Pang, H. Shen, X. Cheng, and T.-S. Chua, 'Search-in-thechain: Towards accurate, credible and traceable large language models for knowledgeintensive tasks,' CoRR, vol. abs/2304.14732 , 2023."
+            },
+            {
+              "title": "Iag: Induction-augmented generation framework for answering reasoning questions",
+              "citation": "Z. Zhang, X. Zhang, Y. Ren, S. Shi, M. Han, Y. Wu, R. Lai, and Z. Cao, 'Iag: Induction-augmented generation framework for answering reasoning questions,' in Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing , 2023, pp. 1-14."
+            },
+            {
+              "title": "Self-knowledge guided retrieval augmentation for large language models",
+              "citation": "Y. Wang, P. Li, M. Sun, and Y. Liu, 'Self-knowledge guided retrieval augmentation for large language models,' arXiv preprint arXiv:2310.05002 , 2023."
+            },
+            {
+              "title": "Fever: a large-scale dataset for fact extraction and verification",
+              "citation": "J. Thorne, A. Vlachos, C. Christodoulopoulos, and A. Mittal, 'Fever: a large-scale dataset for fact extraction and verification,' arXiv preprint arXiv:1803.05355 , 2018."
+            },
+            {
+              "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+              "citation": "P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. K¨ uttler, M. Lewis, W.-t. Yih, T. Rockt¨ aschel et al. , 'Retrievalaugmented generation for knowledge-intensive nlp tasks,' Advances in Neural Information Processing Systems , vol. 33, pp. 9459-9474, 2020."
+            },
+            {
+              "title": "Generate rather than retrieve: Large language models are strong context generators",
+              "citation": "W. Yu, D. Iter, S. Wang, Y. Xu, M. Ju, S. Sanyal, C. Zhu, M. Zeng, and M. Jiang, 'Generate rather than retrieve: Large language models are strong context generators,' arXiv preprint arXiv:2209.10063 , 2022."
+            },
+            {
+              "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+              "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+            },
+            {
+              "title": "Learning to filter context for retrieval-augmented generation",
+              "citation": "Z. Wang, J. Araki, Z. Jiang, M. R. Parvez, and G. Neubig, 'Learning to filter context for retrieval-augmented generation,' arXiv preprint arXiv:2311.08377 , 2023."
+            },
+            {
+              "title": "Few-shot learning with retrieval augmented language models",
+              "citation": "G. Izacard, P. Lewis, M. Lomeli, L. Hosseini, F. Petroni, T. Schick, J. Dwivedi-Yu, A. Joulin, S. Riedel, and E. Grave, 'Few-shot learning with retrieval augmented language models,' arXiv preprint arXiv:2208.03299 , 2022."
+            },
+            {
+              "title": "Chain-of-note: Enhancing robustness in retrieval-augmented language models",
+              "citation": "W. Yu, H. Zhang, X. Pan, K. Ma, H. Wang, and D. Yu, 'Chain-of-note: Enhancing robustness in retrieval-augmented language models,' arXiv preprint arXiv:2311.09210 , 2023."
+            },
+            {
+              "title": "Explainable automated fact-checking for public health claims",
+              "citation": "N. Kotonya and F. Toni, 'Explainable automated fact-checking for public health claims,' arXiv preprint arXiv:2010.09926 , 2020."
+            },
+            {
+              "title": "Self-rag: Learning to retrieve, generate, and critique through self-reflection",
+              "citation": "A. Asai, Z. Wu, Y. Wang, A. Sil, and H. Hajishirzi, 'Self-rag: Learning to retrieve, generate, and critique through self-reflection,' arXiv preprint arXiv:2310.11511 , 2023."
+            },
+            {
+              "title": "Corrective retrieval augmented generation",
+              "citation": "S.-Q. Yan, J.-C. Gu, Y. Zhu, and Z.-H. Ling, 'Corrective retrieval augmented generation,' arXiv preprint arXiv:2401.15884 , 2024."
+            },
+            {
+              "title": "Neural text generation from structured data with application to the biography domain",
+              "citation": "R. Lebret, D. Grangier, and M. Auli, 'Neural text generation from structured data with application to the biography domain,' arXiv preprint arXiv:1603.07771 , 2016."
+            },
+            {
+              "title": "Corrective retrieval augmented generation",
+              "citation": "S.-Q. Yan, J.-C. Gu, Y. Zhu, and Z.-H. Ling, 'Corrective retrieval augmented generation,' arXiv preprint arXiv:2401.15884 , 2024."
+            },
+            {
+              "title": "Wikiasp: A dataset for multi-domain aspect-based summarization",
+              "citation": "H. Hayashi, P. Budania, P. Wang, C. Ackerson, R. Neervannan, and G. Neubig, 'Wikiasp: A dataset for multi-domain aspect-based summarization,' Transactions of the Association for Computational Linguistics , vol. 9, pp. 211-225, 2021."
+            },
+            {
+              "title": "Active retrieval augmented generation",
+              "citation": "Z. Jiang, F. F. Xu, L. Gao, Z. Sun, Q. Liu, J. Dwivedi-Yu, Y. Yang, J. Callan, and G. Neubig, 'Active retrieval augmented generation,' arXiv preprint arXiv:2305.06983 , 2023."
+            },
+            {
+              "title": "Don't give me the details, just the summary! topic-aware convolutional neural networks for extreme summarization",
+              "citation": "S. Narayan, S. B. Cohen, and M. Lapata, 'Don't give me the details, just the summary! topic-aware convolutional neural networks for extreme summarization,' arXiv preprint arXiv:1808.08745 , 2018."
+            },
+            {
+              "title": "Lift yourself up: Retrieval-augmented text generation with self memory",
+              "citation": "X. Cheng, D. Luo, X. Chen, L. Liu, D. Zhao, and R. Yan, 'Lift yourself up: Retrieval-augmented text generation with self memory,' arXiv preprint arXiv:2305.02437 , 2023."
+            },
+            {
+              "title": "Vio-lens: A novel dataset of annotated social network posts leading to different forms of communal violence and its evaluation",
+              "citation": "S. Saha, J. A. Junaed, M. Saleki, A. S. Sharma, M. R. Rifat, M. Rahouti, S. I. Ahmed, N. Mohammed, and M. R. Amin, 'Vio-lens: A novel dataset of annotated social network posts leading to different forms of communal violence and its evaluation,' in Proceedings of the First Workshop on Bangla Language Processing (BLP-2023) , 2023, pp. 7284."
+            },
+            {
+              "title": "From classification to generation: Insights into crosslingual retrieval augmented icl",
+              "citation": "X. Li, E. Nie, and S. Liang, 'From classification to generation: Insights into crosslingual retrieval augmented icl,' arXiv preprint arXiv:2311.06595 , 2023."
+            },
+            {
+              "title": "Learning question classifiers",
+              "citation": "X. Li and D. Roth, 'Learning question classifiers,' in COLING 2002: The 19th International Conference on Computational Linguistics , 2002."
+            },
+            {
+              "title": "Prompt-guided retrieval augmentation for non-knowledge-intensive tasks",
+              "citation": "Z. Guo, S. Cheng, Y. Wang, P. Li, and Y. Liu, 'Prompt-guided retrieval augmentation for non-knowledge-intensive tasks,' arXiv preprint arXiv:2305.17653 , 2023."
+            },
+            {
+              "title": "Recursive deep models for semantic compositionality over a sentiment treebank",
+              "citation": "R. Socher, A. Perelygin, J. Wu, J. Chuang, C. D. Manning, A. Y. Ng, and C. Potts, 'Recursive deep models for semantic compositionality over a sentiment treebank,' in Proceedings of the 2013 conference on empirical methods in natural language processing , 2013, pp. 16311642."
+            },
+            {
+              "title": "Uprise: Universal prompt retrieval for improving zero-shot evaluation",
+              "citation": "D. Cheng, S. Huang, J. Bi, Y. Zhan, J. Liu, Y. Wang, H. Sun, F. Wei, D. Deng, and Q. Zhang, 'Uprise: Universal prompt retrieval for improving zero-shot evaluation,' arXiv preprint arXiv:2303.08518 , 2023."
+            },
+            {
+              "title": "Prompt-guided retrieval augmentation for non-knowledge-intensive tasks",
+              "citation": "Z. Guo, S. Cheng, Y. Wang, P. Li, and Y. Liu, 'Prompt-guided retrieval augmentation for non-knowledge-intensive tasks,' arXiv preprint arXiv:2305.17653 , 2023."
+            },
+            {
+              "title": "Learning to retrieve in-context examples for large language models",
+              "citation": "L. Wang, N. Yang, and F. Wei, 'Learning to retrieve in-context examples for large language models,' arXiv preprint arXiv:2307.07164 , 2023."
+            },
+            {
+              "title": "Codesearchnet challenge: Evaluating the state of semantic code search",
+              "citation": "H. Husain, H.-H. Wu, T. Gazit, M. Allamanis, and M. Brockschmidt, 'Codesearchnet challenge: Evaluating the state of semantic code search,' arXiv preprint arXiv:1909.09436 , 2019."
+            },
+            {
+              "title": "Structureaware language model pretraining improves dense retrieval on structured data",
+              "citation": "X. Li, Z. Liu, C. Xiong, S. Yu, Y. Gu, Z. Liu, and G. Yu, 'Structureaware language model pretraining improves dense retrieval on structured data,' arXiv preprint arXiv:2305.19912 , 2023."
+            },
+            {
+              "title": "Nomiracl: Knowing when you don't know for robust multilingual retrieval-augmented generation",
+              "citation": "N. Thakur, L. Bonifacio, X. Zhang, O. Ogundepo, E. Kamalloo, D. Alfonso-Hermelo, X. Li, Q. Liu, B. Chen, M. Rezagholizadeh et al. , 'Nomiracl: Knowing when you don't know for robust multilingual retrieval-augmented generation,' arXiv preprint arXiv:2312.11361 , 2023."
+            },
+            {
+              "title": "Nomiracl: Knowing when you don't know for robust multilingual retrieval-augmented generation",
+              "citation": "N. Thakur, L. Bonifacio, X. Zhang, O. Ogundepo, E. Kamalloo, D. Alfonso-Hermelo, X. Li, Q. Liu, B. Chen, M. Rezagholizadeh et al. , 'Nomiracl: Knowing when you don't know for robust multilingual retrieval-augmented generation,' arXiv preprint arXiv:2312.11361 , 2023."
+            },
+            {
+              "title": "Training verifiers to solve math word problems",
+              "citation": "K. Cobbe, V. Kosaraju, M. Bavarian, M. Chen, H. Jun, L. Kaiser, M. Plappert, J. Tworek, J. Hilton, R. Nakano et al. , 'Training verifiers to solve math word problems,' arXiv preprint arXiv:2110.14168 , 2021."
+            },
+            {
+              "title": "Enhancing llm intelligence with arm-rag: Auxiliary rationale memory for retrieval augmented generation",
+              "citation": "E. Melz, 'Enhancing llm intelligence with arm-rag: Auxiliary rationale memory for retrieval augmented generation,' arXiv preprint arXiv:2311.04177 , 2023."
+            },
+            {
+              "title": "The jrc-acquis: A multilingual aligned parallel corpus with 20+ languages",
+              "citation": "R. Steinberger, B. Pouliquen, A. Widiger, C. Ignat, T. Erjavec, D. Tufis, and D. Varga, 'The jrc-acquis: A multilingual aligned parallel corpus with 20+ languages,' arXiv preprint cs/0609058 , 2006."
+            },
+            {
+              "title": "Lift yourself up: Retrieval-augmented text generation with self memory",
+              "citation": "X. Cheng, D. Luo, X. Chen, L. Liu, D. Zhao, and R. Yan, 'Lift yourself up: Retrieval-augmented text generation with self memory,' arXiv preprint arXiv:2305.02437 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.4",
+          "sec_title": "Evaluation Benchmarks and Tools",
+          "citations": [
+            {
+              "title": "Benchmarking large language models in retrieval-augmented generation",
+              "citation": "J. Chen, H. Lin, X. Han, and L. Sun, 'Benchmarking large language models in retrieval-augmented generation,' arXiv preprint arXiv:2309.01431 , 2023."
+            },
+            {
+              "title": "Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models",
+              "citation": "Y. Lyu, Z. Li, S. Niu, F. Xiong, B. Tang, W. Wang, H. Wu, H. Liu, T. Xu, and E. Chen, 'Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models,' arXiv preprint arXiv:2401.17043 , 2024."
+            },
+            {
+              "title": "Ragas: Automated evaluation of retrieval augmented generation",
+              "citation": "S. Es, J. James, L. Espinosa-Anke, and S. Schockaert, 'Ragas: Automated evaluation of retrieval augmented generation,' arXiv preprint arXiv:2309.15217 , 2023."
+            },
+            {
+              "title": "Ares: An automated evaluation framework for retrieval-augmented generation systems",
+              "citation": "J. Saad-Falcon, O. Khattab, C. Potts, and M. Zaharia, 'Ares: An automated evaluation framework for retrieval-augmented generation systems,' arXiv preprint arXiv:2311.09476 , 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "DISCUSSION AND FUTURE PROSPECTS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "7.1",
+          "sec_title": "RAG vs Long Context",
+          "citations": [
+            {
+              "title": "Retrieval meets long context large language models",
+              "citation": "P. Xu, W. Ping, X. Wu, L. McAfee, C. Zhu, Z. Liu, S. Subramanian, E. Bakhturina, M. Shoeybi, and B. Catanzaro, 'Retrieval meets long context large language models,' arXiv preprint arXiv:2310.03025 , 2023."
+            },
+            {
+              "title": "Efficient streaming language models with attention sinks",
+              "citation": "G. Xiao, Y. Tian, B. Chen, S. Han, and M. Lewis, 'Efficient streaming language models with attention sinks,' arXiv preprint arXiv:2309.17453 , 2023."
+            },
+            {
+              "title": "Understanding retrieval augmentation for long-form question answering",
+              "citation": "H.-T. Chen, F. Xu, S. A. Arora, and E. Choi, 'Understanding retrieval augmentation for long-form question answering,' arXiv preprint arXiv:2310.12150 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.2",
+          "sec_title": "RAG Robustness",
+          "citations": [
+            {
+              "title": "Making retrieval-augmented language models robust to irrelevant context",
+              "citation": "O. Yoran, T. Wolfson, O. Ram, and J. Berant, 'Making retrievalaugmented language models robust to irrelevant context,' arXiv preprint arXiv:2310.01558 , 2023."
+            },
+            {
+              "title": "Chain-of-note: Enhancing robustness in retrieval-augmented language models",
+              "citation": "W. Yu, H. Zhang, X. Pan, K. Ma, H. Wang, and D. Yu, 'Chain-of-note: Enhancing robustness in retrieval-augmented language models,' arXiv preprint arXiv:2311.09210 , 2023."
+            },
+            {
+              "title": "Knowledge-augmented language model verification",
+              "citation": "J. Baek, S. Jeong, M. Kang, J. C. Park, and S. J. Hwang, 'Knowledge-augmented language model verification,' arXiv preprint arXiv:2310.12836 , 2023."
+            },
+            {
+              "title": "The power of noise: Redefining retrieval for rag systems",
+              "citation": "F. Cuconasu, G. Trappolini, F. Siciliano, S. Filice, C. Campagnano, Y. Maarek, N. Tonellotto, and F. Silvestri, 'The power of noise: Redefining retrieval for rag systems,' arXiv preprint arXiv:2401.14887 , 2024."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.3",
+          "sec_title": "Hybrid Approaches",
+          "citations": [
+            {
+              "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+              "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+            },
+            {
+              "title": "Corrective retrieval augmented generation",
+              "citation": "S.-Q. Yan, J.-C. Gu, Y. Zhu, and Z.-H. Ling, 'Corrective retrieval augmented generation,' arXiv preprint arXiv:2401.15884 , 2024."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "7.3.1",
+              "sec_title": "Combining RAG with fine-tuning is emerging as a leading strategy.",
+              "citations": [
+                {
+                  "title": "Ra-dit: Retrievalaugmented dual instruction tuning",
+                  "citation": "X. V. Lin, X. Chen, M. Chen, W. Shi, M. Lomeli, R. James, P. Rodriguez, J. Kahn, G. Szilvasy, M. Lewis et al. , 'Ra-dit: Retrievalaugmented dual instruction tuning,' arXiv preprint arXiv:2310.01352 , 2023."
+                },
+                {
+                  "title": "Corrective retrieval augmented generation",
+                  "citation": "S.-Q. Yan, J.-C. Gu, Y. Zhu, and Z.-H. Ling, 'Corrective retrieval augmented generation,' arXiv preprint arXiv:2401.15884 , 2024."
+                },
+                {
+                  "title": "Raft: Adapting language model to domain specific rag",
+                  "citation": "T. Zhang, S. G. Patil, N. Jain, S. Shen, M. Zaharia, I. Stoica, and J. E. Gonzalez, 'Raft: Adapting language model to domain specific rag,' arXiv preprint arXiv:2403.10131 , 2024."
+                },
+                {
+                  "title": "Scaling laws for neural language models",
+                  "citation": "J. Kaplan, S. McCandlish, T. Henighan, T. B. Brown, B. Chess, R. Child, S. Gray, A. Radford, J. Wu, and D. Amodei, 'Scaling laws for neural language models,' arXiv preprint arXiv:2001.08361 , 2020."
+                },
+                {
+                  "title": "Shall we pretrain autoregressive language models with retrieval? a comprehensive study",
+                  "citation": "B. Wang, W. Ping, P. Xu, L. McAfee, Z. Liu, M. Shoeybi, Y. Dong, O. Kuchaiev, B. Li, C. Xiao et al. , 'Shall we pretrain autoregressive language models with retrieval? a comprehensive study,' arXiv preprint arXiv:2304.06762 , 2023."
+                },
+                {
+                  "title": "Neurosymbolic language modeling with automaton-augmented retrieval",
+                  "citation": "U. Alon, F. Xu, J. He, S. Sengupta, D. Roth, and G. Neubig, 'Neurosymbolic language modeling with automaton-augmented retrieval,' in International Conference on Machine Learning . PMLR, 2022, pp. 468-485."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "7.4",
+          "sec_title": "Scaling laws of RAG",
+          "citations": [
+            {
+              "title": "Raft: Adapting language model to domain specific rag",
+              "citation": "T. Zhang, S. G. Patil, N. Jain, S. Shen, M. Zaharia, I. Stoica, and J. E. Gonzalez, 'Raft: Adapting language model to domain specific rag,' arXiv preprint arXiv:2403.10131 , 2024."
+            },
+            {
+              "title": "Scaling laws for neural language models",
+              "citation": "J. Kaplan, S. McCandlish, T. Henighan, T. B. Brown, B. Chess, R. Child, S. Gray, A. Radford, J. Wu, and D. Amodei, 'Scaling laws for neural language models,' arXiv preprint arXiv:2001.08361 , 2020."
+            },
+            {
+              "title": "Shall we pretrain autoregressive language models with retrieval? a comprehensive study",
+              "citation": "B. Wang, W. Ping, P. Xu, L. McAfee, Z. Liu, M. Shoeybi, Y. Dong, O. Kuchaiev, B. Li, C. Xiao et al. , 'Shall we pretrain autoregressive language models with retrieval? a comprehensive study,' arXiv preprint arXiv:2304.06762 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.5",
+          "sec_title": "Production-Ready RAG",
+          "citations": [
+            {
+              "title": "Neurosymbolic language modeling with automaton-augmented retrieval",
+              "citation": "U. Alon, F. Xu, J. He, S. Sengupta, D. Roth, and G. Neubig, 'Neurosymbolic language modeling with automaton-augmented retrieval,' in International Conference on Machine Learning . PMLR, 2022, pp. 468-485."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.6",
+          "sec_title": "Multi-modal RAG",
+          "citations": [
+            {
+              "title": "Retrieval-augmented multimodal language modeling",
+              "citation": "M. Yasunaga, A. Aghajanyan, W. Shi, R. James, J. Leskovec, P. Liang, M. Lewis, L. Zettlemoyer, and W.-t. Yih, 'Retrieval-augmented multimodal language modeling,' arXiv preprint arXiv:2211.12561 , 2022."
+            },
+            {
+              "title": "Blip-2: Bootstrapping languageimage pre-training with frozen image encoders and large language models",
+              "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'Blip-2: Bootstrapping languageimage pre-training with frozen image encoders and large language models,' arXiv preprint arXiv:2301.12597 , 2023."
+            },
+            {
+              "title": "Visualize before you write: Imagination-guided open-ended text generation",
+              "citation": "W. Zhu, A. Yan, Y. Lu, W. Xu, X. E. Wang, M. Eckstein, and W. Y. Wang, 'Visualize before you write: Imagination-guided open-ended text generation,' arXiv preprint arXiv:2210.03765 , 2022."
+            },
+            {
+              "title": "Generating synthetic speech from spokenvocab for speech translation",
+              "citation": "J. Zhao, G. Haffar, and E. Shareghi, 'Generating synthetic speech from spokenvocab for speech translation,' arXiv preprint arXiv:2210.08174 , 2022."
+            },
+            {
+              "title": "Using external off-policy speech-to-text mappings in contextual end-to-end automated speech recognition",
+              "citation": "D. M. Chan, S. Ghosh, A. Rastrow, and B. Hoffmeister, 'Using external off-policy speech-to-text mappings in contextual end-to-end automated speech recognition,' arXiv preprint arXiv:2301.02736 , 2023."
+            },
+            {
+              "title": "Vid2seq: Large-scale pretraining of a visual language model for dense video captioning",
+              "citation": "A. Yang, A. Nagrani, P. H. Seo, A. Miech, J. Pont-Tuset, I. Laptev, J. Sivic, and C. Schmid, 'Vid2seq: Large-scale pretraining of a visual language model for dense video captioning,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2023, pp. 10 714-10 726."
+            },
+            {
+              "title": "Retrieval-based prompt selection for code-related few-shot learning",
+              "citation": "N. Nashid, M. Sintaha, and A. Mesbah, 'Retrieval-based prompt selection for code-related few-shot learning,' in 2023 IEEE/ACM 45th International Conference on Software Engineering (ICSE) , 2023, pp. 2450-2462."
+            },
+            {
+              "title": "Chain of knowledge: A framework for grounding large language models with structured knowledge bases",
+              "citation": "X. Li, R. Zhao, Y. K. Chia, B. Ding, L. Bing, S. Joty, and S. Poria, 'Chain of knowledge: A framework for grounding large language models with structured knowledge bases,' arXiv preprint arXiv:2305.13269 , 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "7.6.1",
+              "sec_title": "Image .",
+              "citations": [
+                {
+                  "title": "Retrieval-augmented multimodal language modeling",
+                  "citation": "M. Yasunaga, A. Aghajanyan, W. Shi, R. James, J. Leskovec, P. Liang, M. Lewis, L. Zettlemoyer, and W.-t. Yih, 'Retrieval-augmented multimodal language modeling,' arXiv preprint arXiv:2211.12561 , 2022."
+                },
+                {
+                  "title": "Blip-2: Bootstrapping languageimage pre-training with frozen image encoders and large language models",
+                  "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'Blip-2: Bootstrapping languageimage pre-training with frozen image encoders and large language models,' arXiv preprint arXiv:2301.12597 , 2023."
+                },
+                {
+                  "title": "Visualize before you write: Imagination-guided open-ended text generation",
+                  "citation": "W. Zhu, A. Yan, Y. Lu, W. Xu, X. E. Wang, M. Eckstein, and W. Y. Wang, 'Visualize before you write: Imagination-guided open-ended text generation,' arXiv preprint arXiv:2210.03765 , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "7.6.2",
+              "sec_title": "Audio and Video .",
+              "citations": [
+                {
+                  "title": "Generating synthetic speech from spokenvocab for speech translation",
+                  "citation": "J. Zhao, G. Haffar, and E. Shareghi, 'Generating synthetic speech from spokenvocab for speech translation,' arXiv preprint arXiv:2210.08174 , 2022."
+                },
+                {
+                  "title": "Using external off-policy speech-to-text mappings in contextual end-to-end automated speech recognition",
+                  "citation": "D. M. Chan, S. Ghosh, A. Rastrow, and B. Hoffmeister, 'Using external off-policy speech-to-text mappings in contextual end-to-end automated speech recognition,' arXiv preprint arXiv:2301.02736 , 2023."
+                },
+                {
+                  "title": "Vid2seq: Large-scale pretraining of a visual language model for dense video captioning",
+                  "citation": "A. Yang, A. Nagrani, P. H. Seo, A. Miech, J. Pont-Tuset, I. Laptev, J. Sivic, and C. Schmid, 'Vid2seq: Large-scale pretraining of a visual language model for dense video captioning,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2023, pp. 10 714-10 726."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "7.6.3",
+              "sec_title": "Code .",
+              "citations": [
+                {
+                  "title": "Retrieval-based prompt selection for code-related few-shot learning",
+                  "citation": "N. Nashid, M. Sintaha, and A. Mesbah, 'Retrieval-based prompt selection for code-related few-shot learning,' in 2023 IEEE/ACM 45th International Conference on Software Engineering (ICSE) , 2023, pp. 2450-2462."
+                },
+                {
+                  "title": "Chain of knowledge: A framework for grounding large language models with structured knowledge bases",
+                  "citation": "X. Li, R. Zhao, Y. K. Chia, B. Ding, L. Bing, S. Joty, and S. Poria, 'Chain of knowledge: A framework for grounding large language models with structured knowledge bases,' arXiv preprint arXiv:2305.13269 , 2023."
+                },
+                {
+                  "title": "Large language models struggle to learn long-tail knowledge",
+                  "citation": "N. Kandpal, H. Deng, A. Roberts, E. Wallace, and C. Raffel, 'Large language models struggle to learn long-tail knowledge,' in International Conference on Machine Learning . PMLR, 2023, pp. 15 69615 707."
+                },
+                {
+                  "title": "Siren's song in the ai ocean: A survey on hallucination in large language models",
+                  "citation": "Y. Zhang, Y. Li, L. Cui, D. Cai, L. Liu, T. Fu, X. Huang, E. Zhao, Y. Zhang, Y. Chen et al. , 'Siren's song in the ai ocean: A survey on hallucination in large language models,' arXiv preprint arXiv:2309.01219 , 2023."
+                },
+                {
+                  "title": "Gar-meets-rag paradigm for zero-shot information retrieval",
+                  "citation": "D. Arora, A. Kini, S. R. Chowdhury, N. Natarajan, G. Sinha, and A. Sharma, 'Gar-meets-rag paradigm for zero-shot information retrieval,' arXiv preprint arXiv:2310.20158 , 2023."
+                },
+                {
+                  "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+                  "citation": "P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. K¨ uttler, M. Lewis, W.-t. Yih, T. Rockt¨ aschel et al. , 'Retrievalaugmented generation for knowledge-intensive nlp tasks,' Advances in Neural Information Processing Systems , vol. 33, pp. 9459-9474, 2020."
+                },
+                {
+                  "title": "Improving language models by retrieving from trillions of tokens",
+                  "citation": "S. Borgeaud, A. Mensch, J. Hoffmann, T. Cai, E. Rutherford, K. Millican, G. B. Van Den Driessche, J.-B. Lespiau, B. Damoc, A. Clark et al. , 'Improving language models by retrieving from trillions of tokens,' in International conference on machine learning . PMLR, 2022, pp. 2206-2240."
+                },
+                {
+                  "title": "Training language models to follow instructions with human feedback",
+                  "citation": "L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray et al. , 'Training language models to follow instructions with human feedback,' Advances in neural information processing systems , vol. 35, pp. 27 730-27 744, 2022."
+                },
+                {
+                  "title": "Query rewriting for retrieval-augmented large language models",
+                  "citation": "X. Ma, Y. Gong, P. He, H. Zhao, and N. Duan, 'Query rewriting for retrieval-augmented large language models,' arXiv preprint arXiv:2305.14283 , 2023."
+                },
+                {
+                  "title": "Advanced rag techniques: an illustrated overview",
+                  "citation": "I. ILIN, 'Advanced rag techniques: an illustrated overview,' https://pub.towardsai.net/ advanced-rag-techniques-an-illustrated-overview-04d193d8fec6, 2023."
+                },
+                {
+                  "title": "Large language model based long-tail query rewriting in taobao search",
+                  "citation": "W. Peng, G. Li, Y. Jiang, Z. Wang, D. Ou, X. Zeng, E. Chen et al. , 'Large language model based long-tail query rewriting in taobao search,' arXiv preprint arXiv:2311.03758 , 2023."
+                },
+                {
+                  "title": "Take a step back: Evoking reasoning via abstraction in large language models",
+                  "citation": "H. S. Zheng, S. Mishra, X. Chen, H.-T. Cheng, E. H. Chi, Q. V. Le, and D. Zhou, 'Take a step back: Evoking reasoning via abstraction in large language models,' arXiv preprint arXiv:2310.06117 , 2023."
+                },
+                {
+                  "title": "Precise zero-shot dense retrieval without relevance labels",
+                  "citation": "L. Gao, X. Ma, J. Lin, and J. Callan, 'Precise zero-shot dense retrieval without relevance labels,' arXiv preprint arXiv:2212.10496 , 2022."
+                },
+                {
+                  "title": "Enhancing rag pipelines in haystack: Introducing diversityranker and lostinthemiddleranker",
+                  "citation": "V. Blagojevi, 'Enhancing rag pipelines in haystack: Introducing diversityranker and lostinthemiddleranker,' https://towardsdatascience.com/ enhancing-rag-pipelines-in-haystack-45f14e2bc9f5, 2023."
+                },
+                {
+                  "title": "Generate rather than retrieve: Large language models are strong context generators",
+                  "citation": "W. Yu, D. Iter, S. Wang, Y. Xu, M. Ju, S. Sanyal, C. Zhu, M. Zeng, and M. Jiang, 'Generate rather than retrieve: Large language models are strong context generators,' arXiv preprint arXiv:2209.10063 , 2022."
+                },
+                {
+                  "title": "Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy",
+                  "citation": "Z. Shao, Y. Gong, Y. Shen, M. Huang, N. Duan, and W. Chen, 'Enhancing retrieval-augmented large language models with iterative retrieval-generation synergy,' arXiv preprint arXiv:2305.15294 , 2023."
+                },
+                {
+                  "title": "Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases",
+                  "citation": "X. Wang, Q. Yang, Y. Qiu, J. Liang, Q. He, Z. Gu, Y. Xiao, and W. Wang, 'Knowledgpt: Enhancing large language models with retrieval and storage access on knowledge bases,' arXiv preprint arXiv:2308.11761 , 2023."
+                },
+                {
+                  "title": "Forget rag, the future is rag-fusion",
+                  "citation": "A. H. Raudaschl, 'Forget rag, the future is rag-fusion,' https://towardsdatascience.com/ forget-rag-the-future-is-rag-fusion-1147298d8ad1, 2023."
+                },
+                {
+                  "title": "Lift yourself up: Retrieval-augmented text generation with self memory",
+                  "citation": "X. Cheng, D. Luo, X. Chen, L. Liu, D. Zhao, and R. Yan, 'Lift yourself up: Retrieval-augmented text generation with self memory,' arXiv preprint arXiv:2305.02437 , 2023."
+                },
+                {
+                  "title": "Training data is more valuable than you think: A simple and effective method by retrieving from training data",
+                  "citation": "S. Wang, Y. Xu, Y. Fang, Y. Liu, S. Sun, R. Xu, C. Zhu, and M. Zeng, 'Training data is more valuable than you think: A simple and effective method by retrieving from training data,' arXiv preprint arXiv:2203.08773 , 2022."
+                },
+                {
+                  "title": "From classification to generation: Insights into crosslingual retrieval augmented icl",
+                  "citation": "X. Li, E. Nie, and S. Liang, 'From classification to generation: Insights into crosslingual retrieval augmented icl,' arXiv preprint arXiv:2311.06595 , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "CONCLUSION",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

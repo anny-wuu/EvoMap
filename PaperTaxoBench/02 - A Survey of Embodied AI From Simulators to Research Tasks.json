@@ -1,0 +1,924 @@
+{
+  "track": "AI Agents",
+  "paper_title": "A Survey of Embodied AI: From Simulators to Research Tasks",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "INTRODUCTION",
+      "citations": [
+        {
+          "title": "The development of embodied cognition: Six lessons from babies",
+          "citation": "L. Smith and M. Gasser, 'The development of embodied cognition: Six lessons from babies,' Artificial life , vol. 11, no. 1-2, pp. 13-29, 2005."
+        },
+        {
+          "title": "Actionet: An interactive endto-end platform for task-based data collection and augmentation in 3d environment",
+          "citation": "J. Duan, S. Yu, H. L. Tan, and C. Tan, 'Actionet: An interactive endto-end platform for task-based data collection and augmentation in 3d environment,' in 2020 IEEE International Conference on Image Processing (ICIP) . IEEE, 2020, pp. 1566-1570."
+        },
+        {
+          "title": "Alfred: A benchmark for interpreting grounded instructions for everyday tasks",
+          "citation": "M. Shridhar, J. Thomason, D. Gordon, Y. Bisk, W. Han, R. Mottaghi, L. Zettlemoyer, and D. Fox, 'Alfred: A benchmark for interpreting grounded instructions for everyday tasks,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2020, pp. 10 740-10 749."
+        },
+        {
+          "title": "Embodied artificial intelligence: Trends and challenges",
+          "citation": "R. Pfeifer and F. Iida, 'Embodied artificial intelligence: Trends and challenges,' in Embodied artificial intelligence . Springer, 2004, pp. 1-26."
+        },
+        {
+          "title": "How the body shapes the way we think - a new view on intelligence",
+          "citation": "R. Pfeifer and J. C. Bongard, 'How the body shapes the way we think - a new view on intelligence,' 2006."
+        },
+        {
+          "title": "Imagenet: A large-scale hierarchical image database",
+          "citation": "J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li, and L. Fei-Fei, 'Imagenet: A large-scale hierarchical image database,' in 2009 IEEE conference on computer vision and pattern recognition . Ieee, 2009, pp. 248-255."
+        },
+        {
+          "title": "Mastering the game of go without human knowledge",
+          "citation": "D. Silver, J. Schrittwieser, K. Simonyan, I. Antonoglou, A. Huang, A. Guez, T. Hubert, L. Baker, M. Lai, A. Bolton et al. , 'Mastering the game of go without human knowledge,' nature , vol. 550, no. 7676, pp. 354-359, 2017."
+        },
+        {
+          "title": "On evaluation of embodied navigation agents",
+          "citation": "P. Anderson, A. Chang, D. S. Chaplot, A. Dosovitskiy, S. Gupta, V. Koltun, J. Kosecka, J. Malik, R. Mottaghi, M. Savva et al. , 'On evaluation of embodied navigation agents,' arXiv preprint arXiv:1807.06757 , 2018."
+        },
+        {
+          "title": "Deepmind lab",
+          "citation": "C. Beattie, J. Z. Leibo, D. Teplyashin, T. Ward, M. Wainwright, H. K¨ uttler, A. Lefrancq, S. Green, V. Vald´ es, A. Sadik et al. , 'Deepmind lab,' arXiv preprint arXiv:1612.03801 , 2016."
+        },
+        {
+          "title": "Ai2-thor: An interactive 3d environment for visual ai",
+          "citation": "E. Kolve, R. Mottaghi, W. Han, E. VanderBilt, L. Weihs, A. Herrasti, D. Gordon, Y. Zhu, A. Gupta, and A. Farhadi, 'Ai2-thor: An interactive 3d environment for visual ai,' arXiv preprint arXiv:1712.05474 , 2017."
+        },
+        {
+          "title": "Chalet: Cornell house agent learning environment",
+          "citation": "C. Yan, D. Misra, A. Bennnett, A. Walsman, Y. Bisk, and Y. Artzi, 'Chalet: Cornell house agent learning environment,' arXiv preprint arXiv:1801.07357 , 2018."
+        },
+        {
+          "title": "Virtualhome: Simulating household activities via programs",
+          "citation": "X. Puig, K. Ra, M. Boben, J. Li, T. Wang, S. Fidler, and A. Torralba, 'Virtualhome: Simulating household activities via programs,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2018, pp. 8494-8502."
+        },
+        {
+          "title": "Vrkitchen: an interactive 3d virtual environment for task-oriented learning",
+          "citation": "X. Gao, R. Gong, T. Shu, X. Xie, S. Wang, and S.-C. Zhu, 'Vrkitchen: an interactive 3d virtual environment for task-oriented learning,' arXiv preprint arXiv:1903.05757 , 2019."
+        },
+        {
+          "title": "Habitat: A platform for embodied ai research",
+          "citation": "M. Savva, A. Kadian, O. Maksymets, Y. Zhao, E. Wijmans, B. Jain, J. Straub, J. Liu, V. Koltun, J. Malik et al. , 'Habitat: A platform for embodied ai research,' in Proceedings of the IEEE International Conference on Computer Vision , 2019, pp. 9339-9347."
+        },
+        {
+          "title": "Interactive gibson benchmark: A benchmark for interactive navigation in cluttered environments",
+          "citation": "F. Xia, W. B. Shen, C. Li, P. Kasimbeg, M. E. Tchapmi, A. Toshev, R. Mart´ ın-Mart´ ın, and S. Savarese, 'Interactive gibson benchmark: A benchmark for interactive navigation in cluttered environments,' IEEE Robotics and Automation Letters , vol. 5, no. 2, pp. 713-720, 2020."
+        },
+        {
+          "title": "Sapien: A simulated part-based interactive environment",
+          "citation": "F. Xiang, Y. Qin, K. Mo, Y. Xia, H. Zhu, F. Liu, M. Liu, H. Jiang, Y. Yuan, H. Wang et al. , 'Sapien: A simulated part-based interactive environment,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 11 097-11 107."
+        },
+        {
+          "title": "Threedworld: A platform for interactive multi-modal physical simulation",
+          "citation": "C. Gan, J. Schwartz, S. Alter, M. Schrimpf, J. Traer, J. De Freitas, J. Kubilius, A. Bhandwaldar, N. Haber, M. Sano et al. , 'Threedworld: A platform for interactive multi-modal physical simulation,' arXiv preprint arXiv:2007.04954 , 2020."
+        },
+        {
+          "title": "The arcade learning environment: An evaluation platform for general agents",
+          "citation": "M. G. Bellemare, Y. Naddaf, J. Veness, and M. Bowling, 'The arcade learning environment: An evaluation platform for general agents,' Journal of Artificial Intelligence Research , vol. 47, pp. 253-279, 2013."
+        },
+        {
+          "title": "On evaluation of embodied navigation agents",
+          "citation": "P. Anderson, A. Chang, D. S. Chaplot, A. Dosovitskiy, S. Gupta, V. Koltun, J. Kosecka, J. Malik, R. Mottaghi, M. Savva et al. , 'On evaluation of embodied navigation agents,' arXiv preprint arXiv:1807.06757 , 2018."
+        },
+        {
+          "title": "An exploration of embodied visual exploration",
+          "citation": "S. K. Ramakrishnan, D. Jayaraman, and K. Grauman, 'An exploration of embodied visual exploration,' International Journal of Computer Vision , 2021. [Online]. Available: https://doi.org/10.1007/s11263-021-01437-z"
+        },
+        {
+          "title": "From seeing to moving: A survey on learning for visual indoor navigation (vin)",
+          "citation": "X. Ye and Y. Yang, 'From seeing to moving: A survey on learning for visual indoor navigation (vin),' arXiv preprint arXiv:2002.11310 , 2020."
+        },
+        {
+          "title": "An exploration of embodied visual exploration",
+          "citation": "S. K. Ramakrishnan, D. Jayaraman, and K. Grauman, 'An exploration of embodied visual exploration,' International Journal of Computer Vision , 2021. [Online]. Available: https://doi.org/10.1007/s11263-021-01437-z"
+        },
+        {
+          "title": "Learning exploration policies for navigation",
+          "citation": "T. Chen, S. Gupta, and A. Gupta, 'Learning exploration policies for navigation,' arXiv preprint arXiv:1903.01959 , 2019."
+        },
+        {
+          "title": "Semi-parametric topological memory for navigation",
+          "citation": "N. Savinov, A. Dosovitskiy, and V. Koltun, 'Semi-parametric topological memory for navigation,' in International Conference on Learning Representations (ICLR) , 2018."
+        },
+        {
+          "title": "Learning to plan with uncertain topological maps",
+          "citation": "E. Beeching, J. Dibangoye, O. Simonin, and C. Wolf, 'Learning to plan with uncertain topological maps,' arXiv preprint arXiv:2007.05270 , 2020."
+        },
+        {
+          "title": "Sim2real predictivity: Does evaluation in simulation predict real-world performance?",
+          "citation": "A. Kadian, J. Truong, A. Gokaslan, A. Clegg, E. Wijmans, S. Lee, M. Savva, S. Chernova, and D. Batra, 'Sim2real predictivity: Does evaluation in simulation predict real-world performance?' IEEE Robotics and Automation Letters , vol. 5, no. 4, pp. 6670-6677, 2020."
+        },
+        {
+          "title": "Domain randomization for transferring deep neural networks from simulation to the real world",
+          "citation": "J. Tobin, R. Fong, A. Ray, J. Schneider, W. Zaremba, and P. Abbeel, 'Domain randomization for transferring deep neural networks from simulation to the real world,' in 2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) . IEEE, 2017, pp. 23-30."
+        },
+        {
+          "title": "Embodied ai workshop",
+          "citation": "CVPR, 'Embodied ai workshop,' https://embodied-ai.org/, Jan. 2020."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "SIMULATORS FOR EMBODIED AI",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Embodied AI Simulators",
+          "citations": [
+            {
+              "title": "Ai2-thor: An interactive 3d environment for visual ai",
+              "citation": "E. Kolve, R. Mottaghi, W. Han, E. VanderBilt, L. Weihs, A. Herrasti, D. Gordon, Y. Zhu, A. Gupta, and A. Farhadi, 'Ai2-thor: An interactive 3d environment for visual ai,' arXiv preprint arXiv:1712.05474 , 2017."
+            },
+            {
+              "title": "Threedworld: A platform for interactive multi-modal physical simulation",
+              "citation": "C. Gan, J. Schwartz, S. Alter, M. Schrimpf, J. Traer, J. De Freitas, J. Kubilius, A. Bhandwaldar, N. Haber, M. Sano et al. , 'Threedworld: A platform for interactive multi-modal physical simulation,' arXiv preprint arXiv:2007.04954 , 2020."
+            },
+            {
+              "title": "Allenact: A framework for embodied ai research",
+              "citation": "L. Weihs, J. Salvador, K. Kotar, U. Jain, K.-H. Zeng, R. Mottaghi, and A. Kembhavi, 'Allenact: A framework for embodied ai research,' arXiv , 2020."
+            },
+            {
+              "title": "Partnet: A large-scale benchmark for fine-grained and hierarchical part-level 3d object understanding",
+              "citation": "K. Mo, S. Zhu, A. X. Chang, L. Yi, S. Tripathi, L. J. Guibas, and H. Su, 'Partnet: A large-scale benchmark for fine-grained and hierarchical part-level 3d object understanding,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2019, pp. 909-918."
+            },
+            {
+              "title": "Semantic scene completion from a single depth image",
+              "citation": "S. Song, F. Yu, A. Zeng, A. X. Chang, M. Savva, and T. Funkhouser, 'Semantic scene completion from a single depth image,' Proceedings of 30th IEEE Conference on Computer Vision and Pattern Recognition , 2017."
+            },
+            {
+              "title": "Matterport3d: Learning from rgb-d data in indoor environments",
+              "citation": "A. Chang, A. Dai, T. Funkhouser, M. Halber, M. Niebner, M. Savva, S. Song, A. Zeng, and Y. Zhang, 'Matterport3d: Learning from rgb-d data in indoor environments,' in 2017 International Conference on 3D Vision (3DV) . IEEE Computer Society, 2017, pp. 667-676."
+            },
+            {
+              "title": "Gibson env: Real-world perception for embodied agents",
+              "citation": "F. Xia, A. R. Zamir, Z. He, A. Sax, J. Malik, and S. Savarese, 'Gibson env: Real-world perception for embodied agents,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2018, pp. 9068-9079."
+            },
+            {
+              "title": "Are We Making Real Progress in Simulated Environments? Measuring the Sim2Real Gap in Embodied Visual Navigation",
+              "citation": "Abhishek Kadian*, Joanne Truong*, A. Gokaslan, A. Clegg, E. Wijmans, S. Lee, M. Savva, S. Chernova, and D. Batra, 'Are We Making Real Progress in Simulated Environments? Measuring the Sim2Real Gap in Embodied Visual Navigation,' in arXiv:1912.06321 , 2019."
+            },
+            {
+              "title": "Robothor: An open simulation-to-real embodied ai platform",
+              "citation": "M. Deitke, W. Han, A. Herrasti, A. Kembhavi, E. Kolve, R. Mottaghi, J. Salvador, D. Schwenk, E. VanderBilt, M. Wallingford et al. , 'Robothor: An open simulation-to-real embodied ai platform,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 3164-3174."
+            },
+            {
+              "title": "Objectnav revisited: On evaluation of embodied agents navigating to objects",
+              "citation": "D. Batra, A. Gokaslan, A. Kembhavi, O. Maksymets, R. Mottaghi, M. Savva, A. Toshev, and E. Wijmans, 'Objectnav revisited: On evaluation of embodied agents navigating to objects,' arXiv preprint arXiv:2006.13171 , 2020."
+            },
+            {
+              "title": "Vrkitchen: an interactive 3d virtual environment for task-oriented learning",
+              "citation": "X. Gao, R. Gong, T. Shu, X. Xie, S. Wang, and S.-C. Zhu, 'Vrkitchen: an interactive 3d virtual environment for task-oriented learning,' arXiv preprint arXiv:1903.05757 , 2019."
+            },
+            {
+              "title": "Ai2-thor: An interactive 3d environment for visual ai",
+              "citation": "E. Kolve, R. Mottaghi, W. Han, E. VanderBilt, L. Weihs, A. Herrasti, D. Gordon, Y. Zhu, A. Gupta, and A. Farhadi, 'Ai2-thor: An interactive 3d environment for visual ai,' arXiv preprint arXiv:1712.05474 , 2017."
+            },
+            {
+              "title": "Habitat: A platform for embodied ai research",
+              "citation": "M. Savva, A. Kadian, O. Maksymets, Y. Zhao, E. Wijmans, B. Jain, J. Straub, J. Liu, V. Koltun, J. Malik et al. , 'Habitat: A platform for embodied ai research,' in Proceedings of the IEEE International Conference on Computer Vision , 2019, pp. 9339-9347."
+            },
+            {
+              "title": "Gibson env: Real-world perception for embodied agents",
+              "citation": "F. Xia, A. R. Zamir, Z. He, A. Sax, J. Malik, and S. Savarese, 'Gibson env: Real-world perception for embodied agents,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2018, pp. 9068-9079."
+            },
+            {
+              "title": "Vrkitchen: an interactive 3d virtual environment for task-oriented learning",
+              "citation": "X. Gao, R. Gong, T. Shu, X. Xie, S. Wang, and S.-C. Zhu, 'Vrkitchen: an interactive 3d virtual environment for task-oriented learning,' arXiv preprint arXiv:1903.05757 , 2019."
+            },
+            {
+              "title": "Threedworld: A platform for interactive multi-modal physical simulation",
+              "citation": "C. Gan, J. Schwartz, S. Alter, M. Schrimpf, J. Traer, J. De Freitas, J. Kubilius, A. Bhandwaldar, N. Haber, M. Sano et al. , 'Threedworld: A platform for interactive multi-modal physical simulation,' arXiv preprint arXiv:2007.04954 , 2020."
+            },
+            {
+              "title": "A cordial sync: Going beyond marginal policies for multi-agent embodied tasks supplementary material",
+              "citation": "U. Jain, L. Weihs, E. Kolve, A. Farhadi, S. Lazebnik, A. Kembhavi, and A. Schwing, 'A cordial sync: Going beyond marginal policies for multi-agent embodied tasks supplementary material.'"
+            },
+            {
+              "title": "Two body problem: Collaborative visual task completion",
+              "citation": "U. Jain, L. Weihs, E. Kolve, M. Rastegari, S. Lazebnik, A. Farhadi, A. G. Schwing, and A. Kembhavi, 'Two body problem: Collaborative visual task completion,' in CVPR , 2019, first two authors contributed equally."
+            },
+            {
+              "title": "Openai gym",
+              "citation": "G. Brockman, V. Cheung, L. Pettersson, J. Schneider, J. Schulman, J. Tang, and W. Zaremba, 'Openai gym,' arXiv preprint arXiv:1606.01540 , 2016."
+            },
+            {
+              "title": "Threedworld: A platform for interactive multi-modal physical simulation",
+              "citation": "C. Gan, J. Schwartz, S. Alter, M. Schrimpf, J. Traer, J. De Freitas, J. Kubilius, A. Bhandwaldar, N. Haber, M. Sano et al. , 'Threedworld: A platform for interactive multi-modal physical simulation,' arXiv preprint arXiv:2007.04954 , 2020."
+            },
+            {
+              "title": "Ai2-thor: An interactive 3d environment for visual ai",
+              "citation": "E. Kolve, R. Mottaghi, W. Han, E. VanderBilt, L. Weihs, A. Herrasti, D. Gordon, Y. Zhu, A. Gupta, and A. Farhadi, 'Ai2-thor: An interactive 3d environment for visual ai,' arXiv preprint arXiv:1712.05474 , 2017."
+            },
+            {
+              "title": "Two body problem: Collaborative visual task completion",
+              "citation": "U. Jain, L. Weihs, E. Kolve, M. Rastegari, S. Lazebnik, A. Farhadi, A. G. Schwing, and A. Kembhavi, 'Two body problem: Collaborative visual task completion,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2019, pp. 6689-6699."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Comparison of Embodied AI Simulators",
+          "citations": [
+            {
+              "title": "Allenact: A framework for embodied ai research",
+              "citation": "L. Weihs, J. Salvador, K. Kotar, U. Jain, K.-H. Zeng, R. Mottaghi, and A. Kembhavi, 'Allenact: A framework for embodied ai research,' arXiv , 2020."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "RESEARCH IN EMBODIED AI",
+      "citations": [
+        {
+          "title": "The development of embodied cognition: Six lessons from babies",
+          "citation": "L. Smith and M. Gasser, 'The development of embodied cognition: Six lessons from babies,' Artificial life , vol. 11, no. 1-2, pp. 13-29, 2005."
+        },
+        {
+          "title": "Sensorimotor representation learning for an 'active self' in robots: a model survey",
+          "citation": "P. D. Nguyen, Y. K. Georgie, E. Kayhan, M. Eppe, V. V. Hafner, and S. Wermter, 'Sensorimotor representation learning for an 'active self' in robots: a model survey,' KI-K¨ unstliche Intelligenz , vol. 35, no. 1, pp. 9-35, 2021."
+        },
+        {
+          "title": "Learning to explore using active neural slam",
+          "citation": "D. S. Chaplot, D. Gandhi, S. Gupta, A. Gupta, and R. Salakhutdinov, 'Learning to explore using active neural slam,' in International Conference on Learning Representations (ICLR) , 2020."
+        },
+        {
+          "title": "Vision-language navigation with self-supervised auxiliary reasoning tasks",
+          "citation": "F. Zhu, Y. Zhu, X. Chang, and X. Liang, 'Vision-language navigation with self-supervised auxiliary reasoning tasks,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 10 012-10 022."
+        },
+        {
+          "title": "Soundspaces: Audio-visual navigation in 3d environments",
+          "citation": "C. Chen, U. Jain, C. Schissler, S. V . A. Gari, Z. Al-Halah, V . K. Ithapu, P. Robinson, and K. Grauman, 'Soundspaces: Audio-visual navigation in 3d environments,' in Computer Vision-ECCV 2020: 16th European Conference, Glasgow, UK, August 23-28, 2020, Proceedings, Part VI 16 . Springer, 2020, pp. 17-36."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "A. Visual Exploration",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "3.1.1",
+              "sec_title": "Approaches",
+              "citations": [
+                {
+                  "title": "Learning exploration policies for navigation",
+                  "citation": "T. Chen, S. Gupta, and A. Gupta, 'Learning exploration policies for navigation,' arXiv preprint arXiv:1903.01959 , 2019."
+                },
+                {
+                  "title": "Semi-parametric topological memory for navigation",
+                  "citation": "N. Savinov, A. Dosovitskiy, and V. Koltun, 'Semi-parametric topological memory for navigation,' in International Conference on Learning Representations (ICLR) , 2018."
+                },
+                {
+                  "title": "Learning to plan with uncertain topological maps",
+                  "citation": "E. Beeching, J. Dibangoye, O. Simonin, and C. Wolf, 'Learning to plan with uncertain topological maps,' arXiv preprint arXiv:2007.05270 , 2020."
+                },
+                {
+                  "title": "Semantic curiosity for active visual learning",
+                  "citation": "D. S. Chaplot, H. Jiang, S. Gupta, and A. Gupta, 'Semantic curiosity for active visual learning,' in ECCV , 2020."
+                },
+                {
+                  "title": "Learning to explore using active neural slam",
+                  "citation": "D. S. Chaplot, D. Gandhi, S. Gupta, A. Gupta, and R. Salakhutdinov, 'Learning to explore using active neural slam,' in International Conference on Learning Representations (ICLR) , 2020."
+                },
+                {
+                  "title": "Occupancy anticipation for efficient exploration and navigation",
+                  "citation": "S. K. Ramakrishnan, Z. Al-Halah, and K. Grauman, 'Occupancy anticipation for efficient exploration and navigation,' arXiv preprint arXiv:2008.09285 , 2020."
+                },
+                {
+                  "title": "Seeing the un-scene: Learning amodal semantic maps for room navigation",
+                  "citation": "M. Narasimhan, E. Wijmans, X. Chen, T. Darrell, D. Batra, D. Parikh, and A. Singh, 'Seeing the un-scene: Learning amodal semantic maps for room navigation,' in European Conference on Computer Vision . Springer, 2020, pp. 513-529."
+                },
+                {
+                  "title": "Scene memory transformer for embodied agents in long-horizon tasks",
+                  "citation": "K. Fang, A. Toshev, L. Fei-Fei, and S. Savarese, 'Scene memory transformer for embodied agents in long-horizon tasks,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2019, pp. 538-547."
+                },
+                {
+                  "title": "Benchmarking classic and learned navigation in complex 3d environments",
+                  "citation": "D. Mishkin, A. Dosovitskiy, and V. Koltun, 'Benchmarking classic and learned navigation in complex 3d environments,' arXiv preprint arXiv:1901.10915 , 2019."
+                },
+                {
+                  "title": "An exploration of embodied visual exploration",
+                  "citation": "S. K. Ramakrishnan, D. Jayaraman, and K. Grauman, 'An exploration of embodied visual exploration,' International Journal of Computer Vision , 2021. [Online]. Available: https://doi.org/10.1007/s11263-021-01437-z"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.2",
+              "sec_title": "Evaluation Metrics",
+              "citations": [
+                {
+                  "title": "On evaluation of embodied navigation agents",
+                  "citation": "P. Anderson, A. Chang, D. S. Chaplot, A. Dosovitskiy, S. Gupta, V. Koltun, J. Kosecka, J. Malik, R. Mottaghi, M. Savva et al. , 'On evaluation of embodied navigation agents,' arXiv preprint arXiv:1807.06757 , 2018."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.3",
+              "sec_title": "Datasets",
+              "citations": [
+                {
+                  "title": "Habitat: A platform for embodied ai research",
+                  "citation": "M. Savva, A. Kadian, O. Maksymets, Y. Zhao, E. Wijmans, B. Jain, J. Straub, J. Liu, V. Koltun, J. Malik et al. , 'Habitat: A platform for embodied ai research,' in Proceedings of the IEEE International Conference on Computer Vision , 2019, pp. 9339-9347."
+                },
+                {
+                  "title": "Matterport3d: Learning from rgb-d data in indoor environments",
+                  "citation": "A. Chang, A. Dai, T. Funkhouser, M. Halber, M. Niebner, M. Savva, S. Song, A. Zeng, and Y. Zhang, 'Matterport3d: Learning from rgb-d data in indoor environments,' in 2017 International Conference on 3D Vision (3DV) . IEEE Computer Society, 2017, pp. 667-676."
+                },
+                {
+                  "title": "Gibson env: Real-world perception for embodied agents",
+                  "citation": "F. Xia, A. R. Zamir, Z. He, A. Sax, J. Malik, and S. Savarese, 'Gibson env: Real-world perception for embodied agents,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2018, pp. 9068-9079."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "B. Visual Navigation",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "3.2.1",
+              "sec_title": "Categories",
+              "citations": [
+                {
+                  "title": "On evaluation of embodied navigation agents",
+                  "citation": "P. Anderson, A. Chang, D. S. Chaplot, A. Dosovitskiy, S. Gupta, V. Koltun, J. Kosecka, J. Malik, R. Mottaghi, M. Savva et al. , 'On evaluation of embodied navigation agents,' arXiv preprint arXiv:1807.06757 , 2018."
+                },
+                {
+                  "title": "Habitat: A platform for embodied ai research",
+                  "citation": "M. Savva, A. Kadian, O. Maksymets, Y. Zhao, E. Wijmans, B. Jain, J. Straub, J. Liu, V. Koltun, J. Malik et al. , 'Habitat: A platform for embodied ai research,' in Proceedings of the IEEE International Conference on Computer Vision , 2019, pp. 9339-9347."
+                },
+                {
+                  "title": "From seeing to moving: A survey on learning for visual indoor navigation (vin)",
+                  "citation": "X. Ye and Y. Yang, 'From seeing to moving: A survey on learning for visual indoor navigation (vin),' arXiv preprint arXiv:2002.11310 , 2020."
+                },
+                {
+                  "title": "Objectnav revisited: On evaluation of embodied agents navigating to objects",
+                  "citation": "D. Batra, A. Gokaslan, A. Kembhavi, O. Maksymets, R. Mottaghi, M. Savva, A. Toshev, and E. Wijmans, 'Objectnav revisited: On evaluation of embodied agents navigating to objects,' arXiv preprint arXiv:2006.13171 , 2020."
+                },
+                {
+                  "title": "Learning to explore using active neural slam",
+                  "citation": "D. S. Chaplot, D. Gandhi, S. Gupta, A. Gupta, and R. Salakhutdinov, 'Learning to explore using active neural slam,' in International Conference on Learning Representations (ICLR) , 2020."
+                },
+                {
+                  "title": "Dd-ppo: Learning near-perfect pointgoal navigators from 2.5 billion frames",
+                  "citation": "E. Wijmans, A. Kadian, A. Morcos, S. Lee, I. Essa, D. Parikh, M. Savva, and D. Batra, 'Dd-ppo: Learning near-perfect pointgoal navigators from 2.5 billion frames,' arXiv , pp. arXiv-1911, 2019."
+                },
+                {
+                  "title": "Simultaneous mapping and target driven navigation",
+                  "citation": "G. Georgakis, Y. Li, and J. Kosecka, 'Simultaneous mapping and target driven navigation,' arXiv preprint arXiv:1911.07980 , 2019."
+                },
+                {
+                  "title": "Auxiliary tasks speed up learning pointgoal navigation",
+                  "citation": "J. Ye, D. Batra, E. Wijmans, and A. Das, 'Auxiliary tasks speed up learning pointgoal navigation,' arXiv preprint arXiv:2007.04561 , 2020."
+                },
+                {
+                  "title": "Learning to learn how to learn: Self-adaptive visual navigation using meta-learning",
+                  "citation": "M. Wortsman, K. Ehsani, M. Rastegari, A. Farhadi, and R. Mottaghi, 'Learning to learn how to learn: Self-adaptive visual navigation using meta-learning,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2019, pp. 6750-6759."
+                },
+                {
+                  "title": "Exploiting scenespecific features for object goal navigation",
+                  "citation": "T. Campari, P. Eccher, L. Serafini, and L. Ballan, 'Exploiting scenespecific features for object goal navigation,' in ECCV Workshops , 2020."
+                },
+                {
+                  "title": "igibson, a simulation environment for interactive tasks in large realistic scenes",
+                  "citation": "B. Shen, F. Xia, C. Li, R. Martın-Martın, L. Fan, G. Wang, S. Buch, C. D'Arpino, S. Srivastava, L. P. Tchapmi, K. Vainio, L. Fei-Fei, and S. Savarese, 'igibson, a simulation environment for interactive tasks in large realistic scenes,' 2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) , 2020."
+                },
+                {
+                  "title": "Learning object-conditioned exploration using distributed soft actor critic",
+                  "citation": "A. Wahid, A. Stone, K. Chen, B. Ichter, and A. Toshev, 'Learning object-conditioned exploration using distributed soft actor critic,' arXiv preprint arXiv:2007.14545 , 2020."
+                },
+                {
+                  "title": "Visual semantic navigation using scene priors",
+                  "citation": "W. Yang, X. Wang, A. Farhadi, A. Gupta, and R. Mottaghi, 'Visual semantic navigation using scene priors,' arXiv preprint arXiv:1810.06543 , 2018."
+                },
+                {
+                  "title": "Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments",
+                  "citation": "P. Anderson, Q. Wu, D. Teney, J. Bruce, M. Johnson, N. S¨ underhauf, I. Reid, S. Gould, and A. Van Den Hengel, 'Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2018, pp. 3674-3683."
+                },
+                {
+                  "title": "Vision-language navigation with self-supervised auxiliary reasoning tasks",
+                  "citation": "F. Zhu, Y. Zhu, X. Chang, and X. Liang, 'Vision-language navigation with self-supervised auxiliary reasoning tasks,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 10 012-10 022."
+                },
+                {
+                  "title": "Vision-dialog navigation by exploring cross-modal memory",
+                  "citation": "Y. Zhu, F. Zhu, Z. Zhan, B. Lin, J. Jiao, X. Chang, and X. Liang, 'Vision-dialog navigation by exploring cross-modal memory,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 10 730-10 739."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.2",
+              "sec_title": "Evaluation Metrics",
+              "citations": [
+                {
+                  "title": "On evaluation of embodied navigation agents",
+                  "citation": "P. Anderson, A. Chang, D. S. Chaplot, A. Dosovitskiy, S. Gupta, V. Koltun, J. Kosecka, J. Malik, R. Mottaghi, M. Savva et al. , 'On evaluation of embodied navigation agents,' arXiv preprint arXiv:1807.06757 , 2018."
+                },
+                {
+                  "title": "Objectnav revisited: On evaluation of embodied agents navigating to objects",
+                  "citation": "D. Batra, A. Gokaslan, A. Kembhavi, O. Maksymets, R. Mottaghi, M. Savva, A. Toshev, and E. Wijmans, 'Objectnav revisited: On evaluation of embodied agents navigating to objects,' arXiv preprint arXiv:2006.13171 , 2020."
+                },
+                {
+                  "title": "Simultaneous mapping and target driven navigation",
+                  "citation": "G. Georgakis, Y. Li, and J. Kosecka, 'Simultaneous mapping and target driven navigation,' arXiv preprint arXiv:1911.07980 , 2019."
+                },
+                {
+                  "title": "Exploiting scenespecific features for object goal navigation",
+                  "citation": "T. Campari, P. Eccher, L. Serafini, and L. Ballan, 'Exploiting scenespecific features for object goal navigation,' in ECCV Workshops , 2020."
+                },
+                {
+                  "title": "Benchmarking classic and learned navigation in complex 3d environments",
+                  "citation": "D. Mishkin, A. Dosovitskiy, and V. Koltun, 'Benchmarking classic and learned navigation in complex 3d environments,' arXiv preprint arXiv:1901.10915 , 2019."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.3",
+              "sec_title": "Datasets",
+              "citations": [
+                {
+                  "title": "Ai2-thor: An interactive 3d environment for visual ai",
+                  "citation": "E. Kolve, R. Mottaghi, W. Han, E. VanderBilt, L. Weihs, A. Herrasti, D. Gordon, Y. Zhu, A. Gupta, and A. Farhadi, 'Ai2-thor: An interactive 3d environment for visual ai,' arXiv preprint arXiv:1712.05474 , 2017."
+                },
+                {
+                  "title": "Vrkitchen: an interactive 3d virtual environment for task-oriented learning",
+                  "citation": "X. Gao, R. Gong, T. Shu, X. Xie, S. Wang, and S.-C. Zhu, 'Vrkitchen: an interactive 3d virtual environment for task-oriented learning,' arXiv preprint arXiv:1903.05757 , 2019."
+                },
+                {
+                  "title": "Habitat: A platform for embodied ai research",
+                  "citation": "M. Savva, A. Kadian, O. Maksymets, Y. Zhao, E. Wijmans, B. Jain, J. Straub, J. Liu, V. Koltun, J. Malik et al. , 'Habitat: A platform for embodied ai research,' in Proceedings of the IEEE International Conference on Computer Vision , 2019, pp. 9339-9347."
+                },
+                {
+                  "title": "Threedworld: A platform for interactive multi-modal physical simulation",
+                  "citation": "C. Gan, J. Schwartz, S. Alter, M. Schrimpf, J. Traer, J. De Freitas, J. Kubilius, A. Bhandwaldar, N. Haber, M. Sano et al. , 'Threedworld: A platform for interactive multi-modal physical simulation,' arXiv preprint arXiv:2007.04954 , 2020."
+                },
+                {
+                  "title": "Matterport3d: Learning from rgb-d data in indoor environments",
+                  "citation": "A. Chang, A. Dai, T. Funkhouser, M. Halber, M. Niebner, M. Savva, S. Song, A. Zeng, and Y. Zhang, 'Matterport3d: Learning from rgb-d data in indoor environments,' in 2017 International Conference on 3D Vision (3DV) . IEEE Computer Society, 2017, pp. 667-676."
+                },
+                {
+                  "title": "Gibson env: Real-world perception for embodied agents",
+                  "citation": "F. Xia, A. R. Zamir, Z. He, A. Sax, J. Malik, and S. Savarese, 'Gibson env: Real-world perception for embodied agents,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2018, pp. 9068-9079."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "C. Embodied Question Answering",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "3.3.1",
+              "sec_title": "Categories",
+              "citations": [
+                {
+                  "title": "Embodied question answering",
+                  "citation": "A. Das, S. Datta, G. Gkioxari, S. Lee, D. Parikh, and D. Batra, 'Embodied question answering,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops , 2018, pp. 2054-2063."
+                },
+                {
+                  "title": "Multi-target embodied question answering",
+                  "citation": "L. Yu, X. Chen, G. Gkioxari, M. Bansal, T. L. Berg, and D. Batra, 'Multi-target embodied question answering,' in IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2019, Long Beach, CA, USA, June 16-20, 2019 , 2019, pp. 6309-6318."
+                },
+                {
+                  "title": "Iqa: Visual question answering in interactive environments",
+                  "citation": "D. Gordon, A. Kembhavi, M. Rastegari, J. Redmon, D. Fox, and A. Farhadi, 'Iqa: Visual question answering in interactive environments,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2018, pp. 4089-4098."
+                },
+                {
+                  "title": "Multi-agent embodied question answering in interactive environments",
+                  "citation": "S. Tan, W. Xiang, H. Liu, D. Guo, and F. Sun, 'Multi-agent embodied question answering in interactive environments,' in ECCV 2020 - 16th European Conference, Glasgow,UK, August 23-28, 2020, Proceedings , A. Vedaldi, H. Bischof, T. Brox, and J. Frahm, Eds., 2020, pp. 663678."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.3.2",
+              "sec_title": "Evaluation Metrics",
+              "citations": [
+                {
+                  "title": "Embodied question answering",
+                  "citation": "A. Das, S. Datta, G. Gkioxari, S. Lee, D. Parikh, and D. Batra, 'Embodied question answering,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops , 2018, pp. 2054-2063."
+                },
+                {
+                  "title": "Multi-target embodied question answering",
+                  "citation": "L. Yu, X. Chen, G. Gkioxari, M. Bansal, T. L. Berg, and D. Batra, 'Multi-target embodied question answering,' in IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2019, Long Beach, CA, USA, June 16-20, 2019 , 2019, pp. 6309-6318."
+                },
+                {
+                  "title": "Iqa: Visual question answering in interactive environments",
+                  "citation": "D. Gordon, A. Kembhavi, M. Rastegari, J. Redmon, D. Fox, and A. Farhadi, 'Iqa: Visual question answering in interactive environments,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2018, pp. 4089-4098."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.3.3",
+              "sec_title": "Datasets",
+              "citations": [
+                {
+                  "title": "Semantic scene completion from a single depth image",
+                  "citation": "S. Song, F. Yu, A. Zeng, A. X. Chang, M. Savva, and T. Funkhouser, 'Semantic scene completion from a single depth image,' Proceedings of 30th IEEE Conference on Computer Vision and Pattern Recognition , 2017."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "INSIGHTS AND CHALLENGES",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Insights into Embodied AI",
+          "citations": [
+            {
+              "title": "Vision-and-Language Navigation: Interpreting visually-grounded navigation instructions in real environments",
+              "citation": "P. Anderson, Q. Wu, D. Teney, J. Bruce, M. Johnson, N. S¨ underhauf, I. Reid, S. Gould, and A. van den Hengel, 'Vision-and-Language Navigation: Interpreting visually-grounded navigation instructions in real environments,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR) , 2018."
+            },
+            {
+              "title": "Openai gym",
+              "citation": "G. Brockman, V. Cheung, L. Pettersson, J. Schneider, J. Schulman, J. Tang, and W. Zaremba, 'Openai gym,' arXiv preprint arXiv:1606.01540 , 2016."
+            },
+            {
+              "title": "Mujoco: A physics engine for model-based control",
+              "citation": "E. Todorov, T. Erez, and Y. Tassa, 'Mujoco: A physics engine for model-based control,' in 2012 IEEE/RSJ International Conference on Intelligent Robots and Systems . IEEE, 2012, pp. 5026-5033."
+            },
+            {
+              "title": "Embodied question answering",
+              "citation": "A. Das, S. Datta, G. Gkioxari, S. Lee, D. Parikh, and D. Batra, 'Embodied question answering,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops , 2018, pp. 2054-2063."
+            },
+            {
+              "title": "Iqa: Visual question answering in interactive environments",
+              "citation": "D. Gordon, A. Kembhavi, M. Rastegari, J. Redmon, D. Fox, and A. Farhadi, 'Iqa: Visual question answering in interactive environments,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2018, pp. 4089-4098."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Challenges in Embodied AI Simulators",
+          "citations": [
+            {
+              "title": "Room-and-object aware knowledge reasoning for remote embodied referring",
+              "citation": "C. Gao, J. Chen, S. Liu, L. Wang, Q. Zhang, and Q. Wu, 'Roomand-object aware knowledge reasoning for remote embodied referring"
+            },
+            {
+              "title": "Plate: Visually-grounded planning with transformers in procedural tasks",
+              "citation": "J. Sun, D.-A. Huang, B. Lu, Y.-H. Liu, B. Zhou, and A. Garg, 'Plate: Visually-grounded planning with transformers in procedural tasks,' 2021."
+            },
+            {
+              "title": "Sim2real predictivity: Does evaluation in simulation predict real-world performance?",
+              "citation": "A. Kadian, J. Truong, A. Gokaslan, A. Clegg, E. Wijmans, S. Lee, M. Savva, S. Chernova, and D. Batra, 'Sim2real predictivity: Does evaluation in simulation predict real-world performance?' IEEE Robotics and Automation Letters , vol. 5, no. 4, pp. 6670-6677, 2020."
+            },
+            {
+              "title": "Cad2rl: Real single-image flight without a single real image",
+              "citation": "F. Sadeghi and S. Levine, 'Cad2rl: Real single-image flight without a single real image,' Robotics: Science and Systems XIII, Massachusetts Institute of Technology, Cambridge, Massachusetts, USA, July 12-16, 2017 , 2017."
+            },
+            {
+              "title": "Habitat: A platform for embodied ai research",
+              "citation": "M. Savva, A. Kadian, O. Maksymets, Y. Zhao, E. Wijmans, B. Jain, J. Straub, J. Liu, V. Koltun, J. Malik et al. , 'Habitat: A platform for embodied ai research,' in Proceedings of the IEEE International Conference on Computer Vision , 2019, pp. 9339-9347."
+            },
+            {
+              "title": "Interactive gibson benchmark: A benchmark for interactive navigation in cluttered environments",
+              "citation": "F. Xia, W. B. Shen, C. Li, P. Kasimbeg, M. E. Tchapmi, A. Toshev, R. Mart´ ın-Mart´ ın, and S. Savarese, 'Interactive gibson benchmark: A benchmark for interactive navigation in cluttered environments,' IEEE Robotics and Automation Letters , vol. 5, no. 2, pp. 713-720, 2020."
+            },
+            {
+              "title": "Physion: Evaluating physical prediction from vision in humans and machines",
+              "citation": "D. M. Bear, E. Wang, D. Mrowca, F. J. Binder, H.-Y. F. Tung, R. Pramod, C. Holdaway, S. Tao, K. Smith, L. Fei-Fei et al. , 'Physion: Evaluating physical prediction from vision in humans and machines,' arXiv preprint arXiv:2106.08261 , 2021."
+            },
+            {
+              "title": "Pip: Physical interaction prediction via mental imagery with span selection",
+              "citation": "J. Duan, S. Yu, S. Poria, B. Wen, and C. Tan, 'Pip: Physical interaction prediction via mental imagery with span selection,' arXiv preprint arXiv:2109.04683 , 2021."
+            },
+            {
+              "title": "Actionet: An interactive endto-end platform for task-based data collection and augmentation in 3d environment",
+              "citation": "J. Duan, S. Yu, H. L. Tan, and C. Tan, 'Actionet: An interactive endto-end platform for task-based data collection and augmentation in 3d environment,' in 2020 IEEE International Conference on Image Processing (ICIP) . IEEE, 2020, pp. 1566-1570."
+            },
+            {
+              "title": "Alfred: A benchmark for interpreting grounded instructions for everyday tasks",
+              "citation": "M. Shridhar, J. Thomason, D. Gordon, Y. Bisk, W. Han, R. Mottaghi, L. Zettlemoyer, and D. Fox, 'Alfred: A benchmark for interpreting grounded instructions for everyday tasks,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2020, pp. 10 740-10 749."
+            },
+            {
+              "title": "Learning affordance landscapes for interaction exploration in 3d environments",
+              "citation": "T. Nagarajan and K. Grauman, 'Learning affordance landscapes for interaction exploration in 3d environments,' Advances in Neural Information processing Systems 33 , 2020."
+            },
+            {
+              "title": "Threedworld: A platform for interactive multi-modal physical simulation",
+              "citation": "C. Gan, J. Schwartz, S. Alter, M. Schrimpf, J. Traer, J. De Freitas, J. Kubilius, A. Bhandwaldar, N. Haber, M. Sano et al. , 'Threedworld: A platform for interactive multi-modal physical simulation,' arXiv preprint arXiv:2007.04954 , 2020."
+            },
+            {
+              "title": "Thin-film smoothed particle hydrodynamics fluid",
+              "citation": "M. Wang, Y. Deng, X. Kong, A. H. Prasad, S. Xiong, and B. Zhu, 'Thin-film smoothed particle hydrodynamics fluid,' arXiv preprint arXiv:2105.07656 , 2021."
+            },
+            {
+              "title": "Enhancing photorealism enhancement",
+              "citation": "S. R. Richter, H. A. AlHaija, and V. Koltun, 'Enhancing photorealism enhancement,' arXiv preprint arXiv:2105.04619 , 2021."
+            },
+            {
+              "title": "Imagenet: A large-scale hierarchical image database",
+              "citation": "J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li, and L. Fei-Fei, 'Imagenet: A large-scale hierarchical image database,' in 2009 IEEE conference on computer vision and pattern recognition . Ieee, 2009, pp. 248-255."
+            },
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T.-Y. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in European conference on computer vision . Springer, 2014, pp. 740-755."
+            },
+            {
+              "title": "The replica dataset: A digital replica of indoor spaces",
+              "citation": "J. Straub, T. Whelan, L. Ma, Y. Chen, E. Wijmans, S. Green, J. J. Engel, R. Mur-Artal, C. Ren, S. Verma et al. , 'The replica dataset: A digital replica of indoor spaces,' arXiv preprint arXiv:1906.05797 , 2019."
+            },
+            {
+              "title": "Joint 2d-3d-semantic data for indoor scene understanding",
+              "citation": "I. Armeni, S. Sax, A. R. Zamir, and S. Savarese, 'Joint 2d-3d-semantic data for indoor scene understanding,' arXiv preprint arXiv:1702.01105 , 2017."
+            },
+            {
+              "title": "Introduction to modern photogrammetry",
+              "citation": "E. M. Mikhail, J. S. Bethel, and J. C. McGlone, 'Introduction to modern photogrammetry,' New York , vol. 19, 2001."
+            },
+            {
+              "title": "Blender -a 3D modelling and rendering package",
+              "citation": "Alicevision, Blender -a 3D modelling and rendering package , Alicevision, 2018. [Online]. Available: https://github.com/alicevision/meshroom"
+            },
+            {
+              "title": "pixelnerf: Neural radiance fields from one or few images",
+              "citation": "A. Yu, V. Ye, M. Tancik, and A. Kanazawa, 'pixelnerf: Neural radiance fields from one or few images,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2021, pp. 4578-4587."
+            },
+            {
+              "title": "Nerf in the wild: Neural radiance fields for unconstrained photo collections",
+              "citation": "R. Martin-Brualla, N. Radwan, M. S. Sajjadi, J. T. Barron, A. Dosovitskiy, and D. Duckworth, 'Nerf in the wild: Neural radiance fields for unconstrained photo collections,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2021, pp. 7210-7219."
+            },
+            {
+              "title": "Gancraft: Unsupervised 3d neural rendering of minecraft worlds",
+              "citation": "Z. Hao, A. Mallya, S. Belongie, and M.-Y. Liu, 'Gancraft: Unsupervised 3d neural rendering of minecraft worlds,' arXiv preprint arXiv:2104.07659 , 2021."
+            },
+            {
+              "title": "Dark, beyond deep: A paradigm shift to cognitive ai with humanlike common sense",
+              "citation": "Y. Zhu, T. Gao, L. Fan, S. Huang, M. Edmonds, H. Liu, F. Gao, C. Zhang, S. Qi, Y. N. Wu et al. , 'Dark, beyond deep: A paradigm shift to cognitive ai with humanlike common sense,' Engineering , vol. 6, no. 3, pp. 310-345, 2020."
+            },
+            {
+              "title": "Ai2-thor: An interactive 3d environment for visual ai",
+              "citation": "E. Kolve, R. Mottaghi, W. Han, E. VanderBilt, L. Weihs, A. Herrasti, D. Gordon, Y. Zhu, A. Gupta, and A. Farhadi, 'Ai2-thor: An interactive 3d environment for visual ai,' arXiv preprint arXiv:1712.05474 , 2017."
+            },
+            {
+              "title": "Vrkitchen: an interactive 3d virtual environment for task-oriented learning",
+              "citation": "X. Gao, R. Gong, T. Shu, X. Xie, S. Wang, and S.-C. Zhu, 'Vrkitchen: an interactive 3d virtual environment for task-oriented learning,' arXiv preprint arXiv:1903.05757 , 2019."
+            },
+            {
+              "title": "Sapien: A simulated part-based interactive environment",
+              "citation": "F. Xiang, Y. Qin, K. Mo, Y. Xia, H. Zhu, F. Liu, M. Liu, H. Jiang, Y. Yuan, H. Wang et al. , 'Sapien: A simulated part-based interactive environment,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 11 097-11 107."
+            },
+            {
+              "title": "Threedworld: A platform for interactive multi-modal physical simulation",
+              "citation": "C. Gan, J. Schwartz, S. Alter, M. Schrimpf, J. Traer, J. De Freitas, J. Kubilius, A. Bhandwaldar, N. Haber, M. Sano et al. , 'Threedworld: A platform for interactive multi-modal physical simulation,' arXiv preprint arXiv:2007.04954 , 2020."
+            },
+            {
+              "title": "Alfred: A benchmark for interpreting grounded instructions for everyday tasks",
+              "citation": "M. Shridhar, J. Thomason, D. Gordon, Y. Bisk, W. Han, R. Mottaghi, L. Zettlemoyer, and D. Fox, 'Alfred: A benchmark for interpreting grounded instructions for everyday tasks,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2020, pp. 10 740-10 749."
+            },
+            {
+              "title": "Actionet: An interactive endto-end platform for task-based data collection and augmentation in 3d environment",
+              "citation": "J. Duan, S. Yu, H. L. Tan, and C. Tan, 'Actionet: An interactive endto-end platform for task-based data collection and augmentation in 3d environment,' in 2020 IEEE International Conference on Image Processing (ICIP) . IEEE, 2020, pp. 1566-1570."
+            },
+            {
+              "title": "Learning about objects by learning to interact with them",
+              "citation": "M. Lohmann, J. Salvador, A. Kembhavi, and R. Mottaghi, 'Learning about objects by learning to interact with them,' Advances in Neural Information processing Systems 33 , 2020."
+            },
+            {
+              "title": "Habitat: A platform for embodied ai research",
+              "citation": "M. Savva, A. Kadian, O. Maksymets, Y. Zhao, E. Wijmans, B. Jain, J. Straub, J. Liu, V. Koltun, J. Malik et al. , 'Habitat: A platform for embodied ai research,' in Proceedings of the IEEE International Conference on Computer Vision , 2019, pp. 9339-9347."
+            },
+            {
+              "title": "Interactive gibson benchmark: A benchmark for interactive navigation in cluttered environments",
+              "citation": "F. Xia, W. B. Shen, C. Li, P. Kasimbeg, M. E. Tchapmi, A. Toshev, R. Mart´ ın-Mart´ ın, and S. Savarese, 'Interactive gibson benchmark: A benchmark for interactive navigation in cluttered environments,' IEEE Robotics and Automation Letters , vol. 5, no. 2, pp. 713-720, 2020."
+            },
+            {
+              "title": "Ai2-thor: An interactive 3d environment for visual ai",
+              "citation": "E. Kolve, R. Mottaghi, W. Han, E. VanderBilt, L. Weihs, A. Herrasti, D. Gordon, Y. Zhu, A. Gupta, and A. Farhadi, 'Ai2-thor: An interactive 3d environment for visual ai,' arXiv preprint arXiv:1712.05474 , 2017."
+            },
+            {
+              "title": "Interactive gibson benchmark: A benchmark for interactive navigation in cluttered environments",
+              "citation": "F. Xia, W. B. Shen, C. Li, P. Kasimbeg, M. E. Tchapmi, A. Toshev, R. Mart´ ın-Mart´ ın, and S. Savarese, 'Interactive gibson benchmark: A benchmark for interactive navigation in cluttered environments,' IEEE Robotics and Automation Letters , vol. 5, no. 2, pp. 713-720, 2020."
+            },
+            {
+              "title": "Habitat: A platform for embodied ai research",
+              "citation": "M. Savva, A. Kadian, O. Maksymets, Y. Zhao, E. Wijmans, B. Jain, J. Straub, J. Liu, V. Koltun, J. Malik et al. , 'Habitat: A platform for embodied ai research,' in Proceedings of the IEEE International Conference on Computer Vision , 2019, pp. 9339-9347."
+            },
+            {
+              "title": "Reskin: versatile, replaceable, lasting tactile skins",
+              "citation": "R. Bhirangi, T. Hellebrekers, C. Majidi, and A. Gupta, 'Reskin: versatile, replaceable, lasting tactile skins,' in 5th Annual Conference on Robot Learning , 2021."
+            },
+            {
+              "title": "Constraining dense hand surface tracking with elasticity",
+              "citation": "B. Smith, C. Wu, H. Wen, P. Peluse, Y. Sheikh, J. K. Hodgins, and T. Shiratori, 'Constraining dense hand surface tracking with elasticity,' ACM Transactions on Graphics (TOG) , vol. 39, no. 6, pp. 1-14, 2020."
+            },
+            {
+              "title": "Audio-visual embodied navigation",
+              "citation": "C. Chen, U. Jain, C. Schissler, S. V . A. Gari, Z. Al-Halah, V . K. Ithapu, P. Robinson, and K. Grauman, 'Audio-visual embodied navigation,' environment , vol. 97, p. 103, 2019."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.3",
+          "sec_title": "Challenges in Embodied AI Research",
+          "citations": [
+            {
+              "title": "An exploration of embodied visual exploration",
+              "citation": "S. K. Ramakrishnan, D. Jayaraman, and K. Grauman, 'An exploration of embodied visual exploration,' International Journal of Computer Vision , 2021. [Online]. Available: https://doi.org/10.1007/s11263-021-01437-z"
+            },
+            {
+              "title": "Matterport3d: Learning from rgb-d data in indoor environments",
+              "citation": "A. Chang, A. Dai, T. Funkhouser, M. Halber, M. Niebner, M. Savva, S. Song, A. Zeng, and Y. Zhang, 'Matterport3d: Learning from rgb-d data in indoor environments,' in 2017 International Conference on 3D Vision (3DV) . IEEE Computer Society, 2017, pp. 667-676."
+            },
+            {
+              "title": "On evaluation of embodied navigation agents",
+              "citation": "P. Anderson, A. Chang, D. S. Chaplot, A. Dosovitskiy, S. Gupta, V. Koltun, J. Kosecka, J. Malik, R. Mottaghi, M. Savva et al. , 'On evaluation of embodied navigation agents,' arXiv preprint arXiv:1807.06757 , 2018."
+            },
+            {
+              "title": "An exploration of embodied visual exploration",
+              "citation": "S. K. Ramakrishnan, D. Jayaraman, and K. Grauman, 'An exploration of embodied visual exploration,' International Journal of Computer Vision , 2021. [Online]. Available: https://doi.org/10.1007/s11263-021-01437-z"
+            },
+            {
+              "title": "Learning object-conditioned exploration using distributed soft actor critic",
+              "citation": "A. Wahid, A. Stone, K. Chen, B. Ichter, and A. Toshev, 'Learning object-conditioned exploration using distributed soft actor critic,' arXiv preprint arXiv:2007.14545 , 2020."
+            },
+            {
+              "title": "Dd-ppo: Learning near-perfect pointgoal navigators from 2.5 billion frames",
+              "citation": "E. Wijmans, A. Kadian, A. Morcos, S. Lee, I. Essa, D. Parikh, M. Savva, and D. Batra, 'Dd-ppo: Learning near-perfect pointgoal navigators from 2.5 billion frames,' arXiv , pp. arXiv-1911, 2019."
+            },
+            {
+              "title": "Auxiliary tasks speed up learning pointgoal navigation",
+              "citation": "J. Ye, D. Batra, E. Wijmans, and A. Das, 'Auxiliary tasks speed up learning pointgoal navigation,' arXiv preprint arXiv:2007.04561 , 2020."
+            },
+            {
+              "title": "Learning to learn how to learn: Self-adaptive visual navigation using meta-learning",
+              "citation": "M. Wortsman, K. Ehsani, M. Rastegari, A. Farhadi, and R. Mottaghi, 'Learning to learn how to learn: Self-adaptive visual navigation using meta-learning,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2019, pp. 6750-6759."
+            },
+            {
+              "title": "Learning object-conditioned exploration using distributed soft actor critic",
+              "citation": "A. Wahid, A. Stone, K. Chen, B. Ichter, and A. Toshev, 'Learning object-conditioned exploration using distributed soft actor critic,' arXiv preprint arXiv:2007.14545 , 2020."
+            },
+            {
+              "title": "Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments",
+              "citation": "P. Anderson, Q. Wu, D. Teney, J. Bruce, M. Johnson, N. S¨ underhauf, I. Reid, S. Gould, and A. Van Den Hengel, 'Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2018, pp. 3674-3683."
+            },
+            {
+              "title": "Embodied question answering",
+              "citation": "A. Das, S. Datta, G. Gkioxari, S. Lee, D. Parikh, and D. Batra, 'Embodied question answering,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops , 2018, pp. 2054-2063."
+            },
+            {
+              "title": "Multi-target embodied question answering",
+              "citation": "L. Yu, X. Chen, G. Gkioxari, M. Bansal, T. L. Berg, and D. Batra, 'Multi-target embodied question answering,' in IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2019, Long Beach, CA, USA, June 16-20, 2019 , 2019, pp. 6309-6318."
+            },
+            {
+              "title": "Exploiting scenespecific features for object goal navigation",
+              "citation": "T. Campari, P. Eccher, L. Serafini, and L. Ballan, 'Exploiting scenespecific features for object goal navigation,' in ECCV Workshops , 2020."
+            },
+            {
+              "title": "Vision-dialog navigation by exploring cross-modal memory",
+              "citation": "Y. Zhu, F. Zhu, Z. Zhan, B. Lin, J. Jiao, X. Chang, and X. Liang, 'Vision-dialog navigation by exploring cross-modal memory,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 10 730-10 739."
+            },
+            {
+              "title": "Scene memory transformer for embodied agents in long-horizon tasks",
+              "citation": "K. Fang, A. Toshev, L. Fei-Fei, and S. Savarese, 'Scene memory transformer for embodied agents in long-horizon tasks,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2019, pp. 538-547."
+            },
+            {
+              "title": "Occupancy anticipation for efficient exploration and navigation",
+              "citation": "S. K. Ramakrishnan, Z. Al-Halah, and K. Grauman, 'Occupancy anticipation for efficient exploration and navigation,' arXiv preprint arXiv:2008.09285 , 2020."
+            },
+            {
+              "title": "An exploration of embodied visual exploration",
+              "citation": "S. K. Ramakrishnan, D. Jayaraman, and K. Grauman, 'An exploration of embodied visual exploration,' International Journal of Computer Vision , 2021. [Online]. Available: https://doi.org/10.1007/s11263-021-01437-z"
+            },
+            {
+              "title": "Semantic curiosity for active visual learning",
+              "citation": "D. S. Chaplot, H. Jiang, S. Gupta, and A. Gupta, 'Semantic curiosity for active visual learning,' in ECCV , 2020."
+            },
+            {
+              "title": "Seeing the un-scene: Learning amodal semantic maps for room navigation",
+              "citation": "M. Narasimhan, E. Wijmans, X. Chen, T. Darrell, D. Batra, D. Parikh, and A. Singh, 'Seeing the un-scene: Learning amodal semantic maps for room navigation,' in European Conference on Computer Vision . Springer, 2020, pp. 513-529."
+            },
+            {
+              "title": "Simultaneous mapping and target driven navigation",
+              "citation": "G. Georgakis, Y. Li, and J. Kosecka, 'Simultaneous mapping and target driven navigation,' arXiv preprint arXiv:1911.07980 , 2019."
+            },
+            {
+              "title": "Iqa: Visual question answering in interactive environments",
+              "citation": "D. Gordon, A. Kembhavi, M. Rastegari, J. Redmon, D. Fox, and A. Farhadi, 'Iqa: Visual question answering in interactive environments,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2018, pp. 4089-4098."
+            },
+            {
+              "title": "Multi-agent embodied question answering in interactive environments",
+              "citation": "S. Tan, W. Xiang, H. Liu, D. Guo, and F. Sun, 'Multi-agent embodied question answering in interactive environments,' in ECCV 2020 - 16th European Conference, Glasgow,UK, August 23-28, 2020, Proceedings , A. Vedaldi, H. Bischof, T. Brox, and J. Frahm, Eds., 2020, pp. 663678."
+            },
+            {
+              "title": "An exploration of embodied visual exploration",
+              "citation": "S. K. Ramakrishnan, D. Jayaraman, and K. Grauman, 'An exploration of embodied visual exploration,' International Journal of Computer Vision , 2021. [Online]. Available: https://doi.org/10.1007/s11263-021-01437-z"
+            },
+            {
+              "title": "Occupancy anticipation for efficient exploration and navigation",
+              "citation": "S. K. Ramakrishnan, Z. Al-Halah, and K. Grauman, 'Occupancy anticipation for efficient exploration and navigation,' arXiv preprint arXiv:2008.09285 , 2020."
+            },
+            {
+              "title": "Vision-dialog navigation by exploring cross-modal memory",
+              "citation": "Y. Zhu, F. Zhu, Z. Zhan, B. Lin, J. Jiao, X. Chang, and X. Liang, 'Vision-dialog navigation by exploring cross-modal memory,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2020, pp. 10 730-10 739."
+            },
+            {
+              "title": "Scene memory transformer for embodied agents in long-horizon tasks",
+              "citation": "K. Fang, A. Toshev, L. Fei-Fei, and S. Savarese, 'Scene memory transformer for embodied agents in long-horizon tasks,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2019, pp. 538-547."
+            },
+            {
+              "title": "Learning object-conditioned exploration using distributed soft actor critic",
+              "citation": "A. Wahid, A. Stone, K. Chen, B. Ichter, and A. Toshev, 'Learning object-conditioned exploration using distributed soft actor critic,' arXiv preprint arXiv:2007.14545 , 2020."
+            },
+            {
+              "title": "Scene memory transformer for embodied agents in long-horizon tasks",
+              "citation": "K. Fang, A. Toshev, L. Fei-Fei, and S. Savarese, 'Scene memory transformer for embodied agents in long-horizon tasks,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2019, pp. 538-547."
+            },
+            {
+              "title": "On evaluation of embodied navigation agents",
+              "citation": "P. Anderson, A. Chang, D. S. Chaplot, A. Dosovitskiy, S. Gupta, V. Koltun, J. Kosecka, J. Malik, R. Mottaghi, M. Savva et al. , 'On evaluation of embodied navigation agents,' arXiv preprint arXiv:1807.06757 , 2018."
+            },
+            {
+              "title": "Learning to explore using active neural slam",
+              "citation": "D. S. Chaplot, D. Gandhi, S. Gupta, A. Gupta, and R. Salakhutdinov, 'Learning to explore using active neural slam,' in International Conference on Learning Representations (ICLR) , 2020."
+            },
+            {
+              "title": "Benchmarking classic and learned navigation in complex 3d environments",
+              "citation": "D. Mishkin, A. Dosovitskiy, and V. Koltun, 'Benchmarking classic and learned navigation in complex 3d environments,' arXiv preprint arXiv:1901.10915 , 2019."
+            },
+            {
+              "title": "From seeing to moving: A survey on learning for visual indoor navigation (vin)",
+              "citation": "X. Ye and Y. Yang, 'From seeing to moving: A survey on learning for visual indoor navigation (vin),' arXiv preprint arXiv:2002.11310 , 2020."
+            },
+            {
+              "title": "Visual semantic navigation using scene priors",
+              "citation": "W. Yang, X. Wang, A. Farhadi, A. Gupta, and R. Mottaghi, 'Visual semantic navigation using scene priors,' arXiv preprint arXiv:1810.06543 , 2018."
+            },
+            {
+              "title": "Allenact: A framework for embodied ai research",
+              "citation": "L. Weihs, J. Salvador, K. Kotar, U. Jain, K.-H. Zeng, R. Mottaghi, and A. Kembhavi, 'Allenact: A framework for embodied ai research,' arXiv , 2020."
+            },
+            {
+              "title": "An exploration of embodied visual exploration",
+              "citation": "S. K. Ramakrishnan, D. Jayaraman, and K. Grauman, 'An exploration of embodied visual exploration,' International Journal of Computer Vision , 2021. [Online]. Available: https://doi.org/10.1007/s11263-021-01437-z"
+            },
+            {
+              "title": "Multi-agent embodied question answering in interactive environments",
+              "citation": "S. Tan, W. Xiang, H. Liu, D. Guo, and F. Sun, 'Multi-agent embodied question answering in interactive environments,' in ECCV 2020 - 16th European Conference, Glasgow,UK, August 23-28, 2020, Proceedings , A. Vedaldi, H. Bischof, T. Brox, and J. Frahm, Eds., 2020, pp. 663678."
+            },
+            {
+              "title": "Cooperative multi-agent learning: The state of the art",
+              "citation": "L. Panait and S. Luke, 'Cooperative multi-agent learning: The state of the art,' Autonomous agents and multi-agent systems , vol. 11, no. 3, pp. 387-434, 2005."
+            },
+            {
+              "title": "Who2com: Collaborative perception via learnable handshake communication",
+              "citation": "Y.-C. Liu, J. Tian, C.-Y. Ma, N. Glaser, C.-W. Kuo, and Z. Kira, 'Who2com: Collaborative perception via learnable handshake communication,' in 2020 IEEE International Conference on Robotics and Automation (ICRA) . IEEE, 2020, pp. 6876-6883."
+            },
+            {
+              "title": "Allenact: A framework for embodied ai research",
+              "citation": "L. Weihs, J. Salvador, K. Kotar, U. Jain, K.-H. Zeng, R. Mottaghi, and A. Kembhavi, 'Allenact: A framework for embodied ai research,' arXiv , 2020."
+            },
+            {
+              "title": "Ai2-thor: An interactive 3d environment for visual ai",
+              "citation": "E. Kolve, R. Mottaghi, W. Han, E. VanderBilt, L. Weihs, A. Herrasti, D. Gordon, Y. Zhu, A. Gupta, and A. Farhadi, 'Ai2-thor: An interactive 3d environment for visual ai,' arXiv preprint arXiv:1712.05474 , 2017."
+            },
+            {
+              "title": "Threedworld: A platform for interactive multi-modal physical simulation",
+              "citation": "C. Gan, J. Schwartz, S. Alter, M. Schrimpf, J. Traer, J. De Freitas, J. Kubilius, A. Bhandwaldar, N. Haber, M. Sano et al. , 'Threedworld: A platform for interactive multi-modal physical simulation,' arXiv preprint arXiv:2007.04954 , 2020."
+            },
+            {
+              "title": "igibson, a simulation environment for interactive tasks in large realistic scenes",
+              "citation": "B. Shen, F. Xia, C. Li, R. Martın-Martın, L. Fan, G. Wang, S. Buch, C. D'Arpino, S. Srivastava, L. P. Tchapmi, K. Vainio, L. Fei-Fei, and S. Savarese, 'igibson, a simulation environment for interactive tasks in large realistic scenes,' 2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) , 2020."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "CONCLUSION",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

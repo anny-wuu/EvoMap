@@ -1,0 +1,3132 @@
+{
+  "track": "Multimodal Learning",
+  "paper_title": "Vision-Language Models for Vision Tasks: A Survey",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "INTRODUCTION",
+      "citations": [
+        {
+          "title": "Are we ready for autonomous driving? the kitti vision benchmark suite",
+          "citation": "A. Geiger et al. Are we ready for autonomous driving? the kitti vision benchmark suite. In CVPR , pp. 3354-3361. IEEE, 2012."
+        },
+        {
+          "title": "Remote sensing image scene classification meets deep learning: Challenges, methods, benchmarks, and opportunities",
+          "citation": "G. Cheng et al. Remote sensing image scene classification meets deep learning: Challenges, methods, benchmarks, and opportunities. JSTARS , 13:3735-3756, 2020."
+        },
+        {
+          "title": "Deep learning in robotics: a review of recent research",
+          "citation": "H. A. Pierson and M. S. Gashler. Deep learning in robotics: a review of recent research. Advanced Robotics , 31(16):821-835, 2017."
+        },
+        {
+          "title": "Imagenet classification with deep convolutional neural networks",
+          "citation": "A. Krizhevsky et al. Imagenet classification with deep convolutional neural networks. Communications of the ACM , 60(6):84-90, 2017."
+        },
+        {
+          "title": "Very deep convolutional networks for large-scale image recognition",
+          "citation": "K. Simonyan and A. Zisserman. Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556 , 2014."
+        },
+        {
+          "title": "Deep residual learning for image recognition",
+          "citation": "K. He et al. Deep residual learning for image recognition. In CVPR , pp. 770-778, 2016."
+        },
+        {
+          "title": "K-nearest neighbor",
+          "citation": "L. E. Peterson. K-nearest neighbor. Scholarpedia , 4(2):1883, 2009."
+        },
+        {
+          "title": "Support-vector networks",
+          "citation": "C. Cortes and V. Vapnik. Support-vector networks. Machine learning , 20:273-297, 1995."
+        },
+        {
+          "title": "Multiclass and binary svm classification: Implications for training and classification users",
+          "citation": "A. Mathur and G. M. Foody. Multiclass and binary svm classification: Implications for training and classification users. IEEE Geoscience and remote sensing letters , 5(2):241-245, 2008."
+        },
+        {
+          "title": "Imagenet classification with deep convolutional neural networks",
+          "citation": "A. Krizhevsky et al. Imagenet classification with deep convolutional neural networks. Communications of the ACM , 60(6):84-90, 2017."
+        },
+        {
+          "title": "Very deep convolutional networks for large-scale image recognition",
+          "citation": "K. Simonyan and A. Zisserman. Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556 , 2014."
+        },
+        {
+          "title": "Deep residual learning for image recognition",
+          "citation": "K. He et al. Deep residual learning for image recognition. In CVPR , pp. 770-778, 2016."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+        },
+        {
+          "title": "Fast r-cnn",
+          "citation": "R. Girshick. Fast r-cnn. In ICCV , pp. 1440-1448, 2015."
+        },
+        {
+          "title": "Momentum contrast for unsupervised visual representation learning",
+          "citation": "K. He et al. Momentum contrast for unsupervised visual representation learning. In CVPR , pp. 9729-9738, 2020."
+        },
+        {
+          "title": "A simple framework for contrastive learning of visual representations",
+          "citation": "T. Chen et al. A simple framework for contrastive learning of visual representations. In ICML , pp. 1597-1607. PMLR, 2020."
+        },
+        {
+          "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+          "citation": "J. Devlin et al. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 , 2018."
+        },
+        {
+          "title": "Improving language understanding by generative pre-training",
+          "citation": "A. Radford et al. Improving language understanding by generative pre-training. 2018."
+        },
+        {
+          "title": "Language models are unsupervised multitask learners",
+          "citation": "A. Radford et al. Language models are unsupervised multitask learners. OpenAI blog , 1(8):9, 2019."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+        },
+        {
+          "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+          "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+        },
+        {
+          "title": "Filip: Fine-grained interactive language-image pretraining",
+          "citation": "L. Yao et al. Filip: Fine-grained interactive language-image pretraining. In ICLR , 2021."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+        },
+        {
+          "title": "Filip: Fine-grained interactive language-image pretraining",
+          "citation": "L. Yao et al. Filip: Fine-grained interactive language-image pretraining. In ICLR , 2021."
+        },
+        {
+          "title": "Coca: Contrastive captioners are image-text foundation models",
+          "citation": "J. Yu et al. Coca: Contrastive captioners are image-text foundation models. arXiv preprint arXiv:2205.01917 , 2022."
+        },
+        {
+          "title": "Laion-5b: An open large-scale dataset for training next generation image-text models",
+          "citation": "C. Schuhmann et al. Laion-5b: An open large-scale dataset for training next generation image-text models. arXiv preprint arXiv:2210.08402 , 2022."
+        },
+        {
+          "title": "Laion-400m: Open dataset of clip-filtered 400 million image-text pairs",
+          "citation": "C. Schuhmann et al. Laion-400m: Open dataset of clip-filtered 400 million image-text pairs. arXiv preprint arXiv:2111.02114 , 2021."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+        },
+        {
+          "title": "Food-101-mining discriminative components with random forests",
+          "citation": "L. Bossard et al. Food-101-mining discriminative components with random forests. In ECCV , pp. 446-461. Springer, 2014."
+        },
+        {
+          "title": "Learning multiple layers of features from tiny images",
+          "citation": "A. Krizhevsky et al. Learning multiple layers of features from tiny images. 2009."
+        },
+        {
+          "title": "Sun database: Large-scale scene recognition from abbey to zoo",
+          "citation": "J. Xiao et al. Sun database: Large-scale scene recognition from abbey to zoo. In 2010 IEEE computer society conference on computer vision and pattern recognition , pp. 3485-3492. IEEE, 2010."
+        },
+        {
+          "title": "Collecting a large-scale dataset of fine-grained cars",
+          "citation": "J. Krause et al. Collecting a large-scale dataset of fine-grained cars. 2013."
+        },
+        {
+          "title": "Cats and dogs",
+          "citation": "O. M. Parkhi et al. Cats and dogs. In CVPR , pp. 3498-3505. IEEE, 2012."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+        },
+        {
+          "title": "The hateful memes challenge: Detecting hate speech in multimodal memes",
+          "citation": "D. Kiela et al. The hateful memes challenge: Detecting hate speech in multimodal memes. NeurIPS , 33:2611-2624, 2020."
+        },
+        {
+          "title": "Rareact: A video dataset of unusual interactions",
+          "citation": "A. Miech et al. Rareact: A video dataset of unusual interactions. arXiv preprint arXiv:2008.01018 , 2020."
+        },
+        {
+          "title": "Ucf101: A dataset of 101 human actions classes from videos in the wild",
+          "citation": "K. Soomro et al. Ucf101: A dataset of 101 human actions classes from videos in the wild. arXiv preprint arXiv:1212.0402 , 2012."
+        },
+        {
+          "title": "A short note on the kinetics-700 human action dataset",
+          "citation": "J. Carreira et al. A short note on the kinetics-700 human action dataset. arXiv preprint arXiv:1907.06987 , 2019."
+        },
+        {
+          "title": "Learning to prompt for vision-language models",
+          "citation": "K. Zhou et al. Learning to prompt for vision-language models. IJCV , 130(9):2337-2348, 2022."
+        },
+        {
+          "title": "Conditional prompt learning for vision-language models",
+          "citation": "K. Zhou et al. Conditional prompt learning for vision-language models. In CVPR , pp. 16816-16825, 2022."
+        },
+        {
+          "title": "Clip-adapter: Better vision-language models with feature adapters",
+          "citation": "P. Gao et al. Clip-adapter: Better vision-language models with feature adapters. arXiv preprint arXiv:2110.04544 , 2021."
+        },
+        {
+          "title": "Tip-adapter: Training-free clip-adapter for better vision-language modeling",
+          "citation": "R. Zhang et al. Tip-adapter: Training-free clip-adapter for better vision-language modeling. arXiv preprint arXiv:2111.03930 , 2021."
+        },
+        {
+          "title": "Learning to prompt for vision-language models",
+          "citation": "K. Zhou et al. Learning to prompt for vision-language models. IJCV , 130(9):2337-2348, 2022."
+        },
+        {
+          "title": "Conditional prompt learning for vision-language models",
+          "citation": "K. Zhou et al. Conditional prompt learning for vision-language models. In CVPR , pp. 16816-16825, 2022."
+        },
+        {
+          "title": "Clip-adapter: Better vision-language models with feature adapters",
+          "citation": "P. Gao et al. Clip-adapter: Better vision-language models with feature adapters. arXiv preprint arXiv:2110.04544 , 2021."
+        },
+        {
+          "title": "Tip-adapter: Training-free clip-adapter for better vision-language modeling",
+          "citation": "R. Zhang et al. Tip-adapter: Training-free clip-adapter for better vision-language modeling. arXiv preprint arXiv:2111.03930 , 2021."
+        },
+        {
+          "title": "Decoupling zero-shot semantic segmentation",
+          "citation": "J. Ding et al. Decoupling zero-shot semantic segmentation. In CVPR , pp. 11583-11592, 2022."
+        },
+        {
+          "title": "Open-vocabulary object detection via vision and language knowledge distillation",
+          "citation": "X. Gu et al. Open-vocabulary object detection via vision and language knowledge distillation. In ICLR , 2021."
+        },
+        {
+          "title": "Learning to prompt for open-vocabulary object detection with vision-language model",
+          "citation": "Y. Du et al. Learning to prompt for open-vocabulary object detection with vision-language model. In CVPR , pp. 1408414093, 2022."
+        },
+        {
+          "title": "Decoupling zero-shot semantic segmentation",
+          "citation": "J. Ding et al. Decoupling zero-shot semantic segmentation. In CVPR , pp. 11583-11592, 2022."
+        },
+        {
+          "title": "Open-vocabulary object detection via vision and language knowledge distillation",
+          "citation": "X. Gu et al. Open-vocabulary object detection via vision and language knowledge distillation. In ICLR , 2021."
+        },
+        {
+          "title": "Learning to prompt for open-vocabulary object detection with vision-language model",
+          "citation": "Y. Du et al. Learning to prompt for open-vocabulary object detection with vision-language model. In CVPR , pp. 1408414093, 2022."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "BACKGROUND",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Training Paradigms for Visual Recognition",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "2.1.1",
+              "sec_title": "Traditional Machine Learning and Prediction",
+              "citations": [
+                {
+                  "title": "Imagenet classification with deep convolutional neural networks",
+                  "citation": "A. Krizhevsky et al. Imagenet classification with deep convolutional neural networks. Communications of the ACM , 60(6):84-90, 2017."
+                },
+                {
+                  "title": "Multiclass and binary svm classification: Implications for training and classification users",
+                  "citation": "A. Mathur and G. M. Foody. Multiclass and binary svm classification: Implications for training and classification users. IEEE Geoscience and remote sensing letters , 5(2):241-245, 2008."
+                },
+                {
+                  "title": "Distinctive image features from scale-invariant keypoints",
+                  "citation": "D. G. Lowe. Distinctive image features from scale-invariant keypoints. IJCV , 60:91-110, 2004."
+                },
+                {
+                  "title": "K-nearest neighbor",
+                  "citation": "L. E. Peterson. K-nearest neighbor. Scholarpedia , 4(2):1883, 2009."
+                },
+                {
+                  "title": "Support-vector networks",
+                  "citation": "C. Cortes and V. Vapnik. Support-vector networks. Machine learning , 20:273-297, 1995."
+                },
+                {
+                  "title": "Random forests",
+                  "citation": "L. Breiman. Random forests. Machine learning , 45:5-32, 2001."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.2",
+              "sec_title": "Deep Learning from Scratch and Prediction",
+              "citations": [
+                {
+                  "title": "Imagenet classification with deep convolutional neural networks",
+                  "citation": "A. Krizhevsky et al. Imagenet classification with deep convolutional neural networks. Communications of the ACM , 60(6):84-90, 2017."
+                },
+                {
+                  "title": "Very deep convolutional networks for large-scale image recognition",
+                  "citation": "K. Simonyan and A. Zisserman. Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556 , 2014."
+                },
+                {
+                  "title": "Deep residual learning for image recognition",
+                  "citation": "K. He et al. Deep residual learning for image recognition. In CVPR , pp. 770-778, 2016."
+                },
+                {
+                  "title": "Deep residual learning for image recognition",
+                  "citation": "K. He et al. Deep residual learning for image recognition. In CVPR , pp. 770-778, 2016."
+                },
+                {
+                  "title": "Imagenet: A large-scale hierarchical image database",
+                  "citation": "J. Deng et al. Imagenet: A large-scale hierarchical image database. In CVPR , pp. 248-255. Ieee, 2009."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.3",
+              "sec_title": "Supervised Pre-training, Fine-tuning and Prediction",
+              "citations": [
+                {
+                  "title": "Fast r-cnn",
+                  "citation": "R. Girshick. Fast r-cnn. In ICCV , pp. 1440-1448, 2015."
+                },
+                {
+                  "title": "Fast r-cnn",
+                  "citation": "R. Girshick. Fast r-cnn. In ICCV , pp. 1440-1448, 2015."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.4",
+              "sec_title": "Unsupervised Pre-training, Fine-tuning & Prediction",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.5",
+              "sec_title": "VLM Pre-training and Zero-shot Prediction",
+              "citations": [
+                {
+                  "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+                  "citation": "J. Devlin et al. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 , 2018."
+                },
+                {
+                  "title": "Improving language understanding by generative pre-training",
+                  "citation": "A. Radford et al. Improving language understanding by generative pre-training. 2018."
+                },
+                {
+                  "title": "Language models are unsupervised multitask learners",
+                  "citation": "A. Radford et al. Language models are unsupervised multitask learners. OpenAI blog , 1(8):9, 2019."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Filip: Fine-grained interactive language-image pretraining",
+                  "citation": "L. Yao et al. Filip: Fine-grained interactive language-image pretraining. In ICLR , 2021."
+                },
+                {
+                  "title": "Coca: Contrastive captioners are image-text foundation models",
+                  "citation": "J. Yu et al. Coca: Contrastive captioners are image-text foundation models. arXiv preprint arXiv:2205.01917 , 2022."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Development of VLMs for Visual Recognition",
+          "citations": [
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            },
+            {
+              "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+              "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+            },
+            {
+              "title": "Filip: Fine-grained interactive language-image pretraining",
+              "citation": "L. Yao et al. Filip: Fine-grained interactive language-image pretraining. In ICLR , 2021."
+            },
+            {
+              "title": "Flava: A foundational language and vision alignment model",
+              "citation": "A. Singh et al. Flava: A foundational language and vision alignment model. In CVPR , pp. 15638-15650, 2022."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            },
+            {
+              "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+              "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+            },
+            {
+              "title": "Image-and-language understanding from pixels only",
+              "citation": "M. Tschannen et al. Image-and-language understanding from pixels only. arXiv preprint arXiv:2212.08045 , 2022."
+            },
+            {
+              "title": "Unifying vision-language representation space with single-tower transformer",
+              "citation": "J. Jang et al. Unifying vision-language representation space with single-tower transformer. In AAAI , volume 37, pp. 980-988, 2023."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            },
+            {
+              "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+              "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+            },
+            {
+              "title": "Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection",
+              "citation": "L. Yao et al. Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection. In NeurIPS ."
+            },
+            {
+              "title": "Segclip: Patch aggregation with learnable centers for open-vocabulary semantic segmentation",
+              "citation": "H. Luo et al. Segclip: Patch aggregation with learnable centers for open-vocabulary semantic segmentation. arXiv preprint arXiv:2211.14813 , 2022."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.3",
+          "sec_title": "Relevant Surveys",
+          "citations": [
+            {
+              "title": "Vqa: Visual question answering",
+              "citation": "S. Antol et al. Vqa: Visual question answering. In ICCV , pp. 2425-2433, 2015."
+            },
+            {
+              "title": "A corpus for reasoning about natural language grounded in photographs",
+              "citation": "A. Suhr et al. A corpus for reasoning about natural language grounded in photographs. arXiv preprint arXiv:1811.00491 , 2018."
+            },
+            {
+              "title": "Deep fragment embeddings for bidirectional image sentence mapping",
+              "citation": "A. Karpathy et al. Deep fragment embeddings for bidirectional image sentence mapping. NeurIPS , 27, 2014."
+            },
+            {
+              "title": "Vision-language intelligence: Tasks, representation learning, and large models",
+              "citation": "F. Li et al. Vision-language intelligence: Tasks, representation learning, and large models. arXiv preprint arXiv:2203.01922 , 2022."
+            },
+            {
+              "title": "A survey of vision-language pre-trained models",
+              "citation": "Y. Du et al. A survey of vision-language pre-trained models. arXiv preprint arXiv:2202.10936 , 2022."
+            },
+            {
+              "title": "Vlp: A survey on vision-language pre-training",
+              "citation": "F.-L. Chen et al. Vlp: A survey on vision-language pre-training. Machine Intelligence Research , 20(1):38-56, 2023."
+            },
+            {
+              "title": "Vqa: Visual question answering",
+              "citation": "S. Antol et al. Vqa: Visual question answering. In ICCV , pp. 2425-2433, 2015."
+            },
+            {
+              "title": "A corpus for reasoning about natural language grounded in photographs",
+              "citation": "A. Suhr et al. A corpus for reasoning about natural language grounded in photographs. arXiv preprint arXiv:1811.00491 , 2018."
+            },
+            {
+              "title": "Deep fragment embeddings for bidirectional image sentence mapping",
+              "citation": "A. Karpathy et al. Deep fragment embeddings for bidirectional image sentence mapping. NeurIPS , 27, 2014."
+            },
+            {
+              "title": "Multimodal learning with transformers: A survey",
+              "citation": "P. Xu et al. Multimodal learning with transformers: A survey. arXiv preprint arXiv:2206.06488 , 2022."
+            },
+            {
+              "title": "Large-scale multi-modal pre-trained models: A comprehensive survey",
+              "citation": "X. Wang et al. Large-scale multi-modal pre-trained models: A comprehensive survey. arXiv preprint arXiv:2302.10035 , 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "VLM FOUNDATIONS",
+      "citations": [
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+        },
+        {
+          "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+          "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+        },
+        {
+          "title": "Deep residual learning for image recognition",
+          "citation": "K. He et al. Deep residual learning for image recognition. In CVPR , pp. 770-778, 2016."
+        },
+        {
+          "title": "Faster r-cnn: Towards real-time object detection with region proposal networks",
+          "citation": "S. Ren et al. Faster r-cnn: Towards real-time object detection with region proposal networks. NeurIPS , 28, 2015."
+        },
+        {
+          "title": "Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs",
+          "citation": "L.-C. Chen et al. Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs. TPAMI , 40(4):834-848, 2017."
+        },
+        {
+          "title": "Laion-5b: An open large-scale dataset for training next generation image-text models",
+          "citation": "C. Schuhmann et al. Laion-5b: An open large-scale dataset for training next generation image-text models. arXiv preprint arXiv:2210.08402 , 2022."
+        },
+        {
+          "title": "Laion-400m: Open dataset of clip-filtered 400 million image-text pairs",
+          "citation": "C. Schuhmann et al. Laion-400m: Open dataset of clip-filtered 400 million image-text pairs. arXiv preprint arXiv:2111.02114 , 2021."
+        },
+        {
+          "title": "Deep residual learning for image recognition",
+          "citation": "K. He et al. Deep residual learning for image recognition. In CVPR , pp. 770-778, 2016."
+        },
+        {
+          "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+          "citation": "J. Devlin et al. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 , 2018."
+        },
+        {
+          "title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+          "citation": "A. Dosovitskiy et al. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929 , 2020."
+        },
+        {
+          "title": "Attention is all you need",
+          "citation": "A. Vaswani et al. Attention is all you need. NeurIPS , 30, 2017."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+        },
+        {
+          "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+          "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+        },
+        {
+          "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+          "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Network Architectures",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "3.1.1",
+              "sec_title": "Architectures for Learning Image Features",
+              "citations": [
+                {
+                  "title": "Very deep convolutional networks for large-scale image recognition",
+                  "citation": "K. Simonyan and A. Zisserman. Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556 , 2014."
+                },
+                {
+                  "title": "Deep residual learning for image recognition",
+                  "citation": "K. He et al. Deep residual learning for image recognition. In CVPR , pp. 770-778, 2016."
+                },
+                {
+                  "title": "Efficientnet: Rethinking model scaling for convolutional neural networks",
+                  "citation": "M. Tan and Q. Le. Efficientnet: Rethinking model scaling for convolutional neural networks. In ICML , pp. 6105-6114. PMLR, 2019."
+                },
+                {
+                  "title": "Deep residual learning for image recognition",
+                  "citation": "K. He et al. Deep residual learning for image recognition. In CVPR , pp. 770-778, 2016."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Deep residual learning for image recognition",
+                  "citation": "K. He et al. Deep residual learning for image recognition. In CVPR , pp. 770-778, 2016."
+                },
+                {
+                  "title": "Efficientnet: Rethinking model scaling for convolutional neural networks",
+                  "citation": "M. Tan and Q. Le. Efficientnet: Rethinking model scaling for convolutional neural networks. In ICML , pp. 6105-6114. PMLR, 2019."
+                },
+                {
+                  "title": "Bag of tricks for image classification with convolutional neural networks",
+                  "citation": "T. He et al. Bag of tricks for image classification with convolutional neural networks. In CVPR , pp. 558-567, 2019."
+                },
+                {
+                  "title": "Making convolutional networks shift-invariant again",
+                  "citation": "R. Zhang. Making convolutional networks shift-invariant again. In ICML , pp. 7324-7334. PMLR, 2019."
+                },
+                {
+                  "title": "Attention is all you need",
+                  "citation": "A. Vaswani et al. Attention is all you need. NeurIPS , 30, 2017."
+                },
+                {
+                  "title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+                  "citation": "A. Dosovitskiy et al. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929 , 2020."
+                },
+                {
+                  "title": "End-to-end object detection with transformers",
+                  "citation": "N. Carion et al. End-to-end object detection with transformers. In ECCV , pp. 213-229. Springer, 2020."
+                },
+                {
+                  "title": "Segformer: Simple and efficient design for semantic segmentation with transformers",
+                  "citation": "E. Xie et al. Segformer: Simple and efficient design for semantic segmentation with transformers. NeurIPS , 34:12077-12090, 2021."
+                },
+                {
+                  "title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+                  "citation": "A. Dosovitskiy et al. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929 , 2020."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Filip: Fine-grained interactive language-image pretraining",
+                  "citation": "L. Yao et al. Filip: Fine-grained interactive language-image pretraining. In ICLR , 2021."
+                },
+                {
+                  "title": "Slip: Self-supervision meets language-image pretraining",
+                  "citation": "N. Mu et al. Slip: Self-supervision meets language-image pretraining. In ECCV , pp. 529-544. Springer, 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.2",
+              "sec_title": "Architectures for Learning Language Features",
+              "citations": [
+                {
+                  "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+                  "citation": "J. Devlin et al. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 , 2018."
+                },
+                {
+                  "title": "Language models are unsupervised multitask learners",
+                  "citation": "A. Radford et al. Language models are unsupervised multitask learners. OpenAI blog , 1(8):9, 2019."
+                },
+                {
+                  "title": "Attention is all you need",
+                  "citation": "A. Vaswani et al. Attention is all you need. NeurIPS , 30, 2017."
+                },
+                {
+                  "title": "Attention is all you need",
+                  "citation": "A. Vaswani et al. Attention is all you need. NeurIPS , 30, 2017."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Attention is all you need",
+                  "citation": "A. Vaswani et al. Attention is all you need. NeurIPS , 30, 2017."
+                },
+                {
+                  "title": "Language models are unsupervised multitask learners",
+                  "citation": "A. Radford et al. Language models are unsupervised multitask learners. OpenAI blog , 1(8):9, 2019."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "VLM Pre-training Objectives",
+          "citations": [
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            },
+            {
+              "title": "Momentum contrast for unsupervised visual representation learning",
+              "citation": "K. He et al. Momentum contrast for unsupervised visual representation learning. In CVPR , pp. 9729-9738, 2020."
+            },
+            {
+              "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+              "citation": "J. Devlin et al. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 , 2018."
+            },
+            {
+              "title": "Coca: Contrastive captioners are image-text foundation models",
+              "citation": "J. Yu et al. Coca: Contrastive captioners are image-text foundation models. arXiv preprint arXiv:2205.01917 , 2022."
+            },
+            {
+              "title": "Flava: A foundational language and vision alignment model",
+              "citation": "A. Singh et al. Flava: A foundational language and vision alignment model. In CVPR , pp. 15638-15650, 2022."
+            },
+            {
+              "title": "Unified contrastive learning in image-text-label space",
+              "citation": "J. Yang et al. Unified contrastive learning in image-text-label space. In CVPR , pp. 19163-19173, 2022."
+            },
+            {
+              "title": "Masked autoencoders are scalable vision learners",
+              "citation": "K. He et al. Masked autoencoders are scalable vision learners. arXiv preprint arXiv:2111.06377 , 2021."
+            },
+            {
+              "title": "Grounded language-image pre-training",
+              "citation": "L. H. Li et al. Grounded language-image pre-training. In CVPR , pp. 10965-10975, 2022."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.2.1",
+              "sec_title": "Contrastive Objectives",
+              "citations": [
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Momentum contrast for unsupervised visual representation learning",
+                  "citation": "K. He et al. Momentum contrast for unsupervised visual representation learning. In CVPR , pp. 9729-9738, 2020."
+                },
+                {
+                  "title": "Unified contrastive learning in image-text-label space",
+                  "citation": "J. Yang et al. Unified contrastive learning in image-text-label space. In CVPR , pp. 19163-19173, 2022."
+                },
+                {
+                  "title": "Momentum contrast for unsupervised visual representation learning",
+                  "citation": "K. He et al. Momentum contrast for unsupervised visual representation learning. In CVPR , pp. 9729-9738, 2020."
+                },
+                {
+                  "title": "A simple framework for contrastive learning of visual representations",
+                  "citation": "T. Chen et al. A simple framework for contrastive learning of visual representations. In ICML , pp. 1597-1607. PMLR, 2020."
+                },
+                {
+                  "title": "Representation learning with contrastive predictive coding",
+                  "citation": "A. v. d. Oord et al. Representation learning with contrastive predictive coding. arXiv preprint arXiv:1807.03748 , 2018."
+                },
+                {
+                  "title": "Momentum contrast for unsupervised visual representation learning",
+                  "citation": "K. He et al. Momentum contrast for unsupervised visual representation learning. In CVPR , pp. 9729-9738, 2020."
+                },
+                {
+                  "title": "A simple framework for contrastive learning of visual representations",
+                  "citation": "T. Chen et al. A simple framework for contrastive learning of visual representations. In ICML , pp. 1597-1607. PMLR, 2020."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+                  "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Unified contrastive learning in image-text-label space",
+                  "citation": "J. Yang et al. Unified contrastive learning in image-text-label space. In CVPR , pp. 19163-19173, 2022."
+                },
+                {
+                  "title": "Supervised contrastive learning",
+                  "citation": "P. Khosla et al. Supervised contrastive learning. NeurIPS , 33:18661-18673, 2020."
+                },
+                {
+                  "title": "Unified contrastive learning in image-text-label space",
+                  "citation": "J. Yang et al. Unified contrastive learning in image-text-label space. In CVPR , pp. 19163-19173, 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.2",
+              "sec_title": "Generative Objectives",
+              "citations": [
+                {
+                  "title": "Momentum contrast for unsupervised visual representation learning",
+                  "citation": "K. He et al. Momentum contrast for unsupervised visual representation learning. In CVPR , pp. 9729-9738, 2020."
+                },
+                {
+                  "title": "Beit: Bert pre-training of image transformers",
+                  "citation": "H. Bao et al. Beit: Bert pre-training of image transformers. arXiv preprint arXiv:2106.08254 , 2021."
+                },
+                {
+                  "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+                  "citation": "J. Devlin et al. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 , 2018."
+                },
+                {
+                  "title": "Coca: Contrastive captioners are image-text foundation models",
+                  "citation": "J. Yu et al. Coca: Contrastive captioners are image-text foundation models. arXiv preprint arXiv:2205.01917 , 2022."
+                },
+                {
+                  "title": "Flava: A foundational language and vision alignment model",
+                  "citation": "A. Singh et al. Flava: A foundational language and vision alignment model. In CVPR , pp. 15638-15650, 2022."
+                },
+                {
+                  "title": "Masked autoencoders are scalable vision learners",
+                  "citation": "K. He et al. Masked autoencoders are scalable vision learners. In CVPR , pp. 16000-16009, 2022."
+                },
+                {
+                  "title": "Beit: Bert pre-training of image transformers",
+                  "citation": "H. Bao et al. Beit: Bert pre-training of image transformers. arXiv preprint arXiv:2106.08254 , 2021."
+                },
+                {
+                  "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+                  "citation": "J. Devlin et al. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 , 2018."
+                },
+                {
+                  "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+                  "citation": "J. Devlin et al. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 , 2018."
+                },
+                {
+                  "title": "Flava: A foundational language and vision alignment model",
+                  "citation": "A. Singh et al. Flava: A foundational language and vision alignment model. In CVPR , pp. 15638-15650, 2022."
+                },
+                {
+                  "title": "Coca: Contrastive captioners are image-text foundation models",
+                  "citation": "J. Yu et al. Coca: Contrastive captioners are image-text foundation models. arXiv preprint arXiv:2205.01917 , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.3",
+              "sec_title": "Alignment Objectives",
+              "citations": [
+                {
+                  "title": "Coarse-to-fine vision-language pre-training with fusion in the backbone",
+                  "citation": "Z.-Y. Dou et al. Coarse-to-fine vision-language pre-training with fusion in the backbone. In NeurIPS ."
+                },
+                {
+                  "title": "Vlmo: Unified vision-language pre-training with mixture-of-modality-experts",
+                  "citation": "H. Bao et al. Vlmo: Unified vision-language pre-training with mixture-of-modality-experts. arXiv preprint arXiv:2111.02358 , 2021."
+                },
+                {
+                  "title": "Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection",
+                  "citation": "L. Yao et al. Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection. In NeurIPS ."
+                },
+                {
+                  "title": "Grounded language-image pre-training",
+                  "citation": "L. H. Li et al. Grounded language-image pre-training. In CVPR , pp. 10965-10975, 2022."
+                },
+                {
+                  "title": "Coarse-to-fine vision-language pre-training with fusion in the backbone",
+                  "citation": "Z.-Y. Dou et al. Coarse-to-fine vision-language pre-training with fusion in the backbone. In NeurIPS ."
+                },
+                {
+                  "title": "Vlmo: Unified vision-language pre-training with mixture-of-modality-experts",
+                  "citation": "H. Bao et al. Vlmo: Unified vision-language pre-training with mixture-of-modality-experts. arXiv preprint arXiv:2111.02358 , 2021."
+                },
+                {
+                  "title": "Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection",
+                  "citation": "L. Yao et al. Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection. In NeurIPS ."
+                },
+                {
+                  "title": "Grounded language-image pre-training",
+                  "citation": "L. H. Li et al. Grounded language-image pre-training. In CVPR , pp. 10965-10975, 2022."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "VLM Pre-training Frameworks",
+          "citations": [
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            },
+            {
+              "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+              "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+            },
+            {
+              "title": "Coca: Contrastive captioners are image-text foundation models",
+              "citation": "J. Yu et al. Coca: Contrastive captioners are image-text foundation models. arXiv preprint arXiv:2205.01917 , 2022."
+            },
+            {
+              "title": "Flava: A foundational language and vision alignment model",
+              "citation": "A. Singh et al. Flava: A foundational language and vision alignment model. In CVPR , pp. 15638-15650, 2022."
+            },
+            {
+              "title": "Image-and-language understanding from pixels only",
+              "citation": "M. Tschannen et al. Image-and-language understanding from pixels only. arXiv preprint arXiv:2212.08045 , 2022."
+            },
+            {
+              "title": "Unifying vision-language representation space with single-tower transformer",
+              "citation": "J. Jang et al. Unifying vision-language representation space with single-tower transformer. In AAAI , volume 37, pp. 980-988, 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.4",
+          "sec_title": "Evaluation Setups and Downstream Tasks",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "3.4.1",
+              "sec_title": "Zero-shot Prediction",
+              "citations": [
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+                  "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+                },
+                {
+                  "title": "Filip: Fine-grained interactive language-image pretraining",
+                  "citation": "L. Yao et al. Filip: Fine-grained interactive language-image pretraining. In ICLR , 2021."
+                },
+                {
+                  "title": "Slip: Self-supervision meets language-image pretraining",
+                  "citation": "N. Mu et al. Slip: Self-supervision meets language-image pretraining. In ECCV , pp. 529-544. Springer, 2022."
+                },
+                {
+                  "title": "Uniclip: Unified framework for contrastive languageimage pre-training",
+                  "citation": "J. Lee et al. Uniclip: Unified framework for contrastive languageimage pre-training. In NeurIPS ."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Very deep convolutional networks for large-scale image recognition",
+                  "citation": "K. Simonyan and A. Zisserman. Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556 , 2014."
+                },
+                {
+                  "title": "Deep residual learning for image recognition",
+                  "citation": "K. He et al. Deep residual learning for image recognition. In CVPR , pp. 770-778, 2016."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs",
+                  "citation": "L.-C. Chen et al. Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs. TPAMI , 40(4):834-848, 2017."
+                },
+                {
+                  "title": "Fast r-cnn",
+                  "citation": "R. Girshick. Fast r-cnn. In ICCV , pp. 1440-1448, 2015."
+                },
+                {
+                  "title": "Faster r-cnn: Towards real-time object detection with region proposal networks",
+                  "citation": "S. Ren et al. Faster r-cnn: Towards real-time object detection with region proposal networks. NeurIPS , 28, 2015."
+                },
+                {
+                  "title": "Objects365: A large-scale, high-quality dataset for object detection",
+                  "citation": "S. Shao et al. Objects365: A large-scale, high-quality dataset for object detection. In ICCV , pp. 8430-8439, 2019."
+                },
+                {
+                  "title": "Mdetr-modulated detection for end-to-end multi-modal understanding",
+                  "citation": "A. Kamath et al. Mdetr-modulated detection for end-to-end multi-modal understanding. In ICCV , pp. 1780-1790, 2021."
+                },
+                {
+                  "title": "Image-text retrieval: A survey on recent research and development",
+                  "citation": "M. Cao et al. Image-text retrieval: A survey on recent research and development. arXiv preprint arXiv:2203.14713 , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.4.2",
+              "sec_title": "Linear Probing",
+              "citations": [
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Very deep convolutional networks for large-scale image recognition",
+                  "citation": "K. Simonyan and A. Zisserman. Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556 , 2014."
+                },
+                {
+                  "title": "Deep residual learning for image recognition",
+                  "citation": "K. He et al. Deep residual learning for image recognition. In CVPR , pp. 770-778, 2016."
+                },
+                {
+                  "title": "Im2text: Describing images using 1 million captioned photographs",
+                  "citation": "V. Ordonez et al. Im2text: Describing images using 1 million captioned photographs. NeurIPS , 24, 2011."
+                },
+                {
+                  "title": "Microsoft coco captions: Data collection and evaluation server",
+                  "citation": "X. Chen et al. Microsoft coco captions: Data collection and evaluation server. arXiv preprint arXiv:1504.00325 , 2015."
+                },
+                {
+                  "title": "Yfcc100m: The new data in multimedia research",
+                  "citation": "B. Thomee et al. Yfcc100m: The new data in multimedia research. Communications of the ACM , 59(2):64-73, 2016."
+                },
+                {
+                  "title": "Visual genome: Connecting language and vision using crowdsourced dense image annotations",
+                  "citation": "R. Krishna et al. Visual genome: Connecting language and vision using crowdsourced dense image annotations. IJCV , 123(1):3273, 2017."
+                },
+                {
+                  "title": "Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning",
+                  "citation": "P. Sharma et al. Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning. In ACL , pp. 2556-2565, 2018."
+                },
+                {
+                  "title": "Connecting vision and language with localized narratives",
+                  "citation": "J. Pont-Tuset et al. Connecting vision and language with localized narratives. In ECCV , pp. 647-664. Springer, 2020."
+                },
+                {
+                  "title": "Conceptual 12m: Pushing web-scale imagetext pre-training to recognize long-tail visual concepts",
+                  "citation": "S. Changpinyo et al. Conceptual 12m: Pushing web-scale imagetext pre-training to recognize long-tail visual concepts. In CVPR , pp. 3558-3568, 2021."
+                },
+                {
+                  "title": "Wit: Wikipedia-based image text dataset for multimodal multilingual machine learning",
+                  "citation": "K. Srinivasan et al. Wit: Wikipedia-based image text dataset for multimodal multilingual machine learning. In ACM SIGIR , pp. 2443-2449, 2021."
+                },
+                {
+                  "title": "Redcaps: Web-curated image-text data created by the people, for the people",
+                  "citation": "K. Desai et al. Redcaps: Web-curated image-text data created by the people, for the people. arXiv preprint arXiv:2111.11431 , 2021."
+                },
+                {
+                  "title": "Laion-400m: Open dataset of clip-filtered 400 million image-text pairs",
+                  "citation": "C. Schuhmann et al. Laion-400m: Open dataset of clip-filtered 400 million image-text pairs. arXiv preprint arXiv:2111.02114 , 2021."
+                },
+                {
+                  "title": "Laion-5b: An open large-scale dataset for training next generation image-text models",
+                  "citation": "C. Schuhmann et al. Laion-5b: An open large-scale dataset for training next generation image-text models. arXiv preprint arXiv:2210.08402 , 2022."
+                },
+                {
+                  "title": "Wukong: 100 million large-scale chinese cross-modal pre-training dataset and a foundation framework",
+                  "citation": "J. Gu et al. Wukong: 100 million large-scale chinese cross-modal pre-training dataset and a foundation framework. arXiv preprint arXiv:2202.06767 , 2022."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+                  "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+                },
+                {
+                  "title": "Filip: Fine-grained interactive language-image pretraining",
+                  "citation": "L. Yao et al. Filip: Fine-grained interactive language-image pretraining. In ICLR , 2021."
+                },
+                {
+                  "title": "Pali: A jointly-scaled multilingual language-image model",
+                  "citation": "X. Chen et al. Pali: A jointly-scaled multilingual language-image model. arXiv preprint arXiv:2209.06794 , 2022."
+                },
+                {
+                  "title": "Rareact: A video dataset of unusual interactions",
+                  "citation": "A. Miech et al. Rareact: A video dataset of unusual interactions. arXiv preprint arXiv:2008.01018 , 2020."
+                },
+                {
+                  "title": "Ucf101: A dataset of 101 human actions classes from videos in the wild",
+                  "citation": "K. Soomro et al. Ucf101: A dataset of 101 human actions classes from videos in the wild. arXiv preprint arXiv:1212.0402 , 2012."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "DATASETS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Datasets for Pre-training VLMs",
+          "citations": [
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            },
+            {
+              "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+              "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+            },
+            {
+              "title": "Laion-5b: An open large-scale dataset for training next generation image-text models",
+              "citation": "C. Schuhmann et al. Laion-5b: An open large-scale dataset for training next generation image-text models. arXiv preprint arXiv:2210.08402 , 2022."
+            },
+            {
+              "title": "Laion-400m: Open dataset of clip-filtered 400 million image-text pairs",
+              "citation": "C. Schuhmann et al. Laion-400m: Open dataset of clip-filtered 400 million image-text pairs. arXiv preprint arXiv:2111.02114 , 2021."
+            },
+            {
+              "title": "Imagenet: A large-scale hierarchical image database",
+              "citation": "J. Deng et al. Imagenet: A large-scale hierarchical image database. In CVPR , pp. 248-255. Ieee, 2009."
+            },
+            {
+              "title": "The pascal visual object classes (voc) challenge",
+              "citation": "M. Everingham et al. The pascal visual object classes (voc) challenge. IJCV , 88(2):303-338, 2010."
+            },
+            {
+              "title": "The cityscapes dataset for semantic urban scene understanding",
+              "citation": "M. Cordts et al. The cityscapes dataset for semantic urban scene understanding. In CVPR , pp. 3213-3223, 2016."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            },
+            {
+              "title": "Laion-400m: Open dataset of clip-filtered 400 million image-text pairs",
+              "citation": "C. Schuhmann et al. Laion-400m: Open dataset of clip-filtered 400 million image-text pairs. arXiv preprint arXiv:2111.02114 , 2021."
+            },
+            {
+              "title": "Laion-5b: An open large-scale dataset for training next generation image-text models",
+              "citation": "C. Schuhmann et al. Laion-5b: An open large-scale dataset for training next generation image-text models. arXiv preprint arXiv:2210.08402 , 2022."
+            },
+            {
+              "title": "Laion-400m: Open dataset of clip-filtered 400 million image-text pairs",
+              "citation": "C. Schuhmann et al. Laion-400m: Open dataset of clip-filtered 400 million image-text pairs. arXiv preprint arXiv:2111.02114 , 2021."
+            },
+            {
+              "title": "Pali: A jointly-scaled multilingual language-image model",
+              "citation": "X. Chen et al. Pali: A jointly-scaled multilingual language-image model. arXiv preprint arXiv:2209.06794 , 2022."
+            },
+            {
+              "title": "Coca: Contrastive captioners are image-text foundation models",
+              "citation": "J. Yu et al. Coca: Contrastive captioners are image-text foundation models. arXiv preprint arXiv:2205.01917 , 2022."
+            },
+            {
+              "title": "Image-and-language understanding from pixels only",
+              "citation": "M. Tschannen et al. Image-and-language understanding from pixels only. arXiv preprint arXiv:2212.08045 , 2022."
+            },
+            {
+              "title": "Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection",
+              "citation": "L. Yao et al. Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection. In NeurIPS ."
+            },
+            {
+              "title": "Grounded language-image pre-training",
+              "citation": "L. H. Li et al. Grounded language-image pre-training. In CVPR , pp. 10965-10975, 2022."
+            },
+            {
+              "title": "Grounded language-image pre-training",
+              "citation": "L. H. Li et al. Grounded language-image pre-training. In CVPR , pp. 10965-10975, 2022."
+            },
+            {
+              "title": "Objects365: A large-scale, high-quality dataset for object detection",
+              "citation": "S. Shao et al. Objects365: A large-scale, high-quality dataset for object detection. In ICCV , pp. 8430-8439, 2019."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Datasets for VLM Evaluation",
+          "citations": [
+            {
+              "title": "Cats and dogs",
+              "citation": "O. M. Parkhi et al. Cats and dogs. In CVPR , pp. 3498-3505. IEEE, 2012."
+            },
+            {
+              "title": "Collecting a large-scale dataset of fine-grained cars",
+              "citation": "J. Krause et al. Collecting a large-scale dataset of fine-grained cars. 2013."
+            },
+            {
+              "title": "Imagenet: A large-scale hierarchical image database",
+              "citation": "J. Deng et al. Imagenet: A large-scale hierarchical image database. In CVPR , pp. 248-255. Ieee, 2009."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "VISION-LANGUAGE MODEL PRE-TRAINING",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "VLM Pre-Training with Contrastive Objectives",
+          "citations": [
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            },
+            {
+              "title": "Slip: Self-supervision meets language-image pretraining",
+              "citation": "N. Mu et al. Slip: Self-supervision meets language-image pretraining. In ECCV , pp. 529-544. Springer, 2022."
+            },
+            {
+              "title": "Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm",
+              "citation": "Y. Li et al. Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm. In ICLR , 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "5.1.1",
+              "sec_title": "Image Contrastive Learning",
+              "citations": [
+                {
+                  "title": "Slip: Self-supervision meets language-image pretraining",
+                  "citation": "N. Mu et al. Slip: Self-supervision meets language-image pretraining. In ECCV , pp. 529-544. Springer, 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.2",
+              "sec_title": "Image-Text Contrastive Learning",
+              "citations": [
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+                  "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+                },
+                {
+                  "title": "Data efficient language-supervised zero-shot recognition with optimal transport distillation",
+                  "citation": "B. Wu et al. Data efficient language-supervised zero-shot recognition with optimal transport distillation. In ICLR , 2021."
+                },
+                {
+                  "title": "Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm",
+                  "citation": "Y. Li et al. Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm. In ICLR , 2021."
+                },
+                {
+                  "title": "Contrastive vision-language pre-training with limited resources",
+                  "citation": "Q. Cui et al. Contrastive vision-language pre-training with limited resources. In ECCV , pp. 236-253. Springer, 2022."
+                },
+                {
+                  "title": "Gradient-based learning applied to document recognition",
+                  "citation": "Y. LeCun et al. Gradient-based learning applied to document recognition. Proceedings of the IEEE , 86(11):2278-2324, 1998."
+                },
+                {
+                  "title": "Learning generative visual models from few training examples: An incremental bayesian approach tested on 101 object categories",
+                  "citation": "L. Fei-Fei et al. Learning generative visual models from few training examples: An incremental bayesian approach tested on 101 object categories. In CVPR workshop , pp. 178-178. IEEE, 2004."
+                },
+                {
+                  "title": "The pascal visual object classes (voc) challenge",
+                  "citation": "M. Everingham et al. The pascal visual object classes (voc) challenge. IJCV , 88(2):303-338, 2010."
+                },
+                {
+                  "title": "Automated flower classification over a large number of classes",
+                  "citation": "M.-E. Nilsback and A. Zisserman. Automated flower classification over a large number of classes. In ICVGIP , pp. 722-729. IEEE, 2008."
+                },
+                {
+                  "title": "Learning multiple layers of features from tiny images",
+                  "citation": "A. Krizhevsky et al. Learning multiple layers of features from tiny images. 2009."
+                },
+                {
+                  "title": "Learning multiple layers of features from tiny images",
+                  "citation": "A. Krizhevsky et al. Learning multiple layers of features from tiny images. 2009."
+                },
+                {
+                  "title": "Imagenet: A large-scale hierarchical image database",
+                  "citation": "J. Deng et al. Imagenet: A large-scale hierarchical image database. In CVPR , pp. 248-255. Ieee, 2009."
+                },
+                {
+                  "title": "Sun database: Large-scale scene recognition from abbey to zoo",
+                  "citation": "J. Xiao et al. Sun database: Large-scale scene recognition from abbey to zoo. In 2010 IEEE computer society conference on computer vision and pattern recognition , pp. 3485-3492. IEEE, 2010."
+                },
+                {
+                  "title": "Reading digits in natural images with unsupervised feature learning",
+                  "citation": "Y. Netzer et al. Reading digits in natural images with unsupervised feature learning. 2011."
+                },
+                {
+                  "title": "An analysis of single-layer networks in unsupervised feature learning",
+                  "citation": "A. Coates et al. An analysis of single-layer networks in unsupervised feature learning. In AISTATS , pp. 215-223. JMLR Workshop and Conference Proceedings, 2011."
+                },
+                {
+                  "title": "The german traffic sign recognition benchmark: a multi-class classification competition",
+                  "citation": "J. Stallkamp et al. The german traffic sign recognition benchmark: a multi-class classification competition. In IJCNN , pp. 1453-1460. IEEE, 2011."
+                },
+                {
+                  "title": "Are we ready for autonomous driving? the kitti vision benchmark suite",
+                  "citation": "A. Geiger et al. Are we ready for autonomous driving? the kitti vision benchmark suite. In CVPR , pp. 3354-3361. IEEE, 2012."
+                },
+                {
+                  "title": "Scene text recognition using higher order language priors",
+                  "citation": "A. Mishra et al. Scene text recognition using higher order language priors. In BMVC-British machine vision conference . BMVA, 2012."
+                },
+                {
+                  "title": "Cats and dogs",
+                  "citation": "O. M. Parkhi et al. Cats and dogs. In CVPR , pp. 3498-3505. IEEE, 2012."
+                },
+                {
+                  "title": "Collecting a large-scale dataset of fine-grained cars",
+                  "citation": "J. Krause et al. Collecting a large-scale dataset of fine-grained cars. 2013."
+                },
+                {
+                  "title": "Fine-grained visual classification of aircraft",
+                  "citation": "S. Maji et al. Fine-grained visual classification of aircraft. arXiv preprint arXiv:1306.5151 , 2013."
+                },
+                {
+                  "title": "Challenges in representation learning: A report on three machine learning contests",
+                  "citation": "I. J. Goodfellow et al. Challenges in representation learning: A report on three machine learning contests. In ICONIP , pp. 117124. Springer, 2013."
+                },
+                {
+                  "title": "Recursive deep models for semantic compositionality over a sentiment treebank",
+                  "citation": "R. Socher et al. Recursive deep models for semantic compositionality over a sentiment treebank. In EMNLP , pp. 1631-1642, 2013."
+                },
+                {
+                  "title": "Describing textures in the wild",
+                  "citation": "M. Cimpoi et al. Describing textures in the wild. In CVPR , pp. 3606-3613, 2014."
+                },
+                {
+                  "title": "Food-101-mining discriminative components with random forests",
+                  "citation": "L. Bossard et al. Food-101-mining discriminative components with random forests. In ECCV , pp. 446-461. Springer, 2014."
+                },
+                {
+                  "title": "Birdsnap: Large-scale fine-grained visual categorization of birds",
+                  "citation": "T. Berg et al. Birdsnap: Large-scale fine-grained visual categorization of birds. In CVPR , pp. 2011-2018, 2014."
+                },
+                {
+                  "title": "Remote sensing image scene classification: Benchmark and state of the art",
+                  "citation": "G. Cheng et al. Remote sensing image scene classification: Benchmark and state of the art. Proceedings of the IEEE , 105(10):18651883, 2017."
+                },
+                {
+                  "title": "Clevr: A diagnostic dataset for compositional language and elementary visual reasoning",
+                  "citation": "J. Johnson et al. Clevr: A diagnostic dataset for compositional language and elementary visual reasoning. In CVPR , pp. 29012910, 2017."
+                },
+                {
+                  "title": "Rotation equivariant cnns for digital pathology",
+                  "citation": "B. S. Veeling et al. Rotation equivariant cnns for digital pathology. In International Conference on Medical image computing and computer-assisted intervention , pp. 210-218. Springer, 2018."
+                },
+                {
+                  "title": "Eurosat: A novel dataset and deep learning benchmark for land use and land cover classification",
+                  "citation": "P. Helber et al. Eurosat: A novel dataset and deep learning benchmark for land use and land cover classification. JSTARS , 12(7):2217-2226, 2019."
+                },
+                {
+                  "title": "The hateful memes challenge: Detecting hate speech in multimodal memes",
+                  "citation": "D. Kiela et al. The hateful memes challenge: Detecting hate speech in multimodal memes. NeurIPS , 33:2611-2624, 2020."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+                },
+                {
+                  "title": "From image descriptions to visual denotations: Newsimilarity metrics for semantic inference over event descriptions",
+                  "citation": "P. Young et al. From image descriptions to visual denotations: Newsimilarity metrics for semantic inference over event descriptions. TACL , 2:67-78, 2014."
+                },
+                {
+                  "title": "Microsoft coco captions: Data collection and evaluation server",
+                  "citation": "X. Chen et al. Microsoft coco captions: Data collection and evaluation server. arXiv preprint arXiv:1504.00325 , 2015."
+                },
+                {
+                  "title": "Ucf101: A dataset of 101 human actions classes from videos in the wild",
+                  "citation": "K. Soomro et al. Ucf101: A dataset of 101 human actions classes from videos in the wild. arXiv preprint arXiv:1212.0402 , 2012."
+                },
+                {
+                  "title": "A short note on the kinetics-700 human action dataset",
+                  "citation": "J. Carreira et al. A short note on the kinetics-700 human action dataset. arXiv preprint arXiv:1907.06987 , 2019."
+                },
+                {
+                  "title": "Rareact: A video dataset of unusual interactions",
+                  "citation": "A. Miech et al. Rareact: A video dataset of unusual interactions. arXiv preprint arXiv:2008.01018 , 2020."
+                },
+                {
+                  "title": "Microsoft coco: Common objects in context",
+                  "citation": "T.-Y. Lin et al. Microsoft coco: Common objects in context. In ECCV , pp. 740-755. Springer, 2014."
+                },
+                {
+                  "title": "Microsoft coco: Common objects in context",
+                  "citation": "T.-Y. Lin et al. Microsoft coco: Common objects in context. In ECCV , pp. 740-755. Springer, 2014."
+                },
+                {
+                  "title": "Lvis: A dataset for large vocabulary instance segmentation",
+                  "citation": "A. Gupta et al. Lvis: A dataset for large vocabulary instance segmentation. In CVPR , pp. 5356-5364, 2019."
+                },
+                {
+                  "title": "Elevater: A benchmark and toolkit for evaluating language-augmented visual models",
+                  "citation": "C. Li et al. Elevater: A benchmark and toolkit for evaluating language-augmented visual models. arXiv preprint arXiv:2204.08790 , 2022."
+                },
+                {
+                  "title": "The pascal visual object classes (voc) challenge",
+                  "citation": "M. Everingham et al. The pascal visual object classes (voc) challenge. IJCV , 88(2):303-338, 2010."
+                },
+                {
+                  "title": "The role of context for object detection and semantic segmentation in the wild",
+                  "citation": "R. Mottaghi et al. The role of context for object detection and semantic segmentation in the wild. In CVPR , pp. 891-898, 2014."
+                },
+                {
+                  "title": "The cityscapes dataset for semantic urban scene understanding",
+                  "citation": "M. Cordts et al. The cityscapes dataset for semantic urban scene understanding. In CVPR , pp. 3213-3223, 2016."
+                },
+                {
+                  "title": "Scene parsing through ade20k dataset",
+                  "citation": "B. Zhou et al. Scene parsing through ade20k dataset. In CVPR , pp. 633-641, 2017."
+                },
+                {
+                  "title": "Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm",
+                  "citation": "Y. Li et al. Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm. In ICLR , 2021."
+                },
+                {
+                  "title": "Data efficient language-supervised zero-shot recognition with optimal transport distillation",
+                  "citation": "B. Wu et al. Data efficient language-supervised zero-shot recognition with optimal transport distillation. In ICLR , 2021."
+                },
+                {
+                  "title": "Contrastive vision-language pre-training with limited resources",
+                  "citation": "Q. Cui et al. Contrastive vision-language pre-training with limited resources. In ECCV , pp. 236-253. Springer, 2022."
+                },
+                {
+                  "title": "Filip: Fine-grained interactive language-image pretraining",
+                  "citation": "L. Yao et al. Filip: Fine-grained interactive language-image pretraining. In ICLR , 2021."
+                },
+                {
+                  "title": "Pyramidclip: Hierarchical feature alignment for vision-language model pretraining",
+                  "citation": "Y. Gao et al. Pyramidclip: Hierarchical feature alignment for vision-language model pretraining. arXiv preprint arXiv:2204.14095 , 2022."
+                },
+                {
+                  "title": "Groupvit: Semantic segmentation emerges from text supervision",
+                  "citation": "J. Xu et al. Groupvit: Semantic segmentation emerges from text supervision. In CVPR , pp. 18134-18144, 2022."
+                },
+                {
+                  "title": "Filip: Fine-grained interactive language-image pretraining",
+                  "citation": "L. Yao et al. Filip: Fine-grained interactive language-image pretraining. In ICLR , 2021."
+                },
+                {
+                  "title": "Pyramidclip: Hierarchical feature alignment for vision-language model pretraining",
+                  "citation": "Y. Gao et al. Pyramidclip: Hierarchical feature alignment for vision-language model pretraining. arXiv preprint arXiv:2204.14095 , 2022."
+                },
+                {
+                  "title": "Ra-clip: Retrieval augmented contrastive language-image pre-training",
+                  "citation": "C.-W. Xie et al. Ra-clip: Retrieval augmented contrastive language-image pre-training. In CVPR , pp. 19265-19274, 2023."
+                },
+                {
+                  "title": "Improving clip training with language rewrites",
+                  "citation": "L. Fan et al. Improving clip training with language rewrites. arXiv preprint arXiv:2305.20088 , 2023."
+                },
+                {
+                  "title": "Alip: Adaptive language-image pre-training with synthetic caption",
+                  "citation": "K. Yang et al. Alip: Adaptive language-image pre-training with synthetic caption. In ICCV , pp. 2922-2931, 2023."
+                },
+                {
+                  "title": "Growclip: Data-aware automatic model growing for large-scale contrastive language-image pre-training",
+                  "citation": "X. Deng et al. Growclip: Data-aware automatic model growing for large-scale contrastive language-image pre-training. In ICCV , pp. 22178-22189, 2023."
+                },
+                {
+                  "title": "Improving clip training with language rewrites",
+                  "citation": "L. Fan et al. Improving clip training with language rewrites. arXiv preprint arXiv:2305.20088 , 2023."
+                },
+                {
+                  "title": "Alip: Adaptive language-image pre-training with synthetic caption",
+                  "citation": "K. Yang et al. Alip: Adaptive language-image pre-training with synthetic caption. In ICCV , pp. 2922-2931, 2023."
+                },
+                {
+                  "title": "Ra-clip: Retrieval augmented contrastive language-image pre-training",
+                  "citation": "C.-W. Xie et al. Ra-clip: Retrieval augmented contrastive language-image pre-training. In CVPR , pp. 19265-19274, 2023."
+                },
+                {
+                  "title": "Unifying vision-language representation space with single-tower transformer",
+                  "citation": "J. Jang et al. Unifying vision-language representation space with single-tower transformer. In AAAI , volume 37, pp. 980-988, 2023."
+                },
+                {
+                  "title": "Image-and-language understanding from pixels only",
+                  "citation": "M. Tschannen et al. Image-and-language understanding from pixels only. arXiv preprint arXiv:2212.08045 , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.3",
+              "sec_title": "Image-Text-Label Contrastive Learning",
+              "citations": [
+                {
+                  "title": "Unified contrastive learning in image-text-label space",
+                  "citation": "J. Yang et al. Unified contrastive learning in image-text-label space. In CVPR , pp. 19163-19173, 2022."
+                },
+                {
+                  "title": "Unified contrastive learning in image-text-label space",
+                  "citation": "J. Yang et al. Unified contrastive learning in image-text-label space. In CVPR , pp. 19163-19173, 2022."
+                },
+                {
+                  "title": "Florence: A new foundation model for computer vision",
+                  "citation": "L. Yuan et al. Florence: A new foundation model for computer vision. arXiv preprint arXiv:2111.11432 , 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.4",
+              "sec_title": "Discussion",
+              "citations": [
+                {
+                  "title": "Flava: A foundational language and vision alignment model",
+                  "citation": "A. Singh et al. Flava: A foundational language and vision alignment model. In CVPR , pp. 15638-15650, 2022."
+                },
+                {
+                  "title": "Non-contrastive learning meets language-image pre-training",
+                  "citation": "J. Zhou et al. Non-contrastive learning meets language-image pre-training. arXiv preprint arXiv:2210.09304 , 2022."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "VLM Pre-training with Generative Objectives",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "5.2.1",
+              "sec_title": "Masked Image Modelling",
+              "citations": [
+                {
+                  "title": "Masked autoencoders are scalable vision learners",
+                  "citation": "K. He et al. Masked autoencoders are scalable vision learners. In CVPR , pp. 16000-16009, 2022."
+                },
+                {
+                  "title": "Beit: Bert pre-training of image transformers",
+                  "citation": "H. Bao et al. Beit: Bert pre-training of image transformers. arXiv preprint arXiv:2106.08254 , 2021."
+                },
+                {
+                  "title": "Flava: A foundational language and vision alignment model",
+                  "citation": "A. Singh et al. Flava: A foundational language and vision alignment model. In CVPR , pp. 15638-15650, 2022."
+                },
+                {
+                  "title": "Beit: Bert pre-training of image transformers",
+                  "citation": "H. Bao et al. Beit: Bert pre-training of image transformers. arXiv preprint arXiv:2106.08254 , 2021."
+                },
+                {
+                  "title": "Large-scale bilingual language-image contrastive learning",
+                  "citation": "B. Ko and G. Gu. Large-scale bilingual language-image contrastive learning. arXiv preprint arXiv:2203.14463 , 2022."
+                },
+                {
+                  "title": "Segclip: Patch aggregation with learnable centers for open-vocabulary semantic segmentation",
+                  "citation": "H. Luo et al. Segclip: Patch aggregation with learnable centers for open-vocabulary semantic segmentation. arXiv preprint arXiv:2211.14813 , 2022."
+                },
+                {
+                  "title": "Masked autoencoders are scalable vision learners",
+                  "citation": "K. He et al. Masked autoencoders are scalable vision learners. arXiv preprint arXiv:2111.06377 , 2021."
+                },
+                {
+                  "title": "Masked autoencoders are scalable vision learners",
+                  "citation": "K. He et al. Masked autoencoders are scalable vision learners. arXiv preprint arXiv:2111.06377 , 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.2.2",
+              "sec_title": "Masked Language Modelling",
+              "citations": [
+                {
+                  "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+                  "citation": "J. Devlin et al. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 , 2018."
+                },
+                {
+                  "title": "Flava: A foundational language and vision alignment model",
+                  "citation": "A. Singh et al. Flava: A foundational language and vision alignment model. In CVPR , pp. 15638-15650, 2022."
+                },
+                {
+                  "title": "Coarse-to-fine vision-language pre-training with fusion in the backbone",
+                  "citation": "Z.-Y. Dou et al. Coarse-to-fine vision-language pre-training with fusion in the backbone. In NeurIPS ."
+                },
+                {
+                  "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+                  "citation": "J. Devlin et al. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 , 2018."
+                },
+                {
+                  "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+                  "citation": "J. Devlin et al. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 , 2018."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.2.3",
+              "sec_title": "Masked Cross-Modal Modelling",
+              "citations": [
+                {
+                  "title": "Flava: A foundational language and vision alignment model",
+                  "citation": "A. Singh et al. Flava: A foundational language and vision alignment model. In CVPR , pp. 15638-15650, 2022."
+                },
+                {
+                  "title": "Beit: Bert pre-training of image transformers",
+                  "citation": "H. Bao et al. Beit: Bert pre-training of image transformers. arXiv preprint arXiv:2106.08254 , 2021."
+                },
+                {
+                  "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+                  "citation": "J. Devlin et al. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 , 2018."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.2.4",
+              "sec_title": "Image-to-Text Generation",
+              "citations": [
+                {
+                  "title": "Coca: Contrastive captioners are image-text foundation models",
+                  "citation": "J. Yu et al. Coca: Contrastive captioners are image-text foundation models. arXiv preprint arXiv:2205.01917 , 2022."
+                },
+                {
+                  "title": "Nlip: Noise-robust language-image pre-training",
+                  "citation": "R. Huang et al. Nlip: Noise-robust language-image pre-training. arXiv preprint arXiv:2212.07086 , 2022."
+                },
+                {
+                  "title": "Pali: A jointly-scaled multilingual language-image model",
+                  "citation": "X. Chen et al. Pali: A jointly-scaled multilingual language-image model. arXiv preprint arXiv:2209.06794 , 2022."
+                },
+                {
+                  "title": "Coca: Contrastive captioners are image-text foundation models",
+                  "citation": "J. Yu et al. Coca: Contrastive captioners are image-text foundation models. arXiv preprint arXiv:2205.01917 , 2022."
+                },
+                {
+                  "title": "Coca: Contrastive captioners are image-text foundation models",
+                  "citation": "J. Yu et al. Coca: Contrastive captioners are image-text foundation models. arXiv preprint arXiv:2205.01917 , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.2.5",
+              "sec_title": "Discussion (1)",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.3",
+          "sec_title": "VLM Pre-training with Alignment Objectives",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "5.3.1",
+              "sec_title": "Image-Text Matching",
+              "citations": [
+                {
+                  "title": "Flava: A foundational language and vision alignment model",
+                  "citation": "A. Singh et al. Flava: A foundational language and vision alignment model. In CVPR , pp. 15638-15650, 2022."
+                },
+                {
+                  "title": "Coarse-to-fine vision-language pre-training with fusion in the backbone",
+                  "citation": "Z.-Y. Dou et al. Coarse-to-fine vision-language pre-training with fusion in the backbone. In NeurIPS ."
+                },
+                {
+                  "title": "Vlmo: Unified vision-language pre-training with mixture-of-modality-experts",
+                  "citation": "H. Bao et al. Vlmo: Unified vision-language pre-training with mixture-of-modality-experts. arXiv preprint arXiv:2111.02358 , 2021."
+                },
+                {
+                  "title": "Grounded language-image pre-training",
+                  "citation": "L. H. Li et al. Grounded language-image pre-training. In CVPR , pp. 10965-10975, 2022."
+                },
+                {
+                  "title": "Grounded language-image pre-training",
+                  "citation": "L. H. Li et al. Grounded language-image pre-training. In CVPR , pp. 10965-10975, 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.3.2",
+              "sec_title": "Region-Word Matching",
+              "citations": [
+                {
+                  "title": "Grounded language-image pre-training",
+                  "citation": "L. H. Li et al. Grounded language-image pre-training. In CVPR , pp. 10965-10975, 2022."
+                },
+                {
+                  "title": "Coarse-to-fine vision-language pre-training with fusion in the backbone",
+                  "citation": "Z.-Y. Dou et al. Coarse-to-fine vision-language pre-training with fusion in the backbone. In NeurIPS ."
+                },
+                {
+                  "title": "Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection",
+                  "citation": "L. Yao et al. Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection. In NeurIPS ."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.3.3",
+              "sec_title": "Discussion (2)",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.4",
+          "sec_title": "Summary and Discussion",
+          "citations": [
+            {
+              "title": "Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm",
+              "citation": "Y. Li et al. Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm. In ICLR , 2021."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "VLM TRANSFER LEARNING",
+      "citations": [
+        {
+          "title": "Learning to prompt for vision-language models",
+          "citation": "K. Zhou et al. Learning to prompt for vision-language models. IJCV , 130(9):2337-2348, 2022."
+        },
+        {
+          "title": "Understanding and mitigating overfitting in prompt tuning for vision-language models",
+          "citation": "C. Ma et al. Understanding and mitigating overfitting in prompt tuning for vision-language models. arXiv preprint arXiv:2211.02219 , 2022."
+        },
+        {
+          "title": "Clip-adapter: Better vision-language models with feature adapters",
+          "citation": "P. Gao et al. Clip-adapter: Better vision-language models with feature adapters. arXiv preprint arXiv:2110.04544 , 2021."
+        },
+        {
+          "title": "Tip-adapter: Training-free clip-adapter for better vision-language modeling",
+          "citation": "R. Zhang et al. Tip-adapter: Training-free clip-adapter for better vision-language modeling. arXiv preprint arXiv:2111.03930 , 2021."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "6.1",
+          "sec_title": "Motivation of Transfer learning",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "6.1.1",
+              "sec_title": "Three conclusions can be drawn from Table 9.",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "6.2",
+          "sec_title": "Common Setup of Transfer Learning",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.3",
+          "sec_title": "Common Transfer Learning Methods",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "6.3.1",
+              "sec_title": "Transfer via Prompt Tuning",
+              "citations": [
+                {
+                  "title": "Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing",
+                  "citation": "P. Liu et al. Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing. ACM Computing Surveys , 55(9):1-35, 2023."
+                },
+                {
+                  "title": "Learning to prompt for vision-language models",
+                  "citation": "K. Zhou et al. Learning to prompt for vision-language models. IJCV , 130(9):2337-2348, 2022."
+                },
+                {
+                  "title": "Exploring visual prompts for adapting large-scale models",
+                  "citation": "H. Bahng et al. Exploring visual prompts for adapting large-scale models. arXiv preprint arXiv:2203.17274 , 1(3):4, 2022."
+                },
+                {
+                  "title": "Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing",
+                  "citation": "P. Liu et al. Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing. ACM Computing Surveys , 55(9):1-35, 2023."
+                },
+                {
+                  "title": "Learning to prompt for vision-language models",
+                  "citation": "K. Zhou et al. Learning to prompt for vision-language models. IJCV , 130(9):2337-2348, 2022."
+                },
+                {
+                  "title": "Conditional prompt learning for vision-language models",
+                  "citation": "K. Zhou et al. Conditional prompt learning for vision-language models. In CVPR , pp. 16816-16825, 2022."
+                },
+                {
+                  "title": "Understanding and mitigating overfitting in prompt tuning for vision-language models",
+                  "citation": "C. Ma et al. Understanding and mitigating overfitting in prompt tuning for vision-language models. arXiv preprint arXiv:2211.02219 , 2022."
+                },
+                {
+                  "title": "Language-aware soft prompting for vision & language foundation models",
+                  "citation": "A. Bulat and G. Tzimiropoulos. Language-aware soft prompting for vision &amp; language foundation models. arXiv preprint arXiv:2210.01115 , 2022."
+                },
+                {
+                  "title": "Variational prompt tuning improves generalization of vision-language models",
+                  "citation": "M. M. Derakhshani et al. Variational prompt tuning improves generalization of vision-language models. arXiv preprint arXiv:2210.02390 , 2022."
+                },
+                {
+                  "title": "Visual-language prompt tuning with knowledgeguided context optimization",
+                  "citation": "H. Yao et al. Visual-language prompt tuning with knowledgeguided context optimization. In CVPR , pp. 6757-6767, 2023."
+                },
+                {
+                  "title": "Prompt tuning with soft context sharing for visionlanguage models",
+                  "citation": "K. Ding et al. Prompt tuning with soft context sharing for visionlanguage models. arXiv preprint arXiv:2208.13474 , 2022."
+                },
+                {
+                  "title": "Prompt learning with optimal transport for visionlanguage models",
+                  "citation": "G. Chen et al. Prompt learning with optimal transport for visionlanguage models. arXiv preprint arXiv:2210.01253 , 2022."
+                },
+                {
+                  "title": "Dualcoop: Fast adaptation to multi-label recognition with limited annotations",
+                  "citation": "X. Sun et al. Dualcoop: Fast adaptation to multi-label recognition with limited annotations. In NeurIPS ."
+                },
+                {
+                  "title": "Texts as images in prompt tuning for multi-label image recognition",
+                  "citation": "Z. Guo et al. Texts as images in prompt tuning for multi-label image recognition. arXiv preprint arXiv:2211.12739 , 2022."
+                },
+                {
+                  "title": "Denseclip: Language-guided dense prediction with context-aware prompting",
+                  "citation": "Y. Rao et al. Denseclip: Language-guided dense prediction with context-aware prompting. In CVPR , pp. 18082-18091, 2022."
+                },
+                {
+                  "title": "Faster r-cnn: Towards real-time object detection with region proposal networks",
+                  "citation": "S. Ren et al. Faster r-cnn: Towards real-time object detection with region proposal networks. NeurIPS , 28, 2015."
+                },
+                {
+                  "title": "Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs",
+                  "citation": "L.-C. Chen et al. Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs. TPAMI , 40(4):834-848, 2017."
+                },
+                {
+                  "title": "Protect: Prompt tuning for hierarchical consistency",
+                  "citation": "T.-Y. Wu et al. Protect: Prompt tuning for hierarchical consistency. arXiv preprint arXiv:2306.02240 , 2023."
+                },
+                {
+                  "title": "Unsupervised prompt learning for visionlanguage models",
+                  "citation": "T. Huang et al. Unsupervised prompt learning for visionlanguage models. arXiv preprint arXiv:2204.03649 , 2022."
+                },
+                {
+                  "title": "Test-time prompt tuning for zero-shot generalization in vision-language models",
+                  "citation": "M. Shu et al. Test-time prompt tuning for zero-shot generalization in vision-language models. In NeurIPS ."
+                },
+                {
+                  "title": "Retrieval-enhanced visual prompt learning for fewshot classification",
+                  "citation": "J. Rong et al. Retrieval-enhanced visual prompt learning for fewshot classification. arXiv preprint arXiv:2306.02243 , 2023."
+                },
+                {
+                  "title": "Visual prompt tuning",
+                  "citation": "M. Jia et al. Visual prompt tuning. arXiv preprint arXiv:2203.12119 , 2022."
+                },
+                {
+                  "title": "Exploring visual prompts for adapting large-scale models",
+                  "citation": "H. Bahng et al. Exploring visual prompts for adapting large-scale models. arXiv preprint arXiv:2203.17274 , 1(3):4, 2022."
+                },
+                {
+                  "title": "Retrieval-enhanced visual prompt learning for fewshot classification",
+                  "citation": "J. Rong et al. Retrieval-enhanced visual prompt learning for fewshot classification. arXiv preprint arXiv:2306.02243 , 2023."
+                },
+                {
+                  "title": "Unified vision and language prompt learning",
+                  "citation": "Y. Zang et al. Unified vision and language prompt learning. arXiv preprint arXiv:2210.07225 , 2022."
+                },
+                {
+                  "title": "Multitask vision-language prompt tuning",
+                  "citation": "S. Shen et al. Multitask vision-language prompt tuning. arXiv preprint arXiv:2211.11720 , 2022."
+                },
+                {
+                  "title": "Maple: Multi-modal prompt learning",
+                  "citation": "M. U. Khattak et al. Maple: Multi-modal prompt learning. arXiv preprint arXiv:2210.03117 , 2022."
+                },
+                {
+                  "title": "Class-aware visual prompt tuning for visionlanguage pre-trained model",
+                  "citation": "Y. Xing et al. Class-aware visual prompt tuning for visionlanguage pre-trained model. arXiv preprint arXiv:2208.08340 , 2022."
+                },
+                {
+                  "title": "Clip-adapter: Better vision-language models with feature adapters",
+                  "citation": "P. Gao et al. Clip-adapter: Better vision-language models with feature adapters. arXiv preprint arXiv:2110.04544 , 2021."
+                },
+                {
+                  "title": "Learning to prompt for vision-language models",
+                  "citation": "K. Zhou et al. Learning to prompt for vision-language models. IJCV , 130(9):2337-2348, 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.3.2",
+              "sec_title": "Transfer via Feature Adaptation",
+              "citations": [
+                {
+                  "title": "Parameter-efficient transfer learning for nlp",
+                  "citation": "N. Houlsby et al. Parameter-efficient transfer learning for nlp. In ICML , pp. 2790-2799. PMLR, 2019."
+                },
+                {
+                  "title": "Clip-adapter: Better vision-language models with feature adapters",
+                  "citation": "P. Gao et al. Clip-adapter: Better vision-language models with feature adapters. arXiv preprint arXiv:2110.04544 , 2021."
+                },
+                {
+                  "title": "Tip-adapter: Training-free clip-adapter for better vision-language modeling",
+                  "citation": "R. Zhang et al. Tip-adapter: Training-free clip-adapter for better vision-language modeling. arXiv preprint arXiv:2111.03930 , 2021."
+                },
+                {
+                  "title": "Svl-adapter: Self-supervised adapter for visionlanguage pretrained models",
+                  "citation": "O. Pantazis et al. Svl-adapter: Self-supervised adapter for visionlanguage pretrained models. arXiv preprint arXiv:2210.03794 , 2022."
+                },
+                {
+                  "title": "Pointclip: Point cloud understanding by clip",
+                  "citation": "R. Zhang et al. Pointclip: Point cloud understanding by clip. In CVPR , pp. 8552-8562, 2022."
+                },
+                {
+                  "title": "Clip2point: Transfer clip to point cloud classification with image-depth pre-training",
+                  "citation": "T. Huang et al. Clip2point: Transfer clip to point cloud classification with image-depth pre-training. In ICCV , pp. 22157-22167, 2023."
+                },
+                {
+                  "title": "Side adapter network for open-vocabulary semantic segmentation",
+                  "citation": "M. Xu et al. Side adapter network for open-vocabulary semantic segmentation. In CVPR , pp. 2945-2954, 2023."
+                },
+                {
+                  "title": "Tem-adapter: Adapting image-text pretraining for video question answer",
+                  "citation": "G. Chen et al. Tem-adapter: Adapting image-text pretraining for video question answer. In ICCV , pp. 13945-13955, 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.3.3",
+              "sec_title": "Other Transfer Methods",
+              "citations": [
+                {
+                  "title": "Robust fine-tuning of zero-shot models",
+                  "citation": "M. Wortsman et al. Robust fine-tuning of zero-shot models. In CVPR , pp. 7959-7971, 2022."
+                },
+                {
+                  "title": "Extract free dense labels from clip",
+                  "citation": "C. Zhou et al. Extract free dense labels from clip. In ECCV , pp. 696-712. Springer, 2022."
+                },
+                {
+                  "title": "Vt-clip: Enhancing vision-language models with visual-guided texts",
+                  "citation": "R. Zhang et al. Vt-clip: Enhancing vision-language models with visual-guided texts. arXiv preprint arXiv:2112.02399 , 2021."
+                },
+                {
+                  "title": "Calip: Zero-shot enhancement of clip with parameter-free attention",
+                  "citation": "Z. Guo et al. Calip: Zero-shot enhancement of clip with parameter-free attention. arXiv preprint arXiv:2209.14169 , 2022."
+                },
+                {
+                  "title": "Robust fine-tuning of zero-shot models",
+                  "citation": "M. Wortsman et al. Robust fine-tuning of zero-shot models. In CVPR , pp. 7959-7971, 2022."
+                },
+                {
+                  "title": "Extract free dense labels from clip",
+                  "citation": "C. Zhou et al. Extract free dense labels from clip. In ECCV , pp. 696-712. Springer, 2022."
+                },
+                {
+                  "title": "Vt-clip: Enhancing vision-language models with visual-guided texts",
+                  "citation": "R. Zhang et al. Vt-clip: Enhancing vision-language models with visual-guided texts. arXiv preprint arXiv:2112.02399 , 2021."
+                },
+                {
+                  "title": "Calip: Zero-shot enhancement of clip with parameter-free attention",
+                  "citation": "Z. Guo et al. Calip: Zero-shot enhancement of clip with parameter-free attention. arXiv preprint arXiv:2209.14169 , 2022."
+                },
+                {
+                  "title": "Task residual for tuning vision-language models",
+                  "citation": "T. Yu et al. Task residual for tuning vision-language models. In CVPR , pp. 10899-10909, 2023."
+                },
+                {
+                  "title": "What does a platypus look like? generating customized prompts for zero-shot image classification",
+                  "citation": "S. Pratt et al. What does a platypus look like? generating customized prompts for zero-shot image classification. arXiv preprint arXiv:2209.03320 , 2022."
+                },
+                {
+                  "title": "Visual classification via description from large language models",
+                  "citation": "S. Menon and C. Vondrick. Visual classification via description from large language models. arXiv preprint arXiv:2210.07183 , 2022."
+                },
+                {
+                  "title": "Language models are few-shot learners",
+                  "citation": "T. Brown et al. Language models are few-shot learners. NeurIPS , 33:1877-1901, 2020."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "6.4",
+          "sec_title": "Summary and Discussion",
+          "citations": [
+            {
+              "title": "Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm",
+              "citation": "Y. Li et al. Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm. In ICLR , 2021."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "VLM KNOWLEDGE DISTILLATION",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "7.1",
+          "sec_title": "Motivation of Distilling Knowledge from VLMs",
+          "citations": [
+            {
+              "title": "Learning to prompt for vision-language models",
+              "citation": "K. Zhou et al. Learning to prompt for vision-language models. IJCV , 130(9):2337-2348, 2022."
+            },
+            {
+              "title": "Understanding and mitigating overfitting in prompt tuning for vision-language models",
+              "citation": "C. Ma et al. Understanding and mitigating overfitting in prompt tuning for vision-language models. arXiv preprint arXiv:2211.02219 , 2022."
+            },
+            {
+              "title": "Prompt-aligned gradient for prompt tuning",
+              "citation": "B. Zhu et al. Prompt-aligned gradient for prompt tuning. arXiv preprint arXiv:2205.14865 , 2022."
+            },
+            {
+              "title": "Open-vocabulary object detection via vision and language knowledge distillation",
+              "citation": "X. Gu et al. Open-vocabulary object detection via vision and language knowledge distillation. In ICLR , 2021."
+            },
+            {
+              "title": "Open-vocabulary detr with conditional matching",
+              "citation": "Y. Zang et al. Open-vocabulary detr with conditional matching. arXiv preprint arXiv:2203.11876 , 2022."
+            },
+            {
+              "title": "Zegclip: Towards adapting clip for zero-shot semantic segmentation",
+              "citation": "Z. Zhou et al. Zegclip: Towards adapting clip for zero-shot semantic segmentation. arXiv preprint arXiv:2212.03588 , 2022."
+            },
+            {
+              "title": "Faster r-cnn: Towards real-time object detection with region proposal networks",
+              "citation": "S. Ren et al. Faster r-cnn: Towards real-time object detection with region proposal networks. NeurIPS , 28, 2015."
+            },
+            {
+              "title": "End-to-end object detection with transformers",
+              "citation": "N. Carion et al. End-to-end object detection with transformers. In ECCV , pp. 213-229. Springer, 2020."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.2",
+          "sec_title": "Common Knowledge Distillation Methods",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "7.2.1",
+              "sec_title": "Knowledge Distillation for Object Detection",
+              "citations": [
+                {
+                  "title": "Detecting twenty-thousand classes using imagelevel supervision",
+                  "citation": "X. Zhou et al. Detecting twenty-thousand classes using imagelevel supervision. In ECCV , pp. 350-368. Springer, 2022."
+                },
+                {
+                  "title": "Open-vocabulary object detection via vision and language knowledge distillation",
+                  "citation": "X. Gu et al. Open-vocabulary object detection via vision and language knowledge distillation. In ICLR , 2021."
+                },
+                {
+                  "title": "Open-vocabulary one-stage detection with hierarchical visual-language knowledge distillation",
+                  "citation": "Z. Ma et al. Open-vocabulary one-stage detection with hierarchical visual-language knowledge distillation. In CVPR , pp. 1407414083, 2022."
+                },
+                {
+                  "title": "Bridging the gap between object and imagelevel representations for open-vocabulary detection",
+                  "citation": "H. A. Rasheed et al. Bridging the gap between object and imagelevel representations for open-vocabulary detection. In NeurIPS ."
+                },
+                {
+                  "title": "Zsd-yolo: Zero-shot yolo detection using vision-language knowledgedistillation",
+                  "citation": "J. Xie and S. Zheng. Zsd-yolo: Zero-shot yolo detection using vision-language knowledgedistillation. arXiv preprint arXiv:2109.12066 , 2021."
+                },
+                {
+                  "title": "Object-aware distillation pyramid for openvocabulary object detection",
+                  "citation": "L. Wang et al. Object-aware distillation pyramid for openvocabulary object detection. In CVPR , pp. 11186-11196, 2023."
+                },
+                {
+                  "title": "Aligning bag of regions for open-vocabulary object detection",
+                  "citation": "S. Wu et al. Aligning bag of regions for open-vocabulary object detection. In CVPR , pp. 15254-15264, 2023."
+                },
+                {
+                  "title": "Region-aware pretraining for open-vocabulary object detection with vision transformers",
+                  "citation": "D. Kim et al. Region-aware pretraining for open-vocabulary object detection with vision transformers. In CVPR , pp. 1114411154, 2023."
+                },
+                {
+                  "title": "Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing",
+                  "citation": "P. Liu et al. Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing. ACM Computing Surveys , 55(9):1-35, 2023."
+                },
+                {
+                  "title": "Learning to prompt for open-vocabulary object detection with vision-language model",
+                  "citation": "Y. Du et al. Learning to prompt for open-vocabulary object detection with vision-language model. In CVPR , pp. 1408414093, 2022."
+                },
+                {
+                  "title": "Promptdet: Towards open-vocabulary detection using uncurated images",
+                  "citation": "C. Feng et al. Promptdet: Towards open-vocabulary detection using uncurated images. In ECCV , pp. 701-717. Springer, 2022."
+                },
+                {
+                  "title": "A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model",
+                  "citation": "M. Xu et al. A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model. In ECCV , pp. 736-753. Springer, 2022."
+                },
+                {
+                  "title": "Scaling open-vocabulary image segmentation with image-level labels",
+                  "citation": "G. Ghiasi et al. Scaling open-vocabulary image segmentation with image-level labels. In ECCV , pp. 540-557. Springer, 2022."
+                },
+                {
+                  "title": "Open vocabulary object detection with pseudo bounding-box labels",
+                  "citation": "M. Gao et al. Open vocabulary object detection with pseudo bounding-box labels. In ECCV , pp. 266-282. Springer, 2022."
+                },
+                {
+                  "title": "Open-vocabulary instance segmentation via robust cross-modal pseudo-labeling",
+                  "citation": "D. Huynh et al. Open-vocabulary instance segmentation via robust cross-modal pseudo-labeling. In CVPR , pp. 7020-7031, 2022."
+                },
+                {
+                  "title": "P3ovd: Fine-grained visual-text prompt-driven self-training for open-vocabulary object detection",
+                  "citation": "Y. Long et al. P3ovd: Fine-grained visual-text prompt-driven self-training for open-vocabulary object detection. arXiv preprint arXiv:2211.00849 , 2022."
+                },
+                {
+                  "title": "Open vocabulary object detection with pseudo bounding-box labels",
+                  "citation": "M. Gao et al. Open vocabulary object detection with pseudo bounding-box labels. In ECCV , pp. 266-282. Springer, 2022."
+                },
+                {
+                  "title": "Open-vocabulary instance segmentation via robust cross-modal pseudo-labeling",
+                  "citation": "D. Huynh et al. Open-vocabulary instance segmentation via robust cross-modal pseudo-labeling. In CVPR , pp. 7020-7031, 2022."
+                },
+                {
+                  "title": "P3ovd: Fine-grained visual-text prompt-driven self-training for open-vocabulary object detection",
+                  "citation": "Y. Long et al. P3ovd: Fine-grained visual-text prompt-driven self-training for open-vocabulary object detection. arXiv preprint arXiv:2211.00849 , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "7.2.2",
+              "sec_title": "Knowledge Distillation for Semantic Segmentation",
+              "citations": [
+                {
+                  "title": "Decoupling zero-shot semantic segmentation",
+                  "citation": "J. Ding et al. Decoupling zero-shot semantic segmentation. In CVPR , pp. 11583-11592, 2022."
+                },
+                {
+                  "title": "A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model",
+                  "citation": "M. Xu et al. A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model. In ECCV , pp. 736-753. Springer, 2022."
+                },
+                {
+                  "title": "Scaling open-vocabulary image segmentation with image-level labels",
+                  "citation": "G. Ghiasi et al. Scaling open-vocabulary image segmentation with image-level labels. In ECCV , pp. 540-557. Springer, 2022."
+                },
+                {
+                  "title": "Image segmentation using text and image prompts",
+                  "citation": "T. L¨ uddecke and A. Ecker. Image segmentation using text and image prompts. In CVPR , pp. 7086-7096, 2022."
+                },
+                {
+                  "title": "Language-driven semantic segmentation",
+                  "citation": "B. Li et al. Language-driven semantic segmentation. In ICLR , 2021."
+                },
+                {
+                  "title": "Zegclip: Towards adapting clip for zero-shot semantic segmentation",
+                  "citation": "Z. Zhou et al. Zegclip: Towards adapting clip for zero-shot semantic segmentation. arXiv preprint arXiv:2212.03588 , 2022."
+                },
+                {
+                  "title": "Extract free dense labels from clip",
+                  "citation": "C. Zhou et al. Extract free dense labels from clip. In ECCV , pp. 696-712. Springer, 2022."
+                },
+                {
+                  "title": "Semantic segmentation in-the-wild without seeing any segmentation examples",
+                  "citation": "N. Zabari and Y. Hoshen. Semantic segmentation in-the-wild without seeing any segmentation examples. arXiv preprint arXiv:2112.03185 , 2021."
+                },
+                {
+                  "title": "Image segmentation using text and image prompts",
+                  "citation": "T. L¨ uddecke and A. Ecker. Image segmentation using text and image prompts. In CVPR , pp. 7086-7096, 2022."
+                },
+                {
+                  "title": "Decoupling zero-shot semantic segmentation",
+                  "citation": "J. Ding et al. Decoupling zero-shot semantic segmentation. In CVPR , pp. 11583-11592, 2022."
+                },
+                {
+                  "title": "Language-driven semantic segmentation",
+                  "citation": "B. Li et al. Language-driven semantic segmentation. In ICLR , 2021."
+                },
+                {
+                  "title": "Semantic segmentation in-the-wild without seeing any segmentation examples",
+                  "citation": "N. Zabari and Y. Hoshen. Semantic segmentation in-the-wild without seeing any segmentation examples. arXiv preprint arXiv:2112.03185 , 2021."
+                },
+                {
+                  "title": "Extract free dense labels from clip",
+                  "citation": "C. Zhou et al. Extract free dense labels from clip. In ECCV , pp. 696-712. Springer, 2022."
+                },
+                {
+                  "title": "Zegclip: Towards adapting clip for zero-shot semantic segmentation",
+                  "citation": "Z. Zhou et al. Zegclip: Towards adapting clip for zero-shot semantic segmentation. arXiv preprint arXiv:2212.03588 , 2022."
+                },
+                {
+                  "title": "Open-vocabulary semantic segmentation with frozen vision-language models",
+                  "citation": "C. Ma et al. Open-vocabulary semantic segmentation with frozen vision-language models. arXiv preprint arXiv:2210.15138 , 2022."
+                },
+                {
+                  "title": "Open-vocabulary semantic segmentation with mask-adapted clip",
+                  "citation": "F. Liang et al. Open-vocabulary semantic segmentation with mask-adapted clip. arXiv preprint arXiv:2210.04150 , 2022."
+                },
+                {
+                  "title": "A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model",
+                  "citation": "M. Xu et al. A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model. In ECCV , pp. 736-753. Springer, 2022."
+                },
+                {
+                  "title": "Scaling open-vocabulary image segmentation with image-level labels",
+                  "citation": "G. Ghiasi et al. Scaling open-vocabulary image segmentation with image-level labels. In ECCV , pp. 540-557. Springer, 2022."
+                },
+                {
+                  "title": "Reco: Retrieve and co-segment for zero-shot transfer",
+                  "citation": "G. Shin et al. Reco: Retrieve and co-segment for zero-shot transfer. In NeurIPS ."
+                },
+                {
+                  "title": "Clims: Cross language image matching for weakly supervised semantic segmentation",
+                  "citation": "J. Xie et al. Clims: Cross language image matching for weakly supervised semantic segmentation. In CVPR , pp. 4483-4492, 2022."
+                },
+                {
+                  "title": "Clip is also an efficient segmenter: A text-driven approach for weakly supervised semantic segmentation",
+                  "citation": "Y. Lin et al. Clip is also an efficient segmenter: A text-driven approach for weakly supervised semantic segmentation. arXiv preprint arXiv:2212.09506 , 2022."
+                },
+                {
+                  "title": "Freeseg: Unified, universal and open-vocabulary image segmentation",
+                  "citation": "J. Qin et al. Freeseg: Unified, universal and open-vocabulary image segmentation. In CVPR , pp. 19446-19455, 2023."
+                },
+                {
+                  "title": "Open-vocabulary object detection via vision and language knowledge distillation",
+                  "citation": "X. Gu et al. Open-vocabulary object detection via vision and language knowledge distillation. In ICLR , 2021."
+                },
+                {
+                  "title": "Learning to prompt for open-vocabulary object detection with vision-language model",
+                  "citation": "Y. Du et al. Learning to prompt for open-vocabulary object detection with vision-language model. In CVPR , pp. 1408414093, 2022."
+                },
+                {
+                  "title": "Open-vocabulary one-stage detection with hierarchical visual-language knowledge distillation",
+                  "citation": "Z. Ma et al. Open-vocabulary one-stage detection with hierarchical visual-language knowledge distillation. In CVPR , pp. 1407414083, 2022."
+                },
+                {
+                  "title": "Bridging the gap between object and imagelevel representations for open-vocabulary detection",
+                  "citation": "H. A. Rasheed et al. Bridging the gap between object and imagelevel representations for open-vocabulary detection. In NeurIPS ."
+                },
+                {
+                  "title": "Promptdet: Towards open-vocabulary detection using uncurated images",
+                  "citation": "C. Feng et al. Promptdet: Towards open-vocabulary detection using uncurated images. In ECCV , pp. 701-717. Springer, 2022."
+                },
+                {
+                  "title": "Open vocabulary object detection with pseudo bounding-box labels",
+                  "citation": "M. Gao et al. Open vocabulary object detection with pseudo bounding-box labels. In ECCV , pp. 266-282. Springer, 2022."
+                },
+                {
+                  "title": "Learning to detect and segment for open vocabulary object detection",
+                  "citation": "T. Wang and N. Li. Learning to detect and segment for open vocabulary object detection. arXiv preprint arXiv:2212.12130 , 2022."
+                },
+                {
+                  "title": "Learning object-language alignments for openvocabulary object detection",
+                  "citation": "C. Lin et al. Learning object-language alignments for openvocabulary object detection. arXiv preprint arXiv:2211.14843 , 2022."
+                },
+                {
+                  "title": "F-vlm: Open-vocabulary object detection upon frozen vision and language models",
+                  "citation": "W. Kuo et al. F-vlm: Open-vocabulary object detection upon frozen vision and language models. arXiv preprint arXiv:2209.15639 , 2022."
+                },
+                {
+                  "title": "Open-vocabulary detr with conditional matching",
+                  "citation": "Y. Zang et al. Open-vocabulary detr with conditional matching. arXiv preprint arXiv:2203.11876 , 2022."
+                },
+                {
+                  "title": "Detecting twenty-thousand classes using imagelevel supervision",
+                  "citation": "X. Zhou et al. Detecting twenty-thousand classes using imagelevel supervision. In ECCV , pp. 350-368. Springer, 2022."
+                },
+                {
+                  "title": "Open-vocabulary instance segmentation via robust cross-modal pseudo-labeling",
+                  "citation": "D. Huynh et al. Open-vocabulary instance segmentation via robust cross-modal pseudo-labeling. In CVPR , pp. 7020-7031, 2022."
+                },
+                {
+                  "title": "Simple open-vocabulary object detection with vision transformers",
+                  "citation": "M. Minderer et al. Simple open-vocabulary object detection with vision transformers. arXiv preprint arXiv:2205.06230 , 2022."
+                },
+                {
+                  "title": "Exploiting unlabeled data with vision and language models for object detection",
+                  "citation": "S. Zhao et al. Exploiting unlabeled data with vision and language models for object detection. In ECCV , pp. 159-175. Springer, 2022."
+                },
+                {
+                  "title": "P3ovd: Fine-grained visual-text prompt-driven self-training for open-vocabulary object detection",
+                  "citation": "Y. Long et al. P3ovd: Fine-grained visual-text prompt-driven self-training for open-vocabulary object detection. arXiv preprint arXiv:2211.00849 , 2022."
+                },
+                {
+                  "title": "Zsd-yolo: Zero-shot yolo detection using vision-language knowledgedistillation",
+                  "citation": "J. Xie and S. Zheng. Zsd-yolo: Zero-shot yolo detection using vision-language knowledgedistillation. arXiv preprint arXiv:2109.12066 , 2021."
+                },
+                {
+                  "title": "Region-aware pretraining for open-vocabulary object detection with vision transformers",
+                  "citation": "D. Kim et al. Region-aware pretraining for open-vocabulary object detection with vision transformers. In CVPR , pp. 1114411154, 2023."
+                },
+                {
+                  "title": "Aligning bag of regions for open-vocabulary object detection",
+                  "citation": "S. Wu et al. Aligning bag of regions for open-vocabulary object detection. In CVPR , pp. 15254-15264, 2023."
+                },
+                {
+                  "title": "Object-aware distillation pyramid for openvocabulary object detection",
+                  "citation": "L. Wang et al. Object-aware distillation pyramid for openvocabulary object detection. In CVPR , pp. 11186-11196, 2023."
+                },
+                {
+                  "title": "Freeseg: Unified, universal and open-vocabulary image segmentation",
+                  "citation": "J. Qin et al. Freeseg: Unified, universal and open-vocabulary image segmentation. In CVPR , pp. 19446-19455, 2023."
+                },
+                {
+                  "title": "Clip is also an efficient segmenter: A text-driven approach for weakly supervised semantic segmentation",
+                  "citation": "Y. Lin et al. Clip is also an efficient segmenter: A text-driven approach for weakly supervised semantic segmentation. arXiv preprint arXiv:2212.09506 , 2022."
+                },
+                {
+                  "title": "Clims: Cross language image matching for weakly supervised semantic segmentation",
+                  "citation": "J. Xie et al. Clims: Cross language image matching for weakly supervised semantic segmentation. In CVPR , pp. 4483-4492, 2022."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "7.3",
+          "sec_title": "Summary and Discussion",
+          "citations": [
+            {
+              "title": "Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm",
+              "citation": "Y. Li et al. Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm. In ICLR , 2021."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "PERFORMANCE COMPARISON",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "8.1",
+          "sec_title": "Performance of VLM Pre-training",
+          "citations": [
+            {
+              "title": "Imagenet: A large-scale hierarchical image database",
+              "citation": "J. Deng et al. Imagenet: A large-scale hierarchical image database. In CVPR , pp. 248-255. Ieee, 2009."
+            },
+            {
+              "title": "Learning multiple layers of features from tiny images",
+              "citation": "A. Krizhevsky et al. Learning multiple layers of features from tiny images. 2009."
+            },
+            {
+              "title": "Learning multiple layers of features from tiny images",
+              "citation": "A. Krizhevsky et al. Learning multiple layers of features from tiny images. 2009."
+            },
+            {
+              "title": "Food-101-mining discriminative components with random forests",
+              "citation": "L. Bossard et al. Food-101-mining discriminative components with random forests. In ECCV , pp. 446-461. Springer, 2014."
+            },
+            {
+              "title": "Sun database: Large-scale scene recognition from abbey to zoo",
+              "citation": "J. Xiao et al. Sun database: Large-scale scene recognition from abbey to zoo. In 2010 IEEE computer society conference on computer vision and pattern recognition , pp. 3485-3492. IEEE, 2010."
+            },
+            {
+              "title": "Collecting a large-scale dataset of fine-grained cars",
+              "citation": "J. Krause et al. Collecting a large-scale dataset of fine-grained cars. 2013."
+            },
+            {
+              "title": "Fine-grained visual classification of aircraft",
+              "citation": "S. Maji et al. Fine-grained visual classification of aircraft. arXiv preprint arXiv:1306.5151 , 2013."
+            },
+            {
+              "title": "Describing textures in the wild",
+              "citation": "M. Cimpoi et al. Describing textures in the wild. In CVPR , pp. 3606-3613, 2014."
+            },
+            {
+              "title": "Cats and dogs",
+              "citation": "O. M. Parkhi et al. Cats and dogs. In CVPR , pp. 3498-3505. IEEE, 2012."
+            },
+            {
+              "title": "Learning generative visual models from few training examples: An incremental bayesian approach tested on 101 object categories",
+              "citation": "L. Fei-Fei et al. Learning generative visual models from few training examples: An incremental bayesian approach tested on 101 object categories. In CVPR workshop , pp. 178-178. IEEE, 2004."
+            },
+            {
+              "title": "Automated flower classification over a large number of classes",
+              "citation": "M.-E. Nilsback and A. Zisserman. Automated flower classification over a large number of classes. In ICVGIP , pp. 722-729. IEEE, 2008."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            },
+            {
+              "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+              "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+            },
+            {
+              "title": "Data efficient language-supervised zero-shot recognition with optimal transport distillation",
+              "citation": "B. Wu et al. Data efficient language-supervised zero-shot recognition with optimal transport distillation. In ICLR , 2021."
+            },
+            {
+              "title": "Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm",
+              "citation": "Y. Li et al. Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm. In ICLR , 2021."
+            },
+            {
+              "title": "Contrastive vision-language pre-training with limited resources",
+              "citation": "Q. Cui et al. Contrastive vision-language pre-training with limited resources. In ECCV , pp. 236-253. Springer, 2022."
+            },
+            {
+              "title": "Filip: Fine-grained interactive language-image pretraining",
+              "citation": "L. Yao et al. Filip: Fine-grained interactive language-image pretraining. In ICLR , 2021."
+            },
+            {
+              "title": "Unified contrastive learning in image-text-label space",
+              "citation": "J. Yang et al. Unified contrastive learning in image-text-label space. In CVPR , pp. 19163-19173, 2022."
+            },
+            {
+              "title": "Florence: A new foundation model for computer vision",
+              "citation": "L. Yuan et al. Florence: A new foundation model for computer vision. arXiv preprint arXiv:2111.11432 , 2021."
+            },
+            {
+              "title": "Slip: Self-supervision meets language-image pretraining",
+              "citation": "N. Mu et al. Slip: Self-supervision meets language-image pretraining. In ECCV , pp. 529-544. Springer, 2022."
+            },
+            {
+              "title": "Pyramidclip: Hierarchical feature alignment for vision-language model pretraining",
+              "citation": "Y. Gao et al. Pyramidclip: Hierarchical feature alignment for vision-language model pretraining. arXiv preprint arXiv:2204.14095 , 2022."
+            },
+            {
+              "title": "Chinese clip: Contrastive vision-language pretraining in chinese",
+              "citation": "A. Yang et al. Chinese clip: Contrastive vision-language pretraining in chinese. arXiv preprint arXiv:2211.01335 , 2022."
+            },
+            {
+              "title": "Lit: Zero-shot transfer with locked-image text tuning",
+              "citation": "X. Zhai et al. Lit: Zero-shot transfer with locked-image text tuning. In CVPR , pp. 18123-18133, 2022."
+            },
+            {
+              "title": "Altclip: Altering the language encoder in clip for extended language capabilities",
+              "citation": "Z. Chen et al. Altclip: Altering the language encoder in clip for extended language capabilities. arXiv preprint arXiv:2211.06679 , 2022."
+            },
+            {
+              "title": "Flava: A foundational language and vision alignment model",
+              "citation": "A. Singh et al. Flava: A foundational language and vision alignment model. In CVPR , pp. 15638-15650, 2022."
+            },
+            {
+              "title": "Large-scale bilingual language-image contrastive learning",
+              "citation": "B. Ko and G. Gu. Large-scale bilingual language-image contrastive learning. arXiv preprint arXiv:2203.14463 , 2022."
+            },
+            {
+              "title": "Coca: Contrastive captioners are image-text foundation models",
+              "citation": "J. Yu et al. Coca: Contrastive captioners are image-text foundation models. arXiv preprint arXiv:2205.01917 , 2022."
+            },
+            {
+              "title": "Non-contrastive learning meets language-image pre-training",
+              "citation": "J. Zhou et al. Non-contrastive learning meets language-image pre-training. arXiv preprint arXiv:2210.09304 , 2022."
+            },
+            {
+              "title": "K-lite: Learning transferable visual models with external knowledge",
+              "citation": "S. Shen et al. K-lite: Learning transferable visual models with external knowledge. arXiv preprint arXiv:2204.09222 , 2022."
+            },
+            {
+              "title": "Nlip: Noise-robust language-image pre-training",
+              "citation": "R. Huang et al. Nlip: Noise-robust language-image pre-training. arXiv preprint arXiv:2212.07086 , 2022."
+            },
+            {
+              "title": "Uniclip: Unified framework for contrastive languageimage pre-training",
+              "citation": "J. Lee et al. Uniclip: Unified framework for contrastive languageimage pre-training. In NeurIPS ."
+            },
+            {
+              "title": "Pali: A jointly-scaled multilingual language-image model",
+              "citation": "X. Chen et al. Pali: A jointly-scaled multilingual language-image model. arXiv preprint arXiv:2209.06794 , 2022."
+            },
+            {
+              "title": "Image-and-language understanding from pixels only",
+              "citation": "M. Tschannen et al. Image-and-language understanding from pixels only. arXiv preprint arXiv:2212.08045 , 2022."
+            },
+            {
+              "title": "Unifying vision-language representation space with single-tower transformer",
+              "citation": "J. Jang et al. Unifying vision-language representation space with single-tower transformer. In AAAI , volume 37, pp. 980-988, 2023."
+            },
+            {
+              "title": "Ra-clip: Retrieval augmented contrastive language-image pre-training",
+              "citation": "C.-W. Xie et al. Ra-clip: Retrieval augmented contrastive language-image pre-training. In CVPR , pp. 19265-19274, 2023."
+            },
+            {
+              "title": "Improving clip training with language rewrites",
+              "citation": "L. Fan et al. Improving clip training with language rewrites. arXiv preprint arXiv:2305.20088 , 2023."
+            },
+            {
+              "title": "Alip: Adaptive language-image pre-training with synthetic caption",
+              "citation": "K. Yang et al. Alip: Adaptive language-image pre-training with synthetic caption. In ICCV , pp. 2922-2931, 2023."
+            },
+            {
+              "title": "Growclip: Data-aware automatic model growing for large-scale contrastive language-image pre-training",
+              "citation": "X. Deng et al. Growclip: Data-aware automatic model growing for large-scale contrastive language-image pre-training. In ICCV , pp. 22178-22189, 2023."
+            },
+            {
+              "title": "The pascal visual object classes (voc) challenge",
+              "citation": "M. Everingham et al. The pascal visual object classes (voc) challenge. IJCV , 88(2):303-338, 2010."
+            },
+            {
+              "title": "The role of context for object detection and semantic segmentation in the wild",
+              "citation": "R. Mottaghi et al. The role of context for object detection and semantic segmentation in the wild. In CVPR , pp. 891-898, 2014."
+            },
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T.-Y. Lin et al. Microsoft coco: Common objects in context. In ECCV , pp. 740-755. Springer, 2014."
+            },
+            {
+              "title": "Groupvit: Semantic segmentation emerges from text supervision",
+              "citation": "J. Xu et al. Groupvit: Semantic segmentation emerges from text supervision. In CVPR , pp. 18134-18144, 2022."
+            },
+            {
+              "title": "Segclip: Patch aggregation with learnable centers for open-vocabulary semantic segmentation",
+              "citation": "H. Luo et al. Segclip: Patch aggregation with learnable centers for open-vocabulary semantic segmentation. arXiv preprint arXiv:2211.14813 , 2022."
+            },
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T.-Y. Lin et al. Microsoft coco: Common objects in context. In ECCV , pp. 740-755. Springer, 2014."
+            },
+            {
+              "title": "Lvis: A dataset for large vocabulary instance segmentation",
+              "citation": "A. Gupta et al. Lvis: A dataset for large vocabulary instance segmentation. In CVPR , pp. 5356-5364, 2019."
+            },
+            {
+              "title": "Lvis: A dataset for large vocabulary instance segmentation",
+              "citation": "A. Gupta et al. Lvis: A dataset for large vocabulary instance segmentation. In CVPR , pp. 5356-5364, 2019."
+            },
+            {
+              "title": "Regionclip: Region-based language-image pretraining",
+              "citation": "Y. Zhong et al. Regionclip: Region-based language-image pretraining. In CVPR , pp. 16793-16803, 2022."
+            },
+            {
+              "title": "Grounded language-image pre-training",
+              "citation": "L. H. Li et al. Grounded language-image pre-training. In CVPR , pp. 10965-10975, 2022."
+            },
+            {
+              "title": "Coarse-to-fine vision-language pre-training with fusion in the backbone",
+              "citation": "Z.-Y. Dou et al. Coarse-to-fine vision-language pre-training with fusion in the backbone. In NeurIPS ."
+            },
+            {
+              "title": "Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection",
+              "citation": "L. Yao et al. Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection. In NeurIPS ."
+            },
+            {
+              "title": "Coca: Contrastive captioners are image-text foundation models",
+              "citation": "J. Yu et al. Coca: Contrastive captioners are image-text foundation models. arXiv preprint arXiv:2205.01917 , 2022."
+            },
+            {
+              "title": "Filip: Fine-grained interactive language-image pretraining",
+              "citation": "L. Yao et al. Filip: Fine-grained interactive language-image pretraining. In ICLR , 2021."
+            },
+            {
+              "title": "Coca: Contrastive captioners are image-text foundation models",
+              "citation": "J. Yu et al. Coca: Contrastive captioners are image-text foundation models. arXiv preprint arXiv:2205.01917 , 2022."
+            },
+            {
+              "title": "Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection",
+              "citation": "L. Yao et al. Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection. In NeurIPS ."
+            },
+            {
+              "title": "Segclip: Patch aggregation with learnable centers for open-vocabulary semantic segmentation",
+              "citation": "H. Luo et al. Segclip: Patch aggregation with learnable centers for open-vocabulary semantic segmentation. arXiv preprint arXiv:2211.14813 , 2022."
+            },
+            {
+              "title": "Grounded language-image pre-training",
+              "citation": "L. H. Li et al. Grounded language-image pre-training. In CVPR , pp. 10965-10975, 2022."
+            },
+            {
+              "title": "Coarse-to-fine vision-language pre-training with fusion in the backbone",
+              "citation": "Z.-Y. Dou et al. Coarse-to-fine vision-language pre-training with fusion in the backbone. In NeurIPS ."
+            },
+            {
+              "title": "Groupvit: Semantic segmentation emerges from text supervision",
+              "citation": "J. Xu et al. Groupvit: Semantic segmentation emerges from text supervision. In CVPR , pp. 18134-18144, 2022."
+            },
+            {
+              "title": "Regionclip: Region-based language-image pretraining",
+              "citation": "Y. Zhong et al. Regionclip: Region-based language-image pretraining. In CVPR , pp. 16793-16803, 2022."
+            },
+            {
+              "title": "Grounded language-image pre-training",
+              "citation": "L. H. Li et al. Grounded language-image pre-training. In CVPR , pp. 10965-10975, 2022."
+            },
+            {
+              "title": "Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm",
+              "citation": "Y. Li et al. Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm. In ICLR , 2021."
+            },
+            {
+              "title": "Reproducible scaling laws for contrastive language-image learning",
+              "citation": "M. Cherti et al. Reproducible scaling laws for contrastive language-image learning. In CVPR , pp. 2818-2829, 2023."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "8.1.1",
+              "sec_title": "As discussed in Sec.",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "8.1.2",
+              "sec_title": "Limitations of VLMs.",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "8.2",
+          "sec_title": "Performance of VLM Transfer Learning",
+          "citations": [
+            {
+              "title": "Imagenet: A large-scale hierarchical image database",
+              "citation": "J. Deng et al. Imagenet: A large-scale hierarchical image database. In CVPR , pp. 248-255. Ieee, 2009."
+            },
+            {
+              "title": "Learning generative visual models from few training examples: An incremental bayesian approach tested on 101 object categories",
+              "citation": "L. Fei-Fei et al. Learning generative visual models from few training examples: An incremental bayesian approach tested on 101 object categories. In CVPR workshop , pp. 178-178. IEEE, 2004."
+            },
+            {
+              "title": "Cats and dogs",
+              "citation": "O. M. Parkhi et al. Cats and dogs. In CVPR , pp. 3498-3505. IEEE, 2012."
+            },
+            {
+              "title": "Collecting a large-scale dataset of fine-grained cars",
+              "citation": "J. Krause et al. Collecting a large-scale dataset of fine-grained cars. 2013."
+            },
+            {
+              "title": "Automated flower classification over a large number of classes",
+              "citation": "M.-E. Nilsback and A. Zisserman. Automated flower classification over a large number of classes. In ICVGIP , pp. 722-729. IEEE, 2008."
+            },
+            {
+              "title": "Food-101-mining discriminative components with random forests",
+              "citation": "L. Bossard et al. Food-101-mining discriminative components with random forests. In ECCV , pp. 446-461. Springer, 2014."
+            },
+            {
+              "title": "Fine-grained visual classification of aircraft",
+              "citation": "S. Maji et al. Fine-grained visual classification of aircraft. arXiv preprint arXiv:1306.5151 , 2013."
+            },
+            {
+              "title": "Sun database: Large-scale scene recognition from abbey to zoo",
+              "citation": "J. Xiao et al. Sun database: Large-scale scene recognition from abbey to zoo. In 2010 IEEE computer society conference on computer vision and pattern recognition , pp. 3485-3492. IEEE, 2010."
+            },
+            {
+              "title": "Describing textures in the wild",
+              "citation": "M. Cimpoi et al. Describing textures in the wild. In CVPR , pp. 3606-3613, 2014."
+            },
+            {
+              "title": "Eurosat: A novel dataset and deep learning benchmark for land use and land cover classification",
+              "citation": "P. Helber et al. Eurosat: A novel dataset and deep learning benchmark for land use and land cover classification. JSTARS , 12(7):2217-2226, 2019."
+            },
+            {
+              "title": "Ucf101: A dataset of 101 human actions classes from videos in the wild",
+              "citation": "K. Soomro et al. Ucf101: A dataset of 101 human actions classes from videos in the wild. arXiv preprint arXiv:1212.0402 , 2012."
+            },
+            {
+              "title": "Unsupervised prompt learning for visionlanguage models",
+              "citation": "T. Huang et al. Unsupervised prompt learning for visionlanguage models. arXiv preprint arXiv:2204.03649 , 2022."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            },
+            {
+              "title": "Learning to prompt for vision-language models",
+              "citation": "K. Zhou et al. Learning to prompt for vision-language models. IJCV , 130(9):2337-2348, 2022."
+            },
+            {
+              "title": "Conditional prompt learning for vision-language models",
+              "citation": "K. Zhou et al. Conditional prompt learning for vision-language models. In CVPR , pp. 16816-16825, 2022."
+            },
+            {
+              "title": "Understanding and mitigating overfitting in prompt tuning for vision-language models",
+              "citation": "C. Ma et al. Understanding and mitigating overfitting in prompt tuning for vision-language models. arXiv preprint arXiv:2211.02219 , 2022."
+            },
+            {
+              "title": "Language-aware soft prompting for vision & language foundation models",
+              "citation": "A. Bulat and G. Tzimiropoulos. Language-aware soft prompting for vision &amp; language foundation models. arXiv preprint arXiv:2210.01115 , 2022."
+            },
+            {
+              "title": "Prompt distribution learning",
+              "citation": "Y. Lu et al. Prompt distribution learning. In CVPR , pp. 5206-5215, 2022."
+            },
+            {
+              "title": "Variational prompt tuning improves generalization of vision-language models",
+              "citation": "M. M. Derakhshani et al. Variational prompt tuning improves generalization of vision-language models. arXiv preprint arXiv:2210.02390 , 2022."
+            },
+            {
+              "title": "Prompt-aligned gradient for prompt tuning",
+              "citation": "B. Zhu et al. Prompt-aligned gradient for prompt tuning. arXiv preprint arXiv:2205.14865 , 2022."
+            },
+            {
+              "title": "Cpl: Counterfactual prompt learning for vision and language models",
+              "citation": "X. He et al. Cpl: Counterfactual prompt learning for vision and language models. arXiv preprint arXiv:2210.10362 , 2022."
+            },
+            {
+              "title": "Prompt learning with optimal transport for visionlanguage models",
+              "citation": "G. Chen et al. Prompt learning with optimal transport for visionlanguage models. arXiv preprint arXiv:2210.01253 , 2022."
+            },
+            {
+              "title": "What does a platypus look like? generating customized prompts for zero-shot image classification",
+              "citation": "S. Pratt et al. What does a platypus look like? generating customized prompts for zero-shot image classification. arXiv preprint arXiv:2209.03320 , 2022."
+            },
+            {
+              "title": "Unsupervised prompt learning for visionlanguage models",
+              "citation": "T. Huang et al. Unsupervised prompt learning for visionlanguage models. arXiv preprint arXiv:2204.03649 , 2022."
+            },
+            {
+              "title": "Test-time prompt tuning for zero-shot generalization in vision-language models",
+              "citation": "M. Shu et al. Test-time prompt tuning for zero-shot generalization in vision-language models. In NeurIPS ."
+            },
+            {
+              "title": "Exploring visual prompts for adapting large-scale models",
+              "citation": "H. Bahng et al. Exploring visual prompts for adapting large-scale models. arXiv preprint arXiv:2203.17274 , 1(3):4, 2022."
+            },
+            {
+              "title": "Unified vision and language prompt learning",
+              "citation": "Y. Zang et al. Unified vision and language prompt learning. arXiv preprint arXiv:2210.07225 , 2022."
+            },
+            {
+              "title": "Maple: Multi-modal prompt learning",
+              "citation": "M. U. Khattak et al. Maple: Multi-modal prompt learning. arXiv preprint arXiv:2210.03117 , 2022."
+            },
+            {
+              "title": "Class-aware visual prompt tuning for visionlanguage pre-trained model",
+              "citation": "Y. Xing et al. Class-aware visual prompt tuning for visionlanguage pre-trained model. arXiv preprint arXiv:2208.08340 , 2022."
+            },
+            {
+              "title": "Tip-adapter: Training-free clip-adapter for better vision-language modeling",
+              "citation": "R. Zhang et al. Tip-adapter: Training-free clip-adapter for better vision-language modeling. arXiv preprint arXiv:2111.03930 , 2021."
+            },
+            {
+              "title": "Sus-x: Training-free name-only transfer of vision-language models",
+              "citation": "V. Udandarao et al. Sus-x: Training-free name-only transfer of vision-language models. arXiv preprint arXiv:2211.16198 , 2022."
+            },
+            {
+              "title": "Sgva-clip: Semantic-guided visual adapting of vision-language models for few-shot image classification",
+              "citation": "F. Peng et al. Sgva-clip: Semantic-guided visual adapting of vision-language models for few-shot image classification. arXiv preprint arXiv:2211.16191 , 2022."
+            },
+            {
+              "title": "Vt-clip: Enhancing vision-language models with visual-guided texts",
+              "citation": "R. Zhang et al. Vt-clip: Enhancing vision-language models with visual-guided texts. arXiv preprint arXiv:2112.02399 , 2021."
+            },
+            {
+              "title": "Calip: Zero-shot enhancement of clip with parameter-free attention",
+              "citation": "Z. Guo et al. Calip: Zero-shot enhancement of clip with parameter-free attention. arXiv preprint arXiv:2209.14169 , 2022."
+            },
+            {
+              "title": "Robust fine-tuning of zero-shot models",
+              "citation": "M. Wortsman et al. Robust fine-tuning of zero-shot models. In CVPR , pp. 7959-7971, 2022."
+            },
+            {
+              "title": "Visual-language prompt tuning with knowledgeguided context optimization",
+              "citation": "H. Yao et al. Visual-language prompt tuning with knowledgeguided context optimization. In CVPR , pp. 6757-6767, 2023."
+            },
+            {
+              "title": "Protect: Prompt tuning for hierarchical consistency",
+              "citation": "T.-Y. Wu et al. Protect: Prompt tuning for hierarchical consistency. arXiv preprint arXiv:2306.02240 , 2023."
+            },
+            {
+              "title": "Retrieval-enhanced visual prompt learning for fewshot classification",
+              "citation": "J. Rong et al. Retrieval-enhanced visual prompt learning for fewshot classification. arXiv preprint arXiv:2306.02243 , 2023."
+            },
+            {
+              "title": "Task residual for tuning vision-language models",
+              "citation": "T. Yu et al. Task residual for tuning vision-language models. In CVPR , pp. 10899-10909, 2023."
+            },
+            {
+              "title": "Visual classification via description from large language models",
+              "citation": "S. Menon and C. Vondrick. Visual classification via description from large language models. arXiv preprint arXiv:2210.07183 , 2022."
+            },
+            {
+              "title": "Eurosat: A novel dataset and deep learning benchmark for land use and land cover classification",
+              "citation": "P. Helber et al. Eurosat: A novel dataset and deep learning benchmark for land use and land cover classification. JSTARS , 12(7):2217-2226, 2019."
+            },
+            {
+              "title": "Ucf101: A dataset of 101 human actions classes from videos in the wild",
+              "citation": "K. Soomro et al. Ucf101: A dataset of 101 human actions classes from videos in the wild. arXiv preprint arXiv:1212.0402 , 2012."
+            },
+            {
+              "title": "Robust fine-tuning of zero-shot models",
+              "citation": "M. Wortsman et al. Robust fine-tuning of zero-shot models. In CVPR , pp. 7959-7971, 2022."
+            },
+            {
+              "title": "What does a platypus look like? generating customized prompts for zero-shot image classification",
+              "citation": "S. Pratt et al. What does a platypus look like? generating customized prompts for zero-shot image classification. arXiv preprint arXiv:2209.03320 , 2022."
+            },
+            {
+              "title": "Unsupervised prompt learning for visionlanguage models",
+              "citation": "T. Huang et al. Unsupervised prompt learning for visionlanguage models. arXiv preprint arXiv:2204.03649 , 2022."
+            },
+            {
+              "title": "Learning to prompt for vision-language models",
+              "citation": "K. Zhou et al. Learning to prompt for vision-language models. IJCV , 130(9):2337-2348, 2022."
+            },
+            {
+              "title": "Test-time prompt tuning for zero-shot generalization in vision-language models",
+              "citation": "M. Shu et al. Test-time prompt tuning for zero-shot generalization in vision-language models. In NeurIPS ."
+            },
+            {
+              "title": "Learning to prompt for vision-language models",
+              "citation": "K. Zhou et al. Learning to prompt for vision-language models. IJCV , 130(9):2337-2348, 2022."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "8.3",
+          "sec_title": "Performance of VLM Knowledge Distillation",
+          "citations": [
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T.-Y. Lin et al. Microsoft coco: Common objects in context. In ECCV , pp. 740-755. Springer, 2014."
+            },
+            {
+              "title": "Lvis: A dataset for large vocabulary instance segmentation",
+              "citation": "A. Gupta et al. Lvis: A dataset for large vocabulary instance segmentation. In CVPR , pp. 5356-5364, 2019."
+            },
+            {
+              "title": "Open-vocabulary object detection via vision and language knowledge distillation",
+              "citation": "X. Gu et al. Open-vocabulary object detection via vision and language knowledge distillation. In ICLR , 2021."
+            },
+            {
+              "title": "Open-vocabulary object detection via vision and language knowledge distillation",
+              "citation": "X. Gu et al. Open-vocabulary object detection via vision and language knowledge distillation. In ICLR , 2021."
+            },
+            {
+              "title": "Learning to prompt for open-vocabulary object detection with vision-language model",
+              "citation": "Y. Du et al. Learning to prompt for open-vocabulary object detection with vision-language model. In CVPR , pp. 1408414093, 2022."
+            },
+            {
+              "title": "Open-vocabulary one-stage detection with hierarchical visual-language knowledge distillation",
+              "citation": "Z. Ma et al. Open-vocabulary one-stage detection with hierarchical visual-language knowledge distillation. In CVPR , pp. 1407414083, 2022."
+            },
+            {
+              "title": "Bridging the gap between object and imagelevel representations for open-vocabulary detection",
+              "citation": "H. A. Rasheed et al. Bridging the gap between object and imagelevel representations for open-vocabulary detection. In NeurIPS ."
+            },
+            {
+              "title": "Promptdet: Towards open-vocabulary detection using uncurated images",
+              "citation": "C. Feng et al. Promptdet: Towards open-vocabulary detection using uncurated images. In ECCV , pp. 701-717. Springer, 2022."
+            },
+            {
+              "title": "Open vocabulary object detection with pseudo bounding-box labels",
+              "citation": "M. Gao et al. Open vocabulary object detection with pseudo bounding-box labels. In ECCV , pp. 266-282. Springer, 2022."
+            },
+            {
+              "title": "Learning to detect and segment for open vocabulary object detection",
+              "citation": "T. Wang and N. Li. Learning to detect and segment for open vocabulary object detection. arXiv preprint arXiv:2212.12130 , 2022."
+            },
+            {
+              "title": "Learning object-language alignments for openvocabulary object detection",
+              "citation": "C. Lin et al. Learning object-language alignments for openvocabulary object detection. arXiv preprint arXiv:2211.14843 , 2022."
+            },
+            {
+              "title": "F-vlm: Open-vocabulary object detection upon frozen vision and language models",
+              "citation": "W. Kuo et al. F-vlm: Open-vocabulary object detection upon frozen vision and language models. arXiv preprint arXiv:2209.15639 , 2022."
+            },
+            {
+              "title": "Open-vocabulary detr with conditional matching",
+              "citation": "Y. Zang et al. Open-vocabulary detr with conditional matching. arXiv preprint arXiv:2203.11876 , 2022."
+            },
+            {
+              "title": "Detecting twenty-thousand classes using imagelevel supervision",
+              "citation": "X. Zhou et al. Detecting twenty-thousand classes using imagelevel supervision. In ECCV , pp. 350-368. Springer, 2022."
+            },
+            {
+              "title": "Simple open-vocabulary object detection with vision transformers",
+              "citation": "M. Minderer et al. Simple open-vocabulary object detection with vision transformers. arXiv preprint arXiv:2205.06230 , 2022."
+            },
+            {
+              "title": "Exploiting unlabeled data with vision and language models for object detection",
+              "citation": "S. Zhao et al. Exploiting unlabeled data with vision and language models for object detection. In ECCV , pp. 159-175. Springer, 2022."
+            },
+            {
+              "title": "P3ovd: Fine-grained visual-text prompt-driven self-training for open-vocabulary object detection",
+              "citation": "Y. Long et al. P3ovd: Fine-grained visual-text prompt-driven self-training for open-vocabulary object detection. arXiv preprint arXiv:2211.00849 , 2022."
+            },
+            {
+              "title": "Region-aware pretraining for open-vocabulary object detection with vision transformers",
+              "citation": "D. Kim et al. Region-aware pretraining for open-vocabulary object detection with vision transformers. In CVPR , pp. 1114411154, 2023."
+            },
+            {
+              "title": "Aligning bag of regions for open-vocabulary object detection",
+              "citation": "S. Wu et al. Aligning bag of regions for open-vocabulary object detection. In CVPR , pp. 15254-15264, 2023."
+            },
+            {
+              "title": "Object-aware distillation pyramid for openvocabulary object detection",
+              "citation": "L. Wang et al. Object-aware distillation pyramid for openvocabulary object detection. In CVPR , pp. 11186-11196, 2023."
+            },
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T.-Y. Lin et al. Microsoft coco: Common objects in context. In ECCV , pp. 740-755. Springer, 2014."
+            },
+            {
+              "title": "Lvis: A dataset for large vocabulary instance segmentation",
+              "citation": "A. Gupta et al. Lvis: A dataset for large vocabulary instance segmentation. In CVPR , pp. 5356-5364, 2019."
+            },
+            {
+              "title": "The pascal visual object classes (voc) challenge",
+              "citation": "M. Everingham et al. The pascal visual object classes (voc) challenge. IJCV , 88(2):303-338, 2010."
+            },
+            {
+              "title": "Scene parsing through ade20k dataset",
+              "citation": "B. Zhou et al. Scene parsing through ade20k dataset. In CVPR , pp. 633-641, 2017."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "8.4",
+          "sec_title": "Summary",
+          "citations": [
+            {
+              "title": "Scene parsing through ade20k dataset",
+              "citation": "B. Zhou et al. Scene parsing through ade20k dataset. In CVPR , pp. 633-641, 2017."
+            },
+            {
+              "title": "The role of context for object detection and semantic segmentation in the wild",
+              "citation": "R. Mottaghi et al. The role of context for object detection and semantic segmentation in the wild. In CVPR , pp. 891-898, 2014."
+            },
+            {
+              "title": "Scene parsing through ade20k dataset",
+              "citation": "B. Zhou et al. Scene parsing through ade20k dataset. In CVPR , pp. 633-641, 2017."
+            },
+            {
+              "title": "The role of context for object detection and semantic segmentation in the wild",
+              "citation": "R. Mottaghi et al. The role of context for object detection and semantic segmentation in the wild. In CVPR , pp. 891-898, 2014."
+            },
+            {
+              "title": "The pascal visual object classes (voc) challenge",
+              "citation": "M. Everingham et al. The pascal visual object classes (voc) challenge. IJCV , 88(2):303-338, 2010."
+            },
+            {
+              "title": "The cityscapes dataset for semantic urban scene understanding",
+              "citation": "M. Cordts et al. The cityscapes dataset for semantic urban scene understanding. In CVPR , pp. 3213-3223, 2016."
+            },
+            {
+              "title": "Semantic projection network for zero-and few-label semantic segmentation",
+              "citation": "Y. Xian et al. Semantic projection network for zero-and few-label semantic segmentation. In CVPR , pp. 8256-8265, 2019."
+            },
+            {
+              "title": "Decoupling zero-shot semantic segmentation",
+              "citation": "J. Ding et al. Decoupling zero-shot semantic segmentation. In CVPR , pp. 11583-11592, 2022."
+            },
+            {
+              "title": "Language-driven semantic segmentation",
+              "citation": "B. Li et al. Language-driven semantic segmentation. In ICLR , 2021."
+            },
+            {
+              "title": "Open-vocabulary semantic segmentation with mask-adapted clip",
+              "citation": "F. Liang et al. Open-vocabulary semantic segmentation with mask-adapted clip. arXiv preprint arXiv:2210.04150 , 2022."
+            },
+            {
+              "title": "A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model",
+              "citation": "M. Xu et al. A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model. In ECCV , pp. 736-753. Springer, 2022."
+            },
+            {
+              "title": "Scaling open-vocabulary image segmentation with image-level labels",
+              "citation": "G. Ghiasi et al. Scaling open-vocabulary image segmentation with image-level labels. In ECCV , pp. 540-557. Springer, 2022."
+            },
+            {
+              "title": "Reco: Retrieve and co-segment for zero-shot transfer",
+              "citation": "G. Shin et al. Reco: Retrieve and co-segment for zero-shot transfer. In NeurIPS ."
+            },
+            {
+              "title": "Freeseg: Unified, universal and open-vocabulary image segmentation",
+              "citation": "J. Qin et al. Freeseg: Unified, universal and open-vocabulary image segmentation. In CVPR , pp. 19446-19455, 2023."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            },
+            {
+              "title": "Laion-400m: Open dataset of clip-filtered 400 million image-text pairs",
+              "citation": "C. Schuhmann et al. Laion-400m: Open dataset of clip-filtered 400 million image-text pairs. arXiv preprint arXiv:2111.02114 , 2021."
+            },
+            {
+              "title": "Conceptual 12m: Pushing web-scale imagetext pre-training to recognize long-tail visual concepts",
+              "citation": "S. Changpinyo et al. Conceptual 12m: Pushing web-scale imagetext pre-training to recognize long-tail visual concepts. In CVPR , pp. 3558-3568, 2021."
+            },
+            {
+              "title": "Deep residual learning for image recognition",
+              "citation": "K. He et al. Deep residual learning for image recognition. In CVPR , pp. 770-778, 2016."
+            },
+            {
+              "title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+              "citation": "A. Dosovitskiy et al. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929 , 2020."
+            },
+            {
+              "title": "Attention is all you need",
+              "citation": "A. Vaswani et al. Attention is all you need. NeurIPS , 30, 2017."
+            },
+            {
+              "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+              "citation": "J. Devlin et al. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 , 2018."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            },
+            {
+              "title": "Filip: Fine-grained interactive language-image pretraining",
+              "citation": "L. Yao et al. Filip: Fine-grained interactive language-image pretraining. In ICLR , 2021."
+            },
+            {
+              "title": "Pali: A jointly-scaled multilingual language-image model",
+              "citation": "X. Chen et al. Pali: A jointly-scaled multilingual language-image model. arXiv preprint arXiv:2209.06794 , 2022."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "8.4.1",
+              "sec_title": "Several conclusions can be drawn from Tables 6-11.",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "9",
+      "sec_title": "FUTURE DIRECTIONS",
+      "citations": [
+        {
+          "title": "Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection",
+          "citation": "L. Yao et al. Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection. In NeurIPS ."
+        },
+        {
+          "title": "Grounded language-image pre-training",
+          "citation": "L. H. Li et al. Grounded language-image pre-training. In CVPR , pp. 10965-10975, 2022."
+        },
+        {
+          "title": "Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection",
+          "citation": "L. Yao et al. Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection. In NeurIPS ."
+        },
+        {
+          "title": "Segclip: Patch aggregation with learnable centers for open-vocabulary semantic segmentation",
+          "citation": "H. Luo et al. Segclip: Patch aggregation with learnable centers for open-vocabulary semantic segmentation. arXiv preprint arXiv:2211.14813 , 2022."
+        },
+        {
+          "title": "Grounded language-image pre-training",
+          "citation": "L. H. Li et al. Grounded language-image pre-training. In CVPR , pp. 10965-10975, 2022."
+        },
+        {
+          "title": "Coarse-to-fine vision-language pre-training with fusion in the backbone",
+          "citation": "Z.-Y. Dou et al. Coarse-to-fine vision-language pre-training with fusion in the backbone. In NeurIPS ."
+        },
+        {
+          "title": "Groupvit: Semantic segmentation emerges from text supervision",
+          "citation": "J. Xu et al. Groupvit: Semantic segmentation emerges from text supervision. In CVPR , pp. 18134-18144, 2022."
+        },
+        {
+          "title": "Regionclip: Region-based language-image pretraining",
+          "citation": "Y. Zhong et al. Regionclip: Region-based language-image pretraining. In CVPR , pp. 16793-16803, 2022."
+        },
+        {
+          "title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+          "citation": "A. Dosovitskiy et al. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929 , 2020."
+        },
+        {
+          "title": "Attention is all you need",
+          "citation": "A. Vaswani et al. Attention is all you need. NeurIPS , 30, 2017."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+        },
+        {
+          "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+          "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+        },
+        {
+          "title": "Image-and-language understanding from pixels only",
+          "citation": "M. Tschannen et al. Image-and-language understanding from pixels only. arXiv preprint arXiv:2212.08045 , 2022."
+        },
+        {
+          "title": "Unifying vision-language representation space with single-tower transformer",
+          "citation": "J. Jang et al. Unifying vision-language representation space with single-tower transformer. In AAAI , volume 37, pp. 980-988, 2023."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford et al. Learning transferable visual models from natural language supervision. In ICML , pp. 8748-8763. PMLR, 2021."
+        },
+        {
+          "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+          "citation": "C. Jia et al. Scaling up visual and vision-language representation learning with noisy text supervision. In ICML , pp. 4904-4916. PMLR, 2021."
+        },
+        {
+          "title": "Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning",
+          "citation": "P. Sharma et al. Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning. In ACL , pp. 2556-2565, 2018."
+        },
+        {
+          "title": "Conceptual 12m: Pushing web-scale imagetext pre-training to recognize long-tail visual concepts",
+          "citation": "S. Changpinyo et al. Conceptual 12m: Pushing web-scale imagetext pre-training to recognize long-tail visual concepts. In CVPR , pp. 3558-3568, 2021."
+        },
+        {
+          "title": "Altclip: Altering the language encoder in clip for extended language capabilities",
+          "citation": "Z. Chen et al. Altclip: Altering the language encoder in clip for extended language capabilities. arXiv preprint arXiv:2211.06679 , 2022."
+        },
+        {
+          "title": "Large-scale bilingual language-image contrastive learning",
+          "citation": "B. Ko and G. Gu. Large-scale bilingual language-image contrastive learning. arXiv preprint arXiv:2203.14463 , 2022."
+        },
+        {
+          "title": "Laion-5b: An open large-scale dataset for training next generation image-text models",
+          "citation": "C. Schuhmann et al. Laion-5b: An open large-scale dataset for training next generation image-text models. arXiv preprint arXiv:2210.08402 , 2022."
+        },
+        {
+          "title": "Data efficient language-supervised zero-shot recognition with optimal transport distillation",
+          "citation": "B. Wu et al. Data efficient language-supervised zero-shot recognition with optimal transport distillation. In ICLR , 2021."
+        },
+        {
+          "title": "Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm",
+          "citation": "Y. Li et al. Supervision exists everywhere: A data efficient contrastive language-image pre-training paradigm. In ICLR , 2021."
+        },
+        {
+          "title": "Improving clip training with language rewrites",
+          "citation": "L. Fan et al. Improving clip training with language rewrites. arXiv preprint arXiv:2305.20088 , 2023."
+        },
+        {
+          "title": "Alip: Adaptive language-image pre-training with synthetic caption",
+          "citation": "K. Yang et al. Alip: Adaptive language-image pre-training with synthetic caption. In ICCV , pp. 2922-2931, 2023."
+        },
+        {
+          "title": "Learning to prompt for vision-language models",
+          "citation": "K. Zhou et al. Learning to prompt for vision-language models. IJCV , 130(9):2337-2348, 2022."
+        },
+        {
+          "title": "What does a platypus look like? generating customized prompts for zero-shot image classification",
+          "citation": "S. Pratt et al. What does a platypus look like? generating customized prompts for zero-shot image classification. arXiv preprint arXiv:2209.03320 , 2022."
+        },
+        {
+          "title": "Visual classification via description from large language models",
+          "citation": "S. Menon and C. Vondrick. Visual classification via description from large language models. arXiv preprint arXiv:2210.07183 , 2022."
+        },
+        {
+          "title": "Language models are few-shot learners",
+          "citation": "T. Brown et al. Language models are few-shot learners. NeurIPS , 33:1877-1901, 2020."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "10",
+      "sec_title": "CONCLUSION",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

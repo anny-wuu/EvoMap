@@ -1,0 +1,1019 @@
+{
+  "track": "LLM Training",
+  "paper_title": "Efficient Large Language Models: A Survey",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "1 Introduction",
+      "citations": [
+        {
+          "title": "Language models are few-shot learners",
+          "citation": "Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel Ziegler, Jeffrey Wu, Clemens Winter, Chris Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. Language models are few-shot learners. 2020"
+        },
+        {
+          "title": "PaLM: Scaling Language Modeling with Pathways",
+          "citation": "Aakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Ben Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier Garcia, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Diaz, Orhan Firat, Michele Catasta, Jason Wei, Kathy Meier-Hellstern, Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. 2022"
+        },
+        {
+          "title": "Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale",
+          "citation": "Reza Yazdani Aminabadi, Samyam Rajbhandari, Ammar Ahmad Awan, Cheng Li, Du Li, Elton Zheng, Olatunji Ruwase, Shaden Smith, Minjia Zhang, Jeff Rasley, and Yuxiong He. Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale. 2022"
+        },
+        {
+          "title": "Generative pre-trained transformers (gpt-3) pertain to ai in the law",
+          "citation": "Lance Eliot. Generative pre-trained transformers (gpt-3) pertain to ai in the law, 2021. 2021"
+        },
+        {
+          "title": "Gemini: A family of highly capable multimodal models",
+          "citation": "Gemini Team and Google. Gemini: A family of highly capable multimodal models. 2023"
+        },
+        {
+          "title": "Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale",
+          "citation": "Reza Yazdani Aminabadi, Samyam Rajbhandari, Ammar Ahmad Awan, Cheng Li, Du Li, Elton Zheng, Olatunji Ruwase, Shaden Smith, Minjia Zhang, Jeff Rasley, and Yuxiong He. Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale. 2022"
+        },
+        {
+          "title": "PaLM: Scaling Language Modeling with Pathways",
+          "citation": "Aakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Ben Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier Garcia, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Diaz, Orhan Firat, Michele Catasta, Jason Wei, Kathy Meier-Hellstern, Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. 2022"
+        },
+        {
+          "title": "A Survey on Evaluation of Large Language Models",
+          "citation": "Yupeng Chang, Xu Wang, Jindong Wang, Yuan Wu, Linyi Yang, Kaijie Zhu, Hao Chen, Xiaoyuan Yi, Cunxiang Wang, Yidong Wang, Wei Ye, Yue Zhang, Yi Chang, Philip S. Yu, Qiang Yang, and Xing Xie. 2024"
+        },
+        {
+          "title": "Reusing pretrained models by multi-linear operators for efficient training",
+          "citation": "Yu Pan, Ye Yuan, Yichun Yin, Zenglin Xu, Lifeng Shang, Xin Jiang, and Qun Liu. Reusing pretrained models by multi-linear operators for efficient training. 2023"
+        },
+        {
+          "title": "OpenDelta: A plug-and-play library for parameter-efficient adaptation of pre-trained models",
+          "citation": "Shengding Hu, Ning Ding, Weilin Zhao, Xingtai Lv, Zhen Zhang, Zhiyuan Liu, and Maosong Sun. OpenDelta: A plug-and-play library for parameter-efficient adaptation of pre-trained models. 2023"
+        },
+        {
+          "title": "Efficient memory management for large language model serving with pagedattention",
+          "citation": "Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph Gonzalez, Hao Zhang, and Ion Stoica. Efficient memory management for large language model serving with pagedattention. 2023"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "2.1.1 Quantization",
+      "citations": [
+        {
+          "title": "Understanding and overcoming the challenges of efficient transformer quantization",
+          "citation": "Yelysei Bondarenko, Markus Nagel, and Tijmen Blankevoort. Understanding and overcoming the challenges of efficient transformer quantization. 2021"
+        },
+        {
+          "title": "Bitsandbytes",
+          "citation": "Tim Dettmers. Bitsandbytes. 2023"
+        },
+        {
+          "title": "Optimal brain compression: A framework for accurate post-training quantization and pruning",
+          "citation": "Elias Frantar and Dan Alistarh. Optimal brain compression: A framework for accurate post-training quantization and pruning. 2022"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "2.1.2 Parameter Pruning",
+      "citations": [
+        {
+          "title": "Exploiting nvidia ampere structured sparsity with cusparselt",
+          "citation": "Federico Busato and Jeff Pool. Exploiting nvidia ampere structured sparsity with cusparselt. 2020"
+        },
+        {
+          "title": "On the representation collapse of sparse mixture of experts",
+          "citation": "Zewen Chi, Li Dong, Shaohan Huang, Damai Dai, Shuming Ma, Barun Patra, Saksham Singhal, Payal Bajaj, Xia Song, Xian-Ling Mao, Heyan Huang, and Furu Wei. On the representation collapse of sparse mixture of experts. 2022"
+        },
+        {
+          "title": "Unsupervised Scalable Representation Learning for Multivariate Time Series",
+          "citation": "Amanda Bertsch, Uri Alon, Graham Neubig, and Matthew R. Gormley. 2023"
+        },
+        {
+          "title": "A Survey of Large Language Models for Healthcare: from Data, Technology, and Applications to Accountability and Ethics",
+          "citation": "Kai He, Rui Mao, Qika Lin, Yucheng Ruan, Xiang Lan, Mengling Feng, and Erik Cambria. A Survey of Large Language Models for Healthcare: from Data, Technology, and Applications to Accountability and Ethics, 2023, arXiv preprint arXiv:2310. 2023"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "2.1.3 Low-Rank Approximation",
+      "citations": [
+        {
+          "title": "Language model compression with weighted low-rank factorization",
+          "citation": "Yen-Chang Hsu, Ting Hua, Sungen Chang, Qian Lou, Yilin Shen, and Hongxia Jin. Language model compression with weighted low-rank factorization. 2022"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "2.1.4 Knowledge Distillation",
+      "citations": [
+        {
+          "title": "Generalized knowledge distillation for auto-regressive language models",
+          "citation": "Rishabh Agarwal, Nino Vieillard, Yongchao Zhou, Piotr Stanczyk, Sabela Ramos Garea, Matthieu Geist, and Olivier Bachem. Generalized knowledge distillation for auto-regressive language models. 2024"
+        },
+        {
+          "title": "GPT-NeoX-20B: An open-source autoregressive language model",
+          "citation": "Sidney Black, Stella Biderman, Eric Hallahan, Quentin Anthony, Leo Gao, Laurence Golding, Horace He, Connor Leahy, Kyle McDonell, Jason Phang, Michael Pieler, Usvsn Sai Prashanth, Shivanshu Purohit, Laria Reynolds, Jonathan Tow, Ben Wang, and Samuel Weinbach. GPT-NeoX-20B: An open-source autoregressive language model. 2022"
+        },
+        {
+          "title": "Language models are few-shot learners",
+          "citation": "Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel Ziegler, Jeffrey Wu, Clemens Winter, Chris Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. Language models are few-shot learners. 2020"
+        },
+        {
+          "title": "PaLM: Scaling Language Modeling with Pathways",
+          "citation": "Aakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Ben Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier Garcia, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Diaz, Orhan Firat, Michele Catasta, Jason Wei, Kathy Meier-Hellstern, Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. 2022"
+        },
+        {
+          "title": "PaLM: Scaling Language Modeling with Pathways",
+          "citation": "Aakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Ben Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier Garcia, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Diaz, Orhan Firat, Michele Catasta, Jason Wei, Kathy Meier-Hellstern, Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. 2022"
+        },
+        {
+          "title": "Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale",
+          "citation": "Reza Yazdani Aminabadi, Samyam Rajbhandari, Ammar Ahmad Awan, Cheng Li, Du Li, Elton Zheng, Olatunji Ruwase, Shaden Smith, Minjia Zhang, Jeff Rasley, and Yuxiong He. Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale. 2022"
+        },
+        {
+          "title": "Knowledge distillation: A survey",
+          "citation": "Jianping Gou, Baosheng Yu, Stephen J Maybank, and Dacheng Tao. Knowledge distillation: A survey. 2021"
+        },
+        {
+          "title": "Intriguing properties of quantization at scale",
+          "citation": "Arash Ahmadian, Saurabh Dash, Hongyu Chen, Bharat Venkitesh, Zhen Stephen Gou, Phil Blunsom, Ahmet Üstün, and Sara Hooker. Intriguing properties of quantization at scale. 2023"
+        },
+        {
+          "title": "On the representation collapse of sparse mixture of experts",
+          "citation": "Zewen Chi, Li Dong, Shaohan Huang, Damai Dai, Shuming Ma, Barun Patra, Saksham Singhal, Payal Bajaj, Xia Song, Xian-Ling Mao, Heyan Huang, and Furu Wei. On the representation collapse of sparse mixture of experts. 2022"
+        },
+        {
+          "title": "Large language models are zero-shot reasoners",
+          "citation": "Takeshi Kojima, Shixiang Shane Gu, Machel Reid, Yutaka Matsuo, and Yusuke Iwasawa. Large language models are zero-shot reasoners. 2022"
+        },
+        {
+          "title": "Distilling step-by-step! outperforming larger language models with less training data and smaller model sizes",
+          "citation": "Cheng-Yu Hsieh, Chun-Liang Li, Chih-kuan Yeh, Hootan Nakhost, Yasuhisa Fujii, Alex Ratner, Ranjay Krishna, Chen-Yu Lee, and Tomas Pfister. Distilling step-by-step! outperforming larger language models with less training data and smaller model sizes. 2023"
+        },
+        {
+          "title": "Gpt base model",
+          "citation": "OpenAI. Gpt base model. 2023"
+        },
+        {
+          "title": "Propagating knowledge updates to LMs through distillation",
+          "citation": "Shankar Padmanabhan, Yasumasa Onoe, Michael JQ Zhang, Greg Durrett, and Eunsol Choi. Propagating knowledge updates to LMs through distillation. 2023"
+        },
+        {
+          "title": "An empirical analysis of compute-optimal large language model training",
+          "citation": "Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor Cai, Eliza Rutherford, Diego de las Casas, Lisa Anne Hendricks, Johannes Welbl, Aidan Clark, Tom Hennigan, Eric Noland, Katherine Millican, George van den Driessche, Bogdan Damoc, Aurelia Guy, Simon Osindero, Karen Simonyan, Erich Elsen, Oriol Vinyals, Jack William Rae, and Laurent Sifre. An empirical analysis of compute-optimal large language model training. 2022"
+        },
+        {
+          "title": "Distilling reasoning capabilities into smaller language models",
+          "citation": "Kumar Shridhar, Alessandro Stolfo, and Mrinmaya Sachan. Distilling reasoning capabilities into smaller language models. 2023"
+        },
+        {
+          "title": "AlexaTM 20B: Few-shot learning using a large-scale multilingual seq2seq model",
+          "citation": "Saleh Soltan, Shankar Ananthakrishnan, Jack FitzGerald, Rahul Gupta, Wael Hamza, Haidar Khan, Charith Peris, Stephen Rawls, Andy Rosenbaum, Anna Rumshisky, Chandana Satya Prakash, Mukund Sridhar, Fabian Triefenbach, Apurv Verma, Gokhan Tur, and Prem Natarajan. Alexatm 20b: Few-shot learning using a large-scale multilingual seq2seq model, 2022, arXiv preprint arXiv:2208. 2022"
+        },
+        {
+          "title": "Policy gradient methods for reinforcement learning with function approximation",
+          "citation": "Richard S Sutton, David McAllester, Satinder Singh, and Yishay Mansour. Policy gradient methods for reinforcement learning with function approximation. 1999"
+        },
+        {
+          "title": "Gemini: A family of highly capable multimodal models",
+          "citation": "Gemini Team and Google. Gemini: A family of highly capable multimodal models. 2023"
+        },
+        {
+          "title": "Lamda: Language models for dialog applications",
+          "citation": "Romal Thoppilan, Daniel De Freitas, Jamie Hall, Noam Shazeer, Apoorv Kulshreshtha, Heng-Tze Cheng, Alicia Jin, Taylor Bos, Leslie Baker, Yu Du, YaGuang Li, Hongrae Lee, Huaixiu Steven Zheng, Amin Ghafouri, Marcelo Menegali, Yanping Huang, Maxim Krikun, Dmitry Lepikhin, James Qin, Dehao Chen, Yuanzhong Xu, Zhifeng Chen, Adam Roberts, Maarten Bosma, Vincent Zhao, Yanqi Zhou, Chung-Ching Chang, Igor Krivokon, Will Rusch, Marc Pickett, Pranesh Srinivasan, Laichee Man, Kathleen MeierHellstern, Meredith Ringel Morris, Tulsee Doshi, Renelito Delos Santos, Toju Duke, Johnny Soraker, Ben Zevenbergen, Vinodkumar Prabhakaran, Mark Diaz, Ben Hutchinson, Kristen Olson, Alejandra Molina, Erin Hoffman-John, Josh Lee, Lora Aroyo, Ravi Rajakumar, Alena Butryna, Matthew Lamm, Viktoriya Kuzmina, Joe Fenton, Aaron Cohen, Rachel Bernstein, Ray Kurzweil, Blaise Aguera-Arcas, Claire Cui, Marian Croak, Ed Chi, and Quoc Le. Lamda: Language models for dialog applications, 2022, arXiv preprint arXiv:2201. 2022"
+        },
+        {
+          "title": "Baby llama: knowledge distillation from an ensemble of teachers trained on a small dataset with no performance penalty",
+          "citation": "Inar Timiryasov and Jean-Loup Tastet. Baby llama: knowledge distillation from an ensemble of teachers trained on a small dataset with no performance penalty. 2023"
+        },
+        {
+          "title": "Fastmoe: A fast mixture-of-expert training system",
+          "citation": "Jiaao He, Jiezhong Qiu, Aohan Zeng, Zhilin Yang, Jidong Zhai, and Jie Tang. Fastmoe: A fast mixture-ofexpert training system, 2021, arXiv preprint arXiv:2103. 2021"
+        },
+        {
+          "title": "Reusing pretrained models by multi-linear operators for efficient training",
+          "citation": "Yu Pan, Ye Yuan, Yichun Yin, Zenglin Xu, Lifeng Shang, Xin Jiang, and Qun Liu. Reusing pretrained models by multi-linear operators for efficient training. 2023"
+        },
+        {
+          "title": "A survey on in-context learning",
+          "citation": "Qingxiu Dong, Lei Li, Damai Dai, Ce Zheng, Zhiyong Wu, Baobao Chang, Xu Sun, Jingjing Xu, Lei Li, and Zhifang Sui. A survey on in-context learning, 2023, arXiv preprint arXiv:2301. 2023"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "2.2 Efficient Pre-Training",
+      "citations": [
+        {
+          "title": "Rezero is all you need: fast convergence at large depth",
+          "citation": "Thomas Bachlechner, Bodhisattwa Prasad Majumder, Henry Mao, Gary Cottrell, and Julian McAuley. Rezero is all you need: fast convergence at large depth. 2021"
+        },
+        {
+          "title": "Language models are few-shot learners",
+          "citation": "Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel Ziegler, Jeffrey Wu, Clemens Winter, Chris Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. Language models are few-shot learners. 2020"
+        },
+        {
+          "title": "Perseus: Removing energy bloat from large model training",
+          "citation": "Jae-Won Chung, Yile Gu, Insu Jang, Luoxi Meng, Nikhil Bansal, and Mosharaf Chowdhury. Perseus: Removing energy bloat from large model training, 2023, arXiv preprint arXiv:2312. 2023"
+        },
+        {
+          "title": "Soham De and Samuel L. Smith. 2020",
+          "citation": "Soham De and Samuel L. Smith. 2020"
+        },
+        {
+          "title": "An empirical analysis of compute-optimal large language model training",
+          "citation": "Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor Cai, Eliza Rutherford, Diego de las Casas, Lisa Anne Hendricks, Johannes Welbl, Aidan Clark, Tom Hennigan, Eric Noland, Katherine Millican, George van den Driessche, Bogdan Damoc, Aurelia Guy, Simon Osindero, Karen Simonyan, Erich Elsen, Oriol Vinyals, Jack William Rae, and Laurent Sifre. An empirical analysis of compute-optimal large language model training. 2022"
+        },
+        {
+          "title": "Improving transformer optimization through better initialization",
+          "citation": "Xiao Shi Huang, Felipe Perez, Jimmy Ba, and Maksims Volkovs. Improving transformer optimization through better initialization. 2020"
+        },
+        {
+          "title": "A study of bfloat16 for deep learning training",
+          "citation": "Dhiraj Kalamkar, Dheevatsa Mudigere, Naveen Mellempudi, Dipankar Das, Kunal Banerjee, Sasikanth Avancha, Dharma Teja Vooturi, Nataraj Jammalamadaka, Jianyu Huang, Hector Yuen, Jiyan Yang, Jongsoo Park, Alexander Heinecke, Evangelos Georganas, Sudarshan Srinivasan, Abhisek Kundu, Misha Smelyanskiy, Bharat Kaul, and Pradeep Dubey. A study of bfloat16 for deep learning training, 2019, arXiv preprint arXiv:1905. 2019"
+        },
+        {
+          "title": "Decoupled weight decay regularization",
+          "citation": "Ilya Loshchilov and Frank Hutter. Decoupled weight decay regularization. 2019"
+        },
+        {
+          "title": "Zero: Memory optimizations toward training trillion parameter models",
+          "citation": "Samyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, and Yuxiong He. Zero: Memory optimizations toward training trillion parameter models. 2020"
+        },
+        {
+          "title": "Zero-infinity: Breaking the gpu memory wall for extreme scale deep learning",
+          "citation": "Samyam Rajbhandari, Olatunji Ruwase, Jeff Rasley, Shaden Smith, and Yuxiong He. Zero-infinity: Breaking the gpu memory wall for extreme scale deep learning. 2021"
+        },
+        {
+          "title": "ZeRO-Offload: Democratizing Billion-Scale model training",
+          "citation": "Jie Ren, Samyam Rajbhandari, Reza Yazdani Aminabadi, Olatunji Ruwase, Shuangyan Yang, Minjia Zhang, Dong Li, and Yuxiong He. ZeRO-Offload: Democratizing Billion-Scale model training. 2021"
+        },
+        {
+          "title": "Masked structural growth for 2x faster language model pre-training",
+          "citation": "Yiqun Yao, Zheng Zhang, Jing Li, and Yequan Wang. Masked structural growth for 2x faster language model pre-training. 2024"
+        },
+        {
+          "title": "Parallel training of pre-trained models via chunk-based dynamic memory management",
+          "citation": "Jiarui Fang, Zilin Zhu, Shenggui Li, Hui Su, Yang Yu, Jie Zhou, and Yang You. Parallel training of pre-trained models via chunk-based dynamic memory management. 2023"
+        },
+        {
+          "title": "Fixup Initialization: Residual Learning Without Normalization",
+          "citation": "Hongyi Zhang, Yann N. Dauphin, and Tengyu Ma. 2019"
+        },
+        {
+          "title": "Lamda: Language models for dialog applications",
+          "citation": "Romal Thoppilan, Daniel De Freitas, Jamie Hall, Noam Shazeer, Apoorv Kulshreshtha, Heng-Tze Cheng, Alicia Jin, Taylor Bos, Leslie Baker, Yu Du, YaGuang Li, Hongrae Lee, Huaixiu Steven Zheng, Amin Ghafouri, Marcelo Menegali, Yanping Huang, Maxim Krikun, Dmitry Lepikhin, James Qin, Dehao Chen, Yuanzhong Xu, Zhifeng Chen, Adam Roberts, Maarten Bosma, Vincent Zhao, Yanqi Zhou, Chung-Ching Chang, Igor Krivokon, Will Rusch, Marc Pickett, Pranesh Srinivasan, Laichee Man, Kathleen MeierHellstern, Meredith Ringel Morris, Tulsee Doshi, Renelito Delos Santos, Toju Duke, Johnny Soraker, Ben Zevenbergen, Vinodkumar Prabhakaran, Mark Diaz, Ben Hutchinson, Kristen Olson, Alejandra Molina, Erin Hoffman-John, Josh Lee, Lora Aroyo, Ravi Rajakumar, Alena Butryna, Matthew Lamm, Viktoriya Kuzmina, Joe Fenton, Aaron Cohen, Rachel Bernstein, Ray Kurzweil, Blaise Aguera-Arcas, Claire Cui, Marian Croak, Ed Chi, and Quoc Le. Lamda: Language models for dialog applications, 2022, arXiv preprint arXiv:2201. 2022"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "2.3.1 Parameter-Efficient Fine-Tuning",
+      "citations": [
+        {
+          "title": "Meta-adapters: Parameter efficient few-shot fine-tuning through meta-learning",
+          "citation": "Trapit Bansal, Salaheddin Alzubi, Tong Wang, Jay-Yoon Lee, and Andrew McCallum. Meta-adapters: Parameter efficient few-shot fine-tuning through meta-learning. 2022"
+        },
+        {
+          "title": "Multihead adapter routing for cross-task generalization",
+          "citation": "Lucas Caccia, Edoardo Ponti, Zhan Su, Matheus Pereira, Nicolas Le Roux, and Alessandro Sordoni. Multihead adapter routing for cross-task generalization. 2023"
+        },
+        {
+          "title": "Parameter-efficient transfer learning for NLP",
+          "citation": "Neil Houlsby, Andrei Giurgiu, Stanislaw Jastrzebski, Bruna Morrone, Quentin De Laroussilhe, Andrea Gesmundo, Mona Attariyan, and Sylvain Gelly. Parameter-efficient transfer learning for NLP. 2019"
+        },
+        {
+          "title": "On the representation collapse of sparse mixture of experts",
+          "citation": "Zewen Chi, Li Dong, Shaohan Huang, Damai Dai, Shuming Ma, Barun Patra, Saksham Singhal, Payal Bajaj, Xia Song, Xian-Ling Mao, Heyan Huang, and Furu Wei. On the representation collapse of sparse mixture of experts. 2022"
+        },
+        {
+          "title": "Lorahub: Efficient crosstask generalization via dynamic lora composition",
+          "citation": "Chengsong Huang, Qian Liu, Bill Yuchen Lin, Tianyu Pang, Chao Du, and Min Lin. Lorahub: Efficient crosstask generalization via dynamic lora composition, 2023, arXiv preprint arXiv:2307. 2023"
+        },
+        {
+          "title": "The power of scale for parameter-efficient prompt tuning",
+          "citation": "Brian Lester, Rami Al-Rfou, and Noah Constant. The power of scale for parameter-efficient prompt tuning. 2021"
+        },
+        {
+          "title": "Rethinking attention with performers",
+          "citation": "Krzysztof Marcin Choromanski, Valerii Likhosherstov, David Dohan, Xingyou Song, Andreea Gane, Tamas Sarlos, Peter Hawkins, Jared Quincy Davis, Afroz Mohiuddin, Lukasz Kaiser, David Benjamin Belanger, Lucy J Colwell, and Adrian Weller. Rethinking attention with performers, 2021. 2021"
+        },
+        {
+          "title": "Hypertuning: toward adapting large language models without back-propagation",
+          "citation": "Jason Phang, Yi Mao, Pengcheng He, and Weizhu Chen. Hypertuning: toward adapting large language models without back-propagation. 2023"
+        },
+        {
+          "title": "Multihead adapter routing for cross-task generalization",
+          "citation": "Lucas Caccia, Edoardo Ponti, Zhan Su, Matheus Pereira, Nicolas Le Roux, and Alessandro Sordoni. Multihead adapter routing for cross-task generalization. 2023"
+        },
+        {
+          "title": "Tied-lora: Enhacing parameter efficiency of lora with weight tying",
+          "citation": "Adithya Renduchintala, Tugrul Konuk, and Oleksii Kuchaiev. Tied-lora: Enhacing parameter efficiency of lora with weight tying, 2023, arXiv preprint arXiv:2311. 2023"
+        },
+        {
+          "title": "A Survey on Evaluation of Large Language Models",
+          "citation": "Yupeng Chang, Xu Wang, Jindong Wang, Yuan Wu, Linyi Yang, Kaijie Zhu, Hao Chen, Xiaoyuan Yi, Cunxiang Wang, Yidong Wang, Wei Ye, Yue Zhang, Yi Chang, Philip S. Yu, Qiang Yang, and Xing Xie. 2024"
+        },
+        {
+          "title": "Taming sparsely activated transformer with stochastic experts",
+          "citation": "Simiao Zuo, Xiaodong Liu, Jian Jiao, Young Jin Kim, Hany Hassan, Ruofei Zhang, Jianfeng Gao, and Tuo Zhao. Taming sparsely activated transformer with stochastic experts. 2022"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "2.3.2 Memory-Efficient Fine-Tuning",
+      "citations": [
+        {
+          "title": "SparseGPT: Massive language models can be accurately pruned in oneshot",
+          "citation": "Elias Frantar and Dan Alistarh. SparseGPT: Massive language models can be accurately pruned in oneshot. 2023"
+        },
+        {
+          "title": "On the representation collapse of sparse mixture of experts",
+          "citation": "Zewen Chi, Li Dong, Shaohan Huang, Damai Dai, Shuming Ma, Barun Patra, Saksham Singhal, Payal Bajaj, Xia Song, Xian-Ling Mao, Heyan Huang, and Furu Wei. On the representation collapse of sparse mixture of experts. 2022"
+        },
+        {
+          "title": "Rethinking attention with performers",
+          "citation": "Krzysztof Marcin Choromanski, Valerii Likhosherstov, David Dohan, Xingyou Song, Andreea Gane, Tamas Sarlos, Peter Hawkins, Jared Quincy Davis, Afroz Mohiuddin, Lukasz Kaiser, David Benjamin Belanger, Lucy J Colwell, and Adrian Weller. Rethinking attention with performers, 2021. 2021"
+        },
+        {
+          "title": "Fine-tuning Language Models with Just Forward Passes",
+          "citation": "Sadhika Malladi, Tianyu Gao, Eshaan Nichani, Alex Damian, Jason D. Lee, Danqi Chen, and Sanjeev Arora. 2023"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "9",
+      "sec_title": "2.4 Efficient Inference",
+      "citations": [
+        {
+          "title": "Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale",
+          "citation": "Reza Yazdani Aminabadi, Samyam Rajbhandari, Ammar Ahmad Awan, Cheng Li, Du Li, Elton Zheng, Olatunji Ruwase, Shaden Smith, Minjia Zhang, Jeff Rasley, and Yuxiong He. Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale. 2022"
+        },
+        {
+          "title": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+          "citation": "Tianle Cai, Yuhong Li, Zhengyang Geng, Hongwu Peng, Jason D. Lee, Deming Chen, and Tri Dao. 2024"
+        },
+        {
+          "title": "PaLM: Scaling Language Modeling with Pathways",
+          "citation": "Aakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Ben Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier Garcia, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Diaz, Orhan Firat, Michele Catasta, Jason Wei, Kathy Meier-Hellstern, Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. 2022"
+        },
+        {
+          "title": "Flashattention: Fast and memoryefficient exact attention with io-awareness",
+          "citation": "Tri Dao, Dan Fu, Stefano Ermon, Atri Rudra, and Christopher Ré. Flashattention: Fast and memoryefficient exact attention with io-awareness. 2022"
+        },
+        {
+          "title": "Flash-decoding for long-context inference",
+          "citation": "Tri Dao, Daniel Haziza, Francisco Massa, and Grigory Sizov. Flash-decoding for long-context inference. 2023"
+        },
+        {
+          "title": "Intriguing properties of quantization at scale",
+          "citation": "Arash Ahmadian, Saurabh Dash, Hongyu Chen, Bharat Venkitesh, Zhen Stephen Gou, Phil Blunsom, Ahmet Üstün, and Sara Hooker. Intriguing properties of quantization at scale. 2023"
+        },
+        {
+          "title": "A survey on in-context learning",
+          "citation": "Qingxiu Dong, Lei Li, Damai Dai, Ce Zheng, Zhiyong Wu, Baobao Chang, Xu Sun, Jingjing Xu, Lei Li, and Zhifang Sui. A survey on in-context learning, 2023, arXiv preprint arXiv:2301. 2023"
+        },
+        {
+          "title": "Efficient memory management for large language model serving with pagedattention",
+          "citation": "Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph Gonzalez, Hao Zhang, and Ion Stoica. Efficient memory management for large language model serving with pagedattention. 2023"
+        },
+        {
+          "title": "Fast inference from transformers via speculative decoding",
+          "citation": "Yaniv Leviathan, Matan Kalman, and Yossi Matias. Fast inference from transformers via speculative decoding. 2023"
+        },
+        {
+          "title": "Specinfer: Accelerating generative large language model serving with tree-based speculative inference and verification",
+          "citation": "Xupeng Miao, Gabriele Oliaro, Zhihao Zhang, Xinhao Cheng, Zeyu Wang, Zhengxin Zhang, Rae Ying Yee Wong, Alan Zhu, Lijie Yang, Xiaoxiang Shi, Chunan Shi, Zhuoming Chen, Daiyaan Arfeen, Reyna Abhyankar, and Zhihao Jia. Specinfer: Accelerating generative large language model serving with tree-based speculative inference and verification, 2024, arXiv preprint arXiv:2305. 2024"
+        },
+        {
+          "title": "Parallel training of pre-trained models via chunk-based dynamic memory management",
+          "citation": "Jiarui Fang, Zilin Zhu, Shenggui Li, Hui Su, Yang Yu, Jie Zhou, and Yang You. Parallel training of pre-trained models via chunk-based dynamic memory management. 2023"
+        },
+        {
+          "title": "Accelerating llm inference with staged speculative decoding",
+          "citation": "Benjamin Spector and Chris Re. Accelerating llm inference with staged speculative decoding, 2023, arXiv preprint arXiv:2308. 2023"
+        },
+        {
+          "title": "A Survey on Evaluation of Large Language Models",
+          "citation": "Yupeng Chang, Xu Wang, Jindong Wang, Yuan Wu, Linyi Yang, Kaijie Zhu, Hao Chen, Xiaoyuan Yi, Cunxiang Wang, Yidong Wang, Wei Ye, Yue Zhang, Yi Chang, Philip S. Yu, Qiang Yang, and Xing Xie. 2024"
+        },
+        {
+          "title": "Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale",
+          "citation": "Reza Yazdani Aminabadi, Samyam Rajbhandari, Ammar Ahmad Awan, Cheng Li, Du Li, Elton Zheng, Olatunji Ruwase, Shaden Smith, Minjia Zhang, Jeff Rasley, and Yuxiong He. Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale. 2022"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "10",
+      "sec_title": "2.5.1 Efficient Attention",
+      "citations": [
+        {
+          "title": "GQA: Training generalized multi-query transformer models from multi-head checkpoints",
+          "citation": "Joshua Ainslie, James Lee-Thorp, Michiel de Jong, Yury Zemlyanskiy, Federico Lebron, and Sumit Sanghai. GQA: Training generalized multi-query transformer models from multi-head checkpoints. 2023"
+        },
+        {
+          "title": "Sumformer: Universal approximation for efficient transformers",
+          "citation": "Silas Alberti, Niclas Dern, Laura Thesing, and Gitta Kutyniok. Sumformer: Universal approximation for efficient transformers. 2023"
+        },
+        {
+          "title": "Longformer: The Long-Document Transformer",
+          "citation": "Iz Beltagy, Matthew E. Peters, and Arman Cohan. 2020"
+        },
+        {
+          "title": "Generating long sequences with sparse transformers",
+          "citation": "Rewon Child, Scott Gray, Alec Radford, and Ilya Sutskever. Generating long sequences with sparse transformers, 2019, arXiv preprint arXiv:1904. 2019"
+        },
+        {
+          "title": "Masked language modeling for proteins via linearly scalable long-context transformers",
+          "citation": "Krzysztof Choromanski, Valerii Likhosherstov, David Dohan, Xingyou Song, Andreea Gane, Tamas Sarlos, Peter Hawkins, Jared Davis, David Belanger, Lucy Colwell, and Adrian Weller. Masked language modeling for proteins via linearly scalable long-context transformers, 2020, arXiv preprint arXiv:2006. 2020"
+        },
+        {
+          "title": "Rethinking attention with performers",
+          "citation": "Krzysztof Marcin Choromanski, Valerii Likhosherstov, David Dohan, Xingyou Song, Andreea Gane, Tamas Sarlos, Peter Hawkins, Jared Quincy Davis, Afroz Mohiuddin, Lukasz Kaiser, David Benjamin Belanger, Lucy J Colwell, and Adrian Weller. Rethinking attention with performers, 2021. 2021"
+        },
+        {
+          "title": "Flashattention: Fast and memoryefficient exact attention with io-awareness",
+          "citation": "Tri Dao, Dan Fu, Stefano Ermon, Atri Rudra, and Christopher Ré. Flashattention: Fast and memoryefficient exact attention with io-awareness. 2022"
+        },
+        {
+          "title": "On the computational complexity of self-attention",
+          "citation": "Feyza Duman Keles, Pruthuvi Mahesakya Wijewardena, and Chinmay Hegde. On the computational complexity of self-attention. 2023"
+        },
+        {
+          "title": "Flurka: Fast fused low-rank & kernel attention",
+          "citation": "Ahan Gupta, Yueming Yuan, Yanqi Zhou, and Charith Mendis. Flurka: Fast fused low-rank &amp; kernel attention, 2023, arXiv preprint arXiv:2306. 2023"
+        },
+        {
+          "title": "Hyperattention: Long-context attention in near-linear time",
+          "citation": "Insu Han, Rajesh Jayaram, Amin Karbasi, Vahab Mirrokni, David Woodruff, and Amir Zandieh. Hyperattention: Long-context attention in near-linear time. 2024"
+        },
+        {
+          "title": "Transformers are RNNs: Fast autoregressive transformers with linear attention",
+          "citation": "Angelos Katharopoulos, Apoorv Vyas, Nikolaos Pappas, and François Fleuret. Transformers are RNNs: Fast autoregressive transformers with linear attention. 2020"
+        },
+        {
+          "title": "Reformer: The efficient transformer",
+          "citation": "Nikita Kitaev, Lukasz Kaiser, and Anselm Levskaya. Reformer: The efficient transformer. 2020"
+        },
+        {
+          "title": "Fast attention over long sequences with dynamic sparse flash attention",
+          "citation": "Matteo Pagliardini, Daniele Paliotta, Martin Jaggi, and François Fleuret. Fast attention over long sequences with dynamic sparse flash attention. 2023"
+        },
+        {
+          "title": "Random feature attention",
+          "citation": "Hao Peng, Nikolaos Pappas, Dani Yogatama, Roy Schwartz, Noah Smith, and Lingpeng Kong. Random feature attention. 2021"
+        },
+        {
+          "title": "vattention: Dynamic memory management for serving llms without pagedattention",
+          "citation": "Ramya Prabhu, Ajay Nayak, Jayashree Mohan, Ramachandran Ramjee, and Ashish Panwar. vattention: Dynamic memory management for serving llms without pagedattention, 2024, arXiv preprint arXiv:2405. 2024"
+        },
+        {
+          "title": "Blockwise self-attention for long document understanding",
+          "citation": "Jiezhong Qiu, Hao Ma, Omer Levy, Wen-tau Yih, Sinong Wang, and Jie Tang. Blockwise self-attention for long document understanding. 2020"
+        },
+        {
+          "title": "Random feature attention",
+          "citation": "Hao Peng, Nikolaos Pappas, Dani Yogatama, Roy Schwartz, Noah Smith, and Lingpeng Kong. Random feature attention. 2021"
+        },
+        {
+          "title": "Fast transformer decoding: One write-head is all you need",
+          "citation": "Noam Shazeer. Fast transformer decoding: One write-head is all you need, 2019, arXiv preprint arXiv:1911. 2019"
+        },
+        {
+          "title": "Autoprompt: Eliciting Knowledge from Language Models with Automatically Generated Prompts",
+          "citation": "Taylor Shin, Yasaman Razeghi, Robert L. Logan IV, Eric Wallace, and Sameer Singh. 2020"
+        },
+        {
+          "title": "Transformers are RNNs: Fast autoregressive transformers with linear attention",
+          "citation": "Angelos Katharopoulos, Apoorv Vyas, Nikolaos Pappas, and François Fleuret. Transformers are RNNs: Fast autoregressive transformers with linear attention. 2020"
+        },
+        {
+          "title": "Blockwise self-attention for long document understanding",
+          "citation": "Jiezhong Qiu, Hao Ma, Omer Levy, Wen-tau Yih, Sinong Wang, and Jie Tang. Blockwise self-attention for long document understanding. 2020"
+        },
+        {
+          "title": "Lightweight and efficient end-to-end speech recognition using low-rank transformer",
+          "citation": "Genta Indra Winata, Samuel Cahyawijaya, Zhaojiang Lin, Zihan Liu, and Pascale Fung. Lightweight and efficient end-to-end speech recognition using low-rank transformer. 2020"
+        },
+        {
+          "title": "Big bird: transformers for longer sequences",
+          "citation": "Manzil Zaheer, Guru Guruganesh, Avinava Dubey, Joshua Ainslie, Chris Alberti, Santiago Ontanon, Philip Pham, Anirudh Ravula, Qifan Wang, Li Yang, and Amr Ahmed. Big bird: transformers for longer sequences. 2020"
+        },
+        {
+          "title": "ZeRO-Offload: Democratizing Billion-Scale model training",
+          "citation": "Jie Ren, Samyam Rajbhandari, Reza Yazdani Aminabadi, Olatunji Ruwase, Shuangyan Yang, Minjia Zhang, Dong Li, and Yuxiong He. ZeRO-Offload: Democratizing Billion-Scale model training. 2021"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "11",
+      "sec_title": "2.5.2 Mixture of Experts (MoE)",
+      "citations": [
+        {
+          "title": "On the representation collapse of sparse mixture of experts",
+          "citation": "Zewen Chi, Li Dong, Shaohan Huang, Damai Dai, Shuming Ma, Barun Patra, Saksham Singhal, Payal Bajaj, Xia Song, Xian-Ling Mao, Heyan Huang, and Furu Wei. On the representation collapse of sparse mixture of experts. 2022"
+        },
+        {
+          "title": "On the representation collapse of sparse mixture of experts",
+          "citation": "Zewen Chi, Li Dong, Shaohan Huang, Damai Dai, Shuming Ma, Barun Patra, Saksham Singhal, Payal Bajaj, Xia Song, Xian-Ling Mao, Heyan Huang, and Furu Wei. On the representation collapse of sparse mixture of experts. 2022"
+        },
+        {
+          "title": "PaLM: Scaling Language Modeling with Pathways",
+          "citation": "Aakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Ben Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier Garcia, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Diaz, Orhan Firat, Michele Catasta, Jason Wei, Kathy Meier-Hellstern, Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. 2022"
+        },
+        {
+          "title": "Megablocks: Efficient sparse training with mixture-of-experts",
+          "citation": "Trevor Gale, Deepak Narayanan, Cliff Young, and Matei Zaharia. Megablocks: Efficient sparse training with mixture-of-experts. 2023"
+        },
+        {
+          "title": "Rezero is all you need: fast convergence at large depth",
+          "citation": "Thomas Bachlechner, Bodhisattwa Prasad Majumder, Henry Mao, Gary Cottrell, and Julian McAuley. Rezero is all you need: fast convergence at large depth. 2021"
+        },
+        {
+          "title": "Tutel: Adaptive mixture-of-experts at scale",
+          "citation": "Changho Hwang, Wei Cui, Yifan Xiong, Ziyue Yang, Ze Liu, Han Hu, Zilong Wang, Rafael Salas, Jithin Jose, Prabhat Ram, Joe Chau, Peng Cheng, Fan Yang, Mao Yang, and Yongqiang Xiong. Tutel: Adaptive mixture-of-experts at scale. 2023"
+        },
+        {
+          "title": "Challenges and applications of large language models",
+          "citation": "Jean Kaddour, Joshua Harris, Maximilian Mozes, Herbie Bradley, Roberta Raileanu, and Robert McHardy. Challenges and applications of large language models, 2023, arXiv preprint arXiv:2307. 2023"
+        },
+        {
+          "title": "Gshard: Scaling giant models with conditional computation and automatic sharding",
+          "citation": "Dmitry Lepikhin, HyoukJoong Lee, Yuanzhong Xu, Dehao Chen, Orhan Firat, Yanping Huang, Maxim Krikun, Noam Shazeer, and Zhifeng Chen. Gshard: Scaling giant models with conditional computation and automatic sharding. 2021"
+        },
+        {
+          "title": "BASE Layers: Simplifying training of large, sparse models",
+          "citation": "Mike Lewis, Shruti Bhosale, Tim Dettmers, Naman Goyal, and Luke Zettlemoyer. BASE Layers: Simplifying training of large, sparse models. 2021"
+        },
+        {
+          "title": "Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale",
+          "citation": "Reza Yazdani Aminabadi, Samyam Rajbhandari, Ammar Ahmad Awan, Cheng Li, Du Li, Elton Zheng, Olatunji Ruwase, Shaden Smith, Minjia Zhang, Jeff Rasley, and Yuxiong He. Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale. 2022"
+        },
+        {
+          "title": "Instruction mining: When data mining meets large language model finetuning, 2023",
+          "citation": "Yihan Cao, Yanbin Kang, Chi Wang, and Lichao Sun. Instruction mining: When data mining meets large language model finetuning, 2023, arXiv preprint arXiv:2307. 2023"
+        },
+        {
+          "title": "GLM-130b: An open bilingual pre-trained model",
+          "citation": "Aohan Zeng, Xiao Liu, Zhengxiao Du, Zihan Wang, Hanyu Lai, Ming Ding, Zhuoyi Yang, Yifan Xu, Wendi Zheng, Xiao Xia, Weng Lam Tam, Zixuan Ma, Yufei Xue, Jidong Zhai, Wenguang Chen, Zhiyuan Liu, Peng Zhang, Yuxiao Dong, and Jie Tang. GLM-130b: An open bilingual pre-trained model. 2023"
+        },
+        {
+          "title": "Efficient large scale language modeling with mixtures of experts",
+          "citation": "Mikel Artetxe, Shruti Bhosale, Naman Goyal, Todor Mihaylov, Myle Ott, Sam Shleifer, Xi Victoria Lin, Jingfei Du, Srinivasan Iyer, Ramakanth Pasunuru, Giridharan Anantharaman, Xian Li, Shuohui Chen, Halil Akin, Mandeep Baines, Louis Martin, Xing Zhou, Punit Singh Koura, Brian O'Horo, Jeffrey Wang, Luke Zettlemoyer, Mona Diab, Zornitsa Kozareva, and Veselin Stoyanov. Efficient large scale language modeling with mixtures of experts. 2022"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "12",
+      "sec_title": "2.5.3 Long Context LLMs",
+      "citations": [
+        {
+          "title": "Unsupervised Scalable Representation Learning for Multivariate Time Series",
+          "citation": "Amanda Bertsch, Uri Alon, Graham Neubig, and Matthew R. Gormley. 2023"
+        },
+        {
+          "title": "Recurrent memory transformer",
+          "citation": "Aydar Bulatov, Yuri Kuratov, and Mikhail Burtsev. Recurrent memory transformer. 2022"
+        },
+        {
+          "title": "TransformerXL: Attentive language models beyond a fixed-length context",
+          "citation": "Zihang Dai, Zhilin Yang, Yiming Yang, Jaime Carbonell, Quoc Le, and Ruslan Salakhutdinov. TransformerXL: Attentive language models beyond a fixed-length context. 2019"
+        },
+        {
+          "title": "An empirical analysis of compute-optimal large language model training",
+          "citation": "Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor Cai, Eliza Rutherford, Diego de las Casas, Lisa Anne Hendricks, Johannes Welbl, Aidan Clark, Tom Hennigan, Eric Noland, Katherine Millican, George van den Driessche, Bogdan Damoc, Aurelia Guy, Simon Osindero, Karen Simonyan, Erich Elsen, Oriol Vinyals, Jack William Rae, and Laurent Sifre. An empirical analysis of compute-optimal large language model training. 2022"
+        },
+        {
+          "title": "PaLM: Scaling Language Modeling with Pathways",
+          "citation": "Aakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Ben Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier Garcia, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Diaz, Orhan Firat, Michele Catasta, Jason Wei, Kathy Meier-Hellstern, Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. 2022"
+        },
+        {
+          "title": "Efficient long-text understanding with short-text models",
+          "citation": "Maor Ivgi, Uri Shaham, and Jonathan Berant. Efficient long-text understanding with short-text models. 2023"
+        },
+        {
+          "title": "∞ -former: Infinite memory transformer",
+          "citation": "Pedro Henrique Martins, Zita Marinho, and Andre Martins. ∞ -former: Infinite memory transformer. 2022"
+        },
+        {
+          "title": "Landmark attention: Random-access infinite context length for transformers",
+          "citation": "Amirkeivan Mohtashami and Martin Jaggi. Landmark attention: Random-access infinite context length for transformers, 2023, arXiv preprint arXiv:2305. 2023"
+        },
+        {
+          "title": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+          "citation": "Tianle Cai, Yuhong Li, Zhengyang Geng, Hongwu Peng, Jason D. Lee, Deming Chen, and Tri Dao. 2024"
+        },
+        {
+          "title": "Train short, test long: Attention with linear biases enables input length extrapolation",
+          "citation": "Ofir Press, Noah Smith, and Mike Lewis. Train short, test long: Attention with linear biases enables input length extrapolation. 2022"
+        },
+        {
+          "title": "An empirical analysis of compute-optimal large language model training",
+          "citation": "Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor Cai, Eliza Rutherford, Diego de las Casas, Lisa Anne Hendricks, Johannes Welbl, Aidan Clark, Tom Hennigan, Eric Noland, Katherine Millican, George van den Driessche, Bogdan Damoc, Aurelia Guy, Simon Osindero, Karen Simonyan, Erich Elsen, Oriol Vinyals, Jack William Rae, and Laurent Sifre. An empirical analysis of compute-optimal large language model training. 2022"
+        },
+        {
+          "title": "Distilling step-by-step! outperforming larger language models with less training data and smaller model sizes",
+          "citation": "Cheng-Yu Hsieh, Chun-Liang Li, Chih-kuan Yeh, Hootan Nakhost, Yasuhisa Fujii, Alex Ratner, Ranjay Krishna, Chen-Yu Lee, and Tomas Pfister. Distilling step-by-step! outperforming larger language models with less training data and smaller model sizes. 2023"
+        },
+        {
+          "title": "RAPTOR: Recursive abstractive processing for tree-organized retrieval",
+          "citation": "Parth Sarthi, Salman Abdullah, Aditi Tuli, Shubh Khanna, Anna Goldie, and Christopher D Manning. RAPTOR: Recursive abstractive processing for tree-organized retrieval. 2024"
+        },
+        {
+          "title": "Self-attention with relative position representations",
+          "citation": "Peter Shaw, Jakob Uszkoreit, and Ashish Vaswani. Self-attention with relative position representations. 2018"
+        },
+        {
+          "title": "Attention is all you need",
+          "citation": "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Ł ukasz Kaiser, and Illia Polosukhin. Attention is all you need. 2017"
+        },
+        {
+          "title": "A Survey on Evaluation of Large Language Models",
+          "citation": "Yupeng Chang, Xu Wang, Jindong Wang, Yuan Wu, Linyi Yang, Kaijie Zhu, Hao Chen, Xiaoyuan Yi, Cunxiang Wang, Yidong Wang, Wei Ye, Yue Zhang, Yi Chang, Philip S. Yu, Qiang Yang, and Xing Xie. 2024"
+        },
+        {
+          "title": "A Survey on Evaluation of Large Language Models",
+          "citation": "Yupeng Chang, Xu Wang, Jindong Wang, Yuan Wu, Linyi Yang, Kaijie Zhu, Hao Chen, Xiaoyuan Yi, Cunxiang Wang, Yidong Wang, Wei Ye, Yue Zhang, Yi Chang, Philip S. Yu, Qiang Yang, and Xing Xie. 2024"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "13",
+      "sec_title": "2.5.4 Transformer-Alternate Architectures",
+      "citations": [
+        {
+          "title": "Diagonal state spaces are as effective as structured state spaces",
+          "citation": "Ankit Gupta, Albert Gu, and Jonathan Berant. Diagonal state spaces are as effective as structured state spaces. 2022"
+        },
+        {
+          "title": "Blockstate transformers",
+          "citation": "Jonathan Pilault, Mahan Fathi, Orhan Firat, Christopher Pal, Pierre-Luc Bacon, and Ross Goroshin. Blockstate transformers. 2023"
+        },
+        {
+          "title": "Efficient training of BERT by progressively stacking",
+          "citation": "Linyuan Gong, Di He, Zhuohan Li, Tao Qin, Liwei Wang, and Tieyan Liu. Efficient training of BERT by progressively stacking. 2019"
+        },
+        {
+          "title": "MEGABYTE: Predicting million-byte sequences with multiscale transformers",
+          "citation": "LILI YU, Daniel Simig, Colin Flaherty, Armen Aghajanyan, Luke Zettlemoyer, and Mike Lewis. MEGABYTE: Predicting million-byte sequences with multiscale transformers. 2023"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "14",
+      "sec_title": "3.1.1 Data Selection for Efficient Pre-Training",
+      "citations": [
+        {
+          "title": "Span selection pre-training for question answering",
+          "citation": "Michael Glass, Alfio Gliozzo, Rishav Chakravarti, Anthony Ferritto, Lin Pan, G P Shrivatsa Bhargav, Dinesh Garg, and Avi Sil. Span selection pre-training for question answering. 2020"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "15",
+      "sec_title": "3.1.2 Data Selection for Efficient Fine-Tuning",
+      "citations": [
+        {
+          "title": "Instruction mining: When data mining meets large language model finetuning, 2023",
+          "citation": "Yihan Cao, Yanbin Kang, Chi Wang, and Lichao Sun. Instruction mining: When data mining meets large language model finetuning, 2023, arXiv preprint arXiv:2307. 2023"
+        },
+        {
+          "title": "Data selection for fine-tuning large language models using transferred shapley values",
+          "citation": "Stephanie Schoch, Ritwick Mishra, and Yangfeng Ji. Data selection for fine-tuning large language models using transferred shapley values. 2023"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "16",
+      "sec_title": "3.2.1 Few-Shot Prompting",
+      "citations": [
+        {
+          "title": "Graph of thoughts: Solving elaborate problems with large language models",
+          "citation": "Maciej Besta, Nils Blach, Ales Kubicek, Robert Gerstenberger, Michal Podstawski, Lukas Gianinazzi, Joanna Gajda, Tomasz Lehmann, Hubert Niewiadomski, Piotr Nyczyk, and Torsten Hoefler. Graph of thoughts: Solving elaborate problems with large language models. 2024"
+        },
+        {
+          "title": "Contrastive chain-of-thought prompting",
+          "citation": "Yew Ken Chia, Guizhen Chen, Luu Anh Tuan, Soujanya Poria, and Lidong Bing. Contrastive chain-ofthought prompting, 2023, arXiv preprint arXiv:2311. 2023"
+        },
+        {
+          "title": "A survey on in-context learning",
+          "citation": "Qingxiu Dong, Lei Li, Damai Dai, Ce Zheng, Zhiyong Wu, Baobao Chang, Xu Sun, Jingjing Xu, Lei Li, and Zhifang Sui. A survey on in-context learning, 2023, arXiv preprint arXiv:2301. 2023"
+        },
+        {
+          "title": "Instruction Tuning with Human Feedback",
+          "citation": "Or Honovich, Uri Shaham, Samuel R. Bowman, and Omer Levy. 2023"
+        },
+        {
+          "title": "Lorahub: Efficient crosstask generalization via dynamic lora composition",
+          "citation": "Chengsong Huang, Qian Liu, Bill Yuchen Lin, Tianyu Pang, Chao Du, and Min Lin. Lorahub: Efficient crosstask generalization via dynamic lora composition, 2023, arXiv preprint arXiv:2307. 2023"
+        },
+        {
+          "title": "Skeleton-of-thought: Prompting LLMs for efficient parallel generation",
+          "citation": "Xuefei Ning, Zinan Lin, Zixuan Zhou, Zifu Wang, Huazhong Yang, and Yu Wang. Skeleton-of-thought: Prompting LLMs for efficient parallel generation. 2024"
+        },
+        {
+          "title": "Measuring and narrowing the compositionality gap in language models",
+          "citation": "Ofir Press, Muru Zhang, Sewon Min, Ludwig Schmidt, Noah Smith, and Mike Lewis. Measuring and narrowing the compositionality gap in language models. 2023"
+        },
+        {
+          "title": "Learning to retrieve prompts for in-context learning",
+          "citation": "Ohad Rubin, Jonathan Herzig, and Jonathan Berant. Learning to retrieve prompts for in-context learning. 2022"
+        },
+        {
+          "title": "Selective Annotation Makes Language Models Better Few-Shot Learners",
+          "citation": "Hongjin SU, Jungo Kasai, Chen Henry Wu, Weijia Shi, Tianlu Wang, Jiayi Xin, Rui Zhang, Mari Ostendorf, Luke Zettlemoyer, Noah A. Smith, and Tao Yu. 2023"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "17",
+      "sec_title": "3.2.2 Prompt Compression",
+      "citations": [
+        {
+          "title": "LongLLMLingua: Accelerating and enhancing LLMs in long context scenarios via prompt compression",
+          "citation": "Huiqiang Jiang, Qianhui Wu, Xufang Luo, Dongsheng Li, Chin-Yew Lin, Yuqing Yang, and Lili Qiu. LongLLMLingua: Accelerating and enhancing LLMs in long context scenarios via prompt compression. 2024"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "18",
+      "sec_title": "3.2.3 Prompt Generation",
+      "citations": [
+        {
+          "title": "Autoprompt: Eliciting Knowledge from Language Models with Automatically Generated Prompts",
+          "citation": "Taylor Shin, Yasaman Razeghi, Robert L. Logan IV, Eric Wallace, and Sameer Singh. 2020"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "19",
+      "sec_title": "4 LLM Frameworks",
+      "citations": [
+        {
+          "title": "Intriguing properties of quantization at scale",
+          "citation": "Arash Ahmadian, Saurabh Dash, Hongyu Chen, Bharat Venkitesh, Zhen Stephen Gou, Phil Blunsom, Ahmet Üstün, and Sara Hooker. Intriguing properties of quantization at scale. 2023"
+        },
+        {
+          "title": "Flashattention-2: Faster attention with better parallelism and work partitioning",
+          "citation": "Tri Dao. Flashattention-2: Faster attention with better parallelism and work partitioning. 2024"
+        },
+        {
+          "title": "Flashattention: Fast and memoryefficient exact attention with io-awareness",
+          "citation": "Tri Dao, Dan Fu, Stefano Ermon, Atri Rudra, and Christopher Ré. Flashattention: Fast and memoryefficient exact attention with io-awareness. 2022"
+        },
+        {
+          "title": "Flashattention: Fast and memoryefficient exact attention with io-awareness",
+          "citation": "Tri Dao, Dan Fu, Stefano Ermon, Atri Rudra, and Christopher Ré. Flashattention: Fast and memoryefficient exact attention with io-awareness. 2022"
+        },
+        {
+          "title": "GPT3",
+          "citation": "Tim Dettmers, Mike Lewis, Younes Belkada, and Luke Zettlemoyer. GPT3. 2022"
+        },
+        {
+          "title": "SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression",
+          "citation": "Tim Dettmers, Ruslan A. Svirschevski, Vage Egiazarian, Denis Kuznedelev, Elias Frantar, Saleh Ashkboos, Alexander Borzunov, Torsten Hoefler, and Dan Alistarh. 2024"
+        },
+        {
+          "title": "GPT3",
+          "citation": "Tim Dettmers, Mike Lewis, Younes Belkada, and Luke Zettlemoyer. GPT3. 2022"
+        },
+        {
+          "title": "SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression",
+          "citation": "Tim Dettmers, Ruslan A. Svirschevski, Vage Egiazarian, Denis Kuznedelev, Elias Frantar, Saleh Ashkboos, Alexander Borzunov, Torsten Hoefler, and Dan Alistarh. 2024"
+        },
+        {
+          "title": "Fairscale: A general purpose modular pytorch library for high performance and large scale training",
+          "citation": "FairScale authors. Fairscale: A general purpose modular pytorch library for high performance and large scale training. 2021"
+        },
+        {
+          "title": "Parallel training of pre-trained models via chunk-based dynamic memory management",
+          "citation": "Jiarui Fang, Zilin Zhu, Shenggui Li, Hui Su, Yang Yu, Jie Zhou, and Yang You. Parallel training of pre-trained models via chunk-based dynamic memory management. 2023"
+        },
+        {
+          "title": "Parallel training of pre-trained models via chunk-based dynamic memory management",
+          "citation": "Jiarui Fang, Zilin Zhu, Shenggui Li, Hui Su, Yang Yu, Jie Zhou, and Yang You. Parallel training of pre-trained models via chunk-based dynamic memory management. 2023"
+        },
+        {
+          "title": "SparseGPT: Massive language models can be accurately pruned in oneshot",
+          "citation": "Elias Frantar and Dan Alistarh. SparseGPT: Massive language models can be accurately pruned in oneshot. 2023"
+        },
+        {
+          "title": "SparseGPT: Massive language models can be accurately pruned in oneshot",
+          "citation": "Elias Frantar and Dan Alistarh. SparseGPT: Massive language models can be accurately pruned in oneshot. 2023"
+        },
+        {
+          "title": "Megablocks: Efficient sparse training with mixture-of-experts",
+          "citation": "Trevor Gale, Deepak Narayanan, Cliff Young, and Matei Zaharia. Megablocks: Efficient sparse training with mixture-of-experts. 2023"
+        },
+        {
+          "title": "Megablocks: Efficient sparse training with mixture-of-experts",
+          "citation": "Trevor Gale, Deepak Narayanan, Cliff Young, and Matei Zaharia. Megablocks: Efficient sparse training with mixture-of-experts. 2023"
+        },
+        {
+          "title": "Policy shaping: Integrating human feedback with reinforcement learning",
+          "citation": "Shane Griffith, Kaushik Subramanian, Jonathan Scholz, Charles L Isbell, and Andrea L Thomaz. Policy shaping: Integrating human feedback with reinforcement learning. 2013"
+        },
+        {
+          "title": "Contrastive chain-of-thought prompting",
+          "citation": "Yew Ken Chia, Guizhen Chen, Luu Anh Tuan, Soujanya Poria, and Lidong Bing. Contrastive chain-ofthought prompting, 2023, arXiv preprint arXiv:2311. 2023"
+        },
+        {
+          "title": "Deepspeedfastgen: High-throughput text generation for llms via mii and deepspeed-inference",
+          "citation": "Connor Holmes, Masahiro Tanaka, Michael Wyatt, Ammar Ahmad Awan, Jeff Rasley, Samyam Rajbhandari, Reza Yazdani Aminabadi, Heyang Qin, Arash Bakhtiari, Lev Kurilenko, and Yuxiong He. Deepspeedfastgen: High-throughput text generation for llms via mii and deepspeed-inference, 2024, arXiv preprint arXiv:2401. 2024"
+        },
+        {
+          "title": "Bard: Google's generative language model",
+          "citation": "Sissie Hsiao, Yury Pinsky, and Sundar Pichai. Bard: Google's generative language model. 2023"
+        },
+        {
+          "title": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism",
+          "citation": "Yanping Huang, Youlong Cheng, Ankur Bapna, Orhan Firat, Mia Xu Chen, Dehao Chen, HyoukJoong Lee, Jiquan Ngiam, Quoc V. Le, Yonghui Wu, and Zhifeng Chen. 2019"
+        },
+        {
+          "title": "AdaScale SGD: A user-friendly algorithm for distributed training",
+          "citation": "Tyler Johnson, Pulkit Agrawal, Haijie Gu, and Carlos Guestrin. AdaScale SGD: A user-friendly algorithm for distributed training. 2020"
+        },
+        {
+          "title": "Mahoney, Yakun Sophia Shao, Kurt Keutzer, and Amir Gholami",
+          "citation": "Coleman Hooper, Sehoon Kim, Hiva Mohammadzadeh, Michael W. Mahoney, Yakun Sophia Shao, Kurt Keutzer, and Amir Gholami. 2024"
+        },
+        {
+          "title": "Mahoney, Yakun Sophia Shao, Kurt Keutzer, and Amir Gholami",
+          "citation": "Coleman Hooper, Sehoon Kim, Hiva Mohammadzadeh, Michael W. Mahoney, Yakun Sophia Shao, Kurt Keutzer, and Amir Gholami. 2024"
+        },
+        {
+          "title": "Reducing activation recomputation in large transformer models",
+          "citation": "Vijay Anand Korthikanti, Jared Casper, Sangkug Lym, Lawrence McAfee, Michael Andersch, Mohammad Shoeybi, and Bryan Catanzaro. Reducing activation recomputation in large transformer models. 2023"
+        },
+        {
+          "title": "Efficient memory management for large language model serving with pagedattention",
+          "citation": "Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph Gonzalez, Hao Zhang, and Ion Stoica. Efficient memory management for large language model serving with pagedattention. 2023"
+        },
+        {
+          "title": "Efficient memory management for large language model serving with pagedattention",
+          "citation": "Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph Gonzalez, Hao Zhang, and Ion Stoica. Efficient memory management for large language model serving with pagedattention. 2023"
+        },
+        {
+          "title": "Tensorir: An abstraction for automatic tensorized program optimization",
+          "citation": "Siyuan Feng, Bohan Hou, Hongyi Jin, Wuwei Lin, Junru Shao, Ruihang Lai, Zihao Ye, Lianmin Zheng, Cody Hao Yu, Yong Yu, and Tianqi Chen. Tensorir: An abstraction for automatic tensorized program optimization. 2023"
+        },
+        {
+          "title": "Tensorir: An abstraction for automatic tensorized program optimization",
+          "citation": "Siyuan Feng, Bohan Hou, Hongyi Jin, Wuwei Lin, Junru Shao, Ruihang Lai, Zihao Ye, Lianmin Zheng, Cody Hao Yu, Yong Yu, and Tianqi Chen. Tensorir: An abstraction for automatic tensorized program optimization. 2023"
+        },
+        {
+          "title": "MLC-LLM",
+          "citation": "MLC-LLM, MLC-LLM, 2023, https://github. com/mlc-ai/mlc-llm. 2023"
+        },
+        {
+          "title": "Ray: A Distributed Framework for Emerging AI Applications",
+          "citation": "Philipp Moritz, Robert Nishihara, Stephanie Wang, Alexey Tumanov, Richard Liaw, Eric Liang, Melih Elibol, Zongheng Yang, William Paul, Michael I. Jordan, and Ion Stoica. 2018"
+        },
+        {
+          "title": "OpenLLM: Operating LLMs in production",
+          "citation": "Aaron Pham, Chaoyu Yang, Sean Sheng, Shenyang Zhao, Sauyon Lee, Bo Jiang, Fog Dong, Xipeng Guan, and Frost Ming, OpenLLM: Operating LLMs in production, 2023, https://github. com/bentoml/OpenL LM. 2023"
+        },
+        {
+          "title": "Generating long sequences with sparse transformers",
+          "citation": "Rewon Child, Scott Gray, Alec Radford, and Ilya Sutskever. Generating long sequences with sparse transformers, 2019, arXiv preprint arXiv:1904. 2019"
+        },
+        {
+          "title": "Zero: Memory optimizations toward training trillion parameter models",
+          "citation": "Samyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, and Yuxiong He. Zero: Memory optimizations toward training trillion parameter models. 2020"
+        },
+        {
+          "title": "Zero-infinity: Breaking the gpu memory wall for extreme scale deep learning",
+          "citation": "Samyam Rajbhandari, Olatunji Ruwase, Jeff Rasley, Shaden Smith, and Yuxiong He. Zero-infinity: Breaking the gpu memory wall for extreme scale deep learning. 2021"
+        },
+        {
+          "title": "Zero-infinity: Breaking the gpu memory wall for extreme scale deep learning",
+          "citation": "Samyam Rajbhandari, Olatunji Ruwase, Jeff Rasley, Shaden Smith, and Yuxiong He. Zero-infinity: Breaking the gpu memory wall for extreme scale deep learning. 2021"
+        },
+        {
+          "title": "Zero-infinity: Breaking the gpu memory wall for extreme scale deep learning",
+          "citation": "Samyam Rajbhandari, Olatunji Ruwase, Jeff Rasley, Shaden Smith, and Yuxiong He. Zero-infinity: Breaking the gpu memory wall for extreme scale deep learning. 2021"
+        },
+        {
+          "title": "Zero: Memory optimizations toward training trillion parameter models",
+          "citation": "Samyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, and Yuxiong He. Zero: Memory optimizations toward training trillion parameter models. 2020"
+        },
+        {
+          "title": "RayLLM - LLMs on Ray",
+          "citation": "Ray Project, RayLLM - LLMs on Ray, GitHub repository, 2023, https://github. com/ray-project/ray -llm , Accessed on: 2023-10-02. 2023"
+        },
+        {
+          "title": "ZeRO-Offload: Democratizing Billion-Scale model training",
+          "citation": "Jie Ren, Samyam Rajbhandari, Reza Yazdani Aminabadi, Olatunji Ruwase, Shuangyan Yang, Minjia Zhang, Dong Li, and Yuxiong He. ZeRO-Offload: Democratizing Billion-Scale model training. 2021"
+        },
+        {
+          "title": "Symbolic chain-of-thought distillation: Small models can also 'think' step-by-step",
+          "citation": "Liunian Harold Li, Jack Hessel, Youngjae Yu, Xiang Ren, Kai-Wei Chang, and Yejin Choi. Symbolic chainof-thought distillation: Small models can also 'think' step-by-step. 2023"
+        },
+        {
+          "title": "Megatron-lm: Training multi-billion parameter language models using model parallelism",
+          "citation": "Mohammad Shoeybi, Mostofa Patwary, Raul Puri, Patrick LeGresley, Jared Casper, and Bryan Catanzaro. Megatron-lm: Training multi-billion parameter language models using model parallelism, 2020, arXiv preprint arXiv:1909. 2020"
+        },
+        {
+          "title": "Megatron-lm: Training multi-billion parameter language models using model parallelism",
+          "citation": "Mohammad Shoeybi, Mostofa Patwary, Raul Puri, Patrick LeGresley, Jared Casper, and Bryan Catanzaro. Megatron-lm: Training multi-billion parameter language models using model parallelism, 2020, arXiv preprint arXiv:1909. 2020"
+        },
+        {
+          "title": "Megatron-lm: Training multi-billion parameter language models using model parallelism",
+          "citation": "Mohammad Shoeybi, Mostofa Patwary, Raul Puri, Patrick LeGresley, Jared Casper, and Bryan Catanzaro. Megatron-lm: Training multi-billion parameter language models using model parallelism, 2020, arXiv preprint arXiv:1909. 2020"
+        },
+        {
+          "title": "Efficient large-scale language model training on gpu clusters using megatron-lm",
+          "citation": "Deepak Narayanan, Mohammad Shoeybi, Jared Casper, Patrick LeGresley, Mostofa Patwary, Vijay Korthikanti, Dmitri Vainbrand, Prethvi Kashinkunti, Julie Bernauer, Bryan Catanzaro, Amar Phanishayee, and Matei Zaharia. Efficient large-scale language model training on gpu clusters using megatron-lm. 2021"
+        },
+        {
+          "title": "Reducing activation recomputation in large transformer models",
+          "citation": "Vijay Anand Korthikanti, Jared Casper, Sangkug Lym, Lawrence McAfee, Michael Andersch, Mohammad Shoeybi, and Bryan Catanzaro. Reducing activation recomputation in large transformer models. 2023"
+        },
+        {
+          "title": "A hybrid tensor-expert-data parallelism approach to optimize mixture-of-experts training",
+          "citation": "Siddharth Singh, Olatunji Ruwase, Ammar Ahmad Awan, Samyam Rajbhandari, Yuxiong He, and Abhinav Bhatele. A hybrid tensor-expert-data parallelism approach to optimize mixture-of-experts training. 2023"
+        },
+        {
+          "title": "A hybrid tensor-expert-data parallelism approach to optimize mixture-of-experts training",
+          "citation": "Siddharth Singh, Olatunji Ruwase, Ammar Ahmad Awan, Samyam Rajbhandari, Yuxiong He, and Abhinav Bhatele. A hybrid tensor-expert-data parallelism approach to optimize mixture-of-experts training. 2023"
+        },
+        {
+          "title": "Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale",
+          "citation": "Reza Yazdani Aminabadi, Samyam Rajbhandari, Ammar Ahmad Awan, Cheng Li, Du Li, Elton Zheng, Olatunji Ruwase, Shaden Smith, Minjia Zhang, Jeff Rasley, and Yuxiong He. Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale. 2022"
+        },
+        {
+          "title": "Accelerated inference for large transformer models using nvidia triton inference server",
+          "citation": "Denis Timonin, Bo Yang Hsueh, and Vinh Nguyen. Accelerated inference for large transformer models using nvidia triton inference server, 2022. 2022"
+        },
+        {
+          "title": "Finding support examples for in-context learning",
+          "citation": "Xiaonan Li and Xipeng Qiu. Finding support examples for in-context learning. 2023"
+        },
+        {
+          "title": "Maximizing parallelism in distributed training for huge neural networks",
+          "citation": "Zhengda Bian, Qifan Xu, Boxiang Wang, and Yang You. Maximizing parallelism in distributed training for huge neural networks, 2021, arXiv preprint arXiv:2105. 2021"
+        },
+        {
+          "title": "Maximizing parallelism in distributed training for huge neural networks",
+          "citation": "Zhengda Bian, Qifan Xu, Boxiang Wang, and Yang You. Maximizing parallelism in distributed training for huge neural networks, 2021, arXiv preprint arXiv:2105. 2021"
+        },
+        {
+          "title": "P-tuning: Prompt tuning can be comparable to fine-tuning across scales and tasks",
+          "citation": "Xiao Liu, Kaixuan Ji, Yicheng Fu, Weng Tam, Zhengxiao Du, Zhilin Yang, and Jie Tang. P-tuning: Prompt tuning can be comparable to fine-tuning across scales and tasks. 2022"
+        },
+        {
+          "title": "Maximizing parallelism in distributed training for huge neural networks",
+          "citation": "Zhengda Bian, Qifan Xu, Boxiang Wang, and Yang You. Maximizing parallelism in distributed training for huge neural networks, 2021, arXiv preprint arXiv:2105. 2021"
+        },
+        {
+          "title": "P-tuning: Prompt tuning can be comparable to fine-tuning across scales and tasks",
+          "citation": "Xiao Liu, Kaixuan Ji, Yicheng Fu, Weng Tam, Zhengxiao Du, Zhilin Yang, and Jie Tang. P-tuning: Prompt tuning can be comparable to fine-tuning across scales and tasks. 2022"
+        },
+        {
+          "title": "Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale",
+          "citation": "Reza Yazdani Aminabadi, Samyam Rajbhandari, Ammar Ahmad Awan, Cheng Li, Du Li, Elton Zheng, Olatunji Ruwase, Shaden Smith, Minjia Zhang, Jeff Rasley, and Yuxiong He. Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale. 2022"
+        },
+        {
+          "title": "Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale",
+          "citation": "Reza Yazdani Aminabadi, Samyam Rajbhandari, Ammar Ahmad Awan, Cheng Li, Du Li, Elton Zheng, Olatunji Ruwase, Shaden Smith, Minjia Zhang, Jeff Rasley, and Yuxiong He. Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale. 2022"
+        },
+        {
+          "title": "Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale",
+          "citation": "Reza Yazdani Aminabadi, Samyam Rajbhandari, Ammar Ahmad Awan, Cheng Li, Du Li, Elton Zheng, Olatunji Ruwase, Shaden Smith, Minjia Zhang, Jeff Rasley, and Yuxiong He. Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale. 2022"
+        },
+        {
+          "title": "Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale",
+          "citation": "Reza Yazdani Aminabadi, Samyam Rajbhandari, Ammar Ahmad Awan, Cheng Li, Du Li, Elton Zheng, Olatunji Ruwase, Shaden Smith, Minjia Zhang, Jeff Rasley, and Yuxiong He. Deepspeed-inference: Enabling efficient inference of transformer models at unprecedented scale. 2022"
+        },
+        {
+          "title": "Lamda: Language models for dialog applications",
+          "citation": "Romal Thoppilan, Daniel De Freitas, Jamie Hall, Noam Shazeer, Apoorv Kulshreshtha, Heng-Tze Cheng, Alicia Jin, Taylor Bos, Leslie Baker, Yu Du, YaGuang Li, Hongrae Lee, Huaixiu Steven Zheng, Amin Ghafouri, Marcelo Menegali, Yanping Huang, Maxim Krikun, Dmitry Lepikhin, James Qin, Dehao Chen, Yuanzhong Xu, Zhifeng Chen, Adam Roberts, Maarten Bosma, Vincent Zhao, Yanqi Zhou, Chung-Ching Chang, Igor Krivokon, Will Rusch, Marc Pickett, Pranesh Srinivasan, Laichee Man, Kathleen MeierHellstern, Meredith Ringel Morris, Tulsee Doshi, Renelito Delos Santos, Toju Duke, Johnny Soraker, Ben Zevenbergen, Vinodkumar Prabhakaran, Mark Diaz, Ben Hutchinson, Kristen Olson, Alejandra Molina, Erin Hoffman-John, Josh Lee, Lora Aroyo, Ravi Rajakumar, Alena Butryna, Matthew Lamm, Viktoriya Kuzmina, Joe Fenton, Aaron Cohen, Rachel Bernstein, Ray Kurzweil, Blaise Aguera-Arcas, Claire Cui, Marian Croak, Ed Chi, and Quoc Le. Lamda: Language models for dialog applications, 2022, arXiv preprint arXiv:2201. 2022"
+        },
+        {
+          "title": "Lamda: Language models for dialog applications",
+          "citation": "Romal Thoppilan, Daniel De Freitas, Jamie Hall, Noam Shazeer, Apoorv Kulshreshtha, Heng-Tze Cheng, Alicia Jin, Taylor Bos, Leslie Baker, Yu Du, YaGuang Li, Hongrae Lee, Huaixiu Steven Zheng, Amin Ghafouri, Marcelo Menegali, Yanping Huang, Maxim Krikun, Dmitry Lepikhin, James Qin, Dehao Chen, Yuanzhong Xu, Zhifeng Chen, Adam Roberts, Maarten Bosma, Vincent Zhao, Yanqi Zhou, Chung-Ching Chang, Igor Krivokon, Will Rusch, Marc Pickett, Pranesh Srinivasan, Laichee Man, Kathleen MeierHellstern, Meredith Ringel Morris, Tulsee Doshi, Renelito Delos Santos, Toju Duke, Johnny Soraker, Ben Zevenbergen, Vinodkumar Prabhakaran, Mark Diaz, Ben Hutchinson, Kristen Olson, Alejandra Molina, Erin Hoffman-John, Josh Lee, Lora Aroyo, Ravi Rajakumar, Alena Butryna, Matthew Lamm, Viktoriya Kuzmina, Joe Fenton, Aaron Cohen, Rachel Bernstein, Ray Kurzweil, Blaise Aguera-Arcas, Claire Cui, Marian Croak, Ed Chi, and Quoc Le. Lamda: Language models for dialog applications, 2022, arXiv preprint arXiv:2201. 2022"
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

@@ -1,0 +1,1638 @@
+{
+  "track": "Generative AI",
+  "paper_title": "A survey of Generative AI Applications",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "Introduction",
+      "citations": [
+        {
+          "title": "Gpt-4 technical report",
+          "citation": "OpenAI . Gpt-4 technical report, 2023."
+        },
+        {
+          "title": "Hierarchical text-conditional image generation with clip latents",
+          "citation": "Ramesh, A., Dhariwal, P., Nichol, A., Chu, C., and Chen, M. Hierarchical text-conditional image generation with clip latents, 2022."
+        },
+        {
+          "title": "Chatgpt is not all you need. a state of the art review of large generative ai models",
+          "citation": "Gozalo-Brizuela, R., and Garrido-Merchan, E. C. Chatgpt is not all you need. a state of the art review of large generative ai models, 2023."
+        },
+        {
+          "title": "Probabilistic Machine Learning: An introduction",
+          "citation": "Murphy, K. P. Probabilistic Machine Learning: An introduction . MIT Press, 2022."
+        },
+        {
+          "title": "Peer: A collaborative language model",
+          "citation": "Schick, T., Dwivedi-Yu, J., Jiang, Z., Petroni, F., Lewis, P., Izacard, G., You, Q., Nalmpantis, C., Grave, E., and Riedel, S. Peer: A collaborative language model, 2022."
+        },
+        {
+          "title": "Evaluating large language models trained on code",
+          "citation": "Chen, M., Tworek, J., Jun, H., Yuan, Q., de Oliveira Pinto, H. P., Kaplan, J., Edwards, H., Burda, Y., Joseph, N., Brockman, G., Ray, A., Puri, R., Krueger, G., Petrov, M., Khlaaf, H., Sastry, G., Mishkin, P., Chan, B., Gray, S., Ryder, N., Pavlov, M., Power, A., Kaiser, L., Bavarian, M., Winter, C., Tillet, P., Such, F. P., Cummings, D., Plappert, M., Chantzis, F., Barnes, E., Herbert-Voss, A., Guss, W. H., Nichol, A., Paino, A., Tezak, N., Tang, J., Babuschkin, I., Balaji, S., Jain, S., Saunders, W., Hesse, C., Carr, A. N., Leike, J., Achiam, J., Misra, V., Morikawa, E., Radford, A., Knight, M., Brundage, M., Murati, M., Mayer, K., Welinder, P., McGrew, B., Amodei, D., McCandlish, S., Sutskever, I., and Zaremba, W. Evaluating large language models trained on code, 2021."
+        },
+        {
+          "title": "Deep learning",
+          "citation": "LeCun, Y., Bengio, Y., and Hinton, G. Deep learning. nature 521 , 7553 (2015), 436."
+        },
+        {
+          "title": "Generative adversarial networks: An overview",
+          "citation": "Creswell, A., White, T., Dumoulin, V., Arulkumaran, K., Sengupta, B., and Bharath, A. A. Generative adversarial networks: An overview. IEEE Signal Processing Magazine 35 , 1 (jan 2018), 53-65."
+        },
+        {
+          "title": "Probabilistic Machine Learning: An introduction",
+          "citation": "Murphy, K. P. Probabilistic Machine Learning: An introduction . MIT Press, 2022."
+        },
+        {
+          "title": "A survey of large language models",
+          "citation": "Zhao, W. X., Zhou, K., Li, J., Tang, T., Wang, X., Hou, Y., Min, Y., Zhang, B., Zhang, J., Dong, Z., Du, Y., Yang, C., Chen, Y., Chen, Z., Jiang, J., Ren, R., Li, Y., Tang, X., Liu, Z., Liu, P., Nie, J.-Y., and Wen, J.-R. A survey of large language models, 2023."
+        },
+        {
+          "title": "A comprehensive survey of ai-generated content (aigc): A history of generative ai from gan to chatgpt",
+          "citation": "Cao, Y., Li, S., Liu, Y., Yan, Z., Dai, Y., Yu, P. S., and Sun, L. A comprehensive survey of ai-generated content (aigc): A history of generative ai from gan to chatgpt, 2023."
+        },
+        {
+          "title": "Text-to-image diffusion models in generative ai: A survey",
+          "citation": "Zhang, C., Zhang, C., Zhang, M., and Kweon, I. S. Text-to-image diffusion models in generative ai: A survey, 2023."
+        },
+        {
+          "title": "A survey on graph diffusion models: Generative ai in science for molecule, protein and material",
+          "citation": "Zhang, M., Qamar, M., Kang, T., Jung, Y., Zhang, C., Bae, S.-H., and Zhang, C. A survey on graph diffusion models: Generative ai in science for molecule, protein and material. arXiv preprint arXiv:2304.01565 (2023)."
+        },
+        {
+          "title": "A complete survey on generative ai (aigc): Is chatgpt from gpt-4 to gpt-5 all you need?",
+          "citation": "Zhang, C., Zhang, C., Zheng, S., Qiao, Y., Li, C., Zhang, M., Dam, S. K., Thwal, C. M., Tun, Y. L., Huy, L. L., kim, D., Bae, S.-H., Lee, L.-H., Yang, Y., Shen, H. T., Kweon, I. S., and Hong, C. S. A complete survey on generative ai (aigc): Is chatgpt from gpt-4 to gpt-5 all you need?, 2023."
+        },
+        {
+          "title": "Is chatgpt leading generative ai? what is beyond expectations? What is beyond expectations",
+          "citation": "Aydın, ¨ O., and Karaarslan, E. Is chatgpt leading generative ai? what is beyond expectations? What is beyond expectations (2023)."
+        },
+        {
+          "title": "A survey on audio diffusion models: Text to speech synthesis and enhancement in generative ai",
+          "citation": "Zhang, C., Zhang, C., Zheng, S., Zhang, M., Qamar, M., Bae, S.-H., and Kweon, I. S. A survey on audio diffusion models: Text to speech synthesis and enhancement in generative ai. arXiv preprint arXiv:2303.13336 2 (2023)."
+        },
+        {
+          "title": "Deep learning for procedural content generation",
+          "citation": "Liu, J., Snodgrass, S., Khalifa, A., Risi, S., Yannakakis, G. N., and Togelius, J. Deep learning for procedural content generation. Neural Computing and Applications 33 , 1 (oct 2020), 19-37."
+        },
+        {
+          "title": "A word is worth a thousand pictures: Prompts as ai design material",
+          "citation": "Kulkarni, C., Druga, S., Chang, M., Fiannaca, A., Cai, C., and Terry, M. A word is worth a thousand pictures: Prompts as ai design material, 2023."
+        },
+        {
+          "title": "A New Era of Generative AI for Everyone",
+          "citation": "Accenture . Accenture-a-new-era-of-generative-ai-for-everyone, 2023."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "Basic Taxonomy of models",
+      "citations": [
+        {
+          "title": "The fbhhrbnrssshk-algorithm for multiplication in Z 5 × 5 2 is still not the end of the story",
+          "citation": "Kauers, M., and Moosbauer, J. The fbhhrbnrssshk-algorithm for multiplication in Z 5 × 5 2 is still not the end of the story, 2022."
+        },
+        {
+          "title": "Auto-gpt",
+          "citation": "Gravitas, S. Auto-gpt, 2023."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "Generative AI Applications",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Text",
+          "citations": [
+            {
+              "title": "Chatgpt sets record fastest growing user base",
+              "citation": "Hu, K. Chatgpt sets record fastest growing user base. https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-20"
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.1.1",
+              "sec_title": "Conversational AI",
+              "citations": [
+                {
+                  "title": "Introducing ChatGPT",
+                  "citation": "Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A., Ziegler, D. M., Wu, J., Winter, C., Hesse, C., Chen, M., Sigler, E., Litwin, M., Gray, S., Chess, B., Clark, J., Berner, C., McCandlish, S., Radford, A., Sutskever, I., and Amodei, D. Introducing ChatGPT - openai.com. https://openai.com/blog/chatgpt . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Introducing Claude",
+                  "citation": "Anthropic . Introducing Claude -anthropic.com. https://www.anthropic.com/index/introducing-claude . [Accessed 17May-2023]."
+                },
+                {
+                  "title": "Alpaca",
+                  "citation": "Stanford . Stanford CRFM -crfm.stanford.edu. https://crfm.stanford.edu/2023/03/13/alpaca.html . [Accessed 17-May2023]."
+                },
+                {
+                  "title": "Duckassist launch",
+                  "citation": "Duckassist Launch . Duckassist launch. https://spreadprivacy.com/duckassist-launch/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Metaphor: Searching the internet with large language models",
+                  "citation": "Metaphor . Metaphor: Searching the internet with large language models -Y Combinator -ycombinator.com. https://www.ycombinator.com/companies/metaphor . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Perplexity ai",
+                  "citation": "Perplexity AI . Perplexity ai. https://www.perplexity.ai/ . [Accessed 17May-2023]."
+                },
+                {
+                  "title": "Perplexity ai",
+                  "citation": "Perplexity AI . Perplexity ai. https://www.linkedin.com/company/perplexity-ai/ . [Accessed 17-May-2023]."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.2",
+              "sec_title": "Text-to-Science",
+              "citations": [
+                {
+                  "title": "Galactica: A large language model for science",
+                  "citation": "Taylor, R., Kardas, M., Cucurull, G., Scialom, T., Hartshorn, A., Saravia, E., Poulton, A., Kerkez, V., and Stojnic, R. Galactica: A large language model for science, 2022."
+                },
+                {
+                  "title": "Solving quantitative reasoning problems with language models",
+                  "citation": "Lewkowycz, A., Andreassen, A., Dohan, D., Dyer, E., Michalewski, H., Ramasesh, V., Slone, A., Anil, C., Schlag, I., Gutman-Solo, T., Wu, Y., Neyshabur, B., Gur-Ari, G., and Misra, V. Solving quantitative reasoning problems with language models, 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.3",
+              "sec_title": "Text-to-Author Simulation",
+              "citations": [
+                {
+                  "title": "Creating a large language model of a philosopher",
+                  "citation": "Schwitzgebel, E., Schwitzgebel, D., and Strasser, A. Creating a large language model of a philosopher, 2023."
+                },
+                {
+                  "title": "Simulating h.p. lovecraft horror literature with the chatgpt large language model",
+                  "citation": "Garrido-Merch´ an, E. C., Arroyo-Barrig¨ uete, J. L., and GozaloBrizuela, R. Simulating h.p. lovecraft horror literature with the chatgpt large language model, 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.4",
+              "sec_title": "Text-to-Medical Advice",
+              "citations": [
+                {
+                  "title": "ChatDOC -Chat with your documents",
+                  "citation": "ChatDoc . ChatDOC -Chat with your documents - chatdoc.com. https://chatdoc.com/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Glass AI by Glass Health",
+                  "citation": "Glass . Glass AI by Glass Health - glass.health. https://glass.health/ai/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Towards expert-level medical question answering with large language models",
+                  "citation": "Singhal, K., Tu, T., Gottweis, J., Sayres, R., Wulczyn, E., Hou, L., Clark, K., Pfohl, S., Cole-Lewis, H., Neal, D., Schaekermann, M., Wang, A., Amin, M., Lachgar, S., Mansfield, P., Prakash, S., Green, B., Dominowska, E., y Arcas, B. A., Tomasev, N., Liu, Y., Wong, R., Semturs, C., Mahdavi, S. S., Barral, J., Webster, D., Corrado, G. S., Matias, Y., Azizi, S., Karthikesalingam, A., and Natarajan, V. Towards expert-level medical question answering with large language models, 2023."
+                },
+                {
+                  "title": "YourDoctor AI",
+                  "citation": "YourMed . YourDoctor AI -doctor.yourmed.app. https://doctor.yourmed.app/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Hippocratic AI",
+                  "citation": "Hippocratic AI - hippocraticai.com . Hippocratic AI - hippocraticai.com. https://www.hippocraticai.com/ . [Accessed 25-May-2023]."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.5",
+              "sec_title": "Text-to-Itinerary",
+              "citations": [
+                {
+                  "title": "Roam Around - Your AI-Powered Travel Assistant - Visit a City Today",
+                  "citation": "RoamAround . Roam Around - Your AI-Powered Travel Assistant - Visit a City Today - roamaround.io. https://www.roamaround.io/ . [Accessed 17May-2023]."
+                },
+                {
+                  "title": "Tripnotes ai",
+                  "citation": "AI, T. Tripnotes ai. https://tripnotes.ai/app . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Welcome, robots: KAYAK is now integrated on ChatGPT",
+                  "citation": "acosta . Welcome, robots: KAYAK is now integrated on ChatGPT - Travel Hacker Blog - kayak.com. https://www.kayak.com/news/kayak-chatgpt/ . [Accessed 23-May-2023]."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.6",
+              "sec_title": "Doc-to-Text",
+              "citations": [
+                {
+                  "title": "ChatDOC -Chat with your documents",
+                  "citation": "ChatDoc . ChatDOC -Chat with your documents - chatdoc.com. https://chatdoc.com/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "MapDeduce Understand your documents - mapdeduce.com",
+                  "citation": "MapDeduce . MapDeduce Understand your documents - mapdeduce.com. https://mapdeduce.com/ . [Accessed 17-May-2023]."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.7",
+              "sec_title": "Live-writing Assistance",
+              "citations": [
+                {
+                  "title": "Discover your next move with GrammarlyGO",
+                  "citation": "Grammarly . Discover your next move with GrammarlyGO - grammarly.com. https://www.grammarly.com/grammarlygo . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Peer: A collaborative language model",
+                  "citation": "Schick, T., Dwivedi-Yu, J., Jiang, Z., Petroni, F., Lewis, P., Izacard, G., You, Q., Nalmpantis, C., Grave, E., and Riedel, S. Peer: A collaborative language model, 2022."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Images",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "3.2.1",
+              "sec_title": "Image Editing",
+              "citations": [
+                {
+                  "title": "Alpaca - Humans AI Models for Image generation",
+                  "citation": "Alpaca . Alpaca - Humans AI Models for Image generation - getalpaca.io. https://www.getalpaca.io/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "I 2 sb: Image-to-image schr¨ odinger bridge",
+                  "citation": "Liu, G.-H., Vahdat, A., Huang, D.-A., Theodorou, E. A., Nie, W., and Anandkumar, A. I 2 sb: Image-to-image schr¨ odinger bridge, 2023."
+                },
+                {
+                  "title": "About Facet",
+                  "citation": "Facet . About Facet Facet - facet.ai. https://facet.ai/about . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "PhotoRoom - Remove Background and Create Product Pictures",
+                  "citation": "PhotoRoom . PhotoRoom - Remove Background and Create Product Pictures -photoroom.com. https://www.photoroom.com/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Towards real-world blind face restoration with generative facial prior",
+                  "citation": "Wang, X., Li, Y., Zhang, H., and Shan, Y. Towards real-world blind face restoration with generative facial prior, 2021."
+                },
+                {
+                  "title": "ARC",
+                  "citation": "tencentARC . ARC arc.tencent.com. https://arc.tencent.com/en/ai-demos/faceRestoration . [Accessed 23-May-2023]."
+                },
+                {
+                  "title": "Stable Diffusion Reimagine",
+                  "citation": "Islamovic, A. Stable Diffusion Reimagine - Stability AI - stability.ai. https://stability.ai/blog/stable-diffusion-reimagine . [Accessed 17-May2023]."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.2",
+              "sec_title": "Artistic Images",
+              "citations": [
+                {
+                  "title": "OpenArt - Products, Competitors, Financials, Employees, Headquarters Locations",
+                  "citation": "OpenArt . OpenArt -Products, Competitors, Financials, Employees, Headquarters Locations -cbinsights.com. https://www.cbinsights.com/company/openart . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "DALL · E 2",
+                  "citation": "Ramesh, A., Pavlov, M., Goh, G., Gray, S., Voss, C., Radford, A., Chen, M., and Sutskever, I. DALL · E 2 - openai.com. https://openai.com/product/dall-e-2 . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Midjourney -midjourney.com",
+                  "citation": "Midjourney . Midjourney -midjourney.com. https://www.midjourney.com/home/?callbackUrl=%2Fapp%2F . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Stable Diffusion Online",
+                  "citation": "Diffusion, S. Stable Diffusion Online -stablediffusionweb.com. https://stablediffusionweb.com/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Wonder",
+                  "citation": "Wonder . Wonder -AI Art Generator -apps.apple.com. https://apps.apple.com/us/app/wonder-ai-art-generator/id1621278575 . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Neural Love -Products, Competitors, Financials, Employees, Headquarters Locations",
+                  "citation": "Inisights, C. Neural Love -Products, Competitors, Financials, Employees, Headquarters Locations -cbinsights.com. https://www.cbinsights.com/company/neural-love . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Free AI Image Generator and AI Enhance",
+                  "citation": "Neural.Love . Free AI Image Generator and AI Enhance - neural.love neural.love. https://neural.love/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "TattoosAI",
+                  "citation": "TattoosAI . AI-powered Tattoo Artist -tattoosai.com. https://www.tattoosai.com/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Supermeme",
+                  "citation": "Supermeme . Turn text into memes. Generate Memes using AI - Supermeme.ai -supermeme.ai. https://www.supermeme.ai/ . [Accessed 17-May-2023]."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.3",
+              "sec_title": "Realistic Images",
+              "citations": [
+                {
+                  "title": "Bing",
+                  "citation": "Bing . Bing - bing.com. https://www.bing.com/create#: ~ :text=Image%20Creator%20generates%20AI%20imag [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Craiyon",
+                  "citation": "Craiyon . Craiyon, AI Image Generator -craiyon.com. https://www.craiyon.com . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "DALL · E 2",
+                  "citation": "Ramesh, A., Pavlov, M., Goh, G., Gray, S., Voss, C., Radford, A., Chen, M., and Sutskever, I. DALL · E 2 - openai.com. https://openai.com/product/dall-e-2 . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Gligen: Open-set grounded text-to-image generation",
+                  "citation": "Li, Y., Liu, H., Wu, Q., Mu, F., Yang, J., Gao, J., Li, C., and Lee, Y. J. Gligen: Open-set grounded text-to-image generation, 2023."
+                },
+                {
+                  "title": "GLIGEN:Open-Set Grounded Text-to-Image Generation. - gligen.github.io",
+                  "citation": "Li, Y., Liu, H., Wu, Q., Mu, F., Yang, J., Gao, J., Li, C., and Lee, Y. J. GLIGEN:Open-Set Grounded Text-to-Image Generation. - gligen.github.io. https://gligen.github.io/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Imagen Video",
+                  "citation": "Ho, J., Chan, W., Saharia, C., Whang, J., Gao, R., Gritsenko, A., Kingma, D. P., Poole, B., Norouzi, M., Fleet, D. J., and Salimans, T. Imagen Video - imagen.research.google. https://imagen.research.google/video/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Midjourney -midjourney.com",
+                  "citation": "Midjourney . Midjourney -midjourney.com. https://www.midjourney.com/home/?callbackUrl=%2Fapp%2F . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Muse: Text-to-image generation via masked generative transformers",
+                  "citation": "Chang, H., Zhang, H., Barber, J., Maschinot, A., Lezama, J., Jiang, L., Yang, M.-H., Murphy, K., Freeman, W. T., Rubinstein, M., Li, Y., and Krishnan, D. Muse: Text-to-image generation via masked generative transformers, 2023."
+                },
+                {
+                  "title": "Muse: Text-To-Image Generation via Masked Generative Transformers",
+                  "citation": "Chang, H., Zhang, H., Barber, J., Maschinot, A., Lezama, J., Jiang, L., Yang, M.-H., Murphy, K., Freeman, W. T., Rubinstein, M., Li, Y., and Krishnan, D. Muse: Text-To-Image Generation via Masked Generative Transformers - muse-model.github.io. https://muse-model.github.io/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Scaling autoregressive models for content-rich text-to-image generation",
+                  "citation": "Yu, J., Xu, Y., Koh, J. Y., Luong, T., Baid, G., Wang, Z., Vasudevan, V., Ku, A., Yang, Y., Ayan, B. K., Hutchinson, B., Han, W., Parekh, Z., Li, X., Zhang, H., Baldridge, J., and Wu, Y. Scaling autoregressive models for content-rich text-to-image generation, 2022."
+                },
+                {
+                  "title": "Runway - Everything you need to make anything you want",
+                  "citation": "Runway . Runway - Everything you need to make anything you want. - runwayml.com. https://runwayml.com/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Stable Diffusion Online",
+                  "citation": "Diffusion, S. Stable Diffusion Online -stablediffusionweb.com. https://stablediffusionweb.com/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Create pro quality product photography with AI - Booth.AI",
+                  "citation": "Booth . Create pro quality product photography with AI - Booth.AI booth.ai. https://www.booth.ai/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "AI Headshots",
+                  "citation": "AI, A. AI Headshots - Aragon AI - aragon.ai. https://www.aragon.ai/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Avatar AI",
+                  "citation": "AI, A. Avatar AI - avatarai.me. https://avatarai.me/?promo=easter . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "PRIME Profile - Studio-grade AI profile picture generator",
+                  "citation": "Profile, P. PRIME Profile - Studio-grade AI profile picture generator primeprofile.io. https://primeprofile.io/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Play: Parametrically conditioned layout generation using latent diffusion",
+                  "citation": "Cheng, C.-Y., Huang, F., Li, G., and Li, Y. Play: Parametrically conditioned layout generation using latent diffusion, 2023."
+                },
+                {
+                  "title": "AutoDraw",
+                  "citation": "AutoDraw . AutoDraw - autodraw.com. https://www.autodraw.com/ . [Accessed 17-May-2023]."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "Video",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.4",
+          "sec_title": "Text-to-Video",
+          "citations": [
+            {
+              "title": "Colossyan",
+              "citation": "Colossyan . Colossyan Creator -colossyan.com. https://www.colossyan.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Elai.io - your go-to automated AI video generation platform",
+              "citation": "Elai . Elai.io - your go-to automated AI video generation platform - elai.io. https://elai.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "HeyGen -AI Spokesperson Video Generator",
+              "citation": "HeyGen . HeyGen -AI Spokesperson Video Generator - heygen.com. https://www.heygen.com/?from=moviola . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Make AI Videos To Train Anyone or Explain Anything",
+              "citation": "HourOne . Make AI Videos To Train Anyone or Explain Anything - Hour One -hourone.ai. https://hourone.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Rephrase Home",
+              "citation": "Rephrase . Rephrase Home - rephrase.ai. https://www.rephrase.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Synthesia",
+              "citation": "Synthesia . Synthesia - 1 AI Video Generation Platform - synthesia.io. https://www.synthesia.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Supercreator",
+              "citation": "Supercreator . Supercreator.ai · Create videos 10x faster with AI - supercreator.ai. https://www.supercreator.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Synths . Convert Articles into YouTube video with Human Actors and Voiceover: Synths Video - synths.video",
+              "citation": "Synths . Convert Articles into YouTube video with Human Actors and Voiceover: Synths Video - synths.video. https://synths.video/article-to-video . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Tavus - The Most Advanced AI Video Personalization Platform",
+              "citation": "Tavus . Tavus - The Most Advanced AI Video Personalization Platform tavus.io. https://www.tavus.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "D-ID Creative Reality",
+              "citation": "DID . D-ID Creative Reality - d-id.com. https://www.d-id.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Kaiber",
+              "citation": "Kaiber . Kaiber - kaiber.ai. https://www.kaiber.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Opus",
+              "citation": "Opus . OpusWebsite - opus.ai. https://opus.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Look outside the room: Synthesizing a consistent longterm 3d scene video from a single image",
+              "citation": "Ren, X., and Wang, X. Look outside the room: Synthesizing a consistent longterm 3d scene video from a single image, 2022."
+            },
+            {
+              "title": "Simple and effective synthesis of indoor 3d scenes",
+              "citation": "Koh, J. Y., Agrawal, H., Batra, D., Tucker, R., Waters, A., Lee, H., Yang, Y., Baldridge, J., and Anderson, P. Simple and effective synthesis of indoor 3d scenes, 2022."
+            },
+            {
+              "title": "Riverside.fm - Record Podcasts And Videos From Anywhere",
+              "citation": "RiversideFM . Riverside.fm - Record Podcasts And Videos From Anywhere riverside.fm. https://riverside.fm/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Scenescape: Textdriven consistent scene generation",
+              "citation": "Fridman, R., Abecasis, A., Kasten, Y., and Dekel, T. Scenescape: Textdriven consistent scene generation, 2023."
+            },
+            {
+              "title": "Human motion diffusion model",
+              "citation": "Tevet, G., Raab, S., Gordon, B., Shafir, Y., Cohen-Or, D., and Bermano, A. H. Human motion diffusion model, 2022."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.4.1",
+              "sec_title": "General Video Production",
+              "citations": [
+                {
+                  "title": "Imagen Video",
+                  "citation": "Ho, J., Chan, W., Saharia, C., Whang, J., Gao, R., Gritsenko, A., Kingma, D. P., Poole, B., Norouzi, M., Fleet, D. J., and Salimans, T. Imagen Video - imagen.research.google. https://imagen.research.google/video/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Make-A-Video by Meta AI",
+                  "citation": "AI, M. Make-A-Video by Meta AI -makeavideo.studio. https://makeavideo.studio/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Phenaki",
+                  "citation": "Villegas, R., Babaeizadeh, M., Kindermans, P.-J., Moraldo, H., Zhang, H., Saffar, M. T., Castro, S., Kunze, J., and Erh, D. Phenaki phenaki.video. https://phenaki.video/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Runway - Everything you need to make anything you want",
+                  "citation": "Runway . Runway - Everything you need to make anything you want. - runwayml.com. https://runwayml.com/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "CogVideo: New Method for Generating GIFs from Text Input",
+                  "citation": "CogVideo . CogVideo: New Method for Generating GIFs from Text Input 80.lv. https://80.lv/articles/cogvideo-new-method-for-generating-gifs-from-text-input . [Accessed 17-May-2023]."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.5",
+          "sec_title": "3D",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.6",
+          "sec_title": "Text-to-3D",
+          "citations": [
+            {
+              "title": "AI Art Generator",
+              "citation": "Adobe . AI Art Generator -Adobe Firefly -adobe.com. https://www.adobe.com/sensei/generative-ai/firefly.html . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "DreamFusion: Text-to-3D using 2D Diffusion",
+              "citation": "Poole, B., Jain, A., Barron, J. T., and Mildenhall, B. DreamFusion: Text-to-3D using 2D Diffusion -dreamfusion3d.github.io. https://dreamfusion3d.github.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "GET3D: A Generative Model of High Quality 3D Textured Shapes Learned from Images",
+              "citation": "Gao, J., Shen, T., Wang, Z., Chen, W., Yin, K., Li, D., Litany, O., Gojcic, Z., and Fidler, S. GET3D: A Generative Model of High Quality 3D Textured Shapes Learned from Images - nv-tlabs.github.io. https://nv-tlabs.github.io/GET3D/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Magic3d: High-resolution text-to-3d content creation",
+              "citation": "Lin, C.-H., Gao, J., Tang, L., Takikawa, T., Zeng, X., Huang, X., Kreis, K., Fidler, S., Liu, M.-Y., and Lin, T.-Y. Magic3d: High-resolution text-to-3d content creation, 2023."
+            },
+            {
+              "title": "Synthesis Labs - Synthesis AI",
+              "citation": "Synthesis Labs - Synthesis AI - synthesis.ai . Synthesis Labs - Synthesis AI - synthesis.ai. https://synthesis.ai/labs/ . [Accessed 25-May-2023]."
+            },
+            {
+              "title": "Text2Room: Extracting Textured 3D Meshes from 2D Text-to-Image Models",
+              "citation": "Shoel, L. Text2Room: Extracting Textured 3D Meshes from 2D Text-to-Image Models - lukashoel.github.io. https://lukashoel.github.io/text-to-room/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Mirage - mirageml.com",
+              "citation": "ML, M. Mirage - mirageml.com. https://www.mirageml.com/ . [Accessed 17May-2023]."
+            },
+            {
+              "title": "Text-to-4d dynamic scene generation",
+              "citation": "Singer, U., Sheynin, S., Polyak, A., Ashual, O., Makarov, I., Kokkinos, F., Goyal, N., Vedaldi, A., Parikh, D., Johnson, J., and Taigman, Y. Text-to-4d dynamic scene generation, 2023."
+            },
+            {
+              "title": "GeNVS",
+              "citation": "Chan, E. R., Nagano, K., Chan, M. A., Bergman, A. W., Park, J. J., Levy, A., Aittala, M., Mello, S. D., Karras, T., and Wetzstein, G. GeNVS nvlabs.github.io. https://nvlabs.github.io/genvs/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Kaedim -3D models in minutes",
+              "citation": "Kaedim . Kaedim -3D models in minutes -kaedim3d.com. https://www.kaedim3d.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Make-It-3D: High-Fidelity 3D Creation from A Single Image with Diffusion Prior",
+              "citation": "Tang, J., Wang, T., Zhang, B., Zhang, T., Yi, R., Ma, L., and Chen, D. Make-It-3D: High-Fidelity 3D Creation from A Single Image with Diffusion Prior - make-it-3d.github.io. https://make-it-3d.github.io/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Realfusion: 360 reconstruction of any object from a single image",
+              "citation": "Melas-Kyriazi, L., Rupprecht, C., Laina, I., and Vedaldi, A. Realfusion: 360 reconstruction of any object from a single image, 2023."
+            },
+            {
+              "title": "LION: Latent Point Diffusion Models for 3D Shape Generation - nv-tlabs.github.io",
+              "citation": "Zeng, X., Vahdat, A., Williams, F., Gojcic, Z., Litany, O., Fidler, S., and Kreis, K. LION: Latent Point Diffusion Models for 3D Shape Generation - nv-tlabs.github.io. https://nv-tlabs.github.io/LION/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Eva3d: Compositional 3d human generation from 2d image collections",
+              "citation": "Hong, F., Chen, Z., Lan, Y., Pan, L., and Liu, Z. Eva3d: Compositional 3d human generation from 2d image collections, 2022."
+            },
+            {
+              "title": "Neurallift360: Lifting an in-the-wild 2d photo to a 3d object with 360deg views",
+              "citation": "Xu, D., Jiang, Y., Wang, P., Fan, Z., Wang, Y., and Wang, Z. Neurallift360: Lifting an in-the-wild 2d photo to a 3d object with 360deg views, 2023."
+            },
+            {
+              "title": "Scenedreamer: Unbounded 3d scene generation from 2d image collections",
+              "citation": "Chen, Z., Wang, G., and Liu, Z. Scenedreamer: Unbounded 3d scene generation from 2d image collections, 2023."
+            },
+            {
+              "title": "Personnerf: Personalized reconstruction from photo collections",
+              "citation": "Weng, C.-Y., Srinivasan, P. P., Curless, B., and KemelmacherShlizerman, I. Personnerf: Personalized reconstruction from photo collections, 2023."
+            },
+            {
+              "title": "Deepmotion",
+              "citation": "Deepmotion . Deepmotion. https://www.deepmotion.com/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Plask AI",
+              "citation": "Plask AI . Plask ai. https://plask.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "LION: Latent Point Diffusion Models for 3D Shape Generation - nv-tlabs.github.io",
+              "citation": "Zeng, X., Vahdat, A., Williams, F., Gojcic, Z., Litany, O., Fidler, S., and Kreis, K. LION: Latent Point Diffusion Models for 3D Shape Generation - nv-tlabs.github.io. https://nv-tlabs.github.io/LION/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Home - Metaphysic.ai - metaphysic.ai",
+              "citation": "Metaphysic . Home - Metaphysic.ai - metaphysic.ai. https://metaphysic.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Versy.ai - Text-to-Space",
+              "citation": "AI, V. Versy.ai - Text-to-Space - versy.ai. https://www.versy.ai/ . [Accessed 17-May-2023]."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.7",
+          "sec_title": "Code and Software",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.8",
+          "sec_title": "Text-to-Code",
+          "citations": [
+            {
+              "title": "OpenAI Codex",
+              "citation": "Chen, M., Tworek, J., Jun, H., Yuan, Q., de Oliveira Pinto, H. P., Kaplan, J., Edwards, H., Burda, Y., Joseph, N., Brockman, G., Ray, A., Puri, R., Krueger, G., Petrov, M., Khlaaf, H., Sastry, G., Mishkin, P., Chan, B., Gray, S., Ryder, N., Pavlov, M., Power, A., Kaiser, L., Bavarian, M., Winter, C., Tillet, P., Such, F. P., Cummings, D., Plappert, M., Chantzis, F., Barnes, E., Herbert-Voss, A., Guss, W. H., Nichol, A., Paino, A., Tezak, N., Tang, J., Babuschkin, I., Balaji, S., Jain, S., Saunders, W., Hesse, C., Carr, A. N., Leike, J., Achiam, J., Misra, V., Morikawa, E., Radford, A., Knight, M., Brundage, M., Murati, M., Mayer, K., Welinder, P., McGrew, B., Amodei, D., McCandlish, S., Sutskever, I., and Zaremb, W. OpenAI Codex - openai.com. https://openai.com/blog/openai-codex . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Mintlify -Beautiful documentation that converts users mintlify.com",
+              "citation": "Mintlify . Mintlify -Beautiful documentation that converts users mintlify.com. https://mintlify.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Stenography",
+              "citation": "Stenography . Stenography - stenography.dev. https://stenography.dev/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "AI Office Bot",
+              "citation": "AI Office Bot . Ai office bot. https://aiofficebot.com/ . [Accessed 23-May2023]."
+            },
+            {
+              "title": "GPT for Sheets; and Docs",
+              "citation": "Sheets, G. F., and Docs . GPT for Sheets; and Docs; -Google Workspace Marketplace -workspace.google.com. https://workspace.google.com/marketplace/app/gpt\\_for\\_sheets\\_and\\_docs/677318054654 . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Formula Bot AI Excel Formula Generator (Excel Formula Bot)",
+              "citation": "Formula Bot AI Excel Formula Generator (Excel Formula Bot) . Formula Bot - AI Excel Formula Generator (Excel Formula Bot) - excelformulabot.com. https://excelformulabot.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Announcing new generative AI experiences in Google Workspace",
+              "citation": "Google . Announcing new generative AI experiences in Google Workspace -Google Workspace Blog -workspace.google.com. https://workspace.google.com/blog/product-announcements/generative-ai . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "SheetAI App - Unlock AI Power in Your Google Sheets",
+              "citation": "AI, S. SheetAI App - Unlock AI Power in Your Google Sheets. - sheetai.app. https://www.sheetai.app/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "AI2sql",
+              "citation": "AI2SQL . AI2sql - ai2sql.io. https://www.ai2sql.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Seek AI",
+              "citation": "AI, S. Seek AI - seek.ai. https://www.seek.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Code Translator",
+              "citation": "Translator, V. C. Code Translator - ai-code-translator.vercel.app. https://ai-code-translator.vercel.app/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Microsoft Security Copilot - Microsoft Security - microsoft.com",
+              "citation": "Microsoft . Microsoft Security Copilot - Microsoft Security - microsoft.com. https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-security-copilot [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Durable AI Website Builder and Small Business Software",
+              "citation": "Durable . Durable AI Website Builder and Small Business Software durable.co. https://durable.co/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Mutiny - Turn Your Website Into Your 1 Revenue Channel",
+              "citation": "Mutiny . Mutiny - Turn Your Website Into Your 1 Revenue Channel - Mutiny -mutinyhq.com. https://www.mutinyhq.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Diagram",
+              "citation": "Diagram . Diagram - diagram.com. https://diagram.com/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Galileo AI · Copilot for interface design",
+              "citation": "AI, G. Galileo AI · Copilot for interface design - usegalileo.ai. https://www.usegalileo.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Uizard",
+              "citation": "Uizard . Uizard - App, Web, and UI Design Made Easy - Powered By AI uizard.io. https://uizard.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "The.com",
+              "citation": "The.com . The.com - Scale your website with Automation - the.com. https://www.the.com/automation/pages/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "FlutterFlow - Build beautiful, modern apps incredibly fast!",
+              "citation": "Flutterflow . FlutterFlow - Build beautiful, modern apps incredibly fast! flutterflow.io. https://flutterflow.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Imagica - A new way to think and create with computers - Build a no-code AI app in minutes",
+              "citation": "Imagica . Imagica - A new way to think and create with computers - Build a no-code AI app in minutes - imagica.ai. https://www.imagica.ai/studio . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Create generative apps in minutes with Gen App Builder",
+              "citation": "Google . Create generative apps in minutes with Gen App Builder -Google Cloud Blog -cloud.google.com. https://cloud.google.com/blog/products/ai-machine-learning/create-generative-apps-in-minutes-wit [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Debuild",
+              "citation": "Debuild . Debuild - debuild.app. https://debuild.app/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Literally Anything -Gallery",
+              "citation": "IO, L. A. Literally Anything -Gallery -literallyanything.io. https://www.literallyanything.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Second Home - second.dev",
+              "citation": "Second . Second Home - second.dev. https://www.second.dev/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Home",
+              "citation": "Berri . Home - berri.ai. https://berri.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Deploy Large Language Model Apps - Scale AI",
+              "citation": "AI, S. Deploy Large Language Model Apps - Scale AI - scale.com. https://scale.com/spellbook . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "ZBrain - Build a ChatGPT App - zbrain.ai",
+              "citation": "ZBrain . ZBrain - Build a ChatGPT App - zbrain.ai. https://zbrain.ai/ . [Accessed 25-May-2023]."
+            },
+            {
+              "title": "Locofy.ai - ship your products 5-10x faster with low code",
+              "citation": "AI, L. Locofy.ai - ship your products 5-10x faster with low code - locofy.ai. https://www.locofy.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "",
+              "citation": "."
+            },
+            {
+              "title": "Lasso AI Automations",
+              "citation": "AI, L. Lasso AI Automations - getlassoai.com. https://www.getlassoai.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Useful General Intelligence",
+              "citation": "Adept . Adept: Useful General Intelligence - adept.ai. https://www.adept.ai/ . [Accessed 17-May-2023]."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.8.1",
+              "sec_title": "Text-to-Multilingual Code",
+              "citations": [
+                {
+                  "title": "AlphaCode - alphacode.deepmind.com",
+                  "citation": "Li, Y., Choi, D., Chung, J., Kushman, N., Schrittwieser, J., Leblond, R., Eccles, T., Keeling, J., Gimeno, F., Lago, A. D., Hubert, T., Choy, P., de Masson d'Autume, C., Babuschkin, I., Chen, X., Huang, P.-S., Welbl, J., Gowal, S., Cherepanov, A., Molloy, J., Mankowitz, D. J., Robson, E. S., Kohli, P., de Freitas, N., Kavukcuoglu, K., and Vinyals, O. AlphaCode - alphacode.deepmind.com. https://alphacode.deepmind.com/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Compa˜ nero de codificaci´ on ML -Amazon CodeWhisperer -Amazon Web Services",
+                  "citation": "Amazon . Compa˜ nero de codificaci´ on ML -Amazon CodeWhisperer -Amazon Web Services -aws.amazon.com. https://aws.amazon.com/es/codewhisperer/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "BLACKBOX AI",
+                  "citation": "AI, B. BLACKBOX AI - useblackbox.io. https://www.useblackbox.io/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "CodeComplete",
+                  "citation": "CodeComplete . CodeComplete: AI Coding Assistant for Enterprise - codecomplete.ai. https://codecomplete.ai/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "CodeGeeX: An Open Multilingual Code Generation Model",
+                  "citation": "Zheng, Q., Xia, X., Zou, X., Dong, Y., Wang, S., Xue, Y., Wang, Z., Shen, L., Wang, A., Li, Y., Su, T., Yang, Z., and Tang, J. GitHub THUDM/CodeGeeX: CodeGeeX: An Open Multilingual Code Generation Model -github.com. https://github.com/THUDM/CodeGeeX . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Codeium",
+                  "citation": "Codeium . Codeium · Free AI Code Completion and Chat - codeium.com. https://codeium.com/ . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "AI Accelerated Software Development",
+                  "citation": "mutable.ai. AI Accelerated Software Development. -mutable.ai . mutable.ai. ai accelerated software development. - mutable.ai. https://mutable.ai/ . [Accessed 23-May-2023]."
+                },
+                {
+                  "title": "About GitHub Copilot for Individuals",
+                  "citation": "GitHub . About GitHub Copilot for Individuals -GitHub Docs -docs.github.com. https://docs.github.com/en/copilot/overview-of-github-copilot/about-github-copilot-for-individua [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "GitHub Copilot X: The future of AIpowered software development",
+                  "citation": "GitHub . GitHub Copilot X: The future of AIpowered software development -linkedin.com. https://www.linkedin.com/pulse/github-copilot-x-future-ai-powered-software-development-github/?t [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "Ghostwriter -Code faster with AI",
+                  "citation": "replit . Ghostwriter -Code faster with AI -replit.com. https://replit.com/site/ghostwriter . [Accessed 17-May-2023]."
+                },
+                {
+                  "title": "AI Assistant for software developers - Tabnine",
+                  "citation": "AI Assistant for software developers -Tabnine -tabnine.com . AI Assistant for software developers - Tabnine - tabnine.com. https://www.tabnine.com/ . [Accessed 23-May-2023]."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.9",
+          "sec_title": "Speech",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.10",
+          "sec_title": "Text-to-Speech",
+          "citations": [
+            {
+              "title": "Coqui",
+              "citation": "Coqui . Coqui - coqui.ai. https://coqui.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Overdub: Natural Sounding Text-to-Speech",
+              "citation": "Descript . Overdub: Natural Sounding Text-to-Speech - Descript - descript.com. https://www.descript.com/overdub . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "ElevenLabs -- Prime Voice AI",
+              "citation": "ElevenLabs . ElevenLabs -- Prime Voice AI - beta.elevenlabs.io. https://beta.elevenlabs.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "AI Voice Generator and Text to Speech Converter",
+              "citation": "Listnr . AI Voice Generator and Text to Speech Converter - Listnr listnr.tech. https://www.listnr.tech/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "AI Voice Generator: Best Text to Speech - LOVO AI",
+              "citation": "AI, L. AI Voice Generator: Best Text to Speech - LOVO AI - lovo.ai. https://lovo.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "AI Voice Generator with Text-to-Speech - Resemble AI",
+              "citation": "Resemble . AI Voice Generator with Text-to-Speech - Resemble AI - resemble.ai. https://www.resemble.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Replica Studios",
+              "citation": "Studios, R. Replica Studios -Crunchbase Company Profile and Funding -crunchbase.com. https://www.crunchbase.com/organization/replica-studios . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Free Real Time Voice Changer and Modulator - Voicemod",
+              "citation": "Voicemod . Free Real Time Voice Changer and Modulator - Voicemod - voicemod.net. https://www.voicemod.net/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "AI Text to Speech - AI Voice Overs - WellSaid Labs",
+              "citation": "AI, W. L. AI Text to Speech - AI Voice Overs - WellSaid Labs - wellsaidlabs.com. https://wellsaidlabs.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Audiolm: a language modeling approach to audio generation",
+              "citation": "Borsos, Z., Marinier, R., Vincent, D., Kharitonov, E., Pietquin, O., Sharifi, M., Teboul, O., Grangier, D., Tagliasacchi, M., and Zeghidour, N. Audiolm: a language modeling approach to audio generation, 2022."
+            },
+            {
+              "title": "Acevc: Adaptive and controllable voice conversion using explicitly disentangled selfsupervised speech representations",
+              "citation": "Hussain, S., Neekhara, P., Huang, J., Li, J., and Ginsburg, B. Acevc: Adaptive and controllable voice conversion using explicitly disentangled selfsupervised speech representations, 2023."
+            },
+            {
+              "title": "Home 4 - vall-e.io",
+              "citation": "Wang, C., Chen, S., Wu, Y., Zhang, Z., Zhou, L., Liu, S., Chen, Z., Liu, Y., Wang, H., Li, J., He, L., Zhao, S., and Wei, F. Home 4 - vall-e.io. https://vall-e.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Supertone",
+              "citation": "Supertone . Supertone - supertone.ai. https://supertone.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Online Video Dubbing with Dubverse.ai",
+              "citation": "Dubverse . Online Video Dubbing with Dubverse.ai - dubverse.ai. https://dubverse.ai/ . [Accessed 17-May-2023]."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.11",
+          "sec_title": "AI Understanding",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.12",
+          "sec_title": "Speech-to-Text",
+          "citations": [
+            {
+              "title": "Cogram",
+              "citation": "Cogram . Double productivity with an AI coworker for your team - cogram.com. https://www.cogram.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Deepgram",
+              "citation": "Deepgram . Deepgram -Automated Speech Recognition - deepgram.com. https://deepgram.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "What is Dialpad AI and How Does it Work?",
+              "citation": "Dialpad . What is Dialpad AI and How Does it Work? - dialpad.com. https://www.dialpad.com/ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Fathom -Free AI Notetaker for Zoom",
+              "citation": "Fathom . Fathom -Free AI Notetaker for Zoom - fathom.video. https://fathom.video/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Fireflies.ai - AI notetaker to transcribe, summarize, analyze meetings",
+              "citation": "Fireflies . Fireflies.ai - AI notetaker to transcribe, summarize, analyze meetings -fireflies.ai. https://fireflies.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "",
+              "citation": "Zhang, Y., Han, W., Qin, J., Wang, Y., Bapna, A., Chen, Z., Chen, N., Li, B., Axelrod, V., Wang, G., Meng, Z., Hu, K., Rosenberg, A., Prabhavalkar, R., Park, D. S., Haghani, P., Riesa, J., Perng, G., Soltau, H., Strohman, T., Ramabhadran, B., Sainath, T., Moreno, P., Chiu, C.-C.,"
+            },
+            {
+              "title": "Papercup - AI Dubbing and Video Translation Software",
+              "citation": "Papercup . Papercup - AI Dubbing and Video Translation Software - papercup.com. https://www.papercup.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Reduct.Video",
+              "citation": "Video, R. Reduct.Video - reduct.video. https://reduct.video/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Introducing Whisper",
+              "citation": "Radford, A., Kim, J. W., Xu, T., Brockman, G., McLeavey, C., and Sutskever, I. Introducing Whisper -openai.com. https://openai.com/research/whisper . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Evolving Zoom IQ, our AI smart companion, with new features and a collaboration with OpenAI and Anthropic - Zoom Blog - blog.zoom.us",
+              "citation": "Zoom . Evolving Zoom IQ, our AI smart companion, with new features and a collaboration with OpenAI and Anthropic - Zoom Blog - blog.zoom.us. https://blog.zoom.us/zoom-iq-smart-companion/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Flamingo: a visual language model for few-shot learning",
+              "citation": "Alayrac, J.-B., Donahue, J., Luc, P., Miech, A., Barr, I., Hasson, Y., Lenc, K., Mensch, A., Millican, K., Reynolds, M., Ring, R., Rutherford, E., Cabi, S., Han, T., Gong, Z., Samangooei, S., Monteiro, M., Menick, J., Borgeaud, S., Brock, A., Nematzadeh, A., Sharifzadeh, S., Binkowski, M., Barreira, R., Vinyals, O., Zisserman, A., and Simonyan, K. Flamingo: a visual language model for few-shot learning, 2022."
+            },
+            {
+              "title": "Segment anything",
+              "citation": "Kirillov, A., Mintun, E., Ravi, N., Mao, H., Rolland, C., Gustafson, L., Xiao, T., Whitehead, S., Berg, A. C., Lo, W.-Y., Doll´ ar, P., and Girshick, R. Segment anything, 2023."
+            },
+            {
+              "title": "Visualgpt: Data-efficient adaptation of pretrained language models for image captioning",
+              "citation": "Chen, J., Guo, H., Yi, K., Li, B., and Elhoseiny, M. Visualgpt: Data-efficient adaptation of pretrained language models for image captioning, 2022."
+            },
+            {
+              "title": "Twelve Labs - The only video search API that matters - twelvelabs.io",
+              "citation": "Labs, T. Twelve Labs - The only video search API that matters - twelvelabs.io. https://twelvelabs.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Minotaur: Multi-task video grounding from multimodal queries",
+              "citation": "Goyal, R., Mavroudi, E., Yang, X., Sukhbaatar, S., Sigal, L., Feiszli, M., Torresani, L., and Tran, D. Minotaur: Multi-task video grounding from multimodal queries, 2023."
+            },
+            {
+              "title": "Movieclip: Visual scene recognition in movies",
+              "citation": "Bose, D., Hebbar, R., Somandepalli, K., Zhang, H., Cui, Y., ColeMcLaughlin, K., Wang, H., and Narayanan, S. Movieclip: Visual scene recognition in movies, 2022."
+            },
+            {
+              "title": "Home",
+              "citation": "AI, P. Home - primer.ai. https://primer.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Get transcription, research, data analysis and NLP software from Speak Ai",
+              "citation": "AI, S. Get transcription, research, data analysis and NLP software from Speak Ai - speakai.co. https://speakai.co/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Defog.ai - ChatGPT for data",
+              "citation": "AI, D. Defog.ai - ChatGPT for data - defog.ai. https://defog.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Murmur: Modular multi-step reasoning for semi-structured data-to-text generation",
+              "citation": "Saha, S., Yu, X. V., Bansal, M., Pasunuru, R., and Celikyilmaz, A. Murmur: Modular multi-step reasoning for semi-structured data-to-text generation, 2022."
+            },
+            {
+              "title": "Table-to-text generation and pre-training with tabt5",
+              "citation": "Andrejczuk, E., Eisenschlos, J. M., Piccinno, F., Krichene, S., and Altun, Y. Table-to-text generation and pre-training with tabt5, 2022."
+            },
+            {
+              "title": "Grit: A generative region-to-text transformer for object understanding",
+              "citation": "Wu, J., Wang, J., Yang, Z., Gan, Z., Liu, Z., Yuan, J., and Wang, L. Grit: A generative region-to-text transformer for object understanding, 2022."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.13",
+          "sec_title": "Business",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.14",
+          "sec_title": "Marketing",
+          "citations": [
+            {
+              "title": "Anyword - Copy Intelligence and Generative AI Built for Marketers",
+              "citation": "Anyword . Anyword - Copy Intelligence and Generative AI Built for Marketers -anyword.com. https://anyword.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Copy.ai: Write better marketing copy and content with AI",
+              "citation": "AI, C. Copy.ai: Write better marketing copy and content with AI - copy.ai. https://www.copy.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Announcing new generative AI experiences in Google Workspace",
+              "citation": "Google . Announcing new generative AI experiences in Google Workspace -Google Workspace Blog -workspace.google.com. https://workspace.google.com/blog/product-announcements/generative-ai . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "HyperWrite",
+              "citation": "HyperWrite . HyperWrite -AI Writing Companion - chrome.google.com. https://chrome.google.com/webstore/detail/hyperwrite-ai-writing-com/kljjoeapehcmaphfcjkmbhkinoao [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Jasper - AI Copywriter - AI Content Generator for Teams",
+              "citation": "AI, J. Jasper - AI Copywriter - AI Content Generator for Teams - jasper.ai. https://www.jasper.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Letterdrop -B2B Content Marketing on Autopilot - letterdrop.com",
+              "citation": "Letterdrop . Letterdrop -B2B Content Marketing on Autopilot - letterdrop.com. https://letterdrop.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Regie.ai - The AI Content Platform for Revenue Teams",
+              "citation": "AI, R. Regie.ai - The AI Content Platform for Revenue Teams - regie.ai. https://www.regie.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Free AI Writer - Text Generator and AI Copywriting Assistant",
+              "citation": "Simplified . Free AI Writer - Text Generator and AI Copywriting Assistant simplified.com. https://simplified.com/ai-writer/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Type - The AI-powered document editor",
+              "citation": "AI, T. Type - The AI-powered document editor. - type.ai. https://type.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Writesonic",
+              "citation": "Writesonic . Writesonic - Best AI Writer, Copywriting and Paraphrasing Tool -writesonic.com. https://writesonic.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Clips ai",
+              "citation": "Clips AI . Clips ai. https://www.clipsai.com/ . [Accessed 23-May-2023]."
+            },
+            {
+              "title": "Pictory - Home of AI Video Editing Technology",
+              "citation": "Pictory . Pictory -Home of AI Video Editing Technology - pictory.ai. https://pictory.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "AI Content Generation - Competitor Analysis - Predis.ai",
+              "citation": "AI, P. AI Content Generation - Competitor Analysis - Predis.ai - predis.ai. https://predis.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "AI Tweet Generator",
+              "citation": "Tweethunter . AI Tweet Generator -tweethunter.io. https://tweethunter.io/generate-tweets . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Tweetmonk - AI-powered Twitter Thread Maker and Analytics",
+              "citation": "AI, T. Tweetmonk - AI-powered Twitter Thread Maker and Analytics - tweetmonk.com. https://tweetmonk.com/pricing . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "GitHub Zafirmk/BytePods: Daily podcasts generated by AI github.com",
+              "citation": "Zafirmk . GitHub Zafirmk/BytePods: Daily podcasts generated by AI github.com. https://github.com/Zafirmk/BytePods . [Accessed 25-May-2023]."
+            },
+            {
+              "title": "",
+              "citation": "Creative, A. Generate ad creatives that help you sell more. Fast. - adcreative.ai. https://www.adcreative.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Generate ads in seconds with AI",
+              "citation": "Clickable . Generate ads in seconds with AI -clickable.so. https://www.clickable.so/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Omneky - Personalized Design",
+              "citation": "Omneky . Omneky -Personalized Design:Omneky -omneky.com. https://www.omneky.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Pencil - Unlimited ad creatives for ecommerce",
+              "citation": "Pencil . Pencil -Unlimited ad creatives for ecommerce - trypencil.com. https://www.trypencil.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Waymark",
+              "citation": "Waymark . Waymark, AI Video Creator -waymark.com. https://waymark.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "LensAI advertising I Efficient monetization web traffic I Context advertising",
+              "citation": "AI, L. LensAI advertising I Efficient monetization web traffic I Context advertising - lens-ai.com. https://lens-ai.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "AI21 Labs",
+              "citation": "AI21Labs . AI21 Labs - ai21.com. https://www.ai21.com/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Subtxt - AI-Powered Storytelling",
+              "citation": "AI, S. Subtxt - AI-Powered Storytelling - subtxt.app. https://subtxt.app/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "OneReach.ai",
+              "citation": "AI, O. OneReach.ai - onereach.ai. https://onereach.ai/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "OpenSight - Automate your customer support questions (and actions!)",
+              "citation": "OpenSight . Launch YC: OpenSight -Automate your customer support questions (and actions!) - Y Combinator - ycombinator.com. https://www.ycombinator.com/launches/I1M-opensight-automate-your-customer-support-questions-and[Accessed 17-May-2023]."
+            },
+            {
+              "title": "Brainfish: Next Decade's Customer Experience.",
+              "citation": "Brainfish . Brainfish: Next Decade's Customer Experience. - brainfi.sh. https://www.brainfi.sh/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Yuma - ChatGPT for Customer Support - yuma.ai",
+              "citation": "Yuma . Yuma - ChatGPT for Customer Support - yuma.ai. https://yuma.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "InboxPro - Boost your Gmail productivity with AI and powerful automation tools",
+              "citation": "InboxPro . InboxPro - Boost your Gmail productivity with AI and powerful automation tools - inboxpro.io. https://inboxpro.io/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Lavender",
+              "citation": "Lavender . Lavender -chrome.google.com. https://chrome.google.com/webstore/detail/lavender/necbalcggglceeioaehdbkpbldmoabii?hl=en . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "SmartWriter - Personalised AI Cold Emails",
+              "citation": "SmartWriter . SmartWriter - Personalised AI Cold Emails - smartwriter.ai. https://www.smartwriter.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Twain",
+              "citation": "Twain . Twain -AI communication assistant for outreach - twain.ai. https://www.twain.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Customer-Led Voice Assistants - PolyAI",
+              "citation": "AI, P. Customer-Led Voice Assistants - PolyAI - poly.ai. https://poly.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Cresta AI - Generative AI for the Contact Center",
+              "citation": "AI, C. Cresta AI - Generative AI for the Contact Center - cresta.com. https://cresta.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Generative AI Platform for CX Automation - Forethought",
+              "citation": "Forethought . Generative AI Platform for CX Automation - Forethought forethought.ai. https://forethought.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Grain - AI-powered Meeting Recording For All Teams",
+              "citation": "AI, G. Grain - AI-powered Meeting Recording For All Teams - grain.com. https://grain.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Replicant: Automate Your Contact Center Customer Service",
+              "citation": "Replicatn . Replicant: Automate Your Contact Center Customer Service replicant.com. https://www.replicant.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Launch YC: Tennr - Custom Large Language models without engineering",
+              "citation": "Tennr . Launch YC: Tennr -Custom Large Language models without engineering. -Y Combinator -ycombinator.com. https://www.ycombinator.com/launches/I2r-tennr-the-perfect-prep-before-every-sales-call . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "CopyMonkey",
+              "citation": "CopyMonkey . Create Optimized Amazon Listing in seconds - CopyMonkey -copymonkey.ai. https://copymonkey.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Salesforce Announces Einstein GPT, the World's First Generative AI for CRM",
+              "citation": "Salesforce . Salesforce Announces Einstein GPT, the World's First Generative AI for CRM -salesforce.com. https://www.salesforce.com/news/press-releases/2023/03/07/einstein-generative-ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Microsoft Designer -Stunning designs in a flash - designer.microsoft.com",
+              "citation": "Microsoft . Microsoft Designer -Stunning designs in a flash - designer.microsoft.com. https://designer.microsoft.com/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Brandmark Logo Maker - the most advanced AI logo design tool",
+              "citation": "Brandmark . Brandmark Logo Maker - the most advanced AI logo design tool -brandmark.io. https://brandmark.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Looka ai",
+              "citation": "Looka AI . Looka ai. https://looka.com/ . [Accessed 23-May-2023]."
+            },
+            {
+              "title": "Business Name Generator - free AI-powered naming tool",
+              "citation": "Namelix . Business Name Generator - free AI-powered naming tool - Namelix namelix.com. https://namelix.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Branition AI Business Name Generator",
+              "citation": "Branition AI Business Name Generator -branition.com . Branition AI Business Name Generator -branition.com. https://branition.com/business-name-generator . [Accessed 25-May-2023]."
+            },
+            {
+              "title": "brandsnap.ai -brandsnap.ai",
+              "citation": "brandsnap.ai -brandsnap.ai . brandsnap.ai -brandsnap.ai. https://brandsnap.ai/ . [Accessed 25-May-2023]."
+            },
+            {
+              "title": "Bardeen - Automate your repetitive tasks with one click",
+              "citation": "AI, B. Bardeen - Automate your repetitive tasks with one click - bardeen.ai. https://www.bardeen.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Magical AI - Free AI Writing Assistant - getmagical.com",
+              "citation": "Magical . Magical AI - Free AI Writing Assistant - getmagical.com. https://www.getmagical.com/ai . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Notion AI",
+              "citation": "AI, N. Notion AI - notion.so. https://www.notion.so/product/ai . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Rationale - a revolutionary decision-making AI powered by the latest GPT and in-context learning",
+              "citation": "Jina . Rationale - a revolutionary decision-making AI powered by the latest GPT and in-context learning - rationale.jina.ai. https://rationale.jina.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Albus ChatGPT powered AI teammate",
+              "citation": "Slack . Albus ChatGPT powered AI teammate -slack.com. https://slack.com/apps/A04FQN4RN49-albus-chatgpt-powered-ai-teammate?tab=more\\_info . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Albus ChatGPT powered AI teammate",
+              "citation": "Slack . Albus ChatGPT powered AI teammate -slack.com. https://slack.com/apps/A04FQN4RN49-albus-chatgpt-powered-ai-teammate?tab=more\\_info . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Moveworks: The Enterprise Copilot Platform - moveworks.com",
+              "citation": "Moveworks . Moveworks: The Enterprise Copilot Platform - moveworks.com. https://www.moveworks.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Home",
+              "citation": "AI, C. Home - cohere.ai. https://cohere.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "VenturusAI - Instant feedback on your business ideas",
+              "citation": "AI, V. VenturusAI - Instant feedback on your business ideas - venturusai.com. https://venturusai.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Mixo -Launch your startup in seconds -mixo.io",
+              "citation": "Mixo . Mixo -Launch your startup in seconds -mixo.io. https://www.mixo.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "AutoSlide -AI-powered presentation generator",
+              "citation": "AI, A. AutoSlide -AI-powered presentation generator - autoslide.ai. https://autoslide.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Canva Docs to Decks",
+              "citation": "Canva Docs to Decks . Canva docs to decks. https://www.canva.com/help/docs-to-decks/ . [Accessed 23-May-2023]."
+            },
+            {
+              "title": "ChatBA: Generative AI for Slides",
+              "citation": "ChatBA . ChatBA: Generative AI for Slides -chatba.com. https://www.chatba.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Decktopus AI",
+              "citation": "AI, D. Decktopus AI - decktopus.com. https://www.decktopus.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Gamma App",
+              "citation": "Gamma . Gamma App - gamma.app. https://gamma.app/?ref=producthunt . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Announcing new generative AI experiences in Google Workspace",
+              "citation": "Google . Announcing new generative AI experiences in Google Workspace -Google Workspace Blog -workspace.google.com. https://workspace.google.com/blog/product-announcements/generative-ai . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Tome -The AI-powered storytelling format",
+              "citation": "AI, T. Tome -The AI-powered storytelling format - beta.tome.app. https://beta.tome.app/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Create Presentation Slides With AI In Seconds - SlidesAI.io",
+              "citation": "AI, S. Create Presentation Slides With AI In Seconds - SlidesAI.io - slidesai.io. https://www.slidesai.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Market Research Simplified - AlphaWatch AI",
+              "citation": "Alphawatch . Market Research Simplified - AlphaWatch AI - alphawatch.ai. https://www.alphawatch.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Dataherald",
+              "citation": "Dataherald . Dataherald - The first generative AI platform purpose-built for data content - dataherald.com. https://www.dataherald.com/ . [Accessed 17May-2023]."
+            },
+            {
+              "title": "OpenAxis - Data storytelling democratized",
+              "citation": "OpenAxis . OpenAxis -Data storytelling democratized - openaxis.com. https://openaxis.com/home . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Meet Maya AI, an AI data robot for answers - meetmaya.world",
+              "citation": "Maya . Meet Maya AI, an AI data robot for answers - meetmaya.world. https://meetmaya.world . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Ai Intern",
+              "citation": "Intern, A. Ai Intern - aiintern.io. https://aiintern.io/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Bloomberggpt",
+              "citation": "Bloomberg . Bloomberggpt. https://www.bloomberg.com/company/press/bloomberggpt-50-billion-paramet [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Quilt Labs",
+              "citation": "QuiltLabs . Quilt Labs - quiltlabs.ai. https://www.quiltlabs.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Summarization Platform",
+              "citation": "AI, A. Summarization Platform -Agolo -agolo.com. https://www.agolo.com/product . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "ArxivGPT",
+              "citation": "ArxivGPT . ArxivGPT -chrome.google.com. https://chrome.google.com/webstore/detail/arxivgpt/fbbfpcjhnnklhmncjickdipdlhoddjoh . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Consensus",
+              "citation": "Consensus . Search - Consensus - Evidence-Based Answers, Faster - consensus.app. https://consensus.app/search/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Galileo AI · Copilot for interface design",
+              "citation": "AI, G. Galileo AI · Copilot for interface design - usegalileo.ai. https://www.usegalileo.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Koala: A Dialogue Model for Academic Research - bair.berkeley.edu",
+              "citation": "Levine, X. G. A. G. H. L. E. W. P. A. S., and Song, D. Koala: A Dialogue Model for Academic Research - bair.berkeley.edu. https://bair.berkeley.edu/blog/2023/04/03/koala/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Golden",
+              "citation": "Golden - golden.com . Golden - golden.com. https://golden.com/ . [Accessed 25-May-2023]."
+            },
+            {
+              "title": "Casetext - CoCounsel",
+              "citation": "Casetext . Casetext - CoCounsel - casetext.com. https://casetext.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Justice Intelligence Platform",
+              "citation": "AI, D. Justice Intelligence Platform -Darrow -darrow.ai. https://www.darrow.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Generative AI for Elite Law Firms",
+              "citation": "AI, H. Harvey - Generative AI for Elite Law Firms - harvey.ai. https://www.harvey.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Spellbook - AI Contract Drafting and Review",
+              "citation": "Spellbook . Spellbook - AI Contract Drafting and Review - spellbook.legal. https://www.spellbook.legal/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "TaxGPT: Automated Tax Filing",
+              "citation": "TaxGPT: Automated Tax Filing - taxgpt.info . TaxGPT: Automated Tax Filing - taxgpt.info. https://taxgpt.info/ . [Accessed 25-May-2023]."
+            },
+            {
+              "title": "Truewind",
+              "citation": "Truewind . Truewind - Get Peace of Mind with Truewind - truewind.ai. https://www.truewind.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Chatgpt in education: A discourse analysis of worries and concerns on social media",
+              "citation": "Li, L., Ma, Z., Fan, L., Lee, S., Yu, H., and Hemphill, L. Chatgpt in education: A discourse analysis of worries and concerns on social media, 2023."
+            },
+            {
+              "title": "broadn",
+              "citation": "Broadn . broadn - broadn.io. https://www.broadn.io/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Lalaland.ai - AI-powered digital model studio for digital designers -lalaland.ai",
+              "citation": "Land, L. L. Lalaland.ai - AI-powered digital model studio for digital designers -lalaland.ai. https://lalaland.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Sonantic -Dynamic voice acting, on demand",
+              "citation": "Sonantic . Sonantic -Dynamic voice acting, on demand. - app.sonantic.io. https://app.sonantic.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "SWAPP - AI-Powered Construction Documents in minutes",
+              "citation": "AI, S. SWAPP - AI-Powered Construction Documents in minutes. - swapp.ai. https://www.swapp.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Autodesk spacemaker",
+              "citation": "Autodesk Spacemaker . Autodesk spacemaker. https://www.autodesk.com/products/spacemaker/overview . [Accessed 23-May-2023]."
+            },
+            {
+              "title": "Zuma - We convert your leads into booked tours - getzuma.com",
+              "citation": "Zuma . Zuma - We convert your leads into booked tours - getzuma.com. https://www.getzuma.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Hazy - The enterprise synthetic data platform",
+              "citation": "Hazy . Hazy - The enterprise synthetic data platform - hazy.com. https://hazy.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "MOSTLY AI: The Synthetic Data Generation and Knowledge Hub MOSTLY AI - mostly.ai",
+              "citation": "Mostly . MOSTLY AI: The Synthetic Data Generation and Knowledge Hub MOSTLY AI - mostly.ai. https://mostly.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Octopize - Mimethik Data",
+              "citation": "Octopize . Octopize -Mimethik Data -octopize-md.com. https://octopize-md.com/en/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Tonic.ai - The Fake Data Company",
+              "citation": "AI, T. Tonic.ai - The Fake Data Company - tonic.ai. https://www.tonic.ai/ . [Accessed 17-May-2023]."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.15",
+          "sec_title": "Gaming",
+          "citations": [
+            {
+              "title": "CSM AI - 3D World Models",
+              "citation": "CSM . CSM AI - 3D World Models - csm.ai. https://csm.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Illiad ai",
+              "citation": "AI, I. Illiad ai. https://iliad.ai/ . [Accessed 25-May-2023]."
+            },
+            {
+              "title": "Latitude - latitude.io",
+              "citation": "Latitude . Latitude - latitude.io. https://latitude.io/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "PixelVibe",
+              "citation": "PixelVibe . Create Gaming Assets Using AI: PixelVibe by Rosebud AI - pixelvibe.com. https://www.pixelvibe.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Mariogpt: Open-ended text2level generation through large language models",
+              "citation": "Sudhakaran, S., Gonz´ alez-Duque, M., Glanois, C., Freiberger, M., Najarro, E., and Risi, S. Mariogpt: Open-ended text2level generation through large language models, 2023."
+            },
+            {
+              "title": "Waiting Room powered by Cloudflare",
+              "citation": "CharacterAI . Waiting Room powered by Cloudflare - character.ai. https://character.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "ConvAI",
+              "citation": "ConvAI . Convai -Conversational AI for Virtual Worlds - convai.com. https://www.convai.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Inworld - The developer platform for AI characters",
+              "citation": "InWorld . Inworld - The developer platform for AI characters - inworld.ai. https://www.inworld.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Chaos Box",
+              "citation": "RCT . rct AI - rct.ai. https://rct.ai/en-us/chaos-box . [Accessed 17-May2023]."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.16",
+          "sec_title": "Music",
+          "citations": [
+            {
+              "title": "AIVA - The AI composing emotional soundtrack music",
+              "citation": "AI, A. AIVA - The AI composing emotional soundtrack music - aiva.ai. https://www.aiva.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "ERNIE-Music: Text-to-Waveform Music Generation with Diffusion Models",
+              "citation": "Zhu, P., Pang, C., Wang, S., Chai, Y., Sun, Y., Tian, H., and Wu, H. Papers with Code -ERNIE-Music: Text-to-Waveform Music Generation with Diffusion Models -paperswithcode.com. https://paperswithcode.com/paper/ernie-music-text-to-waveform-music-generation [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Harmonai.org",
+              "citation": "Harmonai . Harmonai.org - harmonai.org. https://www.harmonai.org/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "INFINITE ALBUM",
+              "citation": "Album, I. INFINITE ALBUM -infinitealbum.io. https://www.infinitealbum.io/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Jukebox",
+              "citation": "Dhariwal, P., Jun, H., Payne, C., Kim, J. W., Radford, A., and Sutskever, I. Jukebox -openai.com. https://openai.com/research/jukebox . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Mubert -Thousands of Staff-Picked Royalty-Free Music Tracks for Streaming, Videos, Podcasts, Commercial Use and Online Content - mubert.com",
+              "citation": "Mubert . Mubert -Thousands of Staff-Picked Royalty-Free Music Tracks for Streaming, Videos, Podcasts, Commercial Use and Online Content - mubert.com. https://mubert.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Musico",
+              "citation": "Musico . Musico - musi-co.com. https://musi-co.com/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Noise2music: Text-conditioned music generation with diffusion models",
+              "citation": "Huang, Q., Park, D. S., Wang, T., Denk, T. I., Ly, A., Chen, N., Zhang, Z., Zhang, Z., Yu, J., Frank, C., Engel, J., Le, Q. V., Chan, W., Chen, Z., and Han, W. Noise2music: Text-conditioned music generation with diffusion models, 2023."
+            },
+            {
+              "title": "Sonify",
+              "citation": "Sonify . Sonify - sonify.io. https://www.sonify.io/product/ . [Accessed 17May-2023]."
+            },
+            {
+              "title": "Soundful",
+              "citation": "Soundful . AI Music Generator -Soundful -soundful.com. https://soundful.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "BeatBot",
+              "citation": "Beatbot . BeatBot - beatbot.fm. https://beatbot.fm/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Edge: Editable dance generation from music",
+              "citation": "Tseng, J., Castellon, R., and Liu, C. K. Edge: Editable dance generation from music, 2022."
+            },
+            {
+              "title": "App Moises: la aplicaci´ on para m´ usicos - Elimina voces y m´ as moises.ai",
+              "citation": "Moises . App Moises: la aplicaci´ on para m´ usicos - Elimina voces y m´ as moises.ai. https://moises.ai/es/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Singsong: Generating musical accompaniments from singing",
+              "citation": "Donahue, C., Caillon, A., Roberts, A., Manilow, E., Esling, P., Agostinelli, A., Verzetti, M., Simon, I., Pietquin, O., Zeghidour, N., and Engel, J. Singsong: Generating musical accompaniments from singing, 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.17",
+          "sec_title": "Biotech",
+          "citations": [
+            {
+              "title": "Biologics Drug Discovery",
+              "citation": "Absci . Biologics Drug Discovery -Absci -absci.com. https://www.absci.com/ . [Accessed 17-May-2023]."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.18",
+          "sec_title": "Drug Discovery",
+          "citations": [
+            {
+              "title": "NVIDIA BioNeMo: AI-powered drug discovery pipelines",
+              "citation": "NVIDIA . NVIDIA BioNeMo: AI-powered drug discovery pipelines - nvidia.com. https://www.nvidia.com/en-us/gpu-cloud/bionemo/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Atomic AI",
+              "citation": "AI, A. Atomic AI - atomic.ai. https://atomic.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Home -BigHat Biosciences",
+              "citation": "BigHat . Home -BigHat Biosciences -bighatbio.com. https://www.bighatbio.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Exscientia - AI Drug Discovery - Pharmatech",
+              "citation": "Exscientia . Exscientia - AI Drug Discovery - Pharmatech - exscientia.ai. https://www.exscientia.ai/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Menten AI - menten.ai",
+              "citation": "Menten . Menten AI - menten.ai. https://www.menten.ai/ . [Accessed 17May-2023]."
+            },
+            {
+              "title": "ProteinQure",
+              "citation": "Siow, T. B. C. I. M. F. L. ProteinQure - proteinqure.com. https://www.proteinqure.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Bartsmiles: Generative masked language models for molecular representations",
+              "citation": "Chilingaryan, G., Tamoyan, H., Tevosyan, A., Babayan, N., Khondkaryan, L., Hambardzumyan, K., Navoyan, Z., Khachatrian, H., and Aghajanyan, A. Bartsmiles: Generative masked language models for molecular representations, 2022."
+            },
+            {
+              "title": "",
+              "citation": "Ren, F., Ding, X., Zheng, M., Korzinkin, M., Cai, X., Zhu, W., Mantsyzov, A., Aliper, A., Aladinskiy, V., Cao, Z., Kong, S., Long, X., Liu, B."
+            },
+            {
+              "title": "Cradle",
+              "citation": "Cradle . Cradle - cradle.bio. https://cradle.bio/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "Decoding proteins with AI",
+              "citation": "Profluentg . Decoding proteins with AI -profluent.bio. https://www.profluent.bio/ . [Accessed 17-May-2023]."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.19",
+          "sec_title": "Brain",
+          "citations": [
+            {
+              "title": "Using AI to decode speech from brain activity",
+              "citation": "AI, M. Using AI to decode speech from brain activity - ai.facebook.com. https://ai.facebook.com/blog/ai-speech-brain-activity/ . [Accessed 25May-2023]."
+            },
+            {
+              "title": "Decoding speech from non-invasive brain recordings",
+              "citation": "D´ efossez, A., Caucheteux, C., Rapin, J., Kabeli, O., and King, J.-R. Decoding speech from non-invasive brain recordings, 2022."
+            },
+            {
+              "title": "Semantic reconstruction of continuous language from non-invasive brain recordings",
+              "citation": "Tang, J., LeBel, A., Jain, S., and Huth, A. G. Semantic reconstruction of continuous language from non-invasive brain recordings. bioRxiv (2022)."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "Others",
+      "citations": [
+        {
+          "title": "Discovering faster matrix multiplication algorithms with reinforcement learning",
+          "citation": "Fawzi, A., Balog, M., Huang, A., et al. Discovering faster matrix multiplication algorithms with reinforcement learning. Nature 610 (2022), 47-53."
+        },
+        {
+          "title": "Auto-gpt",
+          "citation": "Gravitas, S. Auto-gpt, 2023."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Multimodal",
+          "citations": [
+            {
+              "title": "Gpt-4 technical report",
+              "citation": "OpenAI . Gpt-4 technical report, 2023."
+            },
+            {
+              "title": "Chinese tech giant Baidu just released its answer to ChatGPT",
+              "citation": "Yang, Z. Chinese tech giant Baidu just released its answer to ChatGPT -technologyreview.com. https://www.technologyreview.com/2023/03/16/1069919/baidu-ernie-bot-chatgpt-launch/ . [Accessed 25-May-2023]."
+            },
+            {
+              "title": "Language is not all you need: Aligning perception with language models",
+              "citation": "Huang, S., Dong, L., Wang, W., Hao, Y., Singhal, S., Ma, S., Lv, T., Cui, L., Mohammed, O. K., Patra, B., Liu, Q., Aggarwal, K., Chi, Z., Bjorck, J., Chaudhary, V., Som, S., Song, X., and Wei, F. Language is not all you need: Aligning perception with language models, 2023."
+            },
+            {
+              "title": "Prismer: A vision-language model with an ensemble of experts",
+              "citation": "Liu, S., Fan, L., Johns, E., Yu, Z., Xiao, C., and Anandkumar, A. Prismer: A vision-language model with an ensemble of experts, 2023."
+            },
+            {
+              "title": "PaLM-E: An embodied multimodal language model",
+              "citation": "Driess, D., Xia, F., Sajjadi, M. S. M., Lynch, C., Chowdhery, A., Ichter, B., Wahid, A., Tompson, J., Vuong, Q., Yu, T., Huang, W., Chebotar, Y., Sermanet, P., Duckworth, D., Levine, S., Vanhoucke, V., Hausman, K., Toussaint, M., Greff, K., Zeng, A., Mordatch, I., and Florence, P. PaLM-E: An embodied multimodal language model - ai.googleblog.com. https://ai.googleblog.com/2023/03/palm-e-embodied-multimodal-language.html [Accessed 17-May-2023]."
+            },
+            {
+              "title": "A Generalist Agent",
+              "citation": "Reed, S., Zolna, K., Parisotto, E., Colmenarejo, S. G., Novikov, A., Barth-Maron, G., Gimenez, M., Sulsky, Y., Kay, J., Springenberg, J. T., Eccles, T., Bruce, J., Razavi, A., Edwards, A., Heess, N., Chen, Y., Hadsell, R., Vinyals, O., Bordbar, M., and de Freitas, N. A Generalist Agent - deepmind.com. https://www.deepmind.com/publications/a-generalist-agent . [Accessed 17May-2023]."
+            },
+            {
+              "title": "generally intelligent",
+              "citation": "Intelligent, G. generally intelligent -generallyintelligent.com. https://generallyintelligent.com/ . [Accessed 17-May-2023]."
+            },
+            {
+              "title": "NVIDIA Picasso",
+              "citation": "NVIDIA . NVIDIA Picasso -nvidia.com. https://www.nvidia.com/en-us/gpu-cloud/picasso/ . [Accessed 17-May2023]."
+            },
+            {
+              "title": "Hugginggpt: Solving ai tasks with chatgpt and its friends in huggingface",
+              "citation": "Shen, Y., Song, K., Tan, X., Li, D., Lu, W., and Zhuang, Y. Hugginggpt: Solving ai tasks with chatgpt and its friends in huggingface, 2023."
+            },
+            {
+              "title": "AI Art Generator",
+              "citation": "Adobe . AI Art Generator -Adobe Firefly -adobe.com. https://www.adobe.com/sensei/generative-ai/firefly.html . [Accessed 17-May-2023]."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "Conclusions and further work",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

@@ -1,0 +1,1714 @@
+{
+  "track": "Semantic Segmentation",
+  "paper_title": "A Comprehensive Survey on Segment Anything Model for Vision and Beyond",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "INTRODUCTION",
+      "citations": [
+        {
+          "title": "On the opportunities and risks of foundation models",
+          "citation": "R. Bommasani, D. A. Hudson, E. Adeli, R. Altman, S. Arora, S. von Arx, M. S. Bernstein, J. Bohg, A. Bosselut, E. Brunskill et al. , 'On the opportunities and risks of foundation models,' arXiv preprint arXiv:2108.07258 , 2021."
+        },
+        {
+          "title": "Large-scale multi-modal pre-trained models: A comprehensive survey",
+          "citation": "X. Wang, G. Chen, G. Qian, P. Gao, X.-Y. Wei, Y. Wang, Y. Tian, and W. Gao, 'Large-scale multi-modal pre-trained models: A comprehensive survey,' arXiv preprint arXiv:2302.10035 , 2023."
+        },
+        {
+          "title": "Foundations and recent trends in multimodal machine learning: Principles, challenges, and open questions",
+          "citation": "P. P . Liang, A. Zadeh, and L.-P. Morency, 'Foundations and recent trends in multimodal machine learning: Principles, challenges, and open questions,' arXiv preprint arXiv:2209.03430 , 2022."
+        },
+        {
+          "title": "Bert: Pretraining of deep bidirectional transformers for language understanding",
+          "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, 'Bert: Pretraining of deep bidirectional transformers for language understanding,' arXiv preprint arXiv:1810.04805 , 2018."
+        },
+        {
+          "title": "Exploring the limits of transfer learning with a unified text-to-text transformer",
+          "citation": "C. Raffel, N. Shazeer, A. Roberts, K. Lee, S. Narang, M. Matena, Y. Zhou, W. Li, and P. J. Liu, 'Exploring the limits of transfer learning with a unified text-to-text transformer,' The Journal of Machine Learning Research , vol. 21, no. 1, pp. 5485-5551, 2020."
+        },
+        {
+          "title": "Language models are few-shot learners",
+          "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell et al. , 'Language models are few-shot learners,' Advances in neural information processing systems , vol. 33, pp. 1877-1901, 2020."
+        },
+        {
+          "title": "Gpt-4",
+          "citation": "OpenAI, 'Gpt-4,' https://cdn.openai.com/papers/gpt-4.pdf, 2023."
+        },
+        {
+          "title": "Introducing chatgpt",
+          "citation": "--, 'Introducing chatgpt,' https://openai.com/blog/chatgpt, Accessed: 2023-05-10."
+        },
+        {
+          "title": "Scaling vision transformers",
+          "citation": "X. Zhai, A. Kolesnikov, N. Houlsby, and L. Beyer, 'Scaling vision transformers,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 12 104-12 113."
+        },
+        {
+          "title": "Scaling vision transformers to 22 billion parameters",
+          "citation": "M. Dehghani, J. Djolonga, B. Mustafa, P. Padlewski, J. Heek, J. Gilmer, A. Steiner, M. Caron, R. Geirhos, I. Alabdulmohsin et al. , 'Scaling vision transformers to 22 billion parameters,' arXiv preprint arXiv:2302.05442 , 2023."
+        },
+        {
+          "title": "Swin transformer v2: Scaling up capacity and resolution",
+          "citation": "Z. Liu, H. Hu, Y. Lin, Z. Yao, Z. Xie, Y. Wei, J. Ning, Y. Cao, Z. Zhang, L. Dong et al. , 'Swin transformer v2: Scaling up capacity and resolution,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2022, pp. 12 009-12 019."
+        },
+        {
+          "title": "Videomae v2: Scaling video masked autoencoders with dual masking",
+          "citation": "L. Wang, B. Huang, Z. Zhao, Z. Tong, Y. He, Y. Wang, Y. Wang, and Y. Qiao, 'Videomae v2: Scaling video masked autoencoders with dual masking,' arXiv preprint arXiv:2303.16727 , 2023."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark et al. , 'Learning transferable visual models from natural language supervision,' in International conference on machine learning . PMLR, 2021, pp. 8748-8763."
+        },
+        {
+          "title": "Scaling up visual and visionlanguage representation learning with noisy text supervision",
+          "citation": "C. Jia, Y. Yang, Y. Xia, Y.-T. Chen, Z. Parekh, H. Pham, Q. Le, Y.-H. Sung, Z. Li, and T. Duerig, 'Scaling up visual and visionlanguage representation learning with noisy text supervision,' in International Conference on Machine Learning . PMLR, 2021, pp. 4904-4916."
+        },
+        {
+          "title": "Representation learning with contrastive predictive coding",
+          "citation": "A. v. d. Oord, Y. Li, and O. Vinyals, 'Representation learning with contrastive predictive coding,' arXiv preprint arXiv:1807.03748 , 2018."
+        },
+        {
+          "title": "Flickr30k entities: Collecting regionto-phrase correspondences for richer image-to-sentence models",
+          "citation": "B. A. Plummer, L. Wang, C. M. Cervantes, J. C. Caicedo, J. Hockenmaier, and S. Lazebnik, 'Flickr30k entities: Collecting regionto-phrase correspondences for richer image-to-sentence models,' in Proceedings of the IEEE international conference on computer vision , 2015, pp. 2641-2649."
+        },
+        {
+          "title": "Microsoft coco captions: Data collection and evaluation server",
+          "citation": "X. Chen, H. Fang, T.-Y. Lin, R. Vedantam, S. Gupta, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco captions: Data collection and evaluation server,' arXiv preprint arXiv:1504.00325 , 2015."
+        },
+        {
+          "title": "Zero-shot text-to-image generation",
+          "citation": "A. Ramesh, M. Pavlov, G. Goh, S. Gray, C. Voss, A. Radford, M. Chen, and I. Sutskever, 'Zero-shot text-to-image generation,' in International Conference on Machine Learning . PMLR, 2021, pp. 8821-8831."
+        },
+        {
+          "title": "Hierarchical text-conditional image generation with clip latents",
+          "citation": "A. Ramesh, P. Dhariwal, A. Nichol, C. Chu, and M. Chen, 'Hierarchical text-conditional image generation with clip latents,' arXiv preprint arXiv:2204.06125 , 2022."
+        },
+        {
+          "title": "Large-scale multi-modal pre-trained models: A comprehensive survey",
+          "citation": "X. Wang, G. Chen, G. Qian, P. Gao, X.-Y. Wei, Y. Wang, Y. Tian, and W. Gao, 'Large-scale multi-modal pre-trained models: A comprehensive survey,' arXiv preprint arXiv:2302.10035 , 2023."
+        },
+        {
+          "title": "Not specified in given text",
+          "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+        },
+        {
+          "title": "Not specified in given text",
+          "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+        },
+        {
+          "title": "Personalize segment anything model with one shot",
+          "citation": "R. Zhang, Z. Jiang, Z. Guo, S. Yan, J. Pan, H. Dong, P. Gao, and H. Li, 'Personalize segment anything model with one shot,' arXiv preprint arXiv:2305.03048 , 2023."
+        },
+        {
+          "title": "Sam struggles in concealed scenes-empirical study on segment anything",
+          "citation": "G.-P. Ji, D.-P . Fan, P . Xu, M.-M. Cheng, B. Zhou, and L. Van Gool, 'Sam struggles in concealed scenes-empirical study on' segment anything',' arXiv preprint arXiv:2304.06022 , 2023."
+        },
+        {
+          "title": "Seggpt: Segmenting everything in context",
+          "citation": "X. Wang, X. Zhang, Y. Cao, W. Wang, C. Shen, and T. Huang, 'Seggpt: Segmenting everything in context,' arXiv preprint arXiv:2304.03284 , 2023."
+        },
+        {
+          "title": "Segment everything everywhere all at once",
+          "citation": "X. Zou, J. Yang, H. Zhang, F. Li, L. Li, J. Gao, and Y. J. Lee, 'Segment everything everywhere all at once,' arXiv preprint arXiv:2304.06718 , 2023."
+        },
+        {
+          "title": "Oneformer: One transformer to rule universal image segmentation",
+          "citation": "J. Jain, J. Li, M. Chiu, A. Hassani, N. Orlov, and H. Shi, 'Oneformer: One transformer to rule universal image segmentation,' arXiv preprint arXiv:2211.06220 , 2022."
+        },
+        {
+          "title": "Pretrain, prompt, and predict: A systematic survey of prompting methods in natural language processing",
+          "citation": "P. Liu, W. Yuan, J. Fu, Z. Jiang, H. Hayashi, and G. Neubig, 'Pretrain, prompt, and predict: A systematic survey of prompting methods in natural language processing,' ACM Computing Surveys , vol. 55, no. 9, pp. 1-35, 2023."
+        },
+        {
+          "title": "Not specified in given text",
+          "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+        },
+        {
+          "title": "Gpt-3 moment in computer vision",
+          "citation": "J. Fan, 'Gpt-3 moment in computer vision,' https://twitter.com/ DrJimFan, 2023."
+        },
+        {
+          "title": "Sam struggles in concealed scenes-empirical study on segment anything",
+          "citation": "G.-P. Ji, D.-P . Fan, P . Xu, M.-M. Cheng, B. Zhou, and L. Van Gool, 'Sam struggles in concealed scenes-empirical study on' segment anything',' arXiv preprint arXiv:2304.06022 , 2023."
+        },
+        {
+          "title": "Segment anything in noneuclidean domains: Challenges and opportunities",
+          "citation": "Y. Jing, X. Wang, and D. Tao, 'Segment anything in noneuclidean domains: Challenges and opportunities,' arXiv preprint arXiv:2304.11595 , 2023."
+        },
+        {
+          "title": "Can sam segment anything? when sam meets camouflaged object detection",
+          "citation": "L. Tang, H. Xiao, and B. Li, 'Can sam segment anything? when sam meets camouflaged object detection,' arXiv preprint arXiv:2304.04709 , 2023."
+        },
+        {
+          "title": "Segment anything in medical images",
+          "citation": "J. Ma and B. Wang, 'Segment anything in medical images,' arXiv preprint arXiv:2304.12306 , 2023."
+        },
+        {
+          "title": "Can sam segment polyps?",
+          "citation": "T. Zhou, Y. Zhang, Y. Zhou, Y. Wu, and C. Gong, 'Can sam segment polyps?' arXiv preprint arXiv:2304.07583 , 2023."
+        },
+        {
+          "title": "Generalist vision foundation models for medical imaging: A case study of segment anything model on zero-shot medical segmentation",
+          "citation": "P. Shi, J. Qiu, S. M. D. Abaxi, H. Wei, F. P.-W. Lo, and W. Yuan, 'Generalist vision foundation models for medical imaging: A case study of segment anything model on zero-shot medical segmentation,' arXiv preprint arXiv:2304.12637 , 2023."
+        },
+        {
+          "title": "How segment anything model (sam) boost medical image segmentation?",
+          "citation": "Y. Zhang and R. Jiao, 'How segment anything model (sam) boost medical image segmentation?' arXiv preprint arXiv:2305.03678 , 2023."
+        },
+        {
+          "title": "Medical sam adapter: Adapting segment anything model for medical image segmentation",
+          "citation": "J. Wu, R. Fu, H. Fang, Y. Liu, Z. Wang, Y. Xu, Y. Jin, and T. Arbel, 'Medical sam adapter: Adapting segment anything model for medical image segmentation,' arXiv preprint arXiv:2304.12620 , 2023."
+        },
+        {
+          "title": "Sam fails to segment anything?-samadapter: Adapting sam in underperformed scenes: Camouflage, shadow, and more",
+          "citation": "T. Chen, L. Zhu, C. Ding, R. Cao, S. Zhang, Y. Wang, Z. Li, L. Sun, P. Mao, and Y. Zang, 'Sam fails to segment anything?-samadapter: Adapting sam in underperformed scenes: Camouflage, shadow, and more,' arXiv preprint arXiv:2304.09148 , 2023."
+        },
+        {
+          "title": "Sam on medical images: A comprehensive study on three prompt modes",
+          "citation": "D. Cheng, Z. Qin, Z. Jiang, S. Zhang, Q. Lao, and K. Li, 'Sam on medical images: A comprehensive study on three prompt modes,' arXiv preprint arXiv:2305.00035 , 2023."
+        },
+        {
+          "title": "Segment anything model for medical image analysis: an experimental study",
+          "citation": "M. A. Mazurowski, H. Dong, H. Gu, J. Yang, N. Konz, and Y. Zhang, 'Segment anything model for medical image analysis: an experimental study,' arXiv preprint arXiv:2304.10517 , 2023."
+        },
+        {
+          "title": "Segment anything model for medical images?",
+          "citation": "Y. Huang, X. Yang, L. Liu, H. Zhou, A. Chang, X. Zhou, R. Chen, J. Yu, J. Chen, C. Chen et al. , 'Segment anything model for medical images?' arXiv preprint arXiv:2304.14660 , 2023."
+        },
+        {
+          "title": "Inpaint anything: Segment anything meets image inpainting",
+          "citation": "T. Yu, R. Feng, R. Feng, J. Liu, X. Jin, W. Zeng, and Z. Chen, 'Inpaint anything: Segment anything meets image inpainting,' arXiv preprint arXiv:2304.06790 , 2023."
+        },
+        {
+          "title": "Edit everything: A text-guided generative system for images editing",
+          "citation": "D. Xie, R. Wang, J. Ma, C. Chen, H. Lu, D. Yang, F. Shi, and X. Lin, 'Edit everything: A text-guided generative system for images editing,' arXiv preprint arXiv:2304.14006 , 2023."
+        },
+        {
+          "title": "Any-to-any style transfer: Making picasso and da vinci collaborate",
+          "citation": "S. Liu, J. Ye, and X. Wang, 'Any-to-any style transfer: Making picasso and da vinci collaborate,' arXiv e-prints , pp. arXiv-2304, 2023."
+        },
+        {
+          "title": "Application of segment anything model for civil infrastructure defect assessment",
+          "citation": "M. Ahmadi, A. G. Lonbar, A. Sharifi, A. T. Beris, M. Nouri, and A. S. Javidi, 'Application of segment anything model for civil infrastructure defect assessment,' arXiv preprint arXiv:2304.12600 , 2023."
+        },
+        {
+          "title": "Can sam segment anything? when sam meets camouflaged object detection",
+          "citation": "L. Tang, H. Xiao, and B. Li, 'Can sam segment anything? when sam meets camouflaged object detection,' arXiv preprint arXiv:2304.04709 , 2023."
+        },
+        {
+          "title": "Segment anything model (sam) meets glass: Mirror and transparent objects cannot be easily detected",
+          "citation": "D. Han, C. Zhang, Y. Qiao, M. Qamar, Y. Jung, S. Lee, S.-H. Bae, and C. S. Hong, 'Segment anything model (sam) meets glass:"
+        },
+        {
+          "title": "Caption anything: Interactive image description with diverse multimodal controls",
+          "citation": "T. Wang, J. Zhang, J. Fei, Y. Ge, H. Zheng, Y. Tang, Z. Li, M. Gao, S. Zhao, Y. Shan et al. , 'Caption anything: Interactive image description with diverse multimodal controls,' arXiv preprint arXiv:2305.02677 , 2023."
+        },
+        {
+          "title": "Av-sam: Segment anything model meets audio-visual localization and segmentation",
+          "citation": "S. Mo and Y. Tian, 'Av-sam: Segment anything model meets audio-visual localization and segmentation,' arXiv preprint arXiv:2305.01836 , 2023."
+        },
+        {
+          "title": "Track anything: Segment anything meets videos",
+          "citation": "J. Yang, M. Gao, Z. Li, S. Gao, F. Wang, and F. Zheng, 'Track anything: Segment anything meets videos,' arXiv preprint arXiv:2304.11968 , 2023."
+        },
+        {
+          "title": "Anything-3d: Towards single-view anything reconstruction in the wild",
+          "citation": "Q. Shen, X. Yang, and X. Wang, 'Anything-3d: Towards single-view anything reconstruction in the wild,' arXiv preprint arXiv:2304.10261 , 2023."
+        },
+        {
+          "title": "Can sam count anything? an empirical study on sam counting",
+          "citation": "Z. Ma, X. Hong, and Q. Shangguan, 'Can sam count anything? an empirical study on sam counting,' arXiv preprint arXiv:2304.10817 , 2023."
+        },
+        {
+          "title": "Badsam: Exploring security vulnerabilities of sam via backdoor attacks",
+          "citation": "Z. Guan, M. Hu, Z. Zhou, J. Zhang, S. Li, and N. Liu, 'Badsam: Exploring security vulnerabilities of sam via backdoor attacks,' arXiv preprint arXiv:2305.03289 , 2023."
+        },
+        {
+          "title": "Attack-sam: Towards evaluating adversarial robustness of segment anything model",
+          "citation": "C. Zhang, C. Zhang, T. Kang, D. Kim, S.-H. Bae, and I. S. Kweon, 'Attack-sam: Towards evaluating adversarial robustness of segment anything model,' arXiv preprint arXiv:2305.00866 , 2023."
+        },
+        {
+          "title": "Seggpt: Segmenting everything in context",
+          "citation": "X. Wang, X. Zhang, Y. Cao, W. Wang, C. Shen, and T. Huang, 'Seggpt: Segmenting everything in context,' arXiv preprint arXiv:2304.03284 , 2023."
+        },
+        {
+          "title": "Segment everything everywhere all at once",
+          "citation": "X. Zou, J. Yang, H. Zhang, F. Li, L. Li, J. Gao, and Y. J. Lee, 'Segment everything everywhere all at once,' arXiv preprint arXiv:2304.06718 , 2023."
+        },
+        {
+          "title": "Grounding dino: Marrying dino with grounded pre-training for open-set object detection",
+          "citation": "S. Liu, Z. Zeng, T. Ren, F. Li, H. Zhang, J. Yang, C. Li, J. Yang, H. Su, J. Zhu et al. , 'Grounding dino: Marrying dino with grounded pre-training for open-set object detection,' arXiv preprint arXiv:2303.05499 , 2023."
+        },
+        {
+          "title": "Open-vocabulary semantic segmentation with mask-adapted clip",
+          "citation": "F. Liang, B. Wu, X. Dai, K. Li, Y. Zhao, H. Zhang, P. Zhang, P. Vajda, and D. Marculescu, 'Open-vocabulary semantic segmentation with mask-adapted clip,' arXiv preprint arXiv:2210.04150 , 2022."
+        },
+        {
+          "title": "V3det: Vast vocabulary visual detection dataset",
+          "citation": "J. Wang, P. Zhang, T. Chu, Y. Cao, Y. Zhou, T. Wu, B. Wang, C. He, and D. Lin, 'V3det: Vast vocabulary visual detection dataset,' arXiv preprint arXiv:2304.03752 , 2023."
+        },
+        {
+          "title": "Open-vocabulary image segmentation",
+          "citation": "G. Ghiasi, X. Gu, Y. Cui, and T.-Y. Lin, 'Open-vocabulary image segmentation,' arXiv preprint arXiv:2112.12143 , 2021."
+        },
+        {
+          "title": "Towards artificial general intelligence with hybrid tianjic chip architecture",
+          "citation": "J. Pei, L. Deng, S. Song, M. Zhao, Y. Zhang, S. Wu, G. Wang, Z. Zou, Z. Wu, W. He et al. , 'Towards artificial general intelligence with hybrid tianjic chip architecture,' Nature , vol. 572, no. 7767, pp. 106-111, 2019."
+        },
+        {
+          "title": "Artificial general intelligence: concept, state of the art, and future prospects",
+          "citation": "B. Goertzel, 'Artificial general intelligence: concept, state of the art, and future prospects,' Journal of Artificial General Intelligence , vol. 5, no. 1, p. 1, 2014."
+        },
+        {
+          "title": "Chatbots, humbots, and the quest for artificial general intelligence",
+          "citation": "J. Grudin and R. Jacques, 'Chatbots, humbots, and the quest for artificial general intelligence,' in Proceedings of the 2019 CHI conference on human factors in computing systems , 2019, pp. 1-11."
+        },
+        {
+          "title": "A foundational architecture for artificial general intelligence",
+          "citation": "B. Goertzel and P. Wang, 'A foundational architecture for artificial general intelligence,' Advances in artificial general intelligence: Concepts, architectures and algorithms , vol. 6, p. 36, 2007."
+        },
+        {
+          "title": "On the opportunities and risks of foundation models",
+          "citation": "R. Bommasani, D. A. Hudson, E. Adeli, R. Altman, S. Arora, S. von Arx, M. S. Bernstein, J. Bohg, A. Bosselut, E. Brunskill et al. , 'On the opportunities and risks of foundation models,' arXiv preprint arXiv:2108.07258 , 2021."
+        },
+        {
+          "title": "Large-scale multi-modal pre-trained models: A comprehensive survey",
+          "citation": "X. Wang, G. Chen, G. Qian, P. Gao, X.-Y. Wei, Y. Wang, Y. Tian, and W. Gao, 'Large-scale multi-modal pre-trained models: A comprehensive survey,' arXiv preprint arXiv:2302.10035 , 2023."
+        },
+        {
+          "title": "Foundations and recent trends in multimodal machine learning: Principles, challenges, and open questions",
+          "citation": "P. P . Liang, A. Zadeh, and L.-P. Morency, 'Foundations and recent trends in multimodal machine learning: Principles, challenges, and open questions,' arXiv preprint arXiv:2209.03430 , 2022."
+        },
+        {
+          "title": "Not specified in given text",
+          "citation": "W. X. Zhao, K. Zhou, J. Li, T. Tang, X. Wang, Y. Hou, Y. Min, B. Zhang, J. Zhang, Z. Dong et al. , 'A survey of large language models,' arXiv preprint arXiv:2303.18223 , 2023."
+        },
+        {
+          "title": "Augmented language models: a survey",
+          "citation": "G. Mialon, R. Dess` ı, M. Lomeli, C. Nalmpantis, R. Pasunuru, R. Raileanu, B. Rozi` ere, T. Schick, J. Dwivedi-Yu, A. Celikyilmaz et al. , 'Augmented language models: a survey,' arXiv preprint arXiv:2302.07842 , 2023."
+        },
+        {
+          "title": "A bibliometric review of large language models research from 2017 to 2023",
+          "citation": "L. Fan, L. Li, Z. Ma, S. Lee, H. Yu, and L. Hemphill, 'A bibliometric review of large language models research from 2017 to 2023,' arXiv preprint arXiv:2304.02020 , 2023."
+        },
+        {
+          "title": "Text-toimage diffusion model in generative ai: A survey",
+          "citation": "C. Zhang, C. Zhang, M. Zhang, and I. S. Kweon, 'Text-toimage diffusion model in generative ai: A survey,' arXiv preprint arXiv:2303.07909 , 2023."
+        },
+        {
+          "title": "Language (technology) is power: A critical survey of' bias' in nlp",
+          "citation": "S. L. Blodgett, S. Barocas, H. Daum´ e III, and H. Wallach, 'Language (technology) is power: A critical survey of' bias' in nlp,' arXiv preprint arXiv:2005.14050 , 2020."
+        },
+        {
+          "title": "Vlp: A survey on vision-language pre-training",
+          "citation": "F.-L. Chen, D.-Z. Zhang, M.-L. Han, X.-Y. Chen, J. Shi, S. Xu, and B. Xu, 'Vlp: A survey on vision-language pre-training,' Machine Intelligence Research , vol. 20, no. 1, pp. 38-56, 2023."
+        },
+        {
+          "title": "A survey of vision-language pre-trained models",
+          "citation": "Y. Du, Z. Liu, J. Li, and W. X. Zhao, 'A survey of vision-language pre-trained models,' arXiv preprint arXiv:2202.10936 , 2022."
+        },
+        {
+          "title": "Vision-and-language pretrained models: A survey",
+          "citation": "S. Long, F. Cao, S. C. Han, and H. Yang, 'Vision-and-language pretrained models: A survey,' arXiv preprint arXiv:2204.07356 , 2022."
+        },
+        {
+          "title": "Trends in integration of vision and language research: A survey of tasks, datasets",
+          "citation": "A. Mogadala, M. Kalimuthu, and D. Klakow, 'Trends in integration of vision and language research: A survey of tasks, datasets,"
+        },
+        {
+          "title": "How segment anything model (sam) boost medical image segmentation?",
+          "citation": "Y. Zhang and R. Jiao, 'How segment anything model (sam) boost medical image segmentation?' arXiv preprint arXiv:2305.03678 , 2023."
+        },
+        {
+          "title": "Asurvey on segment anything model (sam): Vision foundation model meets prompt engineering",
+          "citation": "C. Zhang, S. Zheng, C. Li, Y. Qiao, T. Kang, X. Shan, C. Zhang, C. Qin, F. Rameau, S.-H. Bae et al. , 'Asurvey on segment anything model (sam): Vision foundation model meets prompt engineering,' 2023."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "BACKGROUND AND TERMINOLOGY",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Image Segmentation",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "2.1.1",
+              "sec_title": "Classic Segmentation",
+              "citations": [
+                {
+                  "title": "Semantic image segmentation with deep convolutional nets and fully connected crfs",
+                  "citation": "L.-C. Chen, G. Papandreou, I. Kokkinos, K. Murphy, and A. L. Yuille, 'Semantic image segmentation with deep convolutional nets and fully connected crfs,' arXiv preprint arXiv:1412.7062 , 2014."
+                },
+                {
+                  "title": "Rethinking atrous convolution for semantic image segmentation",
+                  "citation": "L.-C. Chen, G. Papandreou, F. Schroff, and H. Adam, 'Rethinking atrous convolution for semantic image segmentation,' arXiv preprint arXiv:1706.05587 , 2017."
+                },
+                {
+                  "title": "Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs",
+                  "citation": "L.-C. Chen, G. Papandreou, I. Kokkinos, K. Murphy, and A. L. Yuille, 'Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs,' IEEE transactions on pattern analysis and machine intelligence , vol. 40, no. 4, pp. 834-848, 2017."
+                },
+                {
+                  "title": "Encoder-decoder with atrous separable convolution for semantic image segmentation",
+                  "citation": "L.-C. Chen, Y. Zhu, G. Papandreou, F. Schroff, and H. Adam, 'Encoder-decoder with atrous separable convolution for semantic image segmentation,' in Proceedings of the European conference on computer vision (ECCV) , 2018, pp. 801-818."
+                },
+                {
+                  "title": "A survey on instance segmentation: state of the art",
+                  "citation": "A. M. Hafiz and G. M. Bhat, 'A survey on instance segmentation: state of the art,' International journal of multimedia information retrieval , vol. 9, no. 3, pp. 171-189, 2020."
+                },
+                {
+                  "title": "Path aggregation network for instance segmentation",
+                  "citation": "S. Liu, L. Qi, H. Qin, J. Shi, and J. Jia, 'Path aggregation network for instance segmentation,' in Proceedings of the IEEE conference on computer vision and pattern recognition , 2018, pp. 8759-8768."
+                },
+                {
+                  "title": "Yolact: Real-time instance segmentation",
+                  "citation": "D. Bolya, C. Zhou, F. Xiao, and Y. J. Lee, 'Yolact: Real-time instance segmentation,' in Proceedings of the IEEE/CVF international conference on computer vision , 2019, pp. 9157-9166."
+                },
+                {
+                  "title": "Panoptic segmentation",
+                  "citation": "A. Kirillov, K. He, R. Girshick, C. Rother, and P. Dollar, 'Panoptic segmentation,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) , June 2019."
+                },
+                {
+                  "title": "K-net: Towards unified image segmentation",
+                  "citation": "W. Zhang, J. Pang, K. Chen, and C. C. Loy, 'K-net: Towards unified image segmentation,' Advances in Neural Information Processing Systems , vol. 34, pp. 10 326-10 338, 2021."
+                },
+                {
+                  "title": "Per-pixel classification is not all you need for semantic segmentation",
+                  "citation": "B. Cheng, A. G. Schwing, and A. Kirillov, 'Per-pixel classification is not all you need for semantic segmentation,' in NeurIPS , 2021."
+                },
+                {
+                  "title": "Masked-attention mask transformer for universal image segmentation",
+                  "citation": "B. Cheng, I. Misra, A. G. Schwing, A. Kirillov, and R. Girdhar, 'Masked-attention mask transformer for universal image segmentation,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 1290-1299."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.2",
+              "sec_title": "Interactive Segmentation",
+              "citations": [
+                {
+                  "title": "Deep interactive object selection",
+                  "citation": "N. Xu, B. Price, S. Cohen, J. Yang, and T. S. Huang, 'Deep interactive object selection,' in Proceedings of the IEEE conference on computer vision and pattern recognition , 2016, pp. 373-381."
+                },
+                {
+                  "title": "DeepIGeoS: A deep interactive geodesic framework for medical image segmentation",
+                  "citation": "G. Wang, M. A. Zuluaga, W. Li, R. Pratt, P. A. Patel, M. Aertsen, T. Doel, A. L. David, J. Deprest, S. Ourselin, and T. Vercauteren, 'DeepIGeoS: A deep interactive geodesic framework for medical image segmentation,' IEEE Transactions on Pattern Analysis and Machine Intelligence , vol. 41, no. 7, pp. 1559-1572, jul 2019."
+                },
+                {
+                  "title": "Mri based medical image analysis: Survey on brain tumor grade classification",
+                  "citation": "G. Mohan and M. M. Subashini, 'Mri based medical image analysis: Survey on brain tumor grade classification,' Biomedical Signal Processing and Control , vol. 39, pp. 139-161, 2018."
+                },
+                {
+                  "title": "Itk-snap: An interactive tool for semi-automatic segmentation of multi-modality biomedical images",
+                  "citation": "P. A. Yushkevich, Y. Gao, and G. Gerig, 'Itk-snap: An interactive tool for semi-automatic segmentation of multi-modality biomedical images,' in 2016 38th annual international conference of the IEEE engineering in medicine and biology society (EMBC) . IEEE, 2016, pp. 3342-3345."
+                },
+                {
+                  "title": "Guide me: Interacting with deep networks",
+                  "citation": "C. Rupprecht, I. Laina, N. Navab, G. D. Hager, and F. Tombari, 'Guide me: Interacting with deep networks,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , 2018, pp. 8551-8561."
+                },
+                {
+                  "title": "Annotating object instances with a polygon-rnn",
+                  "citation": "L. Castrejon, K. Kundu, R. Urtasun, and S. Fidler, 'Annotating object instances with a polygon-rnn,' in Proceedings of the IEEE conference on computer vision and pattern recognition , 2017, pp. 5230-5238."
+                },
+                {
+                  "title": "Efficient interactive annotation of segmentation datasets with polygon-rnn++",
+                  "citation": "D. Acuna, H. Ling, A. Kar, and S. Fidler, 'Efficient interactive annotation of segmentation datasets with polygon-rnn++,' in Proceedings of the IEEE conference on Computer Vision and Pattern Recognition , 2018, pp. 859-868."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Foundation Models",
+          "citations": [
+            {
+              "title": "On the opportunities and risks of foundation models",
+              "citation": "R. Bommasani, D. A. Hudson, E. Adeli, R. Altman, S. Arora, S. von Arx, M. S. Bernstein, J. Bohg, A. Bosselut, E. Brunskill et al. , 'On the opportunities and risks of foundation models,' arXiv preprint arXiv:2108.07258 , 2021."
+            },
+            {
+              "title": "Bert: Pretraining of deep bidirectional transformers for language understanding",
+              "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, 'Bert: Pretraining of deep bidirectional transformers for language understanding,' arXiv preprint arXiv:1810.04805 , 2018."
+            },
+            {
+              "title": "Exploring the limits of transfer learning with a unified text-to-text transformer",
+              "citation": "C. Raffel, N. Shazeer, A. Roberts, K. Lee, S. Narang, M. Matena, Y. Zhou, W. Li, and P. J. Liu, 'Exploring the limits of transfer learning with a unified text-to-text transformer,' The Journal of Machine Learning Research , vol. 21, no. 1, pp. 5485-5551, 2020."
+            },
+            {
+              "title": "Language models are few-shot learners",
+              "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell et al. , 'Language models are few-shot learners,' Advances in neural information processing systems , vol. 33, pp. 1877-1901, 2020."
+            },
+            {
+              "title": "Introducing chatgpt",
+              "citation": "--, 'Introducing chatgpt,' https://openai.com/blog/chatgpt, Accessed: 2023-05-10."
+            },
+            {
+              "title": "Gpt-4",
+              "citation": "OpenAI, 'Gpt-4,' https://cdn.openai.com/papers/gpt-4.pdf, 2023."
+            },
+            {
+              "title": "Not specified in given text",
+              "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+            },
+            {
+              "title": "Not specified in given text",
+              "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+            },
+            {
+              "title": "Scaling vision transformers to 22 billion parameters",
+              "citation": "M. Dehghani, J. Djolonga, B. Mustafa, P. Padlewski, J. Heek, J. Gilmer, A. Steiner, M. Caron, R. Geirhos, I. Alabdulmohsin et al. , 'Scaling vision transformers to 22 billion parameters,' arXiv preprint arXiv:2302.05442 , 2023."
+            },
+            {
+              "title": "Introducing chatgpt",
+              "citation": "--, 'Introducing chatgpt,' https://openai.com/blog/chatgpt, Accessed: 2023-05-10."
+            },
+            {
+              "title": "Scaling up visual and visionlanguage representation learning with noisy text supervision",
+              "citation": "C. Jia, Y. Yang, Y. Xia, Y.-T. Chen, Z. Parekh, H. Pham, Q. Le, Y.-H. Sung, Z. Li, and T. Duerig, 'Scaling up visual and visionlanguage representation learning with noisy text supervision,' in International Conference on Machine Learning . PMLR, 2021, pp. 4904-4916."
+            },
+            {
+              "title": "How segment anything model (sam) boost medical image segmentation?",
+              "citation": "Y. Zhang and R. Jiao, 'How segment anything model (sam) boost medical image segmentation?' arXiv preprint arXiv:2305.03678 , 2023."
+            },
+            {
+              "title": "Not specified in given text",
+              "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+            },
+            {
+              "title": "Text-toimage diffusion model in generative ai: A survey",
+              "citation": "C. Zhang, C. Zhang, M. Zhang, and I. S. Kweon, 'Text-toimage diffusion model in generative ai: A survey,' arXiv preprint arXiv:2303.07909 , 2023."
+            },
+            {
+              "title": "Anything-3d: Towards single-view anything reconstruction in the wild",
+              "citation": "Q. Shen, X. Yang, and X. Wang, 'Anything-3d: Towards single-view anything reconstruction in the wild,' arXiv preprint arXiv:2304.10261 , 2023."
+            },
+            {
+              "title": "How segment anything model (sam) boost medical image segmentation?",
+              "citation": "Y. Zhang and R. Jiao, 'How segment anything model (sam) boost medical image segmentation?' arXiv preprint arXiv:2305.03678 , 2023."
+            },
+            {
+              "title": "Text-toimage diffusion model in generative ai: A survey",
+              "citation": "C. Zhang, C. Zhang, M. Zhang, and I. S. Kweon, 'Text-toimage diffusion model in generative ai: A survey,' arXiv preprint arXiv:2303.07909 , 2023."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark et al. , 'Learning transferable visual models from natural language supervision,' in International conference on machine learning . PMLR, 2021, pp. 8748-8763."
+            },
+            {
+              "title": "Scaling up visual and visionlanguage representation learning with noisy text supervision",
+              "citation": "C. Jia, Y. Yang, Y. Xia, Y.-T. Chen, Z. Parekh, H. Pham, Q. Le, Y.-H. Sung, Z. Li, and T. Duerig, 'Scaling up visual and visionlanguage representation learning with noisy text supervision,' in International Conference on Machine Learning . PMLR, 2021, pp. 4904-4916."
+            },
+            {
+              "title": "Florence: A new foundation model for computer vision",
+              "citation": "L. Yuan, D. Chen, Y.-L. Chen, N. Codella, X. Dai, J. Gao, H. Hu, X. Huang, B. Li, C. Li et al. , 'Florence: A new foundation model for computer vision,' arXiv preprint arXiv:2111.11432 , 2021."
+            },
+            {
+              "title": "Vl-bert: Pre-training of generic visual-linguistic representations",
+              "citation": "W. Su, X. Zhu, Y. Cao, B. Li, L. Lu, F. Wei, and J. Dai, 'Vl-bert: Pre-training of generic visual-linguistic representations,' arXiv preprint arXiv:1908.08530 , 2019."
+            },
+            {
+              "title": "Xlxmert: Paint, caption and answer questions with multi-modal transformers",
+              "citation": "J. Cho, J. Lu, D. Schwenk, H. Hajishirzi, and A. Kembhavi, 'Xlxmert: Paint, caption and answer questions with multi-modal transformers,' arXiv preprint arXiv:2009.11278 , 2020."
+            },
+            {
+              "title": "Hierarchical text-conditional image generation with clip latents",
+              "citation": "A. Ramesh, P. Dhariwal, A. Nichol, C. Chu, and M. Chen, 'Hierarchical text-conditional image generation with clip latents,' arXiv preprint arXiv:2204.06125 , 2022."
+            },
+            {
+              "title": "Imagebind: One embedding space to bind them all",
+              "citation": "R. Girdhar, A. El-Nouby, Z. Liu, M. Singh, K. V. Alwala, A. Joulin, and I. Misra, 'Imagebind: One embedding space to bind them all,' in CVPR , 2023."
+            },
+            {
+              "title": "Semantic understanding of scenes through the ade20k dataset",
+              "citation": "B. Zhou, H. Zhao, X. Puig, T. Xiao, S. Fidler, A. Barriuso, and A. Torralba, 'Semantic understanding of scenes through the ade20k dataset,' International Journal of Computer Vision , vol. 127, pp. 302-321, 2019."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.3",
+          "sec_title": "Segment Anything Model",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "2.3.1",
+              "sec_title": "Task",
+              "citations": [
+                {
+                  "title": "Itk-snap: An interactive tool for semi-automatic segmentation of multi-modality biomedical images",
+                  "citation": "P. A. Yushkevich, Y. Gao, and G. Gerig, 'Itk-snap: An interactive tool for semi-automatic segmentation of multi-modality biomedical images,' in 2016 38th annual international conference of the IEEE engineering in medicine and biology society (EMBC) . IEEE, 2016, pp. 3342-3345."
+                },
+                {
+                  "title": "Representation learning with contrastive predictive coding",
+                  "citation": "A. v. d. Oord, Y. Li, and O. Vinyals, 'Representation learning with contrastive predictive coding,' arXiv preprint arXiv:1807.03748 , 2018."
+                },
+                {
+                  "title": "Av-sam: Segment anything model meets audio-visual localization and segmentation",
+                  "citation": "S. Mo and Y. Tian, 'Av-sam: Segment anything model meets audio-visual localization and segmentation,' arXiv preprint arXiv:2305.01836 , 2023."
+                },
+                {
+                  "title": "Vlp: A survey on vision-language pre-training",
+                  "citation": "F.-L. Chen, D.-Z. Zhang, M.-L. Han, X.-Y. Chen, J. Shi, S. Xu, and B. Xu, 'Vlp: A survey on vision-language pre-training,' Machine Intelligence Research , vol. 20, no. 1, pp. 38-56, 2023."
+                },
+                {
+                  "title": "A survey of vision-language pre-trained models",
+                  "citation": "Y. Du, Z. Liu, J. Li, and W. X. Zhao, 'A survey of vision-language pre-trained models,' arXiv preprint arXiv:2202.10936 , 2022."
+                },
+                {
+                  "title": "A survey on instance segmentation: state of the art",
+                  "citation": "A. M. Hafiz and G. M. Bhat, 'A survey on instance segmentation: state of the art,' International journal of multimedia information retrieval , vol. 9, no. 3, pp. 171-189, 2020."
+                },
+                {
+                  "title": "Scaling up visual and visionlanguage representation learning with noisy text supervision",
+                  "citation": "C. Jia, Y. Yang, Y. Xia, Y.-T. Chen, Z. Parekh, H. Pham, Q. Le, Y.-H. Sung, Z. Li, and T. Duerig, 'Scaling up visual and visionlanguage representation learning with noisy text supervision,' in International Conference on Machine Learning . PMLR, 2021, pp. 4904-4916."
+                },
+                {
+                  "title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+                  "citation": "A. Dosovitskiy, L. Beyer, A. Kolesnikov, D. Weissenborn, X. Zhai, T. Unterthiner, M. Dehghani, M. Minderer, G. Heigold, S. Gelly et al. , 'An image is worth 16x16 words: Transformers for image recognition at scale,' in International Conference on Learning Representations , 2021."
+                },
+                {
+                  "title": "Segment anything model for medical image analysis: an experimental study",
+                  "citation": "M. A. Mazurowski, H. Dong, H. Gu, J. Yang, N. Konz, and Y. Zhang, 'Segment anything model for medical image analysis: an experimental study,' arXiv preprint arXiv:2304.10517 , 2023."
+                },
+                {
+                  "title": "Language models are few-shot learners",
+                  "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell et al. , 'Language models are few-shot learners,' Advances in neural information processing systems , vol. 33, pp. 1877-1901, 2020."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.3.2",
+              "sec_title": "Model",
+              "citations": [
+                {
+                  "title": "On the opportunities and risks of foundation models",
+                  "citation": "R. Bommasani, D. A. Hudson, E. Adeli, R. Altman, S. Arora, S. von Arx, M. S. Bernstein, J. Bohg, A. Bosselut, E. Brunskill et al. , 'On the opportunities and risks of foundation models,' arXiv preprint arXiv:2108.07258 , 2021."
+                },
+                {
+                  "title": "Masked autoencoders are scalable vision learners",
+                  "citation": "K. He, X. Chen, S. Xie, Y. Li, P. Doll´ ar, and R. Girshick, 'Masked autoencoders are scalable vision learners,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 16 000-16 009."
+                },
+                {
+                  "title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+                  "citation": "A. Dosovitskiy, L. Beyer, A. Kolesnikov, D. Weissenborn, X. Zhai, T. Unterthiner, M. Dehghani, M. Minderer, G. Heigold, S. Gelly et al. , 'An image is worth 16x16 words: Transformers for image recognition at scale,' in International Conference on Learning Representations , 2021."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark et al. , 'Learning transferable visual models from natural language supervision,' in International conference on machine learning . PMLR, 2021, pp. 8748-8763."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T.-Y. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' in Proceedings of the IEEE international conference on computer vision , 2017, pp. 2980-2988."
+                },
+                {
+                  "title": "V-net: Fully convolutional neural networks for volumetric medical image segmentation",
+                  "citation": "F. Milletari, N. Navab, and S.-A. Ahmadi, 'V-net: Fully convolutional neural networks for volumetric medical image segmentation,' in 2016 fourth international conference on 3D vision (3DV) . Ieee, 2016, pp. 565-571."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.3.3",
+              "sec_title": "Data",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.4",
+          "sec_title": "Concurrent Works",
+          "citations": [
+            {
+              "title": "Oneformer: One transformer to rule universal image segmentation",
+              "citation": "J. Jain, J. Li, M. Chiu, A. Hassani, N. Orlov, and H. Shi, 'Oneformer: One transformer to rule universal image segmentation,' arXiv preprint arXiv:2211.06220 , 2022."
+            },
+            {
+              "title": "Semantic understanding of scenes through the ade20k dataset",
+              "citation": "B. Zhou, H. Zhao, X. Puig, T. Xiao, S. Fidler, A. Barriuso, and A. Torralba, 'Semantic understanding of scenes through the ade20k dataset,' International Journal of Computer Vision , vol. 127, pp. 302-321, 2019."
+            },
+            {
+              "title": "The cityscapes dataset for semantic urban scene understanding",
+              "citation": "M. Cordts, M. Omran, S. Ramos, T. Rehfeld, M. Enzweiler, R. Benenson, U. Franke, S. Roth, and B. Schiele, 'The cityscapes dataset for semantic urban scene understanding,' in Proc. of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR) , 2016."
+            },
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T.-Y. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in Computer Vision-ECCV 2014: 13th European Conference, Zurich, Switzerland, September 6-12, 2014, Proceedings, Part V 13 . Springer, 2014, pp. 740-755."
+            },
+            {
+              "title": "Seggpt: Segmenting everything in context",
+              "citation": "X. Wang, X. Zhang, Y. Cao, W. Wang, C. Shen, and T. Huang, 'Seggpt: Segmenting everything in context,' arXiv preprint arXiv:2304.03284 , 2023."
+            },
+            {
+              "title": "Images speak in images: A generalist painter for in-context visual learning",
+              "citation": "X. Wang, W. Wang, Y. Cao, C. Shen, and T. Huang, 'Images speak in images: A generalist painter for in-context visual learning,' arXiv preprint arXiv:2212.02499 , 2022."
+            },
+            {
+              "title": "Segment everything everywhere all at once",
+              "citation": "X. Zou, J. Yang, H. Zhang, F. Li, L. Li, J. Gao, and Y. J. Lee, 'Segment everything everywhere all at once,' arXiv preprint arXiv:2304.06718 , 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "SAM FOR IMAGE PROCESSING",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Software Scenes",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "3.1.1",
+              "sec_title": "Image Editing",
+              "citations": [
+                {
+                  "title": "Resolution-robust large mask inpainting with fourier convolutions",
+                  "citation": "R. Suvorov, E. Logacheva, A. Mashikhin, A. Remizova, A. Ashukha, A. Silvestrov, N. Kong, H. Goka, K. Park, and V. Lempitsky, 'Resolution-robust large mask inpainting with fourier convolutions,' in Proceedings of the IEEE/CVF winter conference on applications of computer vision , 2022, pp. 2149-2159."
+                },
+                {
+                  "title": "Repaint: Inpainting using denoising diffusion probabilistic models",
+                  "citation": "A. Lugmayr, M. Danelljan, A. Romero, F. Yu, R. Timofte, and L. Van Gool, 'Repaint: Inpainting using denoising diffusion probabilistic models,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 11 461-11 471."
+                },
+                {
+                  "title": "Mat: Maskaware transformer for large hole image inpainting",
+                  "citation": "W. Li, Z. Lin, K. Zhou, L. Qi, Y. Wang, and J. Jia, 'Mat: Maskaware transformer for large hole image inpainting,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2022, pp. 10 758-10 768."
+                },
+                {
+                  "title": "Incremental transformer structure enhanced image inpainting with masking positional encoding",
+                  "citation": "Q. Dong, C. Cao, and Y. Fu, 'Incremental transformer structure enhanced image inpainting with masking positional encoding,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 11 358-11 368."
+                },
+                {
+                  "title": "Not specified in given text",
+                  "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+                },
+                {
+                  "title": "Inpaint anything: Segment anything meets image inpainting",
+                  "citation": "T. Yu, R. Feng, R. Feng, J. Liu, X. Jin, W. Zeng, and Z. Chen, 'Inpaint anything: Segment anything meets image inpainting,' arXiv preprint arXiv:2304.06790 , 2023."
+                },
+                {
+                  "title": "Inpaint anything: Segment anything meets image inpainting",
+                  "citation": "T. Yu, R. Feng, R. Feng, J. Liu, X. Jin, W. Zeng, and Z. Chen, 'Inpaint anything: Segment anything meets image inpainting,' arXiv preprint arXiv:2304.06790 , 2023."
+                },
+                {
+                  "title": "Resolution-robust large mask inpainting with fourier convolutions",
+                  "citation": "R. Suvorov, E. Logacheva, A. Mashikhin, A. Remizova, A. Ashukha, A. Silvestrov, N. Kong, H. Goka, K. Park, and V. Lempitsky, 'Resolution-robust large mask inpainting with fourier convolutions,' in Proceedings of the IEEE/CVF winter conference on applications of computer vision , 2022, pp. 2149-2159."
+                },
+                {
+                  "title": "High-resolution image synthesis with latent diffusion models",
+                  "citation": "R. Rombach, A. Blattmann, D. Lorenz, P. Esser, and B. Ommer, 'High-resolution image synthesis with latent diffusion models,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 10 684-10 695."
+                },
+                {
+                  "title": "Resolution-robust large mask inpainting with fourier convolutions",
+                  "citation": "R. Suvorov, E. Logacheva, A. Mashikhin, A. Remizova, A. Ashukha, A. Silvestrov, N. Kong, H. Goka, K. Park, and V. Lempitsky, 'Resolution-robust large mask inpainting with fourier convolutions,' in Proceedings of the IEEE/CVF winter conference on applications of computer vision , 2022, pp. 2149-2159."
+                },
+                {
+                  "title": "High-resolution image synthesis with latent diffusion models",
+                  "citation": "R. Rombach, A. Blattmann, D. Lorenz, P. Esser, and B. Ommer, 'High-resolution image synthesis with latent diffusion models,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 10 684-10 695."
+                },
+                {
+                  "title": "Edit everything: A text-guided generative system for images editing",
+                  "citation": "D. Xie, R. Wang, J. Ma, C. Chen, H. Lu, D. Yang, F. Shi, and X. Lin, 'Edit everything: A text-guided generative system for images editing,' arXiv preprint arXiv:2304.14006 , 2023."
+                },
+                {
+                  "title": "Edit everything: A text-guided generative system for images editing",
+                  "citation": "D. Xie, R. Wang, J. Ma, C. Chen, H. Lu, D. Yang, F. Shi, and X. Lin, 'Edit everything: A text-guided generative system for images editing,' arXiv preprint arXiv:2304.14006 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.2",
+              "sec_title": "Style Transfer",
+              "citations": [
+                {
+                  "title": "Any-to-any style transfer: Making picasso and da vinci collaborate",
+                  "citation": "S. Liu, J. Ye, and X. Wang, 'Any-to-any style transfer: Making picasso and da vinci collaborate,' arXiv e-prints , pp. arXiv-2304, 2023."
+                },
+                {
+                  "title": "Any-to-any style transfer: Making picasso and da vinci collaborate",
+                  "citation": "S. Liu, J. Ye, and X. Wang, 'Any-to-any style transfer: Making picasso and da vinci collaborate,' arXiv e-prints , pp. arXiv-2304, 2023."
+                },
+                {
+                  "title": "Fast patch-based style transfer of arbitrary style",
+                  "citation": "T. Q. Chen and M. Schmidt, 'Fast patch-based style transfer of arbitrary style,' arXiv preprint arXiv:1612.04337 , 2016."
+                },
+                {
+                  "title": "Arbitrary style transfer with styleattentional networks",
+                  "citation": "D. Y. Park and K. H. Lee, 'Arbitrary style transfer with styleattentional networks,' in proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2019, pp. 5880-5888."
+                },
+                {
+                  "title": "Universal style transfer via feature transforms",
+                  "citation": "Y. Li, C. Fang, J. Yang, Z. Wang, X. Lu, and M.-H. Yang, 'Universal style transfer via feature transforms,' Advances in neural information processing systems , vol. 30, 2017."
+                },
+                {
+                  "title": "Stylerdalle: Language-guided style transfer using a vector-quantized tokenizer of a large-scale generative model",
+                  "citation": "Z. Xu, E. Sangineto, and N. Sebe, 'Stylerdalle: Language-guided style transfer using a vector-quantized tokenizer of a large-scale generative model,' arXiv preprint arXiv:2303.09268 , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Real-World Scenes",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "3.2.1",
+              "sec_title": "Detection",
+              "citations": [
+                {
+                  "title": "Segment anything is not always perfect: An investigation of sam on different real-world applications",
+                  "citation": "W. Ji, J. Li, Q. Bi, W. Li, and L. Cheng, 'Segment anything is not always perfect: An investigation of sam on different real-world applications,' arXiv preprint arXiv:2304.05750 , 2023."
+                },
+                {
+                  "title": "Application of segment anything model for civil infrastructure defect assessment",
+                  "citation": "M. Ahmadi, A. G. Lonbar, A. Sharifi, A. T. Beris, M. Nouri, and A. S. Javidi, 'Application of segment anything model for civil infrastructure defect assessment,' arXiv preprint arXiv:2304.12600 , 2023."
+                },
+                {
+                  "title": "Application of segment anything model for civil infrastructure defect assessment",
+                  "citation": "M. Ahmadi, A. G. Lonbar, A. Sharifi, A. T. Beris, M. Nouri, and A. S. Javidi, 'Application of segment anything model for civil infrastructure defect assessment,' arXiv preprint arXiv:2304.12600 , 2023."
+                },
+                {
+                  "title": "U-net: Convolutional networks for biomedical image segmentation",
+                  "citation": "O. Ronneberger, P. Fischer, and T. Brox, 'U-net: Convolutional networks for biomedical image segmentation,' in Medical Image Computing and Computer-Assisted Intervention-MICCAI 2015: 18th International Conference, Munich, Germany, October 5-9, 2015, Proceedings, Part III 18 . Springer, 2015, pp. 234-241."
+                },
+                {
+                  "title": "Deep learning universal crater detection using segment anything model (sam)",
+                  "citation": "I. Giannakis, A. Bhardwaj, L. Sam, and G. Leontidis, 'Deep learning universal crater detection using segment anything model (sam),' arXiv preprint arXiv:2304.07764 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.2",
+              "sec_title": "Counting",
+              "citations": [
+                {
+                  "title": "Can sam count anything? an empirical study on sam counting",
+                  "citation": "Z. Ma, X. Hong, and Q. Shangguan, 'Can sam count anything? an empirical study on sam counting,' arXiv preprint arXiv:2304.10817 , 2023."
+                },
+                {
+                  "title": "Learning to count everything",
+                  "citation": "V. Ranjan, U. Sharma, T. Nguyen, and M. Hoai, 'Learning to count everything,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2021, pp. 3394-3403."
+                },
+                {
+                  "title": "Microsoft coco: Common objects in context",
+                  "citation": "T.-Y. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in Computer Vision-ECCV 2014: 13th European Conference, Zurich, Switzerland, September 6-12, 2014, Proceedings, Part V 13 . Springer, 2014, pp. 740-755."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.3",
+              "sec_title": "Moving Object",
+              "citations": [
+                {
+                  "title": "Dsecmos: Segment any moving object with moving ego vehicle",
+                  "citation": "Z. Zhou, Z. Wu, R. Boutteau, F. Yang, and D. Ginhac, 'Dsecmos: Segment any moving object with moving ego vehicle,' arXiv preprint arXiv:2305.00126 , 2023."
+                },
+                {
+                  "title": "Rgb-event fusion for moving object detection in autonomous driving",
+                  "citation": "Z. Zhou, Z. Wu, R. Boutteau, F. Yang, C. Demonceaux, and D. Ginhac, 'Rgb-event fusion for moving object detection in autonomous driving,' arXiv preprint arXiv:2209.08323 , 2022."
+                },
+                {
+                  "title": "Segment any anomaly without training via hybrid prompt regularization",
+                  "citation": "Y. Cao, X. Xu, C. Sun, Y. Cheng, Z. Du, L. Gao, and W. Shen, 'Segment any anomaly without training via hybrid prompt regularization,' arXiv preprint arXiv:2305.10724 , 2023."
+                },
+                {
+                  "title": "Segment any anomaly without training via hybrid prompt regularization",
+                  "citation": "Y. Cao, X. Xu, C. Sun, Y. Cheng, Z. Du, L. Gao, and W. Shen, 'Segment any anomaly without training via hybrid prompt regularization,' arXiv preprint arXiv:2305.10724 , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "Complex Scenes",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "3.3.1",
+              "sec_title": "Low-Contrast Scene",
+              "citations": [
+                {
+                  "title": "Sam struggles in concealed scenes-empirical study on segment anything",
+                  "citation": "G.-P. Ji, D.-P . Fan, P . Xu, M.-M. Cheng, B. Zhou, and L. Van Gool, 'Sam struggles in concealed scenes-empirical study on' segment anything',' arXiv preprint arXiv:2304.06022 , 2023."
+                },
+                {
+                  "title": "Anabranch network for camouflaged object segmentation",
+                  "citation": "T.-N. Le, T. V. Nguyen, Z. Nie, M.-T. Tran, and A. Sugimoto, 'Anabranch network for camouflaged object segmentation,' Computer vision and image understanding , vol. 184, pp. 45-56, 2019."
+                },
+                {
+                  "title": "Camouflaged object detection",
+                  "citation": "D.-P. Fan, G.-P. Ji, G. Sun, M.-M. Cheng, J. Shen, and L. Shao, 'Camouflaged object detection,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2020, pp. 2777-2787."
+                },
+                {
+                  "title": "Simultaneously localize, segment and rank the camouflaged objects",
+                  "citation": "Y. Lv, J. Zhang, Y. Dai, A. Li, B. Liu, N. Barnes, and D.-P. Fan, 'Simultaneously localize, segment and rank the camouflaged objects,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2021, pp. 11 591-11 601."
+                },
+                {
+                  "title": "Camoformer: Masked separable attention for camouflaged object detection",
+                  "citation": "B. Yin, X. Zhang, Q. Hou, B.-Y. Sun, D.-P. Fan, and L. Van Gool, 'Camoformer: Masked separable attention for camouflaged object detection,' arXiv preprint arXiv:2212.06570 , 2022."
+                },
+                {
+                  "title": "High-resolution iterative feedback network for camouflaged object detection",
+                  "citation": "X. Hu, D.-P. Fan, X. Qin, H. Dai, W. Ren, Y. Tai, C. Wang, and L. Shao, 'High-resolution iterative feedback network for camouflaged object detection,' arXiv preprint arXiv:2203.11624 , 2022."
+                },
+                {
+                  "title": "Can sam segment anything? when sam meets camouflaged object detection",
+                  "citation": "L. Tang, H. Xiao, and B. Li, 'Can sam segment anything? when sam meets camouflaged object detection,' arXiv preprint arXiv:2304.04709 , 2023."
+                },
+                {
+                  "title": "Leaf only sam: A segment anything pipeline for zero-shot automated leaf segmentation",
+                  "citation": "D. Williams, F. MacFarlane, and A. Britten, 'Leaf only sam: A segment anything pipeline for zero-shot automated leaf segmentation,' 2023."
+                },
+                {
+                  "title": "Segment any anomaly without training via hybrid prompt regularization",
+                  "citation": "Y. Cao, X. Xu, C. Sun, Y. Cheng, Z. Du, L. Gao, and W. Shen, 'Segment any anomaly without training via hybrid prompt regularization,' arXiv preprint arXiv:2305.10724 , 2023."
+                },
+                {
+                  "title": "Spotthe-difference self-supervised pre-training for anomaly detection and segmentation",
+                  "citation": "Y. Zou, J. Jeong, L. Pemula, D. Zhang, and O. Dabeer, 'Spotthe-difference self-supervised pre-training for anomaly detection and segmentation,' in Computer Vision-ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23-27, 2022, Proceedings, Part XXX . Springer, 2022, pp. 392-408."
+                },
+                {
+                  "title": "Mvtec ad a comprehensive real-world dataset for unsupervised anomaly detection",
+                  "citation": "P. Bergmann, M. Fauser, D. Sattlegger, and C. Steger, 'Mvtec ada comprehensive real-world dataset for unsupervised anomaly detection,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2019, pp. 9592-9600."
+                },
+                {
+                  "title": "Surface defect saliency of magnetic tile",
+                  "citation": "Y. Huang, C. Qiu, and K. Yuan, 'Surface defect saliency of magnetic tile,' The Visual Computer , vol. 36, pp. 85-96, 2020."
+                },
+                {
+                  "title": "Mixed supervision for surface-defect detection: From weakly to fully supervised learning",
+                  "citation": "J. Boˇ ziˇ c, D. Tabernik, and D. Skoˇ caj, 'Mixed supervision for surface-defect detection: From weakly to fully supervised learning,' Computers in Industry , vol. 129, p. 103459, 2021."
+                },
+                {
+                  "title": "Weakly-supervised concealed object segmentation with sam-based pseudo labeling and multi-scale feature grouping",
+                  "citation": "C. He, K. Li, Y. Zhang, G. Xu, L. Tang, Y. Zhang, Z. Guo, and X. Li, 'Weakly-supervised concealed object segmentation with sam-based pseudo labeling and multi-scale feature grouping,' arXiv preprint arXiv: arXiv:2305.11003 , 2023."
+                },
+                {
+                  "title": "Weakly-supervised salient object detection using point supervison",
+                  "citation": "S. Gao, W. Zhang, Y. Wang, Q. Guo, C. Zhang, Y. He, and W. Zhang, 'Weakly-supervised salient object detection using point supervison,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 36, no. 1, 2022, pp. 670-678."
+                },
+                {
+                  "title": "Weakly-supervised concealed object segmentation with sam-based pseudo labeling and multi-scale feature grouping",
+                  "citation": "C. He, K. Li, Y. Zhang, G. Xu, L. Tang, Y. Zhang, Z. Guo, and X. Li, 'Weakly-supervised concealed object segmentation with sam-based pseudo labeling and multi-scale feature grouping,' arXiv preprint arXiv: arXiv:2305.11003 , 2023."
+                },
+                {
+                  "title": "Weakly-supervised concealed object segmentation with sam-based pseudo labeling and multi-scale feature grouping",
+                  "citation": "C. He, K. Li, Y. Zhang, G. Xu, L. Tang, Y. Zhang, Z. Guo, and X. Li, 'Weakly-supervised concealed object segmentation with sam-based pseudo labeling and multi-scale feature grouping,' arXiv preprint arXiv: arXiv:2305.11003 , 2023."
+                },
+                {
+                  "title": "Segment anything model (sam) meets glass: Mirror and transparent objects cannot be easily detected",
+                  "citation": "D. Han, C. Zhang, Y. Qiao, M. Qamar, Y. Jung, S. Lee, S.-H. Bae, and C. S. Hong, 'Segment anything model (sam) meets glass:"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.3.2",
+              "sec_title": "Thermal Infrared Image",
+              "citations": [
+                {
+                  "title": "Learning to segment anything in thermal infrared images through knowledge distillation with a large scale dataset satir",
+                  "citation": "J. Chen and X. Bai, 'Learning to' segment anything' in thermal infrared images through knowledge distillation with a large scale dataset satir,' arXiv preprint arXiv:2304.07969 , 2023."
+                },
+                {
+                  "title": "Learning to segment anything in thermal infrared images through knowledge distillation with a large scale dataset satir",
+                  "citation": "J. Chen and X. Bai, 'Learning to' segment anything' in thermal infrared images through knowledge distillation with a large scale dataset satir,' arXiv preprint arXiv:2304.07969 , 2023."
+                },
+                {
+                  "title": "Segmenting objects in day and night: Edge-conditioned cnn for thermal image semantic segmentation",
+                  "citation": "C. Li, W. Xia, Y. Yan, B. Luo, and J. Tang, 'Segmenting objects in day and night: Edge-conditioned cnn for thermal image semantic segmentation,' IEEE Transactions on Neural Networks and Learning Systems , vol. 32, no. 7, pp. 3069-3082, 2020."
+                },
+                {
+                  "title": "Not specified in given text",
+                  "citation": "X. Yang, H. Dai, Z. Wu, R. Bist, S. Subedi, J. Sun, G. Lu, C. Li, T. Liu, and L. Chai, 'Sam for poultry science,' 2023."
+                },
+                {
+                  "title": "Segformer: Simple and efficient design for semantic",
+                  "citation": "E. Xie, W. Wang, Z. Yu, A. Anandkumar, J. M. Alvarez, and P. Luo, 'Segformer: Simple and efficient design for semantic"
+                },
+                {
+                  "title": "Setr-yolov5n: A lightweight low-light lane curvature detection method based on fractional-order fusion model",
+                  "citation": "Y. Liu, Y. Wang, Y. Li, Q. Li, and J. Wang, 'Setr-yolov5n: A lightweight low-light lane curvature detection method based on fractional-order fusion model,' IEEE Access , vol. 10, pp. 93 00393 016, 2022."
+                },
+                {
+                  "title": "Yolox: Exceeding yolo series in 2021",
+                  "citation": "Z. Ge, S. Liu, F. Wang, Z. Li, and J. Sun, 'Yolox: Exceeding yolo series in 2021,' arXiv preprint arXiv:2107.08430 , 2021."
+                },
+                {
+                  "title": "Bytetrack: Multi-object tracking by associating every detection box",
+                  "citation": "Y. Zhang, P. Sun, Y. Jiang, D. Yu, F. Weng, Z. Yuan, P. Luo, W. Liu, and X. Wang, 'Bytetrack: Multi-object tracking by associating every detection box,' in Computer Vision-ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23-27, 2022, Proceedings, Part XXII . Springer, 2022, pp. 1-21."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.3.3",
+              "sec_title": "Overhead Image",
+              "citations": [
+                {
+                  "title": "Not specified in given text",
+                  "citation": "S. Ren, F. Luzi, S. Lahrichi, K. Kassaw, L. M. Collins, K. Bradbury, and J. M. Malof, 'Segment anything, from space?' arXiv preprint arXiv:2304.13000 , 2023."
+                },
+                {
+                  "title": "Distributed solar photovoltaic array location and extent dataset for remote sensing object identification",
+                  "citation": "K. Bradbury, R. Saboo, T. L Johnson, J. M. Malof, A. Devarajan, W. Zhang, L. M Collins, and R. G Newell, 'Distributed solar photovoltaic array location and extent dataset for remote sensing object identification,' Scientific data , vol. 3, no. 1, pp. 1-9, 2016."
+                },
+                {
+                  "title": "Can semantic labeling methods generalize to any city? the inria aerial image labeling benchmark",
+                  "citation": "E. Maggiori, Y. Tarabalka, G. Charpiat, and P. Alliez, 'Can semantic labeling methods generalize to any city? the inria aerial image labeling benchmark,' in 2017 IEEE International Geoscience and Remote Sensing Symposium (IGARSS) . IEEE, 2017, pp. 32263229."
+                },
+                {
+                  "title": "Deepglobe 2018: A challenge to parse the earth through satellite images",
+                  "citation": "I. Demir, K. Koperski, D. Lindenbaum, G. Pang, J. Huang, S. Basu, F. Hughes, D. Tuia, and R. Raskar, 'Deepglobe 2018: A challenge to parse the earth through satellite images,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops , 2018, pp. 172-181."
+                },
+                {
+                  "title": "Cloud detection algorithm for remote sensing images using fully convolutional neural networks",
+                  "citation": "S. Mohajerani, T. A. Krammer, and P. Saeedi, 'Cloud detection algorithm for remote sensing images using fully convolutional neural networks,' arXiv preprint arXiv:1810.05782 , 2018."
+                },
+                {
+                  "title": "Deepglobe 2018: A challenge to parse the earth through satellite images",
+                  "citation": "I. Demir, K. Koperski, D. Lindenbaum, G. Pang, J. Huang, S. Basu, F. Hughes, D. Tuia, and R. Raskar, 'Deepglobe 2018: A challenge to parse the earth through satellite images,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops , 2018, pp. 172-181."
+                },
+                {
+                  "title": "Farm parcel delineation using spatio-temporal convolutional networks",
+                  "citation": "H. L. Aung, B. Uzkent, M. Burke, D. Lobell, and S. Ermon, 'Farm parcel delineation using spatio-temporal convolutional networks,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops , 2020, pp. 76-77."
+                },
+                {
+                  "title": "Knowledge distillation with segment anything (sam) model for planetary geological mapping",
+                  "citation": "S. Julka and M. Granitzer, 'Knowledge distillation with segment anything (sam) model for planetary geological mapping,' arXiv preprint arXiv:2305.07586 , 2023."
+                },
+                {
+                  "title": "Mask r-cnn",
+                  "citation": "K. He, G. Gkioxari, P. Doll´ ar, and R. Girshick, 'Mask r-cnn,' in Proceedings of the IEEE international conference on computer vision , 2017, pp. 2961-2969."
+                },
+                {
+                  "title": "Scalingup remote sensing segmentation dataset with segment anything model",
+                  "citation": "D. Wang, J. Zhang, B. Du, D. Tao, and L. Zhang, 'Scalingup remote sensing segmentation dataset with segment anything model,' arXiv preprint arXiv:2305.02034 , 2023."
+                },
+                {
+                  "title": "Knowledge distillation with segment anything (sam) model for planetary geological mapping",
+                  "citation": "S. Julka and M. Granitzer, 'Knowledge distillation with segment anything (sam) model for planetary geological mapping,' arXiv preprint arXiv:2305.07586 , 2023."
+                },
+                {
+                  "title": "Text2seg: Remote sensing image semantic segmentation via text-guided visual foundation models",
+                  "citation": "J. Zhang, Z. Zhou, G. Mai, L. Mu, M. Hu, and S. Li, 'Text2seg: Remote sensing image semantic segmentation via text-guided visual foundation models,' arXiv preprint arXiv:2304.10597 , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "OTHER APPLICATIONS: VISION AND BEYOND",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Vision Related Applications",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Medical Imaging",
+              "citations": [
+                {
+                  "title": "Diagnosis of significant liver fibrosis in patients with chronic hepatitis b using a deep learning-based data integration network",
+                  "citation": "Z. Liu, H. Wen, Z. Zhu, Q. Li, L. Liu, T. Li, W. Xu, C. Hou, B. Huang, Z. Li et al. , 'Diagnosis of significant liver fibrosis in patients with chronic hepatitis b using a deep learning-based data integration network,' Hepatology International , vol. 16, no. 3, p. 526-536, 2022."
+                },
+                {
+                  "title": "Ultrasound score combined with liver stiffness measurement by sound touch elastography for staging liver fibrosis in patients with chronic hepatitis b: a clinical prospective study",
+                  "citation": "K. Huang, Q. Li, W. Zeng, X. Chen, L. Liu, X. Wan, C. Feng, Z. Li, Z. Liu, and C. Dong, 'Ultrasound score combined with liver stiffness measurement by sound touch elastography for staging liver fibrosis in patients with chronic hepatitis b: a clinical prospective study,' Annals of Translational Medicine , vol. 10, no. 6, 2022."
+                },
+                {
+                  "title": "USCL: pretraining deep ultrasound image diagnosis model through video contrastive representation learning",
+                  "citation": "Y. Chen, C. Zhang, L. Liu, C. Feng, C. Dong, Y. Luo, and X. Wan, 'Uscl: pretraining deep ultrasound image diagnosis model through video contrastive representation learning,' in Medical Image Computing and Computer Assisted Intervention-MICCAI 2021: 24th International Conference, Strasbourg, France, September 27-October 1, 2021, Proceedings, Part VIII 24 . Springer, 2021, p. 627-637."
+                },
+                {
+                  "title": "Multi-modal active learning for automatic liver fibrosis diagnosis based on ultrasound shear wave elastography",
+                  "citation": "L. Gao, R. Zhou, C. Dong, C. Feng, Z. Li, X. Wan, and L. Liu, 'Multi-modal active learning for automatic liver fibrosis diagnosis based on ultrasound shear wave elastography,' in 2021 IEEE 18th International Symposium on Biomedical Imaging (ISBI) . IEEE, 2021, p. 410-414."
+                },
+                {
+                  "title": "Transunet: Transformers make strong encoders for medical image segmentation",
+                  "citation": "J. Chen, Y. Lu, Q. Yu, X. Luo, E. Adeli, Y. Wang, L. Lu, A. L. Yuille, and Y. Zhou, 'Transunet: Transformers make strong encoders for medical image segmentation,' arXiv preprint arXiv:2102.04306 , 2021."
+                },
+                {
+                  "title": "Swin-unet: Unet-like pure transformer for medical image segmentation",
+                  "citation": "H. Cao, Y. Wang, J. Chen, D. Jiang, X. Zhang, Q. Tian, and M. Wang, 'Swin-unet: Unet-like pure transformer for medical image segmentation,' in Computer Vision-ECCV 2022 Workshops: Tel Aviv, Israel, October 23-27, 2022, Proceedings, Part III . Springer, 2023, pp. 205-218."
+                },
+                {
+                  "title": "DAE-former: Dual attention-guided efficient transformer for medical image segmentation",
+                  "citation": "R. Azad, R. Arimond, E. K. Aghdam, A. Kazerouni, and D. Merhof, 'Dae-former: Dual attention-guided efficient transformer for medical image segmentation,' arXiv preprint arXiv:2212.13504 , 2022."
+                },
+                {
+                  "title": "Transdeeplab: Convolutionfree transformer-based deeplab v3+ for medical image segmentation",
+                  "citation": "R. Azad, M. Heidari, M. Shariatnia, E. K. Aghdam, S. Karimijafarbigloo, E. Adeli, and D. Merhof, 'Transdeeplab: Convolutionfree transformer-based deeplab v3+ for medical image segmentation,' in Predictive Intelligence in Medicine: 5th International Workshop, PRIME 2022, Held in Conjunction with MICCAI 2022, Singapore, September 22, 2022, Proceedings . Springer, 2022, pp. 91-102."
+                },
+                {
+                  "title": "How segment anything model (sam) boost medical image segmentation?",
+                  "citation": "Y. Zhang and R. Jiao, 'How segment anything model (sam) boost medical image segmentation?' arXiv preprint arXiv:2305.03678 , 2023."
+                },
+                {
+                  "title": "When sam meets medical images: An investigation of segment anything model (sam) on multi-phase liver tumor segmentation",
+                  "citation": "C. Hu and X. Li, 'When sam meets medical images: An investigation of segment anything model (sam) on multi-phase liver tumor segmentation,' arXiv preprint arXiv:2304.08506 , 2023."
+                },
+                {
+                  "title": "Sam. md: Zero-shot medical image segmentation capabilities of the segment anything model",
+                  "citation": "S. Roy, T. Wald, G. Koehler, M. R. Rokuss, N. Disch, J. Holzschuh, D. Zimmerer, and K. H. Maier-Hein, 'Sam. md: Zero-shot medical image segmentation capabilities of the segment anything model,' arXiv preprint arXiv:2304.05396 , 2023."
+                },
+                {
+                  "title": "Customized segment anything model for medical image segmentation",
+                  "citation": "K. Zhang and D. Liu, 'Customized segment anything model for medical image segmentation,' arXiv preprint arXiv:2304.13785 , 2023."
+                },
+                {
+                  "title": "Brain extraction comparing segment anything model (sam) and fsl brain extraction tool",
+                  "citation": "S. Mohapatra, A. Gosai, and G. Schlaug, 'Brain extraction comparing segment anything model (sam) and fsl brain extraction tool,' arXiv preprint arXiv:2304.04738 , 2023."
+                },
+                {
+                  "title": "The segment anything foundation model achieves favorable brain tumor autosegmentation accuracy on mri to support radiotherapy treatment planning",
+                  "citation": "F. Putz, J. Grigo, T. Weissmann, P. Schubert, D. Hoefler, A. Gomaa, H. B. Tkhayat, A. Hagag, S. Lettmaier, B. Frey et al. , 'The segment anything foundation model achieves favorable brain tumor autosegmentation accuracy on mri to support radiotherapy treatment planning,' arXiv preprint arXiv:2304.07875 , 2023."
+                },
+                {
+                  "title": "Can sam segment polyps?",
+                  "citation": "T. Zhou, Y. Zhang, Y. Zhou, Y. Wu, and C. Gong, 'Can sam segment polyps?' arXiv preprint arXiv:2304.07583 , 2023."
+                },
+                {
+                  "title": "Polyp-sam: Transfer sam for polyp segmentation",
+                  "citation": "Y. Li, M. Hu, and X. Yang, 'Polyp-sam: Transfer sam for polyp segmentation,' arXiv preprint arXiv:2305.00293 , 2023."
+                },
+                {
+                  "title": "Segment anything model (sam) for digital pathology: Assess zero-shot segmentation on whole slide imaging",
+                  "citation": "R. Deng, C. Cui, Q. Liu, T. Yao, L. W. Remedios, S. Bao, B. A. Landman, L. E. Wheless, L. A. Coburn, K. T. Wilson et al. , 'Segment anything model (sam) for digital pathology: Assess zero-shot segmentation on whole slide imaging,' arXiv preprint arXiv:2304.04155 , 2023."
+                },
+                {
+                  "title": "Input augmentation with sam: Boosting medical image segmentation with segmentation foundation model",
+                  "citation": "Y. Zhang, T. Zhou, P. Liang, and D. Z. Chen, 'Input augmentation with sam: Boosting medical image segmentation with segmentation foundation model,' arXiv preprint arXiv:2304.11332 , 2023."
+                },
+                {
+                  "title": "Skinsam: Empowering skin cancer segmentation with segment anything model",
+                  "citation": "M. Hu, Y. Li, and X. Yang, 'Skinsam: Empowering skin cancer segmentation with segment anything model,' arXiv preprint arXiv:2304.13973 , 2023."
+                },
+                {
+                  "title": "Segment anything in medical images",
+                  "citation": "J. Ma and B. Wang, 'Segment anything in medical images,' arXiv preprint arXiv:2304.12306 , 2023."
+                },
+                {
+                  "title": "Segment anything model for medical image analysis: an experimental study",
+                  "citation": "M. A. Mazurowski, H. Dong, H. Gu, J. Yang, N. Konz, and Y. Zhang, 'Segment anything model for medical image analysis: an experimental study,' arXiv preprint arXiv:2304.10517 , 2023."
+                },
+                {
+                  "title": "Accuracy of segmentanything model (sam) in medical image segmentation tasks",
+                  "citation": "S. He, R. Bao, J. Li, P. E. Grant, and Y. Ou, 'Accuracy of segmentanything model (sam) in medical image segmentation tasks,' arXiv preprint arXiv:2304.09324 , 2023."
+                },
+                {
+                  "title": "Generalist vision foundation models for medical imaging: A case study of segment anything model on zero-shot medical segmentation",
+                  "citation": "P. Shi, J. Qiu, S. M. D. Abaxi, H. Wei, F. P.-W. Lo, and W. Yuan, 'Generalist vision foundation models for medical imaging: A case study of segment anything model on zero-shot medical segmentation,' arXiv preprint arXiv:2304.12637 , 2023."
+                },
+                {
+                  "title": "Sam on medical images: A comprehensive study on three prompt modes",
+                  "citation": "D. Cheng, Z. Qin, Z. Jiang, S. Zhang, Q. Lao, and K. Li, 'Sam on medical images: A comprehensive study on three prompt modes,' arXiv preprint arXiv:2305.00035 , 2023."
+                },
+                {
+                  "title": "Exploring the zero-shot capabilities of the segment anything model (sam) in 2d medical imaging: A comprehensive evaluation and practical guideline",
+                  "citation": "C. Mattjie, L. V. de Moura, R. C. Ravazio, L. S. Kupssinsk¨ u, O. Parraga, M. M. Delucis, and R. C. Barros, 'Exploring the zero-shot capabilities of the segment anything model (sam) in 2d medical imaging: A comprehensive evaluation and practical guideline,' arXiv preprint arXiv:2305.00109 , 2023."
+                },
+                {
+                  "title": "Segment anything model for medical images?",
+                  "citation": "Y. Huang, X. Yang, L. Liu, H. Zhou, A. Chang, X. Zhou, R. Chen, J. Yu, J. Chen, C. Chen et al. , 'Segment anything model for medical images?' arXiv preprint arXiv:2304.14660 , 2023."
+                },
+                {
+                  "title": "Segment anything in medical images",
+                  "citation": "J. Ma and B. Wang, 'Segment anything in medical images,' arXiv preprint arXiv:2304.12306 , 2023."
+                },
+                {
+                  "title": "Samm (segment any medical model): A 3d slicer integration to sam",
+                  "citation": "Y. Liu, J. Zhang, Z. She, A. Kheradmand, and M. Armand, 'Samm (segment any medical model): A 3d slicer integration to sam,' arXiv preprint arXiv:2304.05622 , 2023."
+                },
+                {
+                  "title": "Medical sam adapter: Adapting segment anything model for medical image segmentation",
+                  "citation": "J. Wu, R. Fu, H. Fang, Y. Liu, Z. Wang, Y. Xu, Y. Jin, and T. Arbel, 'Medical sam adapter: Adapting segment anything model for medical image segmentation,' arXiv preprint arXiv:2304.12620 , 2023."
+                },
+                {
+                  "title": "Learnable ophthalmology sam",
+                  "citation": "Z. Qiu, Y. Hu, H. Li, and J. Liu, 'Learnable ophthalmology sam,' arXiv preprint arXiv:2304.13425 , 2023."
+                },
+                {
+                  "title": "Sam fails to segment anything?-samadapter: Adapting sam in underperformed scenes: Camouflage, shadow, and more",
+                  "citation": "T. Chen, L. Zhu, C. Ding, R. Cao, S. Zhang, Y. Wang, Z. Li, L. Sun, P. Mao, and Y. Zang, 'Sam fails to segment anything?-samadapter: Adapting sam in underperformed scenes: Camouflage, shadow, and more,' arXiv preprint arXiv:2304.09148 , 2023."
+                },
+                {
+                  "title": "Promptunet: Toward interactive medical image segmentation",
+                  "citation": "J. Wu, 'Promptunet: Toward interactive medical image segmentation,' arXiv preprint arXiv:2305.10300 , 2023."
+                },
+                {
+                  "title": "Sam meets robotic surgery: An empirical study in robustness perspective",
+                  "citation": "A. Wang, M. Islam, M. Xu, Y. Zhang, and H. Ren, 'Sam meets robotic surgery: An empirical study in robustness perspective,' arXiv preprint arXiv:2304.14674 , 2023."
+                },
+                {
+                  "title": "Gazesam: What you see is what you segment",
+                  "citation": "B. Wang, A. Aboah, Z. Zhang, and U. Bagci, 'Gazesam: What you see is what you segment,' arXiv preprint arXiv:2304.13844 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.2",
+              "sec_title": "Video",
+              "citations": [
+                {
+                  "title": "The ninth visual object tracking vot2021 challenge results",
+                  "citation": "M. Kristan, J. Matas, A. Leonardis, M. Felsberg, R. Pflugfelder, J.K. K¨ am¨ ar¨ ainen, H. J. Chang, M. Danelljan, L. Cehovin, A. Lukeˇ ziˇ c et al. , 'The ninth visual object tracking vot2021 challenge results,' in Proceedings of the IEEE/CVF International Conference on Computer Vision , 2021, pp. 2711-2738."
+                },
+                {
+                  "title": "Webuav-3 m: A benchmark for unveiling the power of million-scale deep uav tracking",
+                  "citation": "C. Zhang, G. Huang, L. Liu, S. Huang, Y. Yang, X. Wan, S. Ge, and D. Tao, 'Webuav-3 m: A benchmark for unveiling the power of million-scale deep uav tracking,' IEEE Transactions on Pattern Analysis and Machine Intelligence , 2022."
+                },
+                {
+                  "title": "Track anything: Segment anything meets videos",
+                  "citation": "J. Yang, M. Gao, Z. Li, S. Gao, F. Wang, and F. Zheng, 'Track anything: Segment anything meets videos,' arXiv preprint arXiv:2304.11968 , 2023."
+                },
+                {
+                  "title": "Not specified in given text",
+                  "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+                },
+                {
+                  "title": "Track anything: Segment anything meets videos",
+                  "citation": "J. Yang, M. Gao, Z. Li, S. Gao, F. Wang, and F. Zheng, 'Track anything: Segment anything meets videos,' arXiv preprint arXiv:2304.11968 , 2023."
+                },
+                {
+                  "title": "Xmem: Long-term video object segmentation with an atkinson-shiffrin memory model",
+                  "citation": "H. K. Cheng and A. G. Schwing, 'Xmem: Long-term video object segmentation with an atkinson-shiffrin memory model,'"
+                },
+                {
+                  "title": "Segment and track anything",
+                  "citation": "Y. Cheng, L. Li, Y. Xu, X. Li, Z. Yang, W. Wang, and Y. Yang, 'Segment and track anything,' in arXiv preprint arXiv:2305.06558 , 2023."
+                },
+                {
+                  "title": "Grounding dino: Marrying dino with grounded pre-training for open-set object detection",
+                  "citation": "S. Liu, Z. Zeng, T. Ren, F. Li, H. Zhang, J. Yang, C. Li, J. Yang, H. Su, J. Zhu et al. , 'Grounding dino: Marrying dino with grounded pre-training for open-set object detection,' arXiv preprint arXiv:2303.05499 , 2023."
+                },
+                {
+                  "title": "Decoupling features in hierarchical propagation for video object segmentation",
+                  "citation": "Z. Yang and Y. Yang, 'Decoupling features in hierarchical propagation for video object segmentation,' arXiv preprint arXiv:2210.09782 , 2022."
+                },
+                {
+                  "title": "Efficient video super-resolution through recurrent latent space propagation",
+                  "citation": "D. Fuoli, S. Gu, and R. Timofte, 'Efficient video super-resolution through recurrent latent space propagation,' in 2019 IEEE/CVF International Conference on Computer Vision Workshop (ICCVW) . IEEE, 2019, pp. 3476-3485."
+                },
+                {
+                  "title": "Recurrent backprojection network for video super-resolution",
+                  "citation": "M. Haris, G. Shakhnarovich, and N. Ukita, 'Recurrent backprojection network for video super-resolution,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2019, pp. 3897-3906."
+                },
+                {
+                  "title": "Bidirectional recurrent convolutional networks for multi-frame super-resolution",
+                  "citation": "Y. Huang, W. Wang, and L. Wang, 'Bidirectional recurrent convolutional networks for multi-frame super-resolution,' Advances in neural information processing systems , vol. 28, 2015."
+                },
+                {
+                  "title": "Video super-resolution via bidirectional recurrent convolutional networks",
+                  "citation": "--, 'Video super-resolution via bidirectional recurrent convolutional networks,' IEEE transactions on pattern analysis and machine intelligence , vol. 40, no. 4, pp. 1015-1028, 2017."
+                },
+                {
+                  "title": "A lightweight convolutional neural network for optical flow estimation",
+                  "citation": "T. Hui, X. Tang, and C. L. Change Loy, 'A lightweight convolutional neural network for optical flow estimation,' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR) , 2018, pp. 8981-8989."
+                },
+                {
+                  "title": "Can sam boost video super-resolution?",
+                  "citation": "Z. Lu, Z. Xiao, J. Bai, Z. Xiong, and X. Wang, 'Can sam boost video super-resolution?' in arXiv preprint arXiv:2305.06524 , 2023."
+                },
+                {
+                  "title": "Segment and track anything",
+                  "citation": "Y. Cheng, L. Li, Y. Xu, X. Li, Z. Yang, W. Wang, and Y. Yang, 'Segment and track anything,' in arXiv preprint arXiv:2305.06558 , 2023."
+                },
+                {
+                  "title": "Can sam boost video super-resolution?",
+                  "citation": "Z. Lu, Z. Xiao, J. Bai, Z. Xiong, and X. Wang, 'Can sam boost video super-resolution?' in arXiv preprint arXiv:2305.06524 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.3",
+              "sec_title": "Data Annotations",
+              "citations": [
+                {
+                  "title": "Not specified in given text",
+                  "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+                },
+                {
+                  "title": "Scalable mask annotation for video text spotting",
+                  "citation": "H. He, J. Zhang, M. Xu, J. Liu, B. Du, and D. Tao, 'Scalable mask annotation for video text spotting,' arXiv preprint arXiv:2305.01443 , 2023."
+                },
+                {
+                  "title": "Scalingup remote sensing segmentation dataset with segment anything model",
+                  "citation": "D. Wang, J. Zhang, B. Du, D. Tao, and L. Zhang, 'Scalingup remote sensing segmentation dataset with segment anything model,' arXiv preprint arXiv:2305.02034 , 2023."
+                },
+                {
+                  "title": "Weakly-supervised concealed object segmentation with sam-based pseudo labeling and multi-scale feature grouping",
+                  "citation": "C. He, K. Li, Y. Zhang, G. Xu, L. Tang, Y. Zhang, Z. Guo, and X. Li, 'Weakly-supervised concealed object segmentation with sam-based pseudo labeling and multi-scale feature grouping,' arXiv preprint arXiv: arXiv:2305.11003 , 2023."
+                },
+                {
+                  "title": "Learning to segment anything in thermal infrared images through knowledge distillation with a large scale dataset satir",
+                  "citation": "J. Chen and X. Bai, 'Learning to' segment anything' in thermal infrared images through knowledge distillation with a large scale dataset satir,' arXiv preprint arXiv:2304.07969 , 2023."
+                },
+                {
+                  "title": "Segment anything is a good pseudo-label generator for weakly supervised semantic segmentation",
+                  "citation": "P.-T. Jiang and Y. Yang, 'Segment anything is a good pseudo-label generator for weakly supervised semantic segmentation,' arXiv preprint arXiv:2305.01275 , 2023."
+                },
+                {
+                  "title": "Weakly-supervised concealed object segmentation with sam-based pseudo labeling and multi-scale feature grouping",
+                  "citation": "C. He, K. Li, Y. Zhang, G. Xu, L. Tang, Y. Zhang, Z. Guo, and X. Li, 'Weakly-supervised concealed object segmentation with sam-based pseudo labeling and multi-scale feature grouping,' arXiv preprint arXiv: arXiv:2305.11003 , 2023."
+                },
+                {
+                  "title": "Learning to segment anything in thermal infrared images through knowledge distillation with a large scale dataset satir",
+                  "citation": "J. Chen and X. Bai, 'Learning to' segment anything' in thermal infrared images through knowledge distillation with a large scale dataset satir,' arXiv preprint arXiv:2304.07969 , 2023."
+                },
+                {
+                  "title": "Segment anything is a good pseudo-label generator for weakly supervised semantic segmentation",
+                  "citation": "P.-T. Jiang and Y. Yang, 'Segment anything is a good pseudo-label generator for weakly supervised semantic segmentation,' arXiv preprint arXiv:2305.01275 , 2023."
+                },
+                {
+                  "title": "The pascal visual object classes challenge: A retrospective",
+                  "citation": "M. Everingham, S. A. Eslami, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman, 'The pascal visual object classes challenge: A retrospective,' International journal of computer vision , vol. 111, pp. 98-136, 2015."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Beyond Vision",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.2.1",
+              "sec_title": "3D Reconstruction",
+              "citations": [
+                {
+                  "title": "Segment anything in 3d with nerfs",
+                  "citation": "J. Cen, Z. Zhou, J. Fang, W. Shen, L. Xie, X. Zhang, and Q. Tian, 'Segment anything in 3d with nerfs,' arXiv preprint arXiv:2304.12308 , 2023."
+                },
+                {
+                  "title": "Segment anything in 3d with nerfs",
+                  "citation": "J. Cen, Z. Zhou, J. Fang, W. Shen, L. Xie, X. Zhang, and Q. Tian, 'Segment anything in 3d with nerfs,' arXiv preprint arXiv:2304.12308 , 2023."
+                },
+                {
+                  "title": "Pifu: Pixel-aligned implicit function for high-resolution clothed human digitization",
+                  "citation": "S. Saito, Z. Huang, R. Natsume, S. Morishima, A. Kanazawa, and H. Li, 'Pifu: Pixel-aligned implicit function for high-resolution clothed human digitization,' in Proceedings of the IEEE/CVF international conference on computer vision , 2019, pp. 2304-2314."
+                },
+                {
+                  "title": "Nerf++: Analyzing and improving neural radiance fields",
+                  "citation": "K. Zhang, G. Riegler, N. Snavely, and V. Koltun, 'Nerf++: Analyzing and improving neural radiance fields,' arXiv preprint arXiv:2010.07492 , 2020."
+                },
+                {
+                  "title": "Not specified in given text",
+                  "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+                },
+                {
+                  "title": "Or-nerf: Object removing from 3d scenes guided by multiview segmentation with neural radiance fields",
+                  "citation": "Y. Yin, Z. Fu, F. Yang, and G. Lin, 'Or-nerf: Object removing from 3d scenes guided by multiview segmentation with neural radiance fields,' 2023."
+                },
+                {
+                  "title": "Not specified in given text",
+                  "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+                },
+                {
+                  "title": "Or-nerf: Object removing from 3d scenes guided by multiview segmentation with neural radiance fields",
+                  "citation": "Y. Yin, Z. Fu, F. Yang, and G. Lin, 'Or-nerf: Object removing from 3d scenes guided by multiview segmentation with neural radiance fields,' 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.2",
+              "sec_title": "Non-Euclidean Domain",
+              "citations": [
+                {
+                  "title": "Segment anything in noneuclidean domains: Challenges and opportunities",
+                  "citation": "Y. Jing, X. Wang, and D. Tao, 'Segment anything in noneuclidean domains: Challenges and opportunities,' arXiv preprint arXiv:2304.11595 , 2023."
+                },
+                {
+                  "title": "Semi-supervised classification with graph convolutional networks",
+                  "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' arXiv preprint arXiv:1609.02907 , 2016."
+                },
+                {
+                  "title": "Inductive representation learning on large graphs",
+                  "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' Advances in neural information processing systems , vol. 30, 2017."
+                },
+                {
+                  "title": "Graph attention networks",
+                  "citation": "P. Veliˇ ckovi´ c, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' arXiv preprint arXiv:1710.10903 , 2017."
+                },
+                {
+                  "title": "Not specified in given text",
+                  "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+                },
+                {
+                  "title": "Segment anything in noneuclidean domains: Challenges and opportunities",
+                  "citation": "Y. Jing, X. Wang, and D. Tao, 'Segment anything in noneuclidean domains: Challenges and opportunities,' arXiv preprint arXiv:2304.11595 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.3",
+              "sec_title": "Robotics",
+              "citations": [
+                {
+                  "title": "Instruct2act: Mapping multi-modality instructions to robotic actions with large language model",
+                  "citation": "S. Huang, Z. Jiang, H. Dong, Y. Qiao, P. Gao, and H. Li, 'Instruct2act: Mapping multi-modality instructions to robotic actions with large language model,' 2023."
+                },
+                {
+                  "title": "Instruct2act: Mapping multi-modality instructions to robotic actions with large language model",
+                  "citation": "S. Huang, Z. Jiang, H. Dong, Y. Qiao, P. Gao, and H. Li, 'Instruct2act: Mapping multi-modality instructions to robotic actions with large language model,' 2023."
+                },
+                {
+                  "title": "Instruct2act: Mapping multi-modality instructions to robotic actions with large language model",
+                  "citation": "S. Huang, Z. Jiang, H. Dong, Y. Qiao, P. Gao, and H. Li, 'Instruct2act: Mapping multi-modality instructions to robotic actions with large language model,' 2023."
+                },
+                {
+                  "title": "Not specified in given text",
+                  "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark et al. , 'Learning transferable visual models from natural language supervision,' in International conference on machine learning . PMLR, 2021, pp. 8748-8763."
+                },
+                {
+                  "title": "Instruct2act: Mapping multi-modality instructions to robotic actions with large language model",
+                  "citation": "S. Huang, Z. Jiang, H. Dong, Y. Qiao, P. Gao, and H. Li, 'Instruct2act: Mapping multi-modality instructions to robotic actions with large language model,' 2023."
+                },
+                {
+                  "title": "Instruct2act: Mapping multi-modality instructions to robotic actions with large language model",
+                  "citation": "S. Huang, Z. Jiang, H. Dong, Y. Qiao, P. Gao, and H. Li, 'Instruct2act: Mapping multi-modality instructions to robotic actions with large language model,' 2023."
+                },
+                {
+                  "title": "Instruct2act: Mapping multi-modality instructions to robotic actions with large language model",
+                  "citation": "S. Huang, Z. Jiang, H. Dong, Y. Qiao, P. Gao, and H. Li, 'Instruct2act: Mapping multi-modality instructions to robotic actions with large language model,' 2023."
+                },
+                {
+                  "title": "Instruct2act: Mapping multi-modality instructions to robotic actions with large language model",
+                  "citation": "S. Huang, Z. Jiang, H. Dong, Y. Qiao, P. Gao, and H. Li, 'Instruct2act: Mapping multi-modality instructions to robotic actions with large language model,' 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.4",
+              "sec_title": "Video Text Spotting",
+              "citations": [
+                {
+                  "title": "Not specified in given text",
+                  "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+                },
+                {
+                  "title": "Scalable mask annotation for video text spotting",
+                  "citation": "H. He, J. Zhang, M. Xu, J. Liu, B. Du, and D. Tao, 'Scalable mask annotation for video text spotting,' arXiv preprint arXiv:2305.01443 , 2023."
+                },
+                {
+                  "title": "Scalable mask annotation for video text spotting",
+                  "citation": "H. He, J. Zhang, M. Xu, J. Liu, B. Du, and D. Tao, 'Scalable mask annotation for video text spotting,' arXiv preprint arXiv:2305.01443 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.5",
+              "sec_title": "Vision and Language",
+              "citations": [
+                {
+                  "title": "Text2seg: Remote sensing image semantic segmentation via text-guided visual foundation models",
+                  "citation": "J. Zhang, Z. Zhou, G. Mai, L. Mu, M. Hu, and S. Li, 'Text2seg: Remote sensing image semantic segmentation via text-guided visual foundation models,' arXiv preprint arXiv:2304.10597 , 2023."
+                },
+                {
+                  "title": "Text2seg: Remote sensing image semantic segmentation via text-guided visual foundation models",
+                  "citation": "J. Zhang, Z. Zhou, G. Mai, L. Mu, M. Hu, and S. Li, 'Text2seg: Remote sensing image semantic segmentation via text-guided visual foundation models,' arXiv preprint arXiv:2304.10597 , 2023."
+                },
+                {
+                  "title": "Interngpt: Solving visioncentric tasks by interacting with chatgpt beyond language",
+                  "citation": "Z. Liu, Y. He, W. Wang, W. Wang, Y. Wang, S. Chen, Q. Zhang, Y. Yang, Q. Li, J. Yu, K. Li, Z. Chen, X. Yang, X. Zhu, Y. Wang, L. Wang, P. Luo, J. Dai, and Y. Qiao, 'Interngpt: Solving visioncentric tasks by interacting with chatgpt beyond language,' 2023."
+                },
+                {
+                  "title": "Text2seg: Remote sensing image semantic segmentation via text-guided visual foundation models",
+                  "citation": "J. Zhang, Z. Zhou, G. Mai, L. Mu, M. Hu, and S. Li, 'Text2seg: Remote sensing image semantic segmentation via text-guided visual foundation models,' arXiv preprint arXiv:2304.10597 , 2023."
+                },
+                {
+                  "title": "Emerging properties in self-supervised vision transformers",
+                  "citation": "M. Caron, H. Touvron, I. Misra, H. J´ egou, J. Mairal, P. Bojanowski, and A. Joulin, 'Emerging properties in self-supervised vision transformers,' in Proceedings of the IEEE/CVF international conference on computer vision , 2021, pp. 9650-9660."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark et al. , 'Learning transferable visual models from natural language supervision,' in International conference on machine learning . PMLR, 2021, pp. 8748-8763."
+                },
+                {
+                  "title": "Caption anything: Interactive image description with diverse multimodal controls",
+                  "citation": "T. Wang, J. Zhang, J. Fei, Y. Ge, H. Zheng, Y. Tang, Z. Li, M. Gao, S. Zhao, Y. Shan et al. , 'Caption anything: Interactive image description with diverse multimodal controls,' arXiv preprint arXiv:2305.02677 , 2023."
+                },
+                {
+                  "title": "Memory-augmented contrastive learning for talking head generation",
+                  "citation": "J. Wang, Y. Zhao, L. Liu, H. Fan, T. Xu, Q. Li, and S. Li, 'Memoryaugmented contrastive learning for talking head generation,' arXiv preprint arXiv:2302.13469 , 2023."
+                },
+                {
+                  "title": "Caption anything: Interactive image description with diverse multimodal controls",
+                  "citation": "T. Wang, J. Zhang, J. Fei, Y. Ge, H. Zheng, Y. Tang, Z. Li, M. Gao, S. Zhao, Y. Shan et al. , 'Caption anything: Interactive image description with diverse multimodal controls,' arXiv preprint arXiv:2305.02677 , 2023."
+                },
+                {
+                  "title": "Not specified in given text",
+                  "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.6",
+              "sec_title": "Audio and Vision",
+              "citations": [
+                {
+                  "title": "Av-sam: Segment anything model meets audio-visual localization and segmentation",
+                  "citation": "S. Mo and Y. Tian, 'Av-sam: Segment anything model meets audio-visual localization and segmentation,' arXiv preprint arXiv:2305.01836 , 2023."
+                },
+                {
+                  "title": "Resynchronization using the hand preceding model for multimodal fusion in automatic continuous cued speech recognition",
+                  "citation": "L. Liu, G. Feng, D. Beautemps, and X.-P. Zhang, 'Resynchronization using the hand preceding model for multi-"
+                },
+                {
+                  "title": "Visual recognition of continuous cued speech using a tandem cnn-hmm approach",
+                  "citation": "L. Liu, T. Hueber, G. Feng, and D. Beautemps, 'Visual recognition of continuous cued speech using a tandem cnn-hmm approach.' in Interspeech , 2018, p. 2643-2647."
+                },
+                {
+                  "title": "Automatic detection of the temporal segmentation of hand movements in british english cued speech",
+                  "citation": "L. Liu, J. Li, G. Feng, and X.-P. S. Zhang, 'Automatic detection of the temporal segmentation of hand movements in british english cued speech.' in INTERSPEECH , 2019, p. 2285-2289."
+                },
+                {
+                  "title": "Automatic temporal segmentation of hand movements for hand positions recognition in french cued speech",
+                  "citation": "L. Liu, G. Feng, and D. Beautemps, 'Automatic temporal segmentation of hand movements for hand positions recognition in french cued speech,' in 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) . IEEE, 2018, pp. 3061-3065."
+                },
+                {
+                  "title": "Av-sam: Segment anything model meets audio-visual localization and segmentation",
+                  "citation": "S. Mo and Y. Tian, 'Av-sam: Segment anything model meets audio-visual localization and segmentation,' arXiv preprint arXiv:2305.01836 , 2023."
+                },
+                {
+                  "title": "Localizing visual sounds the easy way",
+                  "citation": "S. Mo and P. Morgado, 'Localizing visual sounds the easy way,' in ECCV , 2022, p. 218-234."
+                },
+                {
+                  "title": "A closer look at weakly-supervised audio-visual source localization",
+                  "citation": "--, 'A closer look at weakly-supervised audio-visual source localization,' in NeurIPS , 2022."
+                },
+                {
+                  "title": "Self-supervised generation of spatial audio for 360°video",
+                  "citation": "P. Morgado, N. Nvasconcelos, T. Langlois, and O. Wang, 'Self-supervised generation of spatial audio for 360°video,' in NeurIPS , 2018."
+                },
+                {
+                  "title": "Learning representations from audio-visual spatial alignment",
+                  "citation": "P. Morgado, Y. Li, and N. Nvasconcelos, 'Learning representations from audio-visual spatial alignment,' in NeurIPS , 2020, pp. 4733-4744."
+                },
+                {
+                  "title": "Audio-visual event localization in unconstrained videos",
+                  "citation": "Y. Tian, J. Shi, B. Li, Z. Duan, and C. Xu, 'Audio-visual event localization in unconstrained videos,' in ECCV , 2018."
+                },
+                {
+                  "title": "Inner lips feature extraction based on clnf with hybrid dynamic template for cued speech",
+                  "citation": "L. Liu, G. Feng, and D. Beautemps, 'Inner lips feature extraction based on clnf with hybrid dynamic template for cued speech,' EURASIP Journal on Image and Video Processing , vol. 2017, p. 1-15, 2017."
+                },
+                {
+                  "title": "Unified multisensory perception: Weakly-supervised audio-visual video parsing",
+                  "citation": "Y. Tian, D. Li, and C. Xu, 'Unified multisensory perception: Weakly-supervised audio-visual video parsing,' in ECCV , 2020, p. 436-454."
+                },
+                {
+                  "title": "Multi-modal grouping network for weaklysupervised audio-visual video parsing",
+                  "citation": "S. Mo and Y. Tian, 'Multi-modal grouping network for weaklysupervised audio-visual video parsing,' in NeurIPS , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.7",
+              "sec_title": "Multimodal Visualization and Open-Vocabulary Interactive Segmentation",
+              "citations": [
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark et al. , 'Learning transferable visual models from natural language supervision,' in International conference on machine learning . PMLR, 2021, pp. 8748-8763."
+                },
+                {
+                  "title": "Clip surgery for better explainability with enhancement in open-vocabulary tasks",
+                  "citation": "Y. Li, H. Wang, Y. Duan, and X. Li, 'Clip surgery for better explainability with enhancement in open-vocabulary tasks,' arXiv preprint arXiv:2304.05653 , 2023."
+                },
+                {
+                  "title": "Not specified in given text",
+                  "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo et al. , 'Segment anything,' arXiv preprint arXiv:2304.02643 , 2023."
+                },
+                {
+                  "title": "Caption anything: Interactive image description with diverse multimodal controls",
+                  "citation": "T. Wang, J. Zhang, J. Fei, Y. Ge, H. Zheng, Y. Tang, Z. Li, M. Gao, S. Zhao, Y. Shan et al. , 'Caption anything: Interactive image description with diverse multimodal controls,' arXiv preprint arXiv:2305.02677 , 2023."
+                },
+                {
+                  "title": "Clip surgery for better explainability with enhancement in open-vocabulary tasks",
+                  "citation": "Y. Li, H. Wang, Y. Duan, and X. Li, 'Clip surgery for better explainability with enhancement in open-vocabulary tasks,' arXiv preprint arXiv:2304.05653 , 2023."
+                },
+                {
+                  "title": "Clip surgery for better explainability with enhancement in open-vocabulary tasks",
+                  "citation": "Y. Li, H. Wang, Y. Duan, and X. Li, 'Clip surgery for better explainability with enhancement in open-vocabulary tasks,' arXiv preprint arXiv:2304.05653 , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.3",
+          "sec_title": "More Directions",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.3.1",
+              "sec_title": "Weakly-Supervised Semantic Segmentation",
+              "citations": [
+                {
+                  "title": "Box-driven classwise region masking and filling rate guided loss for weakly supervised semantic segmentation",
+                  "citation": "C. Song, Y. Huang, W. Ouyang, and L. Wang, 'Box-driven classwise region masking and filling rate guided loss for weakly supervised semantic segmentation,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2019, pp. 3136-3145."
+                },
+                {
+                  "title": "Bbam: Bounding box attribution map for weakly supervised semantic and instance segmentation",
+                  "citation": "J. Lee, J. Yi, C. Shin, and S. Yoon, 'Bbam: Bounding box attribution map for weakly supervised semantic and instance segmentation,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2021, pp. 2643-2652."
+                },
+                {
+                  "title": "An alternative to wsss? an empirical study of the segment anything model (sam) on weakly-supervised semantic segmentation problems",
+                  "citation": "W. Sun, Z. Liu, Y. Zhang, Y. Zhong, and N. Barnes, 'An alternative to wsss? an empirical study of the segment anything model (sam) on weakly-supervised semantic segmentation problems,' arXiv preprint arXiv:2305.01586 , 2023."
+                },
+                {
+                  "title": "An alternative to wsss? an empirical study of the segment anything model (sam) on weakly-supervised semantic segmentation problems",
+                  "citation": "W. Sun, Z. Liu, Y. Zhang, Y. Zhong, and N. Barnes, 'An alternative to wsss? an empirical study of the segment anything model (sam) on weakly-supervised semantic segmentation problems,' arXiv preprint arXiv:2305.01586 , 2023."
+                },
+                {
+                  "title": "Segment anything is a good pseudo-label generator for weakly supervised semantic segmentation",
+                  "citation": "P.-T. Jiang and Y. Yang, 'Segment anything is a good pseudo-label generator for weakly supervised semantic segmentation,' arXiv preprint arXiv:2305.01275 , 2023."
+                },
+                {
+                  "title": "Segment anything is a good pseudo-label generator for weakly supervised semantic segmentation",
+                  "citation": "P.-T. Jiang and Y. Yang, 'Segment anything is a good pseudo-label generator for weakly supervised semantic segmentation,' arXiv preprint arXiv:2305.01275 , 2023."
+                },
+                {
+                  "title": "Towards rich feature discovery with class activation maps augmentation for person re-identification",
+                  "citation": "W. Yang, H. Huang, Z. Zhang, X. Chen, K. Huang, and S. Zhang, 'Towards rich feature discovery with class activation maps augmentation for person re-identification,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , 2019, pp. 1389-1398."
+                },
+                {
+                  "title": "Semisupervised active learning for covid-19 lung ultrasound multisymptom classification",
+                  "citation": "L. Liu, W. Lei, X. Wan, L. Liu, Y. Luo, and C. Feng, 'Semisupervised active learning for covid-19 lung ultrasound multisymptom classification,' in 2020 IEEE 32nd International Conference on Tools with Artificial Intelligence (ICTAI) . IEEE, 2020, pp. 1268-1273."
+                },
+                {
+                  "title": "Segment anything model (sam) enhanced pseudo labels for weakly supervised semantic segmentation",
+                  "citation": "T. Chen, Z. Mai, R. Li, and W.-l. Chao, 'Segment anything model (sam) enhanced pseudo labels for weakly supervised semantic segmentation,' arXiv preprint arXiv:2305.05803 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.3.2",
+              "sec_title": "Adversarial Robustness",
+              "citations": [
+                {
+                  "title": "Adversarial machine learning: A systematic survey of backdoor attack, weight attack and adversarial example",
+                  "citation": "B. Wu, L. Liu, Z. Zhu, Q. Liu, Z. He, and S. Lyu, 'Adversarial machine learning: A systematic survey of backdoor attack, weight attack and adversarial example,' arXiv preprint arXiv:2302.09457 , 2023."
+                },
+                {
+                  "title": "Data-free backdoor removal based on channel lipschitzness",
+                  "citation": "R. Zheng, R. Tang, J. Li, and L. Liu, 'Data-free backdoor removal based on channel lipschitzness,' in Computer Vision-ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23-27, 2022, Proceedings, Part V . Springer, 2022, pp. 175-191."
+                },
+                {
+                  "title": "Pre-activation distributions expose backdoor neurons",
+                  "citation": "--, 'Pre-activation distributions expose backdoor neurons,' Advances in Neural Information Processing Systems , vol. 35, pp. 18 667-18 680, 2022."
+                },
+                {
+                  "title": "A review on safety failures, security attacks, and available countermeasures",
+                  "citation": "J. Cui, L. S. Liew, G. Sabaliauskaite, and F. Zhou, 'A review on safety failures, security attacks, and available countermeasures"
+                },
+                {
+                  "title": "Counter-measures to photo attacks in face recognition: a public database and a baseline",
+                  "citation": "A. Anjos and S. Marcel, 'Counter-measures to photo attacks in face recognition: a public database and a baseline,' in 2011 international joint conference on Biometrics (IJCB) . IEEE, 2011, pp. 1-7."
+                },
+                {
+                  "title": "Attack-sam: Towards evaluating adversarial robustness of segment anything model",
+                  "citation": "C. Zhang, C. Zhang, T. Kang, D. Kim, S.-H. Bae, and I. S. Kweon, 'Attack-sam: Towards evaluating adversarial robustness of segment anything model,' arXiv preprint arXiv:2305.00866 , 2023."
+                },
+                {
+                  "title": "Badsam: Exploring security vulnerabilities of sam via backdoor attacks",
+                  "citation": "Z. Guan, M. Hu, Z. Zhou, J. Zhang, S. Li, and N. Liu, 'Badsam: Exploring security vulnerabilities of sam via backdoor attacks,' arXiv preprint arXiv:2305.03289 , 2023."
+                },
+                {
+                  "title": "An empirical study on the robustness of the segment anything model (sam)",
+                  "citation": "Y. Wang, Y. Zhao, and L. Petzold, 'An empirical study on the robustness of the segment anything model (sam),' arXiv preprint arXiv:2305.06422 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.3.3",
+              "sec_title": "One Shot",
+              "citations": [
+                {
+                  "title": "Hico: Hierarchical contrastive learning for ultrasound video model pretraining",
+                  "citation": "C. Zhang, Y. Chen, L. Liu, Q. Liu, and X. Zhou, 'Hico: Hierarchical contrastive learning for ultrasound video model pretraining,' in Proceedings of the Asian Conference on Computer Vision , 2022, p. 229-246."
+                },
+                {
+                  "title": "Two-stream joint-training for speaker independent acoustic-toarticulatory inversion",
+                  "citation": "J. Wang, J. Liu, X. Li, M. Yu, J. Gao, Q. Fang, and L. Liu, 'Two-stream joint-training for speaker independent acoustic-toarticulatory inversion,' in ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) . IEEE, 2023, p. 1-5."
+                },
+                {
+                  "title": "Personalize segment anything model with one shot",
+                  "citation": "R. Zhang, Z. Jiang, Z. Guo, S. Yan, J. Pan, H. Dong, P. Gao, and H. Li, 'Personalize segment anything model with one shot,' arXiv preprint arXiv:2305.03048 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.3.4",
+              "sec_title": "Explainable AI",
+              "citations": [
+                {
+                  "title": "Explainable ai methods-a brief overview",
+                  "citation": "A. Holzinger, A. Saranti, C. Molnar, P. Biecek, and W. Samek, 'Explainable ai methods-a brief overview,' in xxAI-Beyond Explainable AI: International Workshop, Held in Conjunction with ICML 2020, July 18, 2020, Vienna, Austria, Revised and Extended Papers . Springer, 2022, pp. 13-38."
+                },
+                {
+                  "title": "Explain any concept: Segment anything meets concept-based explanation",
+                  "citation": "A. Sun, P. Ma, Y. Yuan, and S. Wang, 'Explain any concept: Segment anything meets concept-based explanation,' 2023."
+                },
+                {
+                  "title": "Explain any concept: Segment anything meets concept-based explanation",
+                  "citation": "A. Sun, P. Ma, Y. Yuan, and S. Wang, 'Explain any concept: Segment anything meets concept-based explanation,' 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "CONCLUSION",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

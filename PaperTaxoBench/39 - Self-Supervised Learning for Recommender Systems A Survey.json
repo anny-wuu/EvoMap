@@ -1,0 +1,2254 @@
+{
+  "track": "Recommender Systems",
+  "paper_title": "Self-Supervised Learning for Recommender Systems: A Survey",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "INTRODUCTION",
+      "citations": [
+        {
+          "title": "Introduction to recommender systems handbook",
+          "citation": "F. Ricci, L. Rokach, and B. Shapira, 'Introduction to recommender systems handbook,' in Recommender systems handbook . Springer, 2011, pp. 1-35."
+        },
+        {
+          "title": "Deep neural networks for youtube recommendations",
+          "citation": "P. Covington, J. Adams, and E. Sargin, 'Deep neural networks for youtube recommendations,' in RecSys , 2016, pp. 191-198."
+        },
+        {
+          "title": "Wide & deep learning for recommender systems",
+          "citation": "H.-T. Cheng, L. Koc, J. Harmsen, T. Shaked, T. Chandra, H. Aradhye, G. Anderson, G. Corrado, W. Chai, M. Ispir et al. , 'Wide &amp; deep learning for recommender systems,' in Proceedings of the 1st workshop on deep learning for recommender systems , 2016, pp. 7-10."
+        },
+        {
+          "title": "Deep interest network for click-through rate prediction",
+          "citation": "G. Zhou, X. Zhu, C. Song, Y. Fan, H. Zhu, X. Ma, Y. Yan, J. Jin, H. Li, and K. Gai, 'Deep interest network for click-through rate prediction,' in KDD , 2018, pp. 1059-1068."
+        },
+        {
+          "title": "Try this instead: Personalized and interpretable substitute recommendation",
+          "citation": "T. Chen, H. Yin, G. Ye, Z. Huang, Y. Wang, and M. Wang, 'Try this instead: Personalized and interpretable substitute recommendation,' in SIGIR , 2020, pp. 891-900."
+        },
+        {
+          "title": "Joint modeling of users' interests and mobility patterns for point-ofinterest recommendation",
+          "citation": "H. Yin, B. Cui, Z. Huang, W. Wang, X. Wu, and X. Zhou, 'Joint modeling of users' interests and mobility patterns for point-ofinterest recommendation,' in ACMMultimedia , 2015, pp. 819-822."
+        },
+        {
+          "title": "Sparsity, scalability, and distribution in recommender systems",
+          "citation": "B. M. Sarwar, Sparsity, scalability, and distribution in recommender systems . University of Minnesota, 2001."
+        },
+        {
+          "title": "Deep learning based recommender system: A survey and new perspectives",
+          "citation": "S. Zhang, L. Yao, A. Sun, and Y. Tay, 'Deep learning based recommender system: A survey and new perspectives,' ACM Computing Surveys (CSUR) , vol. 52, no. 1, pp. 1-38, 2019."
+        },
+        {
+          "title": "Self-supervised learning: Generative or contrastive",
+          "citation": "X. Liu, F. Zhang, Z. Hou, L. Mian, Z. Wang, J. Zhang, and J. Tang, 'Self-supervised learning: Generative or contrastive,' IEEE TKDE , 2021."
+        },
+        {
+          "title": "Momentum contrast for unsupervised visual representation learning",
+          "citation": "K. He, H. Fan, Y. Wu, S. Xie, and R. Girshick, 'Momentum contrast for unsupervised visual representation learning,' in CVPR , 2020, pp. 9729-9738."
+        },
+        {
+          "title": "Bootstrap your own latent: A new approach to selfsupervised learning",
+          "citation": "J.-B. Grill, F. Strub, F. Altch´ e, C. Tallec, P. H. Richemond, E. Buchatskaya, C. Doersch, B. A. Pires, Z. D. Guo, M. G. Azar et al. , 'Bootstrap your own latent: A new approach to selfsupervised learning,' arXiv preprint arXiv:2006.07733 , 2020."
+        },
+        {
+          "title": "A simple framework for contrastive learning of visual representations",
+          "citation": "T. Chen, S. Kornblith, M. Norouzi, and G. Hinton, 'A simple framework for contrastive learning of visual representations,' in ICML . PMLR, 2020, pp. 1597-1607."
+        },
+        {
+          "title": "Albert: A lite bert for self-supervised learning of language representations",
+          "citation": "Z. Lan, M. Chen, S. Goodman, K. Gimpel, P. Sharma, and R. Soricut, 'Albert: A lite bert for self-supervised learning of language representations,' arXiv preprint arXiv:1909.11942 , 2019."
+        },
+        {
+          "title": "Bert: Pretraining of deep bidirectional transformers for language understanding",
+          "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, 'Bert: Pretraining of deep bidirectional transformers for language understanding,' arXiv preprint arXiv:1810.04805 , 2018."
+        },
+        {
+          "title": "Representation learning with contrastive predictive coding",
+          "citation": "A. v. d. Oord, Y. Li, and O. Vinyals, 'Representation learning with contrastive predictive coding,' arXiv preprint arXiv:1807.03748 , 2018."
+        },
+        {
+          "title": "Gcc: Graph contrastive coding for graph neural network pre-training",
+          "citation": "J. Qiu, Q. Chen, Y. Dong, J. Zhang, H. Yang, M. Ding, K. Wang, and J. Tang, 'Gcc: Graph contrastive coding for graph neural network pre-training,' in KDD , 2020, pp. 1150-1160."
+        },
+        {
+          "title": "Deep graph infomax",
+          "citation": "P. Velickovic, W. Fedus, W. L. Hamilton, P. Li` o, Y. Bengio, and R. D. Hjelm, 'Deep graph infomax.' in ICLR (Poster) , 2019."
+        },
+        {
+          "title": "Collaborative denoising auto-encoders for top-n recommender systems",
+          "citation": "Y. Wu, C. DuBois, A. X. Zheng, and M. Ester, 'Collaborative denoising auto-encoders for top-n recommender systems,' in WSDM , 2016, pp. 153-162."
+        },
+        {
+          "title": "Bine: Bipartite network embedding",
+          "citation": "M. Gao, L. Chen, X. He, and A. Zhou, 'Bine: Bipartite network embedding,' in SIGIR , 2018, pp. 715-724."
+        },
+        {
+          "title": "Collaborative user network embedding for social recommender systems",
+          "citation": "C. Zhang, L. Yu, Y. Wang, C. Shah, and X. Zhang, 'Collaborative user network embedding for social recommender systems,' in ICDM . SIAM, 2017, pp. 381-389."
+        },
+        {
+          "title": "Generative adversarial nets",
+          "citation": "I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. WardeFarley, S. Ozair, A. Courville, and Y. Bengio, 'Generative adversarial nets,' in NeurIPS , 2014, pp. 2672-2680."
+        },
+        {
+          "title": "Enhancing collaborative filtering with generative augmentation",
+          "citation": "Q. Wang, H. Yin, H. Wang, Q. V. H. Nguyen, Z. Huang, and L. Cui, 'Enhancing collaborative filtering with generative augmentation,' in KDD , 2019, pp. 548-556."
+        },
+        {
+          "title": "Enhancing social recommendation with adversarial graph convolutional networks",
+          "citation": "J. Yu, H. Yin, J. Li, M. Gao, Z. Huang, and L. Cui, 'Enhancing social recommendation with adversarial graph convolutional networks,' IEEE TKDE , 2022."
+        },
+        {
+          "title": "Bert: Pretraining of deep bidirectional transformers for language understanding",
+          "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, 'Bert: Pretraining of deep bidirectional transformers for language understanding,' arXiv preprint arXiv:1810.04805 , 2018."
+        },
+        {
+          "title": "Bert4rec: Sequential recommendation with bidirectional encoder representations from transformer",
+          "citation": "F. Sun, J. Liu, J. Wu, C. Pei, X. Lin, W. Ou, and P. Jiang, 'Bert4rec: Sequential recommendation with bidirectional encoder representations from transformer,' in KDD , 2019, pp. 1441-1450."
+        },
+        {
+          "title": "Bert4sessrec: Content-based video relevance prediction with bidirectional encoder representations from transformer",
+          "citation": "X. Chen, D. Liu, C. Lei, R. Li, Z.-J. Zha, and Z. Xiong, 'Bert4sessrec: Content-based video relevance prediction with bidirectional encoder representations from transformer,' in ACM Multimedia , 2019, pp. 2597-2601."
+        },
+        {
+          "title": "S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization",
+          "citation": "K. Zhou, H. Wang, W. X. Zhao, Y. Zhu, S. Wang, F. Zhang, Z. Wang, and J.-R. Wen, 'S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization,' in CIKM , 2020, pp. 1893-1902."
+        },
+        {
+          "title": "Bootstrap your own latent: A new approach to selfsupervised learning",
+          "citation": "J.-B. Grill, F. Strub, F. Altch´ e, C. Tallec, P. H. Richemond, E. Buchatskaya, C. Doersch, B. A. Pires, Z. D. Guo, M. G. Azar et al. , 'Bootstrap your own latent: A new approach to selfsupervised learning,' arXiv preprint arXiv:2006.07733 , 2020."
+        },
+        {
+          "title": "Self-supervised pretraining of visual features in the wild",
+          "citation": "P. Goyal, M. Caron, B. Lefaudeux, M. Xu, P. Wang, V. Pai, M. Singh, V. Liptchinsky, I. Misra, A. Joulin et al. , 'Self-"
+        },
+        {
+          "title": "A survey on contrastive self-supervised learning",
+          "citation": "A. Jaiswal, A. R. Babu, M. Z. Zadeh, D. Banerjee, and F. Makedon, 'A survey on contrastive self-supervised learning,' Technologies , vol. 9, no. 1, p. 2, 2021."
+        },
+        {
+          "title": "Selfsupervised hypergraph convolutional networks for sessionbased recommendation",
+          "citation": "X. Xia, H. Yin, J. Yu, Q. Wang, L. Cui, and X. Zhang, 'Selfsupervised hypergraph convolutional networks for sessionbased recommendation,' in AAAI , 2021, pp. 4503-4511."
+        },
+        {
+          "title": "Self-supervised multi-channel hypergraph convolutional network for social recommendation",
+          "citation": "J. Yu, H. Yin, J. Li, Q. Wang, N. Q. V. Hung, and X. Zhang, 'Selfsupervised multi-channel hypergraph convolutional network for social recommendation,' in WWW , 2021, pp. 413-424."
+        },
+        {
+          "title": "Self-supervised graph learning for recommendation",
+          "citation": "J. Wu, X. Wang, F. Feng, X. He, L. Chen, J. Lian, and X. Xie, 'Selfsupervised graph learning for recommendation,' in SIGIR , 2021, pp. 726-735."
+        },
+        {
+          "title": "Bootstrapping user and item representations for one-class collaborative filtering",
+          "citation": "D. Lee, S. Kang, H. Ju, C. Park, and H. Yu, 'Bootstrapping user and item representations for one-class collaborative filtering,' arXiv preprint arXiv:2105.06323 , 2021."
+        },
+        {
+          "title": "Self-supervised reinforcement learning for recommender systems",
+          "citation": "X. Xin, A. Karatzoglou, I. Arapakis, and J. M. Jose, 'Selfsupervised reinforcement learning for recommender systems,' in SIGIR , 2020, pp. 931-940."
+        },
+        {
+          "title": "Self-supervised visual feature learning with deep neural networks: A survey",
+          "citation": "L. Jing and Y. Tian, 'Self-supervised visual feature learning with deep neural networks: A survey,' IEEE TPAMI , 2020."
+        },
+        {
+          "title": "Self-supervised learning: Generative or contrastive",
+          "citation": "X. Liu, F. Zhang, Z. Hou, L. Mian, Z. Wang, J. Zhang, and J. Tang, 'Self-supervised learning: Generative or contrastive,' IEEE TKDE , 2021."
+        },
+        {
+          "title": "Self-supervised on graphs: Contrastive, generative, or predictive",
+          "citation": "L. Wu, H. Lin, Z. Gao, C. Tan, S. Li et al. , 'Self-supervised on graphs: Contrastive, generative, or predictive,' arXiv preprint arXiv:2105.07342 , 2021."
+        },
+        {
+          "title": "Graph self-supervised learning: A survey",
+          "citation": "Y. Liu, S. Pan, M. Jin, C. Zhou, F. Xia, and P. S. Yu, 'Graph selfsupervised learning: A survey,' arXiv preprint arXiv:2103.00111 , 2021."
+        },
+        {
+          "title": "Self-supervised learning of graph neural networks: A unified review",
+          "citation": "Y. Xie, Z. Xu, J. Zhang, Z. Wang, and S. Ji, 'Self-supervised learning of graph neural networks: A unified review,' arXiv preprint arXiv:2102.10757 , 2021."
+        },
+        {
+          "title": "Challenging the long tail recommendation",
+          "citation": "H. Yin, B. Cui, J. Li, J. Yao, and C. Chen, 'Challenging the long tail recommendation,' VLDB , vol. 5, no. 9, pp. 896-907, 2012."
+        },
+        {
+          "title": "Bias and debias in recommender system: A survey and future directions",
+          "citation": "J. Chen, H. Dong, X. Wang, F. Feng, M. Wang, and X. He, 'Bias and debias in recommender system: A survey and future directions,' arXiv preprint arXiv:2010.03240 , 2020."
+        },
+        {
+          "title": "Deep neural networks for youtube recommendations",
+          "citation": "P. Covington, J. Adams, and E. Sargin, 'Deep neural networks for youtube recommendations,' in RecSys , 2016, pp. 191-198."
+        },
+        {
+          "title": "Deep learning based recommender system: A survey and new perspectives",
+          "citation": "S. Zhang, L. Yao, A. Sun, and Y. Tay, 'Deep learning based recommender system: A survey and new perspectives,' ACM Computing Surveys (CSUR) , vol. 52, no. 1, pp. 1-38, 2019."
+        },
+        {
+          "title": "A survey on neural recommendation: From collaborative filtering to content and context enriched recommendation",
+          "citation": "L. Wu, X. He, X. Wang, K. Zhang, and M. Wang, 'A survey on neural recommendation: From collaborative filtering to content and context enriched recommendation,' arXiv preprint arXiv:2104.13030 , 2021."
+        },
+        {
+          "title": "Recommender systems based on generative adversarial networks: A problem-driven perspective",
+          "citation": "M. Gao, J. Zhang, J. Yu, J. Li, J. Wen, and Q. Xiong, 'Recommender systems based on generative adversarial networks: A problem-driven perspective,' Information Sciences , vol. 546, pp. 1166-1185, 2021."
+        },
+        {
+          "title": "A survey on adversarial recommender systems: from attack/defense strategies to generative adversarial networks",
+          "citation": "Y. Deldjoo, T. D. Noia, and F. A. Merra, 'A survey on adversarial recommender systems: from attack/defense strategies to generative adversarial networks,' ACM Computing Surveys (CSUR) , vol. 54, no. 2, pp. 1-38, 2021."
+        },
+        {
+          "title": "Self-supervised on graphs: Contrastive, generative, or predictive",
+          "citation": "L. Wu, H. Lin, Z. Gao, C. Tan, S. Li et al. , 'Self-supervised on graphs: Contrastive, generative, or predictive,' arXiv preprint arXiv:2105.07342 , 2021."
+        },
+        {
+          "title": "Graph self-supervised learning: A survey",
+          "citation": "Y. Liu, S. Pan, M. Jin, C. Zhou, F. Xia, and P. S. Yu, 'Graph selfsupervised learning: A survey,' arXiv preprint arXiv:2103.00111 , 2021."
+        },
+        {
+          "title": "A survey of pretraining on graphs: Taxonomy, methods, and applications",
+          "citation": "J. Xia, Y. Zhu, Y. Du, and S. Z. Li, 'A survey of pretraining on graphs: Taxonomy, methods, and applications,' arXiv preprint arXiv:2202.07893 , 2022."
+        },
+        {
+          "title": "Knowledge transfer via pre-training for recommendation: A review and prospect",
+          "citation": "Z. Zeng, C. Xiao, Y. Yao, R. Xie, Z. Liu, F. Lin, L. Lin, and M. Sun, 'Knowledge transfer via pre-training for recommendation: A review and prospect,' Frontiers in big Data , vol. 4, 2021."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "DEFINITION AND TAXONOMY",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Preliminaries",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Definition and Formulation",
+          "citations": [
+            {
+              "title": "Knowledge transfer via pre-training for recommendation: A review and prospect",
+              "citation": "Z. Zeng, C. Xiao, Y. Yao, R. Xie, Z. Liu, F. Lin, L. Lin, and M. Sun, 'Knowledge transfer via pre-training for recommendation: A review and prospect,' Frontiers in big Data , vol. 4, 2021."
+            },
+            {
+              "title": "Graph neural pre-training for enhancing recommendations using side information",
+              "citation": "Z. Meng, S. Liu, C. Macdonald, and I. Ounis, 'Graph neural pre-training for enhancing recommendations using side information,' arXiv preprint arXiv:2107.03936 , 2021."
+            },
+            {
+              "title": "Transformers with multi-modal features and post-fusion context for e-commerce session-based recommendation",
+              "citation": "G. d. S. P. Moreira, S. Rabhi, R. Ak, M. Y. Kabir, and E. Oldridge, 'Transformers with multi-modal features and post-fusion context for e-commerce session-based recommendation,' arXiv preprint arXiv:2107.05124 , 2021."
+            },
+            {
+              "title": "A survey on contrastive self-supervised learning",
+              "citation": "A. Jaiswal, A. R. Babu, M. Z. Zadeh, D. Banerjee, and F. Makedon, 'A survey on contrastive self-supervised learning,' Technologies , vol. 9, no. 1, p. 2, 2021."
+            },
+            {
+              "title": "Groupim: A mutual information maximization framework for neural group recommendation",
+              "citation": "A. Sankar, Y. Wu, Y. Wu, W. Zhang, H. Yang, and H. Sundaram, 'Groupim: A mutual information maximization framework for neural group recommendation,' arXiv preprint arXiv:2006.03736 , 2020."
+            },
+            {
+              "title": "Contrastive learning for cold-start recommendation",
+              "citation": "Y. Wei, X. Wang, Q. Li, L. Nie, Y. Li, X. Li, and T.-S. Chua, 'Contrastive learning for cold-start recommendation,' in ACM Multimedia , 2021, pp. 5382-5390."
+            },
+            {
+              "title": "The world is binary: Contrastive learning for denoising next basket recommendation",
+              "citation": "Y. Qin, P. Wang, and C. Li, 'The world is binary: Contrastive learning for denoising next basket recommendation,' in SIGIR , 2021, pp. 859-868."
+            },
+            {
+              "title": "Contrastive learning for debiased candidate generation in large-scale recommender systems",
+              "citation": "C. Zhou, J. Ma, J. Zhang, J. Zhou, and H. Yang, 'Contrastive learning for debiased candidate generation in large-scale recommender systems,' in KDD , 2021, pp. 3985-3995."
+            },
+            {
+              "title": "A comprehensive survey on graph neural networks",
+              "citation": "Z. Wu, S. Pan, F. Chen, G. Long, C. Zhang, and S. Y. Philip, 'A comprehensive survey on graph neural networks,' IEEE TNNLS , 2020."
+            },
+            {
+              "title": "Attention is all you need",
+              "citation": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, 'Attention is all you need,' in NeurIPS , 2017, pp. 5998-6008."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.3",
+          "sec_title": "Taxonomy",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "2.3.1",
+              "sec_title": "Contrastive Methods",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.3.2",
+              "sec_title": "Generative Methods",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.3.3",
+              "sec_title": "Predictive Methods",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.3.4",
+              "sec_title": "Hybrid Methods",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.4",
+          "sec_title": "Typical Training Schemes",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "2.4.1",
+              "sec_title": "Joint Learning (JL)",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.4.2",
+              "sec_title": "Pre-training and Fine-tuning (PF)",
+              "citations": [
+                {
+                  "title": "Self-supervised on graphs: Contrastive, generative, or predictive",
+                  "citation": "L. Wu, H. Lin, Z. Gao, C. Tan, S. Li et al. , 'Self-supervised on graphs: Contrastive, generative, or predictive,' arXiv preprint arXiv:2105.07342 , 2021."
+                },
+                {
+                  "title": "Self-supervised learning of graph neural networks: A unified review",
+                  "citation": "Y. Xie, Z. Xu, J. Zhang, Z. Wang, and S. Ji, 'Self-supervised learning of graph neural networks: A unified review,' arXiv preprint arXiv:2102.10757 , 2021."
+                },
+                {
+                  "title": "Pretrain, prompt, and predict: A systematic survey of prompting methods in natural language processing",
+                  "citation": "P. Liu, W. Yuan, J. Fu, Z. Jiang, H. Hayashi, and G. Neubig, 'Pretrain, prompt, and predict: A systematic survey of prompting methods in natural language processing,' ACM Computing Surveys , vol. 55, no. 9, pp. 1-35, 2023."
+                },
+                {
+                  "title": "Towards universal sequence representation learning for recommender systems",
+                  "citation": "Y. Hou, S. Mu, W. X. Zhao, Y. Li, B. Ding, and J.-R. Wen, 'Towards universal sequence representation learning for recommender systems,' in KDD , 2022, pp. 585-593."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.4.3",
+              "sec_title": "Integrated Learning (IL)",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "DATA AUGMENTATION",
+      "citations": [
+        {
+          "title": "Data augmentation for deep graph learning: A survey",
+          "citation": "K. Ding, Z. Xu, H. Tong, and H. Liu, 'Data augmentation for deep graph learning: A survey,' arXiv preprint arXiv:2202.08235 , 2022."
+        },
+        {
+          "title": "Data augmentation approaches in natural language processing: A survey",
+          "citation": "B. Li, Y. Hou, and W. Che, 'Data augmentation approaches in natural language processing: A survey,' arXiv preprint arXiv:2110.01852 , 2021."
+        },
+        {
+          "title": "What makes for good views for contrastive learning?",
+          "citation": "Y. Tian, C. Sun, B. Poole, D. Krishnan, C. Schmid, and P. Isola, 'What makes for good views for contrastive learning?' NeurIPS , vol. 33, pp. 6827-6839, 2020."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Sequence-Based Augmentation",
+          "citations": [
+            {
+              "title": "Bert: Pretraining of deep bidirectional transformers for language understanding",
+              "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, 'Bert: Pretraining of deep bidirectional transformers for language understanding,' arXiv preprint arXiv:1810.04805 , 2018."
+            },
+            {
+              "title": "Learning transferable user representations with sequential behaviors via contrastive pre-training",
+              "citation": "M. Cheng, F. Yuan, Q. Liu, X. Xin, and E. Chen, 'Learning transferable user representations with sequential behaviors via contrastive pre-training,' in ICDM . IEEE, 2021, pp. 51-60."
+            },
+            {
+              "title": "S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization",
+              "citation": "K. Zhou, H. Wang, W. X. Zhao, Y. Zhu, S. Wang, F. Zhang, Z. Wang, and J.-R. Wen, 'S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization,' in CIKM , 2020, pp. 1893-1902."
+            },
+            {
+              "title": "Contrastive learning for sequential recommendation",
+              "citation": "X. Xie, F. Sun, Z. Liu, S. Wu, J. Gao, B. Ding, and B. Cui, 'Contrastive learning for sequential recommendation,' ICDE , 2022."
+            },
+            {
+              "title": "Contrastive learning for sequential recommendation",
+              "citation": "X. Xie, F. Sun, Z. Liu, S. Wu, J. Gao, B. Ding, and B. Cui, 'Contrastive learning for sequential recommendation,' ICDE , 2022."
+            },
+            {
+              "title": "S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization",
+              "citation": "K. Zhou, H. Wang, W. X. Zhao, Y. Zhu, S. Wang, F. Zhang, Z. Wang, and J.-R. Wen, 'S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization,' in CIKM , 2020, pp. 1893-1902."
+            },
+            {
+              "title": "Hyperbolic hypergraphs for sequential recommendation",
+              "citation": "Y. Li, H. Chen, X. Sun, Z. Sun, L. Li, L. Cui, P. S. Yu, and G. Xu, 'Hyperbolic hypergraphs for sequential recommendation,' in CIKM , 2021, pp. 988-997."
+            },
+            {
+              "title": "Learning transferable user representations with sequential behaviors via contrastive pre-training",
+              "citation": "M. Cheng, F. Yuan, Q. Liu, X. Xin, and E. Chen, 'Learning transferable user representations with sequential behaviors via contrastive pre-training,' in ICDM . IEEE, 2021, pp. 51-60."
+            },
+            {
+              "title": "Contrastive learning for sequential recommendation",
+              "citation": "X. Xie, F. Sun, Z. Liu, S. Wu, J. Gao, B. Ding, and B. Cui, 'Contrastive learning for sequential recommendation,' ICDE , 2022."
+            },
+            {
+              "title": "Learning transferable user representations with sequential behaviors via contrastive pre-training",
+              "citation": "M. Cheng, F. Yuan, Q. Liu, X. Xin, and E. Chen, 'Learning transferable user representations with sequential behaviors via contrastive pre-training,' in ICDM . IEEE, 2021, pp. 51-60."
+            },
+            {
+              "title": "Contrastive self-supervised sequential recommendation with robust augmentation",
+              "citation": "Z. Liu, Y. Chen, J. Li, P. S. Yu, J. McAuley, and C. Xiong, 'Contrastive self-supervised sequential recommendation with robust augmentation,' arXiv preprint arXiv:2108.06479 , 2021."
+            },
+            {
+              "title": "Contrastive self-supervised sequential recommendation with robust augmentation",
+              "citation": "Z. Liu, Y. Chen, J. Li, P. S. Yu, J. McAuley, and C. Xiong, 'Contrastive self-supervised sequential recommendation with robust augmentation,' arXiv preprint arXiv:2108.06479 , 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.1.1",
+              "sec_title": "Item Masking .",
+              "citations": [
+                {
+                  "title": "Bert: Pretraining of deep bidirectional transformers for language understanding,",
+                  "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, 'Bert: Pretraining of deep bidirectional transformers for language understanding,' arXiv preprint arXiv:1810.04805 , 2018."
+                },
+                {
+                  "title": "What makes for good views for contrastive learning?",
+                  "citation": "Y. Tian, C. Sun, B. Poole, D. Krishnan, C. Schmid, and P. Isola, 'What makes for good views for contrastive learning?' NeurIPS , vol. 33, pp. 6827-6839, 2020."
+                },
+                {
+                  "title": "S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization,",
+                  "citation": "K. Zhou, H. Wang, W. X. Zhao, Y. Zhu, S. Wang, F. Zhang, Z. Wang, and J.-R. Wen, 'S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization,' in CIKM , 2020, pp. 1893-1902."
+                },
+                {
+                  "title": "Learning transferable user representations with sequential behaviors via contrastive pre-training,",
+                  "citation": "M. Cheng, F. Yuan, Q. Liu, X. Xin, and E. Chen, 'Learning transferable user representations with sequential behaviors via contrastive pre-training,' in ICDM . IEEE, 2021, pp. 51-60."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.2",
+              "sec_title": "Item Cropping .",
+              "citations": [
+                {
+                  "title": "Learning transferable user representations with sequential behaviors via contrastive pre-training,",
+                  "citation": "M. Cheng, F. Yuan, Q. Liu, X. Xin, and E. Chen, 'Learning transferable user representations with sequential behaviors via contrastive pre-training,' in ICDM . IEEE, 2021, pp. 51-60."
+                },
+                {
+                  "title": "S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization,",
+                  "citation": "K. Zhou, H. Wang, W. X. Zhao, Y. Zhu, S. Wang, F. Zhang, Z. Wang, and J.-R. Wen, 'S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization,' in CIKM , 2020, pp. 1893-1902."
+                },
+                {
+                  "title": "Contrastive learning for sequential recommendation,",
+                  "citation": "X. Xie, F. Sun, Z. Liu, S. Wu, J. Gao, B. Ding, and B. Cui, 'Contrastive learning for sequential recommendation,' ICDE , 2022."
+                },
+                {
+                  "title": "What makes for good views for contrastive learning?",
+                  "citation": "Y. Tian, C. Sun, B. Poole, D. Krishnan, C. Schmid, and P. Isola, 'What makes for good views for contrastive learning?' NeurIPS , vol. 33, pp. 6827-6839, 2020."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.3",
+              "sec_title": "Item Reordering .",
+              "citations": [
+                {
+                  "title": "Learning transferable user representations with sequential behaviors via contrastive pre-training,",
+                  "citation": "M. Cheng, F. Yuan, Q. Liu, X. Xin, and E. Chen, 'Learning transferable user representations with sequential behaviors via contrastive pre-training,' in ICDM . IEEE, 2021, pp. 51-60."
+                },
+                {
+                  "title": "What makes for good views for contrastive learning?",
+                  "citation": "Y. Tian, C. Sun, B. Poole, D. Krishnan, C. Schmid, and P. Isola, 'What makes for good views for contrastive learning?' NeurIPS , vol. 33, pp. 6827-6839, 2020."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.4",
+              "sec_title": "Item Substitution .",
+              "citations": [
+                {
+                  "title": "Hyperbolic hypergraphs for sequential recommendation,",
+                  "citation": "Y. Li, H. Chen, X. Sun, Z. Sun, L. Li, L. Cui, P. S. Yu, and G. Xu, 'Hyperbolic hypergraphs for sequential recommendation,' in CIKM , 2021, pp. 988-997."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.5",
+              "sec_title": "Item Insertion .",
+              "citations": [
+                {
+                  "title": "Hyperbolic hypergraphs for sequential recommendation,",
+                  "citation": "Y. Li, H. Chen, X. Sun, Z. Sun, L. Li, L. Cui, P. S. Yu, and G. Xu, 'Hyperbolic hypergraphs for sequential recommendation,' in CIKM , 2021, pp. 988-997."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Graph-Based Augmentation",
+          "citations": [
+            {
+              "title": "Bootstrapping user and item representations for one-class collaborative filtering",
+              "citation": "D. Lee, S. Kang, H. Ju, C. Park, and H. Yu, 'Bootstrapping user and item representations for one-class collaborative filtering,' arXiv preprint arXiv:2105.06323 , 2021."
+            },
+            {
+              "title": "Doublescale self-supervised hypergraph learning for group recommendation",
+              "citation": "J. Zhang, M. Gao, J. Yu, L. Guo, J. Li, and H. Yin, 'Doublescale self-supervised hypergraph learning for group recommendation,' in CIKM , 2021."
+            },
+            {
+              "title": "Self-supervised graph learning for recommendation",
+              "citation": "J. Wu, X. Wang, F. Feng, X. He, L. Chen, J. Lian, and X. Xie, 'Selfsupervised graph learning for recommendation,' in SIGIR , 2021, pp. 726-735."
+            },
+            {
+              "title": "Curriculum pre-training heterogeneous subgraph transformer for top-n recommendation",
+              "citation": "H. Wang, K. Zhou, W. X. Zhao, J. Wang, and J.-R. Wen, 'Curriculum pre-training heterogeneous subgraph transformer for topn recommendation,' arXiv preprint arXiv:2106.06722 , 2021."
+            },
+            {
+              "title": "Socially-aware self-supervised tri-training for recommendation",
+              "citation": "J. Yu, H. Yin, M. Gao, X. Xia, X. Zhang, and N. Q. V. Hung, 'Socially-aware self-supervised tri-training for recommendation,' in KDD . ACM, 2021, pp. 2084-2092."
+            },
+            {
+              "title": "Selfcf: A simple framework for self-supervised collaborative filtering",
+              "citation": "X. Zhou, A. Sun, Y. Liu, J. Zhang, and C. Miao, 'Selfcf: A simple framework for self-supervised collaborative filtering,' arXiv preprint arXiv:2107.03019 , 2021."
+            },
+            {
+              "title": "A multi-strategy based pre-training method for cold-start recommendation",
+              "citation": "B. Hao, H. Yin, J. Zhang, C. Li, and H. Chen, 'A multi-strategy based pre-training method for cold-start recommendation,' arXiv preprint arXiv:2112.02275 , 2021."
+            },
+            {
+              "title": "Self-supervised graph learning for recommendation",
+              "citation": "J. Wu, X. Wang, F. Feng, X. He, L. Chen, J. Lian, and X. Xie, 'Selfsupervised graph learning for recommendation,' in SIGIR , 2021, pp. 726-735."
+            },
+            {
+              "title": "Curriculum pre-training heterogeneous subgraph transformer for top-n recommendation",
+              "citation": "H. Wang, K. Zhou, W. X. Zhao, J. Wang, and J.-R. Wen, 'Curriculum pre-training heterogeneous subgraph transformer for topn recommendation,' arXiv preprint arXiv:2106.06722 , 2021."
+            },
+            {
+              "title": "Enhanced graph learning for collaborative filtering via mutual information maximization",
+              "citation": "Y. Yang, L. Wu, R. Hong, K. Zhang, and M. Wang, 'Enhanced graph learning for collaborative filtering via mutual information maximization,' in SIGIR , 2021, pp. 71-80."
+            },
+            {
+              "title": "Hyper metapath contrastive learning for multi-behavior recommendation",
+              "citation": "H. Yang, H. Chen, L. Li, S. Y. Philip, and G. Xu, 'Hyper metapath contrastive learning for multi-behavior recommendation,' in ICDM . IEEE, 2021, pp. 787-796."
+            },
+            {
+              "title": "Curriculum pre-training heterogeneous subgraph transformer for top-n recommendation",
+              "citation": "H. Wang, K. Zhou, W. X. Zhao, J. Wang, and J.-R. Wen, 'Curriculum pre-training heterogeneous subgraph transformer for topn recommendation,' arXiv preprint arXiv:2106.06722 , 2021."
+            },
+            {
+              "title": "Self-supervised multi-channel hypergraph convolutional network for social recommendation",
+              "citation": "J. Yu, H. Yin, J. Li, Q. Wang, N. Q. V. Hung, and X. Zhang, 'Selfsupervised multi-channel hypergraph convolutional network for social recommendation,' in WWW , 2021, pp. 413-424."
+            },
+            {
+              "title": "Bipartite graph embedding via mutual information maximization",
+              "citation": "J. Cao, X. Lin, S. Guo, L. Liu, T. Liu, and B. Wang, 'Bipartite graph embedding via mutual information maximization,' in WSDM , 2021, pp. 635-643."
+            },
+            {
+              "title": "Contrastive cross-domain recommendation in matching",
+              "citation": "R. Xie, Q. Liu, L. Wang, S. Liu, B. Zhang, and L. Lin, 'Contrastive cross-domain recommendation in matching,' arXiv preprint arXiv:2112.00999 , 2021."
+            },
+            {
+              "title": "Pre-training graph neural network for cross domain recommendation",
+              "citation": "C. Wang, Y. Liang, Z. Liu, T. Zhang, and P. S. Yu, 'Pre-training graph neural network for cross domain recommendation,' arXiv preprint arXiv:2111.08268 , 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.2.1",
+              "sec_title": "Edge/Node Dropout .",
+              "citations": [
+                {
+                  "title": "Selfsupervised graph learning for recommendation,",
+                  "citation": "J. Wu, X. Wang, F. Feng, X. He, L. Chen, J. Lian, and X. Xie, 'Selfsupervised graph learning for recommendation,' in SIGIR , 2021, pp. 726-735."
+                },
+                {
+                  "title": "Contrastive self-supervised sequential recommendation with robust augmentation,",
+                  "citation": "Z. Liu, Y. Chen, J. Li, P. S. Yu, J. McAuley, and C. Xiong, 'Contrastive self-supervised sequential recommendation with robust augmentation,' arXiv preprint arXiv:2108.06479 , 2021."
+                },
+                {
+                  "title": "Selfsupervised multi-channel hypergraph convolutional network for social recommendation,",
+                  "citation": "J. Yu, H. Yin, J. Li, Q. Wang, N. Q. V. Hung, and X. Zhang, 'Selfsupervised multi-channel hypergraph convolutional network for social recommendation,' in WWW , 2021, pp. 413-424."
+                },
+                {
+                  "title": "Doublescale self-supervised hypergraph learning for group recommendation,",
+                  "citation": "J. Zhang, M. Gao, J. Yu, L. Guo, J. Li, and H. Yin, 'Doublescale self-supervised hypergraph learning for group recommendation,' in CIKM , 2021."
+                },
+                {
+                  "title": "Curriculum pre-training heterogeneous subgraph transformer for topn recommendation,",
+                  "citation": "H. Wang, K. Zhou, W. X. Zhao, J. Wang, and J.-R. Wen, 'Curriculum pre-training heterogeneous subgraph transformer for topn recommendation,' arXiv preprint arXiv:2106.06722 , 2021."
+                },
+                {
+                  "title": "Socially-aware self-supervised tri-training for recommendation,",
+                  "citation": "J. Yu, H. Yin, M. Gao, X. Xia, X. Zhang, and N. Q. V. Hung, 'Socially-aware self-supervised tri-training for recommendation,' in KDD . ACM, 2021, pp. 2084-2092."
+                },
+                {
+                  "title": "Selfcf: A simple framework for self-supervised collaborative filtering,",
+                  "citation": "X. Zhou, A. Sun, Y. Liu, J. Zhang, and C. Miao, 'Selfcf: A simple framework for self-supervised collaborative filtering,' arXiv preprint arXiv:2107.03019 , 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.2",
+              "sec_title": "Graph Diffusion .",
+              "citations": [
+                {
+                  "title": "A multi-strategy based pre-training method for cold-start recommendation,",
+                  "citation": "B. Hao, H. Yin, J. Zhang, C. Li, and H. Chen, 'A multi-strategy based pre-training method for cold-start recommendation,' arXiv preprint arXiv:2112.02275 , 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.3",
+              "sec_title": "Subgraph Sampling .",
+              "citations": [
+                {
+                  "title": "Enhanced graph learning for collaborative filtering via mutual information maximization,",
+                  "citation": "Y. Yang, L. Wu, R. Hong, K. Zhang, and M. Wang, 'Enhanced graph learning for collaborative filtering via mutual information maximization,' in SIGIR , 2021, pp. 71-80."
+                },
+                {
+                  "title": "Doublescale self-supervised hypergraph learning for group recommendation,",
+                  "citation": "J. Zhang, M. Gao, J. Yu, L. Guo, J. Li, and H. Yin, 'Doublescale self-supervised hypergraph learning for group recommendation,' in CIKM , 2021."
+                },
+                {
+                  "title": "Selfsupervised hypergraph convolutional networks for sessionbased recommendation,",
+                  "citation": "X. Xia, H. Yin, J. Yu, Q. Wang, L. Cui, and X. Zhang, 'Selfsupervised hypergraph convolutional networks for sessionbased recommendation,' in AAAI , 2021, pp. 4503-4511."
+                },
+                {
+                  "title": "Hyper metapath contrastive learning for multi-behavior recommendation,",
+                  "citation": "H. Yang, H. Chen, L. Li, S. Y. Philip, and G. Xu, 'Hyper metapath contrastive learning for multi-behavior recommendation,' in ICDM . IEEE, 2021, pp. 787-796."
+                },
+                {
+                  "title": "Bipartite graph embedding via mutual information maximization,",
+                  "citation": "J. Cao, X. Lin, S. Guo, L. Liu, T. Liu, and B. Wang, 'Bipartite graph embedding via mutual information maximization,' in WSDM , 2021, pp. 635-643."
+                },
+                {
+                  "title": "Contrastive cross-domain recommendation in matching,",
+                  "citation": "R. Xie, Q. Liu, L. Wang, S. Liu, B. Zhang, and L. Lin, 'Contrastive cross-domain recommendation in matching,' arXiv preprint arXiv:2112.00999 , 2021."
+                },
+                {
+                  "title": "S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization,",
+                  "citation": "K. Zhou, H. Wang, W. X. Zhao, Y. Zhu, S. Wang, F. Zhang, Z. Wang, and J.-R. Wen, 'S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization,' in CIKM , 2020, pp. 1893-1902."
+                },
+                {
+                  "title": "Socially-aware self-supervised tri-training for recommendation,",
+                  "citation": "J. Yu, H. Yin, M. Gao, X. Xia, X. Zhang, and N. Q. V. Hung, 'Socially-aware self-supervised tri-training for recommendation,' in KDD . ACM, 2021, pp. 2084-2092."
+                },
+                {
+                  "title": "Pre-training graph neural network for cross domain recommendation,",
+                  "citation": "C. Wang, Y. Liang, Z. Liu, T. Zhang, and P. S. Yu, 'Pre-training graph neural network for cross domain recommendation,' arXiv preprint arXiv:2111.08268 , 2021."
+                },
+                {
+                  "title": "Self-supervised learning for large-scale item recommendations,",
+                  "citation": "T. Yao, X. Yi, D. Z. Cheng, F. Yu, T. Chen, A. Menon, L. Hong, E. H. Chi, S. Tjoa, J. Kang et al. , 'Self-supervised learning for large-scale item recommendations,' in CIKM , 2021, pp. 4321-4330."
+                },
+                {
+                  "title": "Contrastive learning for representation degeneration problem in sequential recommendation,",
+                  "citation": "R. Qiu, Z. Huang, H. Yin, and Z. Wang, 'Contrastive learning for representation degeneration problem in sequential recommendation,' in WSDM . ACM, 2022, pp. 813-823."
+                },
+                {
+                  "title": "Memory augmented multiinstance contrastive predictive coding for sequential recommendation,",
+                  "citation": "R. Qiu, Z. Huang, and H. Yin, 'Memory augmented multiinstance contrastive predictive coding for sequential recommendation,' in ICDM , 2021."
+                },
+                {
+                  "title": "A survey on contrastive self-supervised learning,",
+                  "citation": "A. Jaiswal, A. R. Babu, M. Z. Zadeh, D. Banerjee, and F. Makedon, 'A survey on contrastive self-supervised learning,' Technologies , vol. 9, no. 1, p. 2, 2021."
+                },
+                {
+                  "title": "Selfsupervised learning for sequential recommendation with model augmentation,",
+                  "citation": "Z. Liu, Y. Chen, J. Li, M. Luo, S. Y. Philip, and C. Xiong, 'Selfsupervised learning for sequential recommendation with model augmentation,' 2021."
+                },
+                {
+                  "title": "Adversarial and contrastive variational autoencoder for sequential recommendation,",
+                  "citation": "Z. Xie, C. Liu, Y. Zhang, H. Lu, D. Wang, and Y. Ding, 'Adversarial and contrastive variational autoencoder for sequential recommendation,' in WWW , 2021, pp. 449-459."
+                },
+                {
+                  "title": "Intent contrastive learning for sequential recommendation,",
+                  "citation": "Y. Chen, Z. Liu, J. Li, J. McAuley, and C. Xiong, 'Intent contrastive learning for sequential recommendation,' arXiv preprint arXiv:2202.02519 , 2022."
+                },
+                {
+                  "title": "Improving graph collaborative filtering with neighborhood-enriched contrastive learning,",
+                  "citation": "Z. Lin, C. Tian, Y. Hou, and W. X. Zhao, 'Improving graph collaborative filtering with neighborhood-enriched contrastive learning,' arXiv preprint arXiv:2202.06200 , 2022."
+                },
+                {
+                  "title": "Prototypical contrastive learning of unsupervised representations,",
+                  "citation": "J. Li, P. Zhou, C. Xiong, and S. C. Hoi, 'Prototypical contrastive learning of unsupervised representations,' arXiv preprint arXiv:2005.04966 , 2020."
+                },
+                {
+                  "title": "Mixgcf: An improved training method for graph neural network-based recommender systems,",
+                  "citation": "T. Huang, Y. Dong, M. Ding, Z. Yang, W. Feng, X. Wang, and J. Tang, 'Mixgcf: An improved training method for graph neural network-based recommender systems,' 2021."
+                },
+                {
+                  "title": "Hard negative mixing for contrastive learning,",
+                  "citation": "Y. Kalantidis, M. B. Sariyildiz, N. Pion, P. Weinzaepfel, and D. Larlus, 'Hard negative mixing for contrastive learning,' in NeurIPS , 2020."
+                },
+                {
+                  "title": "Are graph augmentations necessary? simple graph contrastive learning for recommendation,",
+                  "citation": "J. Yu, H. Yin, X. Xia, T. Chen, L. Cui, and Q. V. H. Nguyen, 'Are graph augmentations necessary? simple graph contrastive learning for recommendation,' in SIGIR , 2022, pp. 1294-1303."
+                },
+                {
+                  "title": "Self-supervised visual feature learning with deep neural networks: A survey",
+                  "citation": "L. Jing and Y. Tian, 'Self-supervised visual feature learning with deep neural networks: A survey,' IEEE TPAMI , 2020."
+                },
+                {
+                  "title": "Self-supervised on graphs: Contrastive, generative, or predictive,",
+                  "citation": "L. Wu, H. Lin, Z. Gao, C. Tan, S. Li et al. , 'Self-supervised on graphs: Contrastive, generative, or predictive,' arXiv preprint arXiv:2105.07342 , 2021."
+                },
+                {
+                  "title": "Selfsupervised multi-channel hypergraph convolutional network for social recommendation,",
+                  "citation": "J. Yu, H. Yin, J. Li, Q. Wang, N. Q. V. Hung, and X. Zhang, 'Selfsupervised multi-channel hypergraph convolutional network for social recommendation,' in WWW , 2021, pp. 413-424."
+                },
+                {
+                  "title": "Xsimgcl: Towards extremely simple graph contrastive learning for recommendation,",
+                  "citation": "J. Yu, X. Xia, T. Chen, L. Cui, N. Q. V. Hung, and H. Yin, 'Xsimgcl: Towards extremely simple graph contrastive learning for recommendation,' arXiv preprint arXiv:2209.02544 , 2022."
+                },
+                {
+                  "title": "Representation learning with contrastive predictive coding",
+                  "citation": "A. v. d. Oord, Y. Li, and O. Vinyals, 'Representation learning with contrastive predictive coding,' arXiv preprint arXiv:1807.03748 , 2018."
+                },
+                {
+                  "title": "Lightgcn: Simplifying and powering graph convolution network for recommendation",
+                  "citation": "X. He, K. Deng, X. Wang, Y. Li, Y. Zhang, and M. Wang, 'Lightgcn: Simplifying and powering graph convolution network for recommendation,' in SIGIR . ACM, 2020, pp. 639-648."
+                },
+                {
+                  "title": "Bpr: Bayesian personalized ranking from implicit feedback,",
+                  "citation": "S. Rendle, C. Freudenthaler, Z. Gantner, and L. Schmidt-Thieme, 'Bpr: Bayesian personalized ranking from implicit feedback,' in UAI . AUAI Press, 2009, pp. 452-461."
+                },
+                {
+                  "title": "Contrastive self-supervised sequential recommendation with robust augmentation,",
+                  "citation": "Z. Liu, Y. Chen, J. Li, P. S. Yu, J. McAuley, and C. Xiong, 'Contrastive self-supervised sequential recommendation with robust augmentation,' arXiv preprint arXiv:2108.06479 , 2021."
+                },
+                {
+                  "title": "Contrastive learning for recommender system,",
+                  "citation": "Z. Liu, Y. Ma, Y. Ouyang, and Z. Xiong, 'Contrastive learning for recommender system,' arXiv preprint arXiv:2101.01317 , 2021."
+                },
+                {
+                  "title": "Social influence-based group representation learning for group recommendation,",
+                  "citation": "H. Yin, Q. Wang, K. Zheng, Z. Li, J. Yang, and X. Zhou, 'Social influence-based group representation learning for group recommendation,' in ICDE . IEEE, 2019, pp. 566-577."
+                },
+                {
+                  "title": "Bipartite graph embedding via mutual information maximization,",
+                  "citation": "J. Cao, X. Lin, S. Guo, L. Liu, T. Liu, and B. Wang, 'Bipartite graph embedding via mutual information maximization,' in WSDM , 2021, pp. 635-643."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "Feature-Based Augmentation",
+          "citations": [
+            {
+              "title": "S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization",
+              "citation": "K. Zhou, H. Wang, W. X. Zhao, Y. Zhu, S. Wang, F. Zhang, Z. Wang, and J.-R. Wen, 'S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization,' in CIKM , 2020, pp. 1893-1902."
+            },
+            {
+              "title": "Selfcf: A simple framework for self-supervised collaborative filtering",
+              "citation": "X. Zhou, A. Sun, Y. Liu, J. Zhang, and C. Miao, 'Selfcf: A simple framework for self-supervised collaborative filtering,' arXiv preprint arXiv:2107.03019 , 2021."
+            },
+            {
+              "title": "Self-supervised learning for large-scale item recommendations",
+              "citation": "T. Yao, X. Yi, D. Z. Cheng, F. Yu, T. Chen, A. Menon, L. Hong, E. H. Chi, S. Tjoa, J. Kang et al. , 'Self-supervised learning for large-scale item recommendations,' in CIKM , 2021, pp. 4321-4330."
+            },
+            {
+              "title": "Contrastive learning for representation degeneration problem in sequential recommendation",
+              "citation": "R. Qiu, Z. Huang, H. Yin, and Z. Wang, 'Contrastive learning for representation degeneration problem in sequential recommendation,' in WSDM . ACM, 2022, pp. 813-823."
+            },
+            {
+              "title": "Memory augmented multiinstance contrastive predictive coding for sequential recommendation",
+              "citation": "R. Qiu, Z. Huang, and H. Yin, 'Memory augmented multiinstance contrastive predictive coding for sequential recommendation,' in ICDM , 2021."
+            },
+            {
+              "title": "Selfsupervised learning for sequential recommendation with model augmentation",
+              "citation": "Z. Liu, Y. Chen, J. Li, M. Luo, S. Y. Philip, and C. Xiong, 'Selfsupervised learning for sequential recommendation with model augmentation,' 2021."
+            },
+            {
+              "title": "Self-supervised multi-channel hypergraph convolutional network for social recommendation",
+              "citation": "J. Yu, H. Yin, J. Li, Q. Wang, N. Q. V. Hung, and X. Zhang, 'Selfsupervised multi-channel hypergraph convolutional network for social recommendation,' in WWW , 2021, pp. 413-424."
+            },
+            {
+              "title": "Selfsupervised hypergraph convolutional networks for sessionbased recommendation",
+              "citation": "X. Xia, H. Yin, J. Yu, Q. Wang, L. Cui, and X. Zhang, 'Selfsupervised hypergraph convolutional networks for sessionbased recommendation,' in AAAI , 2021, pp. 4503-4511."
+            },
+            {
+              "title": "Adversarial and contrastive variational autoencoder for sequential recommendation",
+              "citation": "Z. Xie, C. Liu, Y. Zhang, H. Lu, D. Wang, and Y. Ding, 'Adversarial and contrastive variational autoencoder for sequential recommendation,' in WWW , 2021, pp. 449-459."
+            },
+            {
+              "title": "Intent contrastive learning for sequential recommendation",
+              "citation": "Y. Chen, Z. Liu, J. Li, J. McAuley, and C. Xiong, 'Intent contrastive learning for sequential recommendation,' arXiv preprint arXiv:2202.02519 , 2022."
+            },
+            {
+              "title": "Improving graph collaborative filtering with neighborhood-enriched contrastive learning",
+              "citation": "Z. Lin, C. Tian, Y. Hou, and W. X. Zhao, 'Improving graph collaborative filtering with neighborhood-enriched contrastive learning,' arXiv preprint arXiv:2202.06200 , 2022."
+            },
+            {
+              "title": "Prototypical contrastive learning of unsupervised representations",
+              "citation": "J. Li, P. Zhou, C. Xiong, and S. C. Hoi, 'Prototypical contrastive learning of unsupervised representations,' arXiv preprint arXiv:2005.04966 , 2020."
+            },
+            {
+              "title": "Mixgcf: An improved training method for graph neural network-based recommender systems",
+              "citation": "T. Huang, Y. Dong, M. Ding, Z. Yang, W. Feng, X. Wang, and J. Tang, 'Mixgcf: An improved training method for graph neural network-based recommender systems,' 2021."
+            },
+            {
+              "title": "Selfcf: A simple framework for self-supervised collaborative filtering",
+              "citation": "X. Zhou, A. Sun, Y. Liu, J. Zhang, and C. Miao, 'Selfcf: A simple framework for self-supervised collaborative filtering,' arXiv preprint arXiv:2107.03019 , 2021."
+            },
+            {
+              "title": "Hard negative mixing for contrastive learning",
+              "citation": "Y. Kalantidis, M. B. Sariyildiz, N. Pion, P. Weinzaepfel, and D. Larlus, 'Hard negative mixing for contrastive learning,' in NeurIPS , 2020."
+            },
+            {
+              "title": "Introduction to recommender systems handbook",
+              "citation": "F. Ricci, L. Rokach, and B. Shapira, 'Introduction to recommender systems handbook,' in Recommender systems handbook . Springer, 2011, pp. 1-35."
+            },
+            {
+              "title": "Are graph augmentations necessary? simple graph contrastive learning for recommendation",
+              "citation": "J. Yu, H. Yin, X. Xia, T. Chen, L. Cui, and Q. V. H. Nguyen, 'Are graph augmentations necessary? simple graph contrastive learning for recommendation,' in SIGIR , 2022, pp. 1294-1303."
+            },
+            {
+              "title": "Xsimgcl: Towards Extremely Simple Graph Contrastive Learning for Recommendation",
+              "citation": "J. Yu, X. Xia, T. Chen, L. Cui, N. Q. V. Hung, and H. Yin, 'Xsimgcl: Towards extremely simple graph contrastive learning for recommendation,' arXiv preprint arXiv:2209.02544 , 2022."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "CONTRASTIVE METHODS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Structure-Level Contrast",
+          "citations": [
+            {
+              "title": "Self-supervised on graphs: Contrastive, generative, or predictive",
+              "citation": "L. Wu, H. Lin, Z. Gao, C. Tan, S. Li et al. , 'Self-supervised on graphs: Contrastive, generative, or predictive,' arXiv preprint arXiv:2105.07342 , 2021."
+            },
+            {
+              "title": "Graph self-supervised learning: A survey",
+              "citation": "Y. Liu, S. Pan, M. Jin, C. Zhou, F. Xia, and P. S. Yu, 'Graph selfsupervised learning: A survey,' arXiv preprint arXiv:2103.00111 , 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Local-Local Contrast",
+              "citations": [
+                {
+                  "title": "Self-supervised graph learning for recommendation",
+                  "citation": "J. Wu, X. Wang, F. Feng, X. He, L. Chen, J. Lian, and X. Xie, 'Selfsupervised graph learning for recommendation,' in SIGIR , 2021, pp. 726-735."
+                },
+                {
+                  "title": "Lightgcn: Simplifying and Powering Graph Convolution Network for Recommendation",
+                  "citation": "X. He, K. Deng, X. Wang, Y. Li, Y. Zhang, and M. Wang, 'Lightgcn: Simplifying and powering graph convolution network for recommendation,' in SIGIR . ACM, 2020, pp. 639-648."
+                },
+                {
+                  "title": "Representation learning with contrastive predictive coding",
+                  "citation": "A. v. d. Oord, Y. Li, and O. Vinyals, 'Representation learning with contrastive predictive coding,' arXiv preprint arXiv:1807.03748 , 2018."
+                },
+                {
+                  "title": "Bpr: Bayesian Personalized Ranking from Implicit Feedback",
+                  "citation": "S. Rendle, C. Freudenthaler, Z. Gantner, and L. Schmidt-Thieme, 'Bpr: Bayesian personalized ranking from implicit feedback,' in UAI . AUAI Press, 2009, pp. 452-461."
+                },
+                {
+                  "title": "Contrastive learning for recommender system",
+                  "citation": "Z. Liu, Y. Ma, Y. Ouyang, and Z. Xiong, 'Contrastive learning for recommender system,' arXiv preprint arXiv:2101.01317 , 2021."
+                },
+                {
+                  "title": "Doublescale self-supervised hypergraph learning for group recommendation",
+                  "citation": "J. Zhang, M. Gao, J. Yu, L. Guo, J. Li, and H. Yin, 'Doublescale self-supervised hypergraph learning for group recommendation,' in CIKM , 2021."
+                },
+                {
+                  "title": "Social influence-based group representation learning for group recommendation",
+                  "citation": "H. Yin, Q. Wang, K. Zheng, Z. Li, J. Yang, and X. Zhou, 'Social influence-based group representation learning for group recommendation,' in ICDE . IEEE, 2019, pp. 566-577."
+                },
+                {
+                  "title": "Knowledge graph contrastive learning for recommendation",
+                  "citation": "Y. Yang, C. Huang, L. Xia, and C. Li, 'Knowledge graph contrastive learning for recommendation,' in SIGIR , 2022, pp. 14341443."
+                },
+                {
+                  "title": "Contrastive cross-domain recommendation in matching",
+                  "citation": "R. Xie, Q. Liu, L. Wang, S. Liu, B. Zhang, and L. Lin, 'Contrastive cross-domain recommendation in matching,' arXiv preprint arXiv:2112.00999 , 2021."
+                },
+                {
+                  "title": "Contrastive learning for recommender system",
+                  "citation": "Z. Liu, Y. Ma, Y. Ouyang, and Z. Xiong, 'Contrastive learning for recommender system,' arXiv preprint arXiv:2101.01317 , 2021."
+                },
+                {
+                  "title": "Graph attention networks",
+                  "citation": "P. Velickovic, G. Cucurull, A. Casanova, A. Romero, P. Li` o, and Y. Bengio, 'Graph attention networks,' in ICLR , 2018."
+                },
+                {
+                  "title": "Pre-training graph neural network for cross domain recommendation",
+                  "citation": "C. Wang, Y. Liang, Z. Liu, T. Zhang, and P. S. Yu, 'Pre-training graph neural network for cross domain recommendation,' arXiv preprint arXiv:2111.08268 , 2021."
+                },
+                {
+                  "title": "How powerful are graph neural networks?",
+                  "citation": "K. Xu, W. Hu, J. Leskovec, and S. Jegelka, 'How powerful are graph neural networks?' in ICLR , 2019."
+                },
+                {
+                  "title": "Matrix factorization techniques for recommender systems",
+                  "citation": "Y. Koren, R. M. Bell, and C. Volinsky, 'Matrix factorization techniques for recommender systems,' IEEE Computer , vol. 42, no. 8, pp. 30-37, 2009."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.2",
+              "sec_title": "Global-Global Contrast",
+              "citations": [
+                {
+                  "title": "Contrastive learning for sequential recommendation",
+                  "citation": "X. Xie, F. Sun, Z. Liu, S. Wu, J. Gao, B. Ding, and B. Cui, 'Contrastive learning for sequential recommendation,' ICDE , 2022."
+                },
+                {
+                  "title": "Attention is all you need",
+                  "citation": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, 'Attention is all you need,' in NeurIPS , 2017, pp. 5998-6008."
+                },
+                {
+                  "title": "Hyperbolic hypergraphs for sequential recommendation",
+                  "citation": "Y. Li, H. Chen, X. Sun, Z. Sun, L. Li, L. Cui, P. S. Yu, and G. Xu, 'Hyperbolic hypergraphs for sequential recommendation,' in CIKM , 2021, pp. 988-997."
+                },
+                {
+                  "title": "Contrastive self-supervised sequential recommendation with robust augmentation",
+                  "citation": "Z. Liu, Y. Chen, J. Li, P. S. Yu, J. McAuley, and C. Xiong, 'Contrastive self-supervised sequential recommendation with robust augmentation,' arXiv preprint arXiv:2108.06479 , 2021."
+                },
+                {
+                  "title": "Sequential recommendation with multiple contrast signals",
+                  "citation": "C. Wang, W. Ma, and C. Chen, 'Sequential recommendation with multiple contrast signals,' ACM TOIS , 2022."
+                },
+                {
+                  "title": "Selfsupervised hypergraph convolutional networks for sessionbased recommendation",
+                  "citation": "X. Xia, H. Yin, J. Yu, Q. Wang, L. Cui, and X. Zhang, 'Selfsupervised hypergraph convolutional networks for sessionbased recommendation,' in AAAI , 2021, pp. 4503-4511."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.3",
+              "sec_title": "Local-Global Contrast",
+              "citations": [
+                {
+                  "title": "Enhanced graph learning for collaborative filtering via mutual information maximization",
+                  "citation": "Y. Yang, L. Wu, R. Hong, K. Zhang, and M. Wang, 'Enhanced graph learning for collaborative filtering via mutual information maximization,' in SIGIR , 2021, pp. 71-80."
+                },
+                {
+                  "title": "Bipartite graph embedding via mutual information maximization",
+                  "citation": "J. Cao, X. Lin, S. Guo, L. Liu, T. Liu, and B. Wang, 'Bipartite graph embedding via mutual information maximization,' in WSDM , 2021, pp. 635-643."
+                },
+                {
+                  "title": "Heterogeneous graph contrastive learning network for personalized micro-video recommendation",
+                  "citation": "D. Cai, S. Qian, Q. Fang, J. Hu, W. Ding, and C. Xu, 'Heterogeneous graph contrastive learning network for personalized micro-video recommendation,' IEEE Transactions on Multimedia , 2022."
+                },
+                {
+                  "title": "Deep graph infomax",
+                  "citation": "P. Velickovic, W. Fedus, W. L. Hamilton, P. Li` o, Y. Bengio, and R. D. Hjelm, 'Deep graph infomax.' in ICLR (Poster) , 2019."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.4",
+              "sec_title": "Local-Context Contrast",
+              "citations": [
+                {
+                  "title": "Prototypical contrastive learning of unsupervised representations",
+                  "citation": "J. Li, P. Zhou, C. Xiong, and S. C. Hoi, 'Prototypical contrastive learning of unsupervised representations,' arXiv preprint arXiv:2005.04966 , 2020."
+                },
+                {
+                  "title": "Improving graph collaborative filtering with neighborhood-enriched contrastive learning",
+                  "citation": "Z. Lin, C. Tian, Y. Hou, and W. X. Zhao, 'Improving graph collaborative filtering with neighborhood-enriched contrastive learning,' arXiv preprint arXiv:2202.06200 , 2022."
+                },
+                {
+                  "title": "Intent contrastive learning for sequential recommendation",
+                  "citation": "Y. Chen, Z. Liu, J. Li, J. McAuley, and C. Xiong, 'Intent contrastive learning for sequential recommendation,' arXiv preprint arXiv:2202.02519 , 2022."
+                },
+                {
+                  "title": "Self-supervised multi-channel hypergraph convolutional network for social recommendation",
+                  "citation": "J. Yu, H. Yin, J. Li, Q. Wang, N. Q. V. Hung, and X. Zhang, 'Selfsupervised multi-channel hypergraph convolutional network for social recommendation,' in WWW , 2021, pp. 413-424."
+                },
+                {
+                  "title": "Spatio-temporal recommendation in social media",
+                  "citation": "H. Yin and B. Cui, Spatio-temporal recommendation in social media . Springer, 2016."
+                },
+                {
+                  "title": "Hypergraph contrastive collaborative filtering",
+                  "citation": "L. Xia, C. Huang, Y. Xu, J. Zhao, D. Yin, and J. Huang, 'Hypergraph contrastive collaborative filtering,' in SIGIR , 2022, pp. 70-79."
+                },
+                {
+                  "title": "Social recommendation with self-supervised metagraph informax network",
+                  "citation": "X. Long, C. Huang, Y. Xu, H. Xu, P. Dai, L. Xia, and L. Bo, 'Social recommendation with self-supervised metagraph informax network,' in CIKM , 2021, pp. 1160-1169."
+                },
+                {
+                  "title": "S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization",
+                  "citation": "K. Zhou, H. Wang, W. X. Zhao, Y. Zhu, S. Wang, F. Zhang, Z. Wang, and J.-R. Wen, 'S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization,' in CIKM , 2020, pp. 1893-1902."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Feature-Level Contrast",
+          "citations": [
+            {
+              "title": "Self-supervised learning for large-scale item recommendations",
+              "citation": "T. Yao, X. Yi, D. Z. Cheng, F. Yu, T. Chen, A. Menon, L. Hong, E. H. Chi, S. Tjoa, J. Kang et al. , 'Self-supervised learning for large-scale item recommendations,' in CIKM , 2021, pp. 4321-4330."
+            },
+            {
+              "title": "Self-supervised learning for multimedia recommendation",
+              "citation": "Z. Tao, X. Liu, Y. Xia, X. Wang, L. Yang, X. Huang, and T.-S. Chua, 'Self-supervised learning for multimedia recommendation,' IEEE TMM , 2022."
+            },
+            {
+              "title": "Miss: Multi-interest self-supervised learning framework for click-through rate prediction",
+              "citation": "W. Guo, C. Zhang, Z. He, J. Qin, H. Guo, B. Chen, R. Tang, X. He, and R. Zhang, 'Miss: Multi-interest self-supervised learning framework for click-through rate prediction,' arXiv preprint arXiv:2111.15068 , 2021."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.3",
+          "sec_title": "Model-Level Contrast",
+          "citations": [
+            {
+              "title": "Contrastive learning for representation degeneration problem in sequential recommendation",
+              "citation": "R. Qiu, Z. Huang, H. Yin, and Z. Wang, 'Contrastive learning for representation degeneration problem in sequential recommendation,' in WSDM . ACM, 2022, pp. 813-823."
+            },
+            {
+              "title": "Are graph augmentations necessary? simple graph contrastive learning for recommendation",
+              "citation": "J. Yu, H. Yin, X. Xia, T. Chen, L. Cui, and Q. V. H. Nguyen, 'Are graph augmentations necessary? simple graph contrastive learning for recommendation,' in SIGIR , 2022, pp. 1294-1303."
+            },
+            {
+              "title": "Xsimgcl: Towards Extremely Simple Graph Contrastive Learning for Recommendation",
+              "citation": "J. Yu, X. Xia, T. Chen, L. Cui, N. Q. V. Hung, and H. Yin, 'Xsimgcl: Towards extremely simple graph contrastive learning for recommendation,' arXiv preprint arXiv:2209.02544 , 2022."
+            },
+            {
+              "title": "Bias and debias in recommender system: A survey and future directions",
+              "citation": "J. Chen, H. Dong, X. Wang, F. Feng, M. Wang, and X. He, 'Bias and debias in recommender system: A survey and future directions,' arXiv preprint arXiv:2010.03240 , 2020."
+            },
+            {
+              "title": "Selfsupervised learning for sequential recommendation with model augmentation",
+              "citation": "Z. Liu, Y. Chen, J. Li, M. Luo, S. Y. Philip, and C. Xiong, 'Selfsupervised learning for sequential recommendation with model augmentation,' 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.3.1",
+              "sec_title": "Neuron masking is a common technique used to perturb the model.",
+              "citations": [
+                {
+                  "title": "Self-supervised learning for large-scale item recommendations,",
+                  "citation": "T. Yao, X. Yi, D. Z. Cheng, F. Yu, T. Chen, A. Menon, L. Hong, E. H. Chi, S. Tjoa, J. Kang et al. , 'Self-supervised learning for large-scale item recommendations,' in CIKM , 2021, pp. 4321-4330."
+                },
+                {
+                  "title": "Hard negative mixing for contrastive learning,",
+                  "citation": "Y. Kalantidis, M. B. Sariyildiz, N. Pion, P. Weinzaepfel, and D. Larlus, 'Hard negative mixing for contrastive learning,' in NeurIPS , 2020."
+                },
+                {
+                  "title": "Are graph augmentations necessary? simple graph contrastive learning for recommendation,",
+                  "citation": "J. Yu, H. Yin, X. Xia, T. Chen, L. Cui, and Q. V. H. Nguyen, 'Are graph augmentations necessary? simple graph contrastive learning for recommendation,' in SIGIR , 2022, pp. 1294-1303."
+                },
+                {
+                  "title": "Challenging the long tail recommendation,",
+                  "citation": "H. Yin, B. Cui, J. Li, J. Yao, and C. Chen, 'Challenging the long tail recommendation,' VLDB , vol. 5, no. 9, pp. 896-907, 2012."
+                },
+                {
+                  "title": "Miss: Multi-interest self-supervised learning framework for click-through rate prediction,",
+                  "citation": "W. Guo, C. Zhang, Z. He, J. Qin, H. Guo, B. Chen, R. Tang, X. He, and R. Zhang, 'Miss: Multi-interest self-supervised learning framework for click-through rate prediction,' arXiv preprint arXiv:2111.15068 , 2021."
+                },
+                {
+                  "title": "Selfsupervised learning for sequential recommendation with model augmentation,",
+                  "citation": "Z. Liu, Y. Chen, J. Li, M. Luo, S. Y. Philip, and C. Xiong, 'Selfsupervised learning for sequential recommendation with model augmentation,' 2021."
+                },
+                {
+                  "title": "Understanding contrastive representation learning through alignment and uniformity on the hypersphere",
+                  "citation": "T. Wang and P. Isola, 'Understanding contrastive representation learning through alignment and uniformity on the hypersphere,' in ICML . PMLR, 2020, pp. 9929-9939."
+                },
+                {
+                  "title": "Understanding the behaviour of contrastive loss",
+                  "citation": "F. Wang and H. Liu, 'Understanding the behaviour of contrastive loss,' in CVPR , 2021, pp. 2495-2504."
+                },
+                {
+                  "title": "Representation learning with contrastive predictive coding",
+                  "citation": "A. v. d. Oord, Y. Li, and O. Vinyals, 'Representation learning with contrastive predictive coding,' arXiv preprint arXiv:1807.03748 , 2018."
+                },
+                {
+                  "title": "Deep graph infomax.",
+                  "citation": "P. Velickovic, W. Fedus, W. L. Hamilton, P. Li` o, Y. Bengio, and R. D. Hjelm, 'Deep graph infomax.' in ICLR (Poster) , 2019."
+                },
+                {
+                  "title": "f-gan: Training generative neural samplers using variational divergence minimization,",
+                  "citation": "S. Nowozin, B. Cseke, and R. Tomioka, 'f-gan: Training generative neural samplers using variational divergence minimization,' NeurIPS , vol. 29, 2016."
+                },
+                {
+                  "title": "Mutual information neural estimation",
+                  "citation": "M. I. Belghazi, A. Baratin, S. Rajeshwar, S. Ozair, Y. Bengio, A. Courville, and D. Hjelm, 'Mutual information neural estimation,' in ICML . PMLR, 2018, pp. 531-540."
+                },
+                {
+                  "title": "Learning deep representations by mutual information estimation and maximization",
+                  "citation": "R. D. Hjelm, A. Fedorov, S. Lavoie-Marchildon, K. Grewal, P. Bachman, A. Trischler, and Y. Bengio, 'Learning deep representations by mutual information estimation and maximization,' arXiv preprint arXiv:1808.06670 , 2018."
+                },
+                {
+                  "title": "A simple framework for contrastive learning of visual representations,",
+                  "citation": "T. Chen, S. Kornblith, M. Norouzi, and G. Hinton, 'A simple framework for contrastive learning of visual representations,' in ICML . PMLR, 2020, pp. 1597-1607."
+                },
+                {
+                  "title": "Selfsupervised learning for sequential recommendation with model augmentation,",
+                  "citation": "Z. Liu, Y. Chen, J. Li, M. Luo, S. Y. Philip, and C. Xiong, 'Selfsupervised learning for sequential recommendation with model augmentation,' 2021."
+                },
+                {
+                  "title": "Self-supervised learning for large-scale item recommendations,",
+                  "citation": "T. Yao, X. Yi, D. Z. Cheng, F. Yu, T. Chen, A. Menon, L. Hong, E. H. Chi, S. Tjoa, J. Kang et al. , 'Self-supervised learning for large-scale item recommendations,' in CIKM , 2021, pp. 4321-4330."
+                },
+                {
+                  "title": "Hard negative mixing for contrastive learning,",
+                  "citation": "Y. Kalantidis, M. B. Sariyildiz, N. Pion, P. Weinzaepfel, and D. Larlus, 'Hard negative mixing for contrastive learning,' in NeurIPS , 2020."
+                },
+                {
+                  "title": "Selfsupervised multi-channel hypergraph convolutional network for social recommendation,",
+                  "citation": "J. Yu, H. Yin, J. Li, Q. Wang, N. Q. V. Hung, and X. Zhang, 'Selfsupervised multi-channel hypergraph convolutional network for social recommendation,' in WWW , 2021, pp. 413-424."
+                },
+                {
+                  "title": "Bpr: Bayesian personalized ranking from implicit feedback,",
+                  "citation": "S. Rendle, C. Freudenthaler, Z. Gantner, and L. Schmidt-Thieme, 'Bpr: Bayesian personalized ranking from implicit feedback,' in UAI . AUAI Press, 2009, pp. 452-461."
+                },
+                {
+                  "title": "Bipartite graph embedding via mutual information maximization,",
+                  "citation": "J. Cao, X. Lin, S. Guo, L. Liu, T. Liu, and B. Wang, 'Bipartite graph embedding via mutual information maximization,' in WSDM , 2021, pp. 635-643."
+                },
+                {
+                  "title": "Contrastive cross-domain recommendation in matching,",
+                  "citation": "R. Xie, Q. Liu, L. Wang, S. Liu, B. Zhang, and L. Lin, 'Contrastive cross-domain recommendation in matching,' arXiv preprint arXiv:2112.00999 , 2021."
+                },
+                {
+                  "title": "Contrastive self-supervised sequential recommendation with robust augmentation,",
+                  "citation": "Z. Liu, Y. Chen, J. Li, P. S. Yu, J. McAuley, and C. Xiong, 'Contrastive self-supervised sequential recommendation with robust augmentation,' arXiv preprint arXiv:2108.06479 , 2021."
+                },
+                {
+                  "title": "Social influence-based group representation learning for group recommendation,",
+                  "citation": "H. Yin, Q. Wang, K. Zheng, Z. Li, J. Yang, and X. Zhou, 'Social influence-based group representation learning for group recommendation,' in ICDE . IEEE, 2019, pp. 566-577."
+                },
+                {
+                  "title": "Learning transferable user representations with sequential behaviors via contrastive pre-training,",
+                  "citation": "M. Cheng, F. Yuan, Q. Liu, X. Xin, and E. Chen, 'Learning transferable user representations with sequential behaviors via contrastive pre-training,' in ICDM . IEEE, 2021, pp. 51-60."
+                },
+                {
+                  "title": "Contrastive learning for sequential recommendation,",
+                  "citation": "X. Xie, F. Sun, Z. Liu, S. Wu, J. Gao, B. Ding, and B. Cui, 'Contrastive learning for sequential recommendation,' ICDE , 2022."
+                },
+                {
+                  "title": "Hyperbolic hypergraphs for sequential recommendation,",
+                  "citation": "Y. Li, H. Chen, X. Sun, Z. Sun, L. Li, L. Cui, P. S. Yu, and G. Xu, 'Hyperbolic hypergraphs for sequential recommendation,' in CIKM , 2021, pp. 988-997."
+                },
+                {
+                  "title": "Matrix factorization techniques for recommender systems,",
+                  "citation": "Y. Koren, R. M. Bell, and C. Volinsky, 'Matrix factorization techniques for recommender systems,' IEEE Computer , vol. 42, no. 8, pp. 30-37, 2009."
+                },
+                {
+                  "title": "A survey on contrastive self-supervised learning,",
+                  "citation": "A. Jaiswal, A. R. Babu, M. Z. Zadeh, D. Banerjee, and F. Makedon, 'A survey on contrastive self-supervised learning,' Technologies , vol. 9, no. 1, p. 2, 2021."
+                },
+                {
+                  "title": "Pretrain, prompt, and predict: A systematic survey of prompting methods in natural language processing,",
+                  "citation": "P. Liu, W. Yuan, J. Fu, Z. Jiang, H. Hayashi, and G. Neubig, 'Pretrain, prompt, and predict: A systematic survey of prompting methods in natural language processing,' ACM Computing Surveys , vol. 55, no. 9, pp. 1-35, 2023."
+                },
+                {
+                  "title": "A multi-strategy based pre-training method for cold-start recommendation,",
+                  "citation": "B. Hao, H. Yin, J. Zhang, C. Li, and H. Chen, 'A multi-strategy based pre-training method for cold-start recommendation,' arXiv preprint arXiv:2112.02275 , 2021."
+                },
+                {
+                  "title": "Hyper metapath contrastive learning for multi-behavior recommendation,",
+                  "citation": "H. Yang, H. Chen, L. Li, S. Y. Philip, and G. Xu, 'Hyper metapath contrastive learning for multi-behavior recommendation,' in ICDM . IEEE, 2021, pp. 787-796."
+                },
+                {
+                  "title": "Sequential recommendation with multiple contrast signals,",
+                  "citation": "C. Wang, W. Ma, and C. Chen, 'Sequential recommendation with multiple contrast signals,' ACM TOIS , 2022."
+                },
+                {
+                  "title": "Selfsupervised hypergraph convolutional networks for sessionbased recommendation,",
+                  "citation": "X. Xia, H. Yin, J. Yu, Q. Wang, L. Cui, and X. Zhang, 'Selfsupervised hypergraph convolutional networks for sessionbased recommendation,' in AAAI , 2021, pp. 4503-4511."
+                },
+                {
+                  "title": "Spatio-temporal recommendation in social media",
+                  "citation": "H. Yin and B. Cui, Spatio-temporal recommendation in social media . Springer, 2016."
+                },
+                {
+                  "title": "Hypergraph contrastive collaborative filtering,",
+                  "citation": "L. Xia, C. Huang, Y. Xu, J. Zhao, D. Yin, and J. Huang, 'Hypergraph contrastive collaborative filtering,' in SIGIR , 2022, pp. 70-79."
+                },
+                {
+                  "title": "Intent contrastive learning for sequential recommendation,",
+                  "citation": "Y. Chen, Z. Liu, J. Li, J. McAuley, and C. Xiong, 'Intent contrastive learning for sequential recommendation,' arXiv preprint arXiv:2202.02519 , 2022."
+                },
+                {
+                  "title": "Adversarial and contrastive variational autoencoder for sequential recommendation,",
+                  "citation": "Z. Xie, C. Liu, Y. Zhang, H. Lu, D. Wang, and Y. Ding, 'Adversarial and contrastive variational autoencoder for sequential recommendation,' in WWW , 2021, pp. 449-459."
+                },
+                {
+                  "title": "S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization,",
+                  "citation": "K. Zhou, H. Wang, W. X. Zhao, Y. Zhu, S. Wang, F. Zhang, Z. Wang, and J.-R. Wen, 'S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization,' in CIKM , 2020, pp. 1893-1902."
+                },
+                {
+                  "title": "Pre-training graph neural network for cross domain recommendation,",
+                  "citation": "C. Wang, Y. Liang, Z. Liu, T. Zhang, and P. S. Yu, 'Pre-training graph neural network for cross domain recommendation,' arXiv preprint arXiv:2111.08268 , 2021."
+                },
+                {
+                  "title": "Social recommendation with self-supervised metagraph informax network,",
+                  "citation": "X. Long, C. Huang, Y. Xu, H. Xu, P. Dai, L. Xia, and L. Bo, 'Social recommendation with self-supervised metagraph informax network,' in CIKM , 2021, pp. 1160-1169."
+                },
+                {
+                  "title": "Self-supervised learning for multimedia recommendation,",
+                  "citation": "Z. Tao, X. Liu, Y. Xia, X. Wang, L. Yang, X. Huang, and T.-S. Chua, 'Self-supervised learning for multimedia recommendation,' IEEE TMM , 2022."
+                },
+                {
+                  "title": "Self-supervised learning for large-scale item recommendations,",
+                  "citation": "T. Yao, X. Yi, D. Z. Cheng, F. Yu, T. Chen, A. Menon, L. Hong, E. H. Chi, S. Tjoa, J. Kang et al. , 'Self-supervised learning for large-scale item recommendations,' in CIKM , 2021, pp. 4321-4330."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.4",
+          "sec_title": "Contrastive Loss",
+          "citations": [
+            {
+              "title": "Understanding contrastive representation learning through alignment and uniformity on the hypersphere",
+              "citation": "T. Wang and P. Isola, 'Understanding contrastive representation learning through alignment and uniformity on the hypersphere,' in ICML . PMLR, 2020, pp. 9929-9939."
+            },
+            {
+              "title": "Understanding the behaviour of contrastive loss",
+              "citation": "F. Wang and H. Liu, 'Understanding the behaviour of contrastive loss,' in CVPR , 2021, pp. 2495-2504."
+            },
+            {
+              "title": "f-gan: Training generative neural samplers using variational divergence minimization",
+              "citation": "S. Nowozin, B. Cseke, and R. Tomioka, 'f-gan: Training generative neural samplers using variational divergence minimization,' NeurIPS , vol. 29, 2016."
+            },
+            {
+              "title": "Representation learning with contrastive predictive coding",
+              "citation": "A. v. d. Oord, Y. Li, and O. Vinyals, 'Representation learning with contrastive predictive coding,' arXiv preprint arXiv:1807.03748 , 2018."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.4.1",
+              "sec_title": "Jensen-Shannon Estimator",
+              "citations": [
+                {
+                  "title": "Deep graph infomax",
+                  "citation": "P. Velickovic, W. Fedus, W. L. Hamilton, P. Li` o, Y. Bengio, and R. D. Hjelm, 'Deep graph infomax.' in ICLR (Poster) , 2019."
+                },
+                {
+                  "title": "Mutual information neural estimation",
+                  "citation": "M. I. Belghazi, A. Baratin, S. Rajeshwar, S. Ozair, Y. Bengio, A. Courville, and D. Hjelm, 'Mutual information neural estimation,' in ICML . PMLR, 2018, pp. 531-540."
+                },
+                {
+                  "title": "Learning deep representations by mutual information estimation and maximization",
+                  "citation": "R. D. Hjelm, A. Fedorov, S. Lavoie-Marchildon, K. Grewal, P. Bachman, A. Trischler, and Y. Bengio, 'Learning deep representations by mutual information estimation and maximization,' arXiv preprint arXiv:1808.06670 , 2018."
+                },
+                {
+                  "title": "Deep graph infomax",
+                  "citation": "P. Velickovic, W. Fedus, W. L. Hamilton, P. Li` o, Y. Bengio, and R. D. Hjelm, 'Deep graph infomax.' in ICLR (Poster) , 2019."
+                },
+                {
+                  "title": "Enhanced graph learning for collaborative filtering via mutual information maximization",
+                  "citation": "Y. Yang, L. Wu, R. Hong, K. Zhang, and M. Wang, 'Enhanced graph learning for collaborative filtering via mutual information maximization,' in SIGIR , 2021, pp. 71-80."
+                },
+                {
+                  "title": "Bipartite graph embedding via mutual information maximization",
+                  "citation": "J. Cao, X. Lin, S. Guo, L. Liu, T. Liu, and B. Wang, 'Bipartite graph embedding via mutual information maximization,' in WSDM , 2021, pp. 635-643."
+                },
+                {
+                  "title": "Selfsupervised hypergraph convolutional networks for sessionbased recommendation",
+                  "citation": "X. Xia, H. Yin, J. Yu, Q. Wang, L. Cui, and X. Zhang, 'Selfsupervised hypergraph convolutional networks for sessionbased recommendation,' in AAAI , 2021, pp. 4503-4511."
+                },
+                {
+                  "title": "Social recommendation with self-supervised metagraph informax network",
+                  "citation": "X. Long, C. Huang, Y. Xu, H. Xu, P. Dai, L. Xia, and L. Bo, 'Social recommendation with self-supervised metagraph informax network,' in CIKM , 2021, pp. 1160-1169."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.4.2",
+              "sec_title": "Noise-Contrastive Estimator",
+              "citations": [
+                {
+                  "title": "Representation learning with contrastive predictive coding",
+                  "citation": "A. v. d. Oord, Y. Li, and O. Vinyals, 'Representation learning with contrastive predictive coding,' arXiv preprint arXiv:1807.03748 , 2018."
+                },
+                {
+                  "title": "Noise-contrastive estimation: A new estimation principle for unnormalized statistical models",
+                  "citation": "M. Gutmann and A. Hyv¨ arinen, 'Noise-contrastive estimation: A new estimation principle for unnormalized statistical models,' in AISTATS . JMLR Workshop and Conference Proceedings, 2010, pp. 297-304."
+                },
+                {
+                  "title": "Learning deep representations by mutual information estimation and maximization",
+                  "citation": "R. D. Hjelm, A. Fedorov, S. Lavoie-Marchildon, K. Grewal, P. Bachman, A. Trischler, and Y. Bengio, 'Learning deep representations by mutual information estimation and maximization,' arXiv preprint arXiv:1808.06670 , 2018."
+                },
+                {
+                  "title": "A simple framework for contrastive learning of visual representations",
+                  "citation": "T. Chen, S. Kornblith, M. Norouzi, and G. Hinton, 'A simple framework for contrastive learning of visual representations,' in ICML . PMLR, 2020, pp. 1597-1607."
+                },
+                {
+                  "title": "Understanding contrastive representation learning through alignment and uniformity on the hypersphere",
+                  "citation": "T. Wang and P. Isola, 'Understanding contrastive representation learning through alignment and uniformity on the hypersphere,' in ICML . PMLR, 2020, pp. 9929-9939."
+                },
+                {
+                  "title": "Contrastive learning for representation degeneration problem in sequential recommendation",
+                  "citation": "R. Qiu, Z. Huang, H. Yin, and Z. Wang, 'Contrastive learning for representation degeneration problem in sequential recommendation,' in WSDM . ACM, 2022, pp. 813-823."
+                },
+                {
+                  "title": "Are graph augmentations necessary? simple graph contrastive learning for recommendation",
+                  "citation": "J. Yu, H. Yin, X. Xia, T. Chen, L. Cui, and Q. V. H. Nguyen, 'Are graph augmentations necessary? simple graph contrastive learning for recommendation,' in SIGIR , 2022, pp. 1294-1303."
+                },
+                {
+                  "title": "Self-supervised graph learning for recommendation",
+                  "citation": "J. Wu, X. Wang, F. Feng, X. He, L. Chen, J. Lian, and X. Xie, 'Selfsupervised graph learning for recommendation,' in SIGIR , 2021, pp. 726-735."
+                },
+                {
+                  "title": "Contrastive learning for recommender system",
+                  "citation": "Z. Liu, Y. Ma, Y. Ouyang, and Z. Xiong, 'Contrastive learning for recommender system,' arXiv preprint arXiv:2101.01317 , 2021."
+                },
+                {
+                  "title": "Contrastive cross-domain recommendation in matching",
+                  "citation": "R. Xie, Q. Liu, L. Wang, S. Liu, B. Zhang, and L. Lin, 'Contrastive cross-domain recommendation in matching,' arXiv preprint arXiv:2112.00999 , 2021."
+                },
+                {
+                  "title": "Pre-training graph neural network for cross domain recommendation",
+                  "citation": "C. Wang, Y. Liang, Z. Liu, T. Zhang, and P. S. Yu, 'Pre-training graph neural network for cross domain recommendation,' arXiv preprint arXiv:2111.08268 , 2021."
+                },
+                {
+                  "title": "Doublescale self-supervised hypergraph learning for group recommendation",
+                  "citation": "J. Zhang, M. Gao, J. Yu, L. Guo, J. Li, and H. Yin, 'Doublescale self-supervised hypergraph learning for group recommendation,' in CIKM , 2021."
+                },
+                {
+                  "title": "Knowledge graph contrastive learning for recommendation",
+                  "citation": "Y. Yang, C. Huang, L. Xia, and C. Li, 'Knowledge graph contrastive learning for recommendation,' in SIGIR , 2022, pp. 14341443."
+                },
+                {
+                  "title": "Contrastive learning for sequential recommendation",
+                  "citation": "X. Xie, F. Sun, Z. Liu, S. Wu, J. Gao, B. Ding, and B. Cui, 'Contrastive learning for sequential recommendation,' ICDE , 2022."
+                },
+                {
+                  "title": "Hyperbolic hypergraphs for sequential recommendation",
+                  "citation": "Y. Li, H. Chen, X. Sun, Z. Sun, L. Li, L. Cui, P. S. Yu, and G. Xu, 'Hyperbolic hypergraphs for sequential recommendation,' in CIKM , 2021, pp. 988-997."
+                },
+                {
+                  "title": "Contrastive self-supervised sequential recommendation with robust augmentation",
+                  "citation": "Z. Liu, Y. Chen, J. Li, P. S. Yu, J. McAuley, and C. Xiong, 'Contrastive self-supervised sequential recommendation with robust augmentation,' arXiv preprint arXiv:2108.06479 , 2021."
+                },
+                {
+                  "title": "Sequential recommendation with multiple contrast signals",
+                  "citation": "C. Wang, W. Ma, and C. Chen, 'Sequential recommendation with multiple contrast signals,' ACM TOIS , 2022."
+                },
+                {
+                  "title": "Selfsupervised hypergraph convolutional networks for sessionbased recommendation",
+                  "citation": "X. Xia, H. Yin, J. Yu, Q. Wang, L. Cui, and X. Zhang, 'Selfsupervised hypergraph convolutional networks for sessionbased recommendation,' in AAAI , 2021, pp. 4503-4511."
+                },
+                {
+                  "title": "Towards universal sequence representation learning for recommender systems",
+                  "citation": "Y. Hou, S. Mu, W. X. Zhao, Y. Li, B. Ding, and J.-R. Wen, 'Towards universal sequence representation learning for recommender systems,' in KDD , 2022, pp. 585-593."
+                },
+                {
+                  "title": "Enhanced graph learning for collaborative filtering via mutual information maximization",
+                  "citation": "Y. Yang, L. Wu, R. Hong, K. Zhang, and M. Wang, 'Enhanced graph learning for collaborative filtering via mutual information maximization,' in SIGIR , 2021, pp. 71-80."
+                },
+                {
+                  "title": "Bipartite graph embedding via mutual information maximization",
+                  "citation": "J. Cao, X. Lin, S. Guo, L. Liu, T. Liu, and B. Wang, 'Bipartite graph embedding via mutual information maximization,' in WSDM , 2021, pp. 635-643."
+                },
+                {
+                  "title": "Heterogeneous graph contrastive learning network for personalized micro-video recommendation",
+                  "citation": "D. Cai, S. Qian, Q. Fang, J. Hu, W. Ding, and C. Xu, 'Heterogeneous graph contrastive learning network for personalized micro-video recommendation,' IEEE Transactions on Multimedia , 2022."
+                },
+                {
+                  "title": "Self-supervised multi-channel hypergraph convolutional network for social recommendation",
+                  "citation": "J. Yu, H. Yin, J. Li, Q. Wang, N. Q. V. Hung, and X. Zhang, 'Selfsupervised multi-channel hypergraph convolutional network for social recommendation,' in WWW , 2021, pp. 413-424."
+                },
+                {
+                  "title": "Hypergraph contrastive collaborative filtering",
+                  "citation": "L. Xia, C. Huang, Y. Xu, J. Zhao, D. Yin, and J. Huang, 'Hypergraph contrastive collaborative filtering,' in SIGIR , 2022, pp. 70-79."
+                },
+                {
+                  "title": "Social recommendation with self-supervised metagraph informax network",
+                  "citation": "X. Long, C. Huang, Y. Xu, H. Xu, P. Dai, L. Xia, and L. Bo, 'Social recommendation with self-supervised metagraph informax network,' in CIKM , 2021, pp. 1160-1169."
+                },
+                {
+                  "title": "Improving graph collaborative filtering with neighborhood-enriched contrastive learning",
+                  "citation": "Z. Lin, C. Tian, Y. Hou, and W. X. Zhao, 'Improving graph collaborative filtering with neighborhood-enriched contrastive learning,' arXiv preprint arXiv:2202.06200 , 2022."
+                },
+                {
+                  "title": "Intent contrastive learning for sequential recommendation",
+                  "citation": "Y. Chen, Z. Liu, J. Li, J. McAuley, and C. Xiong, 'Intent contrastive learning for sequential recommendation,' arXiv preprint arXiv:2202.02519 , 2022."
+                },
+                {
+                  "title": "S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization",
+                  "citation": "K. Zhou, H. Wang, W. X. Zhao, Y. Zhu, S. Wang, F. Zhang, Z. Wang, and J.-R. Wen, 'S3-rec: Self-supervised learning for sequential recommendation with mutual information maximization,' in CIKM , 2020, pp. 1893-1902."
+                },
+                {
+                  "title": "Self-supervised learning for large-scale item recommendations",
+                  "citation": "T. Yao, X. Yi, D. Z. Cheng, F. Yu, T. Chen, A. Menon, L. Hong, E. H. Chi, S. Tjoa, J. Kang et al. , 'Self-supervised learning for large-scale item recommendations,' in CIKM , 2021, pp. 4321-4330."
+                },
+                {
+                  "title": "Self-supervised learning for multimedia recommendation",
+                  "citation": "Z. Tao, X. Liu, Y. Xia, X. Wang, L. Yang, X. Huang, and T.-S. Chua, 'Self-supervised learning for multimedia recommendation,' IEEE TMM , 2022."
+                },
+                {
+                  "title": "Miss: Multi-interest self-supervised learning framework for click-through rate prediction",
+                  "citation": "W. Guo, C. Zhang, Z. He, J. Qin, H. Guo, B. Chen, R. Tang, X. He, and R. Zhang, 'Miss: Multi-interest self-supervised learning framework for click-through rate prediction,' arXiv preprint arXiv:2111.15068 , 2021."
+                },
+                {
+                  "title": "Contrastive learning for representation degeneration problem in sequential recommendation",
+                  "citation": "R. Qiu, Z. Huang, H. Yin, and Z. Wang, 'Contrastive learning for representation degeneration problem in sequential recommendation,' in WSDM . ACM, 2022, pp. 813-823."
+                },
+                {
+                  "title": "Are graph augmentations necessary? simple graph contrastive learning for recommendation",
+                  "citation": "J. Yu, H. Yin, X. Xia, T. Chen, L. Cui, and Q. V. H. Nguyen, 'Are graph augmentations necessary? simple graph contrastive learning for recommendation,' in SIGIR , 2022, pp. 1294-1303."
+                },
+                {
+                  "title": "Xsimgcl: Towards Extremely Simple Graph Contrastive Learning for Recommendation",
+                  "citation": "J. Yu, X. Xia, T. Chen, L. Cui, N. Q. V. Hung, and H. Yin, 'Xsimgcl: Towards extremely simple graph contrastive learning for recommendation,' arXiv preprint arXiv:2209.02544 , 2022."
+                },
+                {
+                  "title": "Selfsupervised learning for sequential recommendation with model augmentation",
+                  "citation": "Z. Liu, Y. Chen, J. Li, M. Luo, S. Y. Philip, and C. Xiong, 'Selfsupervised learning for sequential recommendation with model augmentation,' 2021."
+                },
+                {
+                  "title": "On the effectiveness of sampled softmax loss for item recommendation",
+                  "citation": "J. Wu, X. Wang, X. Gao, J. Chen, H. Fu, T. Qiu, and X. He, 'On the effectiveness of sampled softmax loss for item recommendation,' arXiv preprint arXiv:2201.02327 , 2022."
+                },
+                {
+                  "title": "Understanding the behaviour of contrastive loss",
+                  "citation": "F. Wang and H. Liu, 'Understanding the behaviour of contrastive loss,' in CVPR , 2021, pp. 2495-2504."
+                },
+                {
+                  "title": "Contrastive learning for representation degeneration problem in sequential recommendation",
+                  "citation": "R. Qiu, Z. Huang, H. Yin, and Z. Wang, 'Contrastive learning for representation degeneration problem in sequential recommendation,' in WSDM . ACM, 2022, pp. 813-823."
+                },
+                {
+                  "title": "Socially-aware self-supervised tri-training for recommendation",
+                  "citation": "J. Yu, H. Yin, M. Gao, X. Xia, X. Zhang, and N. Q. V. Hung, 'Socially-aware self-supervised tri-training for recommendation,' in KDD . ACM, 2021, pp. 2084-2092."
+                },
+                {
+                  "title": "Self-supervised graph co-training for session-based recommendation",
+                  "citation": "X. Xia, H. Yin, J. Yu, Y. Shao, and L. Cui, 'Self-supervised graph co-training for session-based recommendation,' in CIKM , 2021."
+                },
+                {
+                  "title": "Contrastive learning for representation degeneration problem in sequential recommendation",
+                  "citation": "R. Qiu, Z. Huang, H. Yin, and Z. Wang, 'Contrastive learning for representation degeneration problem in sequential recommendation,' in WSDM . ACM, 2022, pp. 813-823."
+                },
+                {
+                  "title": "Socially-aware self-supervised tri-training for recommendation",
+                  "citation": "J. Yu, H. Yin, M. Gao, X. Xia, X. Zhang, and N. Q. V. Hung, 'Socially-aware self-supervised tri-training for recommendation,' in KDD . ACM, 2021, pp. 2084-2092."
+                },
+                {
+                  "title": "Self-supervised graph co-training for session-based recommendation",
+                  "citation": "X. Xia, H. Yin, J. Yu, Y. Shao, and L. Cui, 'Self-supervised graph co-training for session-based recommendation,' in CIKM , 2021."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.5",
+          "sec_title": "Pros and Cons",
+          "citations": [
+            {
+              "title": "Socially-aware self-supervised tri-training for recommendation",
+              "citation": "J. Yu, H. Yin, M. Gao, X. Xia, X. Zhang, and N. Q. V. Hung, 'Socially-aware self-supervised tri-training for recommendation,' in KDD . ACM, 2021, pp. 2084-2092."
+            },
+            {
+              "title": "Self-supervised graph co-training for session-based recommendation",
+              "citation": "X. Xia, H. Yin, J. Yu, Y. Shao, and L. Cui, 'Self-supervised graph co-training for session-based recommendation,' in CIKM , 2021."
+            },
+            {
+              "title": "Curriculum learning",
+              "citation": "Y. Bengio, J. Louradour, R. Collobert, and J. Weston, 'Curriculum learning,' in ICML , 2009, pp. 41-48."
+            },
+            {
+              "title": "Modeling task relationships in multi-task learning with multi-gate mixtureof-experts",
+              "citation": "J. Ma, Z. Zhao, X. Yi, J. Chen, L. Hong, and E. H. Chi, 'Modeling task relationships in multi-task learning with multi-gate mixtureof-experts,' in KDD , 2018, pp. 1930-1939."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "GENERATIVE METHODS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "Structure Generation",
+          "citations": [
+            {
+              "title": "Bert4rec: Sequential recommendation with bidirectional encoder representations from transformer",
+              "citation": "F. Sun, J. Liu, J. Wu, C. Pei, X. Lin, W. Ou, and P. Jiang, 'Bert4rec: Sequential recommendation with bidirectional encoder representations from transformer,' in KDD , 2019, pp. 1441-1450."
+            },
+            {
+              "title": "Bert: Pretraining of deep bidirectional transformers for language understanding",
+              "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, 'Bert: Pretraining of deep bidirectional transformers for language understanding,' arXiv preprint arXiv:1810.04805 , 2018."
+            },
+            {
+              "title": "Bert4sessrec: Content-based video relevance prediction with bidirectional encoder representations from transformer",
+              "citation": "X. Chen, D. Liu, C. Lei, R. Li, Z.-J. Zha, and Z. Xiong, 'Bert4sessrec: Content-based video relevance prediction with bidirectional encoder representations from transformer,' in ACM Multimedia , 2019, pp. 2597-2601."
+            },
+            {
+              "title": "Self-attentive sequential recommendation",
+              "citation": "W.-C. Kang and J. McAuley, 'Self-attentive sequential recommendation,' in ICDM . IEEE, 2018, pp. 197-206."
+            },
+            {
+              "title": "Unbert: User-news matching bert for news recommendation",
+              "citation": "Q. Zhang, J. Li, Q. Jia, C. Wang, J. Zhu, Z. Wang, and X. He, 'Unbert: User-news matching bert for news recommendation,' in IJCAI , 2021, pp. 3356-3362."
+            },
+            {
+              "title": "Empowering news recommendation with pre-trained language models",
+              "citation": "C. Wu, F. Wu, T. Qi, and Y. Huang, 'Empowering news recommendation with pre-trained language models,' in SIGIR , 2021, pp. 1652-1656."
+            },
+            {
+              "title": "U-bert: Pre-training user representations for improved recommendation",
+              "citation": "Z. Qiu, X. Wu, J. Gao, and W. Fan, 'U-bert: Pre-training user representations for improved recommendation,' in AAAI , 2021, pp. 1-8."
+            },
+            {
+              "title": "Future data helps training: Modeling future contexts for sessionbased recommendation",
+              "citation": "F. Yuan, X. He, H. Jiang, G. Guo, J. Xiong, Z. Xu, and Y. Xiong, 'Future data helps training: Modeling future contexts for sessionbased recommendation,' in WWW , 2020, pp. 303-313."
+            },
+            {
+              "title": "Uprec: User-aware pre-training for recommender systems",
+              "citation": "C. Xiao, R. Xie, Y. Yao, Z. Liu, M. Sun, X. Zhang, and L. Lin, 'Uprec: User-aware pre-training for recommender systems,' arXiv preprint arXiv:2102.10989 , 2021."
+            },
+            {
+              "title": "Parameterefficient transfer from sequential behaviors for user modeling and recommendation",
+              "citation": "F. Yuan, X. He, A. Karatzoglou, and L. Zhang, 'Parameterefficient transfer from sequential behaviors for user modeling and recommendation,' in SIGIR , 2020, pp. 1469-1478."
+            },
+            {
+              "title": "One4all user representation for recommender systems in e-commerce",
+              "citation": "K. Shin, H. Kwak, K.-M. Kim, M. Kim, Y.-J. Park, J. Jeong, and S. Jung, 'One4all user representation for recommender systems in e-commerce,' arXiv preprint arXiv:2106.00573 , 2021."
+            },
+            {
+              "title": "One4all user representation for recommender systems in e-commerce",
+              "citation": "K. Shin, H. Kwak, K.-M. Kim, M. Kim, Y.-J. Park, J. Jeong, and S. Jung, 'One4all user representation for recommender systems in e-commerce,' arXiv preprint arXiv:2106.00573 , 2021."
+            },
+            {
+              "title": "Recommendation as language processing (rlp): A unified pretrain, personalized prompt & predict paradigm (p5)",
+              "citation": "S. Geng, S. Liu, Z. Fu, Y. Ge, and Y. Zhang, 'Recommendation as language processing (rlp): A unified pretrain, personalized prompt &amp; predict paradigm (p5),' in RecSys , 2022, pp. 299-315."
+            },
+            {
+              "title": "Pretrain, prompt, and predict: A systematic survey of prompting methods in natural language processing",
+              "citation": "P. Liu, W. Yuan, J. Fu, Z. Jiang, H. Hayashi, and G. Neubig, 'Pretrain, prompt, and predict: A systematic survey of prompting methods in natural language processing,' ACM Computing Surveys , vol. 55, no. 9, pp. 1-35, 2023."
+            },
+            {
+              "title": "Pre-training of graph augmented transformers for medication recommendation",
+              "citation": "J. Shang, T. Ma, C. Xiao, and J. Sun, 'Pre-training of graph augmented transformers for medication recommendation,' arXiv preprint arXiv:1906.00346 , 2019."
+            },
+            {
+              "title": "Pre-training graph transformer with multimodal side information for recommendation",
+              "citation": "Y. Liu, S. Yang, C. Lei, G. Wang, H. Tang, J. Zhang, A. Sun, and C. Miao, 'Pre-training graph transformer with multimodal side information for recommendation,' in ACM Multimedia , 2021, pp. 2853-2861."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Feature Generation",
+          "citations": [
+            {
+              "title": "Gpt-gnn: Generative pre-training of graph neural networks",
+              "citation": "Z. Hu, Y. Dong, K. Wang, K.-W. Chang, and Y. Sun, 'Gpt-gnn: Generative pre-training of graph neural networks,' in KDD , 2020, pp. 1857-1867."
+            },
+            {
+              "title": "Pre-training graph transformer with multimodal side information for recommendation",
+              "citation": "Y. Liu, S. Yang, C. Lei, G. Wang, H. Tang, J. Zhang, A. Sun, and C. Miao, 'Pre-training graph transformer with multimodal side information for recommendation,' in ACM Multimedia , 2021, pp. 2853-2861."
+            },
+            {
+              "title": "Disentangled self-supervision in sequential recommenders",
+              "citation": "J. Ma, C. Zhou, H. Yang, P. Cui, X. Wang, and W. Zhu, 'Disentangled self-supervision in sequential recommenders,' in KDD , 2020, pp. 483-491."
+            },
+            {
+              "title": "Memory augmented multiinstance contrastive predictive coding for sequential recommendation",
+              "citation": "R. Qiu, Z. Huang, and H. Yin, 'Memory augmented multiinstance contrastive predictive coding for sequential recommendation,' in ICDM , 2021."
+            },
+            {
+              "title": "Pre-training graph neural networks for cold-start users and items representation",
+              "citation": "B. Hao, J. Zhang, H. Yin, C. Li, and H. Chen, 'Pre-training graph neural networks for cold-start users and items representation,' in WSDM , 2021, pp. 265-273."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.3",
+          "sec_title": "Pros and Cons",
+          "citations": [
+            {
+              "title": "Socially-aware self-supervised tri-training for recommendation",
+              "citation": "J. Yu, H. Yin, M. Gao, X. Xia, X. Zhang, and N. Q. V. Hung, 'Socially-aware self-supervised tri-training for recommendation,' in KDD . ACM, 2021, pp. 2084-2092."
+            },
+            {
+              "title": "Self-supervised graph co-training for session-based recommendation",
+              "citation": "X. Xia, H. Yin, J. Yu, Y. Shao, and L. Cui, 'Self-supervised graph co-training for session-based recommendation,' in CIKM , 2021."
+            },
+            {
+              "title": "Curriculum learning",
+              "citation": "Y. Bengio, J. Louradour, R. Collobert, and J. Weston, 'Curriculum learning,' in ICML , 2009, pp. 41-48."
+            },
+            {
+              "title": "Modeling task relationships in multi-task learning with multi-gate mixtureof-experts",
+              "citation": "J. Ma, Z. Zhao, X. Yi, J. Chen, L. Hong, and E. H. Chi, 'Modeling task relationships in multi-task learning with multi-gate mixtureof-experts,' in KDD , 2018, pp. 1930-1939."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "PREDICTIVE METHODS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "6.1",
+          "sec_title": "Sample Prediction",
+          "citations": [
+            {
+              "title": "Rethinking pre-training and self-training",
+              "citation": "B. Zoph, G. Ghiasi, T.-Y. Lin, Y. Cui, H. Liu, E. D. Cubuk, and Q. Le, 'Rethinking pre-training and self-training,' NeurIPS , vol. 33, pp. 3833-3845, 2020."
+            },
+            {
+              "title": "Augmenting sequential recommendation with pseudo-prior items via reversely pre-training transformer",
+              "citation": "Z. Liu, Z. Fan, Y. Wang, and P. S. Yu, 'Augmenting sequential recommendation with pseudo-prior items via reversely pre-training transformer,' in SIGIR , 2021, pp. 1608-1612."
+            },
+            {
+              "title": "Self-attentive sequential recommendation",
+              "citation": "W.-C. Kang and J. McAuley, 'Self-attentive sequential recommendation,' in ICDM . IEEE, 2018, pp. 197-206."
+            },
+            {
+              "title": "Sequential recommendation with bidirectional chronological augmentation of transformer",
+              "citation": "J. Jiang, Y. Luo, J. B. Kim, K. Zhang, and S. Kim, 'Sequential recommendation with bidirectional chronological augmentation of transformer,' arXiv preprint arXiv:2112.06460 , 2021."
+            },
+            {
+              "title": "Combining labeled and unlabeled data with co-training",
+              "citation": "A. Blum and T. Mitchell, 'Combining labeled and unlabeled data with co-training,' in CLOT , 1998, pp. 92-100."
+            },
+            {
+              "title": "Socially-aware self-supervised tri-training for recommendation",
+              "citation": "J. Yu, H. Yin, M. Gao, X. Xia, X. Zhang, and N. Q. V. Hung, 'Socially-aware self-supervised tri-training for recommendation,' in KDD . ACM, 2021, pp. 2084-2092."
+            },
+            {
+              "title": "Self-supervised graph co-training for session-based recommendation",
+              "citation": "X. Xia, H. Yin, J. Yu, Y. Shao, and L. Cui, 'Self-supervised graph co-training for session-based recommendation,' in CIKM , 2021."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.2",
+          "sec_title": "Pseudo-Label Prediction",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "6.2.1",
+              "sec_title": "Relation Prediction",
+              "citations": [
+                {
+                  "title": "Bert: Pretraining of deep bidirectional transformers for language understanding",
+                  "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, 'Bert: Pretraining of deep bidirectional transformers for language understanding,' arXiv preprint arXiv:1810.04805 , 2018."
+                },
+                {
+                  "title": "PTUM: pre-training user model from unlabeled user behaviors via selfsupervision",
+                  "citation": "C. Wu, F. Wu, T. Qi, J. Lian, Y. Huang, and X. Xie, 'PTUM: pre-training user model from unlabeled user behaviors via selfsupervision,' in EMNLP , 2020."
+                },
+                {
+                  "title": "Augmenting sequential recommendation with pseudo-prior items via reversely pre-training transformer",
+                  "citation": "Z. Liu, Z. Fan, Y. Wang, and P. S. Yu, 'Augmenting sequential recommendation with pseudo-prior items via reversely pre-training transformer,' in SIGIR , 2021, pp. 1608-1612."
+                },
+                {
+                  "title": "Sequential recommendation with bidirectional chronological augmentation of transformer",
+                  "citation": "J. Jiang, Y. Luo, J. B. Kim, K. Zhang, and S. Kim, 'Sequential recommendation with bidirectional chronological augmentation of transformer,' arXiv preprint arXiv:2112.06460 , 2021."
+                },
+                {
+                  "title": "PTUM: pre-training user model from unlabeled user behaviors via selfsupervision",
+                  "citation": "C. Wu, F. Wu, T. Qi, J. Lian, Y. Huang, and X. Xie, 'PTUM: pre-training user model from unlabeled user behaviors via selfsupervision,' in EMNLP , 2020."
+                },
+                {
+                  "title": "Improving sequential recommendation consistency with self-supervised imitation",
+                  "citation": "X. Yuan, H. Chen, Y. Song, X. Zhao, and Z. Ding, 'Improving sequential recommendation consistency with self-supervised imitation,' in IJCAI , 2021, pp. 3321-3327."
+                },
+                {
+                  "title": "Curriculum pre-training heterogeneous subgraph transformer for top-n recommendation",
+                  "citation": "H. Wang, K. Zhou, W. X. Zhao, J. Wang, and J.-R. Wen, 'Curriculum pre-training heterogeneous subgraph transformer for topn recommendation,' arXiv preprint arXiv:2106.06722 , 2021."
+                },
+                {
+                  "title": "Bootstrapping user and item representations for one-class collaborative filtering",
+                  "citation": "D. Lee, S. Kang, H. Ju, C. Park, and H. Yu, 'Bootstrapping user and item representations for one-class collaborative filtering,' arXiv preprint arXiv:2105.06323 , 2021."
+                },
+                {
+                  "title": "Selfcf: A simple framework for self-supervised collaborative filtering",
+                  "citation": "X. Zhou, A. Sun, Y. Liu, J. Zhang, and C. Miao, 'Selfcf: A simple framework for self-supervised collaborative filtering,' arXiv preprint arXiv:2107.03019 , 2021."
+                },
+                {
+                  "title": "Learning transferable user representations with sequential behaviors via contrastive pre-training",
+                  "citation": "M. Cheng, F. Yuan, Q. Liu, X. Xin, and E. Chen, 'Learning transferable user representations with sequential behaviors via contrastive pre-training,' in ICDM . IEEE, 2021, pp. 51-60."
+                },
+                {
+                  "title": "Selfsupervised learning for alleviating selection bias in recommendation systems",
+                  "citation": "H. Liu, D. Tang, J. Yang, X. Zhao, J. Tang, and Y. Cheng, 'Selfsupervised learning for alleviating selection bias in recommendation systems,' 2021."
+                },
+                {
+                  "title": "Improving transformer-based sequential recommenders",
+                  "citation": "M. Ma, P. Ren, Z. Chen, Z. Ren, H. Liang, J. Ma, and M. de Rijke, 'Improving transformer-based sequential recommenders"
+                },
+                {
+                  "title": "Predictive and contrastive: Dual-auxiliary learning for recommendation",
+                  "citation": "Y. Tao, M. Gao, J. Yu, Z. Wang, Q. Xiong, and X. Wang, 'Predictive and contrastive: Dual-auxiliary learning for recommendation,' arXiv preprint arXiv:2203.03982 , 2022."
+                },
+                {
+                  "title": "Improving sequential recommendation consistency with self-supervised imitation",
+                  "citation": "X. Yuan, H. Chen, Y. Song, X. Zhao, and Z. Ding, 'Improving sequential recommendation consistency with self-supervised imitation,' in IJCAI , 2021, pp. 3321-3327."
+                },
+                {
+                  "title": "Curriculum pre-training heterogeneous subgraph transformer for top-n recommendation",
+                  "citation": "H. Wang, K. Zhou, W. X. Zhao, J. Wang, and J.-R. Wen, 'Curriculum pre-training heterogeneous subgraph transformer for topn recommendation,' arXiv preprint arXiv:2106.06722 , 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.2.2",
+              "sec_title": "Similarity Prediction",
+              "citations": [
+                {
+                  "title": "Bootstrapping user and item representations for one-class collaborative filtering",
+                  "citation": "D. Lee, S. Kang, H. Ju, C. Park, and H. Yu, 'Bootstrapping user and item representations for one-class collaborative filtering,' arXiv preprint arXiv:2105.06323 , 2021."
+                },
+                {
+                  "title": "Bootstrap your own latent: A new approach to selfsupervised learning",
+                  "citation": "J.-B. Grill, F. Strub, F. Altch´ e, C. Tallec, P. H. Richemond, E. Buchatskaya, C. Doersch, B. A. Pires, Z. D. Guo, M. G. Azar et al. , 'Bootstrap your own latent: A new approach to selfsupervised learning,' arXiv preprint arXiv:2006.07733 , 2020."
+                },
+                {
+                  "title": "Selfcf: A simple framework for self-supervised collaborative filtering",
+                  "citation": "X. Zhou, A. Sun, Y. Liu, J. Zhang, and C. Miao, 'Selfcf: A simple framework for self-supervised collaborative filtering,' arXiv preprint arXiv:2107.03019 , 2021."
+                },
+                {
+                  "title": "Learning transferable user representations with sequential behaviors via contrastive pre-training",
+                  "citation": "M. Cheng, F. Yuan, Q. Liu, X. Xin, and E. Chen, 'Learning transferable user representations with sequential behaviors via contrastive pre-training,' in ICDM . IEEE, 2021, pp. 51-60."
+                },
+                {
+                  "title": "Bootstrap your own latent: A new approach to selfsupervised learning",
+                  "citation": "J.-B. Grill, F. Strub, F. Altch´ e, C. Tallec, P. H. Richemond, E. Buchatskaya, C. Doersch, B. A. Pires, Z. D. Guo, M. G. Azar et al. , 'Bootstrap your own latent: A new approach to selfsupervised learning,' arXiv preprint arXiv:2006.07733 , 2020."
+                },
+                {
+                  "title": "Bias and debias in recommender system: A survey and future directions",
+                  "citation": "J. Chen, H. Dong, X. Wang, F. Feng, M. Wang, and X. He, 'Bias and debias in recommender system: A survey and future directions,' arXiv preprint arXiv:2010.03240 , 2020."
+                },
+                {
+                  "title": "Selfsupervised learning for alleviating selection bias in recommendation systems",
+                  "citation": "H. Liu, D. Tang, J. Yang, X. Zhao, J. Tang, and Y. Cheng, 'Selfsupervised learning for alleviating selection bias in recommendation systems,' 2021."
+                },
+                {
+                  "title": "Learning disentangled representations for recommendation",
+                  "citation": "J. Ma, C. Zhou, P. Cui, H. Yang, and W. Zhu, 'Learning disentangled representations for recommendation,' NeurIPS , vol. 32, 2019."
+                },
+                {
+                  "title": "Improving transformer-based sequential recommenders",
+                  "citation": "M. Ma, P. Ren, Z. Chen, Z. Ren, H. Liang, J. Ma, and M. de Rijke, 'Improving transformer-based sequential recommenders"
+                },
+                {
+                  "title": "Improving transformer-based sequential recommenders",
+                  "citation": "M. Ma, P. Ren, Z. Chen, Z. Ren, H. Liang, J. Ma, and M. de Rijke, 'Improving transformer-based sequential recommenders"
+                },
+                {
+                  "title": "Predictive and contrastive: Dual-auxiliary learning for recommendation",
+                  "citation": "Y. Tao, M. Gao, J. Yu, Z. Wang, Q. Xiong, and X. Wang, 'Predictive and contrastive: Dual-auxiliary learning for recommendation,' arXiv preprint arXiv:2203.03982 , 2022."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "6.3",
+          "sec_title": "Pros and Cons",
+          "citations": [
+            {
+              "title": "Socially-aware self-supervised tri-training for recommendation",
+              "citation": "J. Yu, H. Yin, M. Gao, X. Xia, X. Zhang, and N. Q. V. Hung, 'Socially-aware self-supervised tri-training for recommendation,' in KDD . ACM, 2021, pp. 2084-2092."
+            },
+            {
+              "title": "Self-supervised graph co-training for session-based recommendation",
+              "citation": "X. Xia, H. Yin, J. Yu, Y. Shao, and L. Cui, 'Self-supervised graph co-training for session-based recommendation,' in CIKM , 2021."
+            },
+            {
+              "title": "Curriculum learning",
+              "citation": "Y. Bengio, J. Louradour, R. Collobert, and J. Weston, 'Curriculum learning,' in ICML , 2009, pp. 41-48."
+            },
+            {
+              "title": "Modeling task relationships in multi-task learning with multi-gate mixtureof-experts",
+              "citation": "J. Ma, Z. Zhao, X. Yi, J. Chen, L. Hong, and E. H. Chi, 'Modeling task relationships in multi-task learning with multi-gate mixtureof-experts,' in KDD , 2018, pp. 1930-1939."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "HYBRID METHODS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "7.1",
+          "sec_title": "Collaborative Self-Supervision",
+          "citations": [
+            {
+              "title": "Contrastive curriculum learning for sequential user behavior modeling via data augmentation",
+              "citation": "S. Bian, W. X. Zhao, K. Zhou, J. Cai, Y. He, C. Yin, and J.-R. Wen, 'Contrastive curriculum learning for sequential user behavior modeling via data augmentation,' in CIKM , 2021, pp. 3737-3746."
+            },
+            {
+              "title": "Socially-aware self-supervised tri-training for recommendation",
+              "citation": "J. Yu, H. Yin, M. Gao, X. Xia, X. Zhang, and N. Q. V. Hung, 'Socially-aware self-supervised tri-training for recommendation,' in KDD . ACM, 2021, pp. 2084-2092."
+            },
+            {
+              "title": "Self-supervised graph co-training for session-based recommendation",
+              "citation": "X. Xia, H. Yin, J. Yu, Y. Shao, and L. Cui, 'Self-supervised graph co-training for session-based recommendation,' in CIKM , 2021."
+            },
+            {
+              "title": "Curriculum pre-training heterogeneous subgraph transformer for top-n recommendation",
+              "citation": "H. Wang, K. Zhou, W. X. Zhao, J. Wang, and J.-R. Wen, 'Curriculum pre-training heterogeneous subgraph transformer for topn recommendation,' arXiv preprint arXiv:2106.06722 , 2021."
+            },
+            {
+              "title": "A multi-strategy based pre-training method for cold-start recommendation",
+              "citation": "B. Hao, H. Yin, J. Zhang, C. Li, and H. Chen, 'A multi-strategy based pre-training method for cold-start recommendation,' arXiv preprint arXiv:2112.02275 , 2021."
+            },
+            {
+              "title": "Improving sequential recommendation consistency with self-supervised imitation",
+              "citation": "X. Yuan, H. Chen, Y. Song, X. Zhao, and Z. Ding, 'Improving sequential recommendation consistency with self-supervised imitation,' in IJCAI , 2021, pp. 3321-3327."
+            },
+            {
+              "title": "PTUM: pre-training user model from unlabeled user behaviors via selfsupervision",
+              "citation": "C. Wu, F. Wu, T. Qi, J. Lian, Y. Huang, and X. Xie, 'PTUM: pre-training user model from unlabeled user behaviors via selfsupervision,' in EMNLP , 2020."
+            },
+            {
+              "title": "Uprec: User-aware pre-training for recommender systems",
+              "citation": "C. Xiao, R. Xie, Y. Yao, Z. Liu, M. Sun, X. Zhang, and L. Lin, 'Uprec: User-aware pre-training for recommender systems,' arXiv preprint arXiv:2102.10989 , 2021."
+            },
+            {
+              "title": "Ondevice next-item recommendation with self-supervised knowledge distillation",
+              "citation": "X. Xia, H. Yin, J. Yu, Q. Wang, G. Xu, and Q. V. H. Nguyen, 'Ondevice next-item recommendation with self-supervised knowledge distillation,' in SIGIR , 2022, pp. 546-555."
+            },
+            {
+              "title": "Contrastive curriculum learning for sequential user behavior modeling via data augmentation",
+              "citation": "S. Bian, W. X. Zhao, K. Zhou, J. Cai, Y. He, C. Yin, and J.-R. Wen, 'Contrastive curriculum learning for sequential user behavior modeling via data augmentation,' in CIKM , 2021, pp. 3737-3746."
+            },
+            {
+              "title": "Socially-aware self-supervised tri-training for recommendation",
+              "citation": "J. Yu, H. Yin, M. Gao, X. Xia, X. Zhang, and N. Q. V. Hung, 'Socially-aware self-supervised tri-training for recommendation,' in KDD . ACM, 2021, pp. 2084-2092."
+            },
+            {
+              "title": "Tri-training: Exploiting unlabeled data using three classifiers",
+              "citation": "Z.-H. Zhou and M. Li, 'Tri-training: Exploiting unlabeled data using three classifiers,' IEEE TKDE , vol. 17, no. 11, pp. 15291541, 2005."
+            },
+            {
+              "title": "Self-supervised graph co-training for session-based recommendation",
+              "citation": "X. Xia, H. Yin, J. Yu, Y. Shao, and L. Cui, 'Self-supervised graph co-training for session-based recommendation,' in CIKM , 2021."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.2",
+          "sec_title": "Parallel Self-Supervision",
+          "citations": [
+            {
+              "title": "Curriculum pre-training heterogeneous subgraph transformer for top-n recommendation",
+              "citation": "H. Wang, K. Zhou, W. X. Zhao, J. Wang, and J.-R. Wen, 'Curriculum pre-training heterogeneous subgraph transformer for topn recommendation,' arXiv preprint arXiv:2106.06722 , 2021."
+            },
+            {
+              "title": "A multi-strategy based pre-training method for cold-start recommendation",
+              "citation": "B. Hao, H. Yin, J. Zhang, C. Li, and H. Chen, 'A multi-strategy based pre-training method for cold-start recommendation,' arXiv preprint arXiv:2112.02275 , 2021."
+            },
+            {
+              "title": "Pre-training graph neural networks for cold-start users and items representation",
+              "citation": "B. Hao, J. Zhang, H. Yin, C. Li, and H. Chen, 'Pre-training graph neural networks for cold-start users and items representation,' in WSDM , 2021, pp. 265-273."
+            },
+            {
+              "title": "Improving sequential recommendation consistency with self-supervised imitation",
+              "citation": "X. Yuan, H. Chen, Y. Song, X. Zhao, and Z. Ding, 'Improving sequential recommendation consistency with self-supervised imitation,' in IJCAI , 2021, pp. 3321-3327."
+            },
+            {
+              "title": "PTUM: pre-training user model from unlabeled user behaviors via selfsupervision",
+              "citation": "C. Wu, F. Wu, T. Qi, J. Lian, Y. Huang, and X. Xie, 'PTUM: pre-training user model from unlabeled user behaviors via selfsupervision,' in EMNLP , 2020."
+            },
+            {
+              "title": "Bert: Pretraining of deep bidirectional transformers for language understanding",
+              "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, 'Bert: Pretraining of deep bidirectional transformers for language understanding,' arXiv preprint arXiv:1810.04805 , 2018."
+            },
+            {
+              "title": "Uprec: User-aware pre-training for recommender systems",
+              "citation": "C. Xiao, R. Xie, Y. Yao, Z. Liu, M. Sun, X. Zhang, and L. Lin, 'Uprec: User-aware pre-training for recommender systems,' arXiv preprint arXiv:2102.10989 , 2021."
+            },
+            {
+              "title": "Ondevice next-item recommendation with self-supervised knowledge distillation",
+              "citation": "X. Xia, H. Yin, J. Yu, Q. Wang, G. Xu, and Q. V. H. Nguyen, 'Ondevice next-item recommendation with self-supervised knowledge distillation,' in SIGIR , 2022, pp. 546-555."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.3",
+          "sec_title": "Pros and Cons",
+          "citations": [
+            {
+              "title": "Socially-aware self-supervised tri-training for recommendation",
+              "citation": "J. Yu, H. Yin, M. Gao, X. Xia, X. Zhang, and N. Q. V. Hung, 'Socially-aware self-supervised tri-training for recommendation,' in KDD . ACM, 2021, pp. 2084-2092."
+            },
+            {
+              "title": "Self-supervised graph co-training for session-based recommendation",
+              "citation": "X. Xia, H. Yin, J. Yu, Y. Shao, and L. Cui, 'Self-supervised graph co-training for session-based recommendation,' in CIKM , 2021."
+            },
+            {
+              "title": "Curriculum learning",
+              "citation": "Y. Bengio, J. Louradour, R. Collobert, and J. Weston, 'Curriculum learning,' in ICML , 2009, pp. 41-48."
+            },
+            {
+              "title": "Modeling task relationships in multi-task learning with multi-gate mixtureof-experts",
+              "citation": "J. Ma, Z. Zhao, X. Yi, J. Chen, L. Hong, and E. H. Chi, 'Modeling task relationships in multi-task learning with multi-gate mixtureof-experts,' in KDD , 2018, pp. 1930-1939."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "SELFREC: A LIBRARY FOR SELF-SUPERVISED RECOMMENDATION",
+      "citations": [
+        {
+          "title": "Recbole: Towards a unified, comprehensive and efficient framework for recommendation algorithms",
+          "citation": "W. X. Zhao, S. Mu, Y. Hou, Z. Lin, Y. Chen, X. Pan, K. Li, Y. Lu, H. Wang, C. Tian et al. , 'Recbole: Towards a unified, comprehensive and efficient framework for recommendation algorithms,' in CIKM , 2021, pp. 4653-4664."
+        },
+        {
+          "title": "Socially-aware self-supervised tri-training for recommendation",
+          "citation": "J. Yu, H. Yin, M. Gao, X. Xia, X. Zhang, and N. Q. V. Hung, 'Socially-aware self-supervised tri-training for recommendation,' in KDD . ACM, 2021, pp. 2084-2092."
+        },
+        {
+          "title": "Self-supervised graph learning for recommendation",
+          "citation": "J. Wu, X. Wang, F. Feng, X. He, L. Chen, J. Lian, and X. Xie, 'Selfsupervised graph learning for recommendation,' in SIGIR , 2021, pp. 726-735."
+        },
+        {
+          "title": "Lightgcn: Simplifying and Powering Graph Convolution Network for Recommendation",
+          "citation": "X. He, K. Deng, X. Wang, Y. Li, Y. Zhang, and M. Wang, 'Lightgcn: Simplifying and powering graph convolution network for recommendation,' in SIGIR . ACM, 2020, pp. 639-648."
+        },
+        {
+          "title": "Self-attentive sequential recommendation",
+          "citation": "W.-C. Kang and J. McAuley, 'Self-attentive sequential recommendation,' in ICDM . IEEE, 2018, pp. 197-206."
+        },
+        {
+          "title": "Self-supervised graph learning for recommendation",
+          "citation": "J. Wu, X. Wang, F. Feng, X. He, L. Chen, J. Lian, and X. Xie, 'Selfsupervised graph learning for recommendation,' in SIGIR , 2021, pp. 726-735."
+        },
+        {
+          "title": "Contrastive learning for sequential recommendation",
+          "citation": "X. Xie, F. Sun, Z. Liu, S. Wu, J. Gao, B. Ding, and B. Cui, 'Contrastive learning for sequential recommendation,' ICDE , 2022."
+        },
+        {
+          "title": "Are graph augmentations necessary? simple graph contrastive learning for recommendation",
+          "citation": "J. Yu, H. Yin, X. Xia, T. Chen, L. Cui, and Q. V. H. Nguyen, 'Are graph augmentations necessary? simple graph contrastive learning for recommendation,' in SIGIR , 2022, pp. 1294-1303."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "9",
+      "sec_title": "EXPERIMENTAL FINDINGS",
+      "citations": [
+        {
+          "title": "Lightgcn: Simplifying and Powering Graph Convolution Network for Recommendation",
+          "citation": "X. He, K. Deng, X. Wang, Y. Li, Y. Zhang, and M. Wang, 'Lightgcn: Simplifying and powering graph convolution network for recommendation,' in SIGIR . ACM, 2020, pp. 639-648."
+        },
+        {
+          "title": "Attention is all you need",
+          "citation": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, 'Attention is all you need,' in NeurIPS , 2017, pp. 5998-6008."
+        },
+        {
+          "title": "Self-supervised graph learning for recommendation",
+          "citation": "J. Wu, X. Wang, F. Feng, X. He, L. Chen, J. Lian, and X. Xie, 'Selfsupervised graph learning for recommendation,' in SIGIR , 2021, pp. 726-735."
+        },
+        {
+          "title": "Self-attentive sequential recommendation",
+          "citation": "W.-C. Kang and J. McAuley, 'Self-attentive sequential recommendation,' in ICDM . IEEE, 2018, pp. 197-206."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "9.1",
+          "sec_title": "Comparison of Data Augmentations in CL",
+          "citations": [
+            {
+              "title": "Lightgcn: Simplifying and Powering Graph Convolution Network for Recommendation",
+              "citation": "X. He, K. Deng, X. Wang, Y. Li, Y. Zhang, and M. Wang, 'Lightgcn: Simplifying and powering graph convolution network for recommendation,' in SIGIR . ACM, 2020, pp. 639-648."
+            },
+            {
+              "title": "Self-supervised graph learning for recommendation",
+              "citation": "J. Wu, X. Wang, F. Feng, X. He, L. Chen, J. Lian, and X. Xie, 'Selfsupervised graph learning for recommendation,' in SIGIR , 2021, pp. 726-735."
+            },
+            {
+              "title": "Self-supervised graph learning for recommendation",
+              "citation": "J. Wu, X. Wang, F. Feng, X. He, L. Chen, J. Lian, and X. Xie, 'Selfsupervised graph learning for recommendation,' in SIGIR , 2021, pp. 726-735."
+            },
+            {
+              "title": "Self-supervised graph learning for recommendation",
+              "citation": "J. Wu, X. Wang, F. Feng, X. He, L. Chen, J. Lian, and X. Xie, 'Selfsupervised graph learning for recommendation,' in SIGIR , 2021, pp. 726-735."
+            },
+            {
+              "title": "Are graph augmentations necessary? simple graph contrastive learning for recommendation",
+              "citation": "J. Yu, H. Yin, X. Xia, T. Chen, L. Cui, and Q. V. H. Nguyen, 'Are graph augmentations necessary? simple graph contrastive learning for recommendation,' in SIGIR , 2022, pp. 1294-1303."
+            },
+            {
+              "title": "Self-supervised graph learning for recommendation",
+              "citation": "J. Wu, X. Wang, F. Feng, X. He, L. Chen, J. Lian, and X. Xie, 'Selfsupervised graph learning for recommendation,' in SIGIR , 2021, pp. 726-735."
+            },
+            {
+              "title": "Mixgcf: An improved training method for graph neural network-based recommender systems",
+              "citation": "T. Huang, Y. Dong, M. Ding, Z. Yang, W. Feng, X. Wang, and J. Tang, 'Mixgcf: An improved training method for graph neural network-based recommender systems,' 2021."
+            },
+            {
+              "title": "Xsimgcl: Towards Extremely Simple Graph Contrastive Learning for Recommendation",
+              "citation": "J. Yu, X. Xia, T. Chen, L. Cui, N. Q. V. Hung, and H. Yin, 'Xsimgcl: Towards extremely simple graph contrastive learning for recommendation,' arXiv preprint arXiv:2209.02544 , 2022."
+            },
+            {
+              "title": "Self-attentive sequential recommendation",
+              "citation": "W.-C. Kang and J. McAuley, 'Self-attentive sequential recommendation,' in ICDM . IEEE, 2018, pp. 197-206."
+            },
+            {
+              "title": "Contrastive learning for sequential recommendation",
+              "citation": "X. Xie, F. Sun, Z. Liu, S. Wu, J. Gao, B. Ding, and B. Cui, 'Contrastive learning for sequential recommendation,' ICDE , 2022."
+            },
+            {
+              "title": "Contrastive learning for sequential recommendation",
+              "citation": "X. Xie, F. Sun, Z. Liu, S. Wu, J. Gao, B. Ding, and B. Cui, 'Contrastive learning for sequential recommendation,' ICDE , 2022."
+            },
+            {
+              "title": "Contrastive learning for sequential recommendation",
+              "citation": "X. Xie, F. Sun, Z. Liu, S. Wu, J. Gao, B. Ding, and B. Cui, 'Contrastive learning for sequential recommendation,' ICDE , 2022."
+            },
+            {
+              "title": "Contrastive self-supervised sequential recommendation with robust augmentation",
+              "citation": "Z. Liu, Y. Chen, J. Li, P. S. Yu, J. McAuley, and C. Xiong, 'Contrastive self-supervised sequential recommendation with robust augmentation,' arXiv preprint arXiv:2108.06479 , 2021."
+            },
+            {
+              "title": "Are graph augmentations necessary? simple graph contrastive learning for recommendation",
+              "citation": "J. Yu, H. Yin, X. Xia, T. Chen, L. Cui, and Q. V. H. Nguyen, 'Are graph augmentations necessary? simple graph contrastive learning for recommendation,' in SIGIR , 2022, pp. 1294-1303."
+            },
+            {
+              "title": "Contrastive learning for representation degeneration problem in sequential recommendation",
+              "citation": "R. Qiu, Z. Huang, H. Yin, and Z. Wang, 'Contrastive learning for representation degeneration problem in sequential recommendation,' in WSDM . ACM, 2022, pp. 813-823."
+            },
+            {
+              "title": "Selfsupervised learning for sequential recommendation with model augmentation",
+              "citation": "Z. Liu, Y. Chen, J. Li, M. Luo, S. Y. Philip, and C. Xiong, 'Selfsupervised learning for sequential recommendation with model augmentation,' 2021."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "9.2",
+          "sec_title": "Comparison of SSR Models",
+          "citations": [],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "10",
+      "sec_title": "DISCUSSION",
+      "citations": [
+        {
+          "title": "Lightgcn: Simplifying and Powering Graph Convolution Network for Recommendation",
+          "citation": "X. He, K. Deng, X. Wang, Y. Li, Y. Zhang, and M. Wang, 'Lightgcn: Simplifying and powering graph convolution network for recommendation,' in SIGIR . ACM, 2020, pp. 639-648."
+        },
+        {
+          "title": "Self-supervised graph learning for recommendation",
+          "citation": "J. Wu, X. Wang, F. Feng, X. He, L. Chen, J. Lian, and X. Xie, 'Selfsupervised graph learning for recommendation,' in SIGIR , 2021, pp. 726-735."
+        },
+        {
+          "title": "Are graph augmentations necessary? simple graph contrastive learning for recommendation",
+          "citation": "J. Yu, H. Yin, X. Xia, T. Chen, L. Cui, and Q. V. H. Nguyen, 'Are graph augmentations necessary? simple graph contrastive learning for recommendation,' in SIGIR , 2022, pp. 1294-1303."
+        },
+        {
+          "title": "Bootstrapping user and item representations for one-class collaborative filtering",
+          "citation": "D. Lee, S. Kang, H. Ju, C. Park, and H. Yu, 'Bootstrapping user and item representations for one-class collaborative filtering,' arXiv preprint arXiv:2105.06323 , 2021."
+        },
+        {
+          "title": "Selfcf: A simple framework for self-supervised collaborative filtering",
+          "citation": "X. Zhou, A. Sun, Y. Liu, J. Zhang, and C. Miao, 'Selfcf: A simple framework for self-supervised collaborative filtering,' arXiv preprint arXiv:2107.03019 , 2021."
+        },
+        {
+          "title": "Attention is all you need",
+          "citation": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, 'Attention is all you need,' in NeurIPS , 2017, pp. 5998-6008."
+        },
+        {
+          "title": "Bert4rec: Sequential recommendation with bidirectional encoder representations from transformer",
+          "citation": "F. Sun, J. Liu, J. Wu, C. Pei, X. Lin, W. Ou, and P. Jiang, 'Bert4rec: Sequential recommendation with bidirectional encoder representations from transformer,' in KDD , 2019, pp. 1441-1450."
+        },
+        {
+          "title": "Contrastive learning for sequential recommendation",
+          "citation": "X. Xie, F. Sun, Z. Liu, S. Wu, J. Gao, B. Ding, and B. Cui, 'Contrastive learning for sequential recommendation,' ICDE , 2022."
+        },
+        {
+          "title": "Contrastive learning for representation degeneration problem in sequential recommendation",
+          "citation": "R. Qiu, Z. Huang, H. Yin, and Z. Wang, 'Contrastive learning for representation degeneration problem in sequential recommendation,' in WSDM . ACM, 2022, pp. 813-823."
+        },
+        {
+          "title": "Augmenting sequential recommendation with pseudo-prior items via reversely pre-training transformer",
+          "citation": "Z. Liu, Z. Fan, Y. Wang, and P. S. Yu, 'Augmenting sequential recommendation with pseudo-prior items via reversely pre-training transformer,' in SIGIR , 2021, pp. 1608-1612."
+        },
+        {
+          "title": "Sequential recommendation with bidirectional chronological augmentation of transformer",
+          "citation": "J. Jiang, Y. Luo, J. B. Kim, K. Zhang, and S. Kim, 'Sequential recommendation with bidirectional chronological augmentation of transformer,' arXiv preprint arXiv:2112.06460 , 2021."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "10.1",
+          "sec_title": "Theory for Augmentation Selection",
+          "citations": [
+            {
+              "title": "What should not be contrastive in contrastive learning",
+              "citation": "T. Xiao, X. Wang, A. A. Efros, and T. Darrell, 'What should not be contrastive in contrastive learning,' in ICLR , 2021."
+            },
+            {
+              "title": "What makes for good views for contrastive learning?",
+              "citation": "Y. Tian, C. Sun, B. Poole, D. Krishnan, C. Schmid, and P. Isola, 'What makes for good views for contrastive learning?' NeurIPS , vol. 33, pp. 6827-6839, 2020."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "10.2",
+          "sec_title": "Explainable Self-Supervised Recommendation",
+          "citations": [
+            {
+              "title": "Are graph augmentations necessary? simple graph contrastive learning for recommendation",
+              "citation": "J. Yu, H. Yin, X. Xia, T. Chen, L. Cui, and Q. V. H. Nguyen, 'Are graph augmentations necessary? simple graph contrastive learning for recommendation,' in SIGIR , 2022, pp. 1294-1303."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "10.3",
+          "sec_title": "Attacking and Defending Self-Supervised Recommendation Models",
+          "citations": [
+            {
+              "title": "Gray-box shilling attack: An adversarial learning approach",
+              "citation": "Z. Wang, M. Gao, J. Li, J. Zhang, and J. Zhong, 'Gray-box shilling attack: An adversarial learning approach,' ACM TIST , 2022."
+            },
+            {
+              "title": "Data poisoning attack against recommender system using incomplete and perturbed data",
+              "citation": "H. Zhang, C. Tian, Y. Li, L. Su, N. Yang, W. X. Zhao, and J. Gao, 'Data poisoning attack against recommender system using incomplete and perturbed data,' in KDD , 2021, pp. 2154-2164."
+            },
+            {
+              "title": "Backdoor attacks on self-supervised learning",
+              "citation": "A. Saha, A. Tejankar, S. A. Koohpayegani, and H. Pirsiavash, 'Backdoor attacks on self-supervised learning,' arXiv preprint arXiv:2105.10123 , 2021."
+            },
+            {
+              "title": "Unsupervised graph poisoning attack via contrastive loss back-propagation",
+              "citation": "S. Zhang, H. Chen, X. Sun, Y. Li, and G. Xu, 'Unsupervised graph poisoning attack via contrastive loss back-propagation,' arXiv preprint arXiv:2201.07986 , 2022."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "10.4",
+          "sec_title": "On-Device Self-Supervised Recommendation",
+          "citations": [
+            {
+              "title": "Fast-adapting and privacy-preserving federated recommender system",
+              "citation": "Q. Wang, H. Yin, T. Chen, J. Yu, A. Zhou, and X. Zhang, 'Fast-adapting and privacy-preserving federated recommender system,' The VLDB Journal , pp. 1-20, 2021."
+            },
+            {
+              "title": "Next point-of-interest recommendation on resourceconstrained mobile devices",
+              "citation": "Q. Wang, H. Yin, T. Chen, Z. Huang, H. Wang, Y. Zhao, and N. Q. Viet Hung, 'Next point-of-interest recommendation on resourceconstrained mobile devices,' in WWW , 2020, pp. 906-916."
+            },
+            {
+              "title": "Tiny-newsrec: Efficient and effective plm-based news recommendation",
+              "citation": "Y. Yu, F. Wu, C. Wu, J. Yi, T. Qi, and Q. Liu, 'Tiny-newsrec: Efficient and effective plm-based news recommendation,' arXiv preprint arXiv:2112.00944 , 2021."
+            },
+            {
+              "title": "Ondevice next-item recommendation with self-supervised knowledge distillation",
+              "citation": "X. Xia, H. Yin, J. Yu, Q. Wang, G. Xu, and Q. V. H. Nguyen, 'Ondevice next-item recommendation with self-supervised knowledge distillation,' in SIGIR , 2022, pp. 546-555."
+            },
+            {
+              "title": "Efficient on-device session-based recommendation",
+              "citation": "X. Xia, J. Yu, Q. Wang, C. Yang, N. Q. V. Hung, and H. Yin, 'Efficient on-device session-based recommendation,' ACMTOIS , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "10.5",
+          "sec_title": "Towards General-Purpose Pre-Training",
+          "citations": [
+            {
+              "title": "Once and for all: Self-supervised multimodal co-training on one-billion videos at alibaba",
+              "citation": "L. Huang, Y. Liu, X. Zhou, A. You, M. Li, B. Wang, Y. Zhang, P. Pan, and X. Yinghui, 'Once and for all: Self-supervised multimodal co-training on one-billion videos at alibaba,' in ACMMM , 2021, pp. 1148-1156."
+            },
+            {
+              "title": "One4all user representation for recommender systems in e-commerce",
+              "citation": "K. Shin, H. Kwak, K.-M. Kim, M. Kim, Y.-J. Park, J. Jeong, and S. Jung, 'One4all user representation for recommender systems in e-commerce,' arXiv preprint arXiv:2106.00573 , 2021."
+            },
+            {
+              "title": "Generalpurpose user embeddings based on mobile app usage",
+              "citation": "J. Zhang, B. Bai, Y. Lin, J. Liang, K. Bai, and F. Wang, 'Generalpurpose user embeddings based on mobile app usage,' in KDD , 2020, pp. 2831-2840."
+            },
+            {
+              "title": "Towards universal sequence representation learning for recommender systems",
+              "citation": "Y. Hou, S. Mu, W. X. Zhao, Y. Li, B. Ding, and J.-R. Wen, 'Towards universal sequence representation learning for recommender systems,' in KDD , 2022, pp. 585-593."
+            },
+            {
+              "title": "Learning vectorquantized item representation for transferable sequential recommenders",
+              "citation": "Y. Hou, Z. He, J. McAuley, and W. X. Zhao, 'Learning vectorquantized item representation for transferable sequential recommenders,' WWW , 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "11",
+      "sec_title": "CONCLUSION",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

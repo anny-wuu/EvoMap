@@ -1,0 +1,3303 @@
+{
+  "track": "Object Detection",
+  "paper_title": "A Survey on Open-Vocabulary Detection and Segmentation: Past, Present, and Future",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "INTRODUCTION",
+      "citations": [
+        {
+          "title": "nuscenes: A multimodal dataset for autonomous driving",
+          "citation": "H. Caesar, V. Bankiti et al. , 'nuscenes: A multimodal dataset for autonomous driving,' in CVPR , 2020."
+        },
+        {
+          "title": "Bevformer: Learning bird's-eye-view representation from multi-camera images via spatiotemporal transformers",
+          "citation": "Z. Li, W. Wang et al. , 'Bevformer: Learning bird's-eye-view representation from multi-camera images via spatiotemporal transformers,' in ECCV , 2022."
+        },
+        {
+          "title": "Deep learning for embodied vision navigation: A survey",
+          "citation": "F. Zhu, Y. Zhu et al. , 'Deep learning for embodied vision navigation: A survey,' arXiv , 2021."
+        },
+        {
+          "title": "Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments",
+          "citation": "P. Anderson, Q. Wu et al. , 'Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments,' in CVPR , 2018."
+        },
+        {
+          "title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks",
+          "citation": "S. Ren, K. He et al. , 'Faster r-cnn: Towards real-time object detection with region proposal networks,' NeurIPS , 2015."
+        },
+        {
+          "title": "Feature pyramid networks for object detection",
+          "citation": "T.-Y. Lin, P. Doll´ ar et al. , 'Feature pyramid networks for object detection,' in CVPR , 2017."
+        },
+        {
+          "title": "An end-to-end transformer model for 3d object detection",
+          "citation": "I. Misra, R. Girdhar et al. , 'An end-to-end transformer model for 3d object detection,' in ICCV , 2021."
+        },
+        {
+          "title": "Fully convolutional networks for semantic segmentation",
+          "citation": "J. Long, E. Shelhamer et al. , 'Fully convolutional networks for semantic segmentation,' in CVPR , 2015."
+        },
+        {
+          "title": "Per-pixel classification is not all you need for semantic segmentation",
+          "citation": "B. Cheng, A. Schwing et al. , 'Per-pixel classification is not all you need for semantic segmentation,' NeurIPS , 2021."
+        },
+        {
+          "title": "Mask r-cnn",
+          "citation": "K. He, G. Gkioxari et al. , 'Mask r-cnn,' in ICCV , 2017."
+        },
+        {
+          "title": "Panoptic segmentation,",
+          "citation": "A. Kirillov, K. He et al. , 'Panoptic segmentation,' in CVPR , 2019."
+        },
+        {
+          "title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks",
+          "citation": "S. Ren, K. He et al. , 'Faster r-cnn: Towards real-time object detection with region proposal networks,' NeurIPS , 2015."
+        },
+        {
+          "title": "Per-pixel classification is not all you need for semantic segmentation",
+          "citation": "B. Cheng, A. Schwing et al. , 'Per-pixel classification is not all you need for semantic segmentation,' NeurIPS , 2021."
+        },
+        {
+          "title": "Mask r-cnn",
+          "citation": "K. He, G. Gkioxari et al. , 'Mask r-cnn,' in ICCV , 2017."
+        },
+        {
+          "title": "Focal loss for dense object detection",
+          "citation": "T.-Y. Lin, P. Goyal et al. , 'Focal loss for dense object detection,' in ICCV , 2017."
+        },
+        {
+          "title": "End-to-end object detection with transformers",
+          "citation": "N. Carion, F. Massa et al. , 'End-to-end object detection with transformers,' in ECCV , 2020."
+        },
+        {
+          "title": "Masked-attention mask transformer for universal image segmentation",
+          "citation": "B. Cheng, I. Misra et al. , 'Masked-attention mask transformer for universal image segmentation,' in CVPR , 2022."
+        },
+        {
+          "title": "The pascal visual object classes challenge: A retrospective",
+          "citation": "M. Everingham, S. A. Eslami et al. , 'The pascal visual object classes challenge: A retrospective,' IJCV , 2015."
+        },
+        {
+          "title": "Microsoft coco: Common objects in context",
+          "citation": "T.-Y. Lin, M. Maire et al. , 'Microsoft coco: Common objects in context,' in ECCV , 2014."
+        },
+        {
+          "title": "Lvis: A dataset for large vocabulary instance segmentation",
+          "citation": "A. Gupta, P. Dollar et al. , 'Lvis: A dataset for large vocabulary instance segmentation,' in CVPR , 2019."
+        },
+        {
+          "title": "Zero-shot object detection,",
+          "citation": "A. Bansal, K. Sikka et al. , 'Zero-shot object detection,' in ECCV , 2018."
+        },
+        {
+          "title": "Zero-shot object detection: Learning to simultaneously recognize and localize novel concepts",
+          "citation": "S. Rahman, S. Khan et al. , 'Zero-shot object detection: Learning to simultaneously recognize and localize novel concepts,' in ACCV , 2019."
+        },
+        {
+          "title": "Zero shot detection,",
+          "citation": "P. Zhu, H. Wang et al. , 'Zero shot detection,' TCSVT , 2019."
+        },
+        {
+          "title": "Zero-shot semantic segmentation,",
+          "citation": "M. Bucher, T.-H. Vu et al. , 'Zero-shot semantic segmentation,' NeurIPS , 2019."
+        },
+        {
+          "title": "Zero-shot instance segmentation,",
+          "citation": "Y. Zheng, J. Wu et al. , 'Zero-shot instance segmentation,' in CVPR , 2021."
+        },
+        {
+          "title": "Distributed representations of words and phrases and their compositionality",
+          "citation": "T. Mikolov, I. Sutskever et al. , 'Distributed representations of words and phrases and their compositionality,' NeurIPS , 2013."
+        },
+        {
+          "title": "Glove: Global vectors for word representation",
+          "citation": "J. Pennington, R. Socher et al. , 'Glove: Global vectors for word representation,' in EMNLP , 2014."
+        },
+        {
+          "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+          "citation": "J. Devlin, M.-W. Chang et al. , 'Bert: Pre-training of deep bidirectional transformers for language understanding,' arXiv , 2018."
+        },
+        {
+          "title": "Open-vocabulary object detection via vision and language knowledge distillation",
+          "citation": "X. Gu, T.-Y. Lin et al. , 'Open-vocabulary object detection via vision and language knowledge distillation,' arXiv , 2021."
+        },
+        {
+          "title": "Open-vocabulary object detection via vision and language knowledge distillation",
+          "citation": "X. Gu, T.-Y. Lin et al. , 'Open-vocabulary object detection via vision and language knowledge distillation,' arXiv , 2021."
+        },
+        {
+          "title": "Open-vocabulary object detection using captions",
+          "citation": "A. Zareian, K. D. Rosa et al. , 'Open-vocabulary object detection using captions,' in CVPR , 2021."
+        },
+        {
+          "title": "Open-vocabulary instance segmentation via robust cross-modal pseudo-labeling",
+          "citation": "D. Huynh, J. Kuen et al. , 'Open-vocabulary instance segmentation via robust cross-modal pseudo-labeling,' in CVPR , 2022."
+        },
+        {
+          "title": "Scaling open-vocabulary image segmentation with image-level labels",
+          "citation": "G. Ghiasi, X. Gu et al. , 'Scaling open-vocabulary image segmentation with image-level labels,' in ECCV , 2022."
+        },
+        {
+          "title": "Language-driven semantic segmentation",
+          "citation": "B. Li, K. Q. Weinberger et al. , 'Language-driven semantic segmentation,' arXiv , 2022."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford, J. W. Kim et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford, J. W. Kim et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford, J. W. Kim et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+        },
+        {
+          "title": "Generative moment matching networks",
+          "citation": "Y. Li, K. Swersky et al. , 'Generative moment matching networks,' in ICML , 2015."
+        },
+        {
+          "title": "Generative adversarial networks,",
+          "citation": "I. Goodfellow, J. Pouget-Abadie et al. , 'Generative adversarial networks,' ACM Communications , 2020."
+        },
+        {
+          "title": "Learning structured output representation using deep conditional generative models",
+          "citation": "K. Sohn, H. Lee et al. , 'Learning structured output representation using deep conditional generative models,' NeurIPS , 2015."
+        },
+        {
+          "title": "Distributed representations of words and phrases and their compositionality",
+          "citation": "T. Mikolov, I. Sutskever et al. , 'Distributed representations of words and phrases and their compositionality,' NeurIPS , 2013."
+        },
+        {
+          "title": "Glove: Global vectors for word representation",
+          "citation": "J. Pennington, R. Socher et al. , 'Glove: Global vectors for word representation,' in EMNLP , 2014."
+        },
+        {
+          "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+          "citation": "J. Devlin, M.-W. Chang et al. , 'Bert: Pre-training of deep bidirectional transformers for language understanding,' arXiv , 2018."
+        },
+        {
+          "title": "Bag of tricks for efficient text classification",
+          "citation": "A. Joulin, E. Grave et al. , 'Bag of tricks for efficient text classification,' arXiv , 2016."
+        },
+        {
+          "title": "Open-vocabulary object detection using captions",
+          "citation": "A. Zareian, K. D. Rosa et al. , 'Open-vocabulary object detection using captions,' in CVPR , 2021."
+        },
+        {
+          "title": "End-to-end object detection with transformers",
+          "citation": "N. Carion, F. Massa et al. , 'End-to-end object detection with transformers,' in ECCV , 2020."
+        },
+        {
+          "title": "Visual genome: Connecting language and vision using crowdsourced dense image annotations",
+          "citation": "R. Krishna, Y. Zhu et al. , 'Visual genome: Connecting language and vision using crowdsourced dense image annotations,' IJCV , 2017."
+        },
+        {
+          "title": "Modeling context in referring expressions",
+          "citation": "L. Yu, P. Poirson et al. , 'Modeling context in referring expressions,' in ECCV , 2016."
+        },
+        {
+          "title": "Modeling context between objects for referring expression understanding",
+          "citation": "V. K. Nagaraja, V. I. Morariu et al. , 'Modeling context between objects for referring expression understanding,' in ECCV , 2016."
+        },
+        {
+          "title": "Visual prompt tuning,",
+          "citation": "M. Jia, L. Tang et al. , 'Visual prompt tuning,' in ECCV , 2022."
+        },
+        {
+          "title": "Side adapter network for open vocabulary semantic segmentation",
+          "citation": "M. Xu, Z. Zhang et al. , 'Side adapter network for openvocabulary semantic segmentation,' in CVPR , 2023."
+        },
+        {
+          "title": "Tip-adapter: Training-free clip-adapter for better vision-language modeling",
+          "citation": "R. Zhang, R. Fang et al. , 'Tip-adapter: Training-free clip-adapter for better vision-language modeling,' arXiv , 2021."
+        },
+        {
+          "title": "Vl-adapter: Parameter-efficient transfer learning for vision-and-language tasks",
+          "citation": "Y.-L. Sung, J. Cho et al. , 'Vl-adapter: Parameter-efficient transfer learning for vision-and-language tasks,' in CVPR , 2022."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "PRELIMINARIES",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Problem Definition",
+          "citations": [
+            {
+              "title": "Transductive learning for zero-shot object detection",
+              "citation": "S. Rahman, S. Khan et al. , 'Transductive learning for zero-shot object detection,' in ICCV , 2019."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Related Domains and Tasks",
+          "citations": [
+            {
+              "title": "Modeling context in referring expressions",
+              "citation": "L. Yu, P. Poirson et al. , 'Modeling context in referring expressions,' in ECCV , 2016."
+            },
+            {
+              "title": "Modeling context between objects for referring expression understanding",
+              "citation": "V. K. Nagaraja, V. I. Morariu et al. , 'Modeling context between objects for referring expression understanding,' in ECCV , 2016."
+            },
+            {
+              "title": "Referitgame: Referring to objects in photographs of natural scenes",
+              "citation": "S. Kazemzadeh, V. Ordonez et al. , 'Referitgame: Referring to objects in photographs of natural scenes,' in EMNLP , 2014."
+            },
+            {
+              "title": "Flickr30k entities: Collecting region-to-phrase correspondences for richer image-to-sentence models",
+              "citation": "B. A. Plummer, L. Wang et al. , 'Flickr30k entities: Collecting region-to-phrase correspondences for richer image-to-sentence models,' in IJCV , 2015."
+            },
+            {
+              "title": "Seqtr: A simple yet universal network for visual grounding",
+              "citation": "C. Zhu, Y. Zhou et al. , 'Seqtr: A simple yet universal network for visual grounding,' in ECCV , 2022."
+            },
+            {
+              "title": "Flickr30k entities: Collecting region-to-phrase correspondences for richer image-to-sentence models",
+              "citation": "B. A. Plummer, L. Wang et al. , 'Flickr30k entities: Collecting region-to-phrase correspondences for richer image-to-sentence models,' in IJCV , 2015."
+            },
+            {
+              "title": "Modeling context in referring expressions",
+              "citation": "L. Yu, P. Poirson et al. , 'Modeling context in referring expressions,' in ECCV , 2016."
+            },
+            {
+              "title": "Modeling context between objects for referring expression understanding",
+              "citation": "V. K. Nagaraja, V. I. Morariu et al. , 'Modeling context between objects for referring expression understanding,' in ECCV , 2016."
+            },
+            {
+              "title": "Referitgame: Referring to objects in photographs of natural scenes",
+              "citation": "S. Kazemzadeh, V. Ordonez et al. , 'Referitgame: Referring to objects in photographs of natural scenes,' in EMNLP , 2014."
+            },
+            {
+              "title": "Weakly supervised object localization and detection",
+              "citation": "D. Zhang, J. Han et al. , 'Weakly supervised object localization and detection: A survey,' TPAMI , 2021."
+            },
+            {
+              "title": "Weakly supervised deep detection networks",
+              "citation": "H. Bilen and A. Vedaldi, 'Weakly supervised deep detection networks,' in CVPR , 2016."
+            },
+            {
+              "title": "The overlooked elephant of object detection: Open set",
+              "citation": "A. Dhamija, M. Gunther et al. , 'The overlooked elephant of object detection: Open set,' in WACV , 2020."
+            },
+            {
+              "title": "Dropout sampling for robust object detection in open-set conditions",
+              "citation": "D. Miller, L. Nicholson et al. , 'Dropout sampling for robust object detection in open-set conditions,' in ICRA , 2018."
+            },
+            {
+              "title": "Bayesian semantic instance segmentation in open set world",
+              "citation": "T. Pham, T.-T. Do et al. , 'Bayesian semantic instance segmentation in open set world,' in ECCV , 2018."
+            },
+            {
+              "title": "Exemplar-based open-set panoptic segmentation network",
+              "citation": "J. Hwang, S. W. Oh et al. , 'Exemplar-based open-set panoptic segmentation network,' in CVPR , 2021."
+            },
+            {
+              "title": "Toward open set recognition,",
+              "citation": "W. J. Scheirer, A. de Rezende Rocha et al. , 'Toward open set recognition,' TPAMI , 2012."
+            },
+            {
+              "title": "Recent advances in open set recognition: A survey",
+              "citation": "C. Geng, S.-j. Huang et al. , 'Recent advances in open set recognition: A survey,' TPAMI , 2020."
+            },
+            {
+              "title": "Towards open world object detection",
+              "citation": "K. Joseph, S. Khan et al. , 'Towards open world object detection,' in CVPR , 2021."
+            },
+            {
+              "title": "Ow-detr: Open-world detection transformer",
+              "citation": "A. Gupta, S. Narayan et al. , 'Ow-detr: Open-world detection transformer,' in CVPR , 2022."
+            },
+            {
+              "title": "Deep metric learning for open world semantic segmentation",
+              "citation": "J. Cen, P. Yun et al. , 'Deep metric learning for open world semantic segmentation,' in ICCV , 2021."
+            },
+            {
+              "title": "Energy-based out-of-distribution detection",
+              "citation": "W. Liu, X. Wang et al. , 'Energy-based out-of-distribution detection,' NeurIPS , 2020."
+            },
+            {
+              "title": "Generalized out-of-distribution detection: A survey",
+              "citation": "J. Yang, K. Zhou et al. , 'Generalized out-of-distribution detection: A survey,' arXiv , 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "2.2.1",
+              "sec_title": "Visual Grounding.",
+              "citations": [
+                {
+                  "title": "Modeling context in referring expressions,",
+                  "citation": "L. Yu, P. Poirson et al. , 'Modeling context in referring expressions,' in ECCV , 2016."
+                },
+                {
+                  "title": "Modeling context between objects for referring expression understanding,",
+                  "citation": "V. K. Nagaraja, V. I. Morariu et al. , 'Modeling context between objects for referring expression understanding,' in ECCV , 2016."
+                },
+                {
+                  "title": "Referitgame: Referring to objects in photographs of natural scenes,",
+                  "citation": "S. Kazemzadeh, V. Ordonez et al. , 'Referitgame: Referring to objects in photographs of natural scenes,' in EMNLP , 2014."
+                },
+                {
+                  "title": "Flickr30k entities: Collecting region-to-phrase correspondences for richer image-to-sentence models,",
+                  "citation": "B. A. Plummer, L. Wang et al. , 'Flickr30k entities: Collecting region-to-phrase correspondences for richer image-to-sentence models,' in IJCV , 2015."
+                },
+                {
+                  "title": "Seqtr: A simple yet universal network for visual grounding,",
+                  "citation": "C. Zhu, Y. Zhou et al. , 'Seqtr: A simple yet universal network for visual grounding,' in ECCV , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.2",
+              "sec_title": "Weakly-Supervised Detection and Segmentation.",
+              "citations": [
+                {
+                  "title": "Weakly supervised object localization and detection: A survey,",
+                  "citation": "D. Zhang, J. Han et al. , 'Weakly supervised object localization and detection: A survey,' TPAMI , 2021."
+                },
+                {
+                  "title": "Weakly supervised deep detection networks,",
+                  "citation": "H. Bilen and A. Vedaldi, 'Weakly supervised deep detection networks,' in CVPR , 2016."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.3",
+              "sec_title": "Open-Set Detection and Segmentation.",
+              "citations": [
+                {
+                  "title": "The overlooked elephant of object detection: Open set,",
+                  "citation": "A. Dhamija, M. Gunther et al. , 'The overlooked elephant of object detection: Open set,' in WACV , 2020."
+                },
+                {
+                  "title": "Dropout sampling for robust object detection in open-set conditions,",
+                  "citation": "D. Miller, L. Nicholson et al. , 'Dropout sampling for robust object detection in open-set conditions,' in ICRA , 2018."
+                },
+                {
+                  "title": "Bayesian semantic instance segmentation in open set world,",
+                  "citation": "T. Pham, T.-T. Do et al. , 'Bayesian semantic instance segmentation in open set world,' in ECCV , 2018."
+                },
+                {
+                  "title": "Exemplar-based open-set panoptic segmentation network,",
+                  "citation": "J. Hwang, S. W. Oh et al. , 'Exemplar-based open-set panoptic segmentation network,' in CVPR , 2021."
+                },
+                {
+                  "title": "Toward open set recognition,",
+                  "citation": "W. J. Scheirer, A. de Rezende Rocha et al. , 'Toward open set recognition,' TPAMI , 2012."
+                },
+                {
+                  "title": "Recent advances in open set recognition: A survey,",
+                  "citation": "C. Geng, S.-j. Huang et al. , 'Recent advances in open set recognition: A survey,' TPAMI , 2020."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.4",
+              "sec_title": "Open-World Detection and Segmentation.",
+              "citations": [
+                {
+                  "title": "Towards open world object detection,",
+                  "citation": "K. Joseph, S. Khan et al. , 'Towards open world object detection,' in CVPR , 2021."
+                },
+                {
+                  "title": "Ow-detr: Open-world detection transformer,",
+                  "citation": "A. Gupta, S. Narayan et al. , 'Ow-detr: Open-world detection transformer,' in CVPR , 2022."
+                },
+                {
+                  "title": "Deep metric learning for open world semantic segmentation,",
+                  "citation": "J. Cen, P. Yun et al. , 'Deep metric learning for open world semantic segmentation,' in ICCV , 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.5",
+              "sec_title": "Out-of-Distribution Detection.",
+              "citations": [
+                {
+                  "title": "Energy-based out-of-distribution detection,",
+                  "citation": "W. Liu, X. Wang et al. , 'Energy-based out-of-distribution detection,' NeurIPS , 2020."
+                },
+                {
+                  "title": "Generalized out-of-distribution detection: A survey,",
+                  "citation": "J. Yang, K. Zhou et al. , 'Generalized out-of-distribution detection: A survey,' arXiv , 2021."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.3",
+          "sec_title": "Canonical Closed-Set Detectors and Segmentors",
+          "citations": [
+            {
+              "title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks",
+              "citation": "S. Ren, K. He et al. , 'Faster r-cnn: Towards real-time object detection with region proposal networks,' NeurIPS , 2015."
+            },
+            {
+              "title": "Fast r-cnn",
+              "citation": "R. Girshick, 'Fast r-cnn,' in ICCV , 2015."
+            },
+            {
+              "title": "Fcos: Fully convolutional one-stage object detection",
+              "citation": "Z. Tian, C. Shen et al. , 'Fcos: Fully convolutional one-stage object detection,' in ICCV , 2019."
+            },
+            {
+              "title": "End-to-end object detection with transformers",
+              "citation": "N. Carion, F. Massa et al. , 'End-to-end object detection with transformers,' in ECCV , 2020."
+            },
+            {
+              "title": "Deformable detr: Deformable transformers for end-to-end object detection",
+              "citation": "X. Zhu, W. Su et al. , 'Deformable detr: Deformable transformers for end-to-end object detection,' in ICLR , 2021."
+            },
+            {
+              "title": "Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs",
+              "citation": "L.-C. Chen, G. Papandreou et al. , 'Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs,' TPAMI , 2017."
+            },
+            {
+              "title": "Encoder-decoder with atrous separable convolution for semantic image segmentation",
+              "citation": "L.-C. Chen, Y. Zhu et al. , 'Encoder-decoder with atrous separable convolution for semantic image segmentation,' in ECCV , 2018."
+            },
+            {
+              "title": "Fully convolutional networks for semantic segmentation",
+              "citation": "J. Long, E. Shelhamer et al. , 'Fully convolutional networks for semantic segmentation,' in CVPR , 2015."
+            },
+            {
+              "title": "Mask r-cnn",
+              "citation": "K. He, G. Gkioxari et al. , 'Mask r-cnn,' in ICCV , 2017."
+            },
+            {
+              "title": "Per-pixel classification is not all you need for semantic segmentation",
+              "citation": "B. Cheng, A. Schwing et al. , 'Per-pixel classification is not all you need for semantic segmentation,' NeurIPS , 2021."
+            },
+            {
+              "title": "Masked-attention mask transformer for universal image segmentation",
+              "citation": "B. Cheng, I. Misra et al. , 'Masked-attention mask transformer for universal image segmentation,' in CVPR , 2022."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "2.3.1",
+              "sec_title": "Object Detection.",
+              "citations": [
+                {
+                  "title": "Faster r-cnn: Towards real-time object detection with region proposal networks,",
+                  "citation": "S. Ren, K. He et al. , 'Faster r-cnn: Towards real-time object detection with region proposal networks,' NeurIPS , 2015."
+                },
+                {
+                  "title": "Fast r-cnn",
+                  "citation": "R. Girshick, 'Fast r-cnn,' in ICCV , 2015."
+                },
+                {
+                  "title": "Fcos: Fully convolutional one-stage object detection,",
+                  "citation": "Z. Tian, C. Shen et al. , 'Fcos: Fully convolutional one-stage object detection,' in ICCV , 2019."
+                },
+                {
+                  "title": "End-to-end object detection with transformers,",
+                  "citation": "N. Carion, F. Massa et al. , 'End-to-end object detection with transformers,' in ECCV , 2020."
+                },
+                {
+                  "title": "Deformable detr: Deformable transformers for end-to-end object detection,",
+                  "citation": "X. Zhu, W. Su et al. , 'Deformable detr: Deformable transformers for end-to-end object detection,' in ICLR , 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.3.2",
+              "sec_title": "Segmentation.",
+              "citations": [
+                {
+                  "title": "Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs,",
+                  "citation": "L.-C. Chen, G. Papandreou et al. , 'Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs,' TPAMI , 2017."
+                },
+                {
+                  "title": "Encoder-decoder with atrous separable convolution for semantic image segmentation,",
+                  "citation": "L.-C. Chen, Y. Zhu et al. , 'Encoder-decoder with atrous separable convolution for semantic image segmentation,' in ECCV , 2018."
+                },
+                {
+                  "title": "Fully convolutional networks for semantic segmentation,",
+                  "citation": "J. Long, E. Shelhamer et al. , 'Fully convolutional networks for semantic segmentation,' in CVPR , 2015."
+                },
+                {
+                  "title": "Mask r-cnn",
+                  "citation": "K. He, G. Gkioxari et al. , 'Mask r-cnn,' in ICCV , 2017."
+                },
+                {
+                  "title": "Per-pixel classification is not all you need for semantic segmentation,",
+                  "citation": "B. Cheng, A. Schwing et al. , 'Per-pixel classification is not all you need for semantic segmentation,' NeurIPS , 2021."
+                },
+                {
+                  "title": "Masked-attention mask transformer for universal image segmentation,",
+                  "citation": "B. Cheng, I. Misra et al. , 'Masked-attention mask transformer for universal image segmentation,' in CVPR , 2022."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision,",
+                  "citation": "A. Radford, J. W. Kim et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+                },
+                {
+                  "title": "Scaling up visual and vision-language representation learning with noisy text supervision,",
+                  "citation": "C. Jia, Y. Yang et al. , 'Scaling up visual and vision-language representation learning with noisy text supervision,' in ICML , 2021."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.4",
+          "sec_title": "Large Vision-Language Models (VLMs)",
+          "citations": [
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford, J. W. Kim et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+            },
+            {
+              "title": "Scaling up visual and vision-language representation learning with noisy text supervision",
+              "citation": "C. Jia, Y. Yang et al. , 'Scaling up visual and vision-language representation learning with noisy text supervision,' in ICML , 2021."
+            },
+            {
+              "title": "Emerging properties in selfsupervised vision transformers",
+              "citation": "M. Caron, H. Touvron et al. , 'Emerging properties in selfsupervised vision transformers,' in ICCV , 2021."
+            },
+            {
+              "title": "Dinov2: Learning robust visual features without supervision",
+              "citation": "M. Oquab, T. Darcet et al. , 'Dinov2: Learning robust visual features without supervision,' arXiv , 2023."
+            },
+            {
+              "title": "Masked autoencoders are scalable vision learners",
+              "citation": "K. He, X. Chen et al. , 'Masked autoencoders are scalable vision learners,' in CVPR , 2022."
+            },
+            {
+              "title": "When and why vision-language models behave like bags-of-words, and what to do about it?",
+              "citation": "M. Yuksekgonul, F. Bianchi et al. , 'When and why visionlanguage models behave like bags-of-words, and what to do about it?' in ICLR , 2022."
+            },
+            {
+              "title": "Denoising diffusion probabilistic models",
+              "citation": "J. Ho, A. Jain et al. , 'Denoising diffusion probabilistic models,' NeurIPS , 2020."
+            },
+            {
+              "title": "High-resolution image synthesis with latent diffusion models",
+              "citation": "R. Rombach, A. Blattmann et al. , 'High-resolution image synthesis with latent diffusion models,' in CVPR , 2022."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford, J. W. Kim et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+            },
+            {
+              "title": "Clip surgery for better explainability with enhancement in open-vocabulary tasks",
+              "citation": "Y. Li, H. Wang et al. , 'Clip surgery for better explainability with enhancement in open-vocabulary tasks,' arXiv , 2023."
+            },
+            {
+              "title": "CLIPSelf: Vision transformer distills itself for open-vocabulary dense prediction",
+              "citation": "S. Wu, W. Zhang et al. , 'CLIPSelf: Vision transformer distills itself for open-vocabulary dense prediction,' in ICLR , 2024."
+            },
+            {
+              "title": "When and why vision-language models behave like bags-of-words, and what to do about it?",
+              "citation": "M. Yuksekgonul, F. Bianchi et al. , 'When and why visionlanguage models behave like bags-of-words, and what to do about it?' in ICLR , 2022."
+            },
+            {
+              "title": "Visual prompt tuning,",
+              "citation": "M. Jia, L. Tang et al. , 'Visual prompt tuning,' in ECCV , 2022."
+            },
+            {
+              "title": "Learning to prompt for vision-language models",
+              "citation": "K. Zhou, J. Yang et al. , 'Learning to prompt for vision-language models,' IJCV , 2022."
+            },
+            {
+              "title": "Side adapter network for open vocabulary semantic segmentation",
+              "citation": "M. Xu, Z. Zhang et al. , 'Side adapter network for openvocabulary semantic segmentation,' in CVPR , 2023."
+            },
+            {
+              "title": "Tip-adapter: Training-free clip-adapter for better vision-language modeling",
+              "citation": "R. Zhang, R. Fang et al. , 'Tip-adapter: Training-free clip-adapter for better vision-language modeling,' arXiv , 2021."
+            },
+            {
+              "title": "Vl-adapter: Parameter-efficient transfer learning for vision-and-language tasks",
+              "citation": "Y.-L. Sung, J. Cho et al. , 'Vl-adapter: Parameter-efficient transfer learning for vision-and-language tasks,' in CVPR , 2022."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "2.4.1",
+              "sec_title": "Self-Supervised Learning with Local Semantics.",
+              "citations": [
+                {
+                  "title": "Emerging properties in selfsupervised vision transformers,",
+                  "citation": "M. Caron, H. Touvron et al. , 'Emerging properties in selfsupervised vision transformers,' in ICCV , 2021."
+                },
+                {
+                  "title": "Dinov2: Learning robust visual features without supervision,",
+                  "citation": "M. Oquab, T. Darcet et al. , 'Dinov2: Learning robust visual features without supervision,' arXiv , 2023."
+                },
+                {
+                  "title": "Masked autoencoders are scalable vision learners,",
+                  "citation": "K. He, X. Chen et al. , 'Masked autoencoders are scalable vision learners,' in CVPR , 2022."
+                },
+                {
+                  "title": "When and why visionlanguage models behave like bags-of-words, and what to do about it?",
+                  "citation": "M. Yuksekgonul, F. Bianchi et al. , 'When and why visionlanguage models behave like bags-of-words, and what to do about it?' in ICLR , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.4.2",
+              "sec_title": "Text-to-Image (T2I) Diffusion Models.",
+              "citations": [
+                {
+                  "title": "Denoising diffusion probabilistic models,",
+                  "citation": "J. Ho, A. Jain et al. , 'Denoising diffusion probabilistic models,' NeurIPS , 2020."
+                },
+                {
+                  "title": "High-resolution image synthesis with latent diffusion models,",
+                  "citation": "R. Rombach, A. Blattmann et al. , 'High-resolution image synthesis with latent diffusion models,' in CVPR , 2022."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision,",
+                  "citation": "A. Radford, J. W. Kim et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+                },
+                {
+                  "title": "Clip surgery for better explainability with enhancement in open-vocabulary tasks,",
+                  "citation": "Y. Li, H. Wang et al. , 'Clip surgery for better explainability with enhancement in open-vocabulary tasks,' arXiv , 2023."
+                },
+                {
+                  "title": "CLIPSelf: Vision transformer distills itself for open-vocabulary dense prediction,",
+                  "citation": "S. Wu, W. Zhang et al. , 'CLIPSelf: Vision transformer distills itself for open-vocabulary dense prediction,' in ICLR , 2024."
+                },
+                {
+                  "title": "When and why visionlanguage models behave like bags-of-words, and what to do about it?",
+                  "citation": "M. Yuksekgonul, F. Bianchi et al. , 'When and why visionlanguage models behave like bags-of-words, and what to do about it?' in ICLR , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.4.3",
+              "sec_title": "Parameter-Efficient Fine-Tuning (PEFT).",
+              "citations": [
+                {
+                  "title": "Distributed representations of words and phrases and their compositionality,",
+                  "citation": "T. Mikolov, I. Sutskever et al. , 'Distributed representations of words and phrases and their compositionality,' NeurIPS , 2013."
+                },
+                {
+                  "title": "Glove: Global vectors for word representation,",
+                  "citation": "J. Pennington, R. Socher et al. , 'Glove: Global vectors for word representation,' in EMNLP , 2014."
+                },
+                {
+                  "title": "Bert: Pre-training of deep bidirectional transformers for language understanding,",
+                  "citation": "J. Devlin, M.-W. Chang et al. , 'Bert: Pre-training of deep bidirectional transformers for language understanding,' arXiv , 2018."
+                },
+                {
+                  "title": "Side adapter network for openvocabulary semantic segmentation,",
+                  "citation": "M. Xu, Z. Zhang et al. , 'Side adapter network for openvocabulary semantic segmentation,' in CVPR , 2023."
+                },
+                {
+                  "title": "Bag of tricks for efficient text classification,",
+                  "citation": "A. Joulin, E. Grave et al. , 'Bag of tricks for efficient text classification,' arXiv , 2016."
+                },
+                {
+                  "title": "Visual prompt tuning,",
+                  "citation": "M. Jia, L. Tang et al. , 'Visual prompt tuning,' in ECCV , 2022."
+                },
+                {
+                  "title": "Tip-adapter: Training-free clip-adapter for better vision-language modeling,",
+                  "citation": "R. Zhang, R. Fang et al. , 'Tip-adapter: Training-free clip-adapter for better vision-language modeling,' arXiv , 2021."
+                },
+                {
+                  "title": "Vl-adapter: Parameter-efficient transfer learning for vision-and-language tasks,",
+                  "citation": "Y.-L. Sung, J. Cho et al. , 'Vl-adapter: Parameter-efficient transfer learning for vision-and-language tasks,' in CVPR , 2022."
+                },
+                {
+                  "title": "Learning to prompt for vision-language models,",
+                  "citation": "K. Zhou, J. Yang et al. , 'Learning to prompt for vision-language models,' IJCV , 2022."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "ZERO-SHOT DETECTION (ZSD)",
+      "citations": [
+        {
+          "title": "Distributed representations of words and phrases and their compositionality",
+          "citation": "T. Mikolov, I. Sutskever et al. , 'Distributed representations of words and phrases and their compositionality,' NeurIPS , 2013."
+        },
+        {
+          "title": "Glove: Global vectors for word representation",
+          "citation": "J. Pennington, R. Socher et al. , 'Glove: Global vectors for word representation,' in EMNLP , 2014."
+        },
+        {
+          "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+          "citation": "J. Devlin, M.-W. Chang et al. , 'Bert: Pre-training of deep bidirectional transformers for language understanding,' arXiv , 2018."
+        },
+        {
+          "title": "Bag of tricks for efficient text classification",
+          "citation": "A. Joulin, E. Grave et al. , 'Bag of tricks for efficient text classification,' arXiv , 2016."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Visual-Semantic Space Mapping",
+          "citations": [
+            {
+              "title": "Semantic projection network for zero-and few-label semantic segmentation",
+              "citation": "Y. Xian, S. Choudhury et al. , 'Semantic projection network for zero-and few-label semantic segmentation,' in CVPR , 2019."
+            },
+            {
+              "title": "Uncertainty-aware learning for zero-shot semantic segmentation",
+              "citation": "P. Hu, S. Sclaroff et al. , 'Uncertainty-aware learning for zero-shot semantic segmentation,' NeurIPS , 2020."
+            },
+            {
+              "title": "Exploiting a joint embedding space for generalized zero-shot semantic segmentation",
+              "citation": "D. Baek, Y. Oh et al. , 'Exploiting a joint embedding space for generalized zero-shot semantic segmentation,' in ICCV , 2021."
+            },
+            {
+              "title": "Zero-shot semantic segmentation via variational mapping",
+              "citation": "N. Kato, T. Yamasaki et al. , 'Zero-shot semantic segmentation via variational mapping,' in ICCVW , 2019."
+            },
+            {
+              "title": "Panet: Few-shot image semantic segmentation with prototype alignment",
+              "citation": "K. Wang, J. H. Liew et al. , 'Panet: Few-shot image semantic segmentation with prototype alignment,' in ICCV , 2019."
+            },
+            {
+              "title": "Prototypical matching and open set rejection for zero-shot semantic segmentation",
+              "citation": "H. Zhang and H. Ding, 'Prototypical matching and open set rejection for zero-shot semantic segmentation,' in ICCV , 2021."
+            },
+            {
+              "title": "Exploiting a joint embedding space for generalized zero-shot semantic segmentation",
+              "citation": "D. Baek, Y. Oh et al. , 'Exploiting a joint embedding space for generalized zero-shot semantic segmentation,' in ICCV , 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.1.1",
+              "sec_title": "Learning a Mapping from Visual to Semantic Space",
+              "citations": [
+                {
+                  "title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks",
+                  "citation": "S. Ren, K. He et al. , 'Faster r-cnn: Towards real-time object detection with region proposal networks,' NeurIPS , 2015."
+                },
+                {
+                  "title": "Zero-shot object detection,",
+                  "citation": "A. Bansal, K. Sikka et al. , 'Zero-shot object detection,' in ECCV , 2018."
+                },
+                {
+                  "title": "Glove: Global vectors for word representation",
+                  "citation": "J. Pennington, R. Socher et al. , 'Glove: Global vectors for word representation,' in EMNLP , 2014."
+                },
+                {
+                  "title": "Wordnet: a lexical database for english",
+                  "citation": "G. A. Miller, 'Wordnet: a lexical database for english,' ACM Communications , 1995."
+                },
+                {
+                  "title": "Zero-shot object detection: Learning to simultaneously recognize and localize novel concepts",
+                  "citation": "S. Rahman, S. Khan et al. , 'Zero-shot object detection: Learning to simultaneously recognize and localize novel concepts,' in ACCV , 2019."
+                },
+                {
+                  "title": "Zero-shot object detection: Joint recognition and localization of novel concepts",
+                  "citation": "S. Rahman, S. H. Khan et al. , 'Zero-shot object detection: Joint recognition and localization of novel concepts,' IJCV , 2020."
+                },
+                {
+                  "title": "Context-aware zero-shot recognition",
+                  "citation": "R. Luo, N. Zhang et al. , 'Context-aware zero-shot recognition,' in AAAI , 2020."
+                },
+                {
+                  "title": "Zero-shot object detection with textual descriptions",
+                  "citation": "Z. Li, L. Yao et al. , 'Zero-shot object detection with textual descriptions,' in AAAI , 2019."
+                },
+                {
+                  "title": "Improved visual-semantic alignment for zero-shot object detection",
+                  "citation": "S. Rahman, S. Khan et al. , 'Improved visual-semantic alignment for zero-shot object detection,' in AAAI , 2020."
+                },
+                {
+                  "title": "Background learnable cascade for zero-shot object detection",
+                  "citation": "Y. Zheng, R. Huang et al. , 'Background learnable cascade for zero-shot object detection,' in ACCV , 2020."
+                },
+                {
+                  "title": "Transductive learning for zero-shot object detection",
+                  "citation": "S. Rahman, S. Khan et al. , 'Transductive learning for zero-shot object detection,' in ICCV , 2019."
+                },
+                {
+                  "title": "Frustratingly simple but effective zero-shot detection and segmentation: Analysis and a strong baseline",
+                  "citation": "S. Khandelwal, A. Nambirajan et al. , 'Frustratingly simple but effective zero-shot detection and segmentation: Analysis and a strong baseline,' arXiv , 2023."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T.-Y. Lin, P. Goyal et al. , 'Focal loss for dense object detection,' in ICCV , 2017."
+                },
+                {
+                  "title": "Yolo9000: Better, faster, stronger,",
+                  "citation": "J. Redmon and A. Farhadi, 'Yolo9000: Better, faster, stronger,' in CVPR , 2017."
+                },
+                {
+                  "title": "Yolov3: An incremental improvement,",
+                  "citation": "--, 'Yolov3: An incremental improvement,' arXiv , 2018."
+                },
+                {
+                  "title": "Zero shot detection,",
+                  "citation": "P. Zhu, H. Wang et al. , 'Zero shot detection,' TCSVT , 2019."
+                },
+                {
+                  "title": "Yolov3: An incremental improvement,",
+                  "citation": "--, 'Yolov3: An incremental improvement,' arXiv , 2018."
+                },
+                {
+                  "title": "Zero-shot object detection by hybrid region embedding",
+                  "citation": "B. Demirel, R. G. Cinbis et al. , 'Zero-shot object detection by hybrid region embedding,' arXiv , 2018."
+                },
+                {
+                  "title": "Improved visual-semantic alignment for zero-shot object detection",
+                  "citation": "S. Rahman, S. Khan et al. , 'Improved visual-semantic alignment for zero-shot object detection,' in AAAI , 2020."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T.-Y. Lin, P. Goyal et al. , 'Focal loss for dense object detection,' in ICCV , 2017."
+                },
+                {
+                  "title": "Zero-shot object detection by hybrid region embedding",
+                  "citation": "B. Demirel, R. G. Cinbis et al. , 'Zero-shot object detection by hybrid region embedding,' arXiv , 2018."
+                },
+                {
+                  "title": "Context-guided super-class inference for zero-shot detection",
+                  "citation": "Y. Li, Y. Shao et al. , 'Context-guided super-class inference for zero-shot detection,' in CVPRW , 2020."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.2",
+              "sec_title": "Learning a Joint Mapping of Visual-Semantic Space",
+              "citations": [
+                {
+                  "title": "A multi-space approach to zero-shot object detection",
+                  "citation": "D. Gupta, A. Anantharaman et al. , 'A multi-space approach to zero-shot object detection,' in WACV , 2020."
+                },
+                {
+                  "title": "Zero-shot object detection by hybrid region embedding",
+                  "citation": "B. Demirel, R. G. Cinbis et al. , 'Zero-shot object detection by hybrid region embedding,' arXiv , 2018."
+                },
+                {
+                  "title": "Context-guided super-class inference for zero-shot detection",
+                  "citation": "Y. Li, Y. Shao et al. , 'Context-guided super-class inference for zero-shot detection,' in CVPRW , 2020."
+                },
+                {
+                  "title": "Inference fusion with associative semantics for unseen object detection",
+                  "citation": "Y. Li, P. Li et al. , 'Inference fusion with associative semantics for unseen object detection,' in AAAI , 2021."
+                },
+                {
+                  "title": "Semantics-guided contrastive network for zero-shot object detection",
+                  "citation": "C. Yan, X. Chang et al. , 'Semantics-guided contrastive network for zero-shot object detection,' TPAMI , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.3",
+              "sec_title": "Learning a Mapping from Semantic to Visual Space",
+              "citations": [
+                {
+                  "title": "Zero-shot object detection via learning an embedding from semantic space to visual space",
+                  "citation": "L. Zhang, X. Wang et al. , 'Zero-shot object detection via learning an embedding from semantic space to visual space,' in IJCAI , 2020."
+                },
+                {
+                  "title": "Improving zero-shot learning by mitigating the hubness problem",
+                  "citation": "G. Dinu, A. Lazaridou et al. , 'Improving zero-shot learning by mitigating the hubness problem,' arXiv , 2014."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.4",
+              "sec_title": "Learning a Mapping from Visual to Semantic Space.",
+              "citations": [
+                {
+                  "title": "Semantic projection network for zero-and few-label semantic segmentation,",
+                  "citation": "Y. Xian, S. Choudhury et al. , 'Semantic projection network for zero-and few-label semantic segmentation,' in CVPR , 2019."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.5",
+              "sec_title": "Learning a Joint Mapping of Visual-Semantic Space.",
+              "citations": [
+                {
+                  "title": "Uncertainty-aware learning for zero-shot semantic segmentation,",
+                  "citation": "P. Hu, S. Sclaroff et al. , 'Uncertainty-aware learning for zero-shot semantic segmentation,' NeurIPS , 2020."
+                },
+                {
+                  "title": "Exploiting a joint embedding space for generalized zero-shot semantic segmentation,",
+                  "citation": "D. Baek, Y. Oh et al. , 'Exploiting a joint embedding space for generalized zero-shot semantic segmentation,' in ICCV , 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.6",
+              "sec_title": "Learning a Mapping from Semantic to Visual Space.",
+              "citations": [
+                {
+                  "title": "Zero-shot semantic segmentation via variational mapping,",
+                  "citation": "N. Kato, T. Yamasaki et al. , 'Zero-shot semantic segmentation via variational mapping,' in ICCVW , 2019."
+                },
+                {
+                  "title": "Panet: Few-shot image semantic segmentation with prototype alignment,",
+                  "citation": "K. Wang, J. H. Liew et al. , 'Panet: Few-shot image semantic segmentation with prototype alignment,' in ICCV , 2019."
+                },
+                {
+                  "title": "Prototypical matching and open set rejection for zero-shot semantic segmentation,",
+                  "citation": "H. Zhang and H. Ding, 'Prototypical matching and open set rejection for zero-shot semantic segmentation,' in ICCV , 2021."
+                },
+                {
+                  "title": "Exploiting a joint embedding space for generalized zero-shot semantic segmentation,",
+                  "citation": "D. Baek, Y. Oh et al. , 'Exploiting a joint embedding space for generalized zero-shot semantic segmentation,' in ICCV , 2021."
+                },
+                {
+                  "title": "Semantic projection network for zero-and few-label semantic segmentation,",
+                  "citation": "Y. Xian, S. Choudhury et al. , 'Semantic projection network for zero-and few-label semantic segmentation,' in CVPR , 2019."
+                },
+                {
+                  "title": "Generative moment matching networks,",
+                  "citation": "Y. Li, K. Swersky et al. , 'Generative moment matching networks,' in ICML , 2015."
+                },
+                {
+                  "title": "Consistent structural relation learning for zero-shot segmentation,",
+                  "citation": "P. Li, Y. Wei et al. , 'Consistent structural relation learning for zero-shot segmentation,' NeurIPS , 2020."
+                },
+                {
+                  "title": "Context-aware feature generation for zeroshot semantic segmentation,",
+                  "citation": "Z. Gu, S. Zhou et al. , 'Context-aware feature generation for zeroshot semantic segmentation,' in ACM MM , 2020."
+                },
+                {
+                  "title": "Sign: Spatial-information incorporated generative network for generalized zero-shot semantic segmentation,",
+                  "citation": "J. Cheng, S. Nandi et al. , 'Sign: Spatial-information incorporated generative network for generalized zero-shot semantic segmentation,' in ICCV , 2021."
+                },
+                {
+                  "title": "Zero-shot semantic segmentation,",
+                  "citation": "M. Bucher, T.-H. Vu et al. , 'Zero-shot semantic segmentation,' NeurIPS , 2019."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Novel Visual Feature Synthesis",
+          "citations": [
+            {
+              "title": "Semantic projection network for zero-and few-label semantic segmentation",
+              "citation": "Y. Xian, S. Choudhury et al. , 'Semantic projection network for zero-and few-label semantic segmentation,' in CVPR , 2019."
+            },
+            {
+              "title": "Zero-shot semantic segmentation,",
+              "citation": "M. Bucher, T.-H. Vu et al. , 'Zero-shot semantic segmentation,' NeurIPS , 2019."
+            },
+            {
+              "title": "Generative moment matching networks",
+              "citation": "Y. Li, K. Swersky et al. , 'Generative moment matching networks,' in ICML , 2015."
+            },
+            {
+              "title": "Consistent structural relation learning for zero-shot segmentation",
+              "citation": "P. Li, Y. Wei et al. , 'Consistent structural relation learning for zero-shot segmentation,' NeurIPS , 2020."
+            },
+            {
+              "title": "Context-aware feature generation for zeroshot semantic segmentation",
+              "citation": "Z. Gu, S. Zhou et al. , 'Context-aware feature generation for zeroshot semantic segmentation,' in ACM MM , 2020."
+            },
+            {
+              "title": "Context-aware feature generation for zeroshot semantic segmentation",
+              "citation": "Z. Gu, S. Zhou et al. , 'Context-aware feature generation for zeroshot semantic segmentation,' in ACM MM , 2020."
+            },
+            {
+              "title": "Sign: Spatial-information incorporated generative network for generalized zero-shot semantic segmentation",
+              "citation": "J. Cheng, S. Nandi et al. , 'Sign: Spatial-information incorporated generative network for generalized zero-shot semantic segmentation,' in ICCV , 2021."
+            },
+            {
+              "title": "Zero-shot semantic segmentation,",
+              "citation": "M. Bucher, T.-H. Vu et al. , 'Zero-shot semantic segmentation,' NeurIPS , 2019."
+            },
+            {
+              "title": "Context-aware feature generation for zeroshot semantic segmentation",
+              "citation": "Z. Gu, S. Zhou et al. , 'Context-aware feature generation for zeroshot semantic segmentation,' in ACM MM , 2020."
+            },
+            {
+              "title": "Sign: Spatial-information incorporated generative network for generalized zero-shot semantic segmentation",
+              "citation": "J. Cheng, S. Nandi et al. , 'Sign: Spatial-information incorporated generative network for generalized zero-shot semantic segmentation,' in ICCV , 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.2.1",
+              "sec_title": "Overview.",
+              "citations": [
+                {
+                  "title": "Don't even look once: Synthesizing features for zero-shot detection",
+                  "citation": "P. Zhu, H. Wang et al. , 'Don't even look once: Synthesizing features for zero-shot detection,' in CVPR , 2020."
+                },
+                {
+                  "title": "Learning structured output representation using deep conditional generative models,",
+                  "citation": "K. Sohn, H. Lee et al. , 'Learning structured output representation using deep conditional generative models,' NeurIPS , 2015."
+                },
+                {
+                  "title": "Synthesizing the unseen for zero-shot object detection,",
+                  "citation": "N. Hayat, M. Hayat et al. , 'Synthesizing the unseen for zero-shot object detection,' in ACCV , 2020."
+                },
+                {
+                  "title": "Mode seeking generative adversarial networks for diverse image synthesis,",
+                  "citation": "Q. Mao, H.-Y. Lee et al. , 'Mode seeking generative adversarial networks for diverse image synthesis,' in CVPR , 2019."
+                },
+                {
+                  "title": "Wasserstein generative adversarial networks,",
+                  "citation": "M. Arjovsky, S. Chintala et al. , 'Wasserstein generative adversarial networks,' in ICML , 2017."
+                },
+                {
+                  "title": "Gtnet: Generative transfer network for zero-shot object detection,",
+                  "citation": "S. Zhao, C. Gao et al. , 'Gtnet: Generative transfer network for zero-shot object detection,' in AAAI , 2020."
+                },
+                {
+                  "title": "Robust region feature synthesizer for zero-shot object detection,",
+                  "citation": "P. Huang, J. Han et al. , 'Robust region feature synthesizer for zero-shot object detection,' in CVPR , 2022."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "ZERO-SHOT SEGMENTATION (ZSS)",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Zero-Shot Semantic Segmentation (ZSSS)",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Visual-Semantic Space Mapping (1)",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.2",
+              "sec_title": "Novel Visual Feature Synthesis (1)",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Zero-Shot Instance Segmentation (ZSIS)",
+          "citations": [
+            {
+              "title": "Zero-shot instance segmentation,",
+              "citation": "Y. Zheng, J. Wu et al. , 'Zero-shot instance segmentation,' in CVPR , 2021."
+            },
+            {
+              "title": "Zero-shot object detection,",
+              "citation": "A. Bansal, K. Sikka et al. , 'Zero-shot object detection,' in ECCV , 2018."
+            },
+            {
+              "title": "Background learnable cascade for zero-shot object detection",
+              "citation": "Y. Zheng, R. Huang et al. , 'Background learnable cascade for zero-shot object detection,' in ACCV , 2020."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.2.1",
+              "sec_title": "Zheng et al.",
+              "citations": [
+                {
+                  "title": "Zero-shot instance segmentation,",
+                  "citation": "Y. Zheng, J. Wu et al. , 'Zero-shot instance segmentation,' in CVPR , 2021."
+                },
+                {
+                  "title": "Zero-shot object detection,",
+                  "citation": "A. Bansal, K. Sikka et al. , 'Zero-shot object detection,' in ECCV , 2018."
+                },
+                {
+                  "title": "Background learnable cascade for zero-shot object detection,",
+                  "citation": "Y. Zheng, R. Huang et al. , 'Background learnable cascade for zero-shot object detection,' in ACCV , 2020."
+                },
+                {
+                  "title": "Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning,",
+                  "citation": "P. Sharma, N. Ding et al. , 'Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning,' in ACL , 2018."
+                },
+                {
+                  "title": "Conceptual 12m: Pushing web-scale image-text pre-training to recognize long-tail visual concepts,",
+                  "citation": "S. Changpinyo, P. Sharma et al. , 'Conceptual 12m: Pushing web-scale image-text pre-training to recognize long-tail visual concepts,' in CVPR , 2021."
+                },
+                {
+                  "title": "Microsoft coco captions: Data collection and evaluation server,",
+                  "citation": "X. Chen, H. Fang et al. , 'Microsoft coco captions: Data collection and evaluation server,' arXiv , 2015."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "OPEN-VOCABULARY DETECTION (OVD)",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "Region-Aware Training",
+          "citations": [
+            {
+              "title": "Scaling open-vocabulary image segmentation with image-level labels",
+              "citation": "G. Ghiasi, X. Gu et al. , 'Scaling open-vocabulary image segmentation with image-level labels,' in ECCV , 2022."
+            },
+            {
+              "title": "Silc: Improving vision language pretraining with self-distillation",
+              "citation": "M. F. Naeem, Y. Xian et al. , 'Silc: Improving vision language pretraining with self-distillation,' arXiv , 2023."
+            },
+            {
+              "title": "Emerging properties in self-supervised vision transformers",
+              "citation": "M. Caron, H. Touvron et al. , 'Emerging properties in selfsupervised vision transformers,' in ICCV , 2021."
+            },
+            {
+              "title": "Dinov2: Learning robust visual features without supervision",
+              "citation": "M. Oquab, T. Darcet et al. , 'Dinov2: Learning robust visual features without supervision,' arXiv , 2023."
+            },
+            {
+              "title": "Groupvit: Semantic segmentation emerges from text supervision",
+              "citation": "J. Xu, S. De Mello et al. , 'Groupvit: Semantic segmentation emerges from text supervision,' in CVPR , 2022."
+            },
+            {
+              "title": "Categorical reparameterization with gumbel-softmax",
+              "citation": "E. Jang, S. Gu et al. , 'Categorical reparameterization with gumbel-softmax,' arXiv , 2016."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford, J. W. Kim et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+            },
+            {
+              "title": "Open-world semantic segmentation via contrasting and clustering vision-language embedding",
+              "citation": "Q. Liu, Y. Wen et al. , 'Open-world semantic segmentation via contrasting and clustering vision-language embedding,' in ECCV , 2022."
+            },
+            {
+              "title": "Emerging properties in self-supervised vision transformers",
+              "citation": "M. Caron, H. Touvron et al. , 'Emerging properties in selfsupervised vision transformers,' in ICCV , 2021."
+            },
+            {
+              "title": "Unsupervised learning of visual features by contrasting cluster assignments",
+              "citation": "M. Caron, I. Misra et al. , 'Unsupervised learning of visual features by contrasting cluster assignments,' NeurIPS , 2020."
+            },
+            {
+              "title": "On mutual information maximization for representation learning",
+              "citation": "M. Tschannen, J. Djolonga et al. , 'On mutual information maximization for representation learning,' arXiv , 2019."
+            },
+            {
+              "title": "Segclip: Patch aggregation with learnable centers for open-vocabulary semantic segmentation",
+              "citation": "H. Luo, J. Bao et al. , 'Segclip: Patch aggregation with learnable centers for open-vocabulary semantic segmentation,' arXiv , 2022."
+            },
+            {
+              "title": "Masked autoencoders are scalable vision learners",
+              "citation": "K. He, X. Chen et al. , 'Masked autoencoders are scalable vision learners,' in CVPR , 2022."
+            },
+            {
+              "title": "Learning open-vocabulary semantic segmentation models from natural language supervision",
+              "citation": "J. Xu, J. Hou et al. , 'Learning open-vocabulary semantic segmentation models from natural language supervision,' in CVPR , 2023."
+            },
+            {
+              "title": "Object-centric learning with slot attention",
+              "citation": "F. Locatello, D. Weissenborn et al. , 'Object-centric learning with slot attention,' NeurIPS , 2020."
+            },
+            {
+              "title": "Open vocabulary semantic segmentation with patch aligned contrastive learning",
+              "citation": "J. Mukhoti, T.-Y. Lin et al. , 'Open vocabulary semantic segmentation with patch aligned contrastive learning,' in CVPR , 2023."
+            },
+            {
+              "title": "Learning to generate text-grounded mask for open-world semantic segmentation from only image-text pairs",
+              "citation": "J. Cha, J. Mun et al. , 'Learning to generate text-grounded mask for open-world semantic segmentation from only image-text pairs,' in CVPR , 2023."
+            },
+            {
+              "title": "A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model",
+              "citation": "M. Xu, Z. Zhang et al. , 'A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model,' in ECCV , 2022."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "5.1.1",
+              "sec_title": "Weakly-Supervised Grounding or Contrastive Loss.",
+              "citations": [
+                {
+                  "title": "Open-vocabulary object detection using captions,",
+                  "citation": "A. Zareian, K. D. Rosa et al. , 'Open-vocabulary object detection using captions,' in CVPR , 2021."
+                },
+                {
+                  "title": "Localized vision-language matching for open-vocabulary object detection,",
+                  "citation": "M. A. Bravo, S. Mittal et al. , 'Localized vision-language matching for open-vocabulary object detection,' in DAGM GCPR , 2022."
+                },
+                {
+                  "title": "Pixel-bert: Aligning image pixels with text by deep multi-modal transformers,",
+                  "citation": "Z. Huang, Z. Zeng et al. , 'Pixel-bert: Aligning image pixels with text by deep multi-modal transformers,' arXiv , 2020."
+                },
+                {
+                  "title": "Vilbert: Pretraining task-agnostic visiolinguistic representations for vision-and-language tasks,",
+                  "citation": "J. Lu, D. Batra et al. , 'Vilbert: Pretraining task-agnostic visiolinguistic representations for vision-and-language tasks,' NeurIPS , 2019."
+                },
+                {
+                  "title": "Vilt: Vision-and-language transformer without convolution or region supervision,",
+                  "citation": "W. Kim, B. Son et al. , 'Vilt: Vision-and-language transformer without convolution or region supervision,' in ICML , 2021."
+                },
+                {
+                  "title": "Align before fuse: Vision and language representation learning with momentum distillation,",
+                  "citation": "J. Li, R. Selvaraju et al. , 'Align before fuse: Vision and language representation learning with momentum distillation,' NeurIPS , 2021."
+                },
+                {
+                  "title": "Exploring multi-modal contextual knowledge for open-vocabulary object detection,",
+                  "citation": "Y. Xu, M. Zhang et al. , 'Exploring multi-modal contextual knowledge for open-vocabulary object detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection,",
+                  "citation": "L. Yao, J. Han et al. , 'Detclip: Dictionary-enriched visual-concept paralleled pre-training for open-world detection,' arXiv , 2022."
+                },
+                {
+                  "title": "Detclipv2: Scalable open-vocabulary object detection pretraining via word-region alignment,",
+                  "citation": "--, 'Detclipv2: Scalable open-vocabulary object detection pretraining via word-region alignment,' in CVPR , 2023."
+                },
+                {
+                  "title": "Weakly supervised open-vocabulary object detection,",
+                  "citation": "J. Lin, Y. Shen et al. , 'Weakly supervised open-vocabulary object detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Weakly supervised deep detection networks,",
+                  "citation": "H. Bilen and A. Vedaldi, 'Weakly supervised deep detection networks,' in CVPR , 2016."
+                },
+                {
+                  "title": "Region-aware pretraining for openvocabulary object detection with vision transformers,",
+                  "citation": "D. Kim, A. Angelova et al. , 'Region-aware pretraining for openvocabulary object detection with vision transformers,' in CVPR , 2023."
+                },
+                {
+                  "title": "Scaling up visual and vision-language representation learning with noisy text supervision,",
+                  "citation": "C. Jia, Y. Yang et al. , 'Scaling up visual and vision-language representation learning with noisy text supervision,' in ICML , 2021."
+                },
+                {
+                  "title": "Focal loss for dense object detection,",
+                  "citation": "T.-Y. Lin, P. Goyal et al. , 'Focal loss for dense object detection,' in ICCV , 2017."
+                },
+                {
+                  "title": "Contrastive feature masking open-vocabulary vision transformer,",
+                  "citation": "--, 'Contrastive feature masking open-vocabulary vision transformer,' in ICCV , 2023."
+                },
+                {
+                  "title": "Masked autoencoders are scalable vision learners,",
+                  "citation": "K. He, X. Chen et al. , 'Masked autoencoders are scalable vision learners,' in CVPR , 2022."
+                },
+                {
+                  "title": "Feature pyramid networks for object detection,",
+                  "citation": "T.-Y. Lin, P. Doll´ ar et al. , 'Feature pyramid networks for object detection,' in CVPR , 2017."
+                },
+                {
+                  "title": "Faster r-cnn: Towards real-time object detection with region proposal networks,",
+                  "citation": "S. Ren, K. He et al. , 'Faster r-cnn: Towards real-time object detection with region proposal networks,' NeurIPS , 2015."
+                },
+                {
+                  "title": "Detection-oriented image-text pretraining for openvocabulary detection,",
+                  "citation": "--, 'Detection-oriented image-text pretraining for openvocabulary detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Scaling open-vocabulary image segmentation with image-level labels,",
+                  "citation": "G. Ghiasi, X. Gu et al. , 'Scaling open-vocabulary image segmentation with image-level labels,' in ECCV , 2022."
+                },
+                {
+                  "title": "Silc: Improving vision language pretraining with self-distillation,",
+                  "citation": "M. F. Naeem, Y. Xian et al. , 'Silc: Improving vision language pretraining with self-distillation,' arXiv , 2023."
+                },
+                {
+                  "title": "Emerging properties in selfsupervised vision transformers,",
+                  "citation": "M. Caron, H. Touvron et al. , 'Emerging properties in selfsupervised vision transformers,' in ICCV , 2021."
+                },
+                {
+                  "title": "Dinov2: Learning robust visual features without supervision,",
+                  "citation": "M. Oquab, T. Darcet et al. , 'Dinov2: Learning robust visual features without supervision,' arXiv , 2023."
+                },
+                {
+                  "title": "Groupvit: Semantic segmentation emerges from text supervision,",
+                  "citation": "J. Xu, S. De Mello et al. , 'Groupvit: Semantic segmentation emerges from text supervision,' in CVPR , 2022."
+                },
+                {
+                  "title": "Categorical reparameterization with gumbel-softmax,",
+                  "citation": "E. Jang, S. Gu et al. , 'Categorical reparameterization with gumbel-softmax,' arXiv , 2016."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision,",
+                  "citation": "A. Radford, J. W. Kim et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+                },
+                {
+                  "title": "Open-world semantic segmentation via contrasting and clustering vision-language embedding,",
+                  "citation": "Q. Liu, Y. Wen et al. , 'Open-world semantic segmentation via contrasting and clustering vision-language embedding,' in ECCV , 2022."
+                },
+                {
+                  "title": "Unsupervised learning of visual features by contrasting cluster assignments,",
+                  "citation": "M. Caron, I. Misra et al. , 'Unsupervised learning of visual features by contrasting cluster assignments,' NeurIPS , 2020."
+                },
+                {
+                  "title": "On mutual information maximization for representation learning,",
+                  "citation": "M. Tschannen, J. Djolonga et al. , 'On mutual information maximization for representation learning,' arXiv , 2019."
+                },
+                {
+                  "title": "Segclip: Patch aggregation with learnable centers for open-vocabulary semantic segmentation,",
+                  "citation": "H. Luo, J. Bao et al. , 'Segclip: Patch aggregation with learnable centers for open-vocabulary semantic segmentation,' arXiv , 2022."
+                },
+                {
+                  "title": "Learning open-vocabulary semantic segmentation models from natural language supervision,",
+                  "citation": "J. Xu, J. Hou et al. , 'Learning open-vocabulary semantic segmentation models from natural language supervision,' in CVPR , 2023."
+                },
+                {
+                  "title": "Object-centric learning with slot attention,",
+                  "citation": "F. Locatello, D. Weissenborn et al. , 'Object-centric learning with slot attention,' NeurIPS , 2020."
+                },
+                {
+                  "title": "Open vocabulary semantic segmentation with patch aligned contrastive learning,",
+                  "citation": "J. Mukhoti, T.-Y. Lin et al. , 'Open vocabulary semantic segmentation with patch aligned contrastive learning,' in CVPR , 2023."
+                },
+                {
+                  "title": "Learning to generate text-grounded mask for open-world semantic segmentation from only image-text pairs,",
+                  "citation": "J. Cha, J. Mun et al. , 'Learning to generate text-grounded mask for open-world semantic segmentation from only image-text pairs,' in CVPR , 2023."
+                },
+                {
+                  "title": "A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model,",
+                  "citation": "M. Xu, Z. Zhang et al. , 'A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model,' in ECCV , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.2",
+              "sec_title": "Bipartite Matching.",
+              "citations": [
+                {
+                  "title": "Learning object-language alignments for open-vocabulary object detection,",
+                  "citation": "C. Lin, P. Sun et al. , 'Learning object-language alignments for open-vocabulary object detection,' arXiv , 2022."
+                },
+                {
+                  "title": "End-to-end object detection with transformers,",
+                  "citation": "N. Carion, F. Massa et al. , 'End-to-end object detection with transformers,' in ECCV , 2020."
+                },
+                {
+                  "title": "Open-vocabulary object detection with an open corpus,",
+                  "citation": "J. Wang, H. Zhang et al. , 'Open-vocabulary object detection with an open corpus,' in ICCV , 2023."
+                },
+                {
+                  "title": "Open-vocabulary detr with conditional matching,",
+                  "citation": "Y. Zang, W. Li et al. , 'Open-vocabulary detr with conditional matching,' in ECCV , 2022."
+                },
+                {
+                  "title": "Prompt-guided transformers for end-toend open-vocabulary object detection,",
+                  "citation": "H. Song and J. Bang, 'Prompt-guided transformers for end-toend open-vocabulary object detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Cora: Adapting clip for open-vocabulary detection with region prompting and anchor pre-matching,",
+                  "citation": "X. Wu, F. Zhu et al. , 'Cora: Adapting clip for open-vocabulary detection with region prompting and anchor pre-matching,' in CVPR , 2023."
+                },
+                {
+                  "title": "Visual prompt tuning,",
+                  "citation": "M. Jia, L. Tang et al. , 'Visual prompt tuning,' in ECCV , 2022."
+                },
+                {
+                  "title": "Edadet: Open-vocabulary object detection using early dense alignment,",
+                  "citation": "C. Shi and S. Yang, 'Edadet: Open-vocabulary object detection using early dense alignment,' in ICCV , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.3",
+              "sec_title": "Leveraging Visual Grounding Datasets.",
+              "citations": [
+                {
+                  "title": "Visual genome: Connecting language and vision using crowdsourced dense image annotations,",
+                  "citation": "R. Krishna, Y. Zhu et al. , 'Visual genome: Connecting language and vision using crowdsourced dense image annotations,' IJCV , 2017."
+                },
+                {
+                  "title": "Modeling context in referring expressions,",
+                  "citation": "L. Yu, P. Poirson et al. , 'Modeling context in referring expressions,' in ECCV , 2016."
+                },
+                {
+                  "title": "Modeling context between objects for referring expression understanding,",
+                  "citation": "V. K. Nagaraja, V. I. Morariu et al. , 'Modeling context between objects for referring expression understanding,' in ECCV , 2016."
+                },
+                {
+                  "title": "Mdetr - modulated detection for end-to-end multi-modal understanding,",
+                  "citation": "A. Kamath, M. Singh et al. , 'Mdetr - modulated detection for end-to-end multi-modal understanding,' in ICCV , 2021."
+                },
+                {
+                  "title": "Grounded language-image pretraining,",
+                  "citation": "L. H. Li, P. Zhang et al. , 'Grounded language-image pretraining,' in CVPR , 2022."
+                },
+                {
+                  "title": "Class-agnostic object detection with multi-modal transformer,",
+                  "citation": "M. Maaz, H. Rasheed et al. , 'Class-agnostic object detection with multi-modal transformer,' in ECCV , 2022."
+                },
+                {
+                  "title": "Deformable detr: Deformable transformers for end-to-end object detection,",
+                  "citation": "X. Zhu, W. Su et al. , 'Deformable detr: Deformable transformers for end-to-end object detection,' in ICLR , 2021."
+                },
+                {
+                  "title": "Multi-modal queried object detection in the wild,",
+                  "citation": "Y. Xu, M. Zhang et al. , 'Multi-modal queried object detection in the wild,' arXiv , 2023."
+                },
+                {
+                  "title": "Yolo-world: Real-time open-vocabulary object detection,",
+                  "citation": "T. Cheng, L. Song et al. , 'Yolo-world: Real-time open-vocabulary object detection,' in CVPR , 2024."
+                },
+                {
+                  "title": "Open-vocabulary object detection via scene graph discovery,",
+                  "citation": "H. Shi, M. Hayat et al. , 'Open-vocabulary object detection via scene graph discovery,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Pseudo-Labeling",
+          "citations": [
+            {
+              "title": "Open-vocabulary semantic segmentation using test-time distillation",
+              "citation": "N. Zabari and Y. Hoshen, 'Open-vocabulary semantic segmentation using test-time distillation,' in ECCV , 2022."
+            },
+            {
+              "title": "Transformer interpretability beyond attention visualization",
+              "citation": "H. Chefer, S. Gur et al. , 'Transformer interpretability beyond attention visualization,' in CVPR , 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "5.2.1",
+              "sec_title": "Pseudo Region-Word Pairs.",
+              "citations": [
+                {
+                  "title": "Regionclip: Region-based languageimage pretraining,",
+                  "citation": "Y. Zhong, J. Yang et al. , 'Regionclip: Region-based languageimage pretraining,' in CVPR , 2022."
+                },
+                {
+                  "title": "Exploiting unlabeled data with vision and language models for object detection,",
+                  "citation": "S. Zhao, Z. Zhang et al. , 'Exploiting unlabeled data with vision and language models for object detection,' in ECCV , 2022."
+                },
+                {
+                  "title": "Grounded language-image pretraining,",
+                  "citation": "L. H. Li, P. Zhang et al. , 'Grounded language-image pretraining,' in CVPR , 2022."
+                },
+                {
+                  "title": "Glipv2: Unifying localization and vision-language understanding,",
+                  "citation": "H. Zhang, P. Zhang et al. , 'Glipv2: Unifying localization and vision-language understanding,' NeurIPS , 2022."
+                },
+                {
+                  "title": "Vqa: Visual question answering,",
+                  "citation": "S. Antol, A. Agrawal et al. , 'Vqa: Visual question answering,' in ICCV , 2015."
+                },
+                {
+                  "title": "Bottom-up and top-down attention for image captioning and visual question answering,",
+                  "citation": "P. Anderson, X. He et al. , 'Bottom-up and top-down attention for image captioning and visual question answering,' in CVPR , 2018."
+                },
+                {
+                  "title": "Show, attend and tell: Neural image caption generation with visual attention,",
+                  "citation": "K. Xu, J. Ba et al. , 'Show, attend and tell: Neural image caption generation with visual attention,' in ICML , 2015."
+                },
+                {
+                  "title": "Self-critical sequence training for image captioning,",
+                  "citation": "S. J. Rennie, E. Marcheret et al. , 'Self-critical sequence training for image captioning,' in CVPR , 2017."
+                },
+                {
+                  "title": "Grounding dino: Marrying dino with grounded pre-training for open-set object detection,",
+                  "citation": "S. Liu, Z. Zeng et al. , 'Grounding dino: Marrying dino with grounded pre-training for open-set object detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Promptdet: Towards open-vocabulary detection using uncurated images,",
+                  "citation": "C. Feng, Y. Zhong et al. , 'Promptdet: Towards open-vocabulary detection using uncurated images,' in ECCV , 2022."
+                },
+                {
+                  "title": "Unbiased teacher for semi-supervised object detection,",
+                  "citation": "Y.-C. Liu, C.-Y. Ma et al. , 'Unbiased teacher for semi-supervised object detection,' in ICLR , 2020."
+                },
+                {
+                  "title": "End-to-end semi-supervised object detection with soft teacher,",
+                  "citation": "M. Xu, Z. Zhang et al. , 'End-to-end semi-supervised object detection with soft teacher,' in ICCV , 2021."
+                },
+                {
+                  "title": "Improving pseudo labels for openvocabulary object detection,",
+                  "citation": "S. Zhao, S. Schulter et al. , 'Improving pseudo labels for openvocabulary object detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Three ways to improve feature alignment for open vocabulary detection,",
+                  "citation": "R. Arandjelovi´ c, A. Andonian et al. , 'Three ways to improve feature alignment for open vocabulary detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Bridging the gap between object and image-level representations for open-vocabulary detection,",
+                  "citation": "H. Bangalath, M. Maaz et al. , 'Bridging the gap between object and image-level representations for open-vocabulary detection,' NeurIPS , 2022."
+                },
+                {
+                  "title": "Grad-cam: Visual explanations from deep networks via gradient-based localization,",
+                  "citation": "R. R. Selvaraju, M. Cogswell et al. , 'Grad-cam: Visual explanations from deep networks via gradient-based localization,' in ICCV , 2017."
+                },
+                {
+                  "title": "Align before fuse: Vision and language representation learning with momentum distillation,",
+                  "citation": "J. Li, R. Selvaraju et al. , 'Align before fuse: Vision and language representation learning with momentum distillation,' NeurIPS , 2021."
+                },
+                {
+                  "title": "Clim: Contrastive language-image mosaic for region representation,",
+                  "citation": "S. Wu, W. Zhang et al. , 'Clim: Contrastive language-image mosaic for region representation,' AAAI , 2024."
+                },
+                {
+                  "title": "Open-vocabulary object detection using captions,",
+                  "citation": "A. Zareian, K. D. Rosa et al. , 'Open-vocabulary object detection using captions,' in CVPR , 2021."
+                },
+                {
+                  "title": "Detecting twenty-thousand classes using image-level supervision,",
+                  "citation": "X. Zhou, R. Girdhar et al. , 'Detecting twenty-thousand classes using image-level supervision,' in ECCV , 2022."
+                },
+                {
+                  "title": "Aligning bag of regions for openvocabulary object detection,",
+                  "citation": "S. Wu, W. Zhang et al. , 'Aligning bag of regions for openvocabulary object detection,' in CVPR , 2023."
+                },
+                {
+                  "title": "Fine-grained visual-text prompt-driven self-training for open-vocabulary object detection,",
+                  "citation": "Y. Long, J. Han et al. , 'Fine-grained visual-text prompt-driven self-training for open-vocabulary object detection,' TNNLS , 2023."
+                },
+                {
+                  "title": "Visual prompt tuning,",
+                  "citation": "M. Jia, L. Tang et al. , 'Visual prompt tuning,' in ECCV , 2022."
+                },
+                {
+                  "title": "Proxydet: Synthesizing proxy novel classes via classwise mixup for open vocabulary object detection,",
+                  "citation": "J. Jeong, G. Park et al. , 'Proxydet: Synthesizing proxy novel classes via classwise mixup for open vocabulary object detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Codet: Co-occurrence guided region-word alignment for open-vocabulary object detection,",
+                  "citation": "C. Ma, Y. Jiang et al. , 'Codet: Co-occurrence guided region-word alignment for open-vocabulary object detection,' NeurIPS , 2024."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.2.2",
+              "sec_title": "Pseudo Region-Caption Pairs.",
+              "citations": [
+                {
+                  "title": "Detecting twenty-thousand classes using image-level supervision,",
+                  "citation": "X. Zhou, R. Girdhar et al. , 'Detecting twenty-thousand classes using image-level supervision,' in ECCV , 2022."
+                },
+                {
+                  "title": "Weakly supervised deep detection networks,",
+                  "citation": "H. Bilen and A. Vedaldi, 'Weakly supervised deep detection networks,' in CVPR , 2016."
+                },
+                {
+                  "title": "Imagenet large scale visual recognition challenge,",
+                  "citation": "O. Russakovsky, J. Deng et al. , 'Imagenet large scale visual recognition challenge,' IJCV , 2015."
+                },
+                {
+                  "title": "Multi-modal classifiers for open-vocabulary object detection,",
+                  "citation": "P. Kaul, W. Xie et al. , 'Multi-modal classifiers for open-vocabulary object detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Language models are few-shot learners,",
+                  "citation": "T. Brown, B. Mann et al. , 'Language models are few-shot learners,' NeurIPS , 2020."
+                },
+                {
+                  "title": "Three ways to improve feature alignment for open vocabulary detection,",
+                  "citation": "R. Arandjelovi´ c, A. Andonian et al. , 'Three ways to improve feature alignment for open vocabulary detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Learning pseudo-labeler beyond noun concepts for open-vocabulary object detection,",
+                  "citation": "S. Kang, J. Cha et al. , 'Learning pseudo-labeler beyond noun concepts for open-vocabulary object detection,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.2.3",
+              "sec_title": "Pseudo Captions.",
+              "citations": [
+                {
+                  "title": "Open-vocabulary object detection using pseudo caption labels,",
+                  "citation": "H.-C. Cho, W. Y. Jhoo et al. , 'Open-vocabulary object detection using pseudo caption labels,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.2.4",
+              "sec_title": "Zabari et al.",
+              "citations": [
+                {
+                  "title": "Open-vocabulary semantic segmentation using test-time distillation,",
+                  "citation": "N. Zabari and Y. Hoshen, 'Open-vocabulary semantic segmentation using test-time distillation,' in ECCV , 2022."
+                },
+                {
+                  "title": "Transformer interpretability beyond attention visualization,",
+                  "citation": "H. Chefer, S. Gur et al. , 'Transformer interpretability beyond attention visualization,' in CVPR , 2021."
+                },
+                {
+                  "title": "Global knowledge calibration for fast openvocabulary segmentation,",
+                  "citation": "K. Han, Y. Liu et al. , 'Global knowledge calibration for fast openvocabulary segmentation,' arXiv , 2023."
+                },
+                {
+                  "title": "Wordnet: a lexical database for english,",
+                  "citation": "G. A. Miller, 'Wordnet: a lexical database for english,' ACM Communications , 1995."
+                },
+                {
+                  "title": "Bridging the gap between object and image-level representations for open-vocabulary detection,",
+                  "citation": "H. Bangalath, M. Maaz et al. , 'Bridging the gap between object and image-level representations for open-vocabulary detection,' NeurIPS , 2022."
+                },
+                {
+                  "title": "Sam-clip: Merging vision foundation models towards semantic and spatial understanding,",
+                  "citation": "H. Wang, P. K. A. Vasu et al. , 'Sam-clip: Merging vision foundation models towards semantic and spatial understanding,' arXiv , 2023."
+                },
+                {
+                  "title": "Segment anything,",
+                  "citation": "A. Kirillov, E. Mintun et al. , 'Segment anything,' arXiv , 2023."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision,",
+                  "citation": "A. Radford, J. W. Kim et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+                },
+                {
+                  "title": "Exploring open-vocabulary semantic segmentation from clip vision encoder distillation only,",
+                  "citation": "J. Chen, D. Zhu et al. , 'Exploring open-vocabulary semantic segmentation from clip vision encoder distillation only,' in ICCV , 2023."
+                },
+                {
+                  "title": "Masked autoencoders are scalable vision learners,",
+                  "citation": "K. He, X. Chen et al. , 'Masked autoencoders are scalable vision learners,' in CVPR , 2022."
+                },
+                {
+                  "title": "Groupvit: Semantic segmentation emerges from text supervision,",
+                  "citation": "J. Xu, S. De Mello et al. , 'Groupvit: Semantic segmentation emerges from text supervision,' in CVPR , 2022."
+                },
+                {
+                  "title": "Language-driven semantic segmentation,",
+                  "citation": "B. Li, K. Q. Weinberger et al. , 'Language-driven semantic segmentation,' arXiv , 2022."
+                },
+                {
+                  "title": "Vision transformers for dense prediction,",
+                  "citation": "R. Ranftl, A. Bochkovskiy et al. , 'Vision transformers for dense prediction,' in ICCV , 2021."
+                },
+                {
+                  "title": "Delving into shape-aware zero-shot semantic segmentation,",
+                  "citation": "X. Liu, B. Tian et al. , 'Delving into shape-aware zero-shot semantic segmentation,' in CVPR , 2023."
+                },
+                {
+                  "title": "Emerging properties in selfsupervised vision transformers,",
+                  "citation": "M. Caron, H. Touvron et al. , 'Emerging properties in selfsupervised vision transformers,' in ICCV , 2021."
+                },
+                {
+                  "title": "Class enhancement losses with pseudo labels for open-vocabulary semantic segmentation,",
+                  "citation": "S. D. Dao, H. Shi et al. , 'Class enhancement losses with pseudo labels for open-vocabulary semantic segmentation,' TMM , 2023."
+                },
+                {
+                  "title": "End-to-end object detection with transformers,",
+                  "citation": "N. Carion, F. Massa et al. , 'End-to-end object detection with transformers,' in ECCV , 2020."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.3",
+          "sec_title": "Knowledge Distillation",
+          "citations": [
+            {
+              "title": "Global knowledge calibration for fast openvocabulary segmentation",
+              "citation": "K. Han, Y. Liu et al. , 'Global knowledge calibration for fast openvocabulary segmentation,' arXiv , 2023."
+            },
+            {
+              "title": "Wordnet: a lexical database for english",
+              "citation": "G. A. Miller, 'Wordnet: a lexical database for english,' ACM Communications , 1995."
+            },
+            {
+              "title": "Bridging the gap between object and image-level representations for open-vocabulary detection",
+              "citation": "H. Bangalath, M. Maaz et al. , 'Bridging the gap between object and image-level representations for open-vocabulary detection,' NeurIPS , 2022."
+            },
+            {
+              "title": "Sam-clip: Merging vision foundation models towards semantic and spatial understanding",
+              "citation": "H. Wang, P. K. A. Vasu et al. , 'Sam-clip: Merging vision foundation models towards semantic and spatial understanding,' arXiv , 2023."
+            },
+            {
+              "title": "Segment anything,",
+              "citation": "A. Kirillov, E. Mintun et al. , 'Segment anything,' arXiv , 2023."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford, J. W. Kim et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+            },
+            {
+              "title": "Exploring open-vocabulary semantic segmentation from clip vision encoder distillation only",
+              "citation": "J. Chen, D. Zhu et al. , 'Exploring open-vocabulary semantic segmentation from clip vision encoder distillation only,' in ICCV , 2023."
+            },
+            {
+              "title": "Masked autoencoders are scalable vision learners",
+              "citation": "K. He, X. Chen et al. , 'Masked autoencoders are scalable vision learners,' in CVPR , 2022."
+            },
+            {
+              "title": "Groupvit: Semantic segmentation emerges from text supervision",
+              "citation": "J. Xu, S. De Mello et al. , 'Groupvit: Semantic segmentation emerges from text supervision,' in CVPR , 2022."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "5.3.1",
+              "sec_title": "Distillation at Single-Region Level.",
+              "citations": [
+                {
+                  "title": "Open-vocabulary object detection via vision and language knowledge distillation,",
+                  "citation": "X. Gu, T.-Y. Lin et al. , 'Open-vocabulary object detection via vision and language knowledge distillation,' arXiv , 2021."
+                },
+                {
+                  "title": "Zero-shot object detection through visionlanguage embedding alignment,",
+                  "citation": "e. a. Xie, Johnathan, 'Zero-shot object detection through visionlanguage embedding alignment,' in ICDMW , 2022."
+                },
+                {
+                  "title": "Lp-ovod: Open-vocabulary object detection by linear probing,",
+                  "citation": "C. Pham, T. Vu et al. , 'Lp-ovod: Open-vocabulary object detection by linear probing,' in WACV , 2024."
+                },
+                {
+                  "title": "Focal loss for dense object detection,",
+                  "citation": "T.-Y. Lin, P. Goyal et al. , 'Focal loss for dense object detection,' in ICCV , 2017."
+                },
+                {
+                  "title": "Efficient feature distillation for zero-shot detection,",
+                  "citation": "Z. Liu, X. Hu et al. , 'Efficient feature distillation for zero-shot detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Simple image-level classification improves open-vocabulary object detection,",
+                  "citation": "R. Fang, G. Pang et al. , 'Simple image-level classification improves open-vocabulary object detection,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.3.2",
+              "sec_title": "Distillation at Bag-of-Regions Level.",
+              "citations": [
+                {
+                  "title": "Aligning bag of regions for openvocabulary object detection,",
+                  "citation": "S. Wu, W. Zhang et al. , 'Aligning bag of regions for openvocabulary object detection,' in CVPR , 2023."
+                },
+                {
+                  "title": "Representation learning with contrastive predictive coding,",
+                  "citation": "A. v. d. Oord, Y. Li et al. , 'Representation learning with contrastive predictive coding,' arXiv , 2018."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.3.3",
+              "sec_title": "Distillation at Image-Region Level.",
+              "citations": [
+                {
+                  "title": "Object-aware distillation pyramid for open-vocabulary object detection,",
+                  "citation": "L. Wang, Y. Liu et al. , 'Object-aware distillation pyramid for open-vocabulary object detection,' in CVPR , 2023."
+                },
+                {
+                  "title": "Gridclip: One-stage object detection by gridlevel clip representation learning,",
+                  "citation": "J. Lin and S. Gong, 'Gridclip: One-stage object detection by gridlevel clip representation learning,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.3.4",
+              "sec_title": "Distillation Objective Beyond L 1 Loss.",
+              "citations": [
+                {
+                  "title": "Bridging the gap between object and image-level representations for open-vocabulary detection,",
+                  "citation": "H. Bangalath, M. Maaz et al. , 'Bridging the gap between object and image-level representations for open-vocabulary detection,' NeurIPS , 2022."
+                },
+                {
+                  "title": "Distilling detr with visual-linguistic knowledge for open-vocabulary object detection,",
+                  "citation": "L. Li, J. Miao et al. , 'Distilling detr with visual-linguistic knowledge for open-vocabulary object detection,' in ICCV , 2023."
+                },
+                {
+                  "title": "Open-vocabulary one-stage detection with hierarchical visual-language knowledge distillation,",
+                  "citation": "Z. Ma, G. Luo et al. , 'Open-vocabulary one-stage detection with hierarchical visual-language knowledge distillation,' in CVPR , 2022."
+                },
+                {
+                  "title": "Learning to prompt for open-vocabulary object detection with vision-language model,",
+                  "citation": "Y. Du, F. Wei et al. , 'Learning to prompt for open-vocabulary object detection with vision-language model,' in CVPR , 2022."
+                },
+                {
+                  "title": "Learning to prompt for vision-language models,",
+                  "citation": "K. Zhou, J. Yang et al. , 'Learning to prompt for vision-language models,' IJCV , 2022."
+                },
+                {
+                  "title": "Open-vocabulary object detection via vision and language knowledge distillation,",
+                  "citation": "X. Gu, T.-Y. Lin et al. , 'Open-vocabulary object detection via vision and language knowledge distillation,' arXiv , 2021."
+                },
+                {
+                  "title": "Mask r-cnn",
+                  "citation": "K. He, G. Gkioxari et al. , 'Mask r-cnn,' in ICCV , 2017."
+                },
+                {
+                  "title": "F-vlm: Open-vocabulary object detection upon frozen vision and language models,",
+                  "citation": "W. Kuo, Y. Cui et al. , 'F-vlm: Open-vocabulary object detection upon frozen vision and language models,' arXiv , 2022."
+                },
+                {
+                  "title": "CLIPSelf: Vision transformer distills itself for open-vocabulary dense prediction,",
+                  "citation": "S. Wu, W. Zhang et al. , 'CLIPSelf: Vision transformer distills itself for open-vocabulary dense prediction,' in ICLR , 2024."
+                },
+                {
+                  "title": "Simple open-vocabulary object detection with vision transformers,",
+                  "citation": "M. Minderer, A. Gritsenko et al. , 'Simple open-vocabulary object detection with vision transformers,' arXiv , 2022."
+                },
+                {
+                  "title": "Detecting everything in the open world: Towards universal object detection,",
+                  "citation": "Z. Wang, Y. Li et al. , 'Detecting everything in the open world: Towards universal object detection,' in CVPR , 2023."
+                },
+                {
+                  "title": "Regionclip: Region-based languageimage pretraining,",
+                  "citation": "Y. Zhong, J. Yang et al. , 'Regionclip: Region-based languageimage pretraining,' in CVPR , 2022."
+                },
+                {
+                  "title": "Scaledet: A scalable multi-dataset object detector,",
+                  "citation": "Y. Chen, M. Wang et al. , 'Scaledet: A scalable multi-dataset object detector,' in CVPR , 2023."
+                },
+                {
+                  "title": "A simple framework for open-vocabulary segmentation and detection,",
+                  "citation": "H. Zhang, F. Li et al. , 'A simple framework for open-vocabulary segmentation and detection,' arXiv , 2023."
+                },
+                {
+                  "title": "What makes good open-vocabulary detector: A disassembling perspective,",
+                  "citation": "J. Li, C. Xie et al. , 'What makes good open-vocabulary detector: A disassembling perspective,' arXiv , 2023."
+                },
+                {
+                  "title": "Boosting segment anything model towards open-vocabulary learning,",
+                  "citation": "X. Han, L. Wei et al. , 'Boosting segment anything model towards open-vocabulary learning,' arXiv , 2023."
+                },
+                {
+                  "title": "Segment anything,",
+                  "citation": "A. Kirillov, E. Mintun et al. , 'Segment anything,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.4",
+          "sec_title": "Transfer Learning",
+          "citations": [
+            {
+              "title": "Language-driven semantic segmentation",
+              "citation": "B. Li, K. Q. Weinberger et al. , 'Language-driven semantic segmentation,' arXiv , 2022."
+            },
+            {
+              "title": "Vision transformers for dense prediction",
+              "citation": "R. Ranftl, A. Bochkovskiy et al. , 'Vision transformers for dense prediction,' in ICCV , 2021."
+            },
+            {
+              "title": "Delving into shape-aware zero-shot semantic segmentation",
+              "citation": "X. Liu, B. Tian et al. , 'Delving into shape-aware zero-shot semantic segmentation,' in CVPR , 2023."
+            },
+            {
+              "title": "Emerging properties in self-supervised vision transformers",
+              "citation": "M. Caron, H. Touvron et al. , 'Emerging properties in selfsupervised vision transformers,' in ICCV , 2021."
+            },
+            {
+              "title": "Class enhancement losses with pseudo labels for open-vocabulary semantic segmentation",
+              "citation": "S. D. Dao, H. Shi et al. , 'Class enhancement losses with pseudo labels for open-vocabulary semantic segmentation,' TMM , 2023."
+            },
+            {
+              "title": "End-to-end object detection with transformers",
+              "citation": "N. Carion, F. Massa et al. , 'End-to-end object detection with transformers,' in ECCV , 2020."
+            },
+            {
+              "title": "Open-vocabulary object detection via vision and language knowledge distillation",
+              "citation": "X. Gu, T.-Y. Lin et al. , 'Open-vocabulary object detection via vision and language knowledge distillation,' arXiv , 2021."
+            },
+            {
+              "title": "F-vlm: Open-vocabulary object detection upon frozen vision and language models",
+              "citation": "W. Kuo, Y. Cui et al. , 'F-vlm: Open-vocabulary object detection upon frozen vision and language models,' arXiv , 2022."
+            },
+            {
+              "title": "Decoupling zero-shot semantic segmentation",
+              "citation": "J. Ding, N. Xue et al. , 'Decoupling zero-shot semantic segmentation,' in CVPR , 2022."
+            },
+            {
+              "title": "Open-vocabulary object detection via vision and language knowledge distillation",
+              "citation": "X. Gu, T.-Y. Lin et al. , 'Open-vocabulary object detection via vision and language knowledge distillation,' arXiv , 2021."
+            },
+            {
+              "title": "F-vlm: Open-vocabulary object detection upon frozen vision and language models",
+              "citation": "W. Kuo, Y. Cui et al. , 'F-vlm: Open-vocabulary object detection upon frozen vision and language models,' arXiv , 2022."
+            },
+            {
+              "title": "Reco: Retrieve and co-segment for zeroshot transfer",
+              "citation": "G. Shin, W. Xie et al. , 'Reco: Retrieve and co-segment for zeroshot transfer,' NeurIPS , 2022."
+            },
+            {
+              "title": "Momentum contrast for unsupervised visual representation learning",
+              "citation": "K. He, H. Fan et al. , 'Momentum contrast for unsupervised visual representation learning,' in CVPR , 2020."
+            },
+            {
+              "title": "Denseclip: Language-guided dense prediction with context-aware prompting",
+              "citation": "Y. Rao, W. Zhao et al. , 'Denseclip: Language-guided dense prediction with context-aware prompting,' in CVPR , 2022."
+            },
+            {
+              "title": "Open-vocabulary segmentation with semantic-assisted calibration",
+              "citation": "Y. Liu, S. Bai et al. , 'Open-vocabulary segmentation with semantic-assisted calibration,' arXiv , 2023."
+            },
+            {
+              "title": "A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model",
+              "citation": "M. Xu, Z. Zhang et al. , 'A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model,' in ECCV , 2022."
+            },
+            {
+              "title": "Learning to prompt for vision-language models",
+              "citation": "K. Zhou, J. Yang et al. , 'Learning to prompt for vision-language models,' IJCV , 2022."
+            },
+            {
+              "title": "Extract free dense labels from clip",
+              "citation": "C. Zhou, C. C. Loy et al. , 'Extract free dense labels from clip,' in ECCV , 2022."
+            },
+            {
+              "title": "Clip-dinoiser: Teaching clip a few dino tricks",
+              "citation": "M. Wysocza´ nska, O. Sim´ eoni et al. , 'Clip-dinoiser: Teaching clip a few dino tricks,' arXiv , 2023."
+            },
+            {
+              "title": "Emerging properties in selfsupervised vision transformers",
+              "citation": "M. Caron, H. Touvron et al. , 'Emerging properties in selfsupervised vision transformers,' in ICCV , 2021."
+            },
+            {
+              "title": "Clip surgery for better explainability with enhancement in open-vocabulary tasks",
+              "citation": "Y. Li, H. Wang et al. , 'Clip surgery for better explainability with enhancement in open-vocabulary tasks,' arXiv , 2023."
+            },
+            {
+              "title": "Extract free dense labels from clip",
+              "citation": "C. Zhou, C. C. Loy et al. , 'Extract free dense labels from clip,' in ECCV , 2022."
+            },
+            {
+              "title": "Unsupervised object localization: Observing the background to discover objects",
+              "citation": "O. Sim´ eoni, C. Sekkat et al. , 'Unsupervised object localization: Observing the background to discover objects,' in CVPR , 2023."
+            },
+            {
+              "title": "Mvp-seg: Multi-view prompt learning for open-vocabulary semantic segmentation",
+              "citation": "J. Guo, Q. Wang et al. , 'Mvp-seg: Multi-view prompt learning for open-vocabulary semantic segmentation,' arXiv , 2023."
+            },
+            {
+              "title": "Peekaboo: Text to image diffusion models are zero-shot segmentors",
+              "citation": "R. Burgert, K. Ranasinghe et al. , 'Peekaboo: Text to image diffusion models are zero-shot segmentors,' arXiv , 2022."
+            },
+            {
+              "title": "High-resolution image synthesis with latent diffusion models",
+              "citation": "R. Rombach, A. Blattmann et al. , 'High-resolution image synthesis with latent diffusion models,' in CVPR , 2022."
+            },
+            {
+              "title": "Diffusion models for zero-shot openvocabulary segmentation",
+              "citation": "L. Karazija, I. Laina et al. , 'Diffusion models for zero-shot openvocabulary segmentation,' arXiv , 2023."
+            },
+            {
+              "title": "Peekaboo: Text to image diffusion models are zero-shot segmentors",
+              "citation": "R. Burgert, K. Ranasinghe et al. , 'Peekaboo: Text to image diffusion models are zero-shot segmentors,' arXiv , 2022."
+            },
+            {
+              "title": "High-resolution image synthesis with latent diffusion models",
+              "citation": "R. Rombach, A. Blattmann et al. , 'High-resolution image synthesis with latent diffusion models,' in CVPR , 2022."
+            },
+            {
+              "title": "Fossil: Free open-vocabulary semantic segmentation through synthetic references retrieval",
+              "citation": "L. Barsellotti, R. Amoroso et al. , 'Fossil: Free open-vocabulary semantic segmentation through synthetic references retrieval,' in WACV , 2024, pp. 1464-1473."
+            },
+            {
+              "title": "Dinov2: Learning robust visual features without supervision",
+              "citation": "M. Oquab, T. Darcet et al. , 'Dinov2: Learning robust visual features without supervision,' arXiv , 2023."
+            },
+            {
+              "title": "Prompt pre-training with twentythousand classes for open-vocabulary visual recognition",
+              "citation": "S. Ren, A. Zhang et al. , 'Prompt pre-training with twentythousand classes for open-vocabulary visual recognition,' arXiv , 2023."
+            },
+            {
+              "title": "Learning to prompt for vision-language models",
+              "citation": "K. Zhou, J. Yang et al. , 'Learning to prompt for vision-language models,' IJCV , 2022."
+            },
+            {
+              "title": "Open-vocabulary semantic segmentation via attribute decomposition-aggregation",
+              "citation": "C. Ma, Y. Yang et al. , 'Open-vocabulary semantic segmentation via attribute decomposition-aggregation,' in NeurIPS , 2023."
+            },
+            {
+              "title": "Plug-and-play, dense-labelfree extraction of open-vocabulary semantic segmentation from vision-language models",
+              "citation": "L. Jiayun, S. Khandelwal et al. , 'Plug-and-play, dense-labelfree extraction of open-vocabulary semantic segmentation from vision-language models,' arXiv , 2023."
+            },
+            {
+              "title": "Grad-cam: Visual explanations from deep networks via gradient-based localization",
+              "citation": "R. R. Selvaraju, M. Cogswell et al. , 'Grad-cam: Visual explanations from deep networks via gradient-based localization,' in ICCV , 2017."
+            },
+            {
+              "title": "Tagalign: Improving vision-language alignment with multi-tag classification",
+              "citation": "Q. Liu, K. Zheng et al. , 'Tagalign: Improving vision-language alignment with multi-tag classification,' arXiv , 2023."
+            },
+            {
+              "title": "Self-guided open-vocabulary semantic segmentation",
+              "citation": "O. ¨ Ulger, M. Kulicki et al. , 'Self-guided open-vocabulary semantic segmentation,' arXiv , 2023."
+            },
+            {
+              "title": "Blip: Bootstrapping language-image pretraining for unified vision-language understanding and generation",
+              "citation": "J. Li, D. Li et al. , 'Blip: Bootstrapping language-image pretraining for unified vision-language understanding and generation,' in ICML , 2022."
+            },
+            {
+              "title": "Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models",
+              "citation": "--, 'Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,' in ICML , 2023."
+            },
+            {
+              "title": "Generalized decoding for pixel, image, and language",
+              "citation": "X. Zou, Z.-Y. Dou et al. , 'Generalized decoding for pixel, image, and language,' in CVPR , 2023."
+            },
+            {
+              "title": "Llama 2: Open foundation and finetuned chat models",
+              "citation": "H. Touvron, L. Martin et al. , 'Llama 2: Open foundation and finetuned chat models,' arXiv , 2023."
+            },
+            {
+              "title": "Denseclip: Language-guided dense prediction with context-aware prompting",
+              "citation": "Y. Rao, W. Zhao et al. , 'Denseclip: Language-guided dense prediction with context-aware prompting,' in CVPR , 2022."
+            },
+            {
+              "title": "Open-vocabulary semantic segmentation with mask-adapted clip",
+              "citation": "F. Liang, B. Wu et al. , 'Open-vocabulary semantic segmentation with mask-adapted clip,' in CVPR , 2023."
+            },
+            {
+              "title": "Cat-seg: Cost aggregation for openvocabulary semantic segmentation",
+              "citation": "S. Cho, H. Shin et al. , 'Cat-seg: Cost aggregation for openvocabulary semantic segmentation,' arXiv , 2023."
+            },
+            {
+              "title": "F-vlm: Open-vocabulary object detection upon frozen vision and language models",
+              "citation": "W. Kuo, Y. Cui et al. , 'F-vlm: Open-vocabulary object detection upon frozen vision and language models,' arXiv , 2022."
+            },
+            {
+              "title": "CLIPSelf: Vision transformer distills itself for open-vocabulary dense prediction",
+              "citation": "S. Wu, W. Zhang et al. , 'CLIPSelf: Vision transformer distills itself for open-vocabulary dense prediction,' in ICLR , 2024."
+            },
+            {
+              "title": "Sed: A simple encoder-decoder for openvocabulary semantic segmentation",
+              "citation": "B. Xie, J. Cao et al. , 'Sed: A simple encoder-decoder for openvocabulary semantic segmentation,' arXiv , 2023."
+            },
+            {
+              "title": "A convnet for the 2020s,",
+              "citation": "Z. Liu, H. Mao et al. , 'A convnet for the 2020s,' in CVPR , 2022."
+            },
+            {
+              "title": "Learning mask-aware clip representations for zero-shot segmentation",
+              "citation": "S. Jiao, Y. Wei et al. , 'Learning mask-aware clip representations for zero-shot segmentation,' NeurIPS , 2023."
+            },
+            {
+              "title": "Zegclip: Towards adapting clip for zeroshot semantic segmentation",
+              "citation": "Z. Zhou, Y. Lei et al. , 'Zegclip: Towards adapting clip for zeroshot semantic segmentation,' in CVPR , 2023."
+            },
+            {
+              "title": "Tagclip: Improving discrimination ability of open-vocabulary semantic segmentation",
+              "citation": "J. Li, P. Chen et al. , 'Tagclip: Improving discrimination ability of open-vocabulary semantic segmentation,' arXiv , 2023."
+            },
+            {
+              "title": "Visual prompt tuning,",
+              "citation": "M. Jia, L. Tang et al. , 'Visual prompt tuning,' in ECCV , 2022."
+            },
+            {
+              "title": "Image segmentation using text and image prompts",
+              "citation": "T. L¨ uddecke and A. Ecker, 'Image segmentation using text and image prompts,' in CVPR , 2022."
+            },
+            {
+              "title": "U-net: Convolutional networks for biomedical image segmentation",
+              "citation": "O. Ronneberger, P. Fischer et al. , 'U-net: Convolutional networks for biomedical image segmentation,' in MICCAI , 2015."
+            },
+            {
+              "title": "Side adapter network for open vocabulary semantic segmentation",
+              "citation": "M. Xu, Z. Zhang et al. , 'Side adapter network for openvocabulary semantic segmentation,' in CVPR , 2023."
+            },
+            {
+              "title": "Clip surgery for better explainability with enhancement in open-vocabulary tasks",
+              "citation": "Y. Li, H. Wang et al. , 'Clip surgery for better explainability with enhancement in open-vocabulary tasks,' arXiv , 2023."
+            },
+            {
+              "title": "A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model",
+              "citation": "M. Xu, Z. Zhang et al. , 'A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model,' in ECCV , 2022."
+            },
+            {
+              "title": "Clip as rnn: Segment countless visual concepts without training endeavor",
+              "citation": "S. Sun, R. Li et al. , 'Clip as rnn: Segment countless visual concepts without training endeavor,' arXiv , 2023."
+            },
+            {
+              "title": "What does clip know about a red circle? visual prompt engineering for vlms",
+              "citation": "A. Shtedritski, C. Rupprecht et al. , 'What does clip know about a red circle? visual prompt engineering for vlms,' in ICCV , 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "5.4.1",
+              "sec_title": "Frozen VLMs-IE as Feature Extractor.",
+              "citations": [
+                {
+                  "title": "Open-vocabulary object detection via vision and language knowledge distillation,",
+                  "citation": "X. Gu, T.-Y. Lin et al. , 'Open-vocabulary object detection via vision and language knowledge distillation,' arXiv , 2021."
+                },
+                {
+                  "title": "F-vlm: Open-vocabulary object detection upon frozen vision and language models,",
+                  "citation": "W. Kuo, Y. Cui et al. , 'F-vlm: Open-vocabulary object detection upon frozen vision and language models,' arXiv , 2022."
+                },
+                {
+                  "title": "Decoupling zero-shot semantic segmentation,",
+                  "citation": "J. Ding, N. Xue et al. , 'Decoupling zero-shot semantic segmentation,' in CVPR , 2022."
+                },
+                {
+                  "title": "Reco: Retrieve and co-segment for zeroshot transfer,",
+                  "citation": "G. Shin, W. Xie et al. , 'Reco: Retrieve and co-segment for zeroshot transfer,' NeurIPS , 2022."
+                },
+                {
+                  "title": "Momentum contrast for unsupervised visual representation learning,",
+                  "citation": "K. He, H. Fan et al. , 'Momentum contrast for unsupervised visual representation learning,' in CVPR , 2020."
+                },
+                {
+                  "title": "Denseclip: Language-guided dense prediction with context-aware prompting,",
+                  "citation": "Y. Rao, W. Zhao et al. , 'Denseclip: Language-guided dense prediction with context-aware prompting,' in CVPR , 2022."
+                },
+                {
+                  "title": "Open-vocabulary segmentation with semantic-assisted calibration,",
+                  "citation": "Y. Liu, S. Bai et al. , 'Open-vocabulary segmentation with semantic-assisted calibration,' arXiv , 2023."
+                },
+                {
+                  "title": "A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model,",
+                  "citation": "M. Xu, Z. Zhang et al. , 'A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model,' in ECCV , 2022."
+                },
+                {
+                  "title": "Extract free dense labels from clip",
+                  "citation": "C. Zhou, C. C. Loy et al. , 'Extract free dense labels from clip,' in ECCV , 2022."
+                },
+                {
+                  "title": "Clip-dinoiser: Teaching clip a few dino tricks,",
+                  "citation": "M. Wysocza´ nska, O. Sim´ eoni et al. , 'Clip-dinoiser: Teaching clip a few dino tricks,' arXiv , 2023."
+                },
+                {
+                  "title": "Emerging properties in selfsupervised vision transformers,",
+                  "citation": "M. Caron, H. Touvron et al. , 'Emerging properties in selfsupervised vision transformers,' in ICCV , 2021."
+                },
+                {
+                  "title": "Clip surgery for better explainability with enhancement in open-vocabulary tasks,",
+                  "citation": "Y. Li, H. Wang et al. , 'Clip surgery for better explainability with enhancement in open-vocabulary tasks,' arXiv , 2023."
+                },
+                {
+                  "title": "Extract free dense labels from clip",
+                  "citation": "C. Zhou, C. C. Loy et al. , 'Extract free dense labels from clip,' in ECCV , 2022."
+                },
+                {
+                  "title": "Unsupervised object localization: Observing the background to discover objects,",
+                  "citation": "O. Sim´ eoni, C. Sekkat et al. , 'Unsupervised object localization: Observing the background to discover objects,' in CVPR , 2023."
+                },
+                {
+                  "title": "Mvp-seg: Multi-view prompt learning for open-vocabulary semantic segmentation,",
+                  "citation": "J. Guo, Q. Wang et al. , 'Mvp-seg: Multi-view prompt learning for open-vocabulary semantic segmentation,' arXiv , 2023."
+                },
+                {
+                  "title": "Peekaboo: Text to image diffusion models are zero-shot segmentors,",
+                  "citation": "R. Burgert, K. Ranasinghe et al. , 'Peekaboo: Text to image diffusion models are zero-shot segmentors,' arXiv , 2022."
+                },
+                {
+                  "title": "High-resolution image synthesis with latent diffusion models,",
+                  "citation": "R. Rombach, A. Blattmann et al. , 'High-resolution image synthesis with latent diffusion models,' in CVPR , 2022."
+                },
+                {
+                  "title": "Diffusion models for zero-shot openvocabulary segmentation,",
+                  "citation": "L. Karazija, I. Laina et al. , 'Diffusion models for zero-shot openvocabulary segmentation,' arXiv , 2023."
+                },
+                {
+                  "title": "Peekaboo: Text to image diffusion models are zero-shot segmentors,",
+                  "citation": "R. Burgert, K. Ranasinghe et al. , 'Peekaboo: Text to image diffusion models are zero-shot segmentors,' arXiv , 2022."
+                },
+                {
+                  "title": "High-resolution image synthesis with latent diffusion models,",
+                  "citation": "R. Rombach, A. Blattmann et al. , 'High-resolution image synthesis with latent diffusion models,' in CVPR , 2022."
+                },
+                {
+                  "title": "Fossil: Free open-vocabulary semantic segmentation through synthetic references retrieval,",
+                  "citation": "L. Barsellotti, R. Amoroso et al. , 'Fossil: Free open-vocabulary semantic segmentation through synthetic references retrieval,' in WACV , 2024, pp. 1464-1473."
+                },
+                {
+                  "title": "Dinov2: Learning robust visual features without supervision,",
+                  "citation": "M. Oquab, T. Darcet et al. , 'Dinov2: Learning robust visual features without supervision,' arXiv , 2023."
+                },
+                {
+                  "title": "Prompt pre-training with twentythousand classes for open-vocabulary visual recognition,",
+                  "citation": "S. Ren, A. Zhang et al. , 'Prompt pre-training with twentythousand classes for open-vocabulary visual recognition,' arXiv , 2023."
+                },
+                {
+                  "title": "Learning to prompt for vision-language models,",
+                  "citation": "K. Zhou, J. Yang et al. , 'Learning to prompt for vision-language models,' IJCV , 2022."
+                },
+                {
+                  "title": "Open-vocabulary semantic segmentation via attribute decomposition-aggregation,",
+                  "citation": "C. Ma, Y. Yang et al. , 'Open-vocabulary semantic segmentation via attribute decomposition-aggregation,' in NeurIPS , 2023."
+                },
+                {
+                  "title": "Plug-and-play, dense-labelfree extraction of open-vocabulary semantic segmentation from vision-language models,",
+                  "citation": "L. Jiayun, S. Khandelwal et al. , 'Plug-and-play, dense-labelfree extraction of open-vocabulary semantic segmentation from vision-language models,' arXiv , 2023."
+                },
+                {
+                  "title": "Grad-cam: Visual explanations from deep networks via gradient-based localization,",
+                  "citation": "R. R. Selvaraju, M. Cogswell et al. , 'Grad-cam: Visual explanations from deep networks via gradient-based localization,' in ICCV , 2017."
+                },
+                {
+                  "title": "Tagalign: Improving vision-language alignment with multi-tag classification,",
+                  "citation": "Q. Liu, K. Zheng et al. , 'Tagalign: Improving vision-language alignment with multi-tag classification,' arXiv , 2023."
+                },
+                {
+                  "title": "Self-guided open-vocabulary semantic segmentation,",
+                  "citation": "O. ¨ Ulger, M. Kulicki et al. , 'Self-guided open-vocabulary semantic segmentation,' arXiv , 2023."
+                },
+                {
+                  "title": "Blip: Bootstrapping language-image pretraining for unified vision-language understanding and generation,",
+                  "citation": "J. Li, D. Li et al. , 'Blip: Bootstrapping language-image pretraining for unified vision-language understanding and generation,' in ICML , 2022."
+                },
+                {
+                  "title": "Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,",
+                  "citation": "--, 'Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,' in ICML , 2023."
+                },
+                {
+                  "title": "Generalized decoding for pixel, image, and language,",
+                  "citation": "X. Zou, Z.-Y. Dou et al. , 'Generalized decoding for pixel, image, and language,' in CVPR , 2023."
+                },
+                {
+                  "title": "Llama 2: Open foundation and finetuned chat models,",
+                  "citation": "H. Touvron, L. Martin et al. , 'Llama 2: Open foundation and finetuned chat models,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.4.2",
+              "sec_title": "Fine-tuning VLMs-IE.",
+              "citations": [
+                {
+                  "title": "Denseclip: Language-guided dense prediction with context-aware prompting,",
+                  "citation": "Y. Rao, W. Zhao et al. , 'Denseclip: Language-guided dense prediction with context-aware prompting,' in CVPR , 2022."
+                },
+                {
+                  "title": "Open-vocabulary semantic segmentation with mask-adapted clip,",
+                  "citation": "F. Liang, B. Wu et al. , 'Open-vocabulary semantic segmentation with mask-adapted clip,' in CVPR , 2023."
+                },
+                {
+                  "title": "Cat-seg: Cost aggregation for openvocabulary semantic segmentation,",
+                  "citation": "S. Cho, H. Shin et al. , 'Cat-seg: Cost aggregation for openvocabulary semantic segmentation,' arXiv , 2023."
+                },
+                {
+                  "title": "F-vlm: Open-vocabulary object detection upon frozen vision and language models,",
+                  "citation": "W. Kuo, Y. Cui et al. , 'F-vlm: Open-vocabulary object detection upon frozen vision and language models,' arXiv , 2022."
+                },
+                {
+                  "title": "CLIPSelf: Vision transformer distills itself for open-vocabulary dense prediction,",
+                  "citation": "S. Wu, W. Zhang et al. , 'CLIPSelf: Vision transformer distills itself for open-vocabulary dense prediction,' in ICLR , 2024."
+                },
+                {
+                  "title": "Sed: A simple encoder-decoder for openvocabulary semantic segmentation,",
+                  "citation": "B. Xie, J. Cao et al. , 'Sed: A simple encoder-decoder for openvocabulary semantic segmentation,' arXiv , 2023."
+                },
+                {
+                  "title": "A convnet for the 2020s,",
+                  "citation": "Z. Liu, H. Mao et al. , 'A convnet for the 2020s,' in CVPR , 2022."
+                },
+                {
+                  "title": "Learning mask-aware clip representations for zero-shot segmentation,",
+                  "citation": "S. Jiao, Y. Wei et al. , 'Learning mask-aware clip representations for zero-shot segmentation,' NeurIPS , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.4.3",
+              "sec_title": "Learning Prompts or Adapters for VLMs-IE.",
+              "citations": [
+                {
+                  "title": "Zegclip: Towards adapting clip for zeroshot semantic segmentation,",
+                  "citation": "Z. Zhou, Y. Lei et al. , 'Zegclip: Towards adapting clip for zeroshot semantic segmentation,' in CVPR , 2023."
+                },
+                {
+                  "title": "Tagclip: Improving discrimination ability of open-vocabulary semantic segmentation,",
+                  "citation": "J. Li, P. Chen et al. , 'Tagclip: Improving discrimination ability of open-vocabulary semantic segmentation,' arXiv , 2023."
+                },
+                {
+                  "title": "Visual prompt tuning,",
+                  "citation": "M. Jia, L. Tang et al. , 'Visual prompt tuning,' in ECCV , 2022."
+                },
+                {
+                  "title": "Image segmentation using text and image prompts,",
+                  "citation": "T. L¨ uddecke and A. Ecker, 'Image segmentation using text and image prompts,' in CVPR , 2022."
+                },
+                {
+                  "title": "U-net: Convolutional networks for biomedical image segmentation,",
+                  "citation": "O. Ronneberger, P. Fischer et al. , 'U-net: Convolutional networks for biomedical image segmentation,' in MICCAI , 2015."
+                },
+                {
+                  "title": "Side adapter network for openvocabulary semantic segmentation,",
+                  "citation": "M. Xu, Z. Zhang et al. , 'Side adapter network for openvocabulary semantic segmentation,' in CVPR , 2023."
+                },
+                {
+                  "title": "Clip surgery for better explainability with enhancement in open-vocabulary tasks,",
+                  "citation": "Y. Li, H. Wang et al. , 'Clip surgery for better explainability with enhancement in open-vocabulary tasks,' arXiv , 2023."
+                },
+                {
+                  "title": "A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model,",
+                  "citation": "M. Xu, Z. Zhang et al. , 'A simple baseline for open-vocabulary semantic segmentation with pre-trained vision-language model,' in ECCV , 2022."
+                },
+                {
+                  "title": "Clip as rnn: Segment countless visual concepts without training endeavor,",
+                  "citation": "S. Sun, R. Li et al. , 'Clip as rnn: Segment countless visual concepts without training endeavor,' arXiv , 2023."
+                },
+                {
+                  "title": "What does clip know about a red circle? visual prompt engineering for vlms",
+                  "citation": "A. Shtedritski, C. Rupprecht et al. , 'What does clip know about a red circle? visual prompt engineering for vlms,' in ICCV , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "OPEN-VOCABULARY SEGMENTATION (OVS)",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "6.1",
+          "sec_title": "Open-Vocabulary Semantic Segmentation (OVSS)",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "6.1.1",
+              "sec_title": "Region-Aware Training (1)",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.1.2",
+              "sec_title": "Pseudo-Labeling (1)",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.1.3",
+              "sec_title": "Knowledge Distillation (1)",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.1.4",
+              "sec_title": "Transfer Learning (1)",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "6.2",
+          "sec_title": "Open-Vocabulary Instance Segmentation (OVIS)",
+          "citations": [
+            {
+              "title": "Betrayed by captions: Joint caption grounding and generation for open vocabulary instance segmentation",
+              "citation": "J. Wu, X. Li et al. , 'Betrayed by captions: Joint caption grounding and generation for open vocabulary instance segmentation,' arXiv , 2023."
+            },
+            {
+              "title": "Open-vocabulary object detection using captions",
+              "citation": "A. Zareian, K. D. Rosa et al. , 'Open-vocabulary object detection using captions,' in CVPR , 2021."
+            },
+            {
+              "title": "Semantic-promoted debiasing and background disambiguation for zero-shot instance segmentation",
+              "citation": "S. He, H. Ding et al. , 'Semantic-promoted debiasing and background disambiguation for zero-shot instance segmentation,' in CVPR , 2023."
+            },
+            {
+              "title": "Open-vocabulary instance segmentation via robust cross-modal pseudo-labeling",
+              "citation": "D. Huynh, J. Kuen et al. , 'Open-vocabulary instance segmentation via robust cross-modal pseudo-labeling,' in CVPR , 2022."
+            },
+            {
+              "title": "Mask-free ovis: Open-vocabulary instance segmentation without manual mask annotations",
+              "citation": "V. VS, N. Yu et al. , 'Mask-free ovis: Open-vocabulary instance segmentation without manual mask annotations,' in CVPR , 2023."
+            },
+            {
+              "title": "Align before fuse: Vision and language representation learning with momentum distillation",
+              "citation": "J. Li, R. Selvaraju et al. , 'Align before fuse: Vision and language representation learning with momentum distillation,' NeurIPS , 2021."
+            },
+            {
+              "title": "Grad-cam: Visual explanations from deep networks via gradient-based localization",
+              "citation": "R. R. Selvaraju, M. Cogswell et al. , 'Grad-cam: Visual explanations from deep networks via gradient-based localization,' in ICCV , 2017."
+            },
+            {
+              "title": "Mosaicfusion: Diffusion models as data augmenters for large vocabulary instance segmentation",
+              "citation": "J. Xie, W. Li et al. , 'Mosaicfusion: Diffusion models as data augmenters for large vocabulary instance segmentation,' arXiv , 2023."
+            },
+            {
+              "title": "Open-vocabulary sam: Segment and recognize twenty-thousand classes interactively",
+              "citation": "H. Yuan, X. Li et al. , 'Open-vocabulary sam: Segment and recognize twenty-thousand classes interactively,' arXiv , 2024."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "6.2.1",
+              "sec_title": "Region-Aware Training.",
+              "citations": [
+                {
+                  "title": "Betrayed by captions: Joint caption grounding and generation for open vocabulary instance segmentation,",
+                  "citation": "J. Wu, X. Li et al. , 'Betrayed by captions: Joint caption grounding and generation for open vocabulary instance segmentation,' arXiv , 2023."
+                },
+                {
+                  "title": "Open-vocabulary object detection using captions,",
+                  "citation": "A. Zareian, K. D. Rosa et al. , 'Open-vocabulary object detection using captions,' in CVPR , 2021."
+                },
+                {
+                  "title": "Semantic-promoted debiasing and background disambiguation for zero-shot instance segmentation,",
+                  "citation": "S. He, H. Ding et al. , 'Semantic-promoted debiasing and background disambiguation for zero-shot instance segmentation,' in CVPR , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.2.2",
+              "sec_title": "Pseudo-Labeling.",
+              "citations": [
+                {
+                  "title": "Open-vocabulary instance segmentation via robust cross-modal pseudo-labeling,",
+                  "citation": "D. Huynh, J. Kuen et al. , 'Open-vocabulary instance segmentation via robust cross-modal pseudo-labeling,' in CVPR , 2022."
+                },
+                {
+                  "title": "Mask-free ovis: Open-vocabulary instance segmentation without manual mask annotations,",
+                  "citation": "V. VS, N. Yu et al. , 'Mask-free ovis: Open-vocabulary instance segmentation without manual mask annotations,' in CVPR , 2023."
+                },
+                {
+                  "title": "Align before fuse: Vision and language representation learning with momentum distillation,",
+                  "citation": "J. Li, R. Selvaraju et al. , 'Align before fuse: Vision and language representation learning with momentum distillation,' NeurIPS , 2021."
+                },
+                {
+                  "title": "Grad-cam: Visual explanations from deep networks via gradient-based localization,",
+                  "citation": "R. R. Selvaraju, M. Cogswell et al. , 'Grad-cam: Visual explanations from deep networks via gradient-based localization,' in ICCV , 2017."
+                },
+                {
+                  "title": "Mosaicfusion: Diffusion models as data augmenters for large vocabulary instance segmentation,",
+                  "citation": "J. Xie, W. Li et al. , 'Mosaicfusion: Diffusion models as data augmenters for large vocabulary instance segmentation,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.2.3",
+              "sec_title": "Knowledge Distillation.",
+              "citations": [
+                {
+                  "title": "Open-vocabulary sam: Segment and recognize twenty-thousand classes interactively,",
+                  "citation": "H. Yuan, X. Li et al. , 'Open-vocabulary sam: Segment and recognize twenty-thousand classes interactively,' arXiv , 2024."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "6.3",
+          "sec_title": "Open-Vocabulary Panoptic Segmentation (OVPS)",
+          "citations": [
+            {
+              "title": "Open-vocabulary segmentation with unpaired mask-text supervision",
+              "citation": "Z. Wang, X. Xia et al. , 'Open-vocabulary segmentation with unpaired mask-text supervision,' arXiv , 2024."
+            },
+            {
+              "title": "Learning object-language alignments for open-vocabulary object detection",
+              "citation": "C. Lin, P. Sun et al. , 'Learning object-language alignments for open-vocabulary object detection,' arXiv , 2022."
+            },
+            {
+              "title": "Generalized decoding for pixel, image, and language",
+              "citation": "X. Zou, Z.-Y. Dou et al. , 'Generalized decoding for pixel, image, and language,' in CVPR , 2023."
+            },
+            {
+              "title": "Aligning and prompting everything all at once for universal visual perception",
+              "citation": "Y. Shen, C. Fu et al. , 'Aligning and prompting everything all at once for universal visual perception,' 2024."
+            },
+            {
+              "title": "Segment anything,",
+              "citation": "A. Kirillov, E. Mintun et al. , 'Segment anything,' arXiv , 2023."
+            },
+            {
+              "title": "Grounded language-image pretraining",
+              "citation": "L. H. Li, P. Zhang et al. , 'Grounded language-image pretraining,' in CVPR , 2022."
+            },
+            {
+              "title": "A simple framework for open-vocabulary segmentation and detection",
+              "citation": "H. Zhang, F. Li et al. , 'A simple framework for open-vocabulary segmentation and detection,' arXiv , 2023."
+            },
+            {
+              "title": "Generative adversarial networks,",
+              "citation": "I. Goodfellow, J. Pouget-Abadie et al. , 'Generative adversarial networks,' ACM Communications , 2020."
+            },
+            {
+              "title": "Learning structured output representation using deep conditional generative models",
+              "citation": "K. Sohn, H. Lee et al. , 'Learning structured output representation using deep conditional generative models,' NeurIPS , 2015."
+            },
+            {
+              "title": "Wasserstein generative adversarial networks",
+              "citation": "M. Arjovsky, S. Chintala et al. , 'Wasserstein generative adversarial networks,' in ICML , 2017."
+            },
+            {
+              "title": "Primitive generation and semantic-related alignment for universal zero-shot segmentation",
+              "citation": "S. He, H. Ding et al. , 'Primitive generation and semantic-related alignment for universal zero-shot segmentation,' in CVPR , 2023."
+            },
+            {
+              "title": "Primitive generation and semantic-related alignment for universal zero-shot segmentation",
+              "citation": "S. He, H. Ding et al. , 'Primitive generation and semantic-related alignment for universal zero-shot segmentation,' in CVPR , 2023."
+            },
+            {
+              "title": "Convolutions die hard: Open-vocabulary segmentation with single frozen convolutional clip",
+              "citation": "Q. Yu, J. He et al. , 'Convolutions die hard: Open-vocabulary segmentation with single frozen convolutional clip,' NeurIPS , 2024."
+            },
+            {
+              "title": "F-vlm: Open-vocabulary object detection upon frozen vision and language models",
+              "citation": "W. Kuo, Y. Cui et al. , 'F-vlm: Open-vocabulary object detection upon frozen vision and language models,' arXiv , 2022."
+            },
+            {
+              "title": "Freeseg: Unified, universal and openvocabulary image segmentation",
+              "citation": "J. Qin, J. Wu et al. , 'Freeseg: Unified, universal and openvocabulary image segmentation,' in CVPR , 2023."
+            },
+            {
+              "title": "Tent: Fully test-time adaptation by entropy minimization",
+              "citation": "D. Wang, E. Shelhamer et al. , 'Tent: Fully test-time adaptation by entropy minimization,' arXiv , 2020."
+            },
+            {
+              "title": "Test-time prompt tuning for zero-shot generalization in vision-language models",
+              "citation": "M. Shu, W. Nie et al. , 'Test-time prompt tuning for zero-shot generalization in vision-language models,' NeruIPS , 2022."
+            },
+            {
+              "title": "Possam: Panoptic open-vocabulary segment anything",
+              "citation": "V. VS, S. Borse et al. , 'Possam: Panoptic open-vocabulary segment anything,' arXiv , 2024."
+            },
+            {
+              "title": "Masqclip for open-vocabulary universal image segmentation",
+              "citation": "X. Xu, T. Xiong et al. , 'Masqclip for open-vocabulary universal image segmentation,' in ICCV , 2023."
+            },
+            {
+              "title": "Extract free dense labels from clip",
+              "citation": "C. Zhou, C. C. Loy et al. , 'Extract free dense labels from clip,' in ECCV , 2022."
+            },
+            {
+              "title": "Omg-seg: Is one model good enough for all segmentation?",
+              "citation": "X. Li, H. Yuan et al. , 'Omg-seg: Is one model good enough for all segmentation?' arXiv , 2024."
+            },
+            {
+              "title": "Semantic-sam: Segment and recognize anything at any granularity",
+              "citation": "F. Li, H. Zhang et al. , 'Semantic-sam: Segment and recognize anything at any granularity,' arXiv , 2023."
+            },
+            {
+              "title": "Open-vocabulary panoptic segmentation with text-to-image diffusion models",
+              "citation": "J. Xu, S. Liu et al. , 'Open-vocabulary panoptic segmentation with text-to-image diffusion models,' in CVPR , 2023."
+            },
+            {
+              "title": "High-resolution image synthesis with latent diffusion models",
+              "citation": "R. Rombach, A. Blattmann et al. , 'High-resolution image synthesis with latent diffusion models,' in CVPR , 2022."
+            },
+            {
+              "title": "Open-vocabulary panoptic segmentation with text-to-image diffusion models",
+              "citation": "J. Xu, S. Liu et al. , 'Open-vocabulary panoptic segmentation with text-to-image diffusion models,' in CVPR , 2023."
+            },
+            {
+              "title": "Hierarchical open-vocabulary universal image segmentation",
+              "citation": "X. Wang, S. Li et al. , 'Hierarchical open-vocabulary universal image segmentation,' arXiv , 2023."
+            },
+            {
+              "title": "Open-vocabulary panoptic segmentation with maskclip",
+              "citation": "Z. Ding, J. Wang et al. , 'Open-vocabulary panoptic segmentation with maskclip,' arXiv , 2022."
+            },
+            {
+              "title": "Open-vocabulary panoptic segmentation with embedding modulation",
+              "citation": "X. Chen, S. Li et al. , 'Open-vocabulary panoptic segmentation with embedding modulation,' arXiv , 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "6.3.1",
+              "sec_title": "Region-Aware Training.",
+              "citations": [
+                {
+                  "title": "Open-vocabulary segmentation with unpaired mask-text supervision,",
+                  "citation": "Z. Wang, X. Xia et al. , 'Open-vocabulary segmentation with unpaired mask-text supervision,' arXiv , 2024."
+                },
+                {
+                  "title": "Learning object-language alignments for open-vocabulary object detection,",
+                  "citation": "C. Lin, P. Sun et al. , 'Learning object-language alignments for open-vocabulary object detection,' arXiv , 2022."
+                },
+                {
+                  "title": "Generalized decoding for pixel, image, and language,",
+                  "citation": "X. Zou, Z.-Y. Dou et al. , 'Generalized decoding for pixel, image, and language,' in CVPR , 2023."
+                },
+                {
+                  "title": "Aligning and prompting everything all at once for universal visual perception,",
+                  "citation": "Y. Shen, C. Fu et al. , 'Aligning and prompting everything all at once for universal visual perception,' 2024."
+                },
+                {
+                  "title": "Segment anything,",
+                  "citation": "A. Kirillov, E. Mintun et al. , 'Segment anything,' arXiv , 2023."
+                },
+                {
+                  "title": "Grounded language-image pretraining,",
+                  "citation": "L. H. Li, P. Zhang et al. , 'Grounded language-image pretraining,' in CVPR , 2022."
+                },
+                {
+                  "title": "A simple framework for open-vocabulary segmentation and detection,",
+                  "citation": "H. Zhang, F. Li et al. , 'A simple framework for open-vocabulary segmentation and detection,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.3.2",
+              "sec_title": "Knowledge Distillation.",
+              "citations": [
+                {
+                  "title": "Generative adversarial networks,",
+                  "citation": "I. Goodfellow, J. Pouget-Abadie et al. , 'Generative adversarial networks,' ACM Communications , 2020."
+                },
+                {
+                  "title": "Learning structured output representation using deep conditional generative models,",
+                  "citation": "K. Sohn, H. Lee et al. , 'Learning structured output representation using deep conditional generative models,' NeurIPS , 2015."
+                },
+                {
+                  "title": "Wasserstein generative adversarial networks,",
+                  "citation": "M. Arjovsky, S. Chintala et al. , 'Wasserstein generative adversarial networks,' in ICML , 2017."
+                },
+                {
+                  "title": "Primitive generation and semantic-related alignment for universal zero-shot segmentation,",
+                  "citation": "S. He, H. Ding et al. , 'Primitive generation and semantic-related alignment for universal zero-shot segmentation,' in CVPR , 2023."
+                },
+                {
+                  "title": "Primitive generation and semantic-related alignment for universal zero-shot segmentation,",
+                  "citation": "S. He, H. Ding et al. , 'Primitive generation and semantic-related alignment for universal zero-shot segmentation,' in CVPR , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.3.3",
+              "sec_title": "Transfer Learning.",
+              "citations": [
+                {
+                  "title": "Convolutions die hard: Open-vocabulary segmentation with single frozen convolutional clip,",
+                  "citation": "Q. Yu, J. He et al. , 'Convolutions die hard: Open-vocabulary segmentation with single frozen convolutional clip,' NeurIPS , 2024."
+                },
+                {
+                  "title": "F-vlm: Open-vocabulary object detection upon frozen vision and language models,",
+                  "citation": "W. Kuo, Y. Cui et al. , 'F-vlm: Open-vocabulary object detection upon frozen vision and language models,' arXiv , 2022."
+                },
+                {
+                  "title": "Freeseg: Unified, universal and openvocabulary image segmentation,",
+                  "citation": "J. Qin, J. Wu et al. , 'Freeseg: Unified, universal and openvocabulary image segmentation,' in CVPR , 2023."
+                },
+                {
+                  "title": "Tent: Fully test-time adaptation by entropy minimization,",
+                  "citation": "D. Wang, E. Shelhamer et al. , 'Tent: Fully test-time adaptation by entropy minimization,' arXiv , 2020."
+                },
+                {
+                  "title": "Test-time prompt tuning for zero-shot generalization in vision-language models,",
+                  "citation": "M. Shu, W. Nie et al. , 'Test-time prompt tuning for zero-shot generalization in vision-language models,' NeruIPS , 2022."
+                },
+                {
+                  "title": "Possam: Panoptic open-vocabulary segment anything,",
+                  "citation": "V. VS, S. Borse et al. , 'Possam: Panoptic open-vocabulary segment anything,' arXiv , 2024."
+                },
+                {
+                  "title": "Masqclip for open-vocabulary universal image segmentation,",
+                  "citation": "X. Xu, T. Xiong et al. , 'Masqclip for open-vocabulary universal image segmentation,' in ICCV , 2023."
+                },
+                {
+                  "title": "Extract free dense labels from clip",
+                  "citation": "C. Zhou, C. C. Loy et al. , 'Extract free dense labels from clip,' in ECCV , 2022."
+                },
+                {
+                  "title": "Omg-seg: Is one model good enough for all segmentation?",
+                  "citation": "X. Li, H. Yuan et al. , 'Omg-seg: Is one model good enough for all segmentation?' arXiv , 2024."
+                },
+                {
+                  "title": "Semantic-sam: Segment and recognize anything at any granularity,",
+                  "citation": "F. Li, H. Zhang et al. , 'Semantic-sam: Segment and recognize anything at any granularity,' arXiv , 2023."
+                },
+                {
+                  "title": "Open-vocabulary panoptic segmentation with text-to-image diffusion models,",
+                  "citation": "J. Xu, S. Liu et al. , 'Open-vocabulary panoptic segmentation with text-to-image diffusion models,' in CVPR , 2023."
+                },
+                {
+                  "title": "High-resolution image synthesis with latent diffusion models,",
+                  "citation": "R. Rombach, A. Blattmann et al. , 'High-resolution image synthesis with latent diffusion models,' in CVPR , 2022."
+                },
+                {
+                  "title": "Hierarchical open-vocabulary universal image segmentation,",
+                  "citation": "X. Wang, S. Li et al. , 'Hierarchical open-vocabulary universal image segmentation,' arXiv , 2023."
+                },
+                {
+                  "title": "Open-vocabulary panoptic segmentation with maskclip,",
+                  "citation": "Z. Ding, J. Wang et al. , 'Open-vocabulary panoptic segmentation with maskclip,' arXiv , 2022."
+                },
+                {
+                  "title": "Open-vocabulary panoptic segmentation with embedding modulation,",
+                  "citation": "X. Chen, S. Li et al. , 'Open-vocabulary panoptic segmentation with embedding modulation,' arXiv , 2023."
+                },
+                {
+                  "title": "Open-vocabulary point-cloud object detection without 3d annotation,",
+                  "citation": "Y. Lu, C. Xu et al. , 'Open-vocabulary point-cloud object detection without 3d annotation,' in CVPR , 2023."
+                },
+                {
+                  "title": "Detecting twenty-thousand classes using image-level supervision,",
+                  "citation": "X. Zhou, R. Girdhar et al. , 'Detecting twenty-thousand classes using image-level supervision,' in ECCV , 2022."
+                },
+                {
+                  "title": "Fm-ov3d: Foundation model-based crossmodal knowledge blending for open-vocabulary 3d detection,",
+                  "citation": "D. Zhang, C. Li et al. , 'Fm-ov3d: Foundation model-based crossmodal knowledge blending for open-vocabulary 3d detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Grounded sam: Assembling open-world models for diverse visual tasks,",
+                  "citation": "T. Ren, S. Liu et al. , 'Grounded sam: Assembling open-world models for diverse visual tasks,' arXiv , 2024."
+                },
+                {
+                  "title": "Language models are few-shot learners,",
+                  "citation": "T. Brown, B. Mann et al. , 'Language models are few-shot learners,' NeurIPS , 2020."
+                },
+                {
+                  "title": "Opensight: A simple open-vocabulary framework for lidar-based object detection,",
+                  "citation": "H. Zhang, J. Xu et al. , 'Opensight: A simple open-vocabulary framework for lidar-based object detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Coda: Collaborative novel box discovery and cross-modal alignment for open-vocabulary 3d object detection,",
+                  "citation": "Y. Cao, Z. Yihan et al. , 'Coda: Collaborative novel box discovery and cross-modal alignment for open-vocabulary 3d object detection,' NeurIPS , 2024."
+                },
+                {
+                  "title": "Object2scene: Putting objects in context for open-vocabulary 3d detection,",
+                  "citation": "C. Zhu, W. Zhang et al. , 'Object2scene: Putting objects in context for open-vocabulary 3d detection,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "OPEN-VOCABULARY BEYOND IMAGES",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "7.1",
+          "sec_title": "Open-Vocabulary 3D Scene Understanding",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "7.1.1",
+              "sec_title": "Open-Vocabulary 3D Object Detection (OV3D)",
+              "citations": [
+                {
+                  "title": "Open-vocabulary point-cloud object detection without 3d annotation",
+                  "citation": "Y. Lu, C. Xu et al. , 'Open-vocabulary point-cloud object detection without 3d annotation,' in CVPR , 2023."
+                },
+                {
+                  "title": "Detecting twenty-thousand classes using image-level supervision",
+                  "citation": "X. Zhou, R. Girdhar et al. , 'Detecting twenty-thousand classes using image-level supervision,' in ECCV , 2022."
+                },
+                {
+                  "title": "Fm-ov3d: Foundation model-based crossmodal knowledge blending for open-vocabulary 3d detection",
+                  "citation": "D. Zhang, C. Li et al. , 'Fm-ov3d: Foundation model-based crossmodal knowledge blending for open-vocabulary 3d detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Grounded sam: Assembling open-world models for diverse visual tasks",
+                  "citation": "T. Ren, S. Liu et al. , 'Grounded sam: Assembling open-world models for diverse visual tasks,' arXiv , 2024."
+                },
+                {
+                  "title": "Language models are few-shot learners",
+                  "citation": "T. Brown, B. Mann et al. , 'Language models are few-shot learners,' NeurIPS , 2020."
+                },
+                {
+                  "title": "High-resolution image synthesis with latent diffusion models",
+                  "citation": "R. Rombach, A. Blattmann et al. , 'High-resolution image synthesis with latent diffusion models,' in CVPR , 2022."
+                },
+                {
+                  "title": "Opensight: A simple open-vocabulary framework for lidar-based object detection",
+                  "citation": "H. Zhang, J. Xu et al. , 'Opensight: A simple open-vocabulary framework for lidar-based object detection,' arXiv , 2023."
+                },
+                {
+                  "title": "Coda: Collaborative novel box discovery and cross-modal alignment for open-vocabulary 3d object detection",
+                  "citation": "Y. Cao, Z. Yihan et al. , 'Coda: Collaborative novel box discovery and cross-modal alignment for open-vocabulary 3d object detection,' NeurIPS , 2024."
+                },
+                {
+                  "title": "Object2scene: Putting objects in context for open-vocabulary 3d detection",
+                  "citation": "C. Zhu, W. Zhang et al. , 'Object2scene: Putting objects in context for open-vocabulary 3d detection,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "7.1.2",
+              "sec_title": "Open-Vocabulary 3D Segmentation",
+              "citations": [
+                {
+                  "title": "Language-level semantics conditioned 3d point cloud segmentation",
+                  "citation": "B. Liu, S. Deng et al. , 'Language-level semantics conditioned 3d point cloud segmentation,' arXiv , 2021."
+                },
+                {
+                  "title": "Generative zero-shot learning for semantic segmentation of 3d point clouds",
+                  "citation": "B. Michele, A. Boulch et al. , 'Generative zero-shot learning for semantic segmentation of 3d point clouds,' in 3DV , 2021."
+                },
+                {
+                  "title": "Openscene: 3d scene understanding with open vocabularies",
+                  "citation": "S. Peng, K. Genova et al. , 'Openscene: 3d scene understanding with open vocabularies,' in CVPR , 2023."
+                },
+                {
+                  "title": "Pla: Language-driven open-vocabulary 3d scene understanding",
+                  "citation": "R. Ding, J. Yang et al. , 'Pla: Language-driven open-vocabulary 3d scene understanding,' in CVPR , 2023."
+                },
+                {
+                  "title": "Language models are unsupervised multitask learners",
+                  "citation": "A. Radford, J. Wu et al. , 'Language models are unsupervised multitask learners,' OpenAI blog , 2019."
+                },
+                {
+                  "title": "Regionplc: Regional point-language contrastive learning for open-world 3d scene understanding",
+                  "citation": "J. Yang, R. Ding et al. , 'Regionplc: Regional point-language contrastive learning for open-world 3d scene understanding,' arXiv , 2023."
+                },
+                {
+                  "title": "Openmask3d: Open-vocabulary 3d instance segmentation",
+                  "citation": "A. Takmaz, E. Fedele et al. , 'Openmask3d: Open-vocabulary 3d instance segmentation,' 2023."
+                },
+                {
+                  "title": "Segment anything,",
+                  "citation": "A. Kirillov, E. Mintun et al. , 'Segment anything,' arXiv , 2023."
+                },
+                {
+                  "title": "Maskclustering: View consensus based mask graph clustering for open-vocabulary 3d instance segmentation",
+                  "citation": "M. Yan, J. Zhang et al. , 'Maskclustering: View consensus based mask graph clustering for open-vocabulary 3d instance segmentation,' arXiv , 2024."
+                },
+                {
+                  "title": "Openins3d: Snap and lookup for 3d open-vocabulary instance segmentation",
+                  "citation": "Z. Huang, X. Wu et al. , 'Openins3d: Snap and lookup for 3d open-vocabulary instance segmentation,' arXiv , 2023."
+                },
+                {
+                  "title": "Open3dis: Open-vocabulary 3d instance segmentation with 2d mask guidance",
+                  "citation": "P. D. Nguyen, T. D. Ngo et al. , 'Open3dis: Open-vocabulary 3d instance segmentation with 2d mask guidance,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "7.2",
+          "sec_title": "Open-Vocabulary Video Understanding (OVVU)",
+          "citations": [
+            {
+              "title": "Towards open-vocabulary video instance segmentation",
+              "citation": "H. Wang, C. Yan et al. , 'Towards open-vocabulary video instance segmentation,' in ICCV , 2023."
+            },
+            {
+              "title": "Openvis: Open-vocabulary video instance segmentation",
+              "citation": "P. Guo, T. Huang et al. , 'Openvis: Open-vocabulary video instance segmentation,' arXiv , 2023."
+            },
+            {
+              "title": "Openvis: Open-vocabulary video instance segmentation",
+              "citation": "P. Guo, T. Huang et al. , 'Openvis: Open-vocabulary video instance segmentation,' arXiv , 2023."
+            },
+            {
+              "title": "Towards open-vocabulary video instance segmentation",
+              "citation": "H. Wang, C. Yan et al. , 'Towards open-vocabulary video instance segmentation,' in ICCV , 2023."
+            },
+            {
+              "title": "Instance brownian bridge as texts for openvocabulary video instance segmentation",
+              "citation": "Z. Cheng, K. Li et al. , 'Instance brownian bridge as texts for openvocabulary video instance segmentation,' arXiv , 2024."
+            },
+            {
+              "title": "Dvis++: Improved decoupled framework for universal video segmentation",
+              "citation": "T. Zhang, X. Tian et al. , 'Dvis++: Improved decoupled framework for universal video segmentation,' arXiv , 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "CHALLENGES AND OUTLOOK",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "8.1",
+          "sec_title": "Challenges",
+          "citations": [
+            {
+              "title": "What makes good open-vocabulary detector: A disassembling perspective",
+              "citation": "J. Li, C. Xie et al. , 'What makes good open-vocabulary detector: A disassembling perspective,' arXiv , 2023."
+            },
+            {
+              "title": "Learning open-world object proposals without learning to classify",
+              "citation": "D. Kim, T.-Y. Lin et al. , 'Learning open-world object proposals without learning to classify,' Robotics and Automation , 2022."
+            },
+            {
+              "title": "Open-vocabulary object detection with an open corpus",
+              "citation": "J. Wang, H. Zhang et al. , 'Open-vocabulary object detection with an open corpus,' in ICCV , 2023."
+            },
+            {
+              "title": "Unsupervised object localization in the era of self-supervised vits: A survey",
+              "citation": "O. Sim´ eoni, ´ E. Zablocki et al. , 'Unsupervised object localization in the era of self-supervised vits: A survey,' arXiv , 2023."
+            },
+            {
+              "title": "Emerging properties in self-supervised vision transformers",
+              "citation": "M. Caron, H. Touvron et al. , 'Emerging properties in selfsupervised vision transformers,' in ICCV , 2021."
+            },
+            {
+              "title": "Segment anything,",
+              "citation": "A. Kirillov, E. Mintun et al. , 'Segment anything,' arXiv , 2023."
+            },
+            {
+              "title": "Open-vocabulary object detection via vision and language knowledge distillation",
+              "citation": "X. Gu, T.-Y. Lin et al. , 'Open-vocabulary object detection via vision and language knowledge distillation,' arXiv , 2021."
+            },
+            {
+              "title": "F-vlm: Open-vocabulary object detection upon frozen vision and language models",
+              "citation": "W. Kuo, Y. Cui et al. , 'F-vlm: Open-vocabulary object detection upon frozen vision and language models,' arXiv , 2022."
+            },
+            {
+              "title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks",
+              "citation": "S. Ren, K. He et al. , 'Faster r-cnn: Towards real-time object detection with region proposal networks,' NeurIPS , 2015."
+            },
+            {
+              "title": "End-to-end object detection with transformers",
+              "citation": "N. Carion, F. Massa et al. , 'End-to-end object detection with transformers,' in ECCV , 2020."
+            },
+            {
+              "title": "Masked-attention mask transformer for universal image segmentation",
+              "citation": "B. Cheng, I. Misra et al. , 'Masked-attention mask transformer for universal image segmentation,' in CVPR , 2022."
+            },
+            {
+              "title": "Yolov3: An incremental improvement,",
+              "citation": "--, 'Yolov3: An incremental improvement,' arXiv , 2018."
+            },
+            {
+              "title": "Rethinking evaluation metrics of openvocabulary segmentaion",
+              "citation": "H. Zhou, T. Shen et al. , 'Rethinking evaluation metrics of openvocabulary segmentaion,' arXiv , 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "8.1.1",
+              "sec_title": "Overfitting on Base Classes.",
+              "citations": [
+                {
+                  "title": "What makes good open-vocabulary detector: A disassembling perspective,",
+                  "citation": "J. Li, C. Xie et al. , 'What makes good open-vocabulary detector: A disassembling perspective,' arXiv , 2023."
+                },
+                {
+                  "title": "Learning open-world object proposals without learning to classify,",
+                  "citation": "D. Kim, T.-Y. Lin et al. , 'Learning open-world object proposals without learning to classify,' Robotics and Automation , 2022."
+                },
+                {
+                  "title": "Open-vocabulary object detection with an open corpus,",
+                  "citation": "J. Wang, H. Zhang et al. , 'Open-vocabulary object detection with an open corpus,' in ICCV , 2023."
+                },
+                {
+                  "title": "Unsupervised object localization in the era of self-supervised vits: A survey,",
+                  "citation": "O. Sim´ eoni, ´ E. Zablocki et al. , 'Unsupervised object localization in the era of self-supervised vits: A survey,' arXiv , 2023."
+                },
+                {
+                  "title": "Emerging properties in selfsupervised vision transformers,",
+                  "citation": "M. Caron, H. Touvron et al. , 'Emerging properties in selfsupervised vision transformers,' in ICCV , 2021."
+                },
+                {
+                  "title": "Segment anything,",
+                  "citation": "A. Kirillov, E. Mintun et al. , 'Segment anything,' arXiv , 2023."
+                },
+                {
+                  "title": "Open-vocabulary object detection via vision and language knowledge distillation,",
+                  "citation": "X. Gu, T.-Y. Lin et al. , 'Open-vocabulary object detection via vision and language knowledge distillation,' arXiv , 2021."
+                },
+                {
+                  "title": "F-vlm: Open-vocabulary object detection upon frozen vision and language models,",
+                  "citation": "W. Kuo, Y. Cui et al. , 'F-vlm: Open-vocabulary object detection upon frozen vision and language models,' arXiv , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "8.1.2",
+              "sec_title": "Correct Region-Word Correspondence.",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "8.1.3",
+              "sec_title": "Large VLMs Adaptation.",
+              "citations": [
+                {
+                  "title": "Faster r-cnn: Towards real-time object detection with region proposal networks,",
+                  "citation": "S. Ren, K. He et al. , 'Faster r-cnn: Towards real-time object detection with region proposal networks,' NeurIPS , 2015."
+                },
+                {
+                  "title": "End-to-end object detection with transformers,",
+                  "citation": "N. Carion, F. Massa et al. , 'End-to-end object detection with transformers,' in ECCV , 2020."
+                },
+                {
+                  "title": "Masked-attention mask transformer for universal image segmentation,",
+                  "citation": "B. Cheng, I. Misra et al. , 'Masked-attention mask transformer for universal image segmentation,' in CVPR , 2022."
+                },
+                {
+                  "title": "Yolov3: An incremental improvement,",
+                  "citation": "--, 'Yolov3: An incremental improvement,' arXiv , 2018."
+                },
+                {
+                  "title": "Rethinking evaluation metrics of openvocabulary segmentaion,",
+                  "citation": "H. Zhou, T. Shen et al. , 'Rethinking evaluation metrics of openvocabulary segmentaion,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "8.2",
+          "sec_title": "Future Directions",
+          "citations": [
+            {
+              "title": "Compositional prompt tuning with motion cues for open-vocabulary video relation detection",
+              "citation": "K. Gao, L. Chen et al. , 'Compositional prompt tuning with motion cues for open-vocabulary video relation detection,' in ICLR , 2023."
+            },
+            {
+              "title": "Zero-shot visual relation detection via composite visual cues from large language models",
+              "citation": "L. Li, J. Xiao et al. , 'Zero-shot visual relation detection via composite visual cues from large language models,' arXiv , 2023."
+            },
+            {
+              "title": "Open-vocabulary panoptic segmentation with text-to-image diffusion models",
+              "citation": "J. Xu, S. Liu et al. , 'Open-vocabulary panoptic segmentation with text-to-image diffusion models,' in CVPR , 2023."
+            },
+            {
+              "title": "Freeseg: Unified, universal and openvocabulary image segmentation",
+              "citation": "J. Qin, J. Wu et al. , 'Freeseg: Unified, universal and openvocabulary image segmentation,' in CVPR , 2023."
+            },
+            {
+              "title": "Hierarchical open-vocabulary universal image segmentation",
+              "citation": "X. Wang, S. Li et al. , 'Hierarchical open-vocabulary universal image segmentation,' arXiv , 2023."
+            },
+            {
+              "title": "Dataseg: Taming a universal multi-dataset multi-task segmentation model",
+              "citation": "X. Gu, Y. Cui et al. , 'Dataseg: Taming a universal multi-dataset multi-task segmentation model,' arXiv , 2023."
+            },
+            {
+              "title": "Detecting everything in the open world: Towards universal object detection",
+              "citation": "Z. Wang, Y. Li et al. , 'Detecting everything in the open world: Towards universal object detection,' in CVPR , 2023."
+            },
+            {
+              "title": "Scaledet: A scalable multi-dataset object detector",
+              "citation": "Y. Chen, M. Wang et al. , 'Scaledet: A scalable multi-dataset object detector,' in CVPR , 2023."
+            },
+            {
+              "title": "A simple framework for open-vocabulary segmentation and detection",
+              "citation": "H. Zhang, F. Li et al. , 'A simple framework for open-vocabulary segmentation and detection,' arXiv , 2023."
+            },
+            {
+              "title": "Contextual object detection with multimodal large language models",
+              "citation": "Y. Zang, W. Li et al. , 'Contextual object detection with multimodal large language models,' arXiv , 2023."
+            },
+            {
+              "title": "Detgpt: Detect what you need via reasoning",
+              "citation": "R. Pi, J. Gao et al. , 'Detgpt: Detect what you need via reasoning,' arXiv , 2023."
+            },
+            {
+              "title": "Visionllm: Large language model is also an open-ended decoder for vision-centric tasks",
+              "citation": "W. Wang, Z. Chen et al. , 'Visionllm: Large language model is also an open-ended decoder for vision-centric tasks,' NeurIPS , 2024."
+            },
+            {
+              "title": "Lisa: Reasoning segmentation via large language model",
+              "citation": "X. Lai, Z. Tian et al. , 'Lisa: Reasoning segmentation via large language model,' arXiv , 2023."
+            },
+            {
+              "title": "Pix2seq: A language modeling framework for object detection",
+              "citation": "T. Chen, S. Saxena et al. , 'Pix2seq: A language modeling framework for object detection,' arXiv , 2021."
+            },
+            {
+              "title": "Seqtr: A simple yet universal network for visual grounding",
+              "citation": "C. Zhu, Y. Zhou et al. , 'Seqtr: A simple yet universal network for visual grounding,' in ECCV , 2022."
+            },
+            {
+              "title": "A unified sequence interface for vision tasks",
+              "citation": "--, 'A unified sequence interface for vision tasks,' NeurIPS , 2022."
+            },
+            {
+              "title": "Segment anything,",
+              "citation": "A. Kirillov, E. Mintun et al. , 'Segment anything,' arXiv , 2023."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford, J. W. Kim et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+            },
+            {
+              "title": "Emerging properties in self-supervised vision transformers",
+              "citation": "M. Caron, H. Touvron et al. , 'Emerging properties in selfsupervised vision transformers,' in ICCV , 2021."
+            },
+            {
+              "title": "Dinov2: Learning robust visual features without supervision",
+              "citation": "M. Oquab, T. Darcet et al. , 'Dinov2: Learning robust visual features without supervision,' arXiv , 2023."
+            },
+            {
+              "title": "Yolo-world: Real-time open-vocabulary object detection",
+              "citation": "T. Cheng, L. Song et al. , 'Yolo-world: Real-time open-vocabulary object detection,' in CVPR , 2024."
+            },
+            {
+              "title": "Detrs beat yolos on real-time object detection",
+              "citation": "W. Lv, S. Xu et al. , 'Detrs beat yolos on real-time object detection,' arXiv , 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "8.2.1",
+              "sec_title": "Enabling Open-Vocabulary on Other Scene Understanding Tasks.",
+              "citations": [
+                {
+                  "title": "Compositional prompt tuning with motion cues for open-vocabulary video relation detection,",
+                  "citation": "K. Gao, L. Chen et al. , 'Compositional prompt tuning with motion cues for open-vocabulary video relation detection,' in ICLR , 2023."
+                },
+                {
+                  "title": "Zero-shot visual relation detection via composite visual cues from large language models,",
+                  "citation": "L. Li, J. Xiao et al. , 'Zero-shot visual relation detection via composite visual cues from large language models,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "8.2.2",
+              "sec_title": "Unifying OVD and OVS.",
+              "citations": [
+                {
+                  "title": "Open-vocabulary panoptic segmentation with text-to-image diffusion models,",
+                  "citation": "J. Xu, S. Liu et al. , 'Open-vocabulary panoptic segmentation with text-to-image diffusion models,' in CVPR , 2023."
+                },
+                {
+                  "title": "Freeseg: Unified, universal and openvocabulary image segmentation,",
+                  "citation": "J. Qin, J. Wu et al. , 'Freeseg: Unified, universal and openvocabulary image segmentation,' in CVPR , 2023."
+                },
+                {
+                  "title": "Hierarchical open-vocabulary universal image segmentation,",
+                  "citation": "X. Wang, S. Li et al. , 'Hierarchical open-vocabulary universal image segmentation,' arXiv , 2023."
+                },
+                {
+                  "title": "Dataseg: Taming a universal multi-dataset multi-task segmentation model,",
+                  "citation": "X. Gu, Y. Cui et al. , 'Dataseg: Taming a universal multi-dataset multi-task segmentation model,' arXiv , 2023."
+                },
+                {
+                  "title": "Detecting everything in the open world: Towards universal object detection,",
+                  "citation": "Z. Wang, Y. Li et al. , 'Detecting everything in the open world: Towards universal object detection,' in CVPR , 2023."
+                },
+                {
+                  "title": "Scaledet: A scalable multi-dataset object detector,",
+                  "citation": "Y. Chen, M. Wang et al. , 'Scaledet: A scalable multi-dataset object detector,' in CVPR , 2023."
+                },
+                {
+                  "title": "A simple framework for open-vocabulary segmentation and detection,",
+                  "citation": "H. Zhang, F. Li et al. , 'A simple framework for open-vocabulary segmentation and detection,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "8.2.3",
+              "sec_title": "Multimodal Large Language Models (LLMs) for Perception.",
+              "citations": [
+                {
+                  "title": "Seqtr: A simple yet universal network for visual grounding,",
+                  "citation": "C. Zhu, Y. Zhou et al. , 'Seqtr: A simple yet universal network for visual grounding,' in ECCV , 2022."
+                },
+                {
+                  "title": "Contextual object detection with multimodal large language models,",
+                  "citation": "Y. Zang, W. Li et al. , 'Contextual object detection with multimodal large language models,' arXiv , 2023."
+                },
+                {
+                  "title": "Detgpt: Detect what you need via reasoning,",
+                  "citation": "R. Pi, J. Gao et al. , 'Detgpt: Detect what you need via reasoning,' arXiv , 2023.\n\n[279] W. Wang, Z. Chen et al. , 'Visionllm: Large language model is also an open-ended decoder for vision-centric tasks,' NeurIPS , 2024.\n\n[280] X. Lai, Z. Tian et al. , 'Lisa: Reasoning segmentation via large language model,' arXiv , 2023.\n\n[281] T. Chen, S. Saxena et al. , 'Pix2seq: A language modeling fram"
+                },
+                {
+                  "title": "Probabilistic two-stage detection,",
+                  "citation": "X. Zhou, V. Koltun et al. , 'Probabilistic two-stage detection,' arXiv , 2021."
+                },
+                {
+                  "title": "High-performance large-scale image recognition without normalization,",
+                  "citation": "A. Brock, S. De et al. , 'High-performance large-scale image recognition without normalization,' in ICML , 2021."
+                },
+                {
+                  "title": "Lit: Zero-shot transfer with locked-image text tuning,",
+                  "citation": "X. Zhai, X. Wang et al. , 'Lit: Zero-shot transfer with locked-image text tuning,' in CVPR , 2022."
+                },
+                {
+                  "title": "Yfcc100m: The new data in multimedia research,",
+                  "citation": "B. Thomee, D. A. Shamma et al. , 'Yfcc100m: The new data in multimedia research,' ACM Communications , 2016.\n\n[316] X. Dai, Y. Chen et al. , 'Dynamic head: Unifying object detection heads with attentions,' in CVPR , 2021.\n\n[317] H. Zhang, F. Li et al. , 'Dino: Detr with improved denoising anchor boxes for end-to-end object detection,' arXiv , 2022.\n\n[318] F. Li, H. Zhang et al. , 'Mask dino:"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "8.2.4",
+              "sec_title": "Combining Large Foundation Models.",
+              "citations": [
+                {
+                  "title": "Segment anything,",
+                  "citation": "A. Kirillov, E. Mintun et al. , 'Segment anything,' arXiv , 2023."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision,",
+                  "citation": "A. Radford, J. W. Kim et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+                },
+                {
+                  "title": "Emerging properties in selfsupervised vision transformers,",
+                  "citation": "M. Caron, H. Touvron et al. , 'Emerging properties in selfsupervised vision transformers,' in ICCV , 2021."
+                },
+                {
+                  "title": "Dinov2: Learning robust visual features without supervision,",
+                  "citation": "M. Oquab, T. Darcet et al. , 'Dinov2: Learning robust visual features without supervision,' arXiv , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "8.2.5",
+              "sec_title": "Real-Time OVD and OVS.",
+              "citations": [
+                {
+                  "title": "Yolo-world: Real-time open-vocabulary object detection,",
+                  "citation": "T. Cheng, L. Song et al. , 'Yolo-world: Real-time open-vocabulary object detection,' in CVPR , 2024."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "9",
+      "sec_title": "CONCLUSION",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

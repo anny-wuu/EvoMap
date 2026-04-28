@@ -1,0 +1,13 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.idea/
+
+# Python source files
+*.py
+
+# Survey folder
+PaperTaxoBench/Survey/

@@ -1,0 +1,1642 @@
+{
+  "track": "Generative AI",
+  "paper_title": "A Comprehensive Survey of AI-Generated Content (AIGC): A History of Generative AI from GAN to ChatGPT",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "INTRODUCTION",
+      "citations": [
+        {
+          "title": "Artificial intelligence-generated and human expert-designed vocabulary tests: A comparative study",
+          "citation": "L. Yunjiu, W. Wei, and Y. Zheng, 'Artificial intelligence-generated and human expert-designed vocabulary tests: A comparative study,' SAGE Open , vol. 12, no. 1, p. 21582440221082130, 2022."
+        },
+        {
+          "title": "Chatgpt: Optimizing language models for dialogue",
+          "citation": "'Chatgpt: Optimizing language models for dialogue,' Nov. 2022."
+        },
+        {
+          "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+          "citation": "A. Ramesh, P. Dhariwal, A. Nichol, C. Chu, and M. Chen, 'Hierarchical Text-Conditional Image Generation with CLIP Latents,' Apr. 2022. arXiv:2204.06125 [cs]."
+        },
+        {
+          "title": "From Show to Tell: A Survey on Deep Learning-based Image Captioning",
+          "citation": "M. Stefanini, M. Cornia, L. Baraldi, S. Cascianelli, G. Fiameni, and R. Cucchiara, 'From Show to Tell: A Survey on Deep Learning-based Image Captioning,' Nov. 2021. arXiv:2107.06912 [cs]."
+        },
+        {
+          "title": "Foundations and Recent Trends in Multimodal Machine Learning: Principles, Challenges, and Open Questions",
+          "citation": "P. P. Liang, A. Zadeh, and L.-P. Morency, 'Foundations and Recent Trends in Multimodal Machine Learning: Principles, Challenges, and Open Questions,' Sept. 2022. arXiv:2209.03430 [cs]."
+        },
+        {
+          "title": "Openwebtext corpus",
+          "citation": "A. Gokaslan and V. Cohen, 'Openwebtext corpus,' 2019."
+        },
+        {
+          "title": "Language Models are Few-Shot Learners",
+          "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, S. Agarwal, A. Herbert-Voss, G. Krueger, T. Henighan, R. Child, A. Ramesh, D. Ziegler, J. Wu, C. Winter, C. Hesse, M. Chen, E. Sigler, M. Litwin, S. Gray, B. Chess, J. Clark, C. Berner, S. McCandlish, A. Radford, I. Sutskever, and D. Amodei, 'Language Models are Few-Shot Learners,' in Advances in Neural Information Processing Systems , vol. 33, pp. 1877-1901, Curran Associates, Inc., 2020."
+        },
+        {
+          "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+          "citation": "R. Rombach, A. Blattmann, D. Lorenz, P. Esser, and B. Ommer, 'High-Resolution Image Synthesis with Latent Diffusion Models,' Apr. 2022. arXiv:2112.10752 [cs]."
+        },
+        {
+          "title": "Artificial intelligence in the creative industries: a review",
+          "citation": "N. Anantrasirichai and D. Bull, 'Artificial intelligence in the creative industries: a review,' Artificial Intelligence Review , vol. 55, pp. 589-656, jul 2021."
+        },
+        {
+          "title": "Artificial Intelligence in Advertising",
+          "citation": "J. Kietzmann, J. Paschen, and E. Treen, 'Artificial Intelligence in Advertising,' Journal of Advertising Research , vol. 58, no. 3, pp. 263-267, 2018. Publisher: Journal of Advertising Research \\_eprint: https://www.journalofadvertisingresearch.com/content/58/3/263.full.pdf."
+        },
+        {
+          "title": "representation by fusing textual, acoustic, and visual features",
+          "citation": "representation by fusing textual, acoustic, and visual features,' arXiv preprint arXiv:1806.01483 , 2018."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "1.1",
+          "sec_title": "Major Contributions",
+          "citations": [
+            {
+              "title": "Pretrained language models for text generation: A survey",
+              "citation": "J. Li, T. Tang, W. X. Zhao, J.-Y. Nie, and J.-R. Wen, 'Pretrained language models for text generation: A survey,' 2022."
+            },
+            {
+              "title": "A survey and taxonomy of adversarial neural networks for text-to-image synthesis",
+              "citation": "J. Agnese, J. Herrera, H. Tao, and X. Zhu, 'A survey and taxonomy of adversarial neural networks for text-to-image synthesis,' 2019."
+            },
+            {
+              "title": "Foundations and Recent Trends in Multimodal Machine Learning: Principles, Challenges, and Open Questions",
+              "citation": "P. P. Liang, A. Zadeh, and L.-P. Morency, 'Foundations and Recent Trends in Multimodal Machine Learning: Principles, Challenges, and Open Questions,' Sept. 2022. arXiv:2209.03430 [cs]."
+            },
+            {
+              "title": "A survey of multimodal deep generative models",
+              "citation": "M. Suzuki and Y. Matsuo, 'A survey of multimodal deep generative models,' Advanced Robotics , vol. 36, pp. 261-278, feb 2022."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "1.2",
+          "sec_title": "Organization",
+          "citations": [],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "HISTORY OF GENERATIVE AI",
+      "citations": [
+        {
+          "title": "Hidden Markov Models in Speech and Language Processing",
+          "citation": "K. Knill and S. Young, 'Hidden Markov Models in Speech and Language Processing,' in Corpus-Based Methods in Language and Speech Processing (S. Young and G. Bloothooft, eds.), pp. 27-68, Dordrecht: Springer Netherlands, 1997."
+        },
+        {
+          "title": "Gaussian mixture models",
+          "citation": "D. A. Reynolds et al. , 'Gaussian mixture models.,' Encyclopedia of biometrics , vol. 741, no. 659-663, 2009."
+        },
+        {
+          "title": "Texture synthesis by non-parametric sampling",
+          "citation": "A. A. Efros and T. K. Leung, 'Texture synthesis by non-parametric sampling,' in Proceedings of the seventh IEEE international conference on computer vision , vol. 2, pp. 1033-1038, IEEE, 1999."
+        },
+        {
+          "title": "Survey of texture mapping",
+          "citation": "P. S. Heckbert, 'Survey of texture mapping,' IEEE computer graphics and applications , vol. 6, no. 11, pp. 56-67, 1986."
+        },
+        {
+          "title": "Generative adversarial networks",
+          "citation": "I. J. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, and Y. Bengio, 'Generative adversarial networks,' 2014."
+        },
+        {
+          "title": "Auto-encoding variational bayes",
+          "citation": "D. P. Kingma and M. Welling, 'Auto-encoding variational bayes,' arXiv preprint arXiv:1312.6114 , 2013."
+        },
+        {
+          "title": "Generative modeling by estimating gradients of the data distribution",
+          "citation": "Y. Song and S. Ermon, 'Generative modeling by estimating gradients of the data distribution,' Advances in Neural Information Processing Systems , vol. 32, 2019."
+        },
+        {
+          "title": "A neural probabilistic language model",
+          "citation": "Y. Bengio, R. Ducharme, P. Vincent, and C. Janvin, 'A neural probabilistic language model,' J. Mach. Learn. Res. , vol. 3, p. 1137-1155, mar 2003."
+        },
+        {
+          "title": "Recurrent neural network based language model",
+          "citation": "T. Mikolov, M. Karafiát, L. Burget, J. Cernock` y, and S. Khudanpur, 'Recurrent neural network based language model.,' in Interspeech , vol. 2, pp. 1045-1048, Makuhari, 2010."
+        },
+        {
+          "title": "Long short-term memory",
+          "citation": "A. Graves and A. Graves, 'Long short-term memory,' Supervised sequence labelling with recurrent neural networks , pp. 37-45, 2012."
+        },
+        {
+          "title": "Gate-variants of gated recurrent unit (gru) neural networks",
+          "citation": "R. Dey and F. M. Salem, 'Gate-variants of gated recurrent unit (gru) neural networks,' in 2017 IEEE 60th international midwest symposium on circuits and systems (MWSCAS) , pp. 1597-1600, IEEE, 2017."
+        },
+        {
+          "title": "Sharp nearby, fuzzy far away: How neural language models use context",
+          "citation": "U. Khandelwal, H. He, P. Qi, and D. Jurafsky, 'Sharp nearby, fuzzy far away: How neural language models use context,' 2018."
+        },
+        {
+          "title": "Attention is all you need",
+          "citation": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. u. Kaiser, and I. Polosukhin, 'Attention is all you need,' in Advances in Neural Information Processing Systems (I. Guyon, U. V. Luxburg, S. Bengio, H. Wallach, R. Fergus, S. Vishwanathan, and R. Garnett, eds.), vol. 30, Curran Associates, Inc., 2017."
+        },
+        {
+          "title": "Language Models are Few-Shot Learners",
+          "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, S. Agarwal, A. Herbert-Voss, G. Krueger, T. Henighan, R. Child, A. Ramesh, D. Ziegler, J. Wu, C. Winter, C. Hesse, M. Chen, E. Sigler, M. Litwin, S. Gray, B. Chess, J. Clark, C. Berner, S. McCandlish, A. Radford, I. Sutskever, and D. Amodei, 'Language Models are Few-Shot Learners,' in Advances in Neural Information Processing Systems , vol. 33, pp. 1877-1901, Curran Associates, Inc., 2020."
+        },
+        {
+          "title": "Zero-shot text-to-image generation",
+          "citation": "A. Ramesh, M. Pavlov, G. Goh, S. Gray, C. Voss, A. Radford, M. Chen, and I. Sutskever, 'Zero-shot text-to-image generation,' 2021."
+        },
+        {
+          "title": "Bart: Denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension",
+          "citation": "M. Lewis, Y. Liu, N. Goyal, M. Ghazvininejad, A. Mohamed, O. Levy, V. Stoyanov, and L. Zettlemoyer, 'Bart: Denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension,' arXiv preprint arXiv:1910.13461 , 2019."
+        },
+        {
+          "title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+          "citation": "A. Dosovitskiy, L. Beyer, A. Kolesnikov, D. Weissenborn, X. Zhai, T. Unterthiner, M. Dehghani, M. Minderer, G. Heigold, S. Gelly, et al. , 'An image is worth 16x16 words: Transformers for image recognition at scale,' arXiv preprint arXiv:2010.11929 , 2020."
+        },
+        {
+          "title": "Swin transformer: Hierarchical vision transformer using shifted windows",
+          "citation": "Z. Liu, Y. Lin, Y. Cao, H. Hu, Y. Wei, Z. Zhang, S. Lin, and B. Guo, 'Swin transformer: Hierarchical vision transformer using shifted windows,' in Proceedings of the IEEE/CVF international conference on computer vision , pp. 10012-10022, 2021."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, G. Krueger, and I. Sutskever, 'Learning transferable visual models from natural language supervision,' 2021."
+        },
+        {
+          "title": "A survey on in-context learning",
+          "citation": "Q. Dong, L. Li, D. Dai, C. Zheng, Z. Wu, B. Chang, X. Sun, J. Xu, L. Li, and Z. Sui, 'A survey on in-context learning,' 2023."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "FOUNDATIONS FOR AIGC",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Foundation Model",
+          "citations": [
+            {
+              "title": "Language Models are Few-Shot Learners",
+              "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, S. Agarwal, A. Herbert-Voss, G. Krueger, T. Henighan, R. Child, A. Ramesh, D. Ziegler, J. Wu, C. Winter, C. Hesse, M. Chen, E. Sigler, M. Litwin, S. Gray, B. Chess, J. Clark, C. Berner, S. McCandlish, A. Radford, I. Sutskever, and D. Amodei, 'Language Models are Few-Shot Learners,' in Advances in Neural Information Processing Systems , vol. 33, pp. 1877-1901, Curran Associates, Inc., 2020."
+            },
+            {
+              "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+              "citation": "A. Ramesh, P. Dhariwal, A. Nichol, C. Chu, and M. Chen, 'Hierarchical Text-Conditional Image Generation with CLIP Latents,' Apr. 2022. arXiv:2204.06125 [cs]."
+            },
+            {
+              "title": "Evaluating large language models trained on code",
+              "citation": "M. Chen, J. Tworek, H. Jun, Q. Yuan, H. P. d. O. Pinto, J. Kaplan, H. Edwards, Y. Burda, N. Joseph, G. Brockman, et al. , 'Evaluating large language models trained on code,' arXiv preprint arXiv:2107.03374 , 2021."
+            },
+            {
+              "title": "Scaling language models: Methods, analysis & insights from training gopher",
+              "citation": "J. W. Rae, S. Borgeaud, T. Cai, K. Millican, J. Hoffmann, F. Song, J. Aslanides, S. Henderson, R. Ring, S. Young, et al. , 'Scaling language models: Methods, analysis &amp; insights from training gopher,' arXiv preprint arXiv:2112.11446 , 2021."
+            },
+            {
+              "title": "A mathematical framework for transformer circuits",
+              "citation": "N. Elhage, N. Nanda, C. Olsson, T. Henighan, N. Joseph, B. Mann, A. Askell, Y. Bai, A. Chen, T. Conerly, N. DasSarma, D. Drain, D. Ganguli, Z. Hatfield-Dodds, D. Hernandez, A. Jones, J. Kernion, L. Lovitt, K. Ndousse, D. Amodei, T. Brown, J. Clark, J. Kaplan, S. McCandlish, and C. Olah, 'A mathematical framework for transformer circuits,' Transformer Circuits Thread , 2021. https://transformer-circuits.pub/2021/framework/index.html."
+            },
+            {
+              "title": "Pre-trained models for natural language processing: A survey",
+              "citation": "X. Qiu, T. Sun, Y. Xu, Y. Shao, N. Dai, and X. Huang, 'Pre-trained models for natural language processing: A survey,' Science China Technological Sciences , vol. 63, no. 10, pp. 1872-1897, 2020."
+            },
+            {
+              "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+              "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, 'Bert: Pre-training of deep bidirectional transformers for language understanding,' arXiv preprint arXiv:1810.04805 , 2018."
+            },
+            {
+              "title": "Roberta: A robustly optimized bert pretraining approach",
+              "citation": "Y. Liu, M. Ott, N. Goyal, J. Du, M. Joshi, D. Chen, O. Levy, M. Lewis, L. Zettlemoyer, and V. Stoyanov, 'Roberta: A robustly optimized bert pretraining approach,' arXiv preprint arXiv:1907.11692 , 2019."
+            },
+            {
+              "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+              "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, 'Bert: Pre-training of deep bidirectional transformers for language understanding,' arXiv preprint arXiv:1810.04805 , 2018."
+            },
+            {
+              "title": "Roberta: A robustly optimized bert pretraining approach",
+              "citation": "Y. Liu, M. Ott, N. Goyal, J. Du, M. Joshi, D. Chen, O. Levy, M. Lewis, L. Zettlemoyer, and V. Stoyanov, 'Roberta: A robustly optimized bert pretraining approach,' arXiv preprint arXiv:1907.11692 , 2019."
+            },
+            {
+              "title": "Xlnet: Generalized autoregressive pretraining for language understanding",
+              "citation": "Z. Yang, Z. Dai, Y. Yang, J. Carbonell, R. R. Salakhutdinov, and Q. V. Le, 'Xlnet: Generalized autoregressive pretraining for language understanding,' Advances in neural information processing systems , vol. 32, 2019."
+            },
+            {
+              "title": "Language Models are Few-Shot Learners",
+              "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, S. Agarwal, A. Herbert-Voss, G. Krueger, T. Henighan, R. Child, A. Ramesh, D. Ziegler, J. Wu, C. Winter, C. Hesse, M. Chen, E. Sigler, M. Litwin, S. Gray, B. Chess, J. Clark, C. Berner, S. McCandlish, A. Radford, I. Sutskever, and D. Amodei, 'Language Models are Few-Shot Learners,' in Advances in Neural Information Processing Systems , vol. 33, pp. 1877-1901, Curran Associates, Inc., 2020."
+            },
+            {
+              "title": "Opt: Open pre-trained transformer language models",
+              "citation": "S. Zhang, S. Roller, N. Goyal, M. Artetxe, M. Chen, S. Chen, C. Dewan, M. Diab, X. Li, X. V. Lin, T. Mihaylov, M. Ott, S. Shleifer, K. Shuster, D. Simig, P. S. Koura, A. Sridhar, T. Wang, and L. Zettlemoyer, 'Opt: Open pre-trained transformer language models,' 2022."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Reinforcement Learning from Human Feedback",
+          "citations": [
+            {
+              "title": "Training language models to follow instructions with human feedback",
+              "citation": "L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. L. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray, J. Schulman, J. Hilton, F. Kelton, L. Miller, M. Simens, A. Askell, P. Welinder, P. Christiano, J. Leike, and R. Lowe, 'Training language models to follow instructions with human feedback,' Mar. 2022. arXiv:2203.02155 [cs]."
+            },
+            {
+              "title": "Improving alignment of dialogue agents via targeted human judgements",
+              "citation": "A. Glaese, N. McAleese, M. Trębacz, J. Aslanides, V. Firoiu, T. Ewalds, M. Rauh, L. Weidinger, M. Chadwick, P. Thacker, et al. , 'Improving alignment of dialogue agents via targeted human judgements,' arXiv preprint arXiv:2209.14375 , 2022."
+            },
+            {
+              "title": "Whole-history rating: A bayesian rating system for players of time-varying strength",
+              "citation": "R. Coulom, 'Whole-history rating: A bayesian rating system for players of time-varying strength,' in Computers and Games: 6th International Conference, CG 2008, Beijing, China, September 29-October 1, 2008. Proceedings 6 , pp. 113-124, Springer, 2008."
+            },
+            {
+              "title": "Deep reinforcement learning from human preferences",
+              "citation": "P. F. Christiano, J. Leike, T. Brown, M. Martic, S. Legg, and D. Amodei, 'Deep reinforcement learning from human preferences,' Advances in neural information processing systems , vol. 30, 2017."
+            },
+            {
+              "title": "Transformer models: an introduction and catalog",
+              "citation": "X. Amatriain, 'Transformer models: an introduction and catalog,' arXiv preprint arXiv:2302.07730 , 2023."
+            },
+            {
+              "title": "Is reinforcement learning (not) for natural language processing?: Benchmarks, baselines, and building blocks for natural language policy optimization",
+              "citation": "R. Ramamurthy, P. Ammanabrolu, K. Brantley, J. Hessel, R. Sifa, C. Bauckhage, H. Hajishirzi, and Y. Choi, 'Is reinforcement learning (not) for natural language processing?: Benchmarks, baselines, and building blocks for natural language policy optimization,' arXiv preprint arXiv:2210.01241 , 2022."
+            },
+            {
+              "title": "Constitutional ai: Harmlessness from ai feedback",
+              "citation": "Y. Bai, S. Kadavath, S. Kundu, A. Askell, J. Kernion, A. Jones, A. Chen, A. Goldie, A. Mirhoseini, C. McKinnon, et al. , 'Constitutional ai: Harmlessness from ai feedback,' arXiv preprint arXiv:2212.08073 , 2022."
+            },
+            {
+              "title": "Principled reinforcement learning with human feedback from pairwise or 𝑘 -wise comparisons",
+              "citation": "B. Zhu, J. Jiao, and M. I. Jordan, 'Principled reinforcement learning with human feedback from pairwise or 𝑘 -wise comparisons,' arXiv preprint arXiv:2301.11270 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "Computing",
+          "citations": [],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "GENERATIVE AI",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Unimodal Models",
+          "citations": [
+            {
+              "title": "Language Models are Few-Shot Learners",
+              "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, S. Agarwal, A. Herbert-Voss, G. Krueger, T. Henighan, R. Child, A. Ramesh, D. Ziegler, J. Wu, C. Winter, C. Hesse, M. Chen, E. Sigler, M. Litwin, S. Gray, B. Chess, J. Clark, C. Berner, S. McCandlish, A. Radford, I. Sutskever, and D. Amodei, 'Language Models are Few-Shot Learners,' in Advances in Neural Information Processing Systems , vol. 33, pp. 1877-1901, Curran Associates, Inc., 2020."
+            },
+            {
+              "title": "Bart: Denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension",
+              "citation": "M. Lewis, Y. Liu, N. Goyal, M. Ghazvininejad, A. Mohamed, O. Levy, V. Stoyanov, and L. Zettlemoyer, 'Bart: Denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension,' arXiv preprint arXiv:1910.13461 , 2019."
+            },
+            {
+              "title": "Exploring the limits of transfer learning with a unified text-to-text transformer",
+              "citation": "C. Raffel, N. Shazeer, A. Roberts, K. Lee, S. Narang, M. Matena, Y. Zhou, W. Li, and P. J. Liu, 'Exploring the limits of transfer learning with a unified text-to-text transformer,' The Journal of Machine Learning Research , vol. 21, no. 1,"
+            },
+            {
+              "title": "Generative adversarial networks",
+              "citation": "I. J. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, and Y. Bengio, 'Generative adversarial networks,' 2014."
+            },
+            {
+              "title": "Auto-encoding variational bayes",
+              "citation": "D. P. Kingma and M. Welling, 'Auto-encoding variational bayes,' arXiv preprint arXiv:1312.6114 , 2013."
+            },
+            {
+              "title": "Nice: Non-linear independent components estimation",
+              "citation": "L. Dinh, D. Krueger, and Y. Bengio, 'Nice: Non-linear independent components estimation,' arXiv preprint arXiv:1410.8516 , 2014."
+            },
+            {
+              "title": "Recent advances in deep learning based dialogue systems: A systematic survey",
+              "citation": "J. Ni, T. Young, V. Pandelea, F. Xue, and E. Cambria, 'Recent advances in deep learning based dialogue systems: A systematic survey,' Artificial intelligence review , pp. 1-101, 2022."
+            },
+            {
+              "title": "A survey of deep learning techniques for neural machine translation",
+              "citation": "S. Yang, Y. Wang, and X. Chu, 'A survey of deep learning techniques for neural machine translation,' arXiv preprint arXiv:2002.07526 , 2020."
+            },
+            {
+              "title": "Retrieving and reading: A comprehensive survey on open-domain question answering",
+              "citation": "F. Zhu, W. Lei, C. Wang, J. Zheng, S. Poria, and T.-S. Chua, 'Retrieving and reading: A comprehensive survey on open-domain question answering,' arXiv preprint arXiv:2101.00774 , 2021."
+            },
+            {
+              "title": "Improving language understanding by generative pre-training",
+              "citation": "A. Radford and K. Narasimhan, 'Improving language understanding by generative pre-training,' 2018."
+            },
+            {
+              "title": "Language models are unsupervised multitask learners",
+              "citation": "A. Radford, J. Wu, R. Child, D. Luan, D. Amodei, and I. Sutskever, 'Language models are unsupervised multitask learners,' 2019."
+            },
+            {
+              "title": "Language Models are Few-Shot Learners",
+              "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, S. Agarwal, A. Herbert-Voss, G. Krueger, T. Henighan, R. Child, A. Ramesh, D. Ziegler, J. Wu, C. Winter, C. Hesse, M. Chen, E. Sigler, M. Litwin, S. Gray, B. Chess, J. Clark, C. Berner, S. McCandlish, A. Radford, I. Sutskever, and D. Amodei, 'Language Models are Few-Shot Learners,' in Advances in Neural Information Processing Systems , vol. 33, pp. 1877-1901, Curran Associates, Inc., 2020."
+            },
+            {
+              "title": "Scaling language models: Methods, analysis & insights from training gopher",
+              "citation": "J. W. Rae, S. Borgeaud, T. Cai, K. Millican, J. Hoffmann, F. Song, J. Aslanides, S. Henderson, R. Ring, S. Young, et al. , 'Scaling language models: Methods, analysis &amp; insights from training gopher,' arXiv preprint arXiv:2112.11446 , 2021."
+            },
+            {
+              "title": "Layer normalization",
+              "citation": "J. L. Ba, J. R. Kiros, and G. E. Hinton, 'Layer normalization,' arXiv preprint arXiv:1607.06450 , 2016."
+            },
+            {
+              "title": "Bloom: A 176b-parameter open-access multilingual language model",
+              "citation": "T. L. Scao, A. Fan, C. Akiki, E. Pavlick, S. Ilić, D. Hesslow, R. Castagné, A. S. Luccioni, F. Yvon, M. Gallé, et al. , 'Bloom: A 176b-parameter open-access multilingual language model,' arXiv preprint arXiv:2211.05100 , 2022."
+            },
+            {
+              "title": "Megatron-lm: Training multi-billion parameter language models using model parallelism",
+              "citation": "M. Shoeybi, M. Patwary, R. Puri, P. LeGresley, J. Casper, and B. Catanzaro, 'Megatron-lm: Training multi-billion parameter language models using model parallelism,' 2019."
+            },
+            {
+              "title": "Training language models to follow instructions with human feedback",
+              "citation": "L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. L. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray, J. Schulman, J. Hilton, F. Kelton, L. Miller, M. Simens, A. Askell, P. Welinder, P. Christiano, J. Leike, and R. Lowe, 'Training language models to follow instructions with human feedback,' Mar. 2022. arXiv:2203.02155 [cs]."
+            },
+            {
+              "title": "Using deepspeed and megatron to train megatron-turing nlg 530b, a large-scale generative language model",
+              "citation": "S. Smith, M. Patwary, B. Norick, P. LeGresley, S. Rajbhandari, J. Casper, Z. Liu, S. Prabhumoye, G. Zerveas, V. Korthikanti, E. Zhang, R. Child, R. Y. Aminabadi, J. Bernauer, X. Song, M. Shoeybi, Y. He, M. Houston, S. Tiwary, and B. Catanzaro, 'Using deepspeed and megatron to train megatron-turing nlg 530b, a large-scale generative language model,' 2022."
+            },
+            {
+              "title": "Opt: Open pre-trained transformer language models",
+              "citation": "S. Zhang, S. Roller, N. Goyal, M. Artetxe, M. Chen, S. Chen, C. Dewan, M. Diab, X. Li, X. V. Lin, T. Mihaylov, M. Ott, S. Shleifer, K. Shuster, D. Simig, P. S. Koura, A. Sridhar, T. Wang, and L. Zettlemoyer, 'Opt: Open pre-trained transformer language models,' 2022."
+            },
+            {
+              "title": "Training language models to follow instructions with human feedback",
+              "citation": "L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. L. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray, J. Schulman, J. Hilton, F. Kelton, L. Miller, M. Simens, A. Askell, P. Welinder, P. Christiano, J. Leike, and R. Lowe, 'Training language models to follow instructions with human feedback,' Mar. 2022. arXiv:2203.02155 [cs]."
+            },
+            {
+              "title": "Exploring the limits of transfer learning with a unified text-to-text transformer",
+              "citation": "C. Raffel, N. Shazeer, A. Roberts, K. Lee, S. Narang, M. Matena, Y. Zhou, W. Li, and P. J. Liu, 'Exploring the limits of transfer learning with a unified text-to-text transformer,' The Journal of Machine Learning Research , vol. 21, no. 1,"
+            },
+            {
+              "title": "Switch transformers: Scaling to trillion parameter models with simple and efficient sparsity",
+              "citation": "W. Fedus, B. Zoph, and N. Shazeer, 'Switch transformers: Scaling to trillion parameter models with simple and efficient sparsity, ' J. Mach. Learn. Res , vol. 23, pp. 1-40, 2021."
+            },
+            {
+              "title": "Ext5: Towards extreme multi-task scaling for transfer learning",
+              "citation": "V. Aribandi, Y. Tay, T. Schuster, J. Rao, H. S. Zheng, S. V. Mehta, H. Zhuang, V. Q. Tran, D. Bahri, J. Ni, et al. , 'Ext5: Towards extreme multi-task scaling for transfer learning,' arXiv preprint arXiv:2111.10952 , 2021."
+            },
+            {
+              "title": "Bart: Denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension",
+              "citation": "M. Lewis, Y. Liu, N. Goyal, M. Ghazvininejad, A. Mohamed, O. Levy, V. Stoyanov, and L. Zettlemoyer, 'Bart: Denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension,' arXiv preprint arXiv:1910.13461 , 2019."
+            },
+            {
+              "title": "Htlm: Hyper-text pre-training and prompting of language models",
+              "citation": "A. Aghajanyan, D. Okhonko, M. Lewis, M. Joshi, H. Xu, G. Ghosh, and L. Zettlemoyer, 'Htlm: Hyper-text pre-training and prompting of language models,' 2021."
+            },
+            {
+              "title": "Dq-bart: Efficient sequence-tosequence model via joint distillation and quantization",
+              "citation": "Z. Li, Z. Wang, M. Tan, R. Nallapati, P. Bhatia, A. Arnold, B. Xiang, and D. Roth, 'Dq-bart: Efficient sequence-tosequence model via joint distillation and quantization,' arXiv preprint arXiv:2203.11239 , 2022."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Vision Generative Models",
+              "citations": [
+                {
+                  "title": "Deep generative image models using a laplacian pyramid of adversarial networks",
+                  "citation": "E. L. Denton, S. Chintala, R. Fergus, et al. , 'Deep generative image models using a laplacian pyramid of adversarial networks,' Advances in neural information processing systems , vol. 28, 2015."
+                },
+                {
+                  "title": "The laplacian pyramid as a compact image code",
+                  "citation": "P. J. Burt and E. H. Adelson, 'The laplacian pyramid as a compact image code,' in Readings in computer vision , pp. 671-679, Elsevier, 1987."
+                },
+                {
+                  "title": "Unsupervised representation learning with deep convolutional generative adversarial networks",
+                  "citation": "A. Radford, L. Metz, and S. Chintala, 'Unsupervised representation learning with deep convolutional generative adversarial networks,' arXiv preprint arXiv:1511.06434 , 2015."
+                },
+                {
+                  "title": "Progressive growing of gans for improved quality, stability, and variation",
+                  "citation": "T. Karras, T. Aila, S. Laine, and J. Lehtinen, 'Progressive growing of gans for improved quality, stability, and variation,' arXiv preprint arXiv:1710.10196 , 2017."
+                },
+                {
+                  "title": "Self-attention generative adversarial networks",
+                  "citation": "H. Zhang, I. Goodfellow, D. Metaxas, and A. Odena, 'Self-attention generative adversarial networks,' in International conference on machine learning , pp. 7354-7363, PMLR, 2019."
+                },
+                {
+                  "title": "Large scale gan training for high fidelity natural image synthesis",
+                  "citation": "A. Brock, J. Donahue, and K. Simonyan, 'Large scale gan training for high fidelity natural image synthesis,' arXiv preprint arXiv:1809.11096 , 2018."
+                },
+                {
+                  "title": "A style-based generator architecture for generative adversarial networks",
+                  "citation": "T. Karras, S. Laine, and T. Aila, 'A style-based generator architecture for generative adversarial networks,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , pp. 4401-4410, 2019."
+                },
+                {
+                  "title": "Adversarial feature learning",
+                  "citation": "J. Donahue, P. Krähenbühl, and T. Darrell, 'Adversarial feature learning,' arXiv preprint arXiv:1605.09782 , 2016."
+                },
+                {
+                  "title": "It takes (only) two: Adversarial generator-encoder networks",
+                  "citation": "D. Ulyanov, A. Vedaldi, and V. Lempitsky, 'It takes (only) two: Adversarial generator-encoder networks,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 32, 2018."
+                },
+                {
+                  "title": "Dual discriminator generative adversarial nets",
+                  "citation": "T. Nguyen, T. Le, H. Vu, and D. Phung, 'Dual discriminator generative adversarial nets,' Advances in neural information processing systems , vol. 30, 2017."
+                },
+                {
+                  "title": "Generative multi-adversarial networks",
+                  "citation": "I. Durugkar, I. Gemp, and S. Mahadevan, 'Generative multi-adversarial networks,' arXiv preprint arXiv:1611.01673 , 2016."
+                },
+                {
+                  "title": "Multi-generator generative adversarial nets",
+                  "citation": "Q. Hoang, T. D. Nguyen, T. Le, and D. Phung, 'Multi-generator generative adversarial nets,' arXiv preprint arXiv:1708.02556 , 2017."
+                },
+                {
+                  "title": "Multi-agent diverse generative adversarial networks",
+                  "citation": "A. Ghosh, V. Kulharia, V. P. Namboodiri, P. H. Torr, and P. K. Dokania, 'Multi-agent diverse generative adversarial networks,' in Proceedings of the IEEE conference on computer vision and pattern recognition , pp. 8513-8521, 2018."
+                },
+                {
+                  "title": "Coupled generative adversarial networks",
+                  "citation": "M.-Y. Liu and O. Tuzel, 'Coupled generative adversarial networks,' Advances in neural information processing systems , vol. 29, 2016."
+                },
+                {
+                  "title": "Improved training of wasserstein gans",
+                  "citation": "I. Gulrajani, F. Ahmed, M. Arjovsky, V. Dumoulin, and A. C. Courville, 'Improved training of wasserstein gans,' Advances in neural information processing systems , vol. 30, 2017."
+                },
+                {
+                  "title": "Loss-sensitive generative adversarial networks on lipschitz densities",
+                  "citation": "G.-J. Qi, 'Loss-sensitive generative adversarial networks on lipschitz densities,' International Journal of Computer Vision , vol. 128, no. 5, pp. 1118-1140, 2020."
+                },
+                {
+                  "title": "Least squares generative adversarial networks",
+                  "citation": "X. Mao, Q. Li, H. Xie, R. Y. Lau, Z. Wang, and S. Paul Smolley, 'Least squares generative adversarial networks,' in Proceedings of the IEEE international conference on computer vision , pp. 2794-2802, 2017."
+                },
+                {
+                  "title": "Spectral normalization for generative adversarial networks",
+                  "citation": "T. Miyato, T. Kataoka, M. Koyama, and Y. Yoshida, 'Spectral normalization for generative adversarial networks,' arXiv preprint arXiv:1802.05957 , 2018."
+                },
+                {
+                  "title": "Mode regularized generative adversarial networks",
+                  "citation": "T. Che, Y. Li, A. P. Jacob, Y. Bengio, and W. Li, 'Mode regularized generative adversarial networks,' arXiv preprint arXiv:1612.02136 , 2016."
+                },
+                {
+                  "title": "Unrolled generative adversarial networks",
+                  "citation": "L. Metz, B. Poole, D. Pfau, and J. Sohl-Dickstein, 'Unrolled generative adversarial networks,' arXiv preprint arXiv:1611.02163 , 2016."
+                },
+                {
+                  "title": "The relativistic discriminator: a key element missing from standard gan",
+                  "citation": "A. Jolicoeur-Martineau, 'The relativistic discriminator: a key element missing from standard gan,' arXiv preprint arXiv:1807.00734 , 2018."
+                },
+                {
+                  "title": "Infogan: Interpretable representation learning by information maximizing generative adversarial nets",
+                  "citation": "X. Chen, Y. Duan, R. Houthooft, J. Schulman, I. Sutskever, and P. Abbeel, 'Infogan: Interpretable representation learning by information maximizing generative adversarial nets,' Advances in neural information processing systems ,"
+                },
+                {
+                  "title": "f-gan: Training generative neural samplers using variational divergence minimization",
+                  "citation": "S. Nowozin, B. Cseke, and R. Tomioka, 'f-gan: Training generative neural samplers using variational divergence minimization,' Advances in neural information processing systems , vol. 29, 2016."
+                },
+                {
+                  "title": "A tutorial on variational bayesian inference",
+                  "citation": "C. W. Fox and S. J. Roberts, 'A tutorial on variational bayesian inference,' Artificial intelligence review , vol. 38, pp. 85-95, 2012."
+                },
+                {
+                  "title": "Zero-shot text-to-image generation",
+                  "citation": "A. Ramesh, M. Pavlov, G. Goh, S. Gray, C. Voss, A. Radford, M. Chen, and I. Sutskever, 'Zero-shot text-to-image generation,' in International Conference on Machine Learning , pp. 8821-8831, PMLR, 2021."
+                },
+                {
+                  "title": "From variational to deterministic autoencoders",
+                  "citation": "P. Ghosh, M. S. Sajjadi, A. Vergari, M. Black, and B. Schölkopf, 'From variational to deterministic autoencoders,' arXiv preprint arXiv:1903.12436 , 2019."
+                },
+                {
+                  "title": "Neural discrete representation learning",
+                  "citation": "A. Van Den Oord, O. Vinyals, et al. , 'Neural discrete representation learning,' Advances in neural information processing systems , vol. 30, 2017."
+                },
+                {
+                  "title": "Generating diverse high-fidelity images with vq-vae-2",
+                  "citation": "A. Razavi, A. Van den Oord, and O. Vinyals, 'Generating diverse high-fidelity images with vq-vae-2,' Advances in neural information processing systems , vol. 32, 2019."
+                },
+                {
+                  "title": "Elbo surgery: yet another way to carve up the variational evidence lower bound",
+                  "citation": "M. D. Hoffman and M. J. Johnson, 'Elbo surgery: yet another way to carve up the variational evidence lower bound,' in Workshop in Advances in Approximate Bayesian Inference, NIPS , vol. 1, 2016."
+                },
+                {
+                  "title": "Vae with a vampprior",
+                  "citation": "J. Tomczak and M. Welling, 'Vae with a vampprior,' in International Conference on Artificial Intelligence and Statistics , pp. 1214-1223, PMLR, 2018."
+                },
+                {
+                  "title": "Convolutional normalizing flows",
+                  "citation": "G. Zheng, Y. Yang, and J. Carbonell, 'Convolutional normalizing flows,' arXiv preprint arXiv:1711.02255 , 2017."
+                },
+                {
+                  "title": "Emerging convolutions for generative normalizing flows",
+                  "citation": "E. Hoogeboom, R. Van Den Berg, and M. Welling, 'Emerging convolutions for generative normalizing flows,' in International Conference on Machine Learning , pp. 2771-2780, PMLR, 2019."
+                },
+                {
+                  "title": "The reversible residual network: Backpropagation without storing activations",
+                  "citation": "A. N. Gomez, M. Ren, R. Urtasun, and R. B. Grosse, 'The reversible residual network: Backpropagation without storing activations,' Advances in neural information processing systems , vol. 30, 2017."
+                },
+                {
+                  "title": "i-revnet: Deep invertible networks",
+                  "citation": "J.-H. Jacobsen, A. Smeulders, and E. Oyallon, 'i-revnet: Deep invertible networks,' arXiv preprint arXiv:1802.07088 , 2018."
+                },
+                {
+                  "title": "Learning across scales-multiscale methods for convolution neural networks",
+                  "citation": "E. Haber, L. Ruthotto, E. Holtham, and S.-H. Jun, 'Learning across scales-multiscale methods for convolution neural networks,' in Thirty-second AAAI conference on artificial intelligence , 2018."
+                },
+                {
+                  "title": "Nice: Non-linear independent components estimation",
+                  "citation": "L. Dinh, D. Krueger, and Y. Bengio, 'Nice: Non-linear independent components estimation,' arXiv preprint arXiv:1410.8516 , 2014."
+                },
+                {
+                  "title": "Density estimation using real nvp",
+                  "citation": "L. Dinh, J. Sohl-Dickstein, and S. Bengio, 'Density estimation using real nvp,' arXiv preprint arXiv:1605.08803 , 2016."
+                },
+                {
+                  "title": "Progressive distillation for fast sampling of diffusion models",
+                  "citation": "T. Salimans and J. Ho, 'Progressive distillation for fast sampling of diffusion models,' arXiv preprint arXiv:2202.00512 , 2022."
+                },
+                {
+                  "title": "Truncated diffusion probabilistic models",
+                  "citation": "H. Zheng, P. He, W. Chen, and M. Zhou, 'Truncated diffusion probabilistic models,' stat , vol. 1050, p. 7, 2022."
+                },
+                {
+                  "title": "Accelerating diffusion models via early stop of the diffusion process",
+                  "citation": "Z. Lyu, X. Xu, C. Yang, D. Lin, and B. Dai, 'Accelerating diffusion models via early stop of the diffusion process,' arXiv preprint arXiv:2205.12524 , 2022."
+                },
+                {
+                  "title": "How much is enough? a study on diffusion times in score-based generative models",
+                  "citation": "G. Franzese, S. Rossi, L. Yang, A. Finamore, D. Rossi, M. Filippone, and P. Michiardi, 'How much is enough? a study on diffusion times in score-based generative models,' 2022."
+                },
+                {
+                  "title": "Improved denoising diffusion probabilistic models",
+                  "citation": "A. Q. Nichol and P. Dhariwal, 'Improved denoising diffusion probabilistic models,' in International Conference on Machine Learning , pp. 8162-8171, PMLR, 2021."
+                },
+                {
+                  "title": "Noise estimation for generative diffusion models",
+                  "citation": "R. San-Roman, E. Nachmani, and L. Wolf, 'Noise estimation for generative diffusion models,' arXiv preprint arXiv:2104.02600 , 2021."
+                },
+                {
+                  "title": "Denoising diffusion probabilistic models",
+                  "citation": "J. Ho, A. Jain, and P. Abbeel, 'Denoising diffusion probabilistic models,' Advances in Neural Information Processing Systems , vol. 33, pp. 6840-6851, 2020."
+                },
+                {
+                  "title": "Generative modeling by estimating gradients of the data distribution",
+                  "citation": "Y. Song and S. Ermon, 'Generative modeling by estimating gradients of the data distribution,' Advances in Neural Information Processing Systems , vol. 32, 2019."
+                },
+                {
+                  "title": "Score-based generative modeling through stochastic differential equations",
+                  "citation": "Y. Song, J. Sohl-Dickstein, D. P. Kingma, A. Kumar, S. Ermon, and B. Poole, 'Score-based generative modeling through stochastic differential equations,' arXiv preprint arXiv:2011.13456 , 2020."
+                },
+                {
+                  "title": "Denoising diffusion implicit models",
+                  "citation": "J. Song, C. Meng, and S. Ermon, 'Denoising diffusion implicit models,' arXiv preprint arXiv:2010.02502 , 2020."
+                },
+                {
+                  "title": "Analytic-dpm: an analytic estimate of the optimal reverse variance in diffusion probabilistic models",
+                  "citation": "F. Bao, C. Li, J. Zhu, and B. Zhang, 'Analytic-dpm: an analytic estimate of the optimal reverse variance in diffusion probabilistic models,' arXiv preprint arXiv:2201.06503 , 2022."
+                },
+                {
+                  "title": "Learning to efficiently sample from diffusion probabilistic models",
+                  "citation": "D. Watson, J. Ho, M. Norouzi, and W. Chan, 'Learning to efficiently sample from diffusion probabilistic models,' arXiv preprint arXiv:2106.03802 , 2021."
+                },
+                {
+                  "title": "Learning fast samplers for diffusion models by differentiating through sample quality",
+                  "citation": "D. Watson, W. Chan, J. Ho, and M. Norouzi, 'Learning fast samplers for diffusion models by differentiating through sample quality,' in International Conference on Learning Representations , 2022."
+                },
+                {
+                  "title": "Diffusevae: Efficient, controllable and high-fidelity generation from low-dimensional latents",
+                  "citation": "K. Pandey, A. Mukherjee, P. Rai, and A. Kumar, 'Diffusevae: Efficient, controllable and high-fidelity generation from low-dimensional latents,' 2022."
+                },
+                {
+                  "title": "Score-based generative modeling in latent space",
+                  "citation": "A. Vahdat, K. Kreis, and J. Kautz, 'Score-based generative modeling in latent space,' Advances in Neural Information Processing Systems , vol. 34, pp. 11287-11302, 2021."
+                },
+                {
+                  "title": "Tackling the generative learning trilemma with denoising diffusion gans",
+                  "citation": "Z. Xiao, K. Kreis, and A. Vahdat, 'Tackling the generative learning trilemma with denoising diffusion gans,' arXiv preprint arXiv:2112.07804 , 2021."
+                },
+                {
+                  "title": "Diffusion normalizing flow",
+                  "citation": "Q. Zhang and Y. Chen, 'Diffusion normalizing flow,' Advances in Neural Information Processing Systems , vol. 34, pp. 16280-16291, 2021."
+                },
+                {
+                  "title": "Non gaussian denoising diffusion models",
+                  "citation": "E. Nachmani, R. S. Roman, and L. Wolf, 'Non gaussian denoising diffusion models,' 2021."
+                },
+                {
+                  "title": "Cold diffusion: Inverting arbitrary image transforms without noise",
+                  "citation": "A. Bansal, E. Borgnia, H.-M. Chu, J. S. Li, H. Kazemi, F. Huang, M. Goldblum, J. Geiping, and T. Goldstein, 'Cold diffusion: Inverting arbitrary image transforms without noise,' arXiv preprint arXiv:2208.09392 , 2022."
+                },
+                {
+                  "title": "Come-closer-diffuse-faster: Accelerating conditional diffusion models for inverse problems through stochastic contraction",
+                  "citation": "H. Chung, B. Sim, and J. C. Ye, 'Come-closer-diffuse-faster: Accelerating conditional diffusion models for inverse problems through stochastic contraction,' 2021."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Multimodal Models",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.2.1",
+              "sec_title": "4.2.1 Vision Language Generation",
+              "citations": [
+                {
+                  "title": "Foundations and Recent Trends in Multimodal Machine Learning: Principles, Challenges, and Open Questions",
+                  "citation": "P. P. Liang, A. Zadeh, and L.-P. Morency, 'Foundations and Recent Trends in Multimodal Machine Learning: Principles, Challenges, and Open Questions,' Sept. 2022. arXiv:2209.03430 [cs]."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, G. Krueger, and I. Sutskever, 'Learning transferable visual models from natural language supervision,' 2021."
+                },
+                {
+                  "title": "Visualbert: A simple and performant baseline for vision and language",
+                  "citation": "L. H. Li, M. Yatskar, D. Yin, C.-J. Hsieh, and K.-W. Chang, 'Visualbert: A simple and performant baseline for vision and language,' arXiv preprint arXiv:1908.03557 , 2019."
+                },
+                {
+                  "title": "Simvlm: Simple visual language model pretraining with weak supervision",
+                  "citation": "Z. Wang, J. Yu, A. W. Yu, Z. Dai, Y. Tsvetkov, and Y. Cao, 'Simvlm: Simple visual language model pretraining with weak supervision,' arXiv preprint arXiv:2108.10904 , 2021."
+                },
+                {
+                  "title": "Foundations and Recent Trends in Multimodal Machine Learning: Principles, Challenges, and Open Questions",
+                  "citation": "P. P. Liang, A. Zadeh, and L.-P. Morency, 'Foundations and Recent Trends in Multimodal Machine Learning: Principles, Challenges, and Open Questions,' Sept. 2022. arXiv:2209.03430 [cs]."
+                },
+                {
+                  "title": "Visualbert: A simple and performant baseline for vision and language",
+                  "citation": "L. H. Li, M. Yatskar, D. Yin, C.-J. Hsieh, and K.-W. Chang, 'Visualbert: A simple and performant baseline for vision and language,' arXiv preprint arXiv:1908.03557 , 2019."
+                },
+                {
+                  "title": "Vl-bert: Pre-training of generic visual-linguistic representations",
+                  "citation": "W. Su, X. Zhu, Y. Cao, B. Li, L. Lu, F. Wei, and J. Dai, 'Vl-bert: Pre-training of generic visual-linguistic representations,' arXiv preprint arXiv:1908.08530 , 2019."
+                },
+                {
+                  "title": "Faster r-cnn: Towards real-time object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards real-time object detection with region proposal networks,' Advances in neural information processing systems , vol. 28, 2015."
+                },
+                {
+                  "title": "Unified vision-language pre-training for image captioning and vqa",
+                  "citation": "L. Zhou, H. Palangi, L. Zhang, H. Hu, J. Corso, and J. Gao, 'Unified vision-language pre-training for image captioning and vqa,' in Proceedings of the AAAI conference on artificial intelligence , vol. 34, pp. 13041-13049, 2020."
+                },
+                {
+                  "title": "Simvlm: Simple visual language model pretraining with weak supervision",
+                  "citation": "Z. Wang, J. Yu, A. W. Yu, Z. Dai, Y. Tsvetkov, and Y. Cao, 'Simvlm: Simple visual language model pretraining with weak supervision,' arXiv preprint arXiv:2108.10904 , 2021."
+                },
+                {
+                  "title": "Foundations and Recent Trends in Multimodal Machine Learning: Principles, Challenges, and Open Questions",
+                  "citation": "P. P. Liang, A. Zadeh, and L.-P. Morency, 'Foundations and Recent Trends in Multimodal Machine Learning: Principles, Challenges, and Open Questions,' Sept. 2022. arXiv:2209.03430 [cs]."
+                },
+                {
+                  "title": "Lxmert: Learning cross-modality encoder representations from transformers",
+                  "citation": "H. Tan and M. Bansal, 'Lxmert: Learning cross-modality encoder representations from transformers,' arXiv preprint arXiv:1908.07490 , 2019."
+                },
+                {
+                  "title": "ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-andLanguage Tasks",
+                  "citation": "J. Lu, D. Batra, D. Parikh, and S. Lee, ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-andLanguage Tasks . Red Hook, NY, USA: Curran Associates Inc., 2019."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, G. Krueger, and I. Sutskever, 'Learning transferable visual models from natural language supervision,' 2021."
+                },
+                {
+                  "title": "Unified vision-language pre-training for image captioning and vqa",
+                  "citation": "L. Zhou, H. Palangi, L. Zhang, H. Hu, J. Corso, and J. Gao, 'Unified vision-language pre-training for image captioning and vqa,' in Proceedings of the AAAI conference on artificial intelligence , vol. 34, pp. 13041-13049, 2020."
+                },
+                {
+                  "title": "Align before fuse: Vision and language representation learning with momentum distillation",
+                  "citation": "J. Li, R. Selvaraju, A. Gotmare, S. Joty, C. Xiong, and S. C. H. Hoi, 'Align before fuse: Vision and language representation learning with momentum distillation,' Advances in neural information processing systems , vol. 34, pp. 9694-9705, 2021."
+                },
+                {
+                  "title": "Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation",
+                  "citation": "J. Li, D. Li, C. Xiong, and S. Hoi, 'Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation,' in International Conference on Machine Learning , pp. 12888-12900, PMLR, 2022."
+                },
+                {
+                  "title": "Multimodal few-shot learning with frozen language models",
+                  "citation": "M. Tsimpoukelli, J. Menick, S. Cabi, S. Eslami, O. Vinyals, and F. Hill, 'Multimodal few-shot learning with frozen language models,' Proc. Neural Information Processing Systems , 2021."
+                },
+                {
+                  "title": "Flamingo: a visual language model for few-shot learning",
+                  "citation": "J.-B. Alayrac, J. Donahue, P. Luc, A. Miech, I. Barr, Y. Hasson, K. Lenc, A. Mensch, K. Millican, M. Reynolds, et al. , 'Flamingo: a visual language model for few-shot learning,' arXiv preprint arXiv:2204.14198 , 2022."
+                },
+                {
+                  "title": "Grounding language models to images for multimodal generation",
+                  "citation": "J. Y. Koh, R. Salakhutdinov, and D. Fried, 'Grounding language models to images for multimodal generation,' arXiv preprint arXiv:2301.13823 , 2023."
+                },
+                {
+                  "title": "Linearly mapping from image to text space",
+                  "citation": "J. Merullo, L. Castricato, C. Eickhoff, and E. Pavlick, 'Linearly mapping from image to text space,' arXiv preprint arXiv:2209.15162 , 2022."
+                },
+                {
+                  "title": "A survey on generative adversarial network-based text-to-image synthesis",
+                  "citation": "R. Zhou, C. Jiang, and Q. Xu, 'A survey on generative adversarial network-based text-to-image synthesis,' Neurocomputing , vol. 451, pp. 316-336, 2021."
+                },
+                {
+                  "title": "Stackgan: Text to photo-realistic image synthesis with stacked generative adversarial networks",
+                  "citation": "H. Zhang, T. Xu, H. Li, S. Zhang, X. Wang, X. Huang, and D. N. Metaxas, 'Stackgan: Text to photo-realistic image synthesis with stacked generative adversarial networks,' in Proceedings of the IEEE international conference on computer vision , pp. 5907-5915, 2017."
+                },
+                {
+                  "title": "Attngan: Fine-grained text to image generation with attentional generative adversarial networks",
+                  "citation": "T. Xu, P. Zhang, Q. Huang, H. Zhang, Z. Gan, X. Huang, and X. He, 'Attngan: Fine-grained text to image generation with attentional generative adversarial networks,' in Proceedings of the IEEE conference on computer vision and pattern recognition , pp. 1316-1324, 2018."
+                },
+                {
+                  "title": "Styleclip: Text-driven manipulation of stylegan imagery",
+                  "citation": "O. Patashnik, Z. Wu, E. Shechtman, D. Cohen-Or, and D. Lischinski, 'Styleclip: Text-driven manipulation of stylegan imagery,' in Proceedings of the IEEE/CVF International Conference on Computer Vision , pp. 2085-2094, 2021."
+                },
+                {
+                  "title": "A style-based generator architecture for generative adversarial networks",
+                  "citation": "T. Karras, S. Laine, and T. Aila, 'A style-based generator architecture for generative adversarial networks,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , pp. 4401-4410, 2019."
+                },
+                {
+                  "title": "Glide: Towards photorealistic image generation and editing with text-guided diffusion models",
+                  "citation": "A. Nichol, P. Dhariwal, A. Ramesh, P. Shyam, P. Mishkin, B. McGrew, I. Sutskever, and M. Chen, 'Glide: Towards photorealistic image generation and editing with text-guided diffusion models,' 2021."
+                },
+                {
+                  "title": "Photorealistic text-to-image diffusion models with deep language understanding",
+                  "citation": "C. Saharia, W. Chan, S. Saxena, L. Li, J. Whang, E. Denton, S. K. S. Ghasemipour, B. K. Ayan, S. S. Mahdavi, R. G. Lopes, et al. , 'Photorealistic text-to-image diffusion models with deep language understanding,' arXiv preprint arXiv:2205.11487 , 2022."
+                },
+                {
+                  "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+                  "citation": "A. Ramesh, P. Dhariwal, A. Nichol, C. Chu, and M. Chen, 'Hierarchical Text-Conditional Image Generation with CLIP Latents,' Apr. 2022. arXiv:2204.06125 [cs]."
+                },
+                {
+                  "title": "Zero-shot text-to-image generation",
+                  "citation": "A. Ramesh, M. Pavlov, G. Goh, S. Gray, C. Voss, A. Radford, M. Chen, and I. Sutskever, 'Zero-shot text-to-image generation,' 2021."
+                }
+              ],
+              "subsections": [
+                {
+                  "sec_id": "4.2.1.1",
+                  "sec_title": "Vision Language Encoders",
+                  "citations": [],
+                  "subsections": [
+                    {
+                      "sec_id": "4.2.1.1.1",
+                      "sec_title": "Concatenated Encoders",
+                      "citations": [
+                        {
+                          "title": "Visualbert: A simple and performant baseline for vision and language",
+                          "citation": "L. H. Li, M. Yatskar, D. Yin, C.-J. Hsieh, and K.-W. Chang, 'Visualbert: A simple and performant baseline for vision and language,' arXiv preprint arXiv:1908.03557 , 2019."
+                        },
+                        {
+                          "title": "Simvlm: Simple visual language model pretraining with weak supervision",
+                          "citation": "Z. Wang, J. Yu, A. W. Yu, Z. Dai, Y. Tsvetkov, and Y. Cao, 'Simvlm: Simple visual language model pretraining with weak supervision,' arXiv preprint arXiv:2108.10904 , 2021."
+                        },
+                        {
+                          "title": "Visualbert: A simple and performant baseline for vision and language",
+                          "citation": "L. H. Li, M. Yatskar, D. Yin, C.-J. Hsieh, and K.-W. Chang, 'Visualbert: A simple and performant baseline for vision and language,' arXiv preprint arXiv:1908.03557 , 2019."
+                        },
+                        {
+                          "title": "Vl-bert: Pre-training of generic visual-linguistic representations",
+                          "citation": "W. Su, X. Zhu, Y. Cao, B. Li, L. Lu, F. Wei, and J. Dai, 'Vl-bert: Pre-training of generic visual-linguistic representations,' arXiv preprint arXiv:1908.08530 , 2019."
+                        },
+                        {
+                          "title": "Faster r-cnn: Towards real-time object detection with region proposal networks",
+                          "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards real-time object detection with region proposal networks,' Advances in neural information processing systems , vol. 28, 2015."
+                        },
+                        {
+                          "title": "Unified vision-language pre-training for image captioning and vqa",
+                          "citation": "L. Zhou, H. Palangi, L. Zhang, H. Hu, J. Corso, and J. Gao, 'Unified vision-language pre-training for image captioning and vqa,' in Proceedings of the AAAI conference on artificial intelligence , vol. 34, pp. 13041-13049, 2020."
+                        },
+                        {
+                          "title": "Simvlm: Simple visual language model pretraining with weak supervision",
+                          "citation": "Z. Wang, J. Yu, A. W. Yu, Z. Dai, Y. Tsvetkov, and Y. Cao, 'Simvlm: Simple visual language model pretraining with weak supervision,' arXiv preprint arXiv:2108.10904 , 2021."
+                        },
+                        {
+                          "title": "Unified vision-language pre-training for image captioning and vqa",
+                          "citation": "L. Zhou, H. Palangi, L. Zhang, H. Hu, J. Corso, and J. Gao, 'Unified vision-language pre-training for image captioning and vqa,' in Proceedings of the AAAI conference on artificial intelligence , vol. 34, pp. 13041-13049, 2020."
+                        }
+                      ],
+                      "subsections": []
+                    },
+                    {
+                      "sec_id": "4.2.1.1.2",
+                      "sec_title": "Cross-aligned Encoders",
+                      "citations": [
+                        {
+                          "title": "Learning transferable visual models from natural language supervision",
+                          "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, G. Krueger, and I. Sutskever, 'Learning transferable visual models from natural language supervision,' 2021."
+                        },
+                        {
+                          "title": "Lxmert: Learning cross-modality encoder representations from transformers",
+                          "citation": "H. Tan and M. Bansal, 'Lxmert: Learning cross-modality encoder representations from transformers,' arXiv preprint arXiv:1908.07490 , 2019."
+                        },
+                        {
+                          "title": "ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-andLanguage Tasks",
+                          "citation": "J. Lu, D. Batra, D. Parikh, and S. Lee, ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-andLanguage Tasks . Red Hook, NY, USA: Curran Associates Inc., 2019."
+                        },
+                        {
+                          "title": "Learning transferable visual models from natural language supervision",
+                          "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, G. Krueger, and I. Sutskever, 'Learning transferable visual models from natural language supervision,' 2021."
+                        }
+                      ],
+                      "subsections": []
+                    }
+                  ]
+                },
+                {
+                  "sec_id": "4.2.1.2",
+                  "sec_title": "Vision Language Decoders",
+                  "citations": [],
+                  "subsections": [
+                    {
+                      "sec_id": "4.2.1.2.1",
+                      "sec_title": "Jointly-trained decoders",
+                      "citations": [
+                        {
+                          "title": "Align before fuse: Vision and language representation learning with momentum distillation",
+                          "citation": "J. Li, R. Selvaraju, A. Gotmare, S. Joty, C. Xiong, and S. C. H. Hoi, 'Align before fuse: Vision and language representation learning with momentum distillation,' Advances in neural information processing systems , vol. 34, pp. 9694-9705, 2021."
+                        },
+                        {
+                          "title": "Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation",
+                          "citation": "J. Li, D. Li, C. Xiong, and S. Hoi, 'Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation,' in International Conference on Machine Learning , pp. 12888-12900, PMLR, 2022."
+                        }
+                      ],
+                      "subsections": []
+                    },
+                    {
+                      "sec_id": "4.2.1.2.2",
+                      "sec_title": "To-text decoders",
+                      "citations": [],
+                      "subsections": [
+                        {
+                          "sec_id": "4.2.1.2.2.1",
+                          "sec_title": "Frozen deocders",
+                          "citations": [
+                            {
+                              "title": "Multimodal few-shot learning with frozen language models",
+                              "citation": "M. Tsimpoukelli, J. Menick, S. Cabi, S. Eslami, O. Vinyals, and F. Hill, 'Multimodal few-shot learning with frozen language models,' Proc. Neural Information Processing Systems , 2021."
+                            },
+                            {
+                              "title": "Flamingo: a visual language model for few-shot learning",
+                              "citation": "J.-B. Alayrac, J. Donahue, P. Luc, A. Miech, I. Barr, Y. Hasson, K. Lenc, A. Mensch, K. Millican, M. Reynolds, et al. , 'Flamingo: a visual language model for few-shot learning,' arXiv preprint arXiv:2204.14198 , 2022."
+                            },
+                            {
+                              "title": "Grounding language models to images for multimodal generation",
+                              "citation": "J. Y. Koh, R. Salakhutdinov, and D. Fried, 'Grounding language models to images for multimodal generation,' arXiv preprint arXiv:2301.13823 , 2023."
+                            },
+                            {
+                              "title": "Linearly mapping from image to text space",
+                              "citation": "J. Merullo, L. Castricato, C. Eickhoff, and E. Pavlick, 'Linearly mapping from image to text space,' arXiv preprint arXiv:2209.15162 , 2022."
+                            }
+                          ],
+                          "subsections": []
+                        }
+                      ]
+                    },
+                    {
+                      "sec_id": "4.2.1.2.3",
+                      "sec_title": "GAN-based decoders",
+                      "citations": [
+                        {
+                          "title": "A survey on generative adversarial network-based text-to-image synthesis",
+                          "citation": "R. Zhou, C. Jiang, and Q. Xu, 'A survey on generative adversarial network-based text-to-image synthesis,' Neurocomputing , vol. 451, pp. 316-336, 2021."
+                        },
+                        {
+                          "title": "Stackgan: Text to photo-realistic image synthesis with stacked generative adversarial networks",
+                          "citation": "H. Zhang, T. Xu, H. Li, S. Zhang, X. Wang, X. Huang, and D. N. Metaxas, 'Stackgan: Text to photo-realistic image synthesis with stacked generative adversarial networks,' in Proceedings of the IEEE international conference on computer vision , pp. 5907-5915, 2017."
+                        },
+                        {
+                          "title": "Attngan: Fine-grained text to image generation with attentional generative adversarial networks",
+                          "citation": "T. Xu, P. Zhang, Q. Huang, H. Zhang, Z. Gan, X. Huang, and X. He, 'Attngan: Fine-grained text to image generation with attentional generative adversarial networks,' in Proceedings of the IEEE conference on computer vision and pattern recognition , pp. 1316-1324, 2018."
+                        },
+                        {
+                          "title": "Styleclip: Text-driven manipulation of stylegan imagery",
+                          "citation": "O. Patashnik, Z. Wu, E. Shechtman, D. Cohen-Or, and D. Lischinski, 'Styleclip: Text-driven manipulation of stylegan imagery,' in Proceedings of the IEEE/CVF International Conference on Computer Vision , pp. 2085-2094, 2021."
+                        },
+                        {
+                          "title": "A style-based generator architecture for generative adversarial networks",
+                          "citation": "T. Karras, S. Laine, and T. Aila, 'A style-based generator architecture for generative adversarial networks,' in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition , pp. 4401-4410, 2019."
+                        }
+                      ],
+                      "subsections": []
+                    },
+                    {
+                      "sec_id": "4.2.1.2.4",
+                      "sec_title": "To-image decoders",
+                      "citations": [],
+                      "subsections": [
+                        {
+                          "sec_id": "4.2.1.2.4.1",
+                          "sec_title": "Diffusion-based decoders",
+                          "citations": [
+                            {
+                              "title": "Glide: Towards photorealistic image generation and editing with text-guided diffusion models",
+                              "citation": "A. Nichol, P. Dhariwal, A. Ramesh, P. Shyam, P. Mishkin, B. McGrew, I. Sutskever, and M. Chen, 'Glide: Towards photorealistic image generation and editing with text-guided diffusion models,' 2021."
+                            },
+                            {
+                              "title": "Photorealistic text-to-image diffusion models with deep language understanding",
+                              "citation": "C. Saharia, W. Chan, S. Saxena, L. Li, J. Whang, E. Denton, S. K. S. Ghasemipour, B. K. Ayan, S. S. Mahdavi, R. G. Lopes, et al. , 'Photorealistic text-to-image diffusion models with deep language understanding,' arXiv preprint arXiv:2205.11487 , 2022."
+                            },
+                            {
+                              "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+                              "citation": "A. Ramesh, P. Dhariwal, A. Nichol, C. Chu, and M. Chen, 'Hierarchical Text-Conditional Image Generation with CLIP Latents,' Apr. 2022. arXiv:2204.06125 [cs]."
+                            },
+                            {
+                              "title": "Zero-shot text-to-image generation",
+                              "citation": "A. Ramesh, M. Pavlov, G. Goh, S. Gray, C. Voss, A. Radford, M. Chen, and I. Sutskever, 'Zero-shot text-to-image generation,' 2021."
+                            }
+                          ],
+                          "subsections": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "sec_id": "4.2.2",
+              "sec_title": "4.2.2 Text Audio Generation",
+              "citations": [
+                {
+                  "title": "Adaspeech: Adaptive text to speech for custom voice",
+                  "citation": "M. Chen, X. Tan, B. Li, Y. Liu, T. Qin, S. Zhao, and T.-Y. Liu, 'Adaspeech: Adaptive text to speech for custom voice,' arXiv preprint arXiv:2103.00993 , 2021."
+                },
+                {
+                  "title": "Enhancing speech intelligibility in text-to-speech synthesis using speaking style conversion",
+                  "citation": "D. Paul, M. P. Shifas, Y. Pantazis, and Y. Stylianou, 'Enhancing speech intelligibility in text-to-speech synthesis using speaking style conversion,' arXiv preprint arXiv:2008.05809 , 2020."
+                },
+                {
+                  "title": "Learning to speak fluently in a foreign language: Multilingual speech synthesis and cross-language voice cloning",
+                  "citation": "Y. Zhang, R. J. Weiss, H. Zen, Y. Wu, Z. Chen, R. Skerry-Ryan, Y. Jia, A. Rosenberg, and B. Ramabhadran, 'Learning to speak fluently in a foreign language: Multilingual speech synthesis and cross-language voice cloning,' arXiv preprint arXiv:1907.04448 , 2019."
+                },
+                {
+                  "title": "Deep cross-modal correlation learning for audio and lyrics in music retrieval",
+                  "citation": "Y. Yu, S. Tang, F. Raposo, and L. Chen, 'Deep cross-modal correlation learning for audio and lyrics in music retrieval,' ACM Transactions on Multimedia Computing, Communications, and Applications (TOMM) , vol. 15, no. 1, pp. 1-16, 2019."
+                },
+                {
+                  "title": "Jtav: Jointly learning social media content",
+                  "citation": "H. Liang, H. Wang, J. Wang, S. You, Z. Sun, J.-M. Wei, and Z. Yang, 'Jtav: Jointly learning social media content"
+                },
+                {
+                  "title": "Enriched music representations with multiple cross-modal contrastive learning",
+                  "citation": "A. Ferraro, X. Favory, K. Drossos, Y. Kim, and D. Bogdanov, 'Enriched music representations with multiple cross-modal contrastive learning,' IEEE Signal Processing Letters , vol. 28, pp. 733-737, 2021."
+                },
+                {
+                  "title": "Towards music captioning: Generating music playlist descriptions",
+                  "citation": "K. Choi, G. Fazekas, B. McFee, K. Cho, and M. Sandler, 'Towards music captioning: Generating music playlist descriptions,' arXiv preprint arXiv:1608.04868 , 2016."
+                },
+                {
+                  "title": "Muscaps: Generating captions for music audio",
+                  "citation": "I. Manco, E. Benetos, E. Quinton, and G. Fazekas, 'Muscaps: Generating captions for music audio,' in 2021 International Joint Conference on Neural Networks (IJCNN) , pp. 1-8, IEEE, 2021."
+                },
+                {
+                  "title": "Learning music audio representations via weak language supervision",
+                  "citation": "I. Manco, E. Benetos, E. Quinton, and G. Fazekas, 'Learning music audio representations via weak language supervision,' in ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) , pp. 456-460, IEEE, 2022."
+                },
+                {
+                  "title": "Clap: Learning audio concepts from natural language supervision",
+                  "citation": "B. Elizalde, S. Deshmukh, M. A. Ismail, and H. Wang, 'Clap: Learning audio concepts from natural language supervision,' arXiv preprint arXiv:2206.04769 , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.3",
+              "sec_title": "4.2.3 Text Graph Generation",
+              "citations": [
+                {
+                  "title": "Commonsense knowledge base completion",
+                  "citation": "X. Li, A. Taheri, L. Tu, and K. Gimpel, 'Commonsense knowledge base completion,' in Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , pp. 1445-1455, 2016."
+                },
+                {
+                  "title": "Kg-bert: Bert for knowledge graph completion",
+                  "citation": "L. Yao, C. Mao, and Y. Luo, 'Kg-bert: Bert for knowledge graph completion,' arXiv preprint arXiv:1909.03193 , 2019."
+                },
+                {
+                  "title": "Commonsense knowledge base completion with structural and semantic context",
+                  "citation": "C. Malaviya, C. Bhagavatula, A. Bosselut, and Y. Choi, 'Commonsense knowledge base completion with structural and semantic context,' in Proceedings of the AAAI conference on artificial intelligence , vol. 34, pp. 2925-2933, 2020."
+                },
+                {
+                  "title": "Cyclegt: Unsupervised graph-to-text and text-to-graph generation via cycle training",
+                  "citation": "Q. Guo, Z. Jin, X. Qiu, W. Zhang, D. Wipf, and Z. Zhang, 'Cyclegt: Unsupervised graph-to-text and text-to-graph generation via cycle training,' 2020."
+                },
+                {
+                  "title": "Dualtkb: A dual learning bridge between text and knowledge base",
+                  "citation": "P. L. Dognin, I. Melnyk, I. Padhi, C. N. dos Santos, and P. Das, 'Dualtkb: A dual learning bridge between text and knowledge base,' 2020."
+                },
+                {
+                  "title": "Unified structure generation for universal information extraction",
+                  "citation": "Y. Lu, Q. Liu, D. Dai, X. Xiao, H. Lin, X. Han, L. Sun, and H. Wu, 'Unified structure generation for universal information extraction,' arXiv preprint arXiv:2203.12277 , 2022."
+                },
+                {
+                  "title": "Knowledge graph generation from text",
+                  "citation": "I. Melnyk, P. Dognin, and P. Das, 'Knowledge graph generation from text,' arXiv preprint arXiv:2211.10511 , 2022."
+                },
+                {
+                  "title": "Bridging the structural gap between encoding and decoding for data-to-text generation",
+                  "citation": "C. Zhao, M. Walker, and S. Chaturvedi, 'Bridging the structural gap between encoding and decoding for data-to-text generation,' in Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics , (Online), pp. 2481-2491, Association for Computational Linguistics, July 2020."
+                },
+                {
+                  "title": "Gtr-lstm: A triple encoder for sentence generation from rdf data",
+                  "citation": "B. Distiawan, J. Qi, R. Zhang, and W. Wang, 'Gtr-lstm: A triple encoder for sentence generation from rdf data,' in Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , pp. 1627-1637, 2018."
+                },
+                {
+                  "title": "A graph-to-sequence model for amr-to-text generation",
+                  "citation": "L. Song, Y. Zhang, Z. Wang, and D. Gildea, 'A graph-to-sequence model for amr-to-text generation,' 2018."
+                },
+                {
+                  "title": "Bridging the structural gap between encoding and decoding for data-to-text generation",
+                  "citation": "C. Zhao, M. Walker, and S. Chaturvedi, 'Bridging the structural gap between encoding and decoding for data-to-text generation,' in Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics , (Online), pp. 2481-2491, Association for Computational Linguistics, July 2020."
+                },
+                {
+                  "title": "Text generation from knowledge graphs with graph transformers",
+                  "citation": "R. Koncel-Kedziorski, D. Bekal, Y. Luan, M. Lapata, and H. Hajishirzi, 'Text generation from knowledge graphs with graph transformers,' arXiv preprint arXiv:1904.02342 , 2019."
+                },
+                {
+                  "title": "Graph attention networks",
+                  "citation": "P. Veličković, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' arXiv preprint arXiv:1710.10903 , 2017."
+                },
+                {
+                  "title": "Modeling global and local node contexts for text generation from knowledge graphs",
+                  "citation": "L. F. Ribeiro, Y. Zhang, C. Gardent, and I. Gurevych, 'Modeling global and local node contexts for text generation from knowledge graphs,' Transactions of the Association for Computational Linguistics , vol. 8, pp. 589-604, 2020."
+                },
+                {
+                  "title": "Heterogeneous graph transformer for graph-to-sequence learning",
+                  "citation": "S. Yao, T. Wang, and X. Wan, 'Heterogeneous graph transformer for graph-to-sequence learning,' in Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics , pp. 7145-7154, 2020."
+                },
+                {
+                  "title": "Language to logical form with neural attention",
+                  "citation": "L. Dong and M. Lapata, 'Language to logical form with neural attention,' arXiv preprint arXiv:1601.01280 , 2016."
+                },
+                {
+                  "title": "Data recombination for neural semantic parsing",
+                  "citation": "R. Jia and P. Liang, 'Data recombination for neural semantic parsing,' arXiv preprint arXiv:1606.03622 , 2016."
+                },
+                {
+                  "title": "Amr parsing as graph prediction with latent alignment",
+                  "citation": "C. Lyu and I. Titov, 'Amr parsing as graph prediction with latent alignment,' arXiv preprint arXiv:1805.05286 , 2018."
+                },
+                {
+                  "title": "Sequence-to-action: End-to-end semantic graph generation for semantic parsing",
+                  "citation": "B. Chen, L. Sun, and X. Han, 'Sequence-to-action: End-to-end semantic graph generation for semantic parsing,' arXiv preprint arXiv:1809.00773 , 2018."
+                },
+                {
+                  "title": "Amr parsing as sequence-to-graph transduction",
+                  "citation": "S. Zhang, X. Ma, K. Duh, and B. V. Durme, 'Amr parsing as sequence-to-graph transduction,' 2019."
+                },
+                {
+                  "title": "Semantic graph parsing with recurrent neural network dag grammars",
+                  "citation": "F. Fancellu, S. Gilroy, A. Lopez, and M. Lapata, 'Semantic graph parsing with recurrent neural network dag grammars,' arXiv preprint arXiv:1910.00051 , 2019."
+                },
+                {
+                  "title": "A molecular multimodal foundation model associating molecule graphs with natural language",
+                  "citation": "B. Su, D. Du, Z. Yang, Y. Zhou, J. Li, A. Rao, H. Sun, Z. Lu, and J.-R. Wen, 'A molecular multimodal foundation model associating molecule graphs with natural language,' 2022."
+                },
+                {
+                  "title": "Text2mol: Cross-modal molecule retrieval with natural language queries",
+                  "citation": "C. Edwards, C. Zhai, and H. Ji, 'Text2mol: Cross-modal molecule retrieval with natural language queries,' pp. 595-607, 01 2021."
+                },
+                {
+                  "title": "Translation between molecules and natural language",
+                  "citation": "C. Edwards, T. Lai, K. Ros, G. Honke, K. Cho, and H. Ji, 'Translation between molecules and natural language,' 2022."
+                },
+                {
+                  "title": "A molecular multimodal foundation model associating molecule graphs with natural language",
+                  "citation": "B. Su, D. Du, Z. Yang, Y. Zhou, J. Li, A. Rao, H. Sun, Z. Lu, and J.-R. Wen, 'A molecular multimodal foundation model associating molecule graphs with natural language,' 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.4",
+              "sec_title": "4.2.4 Text Code Generation",
+              "citations": [
+                {
+                  "title": "Codebert: A pre-trained model for programming and natural languages",
+                  "citation": "Z. Feng, D. Guo, D. Tang, N. Duan, X. Feng, M. Gong, L. Shou, B. Qin, T. Liu, D. Jiang, et al. , 'Codebert: A pre-trained model for programming and natural languages,' arXiv preprint arXiv:2002.08155 , 2020."
+                },
+                {
+                  "title": "Learning and evaluating contextual embedding of source code",
+                  "citation": "A. Kanade, P. Maniatis, G. Balakrishnan, and K. Shi, 'Learning and evaluating contextual embedding of source code,' in International conference on machine learning , pp. 5110-5121, PMLR, 2020."
+                },
+                {
+                  "title": "Codet5: Identifier-aware unified pre-trained encoder-decoder models for code understanding and generation",
+                  "citation": "Y. Wang, W. Wang, S. Joty, and S. C. Hoi, 'Codet5: Identifier-aware unified pre-trained encoder-decoder models for code understanding and generation,' arXiv preprint arXiv:2109.00859 , 2021."
+                },
+                {
+                  "title": "Unified pre-training for program understanding and generation",
+                  "citation": "W. U. Ahmad, S. Chakraborty, B. Ray, and K.-W. Chang, 'Unified pre-training for program understanding and generation,' arXiv preprint arXiv:2103.06333 , 2021."
+                },
+                {
+                  "title": "A syntactic neural model for general-purpose code generation",
+                  "citation": "P. Yin and G. Neubig, 'A syntactic neural model for general-purpose code generation,' arXiv preprint arXiv:1704.01696 , 2017."
+                },
+                {
+                  "title": "Syntax-directed variational autoencoder for structured data",
+                  "citation": "H. Dai, Y. Tian, B. Dai, S. Skiena, and L. Song, 'Syntax-directed variational autoencoder for structured data,' arXiv preprint arXiv:1802.08786 , 2018."
+                },
+                {
+                  "title": "Learning to represent programs with graphs",
+                  "citation": "M. Allamanis, M. Brockschmidt, and M. Khademi, 'Learning to represent programs with graphs,' arXiv preprint arXiv:1711.00740 , 2017."
+                },
+                {
+                  "title": "Codegen: An open large language model for code with multi-turn program synthesis",
+                  "citation": "E. Nijkamp, B. Pang, H. Hayashi, L. Tu, H. Wang, Y. Zhou, S. Savarese, and C. Xiong, 'Codegen: An open large language model for code with multi-turn program synthesis,' 2022."
+                },
+                {
+                  "title": "Interactive code generation via test-driven user-intent formalization",
+                  "citation": "S. K. Lahiri, A. Naik, G. Sakkas, P. Choudhury, C. von Veh, M. Musuvathi, J. P. Inala, C. Wang, and J. Gao, 'Interactive code generation via test-driven user-intent formalization,' 2022."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "APPLICATIONS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "ChatBot",
+          "citations": [
+            {
+              "title": "The design and implementation of xiaoice, an empathetic social chatbot",
+              "citation": "L. Zhou, J. Gao, D. Li, and H.-Y. Shum, 'The design and implementation of xiaoice, an empathetic social chatbot,' Computational Linguistics , vol. 46, no. 1, pp. 53-93, 2020."
+            },
+            {
+              "title": "Towards a human-like open-domain chatbot",
+              "citation": "D. Adiwardana, M.-T. Luong, D. R. So, J. Hall, N. Fiedel, R. Thoppilan, Z. Yang, A. Kulshreshtha, G. Nemade, Y. Lu, et al. , 'Towards a human-like open-domain chatbot,' arXiv preprint arXiv:2001.09977 , 2020."
+            },
+            {
+              "title": "Blenderbot 3: a deployed conversational agent that continually learns to responsibly engage",
+              "citation": "K. Shuster, J. Xu, M. Komeili, D. Ju, E. M. Smith, S. Roller, M. Ung, M. Chen, K. Arora, J. Lane, et al. , 'Blenderbot 3: a deployed conversational agent that continually learns to responsibly engage,' arXiv preprint arXiv:2208.03188 , 2022."
+            },
+            {
+              "title": "Training language models to follow instructions with human feedback",
+              "citation": "L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. L. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray, J. Schulman, J. Hilton, F. Kelton, L. Miller, M. Simens, A. Askell, P. Welinder, P. Christiano, J. Leike, and R. Lowe, 'Training language models to follow instructions with human feedback,' Mar. 2022. arXiv:2203.02155 [cs]."
+            },
+            {
+              "title": "Jukebox: A generative model for music",
+              "citation": "P. Dhariwal, H. Jun, C. Payne, J. W. Kim, A. Radford, and I. Sutskever, 'Jukebox: A generative model for music,' arXiv preprint arXiv:2005.00341 , 2020."
+            },
+            {
+              "title": "Codexglue: A machine learning benchmark dataset for code understanding and generation",
+              "citation": "S. Lu, D. Guo, S. Ren, J. Huang, A. Svyatkovskiy, A. Blanco, C. Clement, D. Drain, D. Jiang, D. Tang, et al. , 'Codexglue: A machine learning benchmark dataset for code understanding and generation,' arXiv preprint arXiv:2102.04664 , 2021."
+            },
+            {
+              "title": "Natural language processing with transformers",
+              "citation": "L. Tunstall, L. Von Werra, and T. Wolf, Natural language processing with transformers . \" O'Reilly Media, Inc.\", 2022."
+            },
+            {
+              "title": "Evaluating Large Language Models Trained on Code",
+              "citation": "M. Chen, J. Tworek, H. Jun, Q. Yuan, H. P. d. O. Pinto, J. Kaplan, H. Edwards, Y. Burda, N. Joseph, G. Brockman, A. Ray, R. Puri, G. Krueger, M. Petrov, H. Khlaaf, G. Sastry, P. Mishkin, B. Chan, S. Gray, N. Ryder, M. Pavlov, A. Power, L. Kaiser, M. Bavarian, C. Winter, P. Tillet, F. P. Such, D. Cummings, M. Plappert, F. Chantzis, E. Barnes, A. Herbert-Voss, W. H. Guss, A. Nichol, A. Paino, N. Tezak, J. Tang, I. Babuschkin, S. Balaji, S. Jain, W. Saunders, C. Hesse, A. N. Carr, J. Leike, J. Achiam, V. Misra, E. Morikawa, A. Radford, M. Knight, M. Brundage, M. Murati, K. Mayer, P. Welinder, B. McGrew, D. Amodei, S. McCandlish, I. Sutskever, and W. Zaremba, 'Evaluating Large Language Models Trained on Code,' July 2021. arXiv:2107.03374 [cs]."
+            },
+            {
+              "title": "Evaluating Large Language Models Trained on Code",
+              "citation": "M. Chen, J. Tworek, H. Jun, Q. Yuan, H. P. d. O. Pinto, J. Kaplan, H. Edwards, Y. Burda, N. Joseph, G. Brockman, A. Ray, R. Puri, G. Krueger, M. Petrov, H. Khlaaf, G. Sastry, P. Mishkin, B. Chan, S. Gray, N. Ryder, M. Pavlov, A. Power, L. Kaiser, M. Bavarian, C. Winter, P. Tillet, F. P. Such, D. Cummings, M. Plappert, F. Chantzis, E. Barnes, A. Herbert-Voss, W. H. Guss, A. Nichol, A. Paino, N. Tezak, J. Tang, I. Babuschkin, S. Balaji, S. Jain, W. Saunders, C. Hesse, A. N. Carr, J. Leike, J. Achiam, V. Misra, E. Morikawa, A. Radford, M. Knight, M. Brundage, M. Murati, K. Mayer, P. Welinder, B. McGrew, D. Amodei, S. McCandlish, I. Sutskever, and W. Zaremba, 'Evaluating Large Language Models Trained on Code,' July 2021. arXiv:2107.03374 [cs]."
+            },
+            {
+              "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+              "citation": "A. Ramesh, P. Dhariwal, A. Nichol, C. Chu, and M. Chen, 'Hierarchical Text-Conditional Image Generation with CLIP Latents,' Apr. 2022. arXiv:2204.06125 [cs]."
+            },
+            {
+              "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+              "citation": "R. Rombach, A. Blattmann, D. Lorenz, P. Esser, and B. Ommer, 'High-Resolution Image Synthesis with Latent Diffusion Models,' Apr. 2022. arXiv:2112.10752 [cs]."
+            },
+            {
+              "title": "Zero-shot text-to-image generation",
+              "citation": "A. Ramesh, M. Pavlov, G. Goh, S. Gray, C. Voss, A. Radford, M. Chen, and I. Sutskever, 'Zero-shot text-to-image generation,' in International Conference on Machine Learning , pp. 8821-8831, PMLR, 2021."
+            },
+            {
+              "title": "Photorealistic text-to-image diffusion models with deep language understanding",
+              "citation": "C. Saharia, W. Chan, S. Saxena, L. Li, J. Whang, E. Denton, S. K. S. Ghasemipour, B. K. Ayan, S. S. Mahdavi, R. G. Lopes, et al. , 'Photorealistic text-to-image diffusion models with deep language understanding,' arXiv preprint arXiv:2205.11487 , 2022."
+            },
+            {
+              "title": "Solving quantitative reasoning problems with language models",
+              "citation": "A. Lewkowycz, A. Andreassen, D. Dohan, E. Dyer, H. Michalewski, V. Ramasesh, A. Slone, C. Anil, I. Schlag, T. GutmanSolo, et al. , 'Solving quantitative reasoning problems with language models,' arXiv preprint arXiv:2206.14858 , 2022."
+            },
+            {
+              "title": "Discovering faster matrix multiplication algorithms with reinforcement learning",
+              "citation": "A. Fawzi, M. Balog, A. Huang, T. Hubert, B. Romera-Paredes, M. Barekatain, A. Novikov, F. J. R Ruiz, J. Schrittwieser, G. Swirszcz, et al. , 'Discovering faster matrix multiplication algorithms with reinforcement learning,' Nature , vol. 610, no. 7930, pp. 47-53, 2022."
+            },
+            {
+              "title": "The design and implementation of xiaoice, an empathetic social chatbot",
+              "citation": "L. Zhou, J. Gao, D. Li, and H.-Y. Shum, 'The design and implementation of xiaoice, an empathetic social chatbot,' Computational Linguistics , vol. 46, no. 1, pp. 53-93, 2020."
+            },
+            {
+              "title": "Towards a human-like open-domain chatbot",
+              "citation": "D. Adiwardana, M.-T. Luong, D. R. So, J. Hall, N. Fiedel, R. Thoppilan, Z. Yang, A. Kulshreshtha, G. Nemade, Y. Lu, et al. , 'Towards a human-like open-domain chatbot,' arXiv preprint arXiv:2001.09977 , 2020."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Art",
+          "citations": [
+            {
+              "title": "Zero-shot text-to-image generation",
+              "citation": "A. Ramesh, M. Pavlov, G. Goh, S. Gray, C. Voss, A. Radford, M. Chen, and I. Sutskever, 'Zero-shot text-to-image generation,' in International Conference on Machine Learning , pp. 8821-8831, PMLR, 2021."
+            },
+            {
+              "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+              "citation": "A. Ramesh, P. Dhariwal, A. Nichol, C. Chu, and M. Chen, 'Hierarchical Text-Conditional Image Generation with CLIP Latents,' Apr. 2022. arXiv:2204.06125 [cs]."
+            },
+            {
+              "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+              "citation": "R. Rombach, A. Blattmann, D. Lorenz, P. Esser, and B. Ommer, 'High-Resolution Image Synthesis with Latent Diffusion Models,' Apr. 2022. arXiv:2112.10752 [cs]."
+            },
+            {
+              "title": "Photorealistic text-to-image diffusion models with deep language understanding",
+              "citation": "C. Saharia, W. Chan, S. Saxena, L. Li, J. Whang, E. Denton, S. K. S. Ghasemipour, B. K. Ayan, S. S. Mahdavi, R. G. Lopes, et al. , 'Photorealistic text-to-image diffusion models with deep language understanding,' arXiv preprint arXiv:2205.11487 , 2022."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.3",
+          "sec_title": "Music",
+          "citations": [
+            {
+              "title": "Jukebox: A generative model for music",
+              "citation": "P. Dhariwal, H. Jun, C. Payne, J. W. Kim, A. Radford, and I. Sutskever, 'Jukebox: A generative model for music,' arXiv preprint arXiv:2005.00341 , 2020."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.4",
+          "sec_title": "Code",
+          "citations": [
+            {
+              "title": "Codexglue: A machine learning benchmark dataset for code understanding and generation",
+              "citation": "S. Lu, D. Guo, S. Ren, J. Huang, A. Svyatkovskiy, A. Blanco, C. Clement, D. Drain, D. Jiang, D. Tang, et al. , 'Codexglue: A machine learning benchmark dataset for code understanding and generation,' arXiv preprint arXiv:2102.04664 , 2021."
+            },
+            {
+              "title": "Natural language processing with transformers",
+              "citation": "L. Tunstall, L. Von Werra, and T. Wolf, Natural language processing with transformers . \" O'Reilly Media, Inc.\", 2022."
+            },
+            {
+              "title": "Evaluating Large Language Models Trained on Code",
+              "citation": "M. Chen, J. Tworek, H. Jun, Q. Yuan, H. P. d. O. Pinto, J. Kaplan, H. Edwards, Y. Burda, N. Joseph, G. Brockman, A. Ray, R. Puri, G. Krueger, M. Petrov, H. Khlaaf, G. Sastry, P. Mishkin, B. Chan, S. Gray, N. Ryder, M. Pavlov, A. Power, L. Kaiser, M. Bavarian, C. Winter, P. Tillet, F. P. Such, D. Cummings, M. Plappert, F. Chantzis, E. Barnes, A. Herbert-Voss, W. H. Guss, A. Nichol, A. Paino, N. Tezak, J. Tang, I. Babuschkin, S. Balaji, S. Jain, W. Saunders, C. Hesse, A. N. Carr, J. Leike, J. Achiam, V. Misra, E. Morikawa, A. Radford, M. Knight, M. Brundage, M. Murati, K. Mayer, P. Welinder, B. McGrew, D. Amodei, S. McCandlish, I. Sutskever, and W. Zaremba, 'Evaluating Large Language Models Trained on Code,' July 2021. arXiv:2107.03374 [cs]."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.5",
+          "sec_title": "Education",
+          "citations": [
+            {
+              "title": "Solving quantitative reasoning problems with language models",
+              "citation": "A. Lewkowycz, A. Andreassen, D. Dohan, E. Dyer, H. Michalewski, V. Ramasesh, A. Slone, C. Anil, I. Schlag, T. GutmanSolo, et al. , 'Solving quantitative reasoning problems with language models,' arXiv preprint arXiv:2206.14858 , 2022."
+            },
+            {
+              "title": "Palm: Scaling language modeling with pathways",
+              "citation": "A. Chowdhery, S. Narang, J. Devlin, M. Bosma, G. Mishra, A. Roberts, P. Barham, H. W. Chung, C. Sutton, S. Gehrmann, et al. , 'Palm: Scaling language modeling with pathways,' arXiv preprint arXiv:2204.02311 , 2022."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "EFFICIENCY IN AIGC",
+      "citations": [
+        {
+          "title": "Imagenet: A large-scale hierarchical image database",
+          "citation": "J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li, and L. Fei-Fei, 'Imagenet: A large-scale hierarchical image database,' in 2009 IEEE conference on computer vision and pattern recognition , pp. 248-255, Ieee, 2009."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "6.1",
+          "sec_title": "Prompt Learning",
+          "citations": [
+            {
+              "title": "Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing",
+              "citation": "P. Liu, W. Yuan, J. Fu, Z. Jiang, H. Hayashi, and G. Neubig, 'Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing,' ACM Computing Surveys , vol. 55, no. 9, pp. 1-35, 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.2",
+          "sec_title": "Efficiency in Pretrained Foundation Models",
+          "citations": [
+            {
+              "title": "A comprehensive survey on pretrained foundation models: A history from bert to chatgpt",
+              "citation": "C. Zhou, Q. Li, C. Li, J. Yu, Y. Liu, G. Wang, K. Zhang, C. Ji, Q. Yan, L. He, et al. , 'A comprehensive survey on pretrained foundation models: A history from bert to chatgpt,' arXiv preprint arXiv:2302.09419 , 2023."
+            },
+            {
+              "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+              "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, 'Bert: Pre-training of deep bidirectional transformers for language understanding,' arXiv preprint arXiv:1810.04805 , 2018."
+            },
+            {
+              "title": "Language models are unsupervised multitask learners",
+              "citation": "A. Radford, J. Wu, R. Child, D. Luan, D. Amodei, and I. Sutskever, 'Language models are unsupervised multitask learners,' 2019."
+            },
+            {
+              "title": "Roberta: A robustly optimized bert pretraining approach",
+              "citation": "Y. Liu, M. Ott, N. Goyal, J. Du, M. Joshi, D. Chen, O. Levy, M. Lewis, L. Zettlemoyer, and V. Stoyanov, 'Roberta: A robustly optimized bert pretraining approach,' arXiv preprint arXiv:1907.11692 , 2019."
+            },
+            {
+              "title": "Electra: Pre-training text encoders as discriminators rather than generators",
+              "citation": "K. Clark, M.-T. Luong, Q. V. Le, and C. D. Manning, 'Electra: Pre-training text encoders as discriminators rather than generators,' arXiv preprint arXiv:2003.10555 , 2020."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.3",
+          "sec_title": "Model Compression",
+          "citations": [
+            {
+              "title": "Distilbert, a distilled version of bert: smaller, faster, cheaper and lighter",
+              "citation": "V. Sanh, L. Debut, J. Chaumond, and T. Wolf, 'Distilbert, a distilled version of bert: smaller, faster, cheaper and lighter,' arXiv preprint arXiv:1910.01108 , 2019."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "TRUSTWORTHY & RESPONSIBLE AIGC",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "7.1",
+          "sec_title": "Security",
+          "citations": [
+            {
+              "title": "Chatgpt: Optimizing language models for dialogue",
+              "citation": "'Chatgpt: Optimizing language models for dialogue,' Nov. 2022."
+            },
+            {
+              "title": "A categorical archive of chatgpt failures",
+              "citation": "A. Borji, 'A categorical archive of chatgpt failures,' 2023."
+            },
+            {
+              "title": "Could chatgpt become a monster misinformation superspreader?",
+              "citation": "'Could chatgpt become a monster misinformation superspreader?,' Jan 2023."
+            },
+            {
+              "title": "Could chatgpt become a monster misinformation superspreader?",
+              "citation": "'Could chatgpt become a monster misinformation superspreader?,' Jan 2023."
+            },
+            {
+              "title": "This newspaper doesn't exist: How chatgpt can launch fake news sites in minutes",
+              "citation": "A. Mahadevan, 'This newspaper doesn't exist: How chatgpt can launch fake news sites in minutes,' Feb 2023."
+            },
+            {
+              "title": "Chatgpt: Optimizing language models for dialogue",
+              "citation": "'Chatgpt: Optimizing language models for dialogue,' Nov. 2022."
+            },
+            {
+              "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+              "citation": "R. Rombach, A. Blattmann, D. Lorenz, P. Esser, and B. Ommer, 'High-Resolution Image Synthesis with Latent Diffusion Models,' Apr. 2022. arXiv:2112.10752 [cs]."
+            },
+            {
+              "title": "Why can't ai draw realistic human hands?",
+              "citation": "'Why can't ai draw realistic human hands?,' Jan 2023."
+            },
+            {
+              "title": "An empirical study on developer interactions in stackoverflow",
+              "citation": "S. Wang, D. Lo, and L. Jiang, 'An empirical study on developer interactions in stackoverflow,' in Proceedings of the 28th annual ACM symposium on applied computing , pp. 1019-1024, 2013."
+            },
+            {
+              "title": "Texttruth: an unsupervised approach to discover trustworthy information from multi-sourced text data",
+              "citation": "H. Zhang, Y. Li, F. Ma, J. Gao, and L. Su, 'Texttruth: an unsupervised approach to discover trustworthy information from multi-sourced text data,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , pp. 2729-2737, 2018."
+            },
+            {
+              "title": "Assessing the factual accuracy of generated text",
+              "citation": "B. Goodrich, V. Rao, P. J. Liu, and M. Saleh, 'Assessing the factual accuracy of generated text,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , pp. 166-175, 2019."
+            },
+            {
+              "title": "Rouge: A package for automatic evaluation of summaries",
+              "citation": "C.-Y. Lin, 'Rouge: A package for automatic evaluation of summaries,' in Text summarization branches out , pp. 74-81, 2004."
+            },
+            {
+              "title": "Bleu: a method for automatic evaluation of machine translation",
+              "citation": "K. Papineni, S. Roukos, T. Ward, and W.-J. Zhu, 'Bleu: a method for automatic evaluation of machine translation,' in Proceedings of the 40th annual meeting of the Association for Computational Linguistics , pp. 311-318, 2002."
+            },
+            {
+              "title": "Assessing the factual accuracy of generated text",
+              "citation": "B. Goodrich, V. Rao, P. J. Liu, and M. Saleh, 'Assessing the factual accuracy of generated text,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , pp. 166-175, 2019."
+            },
+            {
+              "title": "Truthful ai: Developing and governing ai that does not lie",
+              "citation": "O. Evans, O. Cotton-Barratt, L. Finnveden, A. Bales, A. Balwit, P. Wills, L. Righetti, and W. Saunders, 'Truthful ai: Developing and governing ai that does not lie,' arXiv preprint arXiv:2110.06674 , 2021."
+            },
+            {
+              "title": "Webgpt: Browser-assisted question-answering with human feedback",
+              "citation": "R. Nakano, J. Hilton, S. Balaji, J. Wu, L. Ouyang, C. Kim, C. Hesse, S. Jain, V. Kosaraju, W. Saunders, et al. , 'Webgpt: Browser-assisted question-answering with human feedback,' arXiv preprint arXiv:2112.09332 , 2021."
+            },
+            {
+              "title": "Eli5: Long form question answering",
+              "citation": "A. Fan, Y. Jernite, E. Perez, D. Grangier, J. Weston, and M. Auli, 'Eli5: Long form question answering,' arXiv preprint arXiv:1907.09190 , 2019."
+            },
+            {
+              "title": "Truthfulqa: Measuring how models mimic human falsehoods",
+              "citation": "S. Lin, J. Hilton, and O. Evans, 'Truthfulqa: Measuring how models mimic human falsehoods,' arXiv preprint arXiv:2109.07958 , 2021."
+            },
+            {
+              "title": "Factuality enhanced language models for openended text generation",
+              "citation": "N. Lee, W. Ping, P. Xu, M. Patwary, M. Shoeybi, and B. Catanzaro, 'Factuality enhanced language models for openended text generation,' arXiv preprint arXiv:2206.04624 , 2022."
+            },
+            {
+              "title": "Factuality enhanced language models for openended text generation",
+              "citation": "N. Lee, W. Ping, P. Xu, M. Patwary, M. Shoeybi, and B. Catanzaro, 'Factuality enhanced language models for openended text generation,' arXiv preprint arXiv:2206.04624 , 2022."
+            },
+            {
+              "title": "A categorical archive of chatgpt failures",
+              "citation": "A. Borji, 'A categorical archive of chatgpt failures,' 2023."
+            },
+            {
+              "title": "Bold: Dataset and metrics for measuring biases in open-ended language generation",
+              "citation": "J. Dhamala, T. Sun, V. Kumar, S. Krishna, Y. Pruksachatkun, K.-W. Chang, and R. Gupta, 'Bold: Dataset and metrics for measuring biases in open-ended language generation,' in Proceedings of the 2021 ACM conference on fairness, accountability, and transparency , pp. 862-872, 2021."
+            },
+            {
+              "title": "Towards understanding and mitigating social biases in language models",
+              "citation": "P. P. Liang, C. Wu, L.-P. Morency, and R. Salakhutdinov, 'Towards understanding and mitigating social biases in language models,' in International Conference on Machine Learning , pp. 6565-6576, PMLR, 2021."
+            },
+            {
+              "title": "Stereoset: Measuring stereotypical bias in pretrained language models",
+              "citation": "M. Nadeem, A. Bethke, and S. Reddy, 'Stereoset: Measuring stereotypical bias in pretrained language models,' arXiv preprint arXiv:2004.09456 , 2020."
+            },
+            {
+              "title": "Release strategies and the social impacts of language models",
+              "citation": "I. Solaiman, M. Brundage, J. Clark, A. Askell, A. Herbert-Voss, J. Wu, A. Radford, G. Krueger, J. W. Kim, S. Kreps, et al. , 'Release strategies and the social impacts of language models,' arXiv preprint arXiv:1908.09203 , 2019."
+            },
+            {
+              "title": "Training language models to follow instructions with human feedback",
+              "citation": "L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. L. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray, J. Schulman, J. Hilton, F. Kelton, L. Miller, M. Simens, A. Askell, P. Welinder, P. Christiano, J. Leike, and R. Lowe, 'Training language models to follow instructions with human feedback,' Mar. 2022. arXiv:2203.02155 [cs]."
+            },
+            {
+              "title": "Lamda: Language models for dialog applications",
+              "citation": "R. Thoppilan, D. De Freitas, J. Hall, N. Shazeer, A. Kulshreshtha, H.-T. Cheng, A. Jin, T. Bos, L. Baker, Y. Du, et al. , 'Lamda: Language models for dialog applications,' arXiv preprint arXiv:2201.08239 , 2022."
+            },
+            {
+              "title": "Lamda: Language models for dialog applications",
+              "citation": "R. Thoppilan, D. De Freitas, J. Hall, N. Shazeer, A. Kulshreshtha, H.-T. Cheng, A. Jin, T. Bos, L. Baker, Y. Du, et al. , 'Lamda: Language models for dialog applications,' arXiv preprint arXiv:2201.08239 , 2022."
+            },
+            {
+              "title": "Red teaming language models to reduce harms: Methods, scaling behaviors, and lessons learned",
+              "citation": "D. Ganguli, L. Lovitt, J. Kernion, A. Askell, Y. Bai, S. Kadavath, B. Mann, E. Perez, N. Schiefer, K. Ndousse, et al. , 'Red teaming language models to reduce harms: Methods, scaling behaviors, and lessons learned,' arXiv preprint arXiv:2209.07858 , 2022."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.2",
+          "sec_title": "Privacy",
+          "citations": [
+            {
+              "title": "Membership inference attacks against text-to-image generation models",
+              "citation": "Y. Wu, N. Yu, Z. Li, M. Backes, and Y. Zhang, 'Membership inference attacks against text-to-image generation models,' arXiv preprint arXiv:2210.00968 , 2022."
+            },
+            {
+              "title": "Membership inference attacks against text-to-image generation models",
+              "citation": "Y. Wu, N. Yu, Z. Li, M. Backes, and Y. Zhang, 'Membership inference attacks against text-to-image generation models,' arXiv preprint arXiv:2210.00968 , 2022."
+            },
+            {
+              "title": "Membership inference attacks on machine learning: A survey",
+              "citation": "H. Hu, Z. Salcic, L. Sun, G. Dobbie, P. S. Yu, and X. Zhang, 'Membership inference attacks on machine learning: A survey,' ACM Computing Surveys (CSUR) , vol. 54, no. 11s, pp. 1-37, 2022."
+            },
+            {
+              "title": "Are diffusion models vulnerable to membership inference attacks?",
+              "citation": "J. Duan, F. Kong, S. Wang, X. Shi, and K. Xu, 'Are diffusion models vulnerable to membership inference attacks?,' arXiv preprint arXiv:2302.01316 , 2023."
+            },
+            {
+              "title": "Membership inference of diffusion models",
+              "citation": "H. Hu and J. Pang, 'Membership inference of diffusion models,' arXiv preprint arXiv:2301.09956 , 2023."
+            },
+            {
+              "title": "Membership inference attacks against diffusion models",
+              "citation": "T. Matsumoto, T. Miura, and N. Yanai, 'Membership inference attacks against diffusion models,' arXiv preprint arXiv:2302.03262 , 2023."
+            },
+            {
+              "title": "Quantifying memorization across neural language models",
+              "citation": "N. Carlini, D. Ippolito, M. Jagielski, K. Lee, F. Tramèr, and C. Zhang, 'Quantifying memorization across neural language models,' arXiv preprint arXiv:2202.07646 , 2022."
+            },
+            {
+              "title": "Extracting training data from large language models",
+              "citation": "N. Carlini, Y. Liu, H. Daume III, U. Erlingsson, T. Kohno, and D. Song, 'Extracting training data from large language models,' in 30th USENIX Security Symposium (USENIX Security 21) , 2021."
+            },
+            {
+              "title": "Language models are unsupervised multitask learners",
+              "citation": "A. Radford, J. Wu, R. Child, D. Luan, D. Amodei, and I. Sutskever, 'Language models are unsupervised multitask learners,' OpenAI Blog , vol. 1, no. 8, 2019."
+            },
+            {
+              "title": "Diffusion art or digital forgery? investigating data replication in diffusion models",
+              "citation": "G. Somepalli, V. Singla, M. Goldblum, J. Geiping, and T. Goldstein, 'Diffusion art or digital forgery? investigating data replication in diffusion models,' arXiv preprint arXiv:2212.03860 , 2021."
+            },
+            {
+              "title": "Extracting training data from diffusion models",
+              "citation": "N. Carlini, J. Hayes, M. Nasr, M. Jagielski, V. Sehwag, F. Tramèr, B. Balle, D. Ippolito, and E. Wallace, 'Extracting training data from diffusion models,' arXiv preprint arXiv:2301.13188 , 2023."
+            },
+            {
+              "title": "Extracting training data from diffusion models",
+              "citation": "N. Carlini, J. Hayes, M. Nasr, M. Jagielski, V. Sehwag, F. Tramèr, B. Balle, D. Ippolito, and E. Wallace, 'Extracting training data from diffusion models,' arXiv preprint arXiv:2301.13188 , 2023."
+            },
+            {
+              "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+              "citation": "R. Rombach, A. Blattmann, D. Lorenz, P. Esser, and B. Ommer, 'High-Resolution Image Synthesis with Latent Diffusion Models,' Apr. 2022. arXiv:2112.10752 [cs]."
+            },
+            {
+              "title": "Photorealistic text-to-image diffusion models with deep language understanding",
+              "citation": "C. Saharia, W. Chan, S. Saxena, L. Li, J. Whang, E. Denton, S. K. S. Ghasemipour, B. K. Ayan, S. S. Mahdavi, R. G. Lopes, et al. , 'Photorealistic text-to-image diffusion models with deep language understanding,' arXiv preprint arXiv:2205.11487 , 2022."
+            },
+            {
+              "title": "Generative adversarial networks",
+              "citation": "I. J. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, and Y. Bengio, 'Generative adversarial networks,' 2014."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "OPEN PROBLEMS AND FUTURE DIRECTIONS",
+      "citations": [
+        {
+          "title": "A governance model for the application of ai in health care",
+          "citation": "S. Reddy, S. Allan, S. Coghlan, and P. Cooper, 'A governance model for the application of ai in health care,' Journal of the American Medical Informatics Association , vol. 27, no. 3, pp. 491-497, 2020."
+        },
+        {
+          "title": "Fintech: Ai powers financial services to improve people's lives",
+          "citation": "Y. Qi and J. Xiao, 'Fintech: Ai powers financial services to improve people's lives,' Communications of the ACM , vol. 61, no. 11, pp. 65-69, 2018."
+        },
+        {
+          "title": "A survey of deep learning techniques for autonomous driving",
+          "citation": "S. Grigorescu, B. Trasnea, T. Cocias, and G. Macesanu, 'A survey of deep learning techniques for autonomous driving,' Journal of Field Robotics , vol. 37, no. 3, pp. 362-386, 2020."
+        },
+        {
+          "title": "Amplify scientific discovery with artificial intelligence",
+          "citation": "Y. Gil, M. Greaves, J. Hendler, and H. Hirsh, 'Amplify scientific discovery with artificial intelligence,' Science , vol. 346, no. 6206, pp. 171-172, 2014."
+        },
+        {
+          "title": "Galactica: A large language model for science",
+          "citation": "R. Taylor, M. Kardas, G. Cucurull, T. Scialom, A. Hartshorn, E. Saravia, A. Poulton, V. Kerkez, and R. Stojnic, 'Galactica: A large language model for science,' arXiv preprint arXiv:2211.09085 , 2022."
+        },
+        {
+          "title": "Continual learning with foundation models: An empirical study of latent replay",
+          "citation": "O. Ostapenko, T. Lesort, P. Rodríguez, M. R. Arefin, A. Douillard, I. Rish, and L. Charlin, 'Continual learning with foundation models: An empirical study of latent replay,' in Conference on Lifelong Learning Agents , pp. 60-91, PMLR, 2022."
+        },
+        {
+          "title": "Don't stop pretraining: Adapt language models to domains and tasks",
+          "citation": "S. Gururangan, A. Marasović, S. Swayamdipta, K. Lo, I. Beltagy, D. Downey, and N. A. Smith, 'Don't stop pretraining: Adapt language models to domains and tasks,' arXiv preprint arXiv:2004.10964 , 2020."
+        },
+        {
+          "title": "Legal-bert: The muppets straight out of law school",
+          "citation": "I. Chalkidis, M. Fergadiotis, P. Malakasiotis, N. Aletras, and I. Androutsopoulos, 'Legal-bert: The muppets straight out of law school,' arXiv preprint arXiv:2010.02559 , 2020."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, G. Krueger, and I. Sutskever, 'Learning transferable visual models from natural language supervision,' 2021."
+        },
+        {
+          "title": "Galactica: A large language model for science",
+          "citation": "R. Taylor, M. Kardas, G. Cucurull, T. Scialom, A. Hartshorn, E. Saravia, A. Poulton, V. Kerkez, and R. Stojnic, 'Galactica: A large language model for science,' arXiv preprint arXiv:2211.09085 , 2022."
+        },
+        {
+          "title": "On the opportunities and risks of foundation models",
+          "citation": "R. Bommasani, D. A. Hudson, E. Adeli, R. Altman, S. Arora, S. von Arx, M. S. Bernstein, J. Bohg, A. Bosselut, E. Brunskill, et al. , 'On the opportunities and risks of foundation models,' arXiv preprint arXiv:2108.07258 , 2021."
+        },
+        {
+          "title": "Chain of thought prompting elicits reasoning in large language models",
+          "citation": "J. Wei, X. Wang, D. Schuurmans, M. Bosma, E. Chi, Q. Le, and D. Zhou, 'Chain of thought prompting elicits reasoning in large language models,' arXiv preprint arXiv:2201.11903 , 2022."
+        },
+        {
+          "title": "Multimodal chain-of-thought reasoning in language models",
+          "citation": "Z. Zhang, A. Zhang, M. Li, H. Zhao, G. Karypis, and A. Smola, 'Multimodal chain-of-thought reasoning in language models,' arXiv preprint arXiv:2302.00923 , 2023."
+        },
+        {
+          "title": "Chain of thought prompting elicits reasoning in large language models",
+          "citation": "J. Wei, X. Wang, D. Schuurmans, M. Bosma, E. Chi, Q. Le, and D. Zhou, 'Chain of thought prompting elicits reasoning in large language models,' arXiv preprint arXiv:2201.11903 , 2022."
+        },
+        {
+          "title": "Multimodal chain-of-thought reasoning in language models",
+          "citation": "Z. Zhang, A. Zhang, M. Li, H. Zhao, G. Karypis, and A. Smola, 'Multimodal chain-of-thought reasoning in language models,' arXiv preprint arXiv:2302.00923 , 2023."
+        },
+        {
+          "title": "Language models of code are few-shot commonsense learners",
+          "citation": "A. Madaan, S. Zhou, U. Alon, Y. Yang, and G. Neubig, 'Language models of code are few-shot commonsense learners,' arXiv preprint arXiv:2210.07128 , 2022."
+        },
+        {
+          "title": "Training compute-optimal large language models",
+          "citation": "J. Hoffmann, S. Borgeaud, A. Mensch, E. Buchatskaya, T. Cai, E. Rutherford, D. d. L. Casas, L. A. Hendricks, J. Welbl, A. Clark, et al. , 'Training compute-optimal large language models,' arXiv preprint arXiv:2203.15556 , 2022."
+        },
+        {
+          "title": "Scaling laws for generative mixed-modal language models",
+          "citation": "A. Aghajanyan, L. Yu, A. Conneau, W.-N. Hsu, K. Hambardzumyan, S. Zhang, S. Roller, N. Goyal, O. Levy, and L. Zettlemoyer, 'Scaling laws for generative mixed-modal language models,' arXiv preprint arXiv:2301.03728 , 2023."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "9",
+      "sec_title": "CONCLUSION",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

@@ -1,0 +1,1598 @@
+{
+  "track": "Reinforcement Learning",
+  "paper_title": "Multi-Agent Reinforcement Learning: A Selective Overview of Theories and Algorithms",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "Introduction",
+      "citations": [
+        {
+          "title": "Mastering the game of Go with deep neural networks and tree search",
+          "citation": "Silver, D., Huang, A., Maddison, C.J., Guez, A., Sifre, L., Van Den Driessche, G., Schrittwieser, J., Antonoglou, I., Panneershelvam, V., Lanctot, M., et al.: Mastering the game of Go with deep neural networks and tree search. Nature 529 (7587), 484-489 (2016)"
+        },
+        {
+          "title": "Mastering the game of Go without human knowledge",
+          "citation": "Silver, D., Schrittwieser, J., Simonyan, K., Antonoglou, I., Huang, A., Guez, A., Hubert, T., Baker, L., Lai, M., Bolton, A., et al.: Mastering the game of Go without human knowledge. Nature 550 (7676), 354 (2017)"
+        },
+        {
+          "title": "OpenAI Five",
+          "citation": "OpenAI: Openai five. https://blog.openai.com/openai-five/ (2018)"
+        },
+        {
+          "title": "AlphaStar: Mastering the Real-Time Strategy Game StarCraft II",
+          "citation": "Vinyals, O., Babuschkin, I., Chung, J., Mathieu, M., Jaderberg, M., Czarnecki, W.M., Dudzik, A., Huang, A., Georgiev, P., Powell, R., Ewalds, T., Horgan, D., Kroiss, M., Danihelka, I., Agapiou, J., Oh, J., Dalibard, V., Choi, D., Sifre, L., Sulsky, Y., Vezhnevets, S., Molloy, J., Cai, T., Budden, D., Paine, T., Gulcehre, C., Wang, Z., Pfaff, T., Pohlen, T., Wu, Y., Yogatama, D., Cohen, J., McKinney, K., Smith, O., Schaul, T., Lillicrap, T., Apps, C., Kavukcuoglu, K., Hassabis, D., Silver, D.: AlphaStar: Mastering the Real-Time Strategy Game StarCraft II. https://deepmind.com/blog/ alphastar-mastering-real-time-strategy-game-starcraft-ii/ (2019)"
+        },
+        {
+          "title": "Reinforcement learning in robotics: A survey",
+          "citation": "Kober, J., Bagnell, J.A., Peters, J.: Reinforcement learning in robotics: A survey. International Journal of Robotics Research 32 (11), 1238-1274 (2013)"
+        },
+        {
+          "title": "Continuous control with deep reinforcement learning",
+          "citation": "Lillicrap, T.P ., Hunt, J.J., Pritzel, A., Heess, N., Erez, T., Tassa, Y., Silver, D., Wierstra, D.: Continuous control with deep reinforcement learning. In: International Conference on Learning Representations (2016)"
+        },
+        {
+          "title": "Libratus: the superhuman ai for no-limit Poker",
+          "citation": "Brown, N., Sandholm, T.: Libratus: the superhuman ai for no-limit Poker. In: International Joint Conference on Artificial Intelligence, pp. 5226-5228 (2017)"
+        },
+        {
+          "title": "Superhuman AI for multiplayer Poker",
+          "citation": "Brown, N., Sandholm, T.: Superhuman AI for multiplayer Poker. Science 365 , 885-890 (2019)"
+        },
+        {
+          "title": "Safe, multi-agent, reinforcement learning for autonomous driving",
+          "citation": "Shalev-Shwartz, S., Shammah, S., Shashua, A.: Safe, multi-agent, reinforcement learning for autonomous driving. arXiv preprint arXiv:1610.03295 (2016)"
+        },
+        {
+          "title": "Human-level control through deep reinforcement learning",
+          "citation": "Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A.A., Veness, J., Bellemare, M.G., Graves, A., Riedmiller, M., Fidjeland, A.K., Ostrovski, G., et al.: Human-level control through deep reinforcement learning. Nature 518 (7540), 529-533 (2015)"
+        },
+        {
+          "title": "A comprehensive survey of multiagent reinforcement learning",
+          "citation": "Busoniu, L., Babuska, R., De Schutter, B., et al.: A comprehensive survey of multiagent reinforcement learning. IEEE Transactions on Systems, Man, and Cybernetics, Part C 38 (2), 156-172 (2008)"
+        },
+        {
+          "title": "A cooperative multi-agent transportation management and route guidance system",
+          "citation": "Adler, J.L., Blue, V.J.: A cooperative multi-agent transportation management and route guidance system. Transportation Research Part C: Emerging Technologies 10 (5), 433-454 (2002)"
+        },
+        {
+          "title": "Towards smart factory for industry 4.0: A self-organized multi-agent system with big data based feedback and coordination",
+          "citation": "Wang, S., Wan, J., Zhang, D., Li, D., Zhang, C.: Towards smart factory for industry 4.0: A self-organized multi-agent system with big data based feedback and coordination. Computer Networks 101 , 158-168 (2016)"
+        },
+        {
+          "title": "Stock trading system using reinforcement learning with cooperative agents",
+          "citation": "O, J., Lee, J.W., Zhang, B.T.: Stock trading system using reinforcement learning with cooperative agents. In: International Conference on Machine Learning, pp. 451-458 (2002)"
+        },
+        {
+          "title": "A multiagent approach to Q -learning for daily stock trading",
+          "citation": "Lee, J.W., Park, J., Jangmin, O., Lee, J., Hong, E.: A multiagent approach to Q -learning for daily stock trading. IEEE Transactions on Systems, Man, and Cybernetics-Part A: Systems and Humans 37 (6), 864-877 (2007)"
+        },
+        {
+          "title": "Coverage control for mobile sensing networks",
+          "citation": "Cortes, J., Martinez, S., Karatas, T., Bullo, F.: Coverage control for mobile sensing networks. IEEE Transactions on Robotics and Automation 20 (2), 243-255 (2004)"
+        },
+        {
+          "title": "Distributed learning and cooperative control for multi-agent systems",
+          "citation": "Choi, J., Oh, S., Horowitz, R.: Distributed learning and cooperative control for multi-agent systems. Automatica 45 (12), 2802-2814 (2009)"
+        },
+        {
+          "title": "The theory of social functions: Challenges for computational social science and multi-agent learning",
+          "citation": "Castelfranchi, C.: The theory of social functions: Challenges for computational social science and multi-agent learning. Cognitive Systems Research 2 (1), 5-38 (2001)"
+        },
+        {
+          "title": "Multi-agent reinforcement learning in sequential social dilemmas",
+          "citation": "Leibo, J.Z., Zambaldi, V., Lanctot, M., Marecki, J., Graepel, T.: Multi-agent reinforcement learning in sequential social dilemmas. In: International Conference on Autonomous Agents and Multi-Agent Systems, pp. 464-473 (2017)"
+        },
+        {
+          "title": "A survey and critique of multiagent deep reinforcement learning",
+          "citation": "Hernandez-Leal, P., Kartal, B., Taylor, M.E.: A survey and critique of multiagent deep reinforcement learning. arXiv preprint arXiv:1810.05587 (2018)"
+        },
+        {
+          "title": "A comprehensive survey of multiagent reinforcement learning",
+          "citation": "Busoniu, L., Babuska, R., De Schutter, B., et al.: A comprehensive survey of multiagent reinforcement learning. IEEE Transactions on Systems, Man, and Cybernetics, Part C 38 (2), 156-172 (2008)"
+        },
+        {
+          "title": "Learning to communicate with deep multi-agent reinforcement learning",
+          "citation": "Foerster, J., Assael, Y.M., de Freitas, N., Whiteson, S.: Learning to communicate with deep multi-agent reinforcement learning. In: Advances in Neural Information Processing Systems, pp. 2137-2145 (2016)"
+        },
+        {
+          "title": "Dynamic potential games with constraints: Fundamentals and applications in communications",
+          "citation": "Zazo, S., Macua, S.V., S´ anchez-Fern´ andez, M., Zazo, J.: Dynamic potential games with constraints: Fundamentals and applications in communications. IEEE Transactions on Signal Processing 64 (14), 3806-3821 (2016)"
+        },
+        {
+          "title": "Fully decentralized multi-agent reinforcement learning with networked agents",
+          "citation": "Zhang, K., Yang, Z., Liu, H., Zhang, T., Bas ¸ar, T.: Fully decentralized multi-agent reinforcement learning with networked agents. In: International Conference on Machine Learning, pp. 5867-5876 (2018)"
+        },
+        {
+          "title": "Reinforcement learning in stationary mean-field games",
+          "citation": "Subramanian, J., Mahajan, A.: Reinforcement learning in stationary mean-field games. In: International Conference on Autonomous Agents and Multi-Agent Systems, pp. 251-259 (2019)"
+        },
+        {
+          "title": "Deep reinforcement learning from self-play in imperfect-information games",
+          "citation": "Heinrich, J., Silver, D.: Deep reinforcement learning from self-play in imperfect-information games. arXiv preprint arXiv:1603.01121 (2016)"
+        },
+        {
+          "title": "Multi-agent actor-critic for mixed cooperative-competitive environments",
+          "citation": "Lowe, R., Wu, Y., Tamar, A., Harb, J., Abbeel, P ., Mordatch, I.: Multi-agent actor-critic for mixed cooperative-competitive environments. In: Advances in Neural Information Processing Systems, pp. 6379-6390 (2017)"
+        },
+        {
+          "title": "Counterfactual multi-agent policy gradients",
+          "citation": "Foerster, J., Farquhar, G., Afouras, T., Nardelli, N., Whiteson, S.: Counterfactual multi-agent policy gradients. arXiv preprint arXiv:1705.08926 (2017)"
+        },
+        {
+          "title": "Cooperative multi-agent control using deep reinforcement learning",
+          "citation": "Gupta, J.K., Egorov, M., Kochenderfer, M.: Cooperative multi-agent control using deep reinforcement learning. In: International Conference on Autonomous Agents and Multi-Agent Systems, pp. 66-83 (2017)"
+        },
+        {
+          "title": "Deep decentralized multi-task multiagent reinforcement learning under partial observability",
+          "citation": "Omidshafiei, S., Pazis, J., Amato, C., How, J.P ., Vian, J.: Deep decentralized multi-task multiagent reinforcement learning under partial observability. In: International Conference on Machine Learning, pp. 2681-2690 (2017)"
+        },
+        {
+          "title": "Neural fictitious self-play in imperfect information games with many players",
+          "citation": "Kawamura, K., Mizukami, N., Tsuruoka, Y.: Neural fictitious self-play in imperfect information games with many players. In: Workshop on Computer Games, pp. 61-74 (2017)"
+        },
+        {
+          "title": "Monte Carlo neural fictitious self-play: Approach to approximate Nash equilibrium of imperfect-information games",
+          "citation": "Zhang, L., Wang, W., Li, S., Pan, G.: Monte Carlo neural fictitious self-play: Approach to approximate Nash equilibrium of imperfect-information games. arXiv preprint arXiv:1903.09569 (2019)"
+        },
+        {
+          "title": "On the convergence of gradient-based learning in continuous games",
+          "citation": "Mazumdar, E., Ratliff, L.J.: On the convergence of gradient-based learning in continuous games. arXiv preprint arXiv:1804.05464 (2018)"
+        },
+        {
+          "title": "Minmax optimization: Stable limit points of gradient descent ascent are locally optimal",
+          "citation": "Jin, C., Netrapalli, P ., Jordan, M.I.: Minmax optimization: Stable limit points of gradient descent ascent are locally optimal. arXiv preprint arXiv:1902.00618 (2019)"
+        },
+        {
+          "title": "Policy optimization provably converges to Nash equilibria in zero-sum linear quadratic games",
+          "citation": "Zhang, K., Yang, Z., Bas ¸ar, T.: Policy optimization provably converges to Nash equilibria in zero-sum linear quadratic games. In: Advances in Neural Information Processing Systems (2019)"
+        },
+        {
+          "title": "Solving discounted stochastic two-player games with near-optimal time and sample complexity",
+          "citation": "Sidford, A., Wang, M., Yang, L.F., Ye, Y.: Solving discounted stochastic two-player games with near-optimal time and sample complexity. arXiv preprint arXiv:1908.11071 (2019)"
+        },
+        {
+          "title": "A Concise Introduction to Decentralized POMDPs",
+          "citation": "Oliehoek, F.A., Amato, C.: A Concise Introduction to Decentralized POMDPs, vol. 1. Springer (2016)"
+        },
+        {
+          "title": "Decentralized Q-learning for stochastic teams and games",
+          "citation": "Arslan, G., Y¨ uksel, S.: Decentralized Q-learning for stochastic teams and games. IEEE Transactions on Automatic Control 62 (4), 1545-1558 (2017)"
+        },
+        {
+          "title": "Learning team-optimality for decentralized stochastic control and dynamic games",
+          "citation": "Yongacoglu, B., Arslan, G., Y¨ uksel, S.: Learning team-optimality for decentralized stochastic control and dynamic games. arXiv preprint arXiv:1903.05812 (2019)"
+        },
+        {
+          "title": "Online planning for decentralized stochastic control with partial history sharing",
+          "citation": "Zhang, K., Miehling, E., Bas ¸ar, T.: Online planning for decentralized stochastic control with partial history sharing. In: IEEE American Control Conference, pp. 167-172 (2019)"
+        },
+        {
+          "title": "A comprehensive survey of multiagent reinforcement learning",
+          "citation": "Busoniu, L., Babuska, R., De Schutter, B., et al.: A comprehensive survey of multiagent reinforcement learning. IEEE Transactions on Systems, Man, and Cybernetics, Part C 38 (2), 156-172 (2008)"
+        },
+        {
+          "title": "A survey of learning in multiagent environments: Dealing with non-stationarity",
+          "citation": "Hernandez-Leal, P., Kaisers, M., Baarslag, T., de Cote, E.M.: A survey of learning in multiagent environments: Dealing with non-stationarity. arXiv preprint arXiv:1707.09183 (2017)"
+        },
+        {
+          "title": "A survey and critique of multiagent deep reinforcement learning",
+          "citation": "Hernandez-Leal, P., Kartal, B., Taylor, M.E.: A survey and critique of multiagent deep reinforcement learning. arXiv preprint arXiv:1810.05587 (2018)"
+        },
+        {
+          "title": "Deep reinforcement learning for multiagent systems: A review of challenges, solutions and applications",
+          "citation": "Nguyen, T.T., Nguyen, N.D., Nahavandi, S.: Deep reinforcement learning for multiagent systems: A review of challenges, solutions and applications. arXiv preprint arXiv:1812.11794 (2018)"
+        },
+        {
+          "title": "A review of cooperative multi-agent deep reinforcement learning",
+          "citation": "Oroojlooy Jadid, A., Hajinezhad, D.: A review of cooperative multi-agent deep reinforcement learning. arXiv preprint arXiv:1908.03963 (2019)"
+        },
+        {
+          "title": "A survey of learning in multiagent environments: Dealing with non-stationarity",
+          "citation": "Hernandez-Leal, P., Kaisers, M., Baarslag, T., de Cote, E.M.: A survey of learning in multiagent environments: Dealing with non-stationarity. arXiv preprint arXiv:1707.09183 (2017)"
+        },
+        {
+          "title": "A survey and critique of multiagent deep reinforcement learning",
+          "citation": "Hernandez-Leal, P., Kartal, B., Taylor, M.E.: A survey and critique of multiagent deep reinforcement learning. arXiv preprint arXiv:1810.05587 (2018)"
+        },
+        {
+          "title": "Deep reinforcement learning for multiagent systems: A review of challenges, solutions and applications",
+          "citation": "Nguyen, T.T., Nguyen, N.D., Nahavandi, S.: Deep reinforcement learning for multiagent systems: A review of challenges, solutions and applications. arXiv preprint arXiv:1812.11794 (2018)"
+        },
+        {
+          "title": "A review of cooperative multi-agent deep reinforcement learning",
+          "citation": "Oroojlooy Jadid, A., Hajinezhad, D.: A review of cooperative multi-agent deep reinforcement learning. arXiv preprint arXiv:1908.03963 (2019)"
+        },
+        {
+          "title": "A comprehensive survey of multiagent reinforcement learning",
+          "citation": "Busoniu, L., Babuska, R., De Schutter, B., et al.: A comprehensive survey of multiagent reinforcement learning. IEEE Transactions on Systems, Man, and Cybernetics, Part C 38 (2), 156-172 (2008)"
+        },
+        {
+          "title": "A survey of learning in multiagent environments: Dealing with non-stationarity",
+          "citation": "Hernandez-Leal, P., Kaisers, M., Baarslag, T., de Cote, E.M.: A survey of learning in multiagent environments: Dealing with non-stationarity. arXiv preprint arXiv:1707.09183 (2017)"
+        },
+        {
+          "title": "A survey and critique of multiagent deep reinforcement learning",
+          "citation": "Hernandez-Leal, P., Kartal, B., Taylor, M.E.: A survey and critique of multiagent deep reinforcement learning. arXiv preprint arXiv:1810.05587 (2018)"
+        },
+        {
+          "title": "Fully decentralized multi-agent reinforcement learning with networked agents",
+          "citation": "Zhang, K., Yang, Z., Liu, H., Zhang, T., Bas ¸ar, T.: Fully decentralized multi-agent reinforcement learning with networked agents. In: International Conference on Machine Learning, pp. 5867-5876 (2018)"
+        },
+        {
+          "title": "Networked multi-agent reinforcement learning in continuous spaces",
+          "citation": "Zhang, K., Yang, Z., Bas ¸ar, T.: Networked multi-agent reinforcement learning in continuous spaces. In: IEEE Conference on Decision and Control, pp. 2771-2776 (2018)"
+        },
+        {
+          "title": "Finite-sample analyses for fully decentralized multi-agent reinforcement learning",
+          "citation": "Zhang, K., Yang, Z., Liu, H., Zhang, T., Bas ¸ar, T.: Finite-sample analyses for fully decentralized multi-agent reinforcement learning. arXiv preprint arXiv:1812.02783 (2018)"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "Background",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Single-Agent RL",
+          "citations": [
+            {
+              "title": "State of the art-A survey of partially observable Markov decision processes: Theory, models, and algorithms",
+              "citation": "Monahan, G.E.: State of the art-A survey of partially observable Markov decision processes: Theory, models, and algorithms. Management Science 28 (1), 1-16 (1982)"
+            },
+            {
+              "title": "Exact and approximate algorithms for partially observable Markov decision processes",
+              "citation": "Cassandra, A.R.: Exact and approximate algorithms for partially observable Markov decision processes. Brown University (1998)"
+            },
+            {
+              "title": "Dynamic Programming and Optimal Control",
+              "citation": "Bertsekas, D.P.: Dynamic Programming and Optimal Control, vol. 1. Athena Scientific Belmont, MA (2005)"
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "2.1.1",
+              "sec_title": "Value-Based Methods",
+              "citations": [
+                {
+                  "title": "Q-learning",
+                  "citation": "Watkins, C.J., Dayan, P .: Q-learning. Machine Learning 8 (3-4), 279-292 (1992)"
+                },
+                {
+                  "title": "Nash Q-learning for general-sum stochastic games",
+                  "citation": "Hu, J., Wellman, M.P.: Nash Q-learning for general-sum stochastic games. Journal of Machine Learning Research 4 (Nov), 1039-1069 (2003)"
+                },
+                {
+                  "title": "Markov games as a framework for multi-agent reinforcement learning",
+                  "citation": "Littman, M.L.: Markov games as a framework for multi-agent reinforcement learning. In: International Conference on Machine Learning, pp. 157-163 (1994)"
+                },
+                {
+                  "title": "Nash Q-learning for general-sum stochastic games",
+                  "citation": "Hu, J., Wellman, M.P.: Nash Q-learning for general-sum stochastic games. Journal of Machine Learning Research 4 (Nov), 1039-1069 (2003)"
+                },
+                {
+                  "title": "Friend-or-Foe Q-learning in general-sum games",
+                  "citation": "Littman, M.L.: Friend-or-Foe Q-learning in general-sum games. In: International Conference on Machine Learning, pp. 322-328 (2001)"
+                },
+                {
+                  "title": "Correlated Q-learning",
+                  "citation": "Greenwald, A., Hall, K., Serrano, R.: Correlated Q-learning. In: International Conference on Machine Learning, pp. 242-249 (2003)"
+                },
+                {
+                  "title": "Subjectivity and correlation in randomized strategies",
+                  "citation": "Aumann, R.J.: Subjectivity and correlation in randomized strategies. Journal of Mathematical Economics 1 (1), 67-96 (1974)"
+                },
+                {
+                  "title": "Learning Nash Equilibrium for General-Sum Markov Games from Batch Data",
+                  "citation": "Perolat, J., Strub, F., Piot, B., Pietquin, O.: Learning Nash Equilibrium for General-Sum Markov Games from Batch Data. In: International Conference on Artificial Intelligence and Statistics, pp. 232-241 (2017)"
+                },
+                {
+                  "title": "Finite-sample analysis of Bellman residual minimization",
+                  "citation": "Maillard, O.A., Munos, R., Lazaric, A., Ghavamzadeh, M.: Finite-sample analysis of Bellman residual minimization. In: Asian Conference on Machine Learning, pp. 299-314 (2010)"
+                },
+                {
+                  "title": "Finite-sample analyses for fully decentralized multi-agent reinforcement learning",
+                  "citation": "Zhang, K., Yang, Z., Liu, H., Zhang, T., Bas ¸ar, T.: Finite-sample analyses for fully decentralized multi-agent reinforcement learning. arXiv preprint arXiv:1812.02783 (2018)"
+                },
+                {
+                  "title": "Multi-agent reinforcement learning: Independent vs. cooperative agents",
+                  "citation": "Tan, M.: Multi-agent reinforcement learning: Independent vs. cooperative agents. In: International Conference on Machine Learning, pp. 330-337 (1993)"
+                },
+                {
+                  "title": "Decentralized Q-learning for stochastic teams and games",
+                  "citation": "Arslan, G., Y¨ uksel, S.: Decentralized Q-learning for stochastic teams and games. IEEE Transactions on Automatic Control 62 (4), 1545-1558 (2017)"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.2",
+              "sec_title": "Policy-Based Methods",
+              "citations": [
+                {
+                  "title": "On the convergence of gradient-based learning in continuous games",
+                  "citation": "Mazumdar, E., Ratliff, L.J.: On the convergence of gradient-based learning in continuous games. arXiv preprint arXiv:1804.05464 (2018)"
+                },
+                {
+                  "title": "The mechanics of n-player differentiable games",
+                  "citation": "Balduzzi, D., Racaniere, S., Martens, J., Foerster, J., Tuyls, K., Graepel, T.: The mechanics of n-player differentiable games. In: International Conference on Machine Learning, pp. 363-372 (2018)"
+                },
+                {
+                  "title": "Differentiable game mechanics",
+                  "citation": "Letcher, A., Balduzzi, D., Racani` ere, S., Martens, J., Foerster, J.N., Tuyls, K., Graepel, T.: Differentiable game mechanics. Journal of Machine Learning Research 20 (84), 1-40 (2019)"
+                },
+                {
+                  "title": "Convergence analysis of gradient-based learning with non-uniform learning rates in non-cooperative multi-agent settings",
+                  "citation": "Chasnov, B., Ratliff, L.J., Mazumdar, E., Burden, S.A.: Convergence analysis of gradientbased learning with non-uniform learning rates in non-cooperative multi-agent settings. arXiv preprint arXiv:1906.00731 (2019)"
+                },
+                {
+                  "title": "Convergence analysis of gradient-based learning with non-uniform learning rates in non-cooperative multi-agent settings",
+                  "citation": "Chasnov, B., Ratliff, L.J., Mazumdar, E., Burden, S.A.: Convergence analysis of gradientbased learning with non-uniform learning rates in non-cooperative multi-agent settings. arXiv preprint arXiv:1906.00731 (2019)"
+                },
+                {
+                  "title": "Convergence of learning dynamics in Stackelberg games",
+                  "citation": "Fiez, T., Chasnov, B., Ratliff, L.J.: Convergence of learning dynamics in Stackelberg games. arXiv preprint arXiv:1906.01217 (2019)"
+                },
+                {
+                  "title": "Policy-gradient algorithms have no guarantees of convergence in continuous action and state multi-agent settings",
+                  "citation": "Mazumdar, E., Ratliff, L.J., Jordan, M.I., Sastry, S.S.: Policy-gradient algorithms have no guarantees of convergence in continuous action and state multi-agent settings. arXiv preprint arXiv:1907.03712 (2019)"
+                },
+                {
+                  "title": "A simple adaptive procedure leading to correlated equilibrium",
+                  "citation": "Hart, S., Mas-Colell, A.: A simple adaptive procedure leading to correlated equilibrium. Econometrica 68 (5), 1127-1150 (2000)"
+                },
+                {
+                  "title": "A general class of adaptive strategies",
+                  "citation": "Hart, S., Mas-Colell, A.: A general class of adaptive strategies. Journal of Economic Theory 98 (1), 26-54 (2001)"
+                },
+                {
+                  "title": "Uncoupled dynamics do not lead to Nash equilibrium",
+                  "citation": "Hart, S., Mas-Colell, A.: Uncoupled dynamics do not lead to Nash equilibrium. American Economic Review 93 (5), 1830-1836 (2003)"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Multi-Agent RL Framework",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "2.2.1",
+              "sec_title": "Markov/Stochastic Games",
+              "citations": [
+                {
+                  "title": "Stochastic games",
+                  "citation": "Shapley, L.S.: Stochastic games. Proceedings of the National Academy of Sciences 39 (10), 1095-1100 (1953)"
+                },
+                {
+                  "title": "Markov games as a framework for multi-agent reinforcement learning",
+                  "citation": "Littman, M.L.: Markov games as a framework for multi-agent reinforcement learning. In: International Conference on Machine Learning, pp. 157-163 (1994)"
+                },
+                {
+                  "title": "Competitive Markov Decision Processes",
+                  "citation": "Filar, J., Vrieze, K.: Competitive Markov Decision Processes. Springer Science &amp; Business Media (2012)"
+                },
+                {
+                  "title": "Dynamic Noncooperative Game Theory",
+                  "citation": "Bas ¸ar, T., Olsder, G.J.: Dynamic Noncooperative Game Theory, vol. 23. SIAM (1999)"
+                },
+                {
+                  "title": "Competitive Markov Decision Processes",
+                  "citation": "Filar, J., Vrieze, K.: Competitive Markov Decision Processes. Springer Science &amp; Business Media (2012)"
+                },
+                {
+                  "title": "Competitive Markov Decision Processes",
+                  "citation": "Filar, J., Vrieze, K.: Competitive Markov Decision Processes. Springer Science &amp; Business Media (2012)"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.2",
+              "sec_title": "Extensive-Form Games",
+              "citations": [
+                {
+                  "title": "A Concise Introduction to Decentralized POMDPs",
+                  "citation": "Oliehoek, F.A., Amato, C.: A Concise Introduction to Decentralized POMDPs, vol. 1. Springer (2016)"
+                },
+                {
+                  "title": "The complexity of decentralized control of Markov decision processes",
+                  "citation": "Bernstein, D.S., Givan, R., Immerman, N., Zilberstein, S.: The complexity of decentralized control of Markov decision processes. Mathematics of Operations Research 27 (4), 819-840 (2002)"
+                },
+                {
+                  "title": "A Course in Game Theory",
+                  "citation": "Osborne, M.J., Rubinstein, A.: A Course in Game Theory. MIT Press (1994)"
+                },
+                {
+                  "title": "Multiagent Systems: Algorithmic, Game-theoretic, and Logical Foundations",
+                  "citation": "Shoham, Y., Leyton-Brown, K.: Multiagent Systems: Algorithmic, Game-theoretic, and Logical Foundations. Cambridge University Press (2008)"
+                },
+                {
+                  "title": "The complexity of two-person zero-sum games in extensive form",
+                  "citation": "Koller, D., Megiddo, N.: The complexity of two-person zero-sum games in extensive form. Games and Economic Behavior 4 (4), 528-552 (1992)"
+                },
+                {
+                  "title": "The complexity of two-person zero-sum games in extensive form",
+                  "citation": "Koller, D., Megiddo, N.: The complexity of two-person zero-sum games in extensive form. Games and Economic Behavior 4 (4), 528-552 (1992)"
+                },
+                {
+                  "title": "Extensive games and the problem op information",
+                  "citation": "Kuhn, H.: Extensive games and the problem op information. Contributions to the Theory of Games 2 , 193-216 (1953)"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "Challenges in MARL Theory",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Non-Unique Learning Goals",
+          "citations": [
+            {
+              "title": "Multi-agent reinforcement learning: A critical survey",
+              "citation": "Shoham, Y., Powers, R., Grenager, T.: Multi-agent reinforcement learning: A critical survey. Technical Report (2003)"
+            },
+            {
+              "title": "Multi-agent reinforcement learning: A critical survey",
+              "citation": "Shoham, Y., Powers, R., Grenager, T.: Multi-agent reinforcement learning: A critical survey. Technical Report (2003)"
+            },
+            {
+              "title": "Multiagent Systems: Algorithmic, Game-theoretic, and Logical Foundations",
+              "citation": "Shoham, Y., Leyton-Brown, K.: Multiagent Systems: Algorithmic, Game-theoretic, and Logical Foundations. Cambridge University Press (2008)"
+            },
+            {
+              "title": "Multi-agent reinforcement learning: A critical survey",
+              "citation": "Shoham, Y., Powers, R., Grenager, T.: Multi-agent reinforcement learning: A critical survey. Technical Report (2003)"
+            },
+            {
+              "title": "Zinkevich, M., Greenwald, A., Littman, M.L.: Cyclic equilibria in Markov games",
+              "citation": "Zinkevich, M., Greenwald, A., Littman, M.L.: Cyclic equilibria in Markov games. In: Advances in Neural Information Processing Systems, pp. 1641-1648 (2006)"
+            },
+            {
+              "title": "Rational and convergent learning in stochastic games",
+              "citation": "Bowling, M., Veloso, M.: Rational and convergent learning in stochastic games. In: International Joint Conference on Artificial Intelligence, vol. 17, pp. 1021-1026 (2001)"
+            },
+            {
+              "title": "Multiagent learning using a variable learning rate",
+              "citation": "Bowling, M., Veloso, M.: Multiagent learning using a variable learning rate. Artificial Intelligence 136 (2), 215-250 (2002)"
+            },
+            {
+              "title": "Rational and convergent learning in stochastic games",
+              "citation": "Bowling, M., Veloso, M.: Rational and convergent learning in stochastic games. In: International Joint Conference on Artificial Intelligence, vol. 17, pp. 1021-1026 (2001)"
+            },
+            {
+              "title": "Convergence and no-regret in multiagent learning",
+              "citation": "Bowling, M.: Convergence and no-regret in multiagent learning. In: Advances in Neural Information Processing Systems, pp. 209-216 (2005)"
+            },
+            {
+              "title": "Learning, regret minimization, and equilibria",
+              "citation": "Blum, A., Mansour, Y.: Learning, regret minimization, and equilibria. Algorithmic Game Theory pp. 79-102 (2007)"
+            },
+            {
+              "title": "A reinforcement procedure leading to correlated equilibrium",
+              "citation": "Hart, S., Mas-Colell, A.: A reinforcement procedure leading to correlated equilibrium. In: Economics Essays, pp. 181-200. Springer (2001)"
+            },
+            {
+              "title": "Convergence and no-regret in multiagent learning",
+              "citation": "Bowling, M.: Convergence and no-regret in multiagent learning. In: Advances in Neural Information Processing Systems, pp. 209-216 (2005)"
+            },
+            {
+              "title": "Regret minimization in games with incomplete information",
+              "citation": "Zinkevich, M., Johanson, M., Bowling, M., Piccione, C.: Regret minimization in games with incomplete information. In: Advances in Neural Information Processing Systems, pp. 17291736 (2008)"
+            },
+            {
+              "title": "Learning of communication codes in multi-agent reinforcement learning problem",
+              "citation": "Kasai, T., Tenmoto, H., Kamiya, A.: Learning of communication codes in multi-agent reinforcement learning problem. In: IEEE Conference on Soft Computing in Industrial Applications, pp. 1-6 (2008)"
+            },
+            {
+              "title": "Learning to communicate with deep multi-agent reinforcement learning",
+              "citation": "Foerster, J., Assael, Y.M., de Freitas, N., Whiteson, S.: Learning to communicate with deep multi-agent reinforcement learning. In: Advances in Neural Information Processing Systems, pp. 2137-2145 (2016)"
+            },
+            {
+              "title": "Learning to schedule communication in multi-agent reinforcement learning",
+              "citation": "Kim, D., Moon, S., Hostallero, D., Kang, W.J., Lee, T., Son, K., Yi, Y.: Learning to schedule communication in multi-agent reinforcement learning. In: International Conference on Learning Representations (2019)"
+            },
+            {
+              "title": "Communication-efficient distributed reinforcement learning",
+              "citation": "Chen, T., Zhang, K., Giannakis, G.B., Bas ¸ar, T.: Communication-efficient distributed reinforcement learning. arXiv preprint arXiv:1812.03239 (2018)"
+            },
+            {
+              "title": "A communication-efficient multi-agent actor-critic algorithm for distributed reinforcement learning",
+              "citation": "Lin, Y., Zhang, K., Yang, Z., Wang, Z., Bas ¸ar, T., Sandhu, R., Liu, J.: A communicationefficient multi-agent actor-critic algorithm for distributed reinforcement learning. In: IEEE Conference on Decision and Control (2019)"
+            },
+            {
+              "title": "A communication efficient hierarchical distributed optimization algorithm for multi-agent reinforcement learning",
+              "citation": "Ren, J., Haupt, J.: A communication efficient hierarchical distributed optimization algorithm for multi-agent reinforcement learning. In: Real-world Sequential Decision Making Workshop at International Conference on Machine Learning (2019)"
+            },
+            {
+              "title": "Message-dropout: An efficient training method for multi-agent deep reinforcement learning",
+              "citation": "Kim, W., Cho, M., Sung, Y.: Message-dropout: An efficient training method for multi-agent deep reinforcement learning. In: AAAI Conference on Artificial Intelligence (2019)"
+            },
+            {
+              "title": "Opponent modeling in deep reinforcement learning",
+              "citation": "He, H., Boyd-Graber, J., Kwok, K., Daum´ e III, H.: Opponent modeling in deep reinforcement learning. In: International Conference on Machine Learning, pp. 1804-1813 (2016)"
+            },
+            {
+              "title": "Multi-agent actor-critic for mixed cooperative-competitive environments",
+              "citation": "Lowe, R., Wu, Y., Tamar, A., Harb, J., Abbeel, P ., Mordatch, I.: Multi-agent actor-critic for mixed cooperative-competitive environments. In: Advances in Neural Information Processing Systems, pp. 6379-6390 (2017)"
+            },
+            {
+              "title": "Learning policy representations in multiagent systems",
+              "citation": "Grover, A., Al-Shedivat, M., Gupta, J., Burda, Y., Edwards, H.: Learning policy representations in multiagent systems. In: International Conference on Machine Learning, pp. 18021811 (2018)"
+            },
+            {
+              "title": "Adversarial policy gradient for alternating Markov games",
+              "citation": "Gao, C., Mueller, M., Hayward, R.: Adversarial policy gradient for alternating Markov games. In: Workshop at International Conference on Learning Representations (2018)"
+            },
+            {
+              "title": "Robust multi-agent reinforcement learning via minimax deep deterministic policy gradient",
+              "citation": "Li, S., Wu, Y., Cui, X., Dong, H., Fang, F., Russell, S.: Robust multi-agent reinforcement learning via minimax deep deterministic policy gradient. In: AAAI Conference on Artificial Intelligence (2019)"
+            },
+            {
+              "title": "Non-cooperative inverse reinforcement learning",
+              "citation": "Zhang, X., Zhang, K., Miehling, E., Basar, T.: Non-cooperative inverse reinforcement learning. In: Advances in Neural Information Processing Systems, pp. 9482-9493 (2019)"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Non-Stationarity",
+          "citations": [
+            {
+              "title": "Multi-agent reinforcement learning: Independent vs. cooperative agents",
+              "citation": "Tan, M.: Multi-agent reinforcement learning: Independent vs. cooperative agents. In: International Conference on Machine Learning, pp. 330-337 (1993)"
+            },
+            {
+              "title": "The dynamics of reinforcement learning in cooperative multiagent systems",
+              "citation": "Claus, C., Boutilier, C.: The dynamics of reinforcement learning in cooperative multiagent systems. AAAI Conference on Artificial Intelligence 1998 (746-752), 2 (1998)"
+            },
+            {
+              "title": "Decentralized Q-learning for stochastic teams and games",
+              "citation": "Arslan, G., Y¨ uksel, S.: Decentralized Q-learning for stochastic teams and games. IEEE Transactions on Automatic Control 62 (4), 1545-1558 (2017)"
+            },
+            {
+              "title": "Learning team-optimality for decentralized stochastic control and dynamic games",
+              "citation": "Yongacoglu, B., Arslan, G., Y¨ uksel, S.: Learning team-optimality for decentralized stochastic control and dynamic games. arXiv preprint arXiv:1903.05812 (2019)"
+            },
+            {
+              "title": "Independent reinforcement learners in cooperative Markov games: A survey regarding coordination problems",
+              "citation": "Matignon, L., Laurent, G.J., Le Fort-Piat, N.: Independent reinforcement learners in cooperative Markov games: A survey regarding coordination problems. The Knowledge Engineering Review 27 (1), 1-31 (2012)"
+            },
+            {
+              "title": "Stabilising experience replay for deep multi-agent reinforcement learning",
+              "citation": "Foerster, J., Nardelli, N., Farquhar, G., Torr, P ., Kohli, P ., Whiteson, S., et al.: Stabilising experience replay for deep multi-agent reinforcement learning. In: International Conference of Machine Learning, pp. 1146-1155 (2017)"
+            },
+            {
+              "title": "A comprehensive survey of multiagent reinforcement learning",
+              "citation": "Busoniu, L., Babuska, R., De Schutter, B., et al.: A comprehensive survey of multiagent reinforcement learning. IEEE Transactions on Systems, Man, and Cybernetics, Part C 38 (2), 156-172 (2008)"
+            },
+            {
+              "title": "Multiagent learning: Basics, challenges, and prospects",
+              "citation": "Tuyls, K., Weiss, G.: Multiagent learning: Basics, challenges, and prospects. AI Magazine 33 (3), 41-41 (2012)"
+            },
+            {
+              "title": "A survey of learning in multiagent environments: Dealing with non-stationarity",
+              "citation": "Hernandez-Leal, P., Kaisers, M., Baarslag, T., de Cote, E.M.: A survey of learning in multiagent environments: Dealing with non-stationarity. arXiv preprint arXiv:1707.09183 (2017)"
+            },
+            {
+              "title": "A survey of learning in multiagent environments: Dealing with non-stationarity",
+              "citation": "Hernandez-Leal, P., Kaisers, M., Baarslag, T., de Cote, E.M.: A survey of learning in multiagent environments: Dealing with non-stationarity. arXiv preprint arXiv:1707.09183 (2017)"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "Scalability Issue",
+          "citations": [
+            {
+              "title": "A survey and critique of multiagent deep reinforcement learning",
+              "citation": "Hernandez-Leal, P., Kartal, B., Taylor, M.E.: A survey and critique of multiagent deep reinforcement learning. arXiv preprint arXiv:1810.05587 (2018)"
+            },
+            {
+              "title": "Guestrin, C., Lagoudakis, M., Parr, R.: Coordinated reinforcement learning",
+              "citation": "Guestrin, C., Lagoudakis, M., Parr, R.: Coordinated reinforcement learning. In: International Conference on Machine Learning, pp. 227-234 (2002)"
+            },
+            {
+              "title": "Multiagent planning with factored MDPs",
+              "citation": "Guestrin, C., Koller, D., Parr, R.: Multiagent planning with factored MDPs. In: Advances in Neural Information Processing Systems, pp. 1523-1530 (2002)"
+            },
+            {
+              "title": "Sparse cooperative Q-learning",
+              "citation": "Kok, J.R., Vlassis, N.: Sparse cooperative Q-learning. In: International Conference on Machine learning, pp. 61-69 (2004)"
+            },
+            {
+              "title": "Value-decomposition networks for cooperative multi-agent learning based on team reward",
+              "citation": "Sunehag, P., Lever, G., Gruslys, A., Czarnecki, W.M., Zambaldi, V., Jaderberg, M., Lanctot, M., Sonnerat, N., Leibo, J.Z., Tuyls, K., et al.: Value-decomposition networks for cooperative multi-agent learning based on team reward. In: International Conference on Autonomous Agents and Multi-Agent Systems, pp. 2085-2087 (2018)"
+            },
+            {
+              "title": "QMIX: Monotonic value function factorisation for deep multi-agent reinforcement learning",
+              "citation": "Rashid, T., Samvelyan, M., De Witt, C.S., Farquhar, G., Foerster, J., Whiteson, S.: QMIX: Monotonic value function factorisation for deep multi-agent reinforcement learning. In: International Conference on Machine learning, pp. 681-689 (2018)"
+            },
+            {
+              "title": "Exploiting fast decaying and locality in multi-agent MDP with tree dependence structure",
+              "citation": "Qu, G., Li, N.: Exploiting fast decaying and locality in multi-agent MDP with tree dependence structure. In: IEEE Conference on Decision and Control (2019)"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.4",
+          "sec_title": "Various Information Structures",
+          "citations": [
+            {
+              "title": "Optimal decentralized control of coupled subsystems with control sharing",
+              "citation": "Mahajan, A.: Optimal decentralized control of coupled subsystems with control sharing. IEEE Transactions on Automatic Control 58 (9), 2377-2382 (2013)"
+            },
+            {
+              "title": "Multi-agent reinforcement learning: Independent vs. cooperative agents",
+              "citation": "Tan, M.: Multi-agent reinforcement learning: Independent vs. cooperative agents. In: International Conference on Machine Learning, pp. 330-337 (1993)"
+            },
+            {
+              "title": "Dynamic programming for partially observable stochastic games",
+              "citation": "Hansen, E.A., Bernstein, D.S., Zilberstein, S.: Dynamic programming for partially observable stochastic games. In: AAAI Conference on Artificial Intelligence, pp. 709-715 (2004)"
+            },
+            {
+              "title": "Dec-POMDPs as non-observable MDPs",
+              "citation": "Oliehoek, F.A., Amato, C.: Dec-POMDPs as non-observable MDPs. IAS Technical Report (IAS-UVA-14-01) (2014)"
+            },
+            {
+              "title": "Multi-agent actor-critic for mixed cooperative-competitive environments",
+              "citation": "Lowe, R., Wu, Y., Tamar, A., Harb, J., Abbeel, P ., Mordatch, I.: Multi-agent actor-critic for mixed cooperative-competitive environments. In: Advances in Neural Information Processing Systems, pp. 6379-6390 (2017)"
+            },
+            {
+              "title": "Stabilising experience replay for deep multi-agent reinforcement learning",
+              "citation": "Foerster, J., Nardelli, N., Farquhar, G., Torr, P ., Kohli, P ., Whiteson, S., et al.: Stabilising experience replay for deep multi-agent reinforcement learning. In: International Conference of Machine Learning, pp. 1146-1155 (2017)"
+            },
+            {
+              "title": "Cooperative multi-agent control using deep reinforcement learning",
+              "citation": "Gupta, J.K., Egorov, M., Kochenderfer, M.: Cooperative multi-agent control using deep reinforcement learning. In: International Conference on Autonomous Agents and Multi-Agent Systems, pp. 66-83 (2017)"
+            },
+            {
+              "title": "Counterfactual multiagent policy gradients",
+              "citation": "Foerster, J.N., Farquhar, G., Afouras, T., Nardelli, N., Whiteson, S.: Counterfactual multiagent policy gradients. In: AAAI Conference on Artificial Intelligence (2018)"
+            },
+            {
+              "title": "Learning to act in decentralized partially observable MDPs",
+              "citation": "Dibangoye, J., Buffet, O.: Learning to act in decentralized partially observable MDPs. In: International Conference on Machine Learning, pp. 1233-1242 (2018)"
+            },
+            {
+              "title": "Communication-efficient distributed reinforcement learning",
+              "citation": "Chen, T., Zhang, K., Giannakis, G.B., Bas ¸ar, T.: Communication-efficient distributed reinforcement learning. arXiv preprint arXiv:1812.03239 (2018)"
+            },
+            {
+              "title": "QMIX: Monotonic value function factorisation for deep multi-agent reinforcement learning",
+              "citation": "Rashid, T., Samvelyan, M., De Witt, C.S., Farquhar, G., Foerster, J., Whiteson, S.: QMIX: Monotonic value function factorisation for deep multi-agent reinforcement learning. In: International Conference on Machine learning, pp. 681-689 (2018)"
+            },
+            {
+              "title": "Dynamic programming for partially observable stochastic games",
+              "citation": "Hansen, E.A., Bernstein, D.S., Zilberstein, S.: Dynamic programming for partially observable stochastic games. In: AAAI Conference on Artificial Intelligence, pp. 709-715 (2004)"
+            },
+            {
+              "title": "Dec-POMDPs as non-observable MDPs",
+              "citation": "Oliehoek, F.A., Amato, C.: Dec-POMDPs as non-observable MDPs. IAS Technical Report (IAS-UVA-14-01) (2014)"
+            },
+            {
+              "title": "Multi-agent reinforcement learning as a rehearsal for decentralized planning",
+              "citation": "Kraemer, L., Banerjee, B.: Multi-agent reinforcement learning as a rehearsal for decentralized planning. Neurocomputing 190 , 82-94 (2016)"
+            },
+            {
+              "title": "Multi-agent actor-critic for mixed cooperative-competitive environments",
+              "citation": "Lowe, R., Wu, Y., Tamar, A., Harb, J., Abbeel, P ., Mordatch, I.: Multi-agent actor-critic for mixed cooperative-competitive environments. In: Advances in Neural Information Processing Systems, pp. 6379-6390 (2017)"
+            },
+            {
+              "title": "Stabilising experience replay for deep multi-agent reinforcement learning",
+              "citation": "Foerster, J., Nardelli, N., Farquhar, G., Torr, P ., Kohli, P ., Whiteson, S., et al.: Stabilising experience replay for deep multi-agent reinforcement learning. In: International Conference of Machine Learning, pp. 1146-1155 (2017)"
+            },
+            {
+              "title": "Cooperative multi-agent control using deep reinforcement learning",
+              "citation": "Gupta, J.K., Egorov, M., Kochenderfer, M.: Cooperative multi-agent control using deep reinforcement learning. In: International Conference on Autonomous Agents and Multi-Agent Systems, pp. 66-83 (2017)"
+            },
+            {
+              "title": "Counterfactual multiagent policy gradients",
+              "citation": "Foerster, J.N., Farquhar, G., Afouras, T., Nardelli, N., Whiteson, S.: Counterfactual multiagent policy gradients. In: AAAI Conference on Artificial Intelligence (2018)"
+            },
+            {
+              "title": "Communication-efficient distributed reinforcement learning",
+              "citation": "Chen, T., Zhang, K., Giannakis, G.B., Bas ¸ar, T.: Communication-efficient distributed reinforcement learning. arXiv preprint arXiv:1812.03239 (2018)"
+            },
+            {
+              "title": "QMIX: Monotonic value function factorisation for deep multi-agent reinforcement learning",
+              "citation": "Rashid, T., Samvelyan, M., De Witt, C.S., Farquhar, G., Foerster, J., Whiteson, S.: QMIX: Monotonic value function factorisation for deep multi-agent reinforcement learning. In: International Conference on Machine learning, pp. 681-689 (2018)"
+            },
+            {
+              "title": "QD-learning: A collaborative distributed strategy for multiagent reinforcement learning through consensus + innovations",
+              "citation": "Kar, S., Moura, J.M., Poor, H.V.: QD-learning: A collaborative distributed strategy for multiagent reinforcement learning through consensus + innovations. IEEE Transactions on Signal Processing 61 (7), 1848-1862 (2013)"
+            },
+            {
+              "title": "Distributed policy evaluation under multiple behavior strategies",
+              "citation": "Macua, S.V., Chen, J., Zazo, S., Sayed, A.H.: Distributed policy evaluation under multiple behavior strategies. IEEE Transactions on Automatic Control 60 (5), 1260-1274 (2015)"
+            },
+            {
+              "title": "Diffdac: Distributed actor-critic for average multitask deep reinforcement learning",
+              "citation": "Macua, S.V., Tukiainen, A., Hern´ andez, D.G.O., Baldazo, D., de Cote, E.M., Zazo, S.: Diffdac: Distributed actor-critic for average multitask deep reinforcement learning. arXiv preprint arXiv:1710.10363 (2017)"
+            },
+            {
+              "title": "Fully decentralized multi-agent reinforcement learning with networked agents",
+              "citation": "Zhang, K., Yang, Z., Liu, H., Zhang, T., Bas ¸ar, T.: Fully decentralized multi-agent reinforcement learning with networked agents. In: International Conference on Machine Learning, pp. 5867-5876 (2018)"
+            },
+            {
+              "title": "Networked multi-agent reinforcement learning in continuous spaces",
+              "citation": "Zhang, K., Yang, Z., Bas ¸ar, T.: Networked multi-agent reinforcement learning in continuous spaces. In: IEEE Conference on Decision and Control, pp. 2771-2776 (2018)"
+            },
+            {
+              "title": "Finite-sample analyses for fully decentralized multi-agent reinforcement learning",
+              "citation": "Zhang, K., Yang, Z., Liu, H., Zhang, T., Bas ¸ar, T.: Finite-sample analyses for fully decentralized multi-agent reinforcement learning. arXiv preprint arXiv:1812.02783 (2018)"
+            },
+            {
+              "title": "Primal-dual algorithm for distributed reinforcement learning: Distributed GTD",
+              "citation": "Lee, D., Yoon, H., Hovakimyan, N.: Primal-dual algorithm for distributed reinforcement learning: Distributed GTD. In: IEEE Conference on Decision and Control, pp. 1967-1972 (2018)"
+            },
+            {
+              "title": "Multi-agent reinforcement learning via double averaging primal-dual optimization",
+              "citation": "Wai, H.T., Yang, Z., Wang, Z., Hong, M.: Multi-agent reinforcement learning via double averaging primal-dual optimization. In: Advances in Neural Information Processing Systems, pp. 9649-9660 (2018)"
+            },
+            {
+              "title": "Finite-time analysis of distributed TD (0) with linear function approximation on multi-agent reinforcement learning",
+              "citation": "Doan, T., Maguluri, S., Romberg, J.: Finite-time analysis of distributed TD (0) with linear function approximation on multi-agent reinforcement learning. In: International Conference on Machine Learning, pp. 1626-1635 (2019)"
+            },
+            {
+              "title": "Finite-time performance of distributed temporal difference learning with linear function approximation",
+              "citation": "Doan, T.T., Maguluri, S.T., Romberg, J.: Finite-time performance of distributed temporal difference learning with linear function approximation. arXiv preprint arXiv:1907.12530 (2019)"
+            },
+            {
+              "title": "A multi-agent off-policy actorcritic algorithm for distributed reinforcement learning",
+              "citation": "Suttle, W., Yang, Z., Zhang, K., Wang, Z., Bas ¸ar, T., Liu, J.: A multi-agent off-policy actorcritic algorithm for distributed reinforcement learning. arXiv preprint arXiv:1903.06372 (2019)"
+            },
+            {
+              "title": "A communication-efficient multi-agent actor-critic algorithm for distributed reinforcement learning",
+              "citation": "Lin, Y., Zhang, K., Yang, Z., Wang, Z., Bas ¸ar, T., Sandhu, R., Liu, J.: A communicationefficient multi-agent actor-critic algorithm for distributed reinforcement learning. In: IEEE Conference on Decision and Control (2019)"
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.4.1",
+              "sec_title": "Figure 2: Three representative information structures in MARL.",
+              "citations": [
+                {
+                  "title": "Dynamic programming for partially observable stochastic games",
+                  "citation": "Hansen, E.A., Bernstein, D.S., Zilberstein, S.: Dynamic programming for partially observable stochastic games. In: AAAI Conference on Artificial Intelligence, pp. 709-715 (2004)"
+                },
+                {
+                  "title": "Dec-POMDPs as non-observable MDPs",
+                  "citation": "Oliehoek, F.A., Amato, C.: Dec-POMDPs as non-observable MDPs. IAS Technical Report (IAS-UVA-14-01) (2014)"
+                },
+                {
+                  "title": "Multi-agent actor-critic for mixed cooperative-competitive environments",
+                  "citation": "Lowe, R., Wu, Y., Tamar, A., Harb, J., Abbeel, P ., Mordatch, I.: Multi-agent actor-critic for mixed cooperative-competitive environments. In: Advances in Neural Information Processing Systems, pp. 6379-6390 (2017)"
+                },
+                {
+                  "title": "Stabilising experience replay for deep multi-agent reinforcement learning",
+                  "citation": "Foerster, J., Nardelli, N., Farquhar, G., Torr, P ., Kohli, P ., Whiteson, S., et al.: Stabilising experience replay for deep multi-agent reinforcement learning. In: International Conference of Machine Learning, pp. 1146-1155 (2017)"
+                },
+                {
+                  "title": "Cooperative multi-agent control using deep reinforcement learning",
+                  "citation": "Gupta, J.K., Egorov, M., Kochenderfer, M.: Cooperative multi-agent control using deep reinforcement learning. In: International Conference on Autonomous Agents and Multi-Agent Systems, pp. 66-83 (2017)"
+                },
+                {
+                  "title": "Counterfactual multiagent policy gradients",
+                  "citation": "Foerster, J.N., Farquhar, G., Afouras, T., Nardelli, N., Whiteson, S.: Counterfactual multiagent policy gradients. In: AAAI Conference on Artificial Intelligence (2018)"
+                },
+                {
+                  "title": "Learning to act in decentralized partially observable MDPs",
+                  "citation": "Dibangoye, J., Buffet, O.: Learning to act in decentralized partially observable MDPs. In: International Conference on Machine Learning, pp. 1233-1242 (2018)"
+                },
+                {
+                  "title": "Communication-efficient distributed reinforcement learning",
+                  "citation": "Chen, T., Zhang, K., Giannakis, G.B., Bas ¸ar, T.: Communication-efficient distributed reinforcement learning. arXiv preprint arXiv:1812.03239 (2018)"
+                },
+                {
+                  "title": "QMIX: Monotonic value function factorisation for deep multi-agent reinforcement learning",
+                  "citation": "Rashid, T., Samvelyan, M., De Witt, C.S., Farquhar, G., Foerster, J., Whiteson, S.: QMIX: Monotonic value function factorisation for deep multi-agent reinforcement learning. In: International Conference on Machine learning, pp. 681-689 (2018)"
+                },
+                {
+                  "title": "QD-learning: A collaborative distributed strategy for multiagent reinforcement learning through consensus + innovations",
+                  "citation": "Kar, S., Moura, J.M., Poor, H.V.: QD-learning: A collaborative distributed strategy for multiagent reinforcement learning through consensus + innovations. IEEE Transactions on Signal Processing 61 (7), 1848-1862 (2013)"
+                },
+                {
+                  "title": "Distributed policy evaluation under multiple behavior strategies",
+                  "citation": "Macua, S.V., Chen, J., Zazo, S., Sayed, A.H.: Distributed policy evaluation under multiple behavior strategies. IEEE Transactions on Automatic Control 60 (5), 1260-1274 (2015)"
+                },
+                {
+                  "title": "Diffdac: Distributed actor-critic for average multitask deep reinforcement learning",
+                  "citation": "Macua, S.V., Tukiainen, A., Hern´ andez, D.G.O., Baldazo, D., de Cote, E.M., Zazo, S.: Diffdac: Distributed actor-critic for average multitask deep reinforcement learning. arXiv preprint arXiv:1710.10363 (2017)"
+                },
+                {
+                  "title": "Fully decentralized multi-agent reinforcement learning with networked agents",
+                  "citation": "Zhang, K., Yang, Z., Liu, H., Zhang, T., Bas ¸ar, T.: Fully decentralized multi-agent reinforcement learning with networked agents. In: International Conference on Machine Learning, pp. 5867-5876 (2018)"
+                },
+                {
+                  "title": "Networked multi-agent reinforcement learning in continuous spaces",
+                  "citation": "Zhang, K., Yang, Z., Bas ¸ar, T.: Networked multi-agent reinforcement learning in continuous spaces. In: IEEE Conference on Decision and Control, pp. 2771-2776 (2018)"
+                },
+                {
+                  "title": "Finite-sample analyses for fully decentralized multi-agent reinforcement learning",
+                  "citation": "Zhang, K., Yang, Z., Liu, H., Zhang, T., Bas ¸ar, T.: Finite-sample analyses for fully decentralized multi-agent reinforcement learning. arXiv preprint arXiv:1812.02783 (2018)"
+                },
+                {
+                  "title": "Primal-dual algorithm for distributed reinforcement learning: Distributed GTD",
+                  "citation": "Lee, D., Yoon, H., Hovakimyan, N.: Primal-dual algorithm for distributed reinforcement learning: Distributed GTD. In: IEEE Conference on Decision and Control, pp. 1967-1972 (2018)"
+                },
+                {
+                  "title": "Multi-agent reinforcement learning via double averaging primal-dual optimization",
+                  "citation": "Wai, H.T., Yang, Z., Wang, Z., Hong, M.: Multi-agent reinforcement learning via double averaging primal-dual optimization. In: Advances in Neural Information Processing Systems, pp. 9649-9660 (2018)"
+                },
+                {
+                  "title": "Finite-time analysis of distributed TD (0) with linear function approximation on multi-agent reinforcement learning",
+                  "citation": "Doan, T., Maguluri, S., Romberg, J.: Finite-time analysis of distributed TD (0) with linear function approximation on multi-agent reinforcement learning. In: International Conference on Machine Learning, pp. 1626-1635 (2019)"
+                },
+                {
+                  "title": "Finite-time performance of distributed temporal difference learning with linear function approximation",
+                  "citation": "Doan, T.T., Maguluri, S.T., Romberg, J.: Finite-time performance of distributed temporal difference learning with linear function approximation. arXiv preprint arXiv:1907.12530 (2019)"
+                },
+                {
+                  "title": "A multi-agent off-policy actor-critic algorithm for distributed reinforcement learning",
+                  "citation": "Suttle, W., Yang, Z., Zhang, K., Wang, Z., Bas ¸ar, T., Liu, J.: A multi-agent off-policy actorcritic algorithm for distributed reinforcement learning. arXiv preprint arXiv:1903.06372 (2019)"
+                },
+                {
+                  "title": "A communication-efficient multi-agent actor-critic algorithm for distributed reinforcement learning",
+                  "citation": "Lin, Y., Zhang, K., Yang, Z., Wang, Z., Bas ¸ar, T., Sandhu, R., Liu, J.: A communicationefficient multi-agent actor-critic algorithm for distributed reinforcement learning. In: IEEE Conference on Decision and Control (2019)"
+                },
+                {
+                  "title": "A unified analysis of value-function-based reinforcement-learning algorithms",
+                  "citation": "Szepesv´ ari, C., Littman, M.L.: A unified analysis of value-function-based reinforcementlearning algorithms. Neural Computation 11 (8), 2017-2060 (1999)"
+                },
+                {
+                  "title": "Value-function reinforcement learning in Markov games",
+                  "citation": "Littman, M.L.: Value-function reinforcement learning in Markov games. Cognitive Systems Research 2 (1), 55-66 (2001)"
+                },
+                {
+                  "title": "The dynamics of reinforcement learning in cooperative multiagent systems",
+                  "citation": "Claus, C., Boutilier, C.: The dynamics of reinforcement learning in cooperative multiagent systems. AAAI Conference on Artificial Intelligence 1998 (746-752), 2 (1998)"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "MARLAlgorithms with Theory",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Cooperative Setting",
+          "citations": [
+            {
+              "title": "Networked robots: Flying robot navigation using a sensor net",
+              "citation": "Corke, P., Peterson, R., Rus, D.: Networked robots: Flying robot navigation using a sensor net. Robotics Research pp. 234-243 (2005)"
+            },
+            {
+              "title": "Distributed optimal power flow for smart microgrids",
+              "citation": "Dall'Anese, E., Zhu, H., Giannakis, G.B.: Distributed optimal power flow for smart microgrids. IEEE Transactions on Smart Grid 4 (3), 1464-1475 (2013)"
+            },
+            {
+              "title": "Coverage control for mobile sensing networks",
+              "citation": "Cortes, J., Martinez, S., Karatas, T., Bullo, F.: Coverage control for mobile sensing networks. IEEE Transactions on Robotics and Automation 20 (2), 243-255 (2004)"
+            },
+            {
+              "title": "Keeping in touch with collaborative UAVs: A deep reinforcement learning approach",
+              "citation": "Yang, B., Liu, M.: Keeping in touch with collaborative UAVs: A deep reinforcement learning approach. In: International Joint Conference on Artificial Intelligence, pp. 562-568 (2018)"
+            },
+            {
+              "title": "Cooperative and distributed reinforcement learning of drones for field coverage",
+              "citation": "Pham, H.X., La, H.M., Feil-Seifer, D., Nefian, A.: Cooperative and distributed reinforcement learning of drones for field coverage. arXiv preprint arXiv:1803.07250 (2018)"
+            },
+            {
+              "title": "Application of deep reinforcement learning to UAV fleet control",
+              "citation": "Toˇ ziˇ cka, J., Szulyovszky, B., de Chambrier, G., Sarwal, V., Wani, U., Gribulis, M.: Application of deep reinforcement learning to UAV fleet control. In: SAI Intelligent Systems Conference, pp. 1169-1177 (2018)"
+            },
+            {
+              "title": "Distributed cooperative spectrum sharing in UAV networks using multi-agent reinforcement learning",
+              "citation": "Shamsoshoara, A., Khaledi, M., Afghah, F., Razi, A., Ashdown, J.: Distributed cooperative spectrum sharing in UAV networks using multi-agent reinforcement learning. In: IEEE Annual Consumer Communications &amp; Networking Conference, pp. 1-6 (2019)"
+            },
+            {
+              "title": "The application of multi-agent reinforcement learning in UAV networks",
+              "citation": "Cui, J., Liu, Y., Nallanathan, A.: The application of multi-agent reinforcement learning in UAV networks. In: IEEE International Conference on Communications Workshops, pp. 1-6 (2019)"
+            },
+            {
+              "title": "Joint optimization of multi-UAV target assignment and path planning based on multi-agent reinforcement learning",
+              "citation": "Qie, H., Shi, D., Shen, T., Xu, X., Li, Y., Wang, L.: Joint optimization of multi-UAV target assignment and path planning based on multi-agent reinforcement learning. IEEE Access (2019)"
+            },
+            {
+              "title": "Keeping in touch with collaborative UAVs: A deep reinforcement learning approach",
+              "citation": "Yang, B., Liu, M.: Keeping in touch with collaborative UAVs: A deep reinforcement learning approach. In: International Joint Conference on Artificial Intelligence, pp. 562-568 (2018)"
+            },
+            {
+              "title": "Keeping in touch with collaborative UAVs: A deep reinforcement learning approach",
+              "citation": "Yang, B., Liu, M.: Keeping in touch with collaborative UAVs: A deep reinforcement learning approach. In: International Joint Conference on Artificial Intelligence, pp. 562-568 (2018)"
+            },
+            {
+              "title": "Multi-agent reinforcement learning: Independent vs. cooperative agents",
+              "citation": "Tan, M.: Multi-agent reinforcement learning: Independent vs. cooperative agents. In: International Conference on Machine Learning, pp. 330-337 (1993)"
+            },
+            {
+              "title": "Cooperative and distributed reinforcement learning of drones for field coverage",
+              "citation": "Pham, H.X., La, H.M., Feil-Seifer, D., Nefian, A.: Cooperative and distributed reinforcement learning of drones for field coverage. arXiv preprint arXiv:1803.07250 (2018)"
+            },
+            {
+              "title": "Distributed cooperative spectrum sharing in UAV networks using multi-agent reinforcement learning",
+              "citation": "Shamsoshoara, A., Khaledi, M., Afghah, F., Razi, A., Ashdown, J.: Distributed cooperative spectrum sharing in UAV networks using multi-agent reinforcement learning. In: IEEE Annual Consumer Communications &amp; Networking Conference, pp. 1-6 (2019)"
+            },
+            {
+              "title": "An algorithm for distributed reinforcement learning in cooperative multi-agent systems",
+              "citation": "Lauer, M., Riedmiller, M.: An algorithm for distributed reinforcement learning in cooperative multi-agent systems. In: International Conference on Machine Learning (2000)"
+            },
+            {
+              "title": "Joint optimization of multi-UAV target assignment and path planning based on multi-agent reinforcement learning",
+              "citation": "Qie, H., Shi, D., Shen, T., Xu, X., Li, Y., Wang, L.: Joint optimization of multi-UAV target assignment and path planning based on multi-agent reinforcement learning. IEEE Access (2019)"
+            },
+            {
+              "title": "Multi-agent actor-critic for mixed cooperative-competitive environments",
+              "citation": "Lowe, R., Wu, Y., Tamar, A., Harb, J., Abbeel, P ., Mordatch, I.: Multi-agent actor-critic for mixed cooperative-competitive environments. In: Advances in Neural Information Processing Systems, pp. 6379-6390 (2017)"
+            },
+            {
+              "title": "The application of multi-agent reinforcement learning in UAV networks",
+              "citation": "Cui, J., Liu, Y., Nallanathan, A.: The application of multi-agent reinforcement learning in UAV networks. In: IEEE International Conference on Communications Workshops, pp. 1-6 (2019)"
+            },
+            {
+              "title": "Application of deep reinforcement learning to UAV fleet control",
+              "citation": "Toˇ ziˇ cka, J., Szulyovszky, B., de Chambrier, G., Sarwal, V., Wani, U., Gribulis, M.: Application of deep reinforcement learning to UAV fleet control. In: SAI Intelligent Systems Conference, pp. 1169-1177 (2018)"
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Homogeneous Agents",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.2",
+              "sec_title": "Decentralized Paradigm with Networked Agents",
+              "citations": [
+                {
+                  "title": "Distributed optimization in sensor networks",
+                  "citation": "Rabbat, M., Nowak, R.: Distributed optimization in sensor networks. In: International Symposium on Information Processing in Sensor Networks, pp. 20-27 (2004)"
+                },
+                {
+                  "title": "Distributed optimal power flow for smart microgrids",
+                  "citation": "Dall'Anese, E., Zhu, H., Giannakis, G.B.: Distributed optimal power flow for smart microgrids. IEEE Transactions on Smart Grid 4 (3), 1464-1475 (2013)"
+                },
+                {
+                  "title": "Dynamic power distribution system management with a locally connected communication network",
+                  "citation": "Zhang, K., Shi, W., Zhu, H., Dall'Anese, E., Bas ¸ar, T.: Dynamic power distribution system management with a locally connected communication network. IEEE Journal of Selected Topics in Signal Processing 12 (4), 673-687 (2018)"
+                },
+                {
+                  "title": "A cooperative multi-agent transportation management and route guidance system",
+                  "citation": "Adler, J.L., Blue, V.J.: A cooperative multi-agent transportation management and route guidance system. Transportation Research Part C: Emerging Technologies 10 (5), 433-454 (2002)"
+                },
+                {
+                  "title": "Dynamic operations and pricing of electric unmanned aerial vehicle systems and power networks",
+                  "citation": "Zhang, K., Lu, L., Lei, C., Zhu, H., Ouyang, Y.: Dynamic operations and pricing of electric unmanned aerial vehicle systems and power networks. Transportation Research Part C: Emerging Technologies 92 , 472-485 (2018)"
+                },
+                {
+                  "title": "Networked robots: Flying robot navigation using a sensor net",
+                  "citation": "Corke, P., Peterson, R., Rus, D.: Networked robots: Flying robot navigation using a sensor net. Robotics Research pp. 234-243 (2005)"
+                },
+                {
+                  "title": "Distributed optimization in sensor networks",
+                  "citation": "Rabbat, M., Nowak, R.: Distributed optimization in sensor networks. In: International Symposium on Information Processing in Sensor Networks, pp. 20-27 (2004)"
+                },
+                {
+                  "title": "Distributed optimal power flow for smart microgrids",
+                  "citation": "Dall'Anese, E., Zhu, H., Giannakis, G.B.: Distributed optimal power flow for smart microgrids. IEEE Transactions on Smart Grid 4 (3), 1464-1475 (2013)"
+                },
+                {
+                  "title": "Distributed learning of average belief over networks using sequential observations",
+                  "citation": "Zhang, K., Liu, Y., Liu, J., Liu, M., Bas ¸ar, T.: Distributed learning of average belief over networks using sequential observations. Automatica (2019)"
+                },
+                {
+                  "title": "Distributed subgradient methods for multi-agent optimization",
+                  "citation": "Nedic, A., Ozdaglar, A.: Distributed subgradient methods for multi-agent optimization. IEEE Transactions on Automatic Control 54 (1), 48-61 (2009)"
+                },
+                {
+                  "title": "Distributed delayed stochastic optimization",
+                  "citation": "Agarwal, A., Duchi, J.C.: Distributed delayed stochastic optimization. In: Advances in Neural Information Processing Systems, pp. 873-881 (2011)"
+                },
+                {
+                  "title": "Cooperative convex optimization in networked systems: Augmented lagrangian algorithms with directed gossip communication",
+                  "citation": "Jakovetic, D., Xavier, J., Moura, J.M.: Cooperative convex optimization in networked systems: Augmented lagrangian algorithms with directed gossip communication. IEEE Transactions on Signal Processing 59 (8), 3889-3902 (2011)"
+                },
+                {
+                  "title": "Diffusion strategies outperform consensus strategies for distributed estimation over adaptive networks",
+                  "citation": "Tu, S.Y., Sayed, A.H.: Diffusion strategies outperform consensus strategies for distributed estimation over adaptive networks. IEEE Transactions on Signal Processing 60 (12), 62176234 (2012)"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.3",
+              "sec_title": "Partially Observed Model",
+              "citations": [
+                {
+                  "title": "A Concise Introduction to Decentralized POMDPs",
+                  "citation": "Oliehoek, F.A., Amato, C.: A Concise Introduction to Decentralized POMDPs, vol. 1. Springer (2016)"
+                },
+                {
+                  "title": "The complexity of decentralized control of Markov decision processes",
+                  "citation": "Bernstein, D.S., Givan, R., Immerman, N., Zilberstein, S.: The complexity of decentralized control of Markov decision processes. Mathematics of Operations Research 27 (4), 819-840 (2002)"
+                },
+                {
+                  "title": "Policy iteration for decentralized control of Markov decision processes",
+                  "citation": "Bernstein, D.S., Amato, C., Hansen, E.A., Zilberstein, S.: Policy iteration for decentralized control of Markov decision processes. Journal of Artificial Intelligence Research 34 , 89-132 (2009)"
+                },
+                {
+                  "title": "Optimizing fixed-size stochastic controllers for POMDPs and decentralized POMDPs",
+                  "citation": "Amato, C., Bernstein, D.S., Zilberstein, S.: Optimizing fixed-size stochastic controllers for POMDPs and decentralized POMDPs. Autonomous Agents and Multi-Agent Systems 21 (3), 293-320 (2010)"
+                },
+                {
+                  "title": "Stick-breaking policy learning in DecPOMDPs",
+                  "citation": "Liu, M., Amato, C., Liao, X., Carin, L., How, J.P .: Stick-breaking policy learning in DecPOMDPs. In: International Joint Conference on Artificial Intelligence (2015)"
+                },
+                {
+                  "title": "Dec-POMDPs as non-observable MDPs",
+                  "citation": "Oliehoek, F.A., Amato, C.: Dec-POMDPs as non-observable MDPs. IAS Technical Report (IAS-UVA-14-01) (2014)"
+                },
+                {
+                  "title": "Optimally solving Dec-POMDPs as continuous-state MDPs",
+                  "citation": "Dibangoye, J.S., Amato, C., Buffet, O., Charpillet, F.: Optimally solving Dec-POMDPs as continuous-state MDPs. Journal of Artificial Intelligence Research 55 , 443-497 (2016)"
+                },
+                {
+                  "title": "Learning to act in decentralized partially observable MDPs",
+                  "citation": "Dibangoye, J., Buffet, O.: Learning to act in decentralized partially observable MDPs. In: International Conference on Machine Learning, pp. 1233-1242 (2018)"
+                },
+                {
+                  "title": "Optimally solving Dec-POMDPs as continuous-state MDPs",
+                  "citation": "Dibangoye, J.S., Amato, C., Buffet, O., Charpillet, F.: Optimally solving Dec-POMDPs as continuous-state MDPs. Journal of Artificial Intelligence Research 55 , 443-497 (2016)"
+                },
+                {
+                  "title": "Learning to act in decentralized partially observable MDPs",
+                  "citation": "Dibangoye, J., Buffet, O.: Learning to act in decentralized partially observable MDPs. In: International Conference on Machine Learning, pp. 1233-1242 (2018)"
+                },
+                {
+                  "title": "Rollout sampling policy iteration for decentralized POMDPs",
+                  "citation": "Wu, F., Zilberstein, S., Chen, X.: Rollout sampling policy iteration for decentralized POMDPs. In: Conference on Uncertainty in Artificial Intelligence (2010)"
+                },
+                {
+                  "title": "Monte-Carlo expectation maximization for decentralized POMDPs",
+                  "citation": "Wu, F., Zilberstein, S., Jennings, N.R.: Monte-Carlo expectation maximization for decentralized POMDPs. In: International Joint Conference on Artificial Intelligence (2013)"
+                },
+                {
+                  "title": "Scalable planning and learning for multiagent POMDPs",
+                  "citation": "Amato, C., Oliehoek, F.A.: Scalable planning and learning for multiagent POMDPs. In: AAAI Conference on Artificial Intelligence (2015)"
+                },
+                {
+                  "title": "Dec-MCTS: Decentralized planning for multi-robot active perception",
+                  "citation": "Best, G., Cliff, O.M., Patten, T., Mettu, R.R., Fitch, R.: Dec-MCTS: Decentralized planning for multi-robot active perception. International Journal of Robotics Research pp. 1-22 (2018)"
+                },
+                {
+                  "title": "Learning to act in decentralized partially observable MDPs",
+                  "citation": "Dibangoye, J., Buffet, O.: Learning to act in decentralized partially observable MDPs. In: International Conference on Machine Learning, pp. 1233-1242 (2018)"
+                },
+                {
+                  "title": "Achieving goals in decentralized POMDPs",
+                  "citation": "Amato, C., Zilberstein, S.: Achieving goals in decentralized POMDPs. In: International Conference on Autonomous Agents and Multi-Agent Systems, pp. 593-600 (2009)"
+                },
+                {
+                  "title": "Sample bounded distributed reinforcement learning for decentralized POMDPs",
+                  "citation": "Banerjee, B., Lyle, J., Kraemer, L., Yellamraju, R.: Sample bounded distributed reinforcement learning for decentralized POMDPs. In: AAAI Conference on Artificial Intelligence (2012)"
+                },
+                {
+                  "title": "Decentralized stochastic control with partial history sharing: A common information approach",
+                  "citation": "Nayyar, A., Mahajan, A., Teneketzis, D.: Decentralized stochastic control with partial history sharing: A common information approach. IEEE Transactions on Automatic Control 58 (7), 1644-1658 (2013)"
+                },
+                {
+                  "title": "Reinforcement learning in decentralized stochastic control systems with partial history sharing",
+                  "citation": "Arabneydi, J., Mahajan, A.: Reinforcement learning in decentralized stochastic control systems with partial history sharing. In: IEEE American Control Conference, pp. 5449-5456 (2015)"
+                },
+                {
+                  "title": "Online planning for decentralized stochastic control with partial history sharing",
+                  "citation": "Zhang, K., Miehling, E., Bas ¸ar, T.: Online planning for decentralized stochastic control with partial history sharing. In: IEEE American Control Conference, pp. 167-172 (2019)"
+                },
+                {
+                  "title": "Scalable planning and learning for multiagent POMDPs",
+                  "citation": "Amato, C., Oliehoek, F.A.: Scalable planning and learning for multiagent POMDPs. In: AAAI Conference on Artificial Intelligence (2015)"
+                },
+                {
+                  "title": "Dec-MCTS: Decentralized planning for multi-robot active perception",
+                  "citation": "Best, G., Cliff, O.M., Patten, T., Mettu, R.R., Fitch, R.: Dec-MCTS: Decentralized planning for multi-robot active perception. International Journal of Robotics Research pp. 1-22 (2018)"
+                },
+                {
+                  "title": "Reinforcement learning in decentralized stochastic control systems with partial history sharing",
+                  "citation": "Arabneydi, J., Mahajan, A.: Reinforcement learning in decentralized stochastic control systems with partial history sharing. In: IEEE American Control Conference, pp. 5449-5456 (2015)"
+                },
+                {
+                  "title": "Online planning for decentralized stochastic control with partial history sharing",
+                  "citation": "Zhang, K., Miehling, E., Bas ¸ar, T.: Online planning for decentralized stochastic control with partial history sharing. In: IEEE American Control Conference, pp. 167-172 (2019)"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Competitive Setting",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.2.1",
+              "sec_title": "Value-Based Methods",
+              "citations": [
+                {
+                  "title": "Q-learning",
+                  "citation": "Watkins, C.J., Dayan, P .: Q-learning. Machine Learning 8 (3-4), 279-292 (1992)"
+                },
+                {
+                  "title": "Nash Q-learning for general-sum stochastic games",
+                  "citation": "Hu, J., Wellman, M.P.: Nash Q-learning for general-sum stochastic games. Journal of Machine Learning Research 4 (Nov), 1039-1069 (2003)"
+                },
+                {
+                  "title": "Markov games as a framework for multi-agent reinforcement learning",
+                  "citation": "Littman, M.L.: Markov games as a framework for multi-agent reinforcement learning. In: International Conference on Machine Learning, pp. 157-163 (1994)"
+                },
+                {
+                  "title": "Nash Q-learning for general-sum stochastic games",
+                  "citation": "Hu, J., Wellman, M.P.: Nash Q-learning for general-sum stochastic games. Journal of Machine Learning Research 4 (Nov), 1039-1069 (2003)"
+                },
+                {
+                  "title": "Friend-or-Foe Q-learning in general-sum games",
+                  "citation": "Littman, M.L.: Friend-or-Foe Q-learning in general-sum games. In: International Conference on Machine Learning, pp. 322-328 (2001)"
+                },
+                {
+                  "title": "Correlated Q-learning",
+                  "citation": "Greenwald, A., Hall, K., Serrano, R.: Correlated Q-learning. In: International Conference on Machine Learning, pp. 242-249 (2003)"
+                },
+                {
+                  "title": "Subjectivity and correlation in randomized strategies",
+                  "citation": "Aumann, R.J.: Subjectivity and correlation in randomized strategies. Journal of Mathematical Economics 1 (1), 67-96 (1974)"
+                },
+                {
+                  "title": "Learning Nash Equilibrium for General-Sum Markov Games from Batch Data",
+                  "citation": "Perolat, J., Strub, F., Piot, B., Pietquin, O.: Learning Nash Equilibrium for General-Sum Markov Games from Batch Data. In: International Conference on Artificial Intelligence and Statistics, pp. 232-241 (2017)"
+                },
+                {
+                  "title": "Finite-sample analysis of Bellman residual minimization",
+                  "citation": "Maillard, O.A., Munos, R., Lazaric, A., Ghavamzadeh, M.: Finite-sample analysis of Bellman residual minimization. In: Asian Conference on Machine Learning, pp. 299-314 (2010)"
+                },
+                {
+                  "title": "Finite-sample analyses for fully decentralized multi-agent reinforcement learning",
+                  "citation": "Zhang, K., Yang, Z., Liu, H., Zhang, T., Bas ¸ar, T.: Finite-sample analyses for fully decentralized multi-agent reinforcement learning. arXiv preprint arXiv:1812.02783 (2018)"
+                },
+                {
+                  "title": "Multi-agent reinforcement learning: Independent vs. cooperative agents",
+                  "citation": "Tan, M.: Multi-agent reinforcement learning: Independent vs. cooperative agents. In: International Conference on Machine Learning, pp. 330-337 (1993)"
+                },
+                {
+                  "title": "Decentralized Q-learning for stochastic teams and games",
+                  "citation": "Arslan, G., Y¨ uksel, S.: Decentralized Q-learning for stochastic teams and games. IEEE Transactions on Automatic Control 62 (4), 1545-1558 (2017)"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.2",
+              "sec_title": "Policy-Based Methods",
+              "citations": [
+                {
+                  "title": "On the convergence of gradient-based learning in continuous games",
+                  "citation": "Mazumdar, E., Ratliff, L.J.: On the convergence of gradient-based learning in continuous games. arXiv preprint arXiv:1804.05464 (2018)"
+                },
+                {
+                  "title": "The mechanics of n-player differentiable games",
+                  "citation": "Balduzzi, D., Racaniere, S., Martens, J., Foerster, J., Tuyls, K., Graepel, T.: The mechanics of n-player differentiable games. In: International Conference on Machine Learning, pp. 363-372 (2018)"
+                },
+                {
+                  "title": "Differentiable game mechanics",
+                  "citation": "Letcher, A., Balduzzi, D., Racani` ere, S., Martens, J., Foerster, J.N., Tuyls, K., Graepel, T.: Differentiable game mechanics. Journal of Machine Learning Research 20 (84), 1-40 (2019)"
+                },
+                {
+                  "title": "Convergence analysis of gradient-based learning with non-uniform learning rates in non-cooperative multi-agent settings",
+                  "citation": "Chasnov, B., Ratliff, L.J., Mazumdar, E., Burden, S.A.: Convergence analysis of gradientbased learning with non-uniform learning rates in non-cooperative multi-agent settings. arXiv preprint arXiv:1906.00731 (2019)"
+                },
+                {
+                  "title": "Convergence analysis of gradient-based learning with non-uniform learning rates in non-cooperative multi-agent settings",
+                  "citation": "Chasnov, B., Ratliff, L.J., Mazumdar, E., Burden, S.A.: Convergence analysis of gradientbased learning with non-uniform learning rates in non-cooperative multi-agent settings. arXiv preprint arXiv:1906.00731 (2019)"
+                },
+                {
+                  "title": "Convergence of learning dynamics in Stackelberg games",
+                  "citation": "Fiez, T., Chasnov, B., Ratliff, L.J.: Convergence of learning dynamics in Stackelberg games. arXiv preprint arXiv:1906.01217 (2019)"
+                },
+                {
+                  "title": "Policy-gradient algorithms have no guarantees of convergence in continuous action and state multi-agent settings",
+                  "citation": "Mazumdar, E., Ratliff, L.J., Jordan, M.I., Sastry, S.S.: Policy-gradient algorithms have no guarantees of convergence in continuous action and state multi-agent settings. arXiv preprint arXiv:1907.03712 (2019)"
+                },
+                {
+                  "title": "A simple adaptive procedure leading to correlated equilibrium",
+                  "citation": "Hart, S., Mas-Colell, A.: A simple adaptive procedure leading to correlated equilibrium. Econometrica 68 (5), 1127-1150 (2000)"
+                },
+                {
+                  "title": "A general class of adaptive strategies",
+                  "citation": "Hart, S., Mas-Colell, A.: A general class of adaptive strategies. Journal of Economic Theory 98 (1), 26-54 (2001)"
+                },
+                {
+                  "title": "Uncoupled dynamics do not lead to Nash equilibrium",
+                  "citation": "Hart, S., Mas-Colell, A.: Uncoupled dynamics do not lead to Nash equilibrium. American Economic Review 93 (5), 1830-1836 (2003)"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.3",
+              "sec_title": "Competitive settings are usually modeled as zero-sum games.",
+              "citations": [
+                {
+                  "title": "On inefficient proofs of existence and complexity classes",
+                  "citation": "Papadimitriou, C.H.: On inefficient proofs of existence and complexity classes. In: Annals of Discrete Mathematics, vol. 51, pp. 245-250. Elsevier (1992)"
+                },
+                {
+                  "title": "The complexity of computing a Nash equilibrium",
+                  "citation": "Daskalakis, C., Goldberg, P .W., Papadimitriou, C.H.: The complexity of computing a Nash equilibrium. SIAM Journal on Computing 39 (1), 195-259 (2009)"
+                },
+                {
+                  "title": "Theory of Games and Economic Behavior",
+                  "citation": "Von Neumann, J., Morgenstern, O., Kuhn, H.W.: Theory of Games and Economic Behavior (commemorative edition). Princeton University Press (2007)"
+                },
+                {
+                  "title": "Linear Programming",
+                  "citation": "Vanderbei, R.J., et al.: Linear Programming. Springer (2015)"
+                },
+                {
+                  "title": "On nonterminating stochastic games",
+                  "citation": "Hoffman, A.J., Karp, R.M.: On nonterminating stochastic games. Management Science 12 (5), 359-370 (1966)"
+                },
+                {
+                  "title": "Discounted markov games: Generalized policy iteration method",
+                  "citation": "Van Der Wal, J.: Discounted markov games: Generalized policy iteration method. Journal of Optimization Theory and Applications 25 (1), 125-138 (1978)"
+                },
+                {
+                  "title": "Algorithms for discounted stochastic games",
+                  "citation": "Rao, S.S., Chandrasekaran, R., Nair, K.: Algorithms for discounted stochastic games. Journal of Optimization Theory and Applications 11 (6), 627-637 (1973)"
+                },
+                {
+                  "title": "Stochastic and shortest path games: Theory and algorithms",
+                  "citation": "Patek, S.D.: Stochastic and shortest path games: Theory and algorithms. Ph.D. thesis, Massachusetts Institute of Technology (1997)"
+                },
+                {
+                  "title": "Strategy iteration is strongly polynomial for 2-player turn-based stochastic games with a constant discount factor",
+                  "citation": "Hansen, T.D., Miltersen, P.B., Zwick, U.: Strategy iteration is strongly polynomial for 2player turn-based stochastic games with a constant discount factor. Journal of the ACM 60 (1), 1 (2013)"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.3",
+          "sec_title": "Mixed Setting",
+          "citations": [
+            {
+              "title": "Settling the complexity of computing two-player Nash equilibria",
+              "citation": "Chen, X., Deng, X., Teng, S.H.: Settling the complexity of computing two-player Nash equilibria. Journal of the ACM 56 (3), 14 (2009)"
+            },
+            {
+              "title": "Zinkevich, M., Greenwald, A., Littman, M.L.: Cyclic equilibria in Markov games",
+              "citation": "Zinkevich, M., Greenwald, A., Littman, M.L.: Cyclic equilibria in Markov games. In: Advances in Neural Information Processing Systems, pp. 1641-1648 (2006)"
+            },
+            {
+              "title": "On the convergence of gradient-based learning in continuous games",
+              "citation": "Mazumdar, E., Ratliff, L.J.: On the convergence of gradient-based learning in continuous games. arXiv preprint arXiv:1804.05464 (2018)"
+            },
+            {
+              "title": "Policy-gradient algorithms have no guarantees of convergence in continuous action and state multi-agent settings",
+              "citation": "Mazumdar, E., Ratliff, L.J., Jordan, M.I., Sastry, S.S.: Policy-gradient algorithms have no guarantees of convergence in continuous action and state multi-agent settings. arXiv preprint arXiv:1907.03712 (2019)"
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "Application Highlights",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "Cooperative Setting",
+          "citations": [
+            {
+              "title": "Networked robots: Flying robot navigation using a sensor net",
+              "citation": "Corke, P., Peterson, R., Rus, D.: Networked robots: Flying robot navigation using a sensor net. Robotics Research pp. 234-243 (2005)"
+            },
+            {
+              "title": "Distributed optimal power flow for smart microgrids",
+              "citation": "Dall'Anese, E., Zhu, H., Giannakis, G.B.: Distributed optimal power flow for smart microgrids. IEEE Transactions on Smart Grid 4 (3), 1464-1475 (2013)"
+            },
+            {
+              "title": "Coverage control for mobile sensing networks",
+              "citation": "Cortes, J., Martinez, S., Karatas, T., Bullo, F.: Coverage control for mobile sensing networks. IEEE Transactions on Robotics and Automation 20 (2), 243-255 (2004)"
+            },
+            {
+              "title": "Keeping in touch with collaborative UAVs: A deep reinforcement learning approach",
+              "citation": "Yang, B., Liu, M.: Keeping in touch with collaborative UAVs: A deep reinforcement learning approach. In: International Joint Conference on Artificial Intelligence, pp. 562-568 (2018)"
+            },
+            {
+              "title": "Cooperative and distributed reinforcement learning of drones for field coverage",
+              "citation": "Pham, H.X., La, H.M., Feil-Seifer, D., Nefian, A.: Cooperative and distributed reinforcement learning of drones for field coverage. arXiv preprint arXiv:1803.07250 (2018)"
+            },
+            {
+              "title": "Application of deep reinforcement learning to UAV fleet control",
+              "citation": "Toˇ ziˇ cka, J., Szulyovszky, B., de Chambrier, G., Sarwal, V., Wani, U., Gribulis, M.: Application of deep reinforcement learning to UAV fleet control. In: SAI Intelligent Systems Conference, pp. 1169-1177 (2018)"
+            },
+            {
+              "title": "Distributed cooperative spectrum sharing in UAV networks using multi-agent reinforcement learning",
+              "citation": "Shamsoshoara, A., Khaledi, M., Afghah, F., Razi, A., Ashdown, J.: Distributed cooperative spectrum sharing in UAV networks using multi-agent reinforcement learning. In: IEEE Annual Consumer Communications &amp; Networking Conference, pp. 1-6 (2019)"
+            },
+            {
+              "title": "The application of multi-agent reinforcement learning in UAV networks",
+              "citation": "Cui, J., Liu, Y., Nallanathan, A.: The application of multi-agent reinforcement learning in UAV networks. In: IEEE International Conference on Communications Workshops, pp. 1-6 (2019)"
+            },
+            {
+              "title": "Joint optimization of multi-UAV target assignment and path planning based on multi-agent reinforcement learning",
+              "citation": "Qie, H., Shi, D., Shen, T., Xu, X., Li, Y., Wang, L.: Joint optimization of multi-UAV target assignment and path planning based on multi-agent reinforcement learning. IEEE Access (2019)"
+            },
+            {
+              "title": "Keeping in touch with collaborative UAVs: A deep reinforcement learning approach",
+              "citation": "Yang, B., Liu, M.: Keeping in touch with collaborative UAVs: A deep reinforcement learning approach. In: International Joint Conference on Artificial Intelligence, pp. 562-568 (2018)"
+            },
+            {
+              "title": "Keeping in touch with collaborative UAVs: A deep reinforcement learning approach",
+              "citation": "Yang, B., Liu, M.: Keeping in touch with collaborative UAVs: A deep reinforcement learning approach. In: International Joint Conference on Artificial Intelligence, pp. 562-568 (2018)"
+            },
+            {
+              "title": "Multi-agent reinforcement learning: Independent vs. cooperative agents",
+              "citation": "Tan, M.: Multi-agent reinforcement learning: Independent vs. cooperative agents. In: International Conference on Machine Learning, pp. 330-337 (1993)"
+            },
+            {
+              "title": "Cooperative and distributed reinforcement learning of drones for field coverage",
+              "citation": "Pham, H.X., La, H.M., Feil-Seifer, D., Nefian, A.: Cooperative and distributed reinforcement learning of drones for field coverage. arXiv preprint arXiv:1803.07250 (2018)"
+            },
+            {
+              "title": "Distributed cooperative spectrum sharing in UAV networks using multi-agent reinforcement learning",
+              "citation": "Shamsoshoara, A., Khaledi, M., Afghah, F., Razi, A., Ashdown, J.: Distributed cooperative spectrum sharing in UAV networks using multi-agent reinforcement learning. In: IEEE Annual Consumer Communications &amp; Networking Conference, pp. 1-6 (2019)"
+            },
+            {
+              "title": "An algorithm for distributed reinforcement learning in cooperative multi-agent systems",
+              "citation": "Lauer, M., Riedmiller, M.: An algorithm for distributed reinforcement learning in cooperative multi-agent systems. In: International Conference on Machine Learning (2000)"
+            },
+            {
+              "title": "Joint optimization of multi-UAV target assignment and path planning based on multi-agent reinforcement learning",
+              "citation": "Qie, H., Shi, D., Shen, T., Xu, X., Li, Y., Wang, L.: Joint optimization of multi-UAV target assignment and path planning based on multi-agent reinforcement learning. IEEE Access (2019)"
+            },
+            {
+              "title": "Multi-agent actor-critic for mixed cooperative-competitive environments",
+              "citation": "Lowe, R., Wu, Y., Tamar, A., Harb, J., Abbeel, P ., Mordatch, I.: Multi-agent actor-critic for mixed cooperative-competitive environments. In: Advances in Neural Information Processing Systems, pp. 6379-6390 (2017)"
+            },
+            {
+              "title": "The application of multi-agent reinforcement learning in UAV networks",
+              "citation": "Cui, J., Liu, Y., Nallanathan, A.: The application of multi-agent reinforcement learning in UAV networks. In: IEEE International Conference on Communications Workshops, pp. 1-6 (2019)"
+            },
+            {
+              "title": "Application of deep reinforcement learning to UAV fleet control",
+              "citation": "Toˇ ziˇ cka, J., Szulyovszky, B., de Chambrier, G., Sarwal, V., Wani, U., Gribulis, M.: Application of deep reinforcement learning to UAV fleet control. In: SAI Intelligent Systems Conference, pp. 1169-1177 (2018)"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Competitive Setting",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.3",
+          "sec_title": "Mixed Settings",
+          "citations": [
+            {
+              "title": "Superhuman AI for multiplayer Poker",
+              "citation": "Brown, N., Sandholm, T.: Superhuman AI for multiplayer Poker. Science 365 , 885-890 (2019)"
+            },
+            {
+              "title": "Multi-agent reinforcement learning in sequential social dilemmas",
+              "citation": "Leibo, J.Z., Zambaldi, V., Lanctot, M., Marecki, J., Graepel, T.: Multi-agent reinforcement learning in sequential social dilemmas. In: International Conference on Autonomous Agents and Multi-Agent Systems, pp. 464-473 (2017)"
+            },
+            {
+              "title": "Maintaining cooperation in complex social dilemmas using deep reinforcement learning",
+              "citation": "Lerer, A., Peysakhovich, A.: Maintaining cooperation in complex social dilemmas using deep reinforcement learning. arXiv preprint arXiv:1707.01068 (2017)"
+            },
+            {
+              "title": "Inequity aversion improves cooperation in intertemporal social dilemmas",
+              "citation": "Hughes, E., Leibo, J.Z., Phillips, M., Tuyls, K., Due˜ nez-Guzman, E., Casta˜ neda, A.G., Dunning, I., Zhu, T., McKee, K., Koster, R., et al.: Inequity aversion improves cooperation in intertemporal social dilemmas. In: Advances in neural information processing systems, pp. 3326-3336 (2018)"
+            },
+            {
+              "title": "OpenAI Five",
+              "citation": "OpenAI: Openai five. https://blog.openai.com/openai-five/ (2018)"
+            },
+            {
+              "title": "Proximal policy optimization algorithms",
+              "citation": "Schulman, J., Wolski, F., Dhariwal, P ., Radford, A., Klimov, O.: Proximal policy optimization algorithms. arXiv preprint arXiv:1707.06347 (2017)"
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "Conclusions and Future Directions",
+      "citations": [
+        {
+          "title": "A comprehensive survey of multiagent reinforcement learning",
+          "citation": "Busoniu, L., Babuska, R., De Schutter, B., et al.: A comprehensive survey of multiagent reinforcement learning. IEEE Transactions on Systems, Man, and Cybernetics, Part C 38 (2), 156-172 (2008)"
+        },
+        {
+          "title": "The complexity of decentralized control of Markov decision processes",
+          "citation": "Bernstein, D.S., Givan, R., Immerman, N., Zilberstein, S.: The complexity of decentralized control of Markov decision processes. Mathematics of Operations Research 27 (4), 819-840 (2002)"
+        },
+        {
+          "title": "Dynamic programming for partially observable stochastic games",
+          "citation": "Hansen, E.A., Bernstein, D.S., Zilberstein, S.: Dynamic programming for partially observable stochastic games. In: AAAI Conference on Artificial Intelligence, pp. 709-715 (2004)"
+        },
+        {
+          "title": "Scalable planning and learning for multiagent POMDPs",
+          "citation": "Amato, C., Oliehoek, F.A.: Scalable planning and learning for multiagent POMDPs. In: AAAI Conference on Artificial Intelligence (2015)"
+        },
+        {
+          "title": "Learning to act in decentralized partially observable MDPs",
+          "citation": "Dibangoye, J., Buffet, O.: Learning to act in decentralized partially observable MDPs. In: International Conference on Machine Learning, pp. 1233-1242 (2018)"
+        },
+        {
+          "title": "Deep reinforcement learning from self-play in imperfect-information games",
+          "citation": "Heinrich, J., Silver, D.: Deep reinforcement learning from self-play in imperfect-information games. arXiv preprint arXiv:1603.01121 (2016)"
+        },
+        {
+          "title": "Multi-agent actor-critic for mixed cooperative-competitive environments",
+          "citation": "Lowe, R., Wu, Y., Tamar, A., Harb, J., Abbeel, P ., Mordatch, I.: Multi-agent actor-critic for mixed cooperative-competitive environments. In: Advances in Neural Information Processing Systems, pp. 6379-6390 (2017)"
+        },
+        {
+          "title": "Counterfactual multi-agent policy gradients",
+          "citation": "Foerster, J., Farquhar, G., Afouras, T., Nardelli, N., Whiteson, S.: Counterfactual multi-agent policy gradients. arXiv preprint arXiv:1705.08926 (2017)"
+        },
+        {
+          "title": "Cooperative multi-agent control using deep reinforcement learning",
+          "citation": "Gupta, J.K., Egorov, M., Kochenderfer, M.: Cooperative multi-agent control using deep reinforcement learning. In: International Conference on Autonomous Agents and Multi-Agent Systems, pp. 66-83 (2017)"
+        },
+        {
+          "title": "Deep decentralized multi-task multiagent reinforcement learning under partial observability",
+          "citation": "Omidshafiei, S., Pazis, J., Amato, C., How, J.P ., Vian, J.: Deep decentralized multi-task multiagent reinforcement learning under partial observability. In: International Conference on Machine Learning, pp. 2681-2690 (2017)"
+        },
+        {
+          "title": "Neural temporal-difference learning converges to global optima",
+          "citation": "Cai, Q., Yang, Z., Lee, J.D., Wang, Z.: Neural temporal-difference learning converges to global optima. arXiv preprint arXiv:1905.10027 (2019)"
+        },
+        {
+          "title": "Neural policy gradient methods: Global optimality and rates of convergence",
+          "citation": "Wang, L., Cai, Q., Yang, Z., Wang, Z.: Neural policy gradient methods: Global optimality and rates of convergence. arXiv preprint arXiv:1909.01150 (2019)"
+        },
+        {
+          "title": "Neural proximal/trust region policy optimization attains globally optimal policy",
+          "citation": "Liu, B., Cai, Q., Yang, Z., Wang, Z.: Neural proximal/trust region policy optimization attains globally optimal policy. arXiv preprint arXiv:1906.10306 (2019)"
+        },
+        {
+          "title": "On the optimization of deep networks: Implicit acceleration by overparameterization",
+          "citation": "Arora, S., Cohen, N., Hazan, E.: On the optimization of deep networks: Implicit acceleration by overparameterization. arXiv preprint arXiv:1802.06509 (2018)"
+        },
+        {
+          "title": "Learning overparameterized neural networks via stochastic gradient descent on structured data",
+          "citation": "Li, Y., Liang, Y.: Learning overparameterized neural networks via stochastic gradient descent on structured data. In: Advances in Neural Information Processing Systems, pp. 8157-8166 (2018)"
+        },
+        {
+          "title": "A near-optimal polynomial time algorithm for learning in certain classes of stochastic games",
+          "citation": "Brafman, R.I., Tennenholtz, M.: A near-optimal polynomial time algorithm for learning in certain classes of stochastic games. Artificial Intelligence 121 (1-2), 31-47 (2000)"
+        },
+        {
+          "title": "R-max - A general polynomial time algorithm for near-optimal reinforcement learning",
+          "citation": "Brafman, R.I., Tennenholtz, M.: R-max-A general polynomial time algorithm for nearoptimal reinforcement learning. Journal of Machine Learning Research 3 (Oct), 213-231 (2002)"
+        },
+        {
+          "title": "Logarithmic online regret bounds for undiscounted reinforcement learning",
+          "citation": "Auer, P., Ortner, R.: Logarithmic online regret bounds for undiscounted reinforcement learning. In: Advances in Neural Information Processing Systems, pp. 49-56 (2007)"
+        },
+        {
+          "title": "Near-optimal regret bounds for reinforcement learning",
+          "citation": "Jaksch, T., Ortner, R., Auer, P .: Near-optimal regret bounds for reinforcement learning. Journal of Machine Learning Research 11 (Apr), 1563-1600 (2010)"
+        },
+        {
+          "title": "The gap between model-based and model-free methods on the linear quadratic regulator: An asymptotic viewpoint",
+          "citation": "Tu, S., Recht, B.: The gap between model-based and model-free methods on the linear quadratic regulator: An asymptotic viewpoint. arXiv preprint arXiv:1812.03565 (2018)"
+        },
+        {
+          "title": "Model-based RL in contextual decision processes: PAC bounds and exponential improvements over model-free approaches",
+          "citation": "Sun, W., Jiang, N., Krishnamurthy, A., Agarwal, A., Langford, J.: Model-based RL in contextual decision processes: PAC bounds and exponential improvements over model-free approaches. In: Conference on Learning Theory, pp. 2898-2933 (2019)"
+        },
+        {
+          "title": "The mechanics of n-player differentiable games",
+          "citation": "Balduzzi, D., Racaniere, S., Martens, J., Foerster, J., Tuyls, K., Graepel, T.: The mechanics of n-player differentiable games. In: International Conference on Machine Learning, pp. 363-372 (2018)"
+        },
+        {
+          "title": "Differentiable game mechanics",
+          "citation": "Letcher, A., Balduzzi, D., Racani` ere, S., Martens, J., Foerster, J.N., Tuyls, K., Graepel, T.: Differentiable game mechanics. Journal of Machine Learning Research 20 (84), 1-40 (2019)"
+        },
+        {
+          "title": "Convergence analysis of gradient-based learning with non-uniform learning rates in non-cooperative multi-agent settings",
+          "citation": "Chasnov, B., Ratliff, L.J., Mazumdar, E., Burden, S.A.: Convergence analysis of gradientbased learning with non-uniform learning rates in non-cooperative multi-agent settings. arXiv preprint arXiv:1906.00731 (2019)"
+        },
+        {
+          "title": "Convergence of learning dynamics in Stackelberg games",
+          "citation": "Fiez, T., Chasnov, B., Ratliff, L.J.: Convergence of learning dynamics in Stackelberg games. arXiv preprint arXiv:1906.01217 (2019)"
+        },
+        {
+          "title": "Policy-gradient algorithms have no guarantees of convergence in continuous action and state multi-agent settings",
+          "citation": "Mazumdar, E., Ratliff, L.J., Jordan, M.I., Sastry, S.S.: Policy-gradient algorithms have no guarantees of convergence in continuous action and state multi-agent settings. arXiv preprint arXiv:1907.03712 (2019)"
+        },
+        {
+          "title": "Policy optimization provably converges to Nash equilibria in zero-sum linear quadratic games",
+          "citation": "Zhang, K., Yang, Z., Bas ¸ar, T.: Policy optimization provably converges to Nash equilibria in zero-sum linear quadratic games. In: Advances in Neural Information Processing Systems (2019)"
+        },
+        {
+          "title": "Global convergence of policy gradient for sequential zerosum linear quadratic dynamic games",
+          "citation": "Bu, J., Ratliff, L.J., Mesbahi, M.: Global convergence of policy gradient for sequential zerosum linear quadratic dynamic games. arXiv preprint arXiv:1911.04672 (2019)"
+        },
+        {
+          "title": "Solving weakly-convex-weakly-concave saddle-point problems as weakly-monotone variational inequality",
+          "citation": "Lin, Q., Liu, M., Rafique, H., Yang, T.: Solving weakly-convex-weakly-concave saddle-point problems as weakly-monotone variational inequality. arXiv preprint arXiv:1810.10207 (2018)"
+        },
+        {
+          "title": "Minmax optimization: Stable limit points of gradient descent ascent are locally optimal",
+          "citation": "Jin, C., Netrapalli, P ., Jordan, M.I.: Minmax optimization: Stable limit points of gradient descent ascent are locally optimal. arXiv preprint arXiv:1902.00618 (2019)"
+        },
+        {
+          "title": "Solving a class of non-convex min-max games using iterative first order methods",
+          "citation": "Nouiehed, M., Sanjabi, M., Lee, J.D., Razaviyayn, M.: Solving a class of non-convex min-max games using iterative first order methods. arXiv preprint arXiv:1902.08297 (2019)"
+        },
+        {
+          "title": "A comprehensive survey on safe reinforcement learning",
+          "citation": "Garc´ ıa, J., Fern´ andez, F.: A comprehensive survey on safe reinforcement learning. Journal of Machine Learning Research 16 (1), 1437-1480 (2015)"
+        },
+        {
+          "title": "Safe, multi-agent, reinforcement learning for autonomous driving",
+          "citation": "Shalev-Shwartz, S., Shammah, S., Shashua, A.: Safe, multi-agent, reinforcement learning for autonomous driving. arXiv preprint arXiv:1610.03295 (2016)"
+        },
+        {
+          "title": "Reinforcement learning in robotics: A survey",
+          "citation": "Kober, J., Bagnell, J.A., Peters, J.: Reinforcement learning in robotics: A survey. International Journal of Robotics Research 32 (11), 1238-1274 (2013)"
+        },
+        {
+          "title": "Fully decentralized multi-agent reinforcement learning with networked agents",
+          "citation": "Zhang, K., Yang, Z., Liu, H., Zhang, T., Bas ¸ar, T.: Fully decentralized multi-agent reinforcement learning with networked agents. In: International Conference on Machine Learning, pp. 5867-5876 (2018)"
+        },
+        {
+          "title": "Communication-efficient distributed reinforcement learning",
+          "citation": "Chen, T., Zhang, K., Giannakis, G.B., Bas ¸ar, T.: Communication-efficient distributed reinforcement learning. arXiv preprint arXiv:1812.03239 (2018)"
+        },
+        {
+          "title": "Multi-agent reinforcement learning via double averaging primal-dual optimization",
+          "citation": "Wai, H.T., Yang, Z., Wang, Z., Hong, M.: Multi-agent reinforcement learning via double averaging primal-dual optimization. In: Advances in Neural Information Processing Systems, pp. 9649-9660 (2018)"
+        },
+        {
+          "title": "Distributed statistical machine learning in adversarial settings: Byzantine gradient descent",
+          "citation": "Chen, Y., Su, L., Xu, J.: Distributed statistical machine learning in adversarial settings: Byzantine gradient descent. Proceedings of the ACM on Measurement and Analysis of Computing Systems 1 (2), 44 (2017)"
+        },
+        {
+          "title": "Byzantine-robust distributed learning: Towards optimal statistical rates",
+          "citation": "Yin, D., Chen, Y., Ramchandran, K., Bartlett, P.: Byzantine-robust distributed learning: Towards optimal statistical rates. arXiv preprint arXiv:1803.01498 (2018)"
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

@@ -1,0 +1,1483 @@
+{
+  "track": "Autonomous Driving",
+  "paper_title": "Vision Language Models in Autonomous Driving: A Survey and Outlook",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "INTRODUCTION",
+      "citations": [
+        {
+          "title": "Attention is all you need",
+          "citation": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, 'Attention is all you need,' vol. 30, 2017."
+        },
+        {
+          "title": "Llama 2: Open foundation and fine-tuned chat models",
+          "citation": "H. Touvron, L. Martin, K. Stone, P. Albert, A. Almahairi, Y. Babaei, N. Bashlykov, S. Batra, P. Bhargava, S. Bhosale, et al. , 'Llama 2: Open foundation and fine-tuned chat models,' arXiv:2307.09288 , 2023."
+        },
+        {
+          "title": "Language models are few-shot learners",
+          "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, et al. , 'Language models are few-shot learners,' Advances in neural information processing systems , vol. 33, pp. 1877-1901, 2020."
+        },
+        {
+          "title": "Minigpt-4: Enhancing vision-language understanding with advanced large language models",
+          "citation": "D. Zhu, J. Chen, X. Shen, X. Li, and M. Elhoseiny, 'Minigpt-4: Enhancing vision-language understanding with advanced large language models,' arXiv preprint arXiv:2304.10592 , 2023."
+        },
+        {
+          "title": "Qwen-vl: A versatile vision-language model for understanding, localization, text reading, and beyond",
+          "citation": "J. Bai, S. Bai, S. Yang, S. Wang, S. Tan, P. Wang, J. Lin, C. Zhou, and J. Zhou, 'Qwen-vl: A versatile vision-language model for understanding, localization, text reading, and beyond,' 2023."
+        },
+        {
+          "title": "Vision-language models for vision tasks: A survey",
+          "citation": "J. Zhang, J. Huang, S. Jin, and S. Lu, 'Vision-language models for vision tasks: A survey,' arXiv preprint arXiv:2304.00685 , 2023."
+        },
+        {
+          "title": "End-toend autonomous driving: Challenges and frontiers",
+          "citation": "L. Chen, P. Wu, K. Chitta, B. Jaeger, A. Geiger, and H. Li, 'End-toend autonomous driving: Challenges and frontiers,' arXiv:2306.16927 , 2023."
+        },
+        {
+          "title": "Machine learning for next-generation intelligent transportation systems: A survey",
+          "citation": "T. Yuan, W. D. R. Neto, C. E. Rothenberg, K. Obraczka, C. Barakat, and T. Turletti, 'Machine learning for next-generation intelligent transportation systems: A survey,' Trans. on Emerging Telecommunications Technologies , vol. 33, 4 2022."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "BACKGROUND",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Autonomous Driving",
+          "citations": [
+            {
+              "title": "Taxonomy and definitions for terms related to driving automation systems for on-road motor vehicles",
+              "citation": "S. Int., 'Taxonomy and definitions for terms related to driving automation systems for on-road motor vehicles,' 2021."
+            },
+            {
+              "title": "Configuration and design schemes of environmental sensing and vehicle computing systems for automated driving: A review",
+              "citation": "T. Meng, J. Huang, C.-M. Chew, D. Yang, and Z. Zhong, 'Configuration and design schemes of environmental sensing and vehicle computing systems for automated driving: A review,' IEEE Sensors Journal , 2023."
+            },
+            {
+              "title": "A survey on graph neural networks in intelligent transportation systems",
+              "citation": "H. Li, Y. Zhao, Z. Mao, Y. Qin, Z. Xiao, J. Feng, Y. Gu, W. Ju, X. Luo, and M. Zhang, 'A survey on graph neural networks in intelligent transportation systems,' 2024."
+            },
+            {
+              "title": "Tumtraf v2x cooperative perception dataset",
+              "citation": "W. Zimmer, G. A. Wardana, S. Sritharan, X. Zhou, R. Song, and A. C. Knoll, 'Tumtraf v2x cooperative perception dataset,' in Proc. of IEEE/CVF Conf. on Comp. Vision and Pattern Recog. , p. 10, 2024."
+            },
+            {
+              "title": "Graph neural network for traffic forecasting: A survey",
+              "citation": "W. Jiang and J. Luo, 'Graph neural network for traffic forecasting: A survey,' Expert Systems with Applications , vol. 207, p. 117921, 2022."
+            },
+            {
+              "title": "Dynamic hypergraph structure learning for traffic flow forecasting",
+              "citation": "Y. Zhao, X. Luo, W. Ju, C. Chen, X.-S. Hua, and M. Zhang, 'Dynamic hypergraph structure learning for traffic flow forecasting,' in IEEE Int. Conf. on Data Engineering (ICDE) , pp. 2303-2316, 2023."
+            },
+            {
+              "title": "A survey of autonomous driving: Common practices and emerging technologies",
+              "citation": "E. Yurtsever, J. Lambert, A. Carballo, and K. Takeda, 'A survey of autonomous driving: Common practices and emerging technologies,' IEEE access , vol. 8, pp. 58443-58469, 2020."
+            },
+            {
+              "title": "Pointpillars: Fast encoders for object detection from point clouds",
+              "citation": "A. H. Lang, S. Vora, H. Caesar, L. Zhou, J. Yang, and O. Beijbom, 'Pointpillars: Fast encoders for object detection from point clouds,' in Proc. of the IEEE/CVF Conf. on computer vision and pattern recognition , pp. 12697-12705, 2019."
+            },
+            {
+              "title": "Bevformer: Learning bird's-eye-view representation from multi-camera images via spatiotemporal transformers",
+              "citation": "Z. Li, W. Wang, H. Li, E. Xie, C. Sima, T. Lu, Q. Yu, and J. Dai, 'Bevformer: Learning bird's-eye-view representation from multi-camera images via spatiotemporal transformers,' 2022."
+            },
+            {
+              "title": "Deep learning based 3d segmentation: A survey",
+              "citation": "Y. He, H. Yu, X. Liu, Z. Yang, W. Sun, and A. Mian, 'Deep learning based 3d segmentation: A survey,' 2023."
+            },
+            {
+              "title": "Multiple object tracking: A literature review",
+              "citation": "W. Luo, J. Xing, A. Milan, X. Zhang, W. Liu, and T.-K. Kim, 'Multiple object tracking: A literature review,' Artificial Intelligence , vol. 293, p. 103448, 2021."
+            },
+            {
+              "title": "Sensor fusion: A review of methods and applications",
+              "citation": "M. L. Fung, M. Z. Q. Chen, and Y. H. Chen, 'Sensor fusion: A review of methods and applications,' in Chinese Control And Decision Conf. (CCDC) , pp. 3853-3860, 2017."
+            },
+            {
+              "title": "From goals, waypoints & paths to long term human trajectory forecasting",
+              "citation": "K. Mangalam, Y. An, H. Girase, and J. Malik, 'From goals, waypoints &amp; paths to long term human trajectory forecasting,' in Proc. of IEEE/CVF Int. Conf. on Computer Vision , pp. 15233-15242, 2021."
+            },
+            {
+              "title": "Gohome: Graph-oriented heatmap output for future motion estimation",
+              "citation": "T. Gilles, S. Sabatini, D. Tsishkou, B. Stanciulescu, and F. Moutarde, 'Gohome: Graph-oriented heatmap output for future motion estimation,' in Int. conf. on robotics and autom. , pp. 9107-9114, IEEE, 2022."
+            },
+            {
+              "title": "A formal basis for the heuristic determination of minimum cost paths",
+              "citation": "P. E. Hart, N. J. Nilsson, and B. Raphael, 'A formal basis for the heuristic determination of minimum cost paths,' IEEE Trans. on Systems Science and Cybernetics , vol. 4, no. 2, pp. 100-107, 1968."
+            },
+            {
+              "title": "Robot motion planning: A distributed representation approach",
+              "citation": "J. Barraquand and J.-C. Latombe, 'Robot motion planning: A distributed representation approach,' The Int. Journal of Robotics Research , vol. 10, no. 6, pp. 628-649, 1991."
+            },
+            {
+              "title": "Randomized kinodynamic planning",
+              "citation": "S. LaValle and J. Kuffner, 'Randomized kinodynamic planning,' in Proc. IEEE Int. Conf. on Robotics and Aut. , vol. 1, pp. 473-479, 1999."
+            },
+            {
+              "title": "Sampling-based algorithms for optimal motion planning",
+              "citation": "S. Karaman and E. Frazzoli, 'Sampling-based algorithms for optimal motion planning,' 2011."
+            },
+            {
+              "title": "Motion planning for autonomous driving: The state of the art and future perspectives",
+              "citation": "S. Teng, X. Hu, P. Deng, B. Li, Y. Li, Y. Ai, D. Yang, L. Li, Z. Xuanyuan, F. Zhu, and L. Chen, 'Motion planning for autonomous driving: The state of the art and future perspectives,' IEEE Trans. on Intelligent Vehicles , vol. 8, p. 3692-3711, June 2023."
+            },
+            {
+              "title": "Parallel motion planning: Learning a deep planning model against emergencies",
+              "citation": "L. Chen, X. Hu, B. Tang, and D. Cao, 'Parallel motion planning: Learning a deep planning model against emergencies,' IEEE Intelligent Transportation Systems Magazine , vol. 11, no. 1, pp. 36-41, 2019."
+            },
+            {
+              "title": "End to end learning for self-driving cars",
+              "citation": "M. Bojarski, D. Del Testa, D. Dworakowski, B. Firner, B. Flepp, P. Goyal, L. D. Jackel, M. Monfort, U. Muller, J. Zhang, et al. , 'End to end learning for self-driving cars,' preprint arXiv:1604.07316 , 2016."
+            },
+            {
+              "title": "Vad: Vectorized scene representation for efficient autonomous driving",
+              "citation": "B. Jiang, S. Chen, Q. Xu, B. Liao, J. Chen, H. Zhou, Q. Zhang, W. Liu, C. Huang, and X. Wang, 'Vad: Vectorized scene representation for efficient autonomous driving,' 2023."
+            },
+            {
+              "title": "End-toend autonomous driving: Challenges and frontiers",
+              "citation": "L. Chen, P. Wu, K. Chitta, B. Jaeger, A. Geiger, and H. Li, 'End-toend autonomous driving: Challenges and frontiers,' arXiv:2306.16927 , 2023."
+            },
+            {
+              "title": "A survey of end-to-end driving: Architectures and training methods",
+              "citation": "A. Tampuu, T. Matiisen, M. Semikin, D. Fishman, and N. Muhammad, 'A survey of end-to-end driving: Architectures and training methods,' IEEE Trans. on Neural Networks and Learning Systems , vol. 33, p. 1364-1384, Apr. 2022."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Large Language Models",
+          "citations": [
+            {
+              "title": "Attention is all you need",
+              "citation": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, 'Attention is all you need,' vol. 30, 2017."
+            },
+            {
+              "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+              "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, 'Bert: Pre-training of deep bidirectional transformers for language understanding,' 2019."
+            },
+            {
+              "title": "Vision meets robotics: The kitti dataset",
+              "citation": "A. Geiger, P. Lenz, C. Stiller, and R. Urtasun, 'Vision meets robotics: The kitti dataset,' The Int. Journal of Robotics Research , vol. 32, no. 11, pp. 1231-1237, 2013."
+            },
+            {
+              "title": "Scaling laws for neural language models",
+              "citation": "J. Kaplan, S. McCandlish, T. Henighan, T. B. Brown, B. Chess, R. Child, S. Gray, A. Radford, J. Wu, and D. Amodei, 'Scaling laws for neural language models,' 2020."
+            },
+            {
+              "title": "Language models are few-shot learners",
+              "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, et al. , 'Language models are few-shot learners,' Advances in neural information processing systems , vol. 33, pp. 1877-1901, 2020."
+            },
+            {
+              "title": "Gpt-4 technical report",
+              "citation": "OpenAI, 'Gpt-4 technical report,' ArXiv , vol. abs/2303.08774, 2023."
+            },
+            {
+              "title": "Llama 2: Open foundation and fine-tuned chat models",
+              "citation": "H. Touvron, L. Martin, K. Stone, P. Albert, A. Almahairi, Y. Babaei, N. Bashlykov, S. Batra, P. Bhargava, S. Bhosale, et al. , 'Llama 2: Open foundation and fine-tuned chat models,' arXiv:2307.09288 , 2023."
+            },
+            {
+              "title": "Qwen technical report",
+              "citation": "J. Bai, S. Bai, Y. Chu, Z. Cui, K. Dang, X. Deng, Y. Fan, W. Ge, Y. Han, F. Huang, B. Hui, L. Ji, M. Li, J. Lin, R. Lin, D. Liu, G. Liu, C. Lu, K. Lu, J. Ma, R. Men, X. Ren, X. Ren, C. Tan, S. Tan, J. Tu, P. Wang, S. Wang, W. Wang, S. Wu, B. Xu, J. Xu, A. Yang, H. Yang, J. Yang, S. Yang, Y. Yao, B. Yu, H. Yuan, Z. Yuan, J. Zhang, X. Zhang, Y. Zhang, Z. Zhang, C. Zhou, J. Zhou, X. Zhou, and T. Zhu, 'Qwen technical report,' 2023."
+            },
+            {
+              "title": "Textbooks are all you need ii: phi-1.5 technical report",
+              "citation": "Y. Li, S. Bubeck, R. Eldan, A. D. Giorno, S. Gunasekar, and Y. T. Lee, 'Textbooks are all you need ii: phi-1.5 technical report,' 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.3",
+          "sec_title": "Vision-Language Models",
+          "citations": [
+            {
+              "title": "Drivegpt4: Interpretable end-to-end autonomous driving via large language model",
+              "citation": "Z. Xu, Y. Zhang, E. Xie, Z. Zhao, Y. Guo, K. K. Wong, Z. Li, and H. Zhao, 'Drivegpt4: Interpretable end-to-end autonomous driving via large language model,' arXiv preprint arXiv:2310.01412 , 2023."
+            },
+            {
+              "title": "Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario",
+              "citation": "T. Qian, J. Chen, L. Zhuo, Y. Jiao, and Y.-G. Jiang, 'Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario,' arXiv preprint arXiv:2305.14836 , 2023."
+            },
+            {
+              "title": "Talk2bev: Language-enhanced bird's-eye view maps for autonomous driving",
+              "citation": "V. Dewangan, T. Choudhary, S. Chandhok, S. Priyadarshan, A. Jain, A. K. Singh, S. Srivastava, K. M. Jatavallabhula, and K. M. Krishna, 'Talk2bev: Language-enhanced bird's-eye view maps for autonomous driving,' arXiv preprint arXiv:2310.02251 , 2023."
+            },
+            {
+              "title": "Gaia-1: A generative world model for autonomous driving",
+              "citation": "A. Hu, L. Russell, H. Yeo, Z. Murez, G. Fedoseev, A. Kendall, J. Shotton, and G. Corrado, 'Gaia-1: A generative world model for autonomous driving,' arXiv preprint arXiv:2309.17080 , 2023."
+            },
+            {
+              "title": "Drivedreamer: Towards real-world-driven world models for autonomous driving",
+              "citation": "X. Wang, Z. Zhu, G. Huang, X. Chen, and J. Lu, 'Drivedreamer: Towards real-world-driven world models for autonomous driving,' arXiv preprint arXiv:2309.09777 , 2023."
+            },
+            {
+              "title": "Adapt: Action-aware driving caption transformer",
+              "citation": "B. Jin, X. Liu, Y. Zheng, P. Li, H. Zhao, T. Zhang, Y. Zheng, G. Zhou, and J. Liu, 'Adapt: Action-aware driving caption transformer,' arXiv preprint arXiv:2302.00673 , 2023."
+            },
+            {
+              "title": "The traffic scene understanding and prediction based on image captioning",
+              "citation": "W. Li, Z. Qu, H. Song, P. Wang, and B. Xue, 'The traffic scene understanding and prediction based on image captioning,' IEEE Access , vol. 9, pp. 1420-1427, 2020."
+            },
+            {
+              "title": "Drivegpt4: Interpretable end-to-end autonomous driving via large language model",
+              "citation": "Z. Xu, Y. Zhang, E. Xie, Z. Zhao, Y. Guo, K. K. Wong, Z. Li, and H. Zhao, 'Drivegpt4: Interpretable end-to-end autonomous driving via large language model,' arXiv preprint arXiv:2310.01412 , 2023."
+            },
+            {
+              "title": "Lidar-llm: Exploring the potential of large language models for 3d lidar understanding",
+              "citation": "S. Yang, J. Liu, R. Zhang, M. Pan, Z. Guo, X. Li, Z. Chen, P. Gao, Y. Guo, and S. Zhang, 'Lidar-llm: Exploring the potential of large language models for 3d lidar understanding,' 12 2023."
+            },
+            {
+              "title": "Gaia-1: A generative world model for autonomous driving",
+              "citation": "A. Hu, L. Russell, H. Yeo, Z. Murez, G. Fedoseev, A. Kendall, J. Shotton, and G. Corrado, 'Gaia-1: A generative world model for autonomous driving,' arXiv preprint arXiv:2309.17080 , 2023."
+            },
+            {
+              "title": "Adapt: Action-aware driving caption transformer",
+              "citation": "B. Jin, X. Liu, Y. Zheng, P. Li, H. Zhao, T. Zhang, Y. Zheng, G. Zhou, and J. Liu, 'Adapt: Action-aware driving caption transformer,' arXiv preprint arXiv:2302.00673 , 2023."
+            },
+            {
+              "title": "Drivegpt4: Interpretable end-to-end autonomous driving via large language model",
+              "citation": "Z. Xu, Y. Zhang, E. Xie, Z. Zhao, Y. Guo, K. K. Wong, Z. Li, and H. Zhao, 'Drivegpt4: Interpretable end-to-end autonomous driving via large language model,' arXiv preprint arXiv:2310.01412 , 2023."
+            },
+            {
+              "title": "Adapt: Action-aware driving caption transformer",
+              "citation": "B. Jin, X. Liu, Y. Zheng, P. Li, H. Zhao, T. Zhang, Y. Zheng, G. Zhou, and J. Liu, 'Adapt: Action-aware driving caption transformer,' arXiv preprint arXiv:2302.00673 , 2023."
+            },
+            {
+              "title": "Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario",
+              "citation": "T. Qian, J. Chen, L. Zhuo, Y. Jiao, and Y.-G. Jiang, 'Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario,' arXiv preprint arXiv:2305.14836 , 2023."
+            },
+            {
+              "title": "Languageguided 3d object detection in point cloud for autonomous driving",
+              "citation": "W. Cheng, J. Yin, W. Li, R. Yang, and J. Shen, 'Languageguided 3d object detection in point cloud for autonomous driving,' arXiv:2305.15765 , 2023."
+            },
+            {
+              "title": "Can you text what is happening? integrating pre-trained language encoders into trajectory prediction models for autonomous driving",
+              "citation": "A. Keysan, A. Look, E. Kosman, G. G¨ ursun, J. Wagner, Y. Yu, and B. Rakitsch, 'Can you text what is happening? integrating pre-trained language encoders into trajectory prediction models for autonomous driving,' arXiv preprint arXiv:2309.05282 , 2023."
+            },
+            {
+              "title": "The traffic scene understanding and prediction based on image captioning",
+              "citation": "W. Li, Z. Qu, H. Song, P. Wang, and B. Xue, 'The traffic scene understanding and prediction based on image captioning,' IEEE Access , vol. 9, pp. 1420-1427, 2020."
+            },
+            {
+              "title": "Vlpd: Context-aware pedestrian detection via vision-language semantic self-supervision",
+              "citation": "M. Liu, J. Jiang, C. Zhu, and X.-C. Yin, 'Vlpd: Context-aware pedestrian detection via vision-language semantic self-supervision,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 6662-6671, 2023."
+            },
+            {
+              "title": "Alt-pilot: Autonomous navigation with language augmented topometric maps",
+              "citation": "M. Omama, P. Inani, P. Paul, S. C. Yellapragada, K. M. Jatavallabhula, S. Chinchali, and M. Krishna, 'Alt-pilot: Autonomous navigation with language augmented topometric maps,' arXiv:2310.02324 , 2023."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, G. Krueger, and I. Sutskever, 'Learning transferable visual models from natural language supervision,' 2 2021."
+            },
+            {
+              "title": "Reproducible scaling laws for contrastive language-image learning",
+              "citation": "M. Cherti, R. Beaumont, R. Wightman, M. Wortsman, G. Ilharco, C. Gordon, C. Schuhmann, L. Schmidt, and J. Jitsev, 'Reproducible scaling laws for contrastive language-image learning,' 2022."
+            },
+            {
+              "title": "Videoclip: Contrastive pretraining for zero-shot video-text understanding",
+              "citation": "H. Xu, G. Ghosh, P.-Y. Huang, D. Okhonko, A. Aghajanyan, F. Metze, L. Zettlemoyer, and C. Feichtenhofer, 'Videoclip: Contrastive pretraining for zero-shot video-text understanding,' 2021."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, G. Krueger, and I. Sutskever, 'Learning transferable visual models from natural language supervision,' 2 2021."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "VISION-LANGUAGE TASKS IN AUTONOMOUS DRIVING",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Object Referring and Tracking",
+          "citations": [
+            {
+              "title": "nuscenes: A multimodal dataset for autonomous driving",
+              "citation": "H. Caesar, V. Bankiti, A. H. Lang, S. Vora, V. E. Liong, Q. Xu, A. Krishnan, Y. Pan, G. Baldan, and O. Beijbom, 'nuscenes: A multimodal dataset for autonomous driving,' in Proc. of IEEE/CVF conf. on comp. vision and pattern recognition , pp. 11621-11631, 2020."
+            },
+            {
+              "title": "Vision meets robotics: The kitti dataset",
+              "citation": "A. Geiger, P. Lenz, C. Stiller, and R. Urtasun, 'Vision meets robotics: The kitti dataset,' The Int. Journal of Robotics Research , vol. 32, no. 11, pp. 1231-1237, 2013."
+            },
+            {
+              "title": "nuscenes: A multimodal dataset for autonomous driving",
+              "citation": "H. Caesar, V. Bankiti, A. H. Lang, S. Vora, V. E. Liong, Q. Xu, A. Krishnan, Y. Pan, G. Baldan, and O. Beijbom, 'nuscenes: A multimodal dataset for autonomous driving,' in Proc. of IEEE/CVF conf. on comp. vision and pattern recognition , pp. 11621-11631, 2020."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.1.1",
+              "sec_title": "Single or Multiple Object Referring",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.2",
+              "sec_title": "Referred Object Tracking",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.3",
+              "sec_title": "Evaluation Metrics",
+              "citations": [
+                {
+                  "title": "nuscenes: A multimodal dataset for autonomous driving",
+                  "citation": "H. Caesar, V. Bankiti, A. H. Lang, S. Vora, V. E. Liong, Q. Xu, A. Krishnan, Y. Pan, G. Baldan, and O. Beijbom, 'nuscenes: A multimodal dataset for autonomous driving,' in Proc. of IEEE/CVF conf. on comp. vision and pattern recognition , pp. 11621-11631, 2020."
+                },
+                {
+                  "title": "Vision meets robotics: The kitti dataset",
+                  "citation": "A. Geiger, P. Lenz, C. Stiller, and R. Urtasun, 'Vision meets robotics: The kitti dataset,' The Int. Journal of Robotics Research , vol. 32, no. 11, pp. 1231-1237, 2013."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Open-Vocabulary Traffic Environment Perception",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "3.2.1",
+              "sec_title": "Open-Vocabulary 3D Object Detection",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.2",
+              "sec_title": "Open-Vocabulary 3D Semantic Segmentation",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.3",
+              "sec_title": "Evaluation Metrics",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "Traffic Scene Understanding",
+          "citations": [
+            {
+              "title": "Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario",
+              "citation": "T. Qian, J. Chen, L. Zhuo, Y. Jiao, and Y.-G. Jiang, 'Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario,' arXiv preprint arXiv:2305.14836 , 2023."
+            },
+            {
+              "title": "Talk2bev: Language-enhanced bird's-eye view maps for autonomous driving",
+              "citation": "V. Dewangan, T. Choudhary, S. Chandhok, S. Priyadarshan, A. Jain, A. K. Singh, S. Srivastava, K. M. Jatavallabhula, and K. M. Krishna, 'Talk2bev: Language-enhanced bird's-eye view maps for autonomous driving,' arXiv preprint arXiv:2310.02251 , 2023."
+            },
+            {
+              "title": "Bleu: a method for automatic evaluation of machine translation",
+              "citation": "K. Papineni, S. Roukos, T. Ward, and W.-J. Zhu, 'Bleu: a method for automatic evaluation of machine translation,' in Proc. of Association for Computational Linguistics , ACL '02, (USA), p. 311-318, Association for Computational Linguistics, 2002."
+            },
+            {
+              "title": "METEOR: An automatic metric for MT evaluation with improved correlation with human judgments",
+              "citation": "S. Banerjee and A. Lavie, 'METEOR: An automatic metric for MT evaluation with improved correlation with human judgments,' in Proc. of the ACL Workshop on Intrinsic and Extrinsic Evaluation Measures for Machine Translation and/or Summarization (J. Goldstein, A. Lavie, C.-Y. Lin, and C. Voss, eds.), (Ann Arbor, Michigan), pp. 65-72, Association for Computational Linguistics, June 2005."
+            },
+            {
+              "title": "Rouge 2.0: Updated and improved measures for evaluation of summarization tasks",
+              "citation": "K. Ganesan, 'Rouge 2.0: Updated and improved measures for evaluation of summarization tasks,' 2018."
+            },
+            {
+              "title": "Cider: Consensus-based image description evaluation",
+              "citation": "R. Vedantam, C. L. Zitnick, and D. Parikh, 'Cider: Consensus-based image description evaluation,' 2015."
+            },
+            {
+              "title": "Reason2drive: Towards interpretable and chain-based reasoning for autonomous driving",
+              "citation": "M. Nie, R. Peng, C. Wang, X. Cai, J. Han, H. Xu, and L. Zhang, 'Reason2drive: Towards interpretable and chain-based reasoning for autonomous driving,' 12 2023."
+            },
+            {
+              "title": "Bertscore: Evaluating text generation with bert",
+              "citation": "T. Zhang*, V. Kishore*, F. Wu*, K. Q. Weinberger, and Y. Artzi, 'Bertscore: Evaluating text generation with bert,' in Int. Conf. on Learning Representations , 2020."
+            },
+            {
+              "title": "Reason2drive: Towards interpretable and chain-based reasoning for autonomous driving",
+              "citation": "M. Nie, R. Peng, C. Wang, X. Cai, J. Han, H. Xu, and L. Zhang, 'Reason2drive: Towards interpretable and chain-based reasoning for autonomous driving,' 12 2023."
+            },
+            {
+              "title": "Llama 2: Open foundation and fine-tuned chat models",
+              "citation": "H. Touvron, L. Martin, K. Stone, P. Albert, A. Almahairi, Y. Babaei, N. Bashlykov, S. Batra, P. Bhargava, S. Bhosale, et al. , 'Llama 2: Open foundation and fine-tuned chat models,' arXiv:2307.09288 , 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.3.1",
+              "sec_title": "Visual Question Answering",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.3.2",
+              "sec_title": "Captioning",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.3.3",
+              "sec_title": "Evaluation Metrics",
+              "citations": [
+                {
+                  "title": "Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario",
+                  "citation": "T. Qian, J. Chen, L. Zhuo, Y. Jiao, and Y.-G. Jiang, 'Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario,' arXiv preprint arXiv:2305.14836 , 2023."
+                },
+                {
+                  "title": "Talk2bev: Language-enhanced bird's-eye view maps for autonomous driving",
+                  "citation": "V. Dewangan, T. Choudhary, S. Chandhok, S. Priyadarshan, A. Jain, A. K. Singh, S. Srivastava, K. M. Jatavallabhula, and K. M. Krishna, 'Talk2bev: Language-enhanced bird's-eye view maps for autonomous driving,' arXiv preprint arXiv:2310.02251 , 2023."
+                },
+                {
+                  "title": "Bleu: a method for automatic evaluation of machine translation",
+                  "citation": "K. Papineni, S. Roukos, T. Ward, and W.-J. Zhu, 'Bleu: a method for automatic evaluation of machine translation,' in Proc. of Association for Computational Linguistics , ACL '02, (USA), p. 311-318, Association for Computational Linguistics, 2002."
+                },
+                {
+                  "title": "METEOR: An automatic metric for MT evaluation with improved correlation with human judgments",
+                  "citation": "S. Banerjee and A. Lavie, 'METEOR: An automatic metric for MT evaluation with improved correlation with human judgments,' in Proc. of the ACL Workshop on Intrinsic and Extrinsic Evaluation Measures for Machine Translation and/or Summarization (J. Goldstein, A. Lavie, C.-Y. Lin, and C. Voss, eds.), (Ann Arbor, Michigan), pp. 65-72, Association for Computational Linguistics, June 2005."
+                },
+                {
+                  "title": "Rouge 2.0: Updated and improved measures for evaluation of summarization tasks",
+                  "citation": "K. Ganesan, 'Rouge 2.0: Updated and improved measures for evaluation of summarization tasks,' 2018."
+                },
+                {
+                  "title": "Cider: Consensus-based image description evaluation",
+                  "citation": "R. Vedantam, C. L. Zitnick, and D. Parikh, 'Cider: Consensus-based image description evaluation,' 2015."
+                },
+                {
+                  "title": "Reason2drive: Towards interpretable and chain-based reasoning for autonomous driving",
+                  "citation": "M. Nie, R. Peng, C. Wang, X. Cai, J. Han, H. Xu, and L. Zhang, 'Reason2drive: Towards interpretable and chain-based reasoning for autonomous driving,' 12 2023."
+                },
+                {
+                  "title": "Bertscore: Evaluating text generation with bert",
+                  "citation": "T. Zhang*, V. Kishore*, F. Wu*, K. Q. Weinberger, and Y. Artzi, 'Bertscore: Evaluating text generation with bert,' in Int. Conf. on Learning Representations , 2020."
+                },
+                {
+                  "title": "Llama 2: Open foundation and fine-tuned chat models",
+                  "citation": "H. Touvron, L. Martin, K. Stone, P. Albert, A. Almahairi, Y. Babaei, N. Bashlykov, S. Batra, P. Bhargava, S. Bhosale, et al. , 'Llama 2: Open foundation and fine-tuned chat models,' arXiv:2307.09288 , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.4",
+          "sec_title": "Language-Guided Navigation",
+          "citations": [
+            {
+              "title": "Talk2bev: Language-enhanced bird's-eye view maps for autonomous driving",
+              "citation": "V. Dewangan, T. Choudhary, S. Chandhok, S. Priyadarshan, A. Jain, A. K. Singh, S. Srivastava, K. M. Jatavallabhula, and K. M. Krishna, 'Talk2bev: Language-enhanced bird's-eye view maps for autonomous driving,' arXiv preprint arXiv:2310.02251 , 2023."
+            },
+            {
+              "title": "Lidar-llm: Exploring the potential of large language models for 3d lidar understanding",
+              "citation": "S. Yang, J. Liu, R. Zhang, M. Pan, Z. Guo, X. Li, Z. Chen, P. Gao, Y. Guo, and S. Zhang, 'Lidar-llm: Exploring the potential of large language models for 3d lidar understanding,' 12 2023."
+            },
+            {
+              "title": "nuscenes: A multimodal dataset for autonomous driving",
+              "citation": "H. Caesar, V. Bankiti, A. H. Lang, S. Vora, V. E. Liong, Q. Xu, A. Krishnan, Y. Pan, G. Baldan, and O. Beijbom, 'nuscenes: A multimodal dataset for autonomous driving,' in Proc. of IEEE/CVF conf. on comp. vision and pattern recognition , pp. 11621-11631, 2020."
+            },
+            {
+              "title": "Reason2drive: Towards interpretable and chain-based reasoning for autonomous driving",
+              "citation": "M. Nie, R. Peng, C. Wang, X. Cai, J. Han, H. Xu, and L. Zhang, 'Reason2drive: Towards interpretable and chain-based reasoning for autonomous driving,' 12 2023."
+            },
+            {
+              "title": "Alt-pilot: Autonomous navigation with language augmented topometric maps",
+              "citation": "M. Omama, P. Inani, P. Paul, S. C. Yellapragada, K. M. Jatavallabhula, S. Chinchali, and M. Krishna, 'Alt-pilot: Autonomous navigation with language augmented topometric maps,' arXiv:2310.02324 , 2023."
+            },
+            {
+              "title": "Ground then navigate: Language-guided navigation in dynamic scenes",
+              "citation": "K. Jain, V. Chhangani, A. Tiwari, K. M. Krishna, and V. Gandhi, 'Ground then navigate: Language-guided navigation in dynamic scenes,' in 2023 IEEE Int. Conf. on Robotics and Automation (ICRA) , pp. 4113-4120, IEEE, 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.4.1",
+              "sec_title": "Task Description",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.4.2",
+              "sec_title": "Evaluation Metrics",
+              "citations": [
+                {
+                  "title": "Alt-pilot: Autonomous navigation with language augmented topometric maps",
+                  "citation": "M. Omama, P. Inani, P. Paul, S. C. Yellapragada, K. M. Jatavallabhula, S. Chinchali, and M. Krishna, 'Alt-pilot: Autonomous navigation with language augmented topometric maps,' arXiv:2310.02324 , 2023."
+                },
+                {
+                  "title": "Ground then navigate: Language-guided navigation in dynamic scenes",
+                  "citation": "K. Jain, V. Chhangani, A. Tiwari, K. M. Krishna, and V. Gandhi, 'Ground then navigate: Language-guided navigation in dynamic scenes,' in 2023 IEEE Int. Conf. on Robotics and Automation (ICRA) , pp. 4113-4120, IEEE, 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.5",
+          "sec_title": "Conditional Autonomous Driving Data Generation",
+          "citations": [
+            {
+              "title": "Gans trained by a two time-scale update rule converge to a local nash equilibrium",
+              "citation": "M. Heusel, H. Ramsauer, T. Unterthiner, B. Nessler, and S. Hochreiter, 'Gans trained by a two time-scale update rule converge to a local nash equilibrium,' 2018."
+            },
+            {
+              "title": "Towards accurate generative models of video: A new metric & challenges",
+              "citation": "T. Unterthiner, S. van Steenkiste, K. Kurach, R. Marinier, M. Michalski, and S. Gelly, 'Towards accurate generative models of video: A new metric &amp; challenges,' 2019."
+            },
+            {
+              "title": "Bevcontrol: Accurately controlling street-view elements with multi-perspective consistency via bev sketch layout",
+              "citation": "K. Yang, E. Ma, J. Peng, Q. Guo, D. Lin, and K. Yu, 'Bevcontrol: Accurately controlling street-view elements with multi-perspective consistency via bev sketch layout,' arXiv preprint arXiv:2308.01661 , 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.5.1",
+              "sec_title": "Task Description",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.5.2",
+              "sec_title": "Evaluation Metrics",
+              "citations": [
+                {
+                  "title": "Gans trained by a two time-scale update rule converge to a local nash equilibrium",
+                  "citation": "M. Heusel, H. Ramsauer, T. Unterthiner, B. Nessler, and S. Hochreiter, 'Gans trained by a two time-scale update rule converge to a local nash equilibrium,' 2018."
+                },
+                {
+                  "title": "Towards accurate generative models of video: A new metric & challenges",
+                  "citation": "T. Unterthiner, S. van Steenkiste, K. Kurach, R. Marinier, M. Michalski, and S. Gelly, 'Towards accurate generative models of video: A new metric & challenges,' 2019."
+                },
+                {
+                  "title": "Bevcontrol: Accurately controlling street-view elements with multi-perspective consistency via bev sketch layout",
+                  "citation": "K. Yang, E. Ma, J. Peng, Q. Guo, D. Lin, and K. Yu, 'Bevcontrol: Accurately controlling street-view elements with multi-perspective consistency via bev sketch layout,' arXiv preprint arXiv:2308.01661 , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "MAINSTREAM METHODS AND TECHNIQUES",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Perception and Understanding",
+          "citations": [
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, G. Krueger, and I. Sutskever, 'Learning transferable visual models from natural language supervision,' 2 2021."
+            },
+            {
+              "title": "Long-clip: Unlocking the long-text capability of clip",
+              "citation": "B. Zhang, P. Zhang, X. Dong, Y. Zang, and J. Wang, 'Long-clip: Unlocking the long-text capability of clip,' 2024."
+            },
+            {
+              "title": "Unsupervised multi-view pedestrian detection",
+              "citation": "M. Liu, C. Zhu, S. Ren, and X.-C. Yin, 'Unsupervised multi-view pedestrian detection,' arXiv preprint arXiv:2305.12457 , 2023."
+            },
+            {
+              "title": "Openscene: 3d scene understanding with open vocabularies",
+              "citation": "S. Peng, K. Genova, C. Jiang, A. Tagliasacchi, M. Pollefeys, T. Funkhouser, et al. , 'Openscene: 3d scene understanding with open vocabularies,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 815-824, 2023."
+            },
+            {
+              "title": "Languageguided 3d object detection in point cloud for autonomous driving",
+              "citation": "W. Cheng, J. Yin, W. Li, R. Yang, and J. Shen, 'Languageguided 3d object detection in point cloud for autonomous driving,' arXiv:2305.15765 , 2023."
+            },
+            {
+              "title": "Referring multi-object tracking",
+              "citation": "D. Wu, W. Han, T. Wang, X. Dong, X. Zhang, and J. Shen, 'Referring multi-object tracking,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 14633-14642, 2023."
+            },
+            {
+              "title": "Language prompt for autonomous driving",
+              "citation": "D. Wu, W. Han, T. Wang, Y. Liu, X. Zhang, and J. Shen, 'Language prompt for autonomous driving,' preprint arXiv:2309.04379 , 2023."
+            },
+            {
+              "title": "Openscene: 3d scene understanding with open vocabularies",
+              "citation": "S. Peng, K. Genova, C. Jiang, A. Tagliasacchi, M. Pollefeys, T. Funkhouser, et al. , 'Openscene: 3d scene understanding with open vocabularies,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 815-824, 2023."
+            },
+            {
+              "title": "Clip2scene: Towards label-efficient 3d scene understanding by clip",
+              "citation": "R. Chen, Y. Liu, L. Kong, X. Zhu, Y. Ma, Y. Li, Y. Hou, Y. Qiao, and W. Wang, 'Clip2scene: Towards label-efficient 3d scene understanding by clip,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 7020-7030, 2023."
+            },
+            {
+              "title": "Unsupervised 3d perception with 2d vision-language distillation for autonomous driving",
+              "citation": "M. Najibi, J. Ji, Y. Zhou, C. R. Qi, X. Yan, S. Ettinger, and D. Anguelov, 'Unsupervised 3d perception with 2d vision-language distillation for autonomous driving,' in Proc. of IEEE/CVF Int. Conf. on Computer Vision , pp. 8602-8612, 2023."
+            },
+            {
+              "title": "Gpt-4v(ision) system card",
+              "citation": "OpenAI, 'Gpt-4v(ision) system card,' 2023."
+            },
+            {
+              "title": "A9-dataset: Multi-sensor infrastructurebased dataset for mobility research",
+              "citation": "C. Creß, W. Zimmer, L. Strand, M. Fortkord, S. Dai, V. Lakshminarasimhan, and A. Knoll, 'A9-dataset: Multi-sensor infrastructurebased dataset for mobility research,' in 2022 IEEE Intelligent Vehicles Symposium (IV) , pp. 965-970, IEEE, 2022."
+            },
+            {
+              "title": "Zelda: Video analytics using vision-language models",
+              "citation": "F. Romero, C. Winston, J. Hauswald, M. Zaharia, and C. Kozyrakis, 'Zelda: Video analytics using vision-language models,' arXiv:2305.03785 , 2023."
+            },
+            {
+              "title": "Bev-clip: Multi-modal bev retrieval methodology for complex scene in autonomous driving",
+              "citation": "D. Wei, T. Gao, Z. Jia, C. Cai, C. Hou, P. Jia, F. Liu, K. Zhan, J. Fan, Y. Zhao, and Y. Wang, 'Bev-clip: Multi-modal bev retrieval methodology for complex scene in autonomous driving,' 1 2024."
+            },
+            {
+              "title": "The 6th AI City Challenge",
+              "citation": "S. Wang, D. C. Anastasiu, S. Sclaroff, and A. Li, 'The 6th AI City Challenge,' pp. 3347-3356, 2022."
+            },
+            {
+              "title": "The 7th AI City Challenge",
+              "citation": "S. Wang, D. C. Anastasiu, M. S. Arya, and S. Sclaroff, 'The 7th AI City Challenge,' 2023."
+            },
+            {
+              "title": "A multi-granularity retrieval system for natural language-based vehicle retrieval",
+              "citation": "J. Zhang, X. Lin, M. Jiang, Y. Yu, C. Gong, W. Zhang, X. Tan, Y. Li, E. Ding, and G. Li, 'A multi-granularity retrieval system for natural language-based vehicle retrieval,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 3216-3225, 2022."
+            },
+            {
+              "title": "Tracked-vehicle retrieval by natural language descriptions with multi-contextual adaptive knowledge",
+              "citation": "H. D.-A. Le, Q. Q.-V. Nguyen, D. T. Luu, T. T.-T. Chau, N. M. Chung, and S. V.-U. Ha, 'Tracked-vehicle retrieval by natural language descriptions with multi-contextual adaptive knowledge,' in Proc. IEEE/CVF Conf. on Comp. Vision and Pattern Recog. , pp. 5510-5518, 2023."
+            },
+            {
+              "title": "A unified multi-modal structure for retrieving tracked vehicles through natural language descriptions",
+              "citation": "D. Xie, L. Liu, S. Zhang, and J. Tian, 'A unified multi-modal structure for retrieving tracked vehicles through natural language descriptions,' in 2023 IEEE/CVF Conf. on Computer Vision and Pattern Recognition Workshops (CVPRW) , pp. 5419-5427, 2023."
+            },
+            {
+              "title": "Gpt-4v(ision) system card",
+              "citation": "OpenAI, 'Gpt-4v(ision) system card,' 2023."
+            },
+            {
+              "title": "The traffic scene understanding and prediction based on image captioning",
+              "citation": "W. Li, Z. Qu, H. Song, P. Wang, and B. Xue, 'The traffic scene understanding and prediction based on image captioning,' IEEE Access , vol. 9, pp. 1420-1427, 2020."
+            },
+            {
+              "title": "Delving into clip latent space for video anomaly recognition",
+              "citation": "L. Zanella, B. Liberatori, W. Menapace, F. Poiesi, Y. Wang, and E. Ricci, 'Delving into clip latent space for video anomaly recognition,' arXiv preprint arXiv:2310.02835 , 2023."
+            },
+            {
+              "title": "Learning to prompt for vision-language models",
+              "citation": "K. Zhou, J. Yang, C. C. Loy, and Z. Liu, 'Learning to prompt for vision-language models,' Int. Journal of Computer Vision , vol. 130, no. 9, pp. 2337-2348, 2022."
+            },
+            {
+              "title": "Semantic anomaly detection with large language models",
+              "citation": "A. Elhafsi, R. Sinha, C. Agia, E. Schmerling, I. Nesnas, and M. Pavone, 'Semantic anomaly detection with large language models,' arXiv preprint arXiv:2305.11307 , 2023."
+            },
+            {
+              "title": "Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario",
+              "citation": "T. Qian, J. Chen, L. Zhuo, Y. Jiao, and Y.-G. Jiang, 'Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario,' arXiv preprint arXiv:2305.14836 , 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Object Referring",
+              "citations": [
+                {
+                  "title": "Languageguided 3d object detection in point cloud for autonomous driving",
+                  "citation": "W. Cheng, J. Yin, W. Li, R. Yang, and J. Shen, 'Languageguided 3d object detection in point cloud for autonomous driving,' arXiv:2305.15765 , 2023."
+                },
+                {
+                  "title": "Referring multi-object tracking",
+                  "citation": "D. Wu, W. Han, T. Wang, X. Dong, X. Zhang, and J. Shen, 'Referring multi-object tracking,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 14633-14642, 2023."
+                },
+                {
+                  "title": "Language prompt for autonomous driving",
+                  "citation": "D. Wu, W. Han, T. Wang, Y. Liu, X. Zhang, and J. Shen, 'Language prompt for autonomous driving,' preprint arXiv:2309.04379 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.2",
+              "sec_title": "Open-Vocabulary 3D Object Detection and Semantic Segmentation",
+              "citations": [
+                {
+                  "title": "Openscene: 3d scene understanding with open vocabularies",
+                  "citation": "S. Peng, K. Genova, C. Jiang, A. Tagliasacchi, M. Pollefeys, T. Funkhouser, et al. , 'Openscene: 3d scene understanding with open vocabularies,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 815-824, 2023."
+                },
+                {
+                  "title": "Clip2scene: Towards label-efficient 3d scene understanding by clip",
+                  "citation": "R. Chen, Y. Liu, L. Kong, X. Zhu, Y. Ma, Y. Li, Y. Hou, Y. Qiao, and W. Wang, 'Clip2scene: Towards label-efficient 3d scene understanding by clip,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 7020-7030, 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.3",
+              "sec_title": "Language-Guided Retrieval",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.4",
+              "sec_title": "Driving Scene Understanding",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.5",
+              "sec_title": "Visual Scene Reasoning",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.6",
+              "sec_title": "Pedestrian Detection",
+              "citations": [
+                {
+                  "title": "Vlpd: Context-aware pedestrian detection via vision-language semantic self-supervision",
+                  "citation": "M. Liu, J. Jiang, C. Zhu, and X.-C. Yin, 'Vlpd: Context-aware pedestrian detection via vision-language semantic self-supervision,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 6662-6671, 2023."
+                },
+                {
+                  "title": "Unsupervised multi-view pedestrian detection",
+                  "citation": "M. Liu, C. Zhu, S. Ren, and X.-C. Yin, 'Unsupervised multi-view pedestrian detection,' arXiv preprint arXiv:2305.12457 , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Navigation and Planning",
+          "citations": [
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, G. Krueger, and I. Sutskever, 'Learning transferable visual models from natural language supervision,' 2 2021."
+            },
+            {
+              "title": "Alt-pilot: Autonomous navigation with language augmented topometric maps",
+              "citation": "M. Omama, P. Inani, P. Paul, S. C. Yellapragada, K. M. Jatavallabhula, S. Chinchali, and M. Krishna, 'Alt-pilot: Autonomous navigation with language augmented topometric maps,' arXiv:2310.02324 , 2023."
+            },
+            {
+              "title": "Talk to the vehicle: Language conditioned autonomous navigation of self driving cars",
+              "citation": "N. Sriram, T. Maniar, J. Kalyanasundaram, V. Gandhi, B. Bhowmick, and K. M. Krishna, 'Talk to the vehicle: Language conditioned autonomous navigation of self driving cars,' in Int. Conf. on Intelligent Robots and Systems (IROS) , pp. 5284-5290, IEEE, 2019."
+            },
+            {
+              "title": "Ground then navigate: Language-guided navigation in dynamic scenes",
+              "citation": "K. Jain, V. Chhangani, A. Tiwari, K. M. Krishna, and V. Gandhi, 'Ground then navigate: Language-guided navigation in dynamic scenes,' in 2023 IEEE Int. Conf. on Robotics and Automation (ICRA) , pp. 4113-4120, IEEE, 2023."
+            },
+            {
+              "title": "Alt-pilot: Autonomous navigation with language augmented topometric maps",
+              "citation": "M. Omama, P. Inani, P. Paul, S. C. Yellapragada, K. M. Jatavallabhula, S. Chinchali, and M. Krishna, 'Alt-pilot: Autonomous navigation with language augmented topometric maps,' arXiv:2310.02324 , 2023."
+            },
+            {
+              "title": "Gpt-driver: Learning to drive with gpt",
+              "citation": "J. Mao, Y. Qian, H. Zhao, and Y. Wang, 'Gpt-driver: Learning to drive with gpt,' arXiv preprint arXiv:2310.01415 , 2023."
+            },
+            {
+              "title": "Can you text what is happening? integrating pre-trained language encoders into trajectory prediction models for autonomous driving",
+              "citation": "A. Keysan, A. Look, E. Kosman, G. G¨ ursun, J. Wagner, Y. Yu, and B. Rakitsch, 'Can you text what is happening? integrating pre-trained language encoders into trajectory prediction models for autonomous driving,' arXiv preprint arXiv:2309.05282 , 2023."
+            },
+            {
+              "title": "Drivevlm: The convergence of autonomous driving and large vision-language models",
+              "citation": "X. Tian, J. Gu, B. Li, Y. Liu, C. Hu, Y. Wang, K. Zhan, P. Jia, X. Lang, and H. Zhao, 'Drivevlm: The convergence of autonomous driving and large vision-language models,' 2 2024."
+            },
+            {
+              "title": "Qwen-vl: A versatile vision-language model for understanding, localization, text reading, and beyond",
+              "citation": "J. Bai, S. Bai, S. Yang, S. Wang, S. Tan, P. Wang, J. Lin, C. Zhou, and J. Zhou, 'Qwen-vl: A versatile vision-language model for understanding, localization, text reading, and beyond,' 2023."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.2.1",
+              "sec_title": "Language-Guided Navigation",
+              "citations": [
+                {
+                  "title": "Talk to the vehicle: Language conditioned autonomous navigation of self driving cars",
+                  "citation": "N. Sriram, T. Maniar, J. Kalyanasundaram, V. Gandhi, B. Bhowmick, and K. M. Krishna, 'Talk to the vehicle: Language conditioned autonomous navigation of self driving cars,' in Int. Conf. on Intelligent Robots and Systems (IROS) , pp. 5284-5290, IEEE, 2019."
+                },
+                {
+                  "title": "Ground then navigate: Language-guided navigation in dynamic scenes",
+                  "citation": "K. Jain, V. Chhangani, A. Tiwari, K. M. Krishna, and V. Gandhi, 'Ground then navigate: Language-guided navigation in dynamic scenes,' in 2023 IEEE Int. Conf. on Robotics and Automation (ICRA) , pp. 4113-4120, IEEE, 2023."
+                },
+                {
+                  "title": "Alt-pilot: Autonomous navigation with language augmented topometric maps",
+                  "citation": "M. Omama, P. Inani, P. Paul, S. C. Yellapragada, K. M. Jatavallabhula, S. Chinchali, and M. Krishna, 'Alt-pilot: Autonomous navigation with language augmented topometric maps,' arXiv:2310.02324 , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.2",
+              "sec_title": "Prediction and Planning",
+              "citations": [
+                {
+                  "title": "Gpt-driver: Learning to drive with gpt",
+                  "citation": "J. Mao, Y. Qian, H. Zhao, and Y. Wang, 'Gpt-driver: Learning to drive with gpt,' arXiv preprint arXiv:2310.01415 , 2023."
+                },
+                {
+                  "title": "Can you text what is happening? integrating pre-trained language encoders into trajectory prediction models for autonomous driving",
+                  "citation": "A. Keysan, A. Look, E. Kosman, G. G¨ ursun, J. Wagner, Y. Yu, and B. Rakitsch, 'Can you text what is happening? integrating pre-trained language encoders into trajectory prediction models for autonomous driving,' arXiv preprint arXiv:2309.05282 , 2023."
+                },
+                {
+                  "title": "Drivevlm: The convergence of autonomous driving and large vision-language models",
+                  "citation": "X. Tian, J. Gu, B. Li, Y. Liu, C. Hu, Y. Wang, K. Zhan, P. Jia, X. Lang, and H. Zhao, 'Drivevlm: The convergence of autonomous driving and large vision-language models,' 2 2024."
+                },
+                {
+                  "title": "Qwen-vl: A versatile vision-language model for understanding, localization, text reading, and beyond",
+                  "citation": "J. Bai, S. Bai, S. Yang, S. Wang, S. Tan, P. Wang, J. Lin, C. Zhou, and J. Zhou, 'Qwen-vl: A versatile vision-language model for understanding, localization, text reading, and beyond,' 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.3",
+          "sec_title": "Decision-Making and Control",
+          "citations": [
+            {
+              "title": "Advisable learning for self-driving vehicles by internalizing observation-to-action rules",
+              "citation": "J. Kim, S. Moon, A. Rohrbach, T. Darrell, and J. Canny, 'Advisable learning for self-driving vehicles by internalizing observation-to-action rules,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 9661-9670, 2020."
+            },
+            {
+              "title": "Drive as you speak: Enabling human-like interaction with large language models in autonomous vehicles",
+              "citation": "C. Cui, Y. Ma, X. Cao, W. Ye, and Z. Wang, 'Drive as you speak: Enabling human-like interaction with large language models in autonomous vehicles,' arXiv preprint arXiv:2309.10228 , 2023."
+            },
+            {
+              "title": "Drive like a human: Rethinking autonomous driving with large language models",
+              "citation": "D. Fu, X. Li, L. Wen, M. Dou, P. Cai, B. Shi, and Y. Qiao, 'Drive like a human: Rethinking autonomous driving with large language models,' arXiv preprint arXiv:2307.07162 , 2023."
+            },
+            {
+              "title": "Languagempc: Large language models as decision makers for autonomous driving",
+              "citation": "H. Sha, Y. Mu, Y. Jiang, L. Chen, C. Xu, P. Luo, S. E. Li, M. Tomizuka, W. Zhan, and M. Ding, 'Languagempc: Large language models as decision makers for autonomous driving,' arXiv:2310.03026 , 2023."
+            },
+            {
+              "title": "Driving with llms: Fusing object-level vector modality for explainable autonomous driving",
+              "citation": "L. Chen, O. Sinavski, J. H¨ unermann, A. Karnsund, A. J. Willmott, D. Birch, D. Maund, and J. Shotton, 'Driving with llms: Fusing object-level vector modality for explainable autonomous driving,' arXiv preprint arXiv:2310.01957 , 2023."
+            },
+            {
+              "title": "Surrealdriver: Designing generative driver agent simulation framework in urban contexts based on large language model",
+              "citation": "Y. Jin, X. Shen, H. Peng, X. Liu, J. Qin, J. Li, J. Xie, P. Gao, G. Zhou, and J. Gong, 'Surrealdriver: Designing generative driver agent simulation framework in urban contexts based on large language model,' arXiv preprint arXiv:2309.13193 , 2023."
+            },
+            {
+              "title": "Drive like a human: Rethinking autonomous driving with large language models",
+              "citation": "D. Fu, X. Li, L. Wen, M. Dou, P. Cai, B. Shi, and Y. Qiao, 'Drive like a human: Rethinking autonomous driving with large language models,' arXiv preprint arXiv:2307.07162 , 2023."
+            },
+            {
+              "title": "Drive as you speak: Enabling human-like interaction with large language models in autonomous vehicles",
+              "citation": "C. Cui, Y. Ma, X. Cao, W. Ye, and Z. Wang, 'Drive as you speak: Enabling human-like interaction with large language models in autonomous vehicles,' arXiv preprint arXiv:2309.10228 , 2023."
+            },
+            {
+              "title": "Dilu: A knowledge-driven approach to autonomous driving with large language models",
+              "citation": "L. Wen, D. Fu, X. Li, X. Cai, T. Ma, P. Cai, M. Dou, B. Shi, L. He, and Y. Qiao, 'Dilu: A knowledge-driven approach to autonomous driving with large language models,' arXiv preprint arXiv:2309.16292 , 2023."
+            },
+            {
+              "title": "Surrealdriver: Designing generative driver agent simulation framework in urban contexts based on large language model",
+              "citation": "Y. Jin, X. Shen, H. Peng, X. Liu, J. Qin, J. Li, J. Xie, P. Gao, G. Zhou, and J. Gong, 'Surrealdriver: Designing generative driver agent simulation framework in urban contexts based on large language model,' arXiv preprint arXiv:2309.13193 , 2023."
+            },
+            {
+              "title": "Languagempc: Large language models as decision makers for autonomous driving",
+              "citation": "H. Sha, Y. Mu, Y. Jiang, L. Chen, C. Xu, P. Luo, S. E. Li, M. Tomizuka, W. Zhan, and M. Ding, 'Languagempc: Large language models as decision makers for autonomous driving,' arXiv:2310.03026 , 2023."
+            },
+            {
+              "title": "Drive as you speak: Enabling human-like interaction with large language models in autonomous vehicles",
+              "citation": "C. Cui, Y. Ma, X. Cao, W. Ye, and Z. Wang, 'Drive as you speak: Enabling human-like interaction with large language models in autonomous vehicles,' arXiv preprint arXiv:2309.10228 , 2023."
+            },
+            {
+              "title": "Dilu: A knowledge-driven approach to autonomous driving with large language models",
+              "citation": "L. Wen, D. Fu, X. Li, X. Cai, T. Ma, P. Cai, M. Dou, B. Shi, L. He, and Y. Qiao, 'Dilu: A knowledge-driven approach to autonomous driving with large language models,' arXiv preprint arXiv:2309.16292 , 2023."
+            },
+            {
+              "title": "Bevgpt: Generative pre-trained large model for autonomous driving prediction, decision-making, and planning",
+              "citation": "P. Wang, M. Zhu, H. Lu, H. Zhong, X. Chen, S. Shen, X. Wang, and Y. Wang, 'Bevgpt: Generative pre-trained large model for autonomous driving prediction, decision-making, and planning,' 10 2023."
+            },
+            {
+              "title": "Driving with llms: Fusing object-level vector modality for explainable autonomous driving",
+              "citation": "L. Chen, O. Sinavski, J. H¨ unermann, A. Karnsund, A. J. Willmott, D. Birch, D. Maund, and J. Shotton, 'Driving with llms: Fusing object-level vector modality for explainable autonomous driving,' arXiv preprint arXiv:2310.01957 , 2023."
+            },
+            {
+              "title": "Surrealdriver: Designing generative driver agent simulation framework in urban contexts based on large language model",
+              "citation": "Y. Jin, X. Shen, H. Peng, X. Liu, J. Qin, J. Li, J. Xie, P. Gao, G. Zhou, and J. Gong, 'Surrealdriver: Designing generative driver agent simulation framework in urban contexts based on large language model,' arXiv preprint arXiv:2309.13193 , 2023."
+            },
+            {
+              "title": "Drive like a human: Rethinking autonomous driving with large language models",
+              "citation": "D. Fu, X. Li, L. Wen, M. Dou, P. Cai, B. Shi, and Y. Qiao, 'Drive like a human: Rethinking autonomous driving with large language models,' arXiv preprint arXiv:2307.07162 , 2023."
+            },
+            {
+              "title": "Language models are few-shot learners",
+              "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, et al. , 'Language models are few-shot learners,' Advances in neural information processing systems , vol. 33, pp. 1877-1901, 2020."
+            },
+            {
+              "title": "Llama-adapter v2: Parameterefficient visual instruction model",
+              "citation": "P. Gao, J. Han, R. Zhang, Z. Lin, S. Geng, A. Zhou, W. Zhang, P. Lu, C. He, X. Yue, H. Li, and Y. Qiao, 'Llama-adapter v2: Parameterefficient visual instruction model,' 2023."
+            },
+            {
+              "title": "Llama-adapter v2: Parameterefficient visual instruction model",
+              "citation": "P. Gao, J. Han, R. Zhang, Z. Lin, S. Geng, A. Zhou, W. Zhang, P. Lu, C. He, X. Yue, H. Li, and Y. Qiao, 'Llama-adapter v2: Parameterefficient visual instruction model,' 2023."
+            },
+            {
+              "title": "Improved baselines with visual instruction tuning",
+              "citation": "H. Liu, C. Li, Y. Li, and Y. J. Lee, 'Improved baselines with visual instruction tuning,' 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.4",
+          "sec_title": "End-to-End Autonomous Driving",
+          "citations": [
+            {
+              "title": "End-toend autonomous driving: Challenges and frontiers",
+              "citation": "L. Chen, P. Wu, K. Chitta, B. Jaeger, A. Geiger, and H. Li, 'End-toend autonomous driving: Challenges and frontiers,' arXiv:2306.16927 , 2023."
+            },
+            {
+              "title": "Drivingdiffusion: Layout-guided multiview driving scene video generation with latent diffusion model",
+              "citation": "X. Li, Y. Zhang, and X. Ye, 'Drivingdiffusion: Layout-guided multiview driving scene video generation with latent diffusion model,' arXiv preprint arXiv:2310.07771 , 2023."
+            },
+            {
+              "title": "Drivegpt4: Interpretable end-to-end autonomous driving via large language model",
+              "citation": "Z. Xu, Y. Zhang, E. Xie, Z. Zhao, Y. Guo, K. K. Wong, Z. Li, and H. Zhao, 'Drivegpt4: Interpretable end-to-end autonomous driving via large language model,' arXiv preprint arXiv:2310.01412 , 2023."
+            },
+            {
+              "title": "Adapt: Action-aware driving caption transformer",
+              "citation": "B. Jin, X. Liu, Y. Zheng, P. Li, H. Zhao, T. Zhang, Y. Zheng, G. Zhou, and J. Liu, 'Adapt: Action-aware driving caption transformer,' arXiv preprint arXiv:2302.00673 , 2023."
+            },
+            {
+              "title": "Drivemlm: Aligning multi-modal large language models with behavioral planning states for autonomous driving",
+              "citation": "W. Wang, J. Xie, C. Hu, H. Zou, J. Fan, W. Tong, Y. Wen, S. Wu, H. Deng, Z. Li, H. Tian, L. Lu, X. Zhu, X. Wang, Y. Qiao, and J. Dai, 'Drivemlm: Aligning multi-modal large language models with behavioral planning states for autonomous driving,' 12 2023."
+            },
+            {
+              "title": "Multi-modal fusion transformer for end-to-end autonomous driving",
+              "citation": "A. Prakash, K. Chitta, and A. Geiger, 'Multi-modal fusion transformer for end-to-end autonomous driving,' 2021."
+            },
+            {
+              "title": "Vlp: Vision language planning for autonomous driving",
+              "citation": "C. Pan, B. Yaman, T. Nesti, A. Mallik, A. G. Allievi, S. Velipasalar, and L. Ren, 'Vlp: Vision language planning for autonomous driving,' 1 2024."
+            },
+            {
+              "title": "Drivegan: Towards a controllable high-quality neural simulation",
+              "citation": "S. W. Kim, J. Philion, A. Torralba, and S. Fidler, 'Drivegan: Towards a controllable high-quality neural simulation,' pp. 5820-5829, 2021."
+            },
+            {
+              "title": "Street-view image generation from a bird's-eye view layout",
+              "citation": "A. Swerdlow, R. Xu, and B. Zhou, 'Street-view image generation from a bird's-eye view layout,' 2024."
+            },
+            {
+              "title": "Drivedreamer: Towards real-world-driven world models for autonomous driving",
+              "citation": "X. Wang, Z. Zhu, G. Huang, X. Chen, and J. Lu, 'Drivedreamer: Towards real-world-driven world models for autonomous driving,' arXiv preprint arXiv:2309.09777 , 2023."
+            },
+            {
+              "title": "Drivingdiffusion: Layout-guided multiview driving scene video generation with latent diffusion model",
+              "citation": "X. Li, Y. Zhang, and X. Ye, 'Drivingdiffusion: Layout-guided multiview driving scene video generation with latent diffusion model,' arXiv preprint arXiv:2310.07771 , 2023."
+            },
+            {
+              "title": "Adriver-i: A general world model for autonomous driving",
+              "citation": "F. Jia, W. Mao, Y. Liu, Y. Zhao, Y. Wen, C. Zhang, X. Zhang, and T. Wang, 'Adriver-i: A general world model for autonomous driving,' 11 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.5",
+          "sec_title": "Data Generation",
+          "citations": [
+            {
+              "title": "Photorealistic text-to-image diffusion models with deep language understanding",
+              "citation": "C. Saharia, W. Chan, S. Saxena, L. Li, J. Whang, E. L. Denton, K. Ghasemipour, R. Gontijo Lopes, B. Karagol Ayan, T. Salimans, et al. , 'Photorealistic text-to-image diffusion models with deep language understanding,' Adv. in Neural Inf. Proc. Systems , vol. 35, pp. 36479-36494, 2022."
+            },
+            {
+              "title": "Videocomposer: Compositional video synthesis with motion controllability",
+              "citation": "X. Wang, H. Yuan, S. Zhang, D. Chen, J. Wang, Y. Zhang, Y. Shen, D. Zhao, and J. Zhou, 'Videocomposer: Compositional video synthesis with motion controllability,' arXiv preprint arXiv:2306.02018 , 2023."
+            },
+            {
+              "title": "Drivegan: Towards a controllable high-quality neural simulation",
+              "citation": "S. W. Kim, J. Philion, A. Torralba, and S. Fidler, 'Drivegan: Towards a controllable high-quality neural simulation,' pp. 5820-5829, 2021."
+            },
+            {
+              "title": "Bevcontrol: Accurately controlling street-view elements with multi-perspective consistency via bev sketch layout",
+              "citation": "K. Yang, E. Ma, J. Peng, Q. Guo, D. Lin, and K. Yu, 'Bevcontrol: Accurately controlling street-view elements with multi-perspective consistency via bev sketch layout,' arXiv preprint arXiv:2308.01661 , 2023."
+            },
+            {
+              "title": "Drivingdiffusion: Layout-guided multiview driving scene video generation with latent diffusion model",
+              "citation": "X. Li, Y. Zhang, and X. Ye, 'Drivingdiffusion: Layout-guided multiview driving scene video generation with latent diffusion model,' arXiv preprint arXiv:2310.07771 , 2023."
+            },
+            {
+              "title": "Highresolution image synthesis with latent diffusion models",
+              "citation": "R. Rombach, A. Blattmann, D. Lorenz, P. Esser, and B. Ommer, 'Highresolution image synthesis with latent diffusion models,' 2022."
+            },
+            {
+              "title": "Denoising diffusion probabilistic models",
+              "citation": "J. Ho, A. Jain, and P. Abbeel, 'Denoising diffusion probabilistic models,' 2020."
+            },
+            {
+              "title": "A path towards autonomous machine intelligence",
+              "citation": "Y. LeCun, 'A path towards autonomous machine intelligence,' 2022."
+            },
+            {
+              "title": "Drivedreamer: Towards real-world-driven world models for autonomous driving",
+              "citation": "X. Wang, Z. Zhu, G. Huang, X. Chen, and J. Lu, 'Drivedreamer: Towards real-world-driven world models for autonomous driving,' arXiv preprint arXiv:2309.09777 , 2023."
+            },
+            {
+              "title": "Gaia-1: A generative world model for autonomous driving",
+              "citation": "A. Hu, L. Russell, H. Yeo, Z. Murez, G. Fedoseev, A. Kendall, J. Shotton, and G. Corrado, 'Gaia-1: A generative world model for autonomous driving,' arXiv preprint arXiv:2309.17080 , 2023."
+            },
+            {
+              "title": "Adriver-i: A general world model for autonomous driving",
+              "citation": "F. Jia, W. Mao, Y. Liu, Y. Zhao, Y. Wen, C. Zhang, X. Zhang, and T. Wang, 'Adriver-i: A general world model for autonomous driving,' 11 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "DATASETS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "Autonomous Driving Datasets",
+          "citations": [
+            {
+              "title": "Vision meets robotics: The kitti dataset",
+              "citation": "A. Geiger, P. Lenz, C. Stiller, and R. Urtasun, 'Vision meets robotics: The kitti dataset,' The Int. Journal of Robotics Research , vol. 32, no. 11, pp. 1231-1237, 2013."
+            },
+            {
+              "title": "nuscenes: A multimodal dataset for autonomous driving",
+              "citation": "H. Caesar, V. Bankiti, A. H. Lang, S. Vora, V. E. Liong, Q. Xu, A. Krishnan, Y. Pan, G. Baldan, and O. Beijbom, 'nuscenes: A multimodal dataset for autonomous driving,' in Proc. of IEEE/CVF conf. on comp. vision and pattern recognition , pp. 11621-11631, 2020."
+            },
+            {
+              "title": "Bdd100k: A diverse driving dataset for heterogeneous multitask learning",
+              "citation": "F. Yu, H. Chen, X. Wang, W. Xian, Y. Chen, F. Liu, V. Madhavan, and T. Darrell, 'Bdd100k: A diverse driving dataset for heterogeneous multitask learning,' in Proc. of the IEEE/CVF Conf. on computer vision and pattern recognition , pp. 2636-2645, 2020."
+            },
+            {
+              "title": "One million scenes for autonomous driving: Once dataset",
+              "citation": "J. Mao, M. Niu, C. Jiang, H. Liang, J. Chen, X. Liang, Y. Li, C. Ye, W. Zhang, Z. Li, J. Yu, H. Xu, and C. Xu, 'One million scenes for autonomous driving: Once dataset,' 2021."
+            },
+            {
+              "title": "Scalability in perception for autonomous driving: Waymo open dataset",
+              "citation": "P. Sun, H. Kretzschmar, X. Dotiwalla, A. Chouard, V. Patnaik, P. Tsui, J. Guo, Y. Zhou, Y. Chai, B. Caine, et al. , 'Scalability in perception for autonomous driving: Waymo open dataset,' in Proc. of IEEE/CVF Conf. on comp. vision and pattern recognition , pp. 2446-2454, 2020."
+            },
+            {
+              "title": "The cityscapes dataset for semantic urban scene understanding",
+              "citation": "M. Cordts, M. Omran, S. Ramos, T. Rehfeld, M. Enzweiler, R. Benenson, U. Franke, S. Roth, and B. Schiele, 'The cityscapes dataset for semantic urban scene understanding,' in Proc. of the IEEE Conf. on computer vision and pattern recognition , pp. 3213-3223, 2016."
+            },
+            {
+              "title": "Pedestrian detection: A benchmark",
+              "citation": "P. Doll´ ar, C. Wojek, B. Schiele, and P. Perona, 'Pedestrian detection: A benchmark,' in 2009 IEEE Conf. on computer vision and pattern recognition , pp. 304-311, IEEE, 2009."
+            },
+            {
+              "title": "The cityscapes dataset for semantic urban scene understanding",
+              "citation": "M. Cordts, M. Omran, S. Ramos, T. Rehfeld, M. Enzweiler, R. Benenson, U. Franke, S. Roth, and B. Schiele, 'The cityscapes dataset for semantic urban scene understanding,' in Proc. of the IEEE Conf. on computer vision and pattern recognition , pp. 3213-3223, 2016."
+            },
+            {
+              "title": "Semantickitti: A dataset for semantic scene understanding of lidar sequences",
+              "citation": "J. Behley, M. Garbade, A. Milioto, J. Quenzel, S. Behnke, C. Stachniss, and J. Gall, 'Semantickitti: A dataset for semantic scene understanding of lidar sequences,' in Proc. of IEEE/CVF int. conf. on computer vision , pp. 9297-9307, 2019."
+            },
+            {
+              "title": "One thousand and one hours: Self-driving motion prediction dataset",
+              "citation": "J. Houston, G. Zuidhof, L. Bergamini, Y. Ye, L. Chen, A. Jain, S. Omari, V. Iglovikov, and P. Ondruska, 'One thousand and one hours: Self-driving motion prediction dataset,' 2020."
+            },
+            {
+              "title": "Cityflow: A city-scale benchmark for multi-target multi-camera vehicle tracking and reidentification",
+              "citation": "Z. Tang, M. Naphade, M.-Y. Liu, X. Yang, S. Birchfield, S. Wang, R. Kumar, D. Anastasiu, and J.-N. Hwang, 'Cityflow: A city-scale benchmark for multi-target multi-camera vehicle tracking and reidentification,' in Proc. of IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 8797-8806, 2019."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Language-Enhanced AD Datasets",
+          "citations": [
+            {
+              "title": "Object referring in videos with language and human gaze",
+              "citation": "A. B. Vasudevan, D. Dai, and L. Van Gool, 'Object referring in videos with language and human gaze,' in Proc. of the IEEE Conf. on Computer Vision and Pattern Recognition , pp. 4129-4138, 2018."
+            },
+            {
+              "title": "Cityflow-nl: Tracking and retrieval of vehicles at city scale by natural language descriptions",
+              "citation": "Q. Feng, V. Ablavsky, and S. Sclaroff, 'Cityflow-nl: Tracking and retrieval of vehicles at city scale by natural language descriptions,' arXiv preprint arXiv:2101.04741 , 2021."
+            },
+            {
+              "title": "Referring multi-object tracking",
+              "citation": "D. Wu, W. Han, T. Wang, X. Dong, X. Zhang, and J. Shen, 'Referring multi-object tracking,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 14633-14642, 2023."
+            },
+            {
+              "title": "Pedestrian detection: A benchmark",
+              "citation": "P. Doll´ ar, C. Wojek, B. Schiele, and P. Perona, 'Pedestrian detection: A benchmark,' in 2009 IEEE Conf. on computer vision and pattern recognition , pp. 304-311, IEEE, 2009."
+            },
+            {
+              "title": "Vision meets robotics: The kitti dataset",
+              "citation": "A. Geiger, P. Lenz, C. Stiller, and R. Urtasun, 'Vision meets robotics: The kitti dataset,' The Int. Journal of Robotics Research , vol. 32, no. 11, pp. 1231-1237, 2013."
+            },
+            {
+              "title": "The cityscapes dataset for semantic urban scene understanding",
+              "citation": "M. Cordts, M. Omran, S. Ramos, T. Rehfeld, M. Enzweiler, R. Benenson, U. Franke, S. Roth, and B. Schiele, 'The cityscapes dataset for semantic urban scene understanding,' in Proc. of the IEEE Conf. on computer vision and pattern recognition , pp. 3213-3223, 2016."
+            },
+            {
+              "title": "Citypersons: A diverse dataset for pedestrian detection",
+              "citation": "S. Zhang, R. Benenson, and B. Schiele, 'Citypersons: A diverse dataset for pedestrian detection,' in Proc. of the IEEE Conf. on computer vision and pattern recognition , pp. 3213-3221, 2017."
+            },
+            {
+              "title": "Semantickitti: A dataset for semantic scene understanding of lidar sequences",
+              "citation": "J. Behley, M. Garbade, A. Milioto, J. Quenzel, S. Behnke, C. Stachniss, and J. Gall, 'Semantickitti: A dataset for semantic scene understanding of lidar sequences,' in Proc. of IEEE/CVF int. conf. on computer vision , pp. 9297-9307, 2019."
+            },
+            {
+              "title": "Cityflow: A city-scale benchmark for multi-target multi-camera vehicle tracking and reidentification",
+              "citation": "Z. Tang, M. Naphade, M.-Y. Liu, X. Yang, S. Birchfield, S. Wang, R. Kumar, D. Anastasiu, and J.-N. Hwang, 'Cityflow: A city-scale benchmark for multi-target multi-camera vehicle tracking and reidentification,' in Proc. of IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 8797-8806, 2019."
+            },
+            {
+              "title": "nuscenes: A multimodal dataset for autonomous driving",
+              "citation": "H. Caesar, V. Bankiti, A. H. Lang, S. Vora, V. E. Liong, Q. Xu, A. Krishnan, Y. Pan, G. Baldan, and O. Beijbom, 'nuscenes: A multimodal dataset for autonomous driving,' in Proc. of IEEE/CVF conf. on comp. vision and pattern recognition , pp. 11621-11631, 2020."
+            },
+            {
+              "title": "Bdd100k: A diverse driving dataset for heterogeneous multitask learning",
+              "citation": "F. Yu, H. Chen, X. Wang, W. Xian, Y. Chen, F. Liu, V. Madhavan, and T. Darrell, 'Bdd100k: A diverse driving dataset for heterogeneous multitask learning,' in Proc. of the IEEE/CVF Conf. on computer vision and pattern recognition , pp. 2636-2645, 2020."
+            },
+            {
+              "title": "Scalability in perception for autonomous driving: Waymo open dataset",
+              "citation": "P. Sun, H. Kretzschmar, X. Dotiwalla, A. Chouard, V. Patnaik, P. Tsui, J. Guo, Y. Zhou, Y. Chai, B. Caine, et al. , 'Scalability in perception for autonomous driving: Waymo open dataset,' in Proc. of IEEE/CVF Conf. on comp. vision and pattern recognition , pp. 2446-2454, 2020."
+            },
+            {
+              "title": "One thousand and one hours: Self-driving motion prediction dataset",
+              "citation": "J. Houston, G. Zuidhof, L. Bergamini, Y. Ye, L. Chen, A. Jain, S. Omari, V. Iglovikov, and P. Ondruska, 'One thousand and one hours: Self-driving motion prediction dataset,' 2020."
+            },
+            {
+              "title": "One million scenes for autonomous driving: Once dataset",
+              "citation": "J. Mao, M. Niu, C. Jiang, H. Liang, J. Chen, X. Liang, Y. Li, C. Ye, W. Zhang, Z. Li, J. Yu, H. Xu, and C. Xu, 'One million scenes for autonomous driving: Once dataset,' 2021."
+            },
+            {
+              "title": "Textual explanations for self-driving vehicles",
+              "citation": "J. Kim, A. Rohrbach, T. Darrell, J. Canny, and Z. Akata, 'Textual explanations for self-driving vehicles,' in Proc. of the European Conf. on computer vision (ECCV) , pp. 563-578, 2018."
+            },
+            {
+              "title": "Object referring in videos with language and human gaze",
+              "citation": "A. B. Vasudevan, D. Dai, and L. Van Gool, 'Object referring in videos with language and human gaze,' in Proc. of the IEEE Conf. on Computer Vision and Pattern Recognition , pp. 4129-4138, 2018."
+            },
+            {
+              "title": "Touchdown: Natural language navigation and spatial reasoning in visual street environments",
+              "citation": "H. Chen, A. Suhr, D. Misra, N. Snavely, and Y. Artzi, 'Touchdown: Natural language navigation and spatial reasoning in visual street environments,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 12538-12547, 2019."
+            },
+            {
+              "title": "Talk to the vehicle: Language conditioned autonomous navigation of self driving cars",
+              "citation": "N. Sriram, T. Maniar, J. Kalyanasundaram, V. Gandhi, B. Bhowmick, and K. M. Krishna, 'Talk to the vehicle: Language conditioned autonomous navigation of self driving cars,' in Int. Conf. on Intelligent Robots and Systems (IROS) , pp. 5284-5290, IEEE, 2019."
+            },
+            {
+              "title": "Grounding human-to-vehicle advice for self-driving vehicles",
+              "citation": "J. Kim, T. Misu, Y. T. Chen, A. Tawari, and J. Canny, 'Grounding human-to-vehicle advice for self-driving vehicles,' in Proc. of the IEEE Computer Society Conf. on Computer Vision and Pattern Recognition , vol. 2019-June, pp. 10583-10591, 2019."
+            },
+            {
+              "title": "Talk2car: Taking control of your self-driving car",
+              "citation": "T. Deruyttere, S. Vandenhende, D. Grujicic, L. Van Gool, and M.F. Moens, 'Talk2car: Taking control of your self-driving car,' arXiv preprint arXiv:1909.10838 , 2019."
+            },
+            {
+              "title": "Explainable object-induced action decision for autonomous vehicles",
+              "citation": "Y. Xu, X. Yang, L. Gong, H.-C. Lin, T.-Y. Wu, Y. Li, and N. Vasconcelos, 'Explainable object-induced action decision for autonomous vehicles,' 2020."
+            },
+            {
+              "title": "Cityflow-nl: Tracking and retrieval of vehicles at city scale by natural language descriptions",
+              "citation": "Q. Feng, V. Ablavsky, and S. Sclaroff, 'Cityflow-nl: Tracking and retrieval of vehicles at city scale by natural language descriptions,' arXiv preprint arXiv:2101.04741 , 2021."
+            },
+            {
+              "title": "Ground then navigate: Language-guided navigation in dynamic scenes",
+              "citation": "K. Jain, V. Chhangani, A. Tiwari, K. M. Krishna, and V. Gandhi, 'Ground then navigate: Language-guided navigation in dynamic scenes,' in 2023 IEEE Int. Conf. on Robotics and Automation (ICRA) , pp. 4113-4120, IEEE, 2023."
+            },
+            {
+              "title": "Language prompt for autonomous driving",
+              "citation": "D. Wu, W. Han, T. Wang, Y. Liu, X. Zhang, and J. Shen, 'Language prompt for autonomous driving,' preprint arXiv:2309.04379 , 2023."
+            },
+            {
+              "title": "Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario",
+              "citation": "T. Qian, J. Chen, L. Zhuo, Y. Jiao, and Y.-G. Jiang, 'Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario,' arXiv preprint arXiv:2305.14836 , 2023."
+            },
+            {
+              "title": "Nuscenesmqa: Integrated evaluation of captions and qa for autonomous driving datasets using markup annotations",
+              "citation": "Y. Inoue, Y. Yada, K. Tanahashi, and Y. Yamaguchi, 'Nuscenesmqa: Integrated evaluation of captions and qa for autonomous driving datasets using markup annotations,' 12 2023."
+            },
+            {
+              "title": "Talk2bev: Language-enhanced bird's-eye view maps for autonomous driving",
+              "citation": "V. Dewangan, T. Choudhary, S. Chandhok, S. Priyadarshan, A. Jain, A. K. Singh, S. Srivastava, K. M. Jatavallabhula, and K. M. Krishna, 'Talk2bev: Language-enhanced bird's-eye view maps for autonomous driving,' arXiv preprint arXiv:2310.02251 , 2023."
+            },
+            {
+              "title": "Reason2drive: Towards interpretable and chain-based reasoning for autonomous driving",
+              "citation": "M. Nie, R. Peng, C. Wang, X. Cai, J. Han, H. Xu, and L. Zhang, 'Reason2drive: Towards interpretable and chain-based reasoning for autonomous driving,' 12 2023."
+            },
+            {
+              "title": "Referring multi-object tracking",
+              "citation": "D. Wu, W. Han, T. Wang, X. Dong, X. Zhang, and J. Shen, 'Referring multi-object tracking,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 14633-14642, 2023."
+            },
+            {
+              "title": "Driving with llms: Fusing object-level vector modality for explainable autonomous driving",
+              "citation": "L. Chen, O. Sinavski, J. H¨ unermann, A. Karnsund, A. J. Willmott, D. Birch, D. Maund, and J. Shotton, 'Driving with llms: Fusing object-level vector modality for explainable autonomous driving,' arXiv preprint arXiv:2310.01957 , 2023."
+            },
+            {
+              "title": "Drama: Joint risk localization and captioning in driving",
+              "citation": "S. Malla, C. Choi, I. Dwivedi, J. H. Choi, and J. Li, 'Drama: Joint risk localization and captioning in driving,' in Proc. of IEEE/CVF Winter Conf. on Applications of Comp. Vision , pp. 1043-1052, 2023."
+            },
+            {
+              "title": "Rank2tell: A multimodal driving dataset for joint importance ranking and reasoning",
+              "citation": "E. Sachdeva, N. Agarwal, S. Chundi, S. Roelofs, J. Li, B. Dariush, C. Choi, and M. Kochenderfer, 'Rank2tell: A multimodal driving dataset for joint importance ranking and reasoning,' arXiv:2309.06597 , 2023."
+            },
+            {
+              "title": "Drivevlm: The convergence of autonomous driving and large vision-language models",
+              "citation": "X. Tian, J. Gu, B. Li, Y. Liu, C. Hu, Y. Wang, K. Zhan, P. Jia, X. Lang, and H. Zhao, 'Drivevlm: The convergence of autonomous driving and large vision-language models,' 2 2024."
+            },
+            {
+              "title": "Language prompt for autonomous driving",
+              "citation": "D. Wu, W. Han, T. Wang, Y. Liu, X. Zhang, and J. Shen, 'Language prompt for autonomous driving,' preprint arXiv:2309.04379 , 2023."
+            },
+            {
+              "title": "Cityflow: A city-scale benchmark for multi-target multi-camera vehicle tracking and reidentification",
+              "citation": "Z. Tang, M. Naphade, M.-Y. Liu, X. Yang, S. Birchfield, S. Wang, R. Kumar, D. Anastasiu, and J.-N. Hwang, 'Cityflow: A city-scale benchmark for multi-target multi-camera vehicle tracking and reidentification,' in Proc. of IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 8797-8806, 2019."
+            },
+            {
+              "title": "Vision meets robotics: The kitti dataset",
+              "citation": "A. Geiger, P. Lenz, C. Stiller, and R. Urtasun, 'Vision meets robotics: The kitti dataset,' The Int. Journal of Robotics Research , vol. 32, no. 11, pp. 1231-1237, 2013."
+            },
+            {
+              "title": "nuscenes: A multimodal dataset for autonomous driving",
+              "citation": "H. Caesar, V. Bankiti, A. H. Lang, S. Vora, V. E. Liong, Q. Xu, A. Krishnan, Y. Pan, G. Baldan, and O. Beijbom, 'nuscenes: A multimodal dataset for autonomous driving,' in Proc. of IEEE/CVF conf. on comp. vision and pattern recognition , pp. 11621-11631, 2020."
+            },
+            {
+              "title": "Touchdown: Natural language navigation and spatial reasoning in visual street environments",
+              "citation": "H. Chen, A. Suhr, D. Misra, N. Snavely, and Y. Artzi, 'Touchdown: Natural language navigation and spatial reasoning in visual street environments,' in Proc. of the IEEE/CVF Conf. on Computer Vision and Pattern Recognition , pp. 12538-12547, 2019."
+            },
+            {
+              "title": "Talk to the vehicle: Language conditioned autonomous navigation of self driving cars",
+              "citation": "N. Sriram, T. Maniar, J. Kalyanasundaram, V. Gandhi, B. Bhowmick, and K. M. Krishna, 'Talk to the vehicle: Language conditioned autonomous navigation of self driving cars,' in Int. Conf. on Intelligent Robots and Systems (IROS) , pp. 5284-5290, IEEE, 2019."
+            },
+            {
+              "title": "Ground then navigate: Language-guided navigation in dynamic scenes",
+              "citation": "K. Jain, V. Chhangani, A. Tiwari, K. M. Krishna, and V. Gandhi, 'Ground then navigate: Language-guided navigation in dynamic scenes,' in 2023 IEEE Int. Conf. on Robotics and Automation (ICRA) , pp. 4113-4120, IEEE, 2023."
+            },
+            {
+              "title": "Talk2car: Taking control of your self-driving car",
+              "citation": "T. Deruyttere, S. Vandenhende, D. Grujicic, L. Van Gool, and M.F. Moens, 'Talk2car: Taking control of your self-driving car,' arXiv preprint arXiv:1909.10838 , 2019."
+            },
+            {
+              "title": "Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario",
+              "citation": "T. Qian, J. Chen, L. Zhuo, Y. Jiao, and Y.-G. Jiang, 'Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario,' arXiv preprint arXiv:2305.14836 , 2023."
+            },
+            {
+              "title": "Driving with llms: Fusing object-level vector modality for explainable autonomous driving",
+              "citation": "L. Chen, O. Sinavski, J. H¨ unermann, A. Karnsund, A. J. Willmott, D. Birch, D. Maund, and J. Shotton, 'Driving with llms: Fusing object-level vector modality for explainable autonomous driving,' arXiv preprint arXiv:2310.01957 , 2023."
+            },
+            {
+              "title": "Drama: Joint risk localization and captioning in driving",
+              "citation": "S. Malla, C. Choi, I. Dwivedi, J. H. Choi, and J. Li, 'Drama: Joint risk localization and captioning in driving,' in Proc. of IEEE/CVF Winter Conf. on Applications of Comp. Vision , pp. 1043-1052, 2023."
+            },
+            {
+              "title": "Nuscenesmqa: Integrated evaluation of captions and qa for autonomous driving datasets using markup annotations",
+              "citation": "Y. Inoue, Y. Yada, K. Tanahashi, and Y. Yamaguchi, 'Nuscenesmqa: Integrated evaluation of captions and qa for autonomous driving datasets using markup annotations,' 12 2023."
+            },
+            {
+              "title": "Reason2drive: Towards interpretable and chain-based reasoning for autonomous driving",
+              "citation": "M. Nie, R. Peng, C. Wang, X. Cai, J. Han, H. Xu, and L. Zhang, 'Reason2drive: Towards interpretable and chain-based reasoning for autonomous driving,' 12 2023."
+            },
+            {
+              "title": "Talk2bev: Language-enhanced bird's-eye view maps for autonomous driving",
+              "citation": "V. Dewangan, T. Choudhary, S. Chandhok, S. Priyadarshan, A. Jain, A. K. Singh, S. Srivastava, K. M. Jatavallabhula, and K. M. Krishna, 'Talk2bev: Language-enhanced bird's-eye view maps for autonomous driving,' arXiv preprint arXiv:2310.02251 , 2023."
+            },
+            {
+              "title": "Rank2tell: A multimodal driving dataset for joint importance ranking and reasoning",
+              "citation": "E. Sachdeva, N. Agarwal, S. Chundi, S. Roelofs, J. Li, B. Dariush, C. Choi, and M. Kochenderfer, 'Rank2tell: A multimodal driving dataset for joint importance ranking and reasoning,' arXiv:2309.06597 , 2023."
+            },
+            {
+              "title": "Textual explanations for self-driving vehicles",
+              "citation": "J. Kim, A. Rohrbach, T. Darrell, J. Canny, and Z. Akata, 'Textual explanations for self-driving vehicles,' in Proc. of the European Conf. on computer vision (ECCV) , pp. 563-578, 2018."
+            },
+            {
+              "title": "Explainable object-induced action decision for autonomous vehicles",
+              "citation": "Y. Xu, X. Yang, L. Gong, H.-C. Lin, T.-Y. Wu, Y. Li, and N. Vasconcelos, 'Explainable object-induced action decision for autonomous vehicles,' 2020."
+            },
+            {
+              "title": "Grounding human-to-vehicle advice for self-driving vehicles",
+              "citation": "J. Kim, T. Misu, Y. T. Chen, A. Tawari, and J. Canny, 'Grounding human-to-vehicle advice for self-driving vehicles,' in Proc. of the IEEE Computer Society Conf. on Computer Vision and Pattern Recognition , vol. 2019-June, pp. 10583-10591, 2019."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "DISCUSSION",
+      "citations": [
+        {
+          "title": "Seggpt: Segmenting everything in context",
+          "citation": "X. Wang, X. Zhang, Y. Cao, W. Wang, C. Shen, and T. Huang, 'Seggpt: Segmenting everything in context,' 2023."
+        },
+        {
+          "title": "Images speak in images: A generalist painter for in-context visual learning",
+          "citation": "X. Wang, W. Wang, Y. Cao, C. Shen, and T. Huang, 'Images speak in images: A generalist painter for in-context visual learning,' 2023."
+        },
+        {
+          "title": "Llama 2: Open foundation and fine-tuned chat models",
+          "citation": "H. Touvron, L. Martin, K. Stone, P. Albert, A. Almahairi, Y. Babaei, N. Bashlykov, S. Batra, P. Bhargava, S. Bhosale, et al. , 'Llama 2: Open foundation and fine-tuned chat models,' arXiv:2307.09288 , 2023."
+        },
+        {
+          "title": "Bloom: A 176bparameter open-access multilingual language model",
+          "citation": "T. L. Scao, A. Fan, C. Akiki, E. Pavlick, S. Ili´ c, D. Hesslow, R. Castagn´ e, A. S. Luccioni, F. Yvon, M. Gall´ e, et al. , 'Bloom: A 176bparameter open-access multilingual language model,' arXiv preprint arXiv:2211.05100 , 2022."
+        },
+        {
+          "title": "Minigpt-4: Enhancing vision-language understanding with advanced large language models",
+          "citation": "D. Zhu, J. Chen, X. Shen, X. Li, and M. Elhoseiny, 'Minigpt-4: Enhancing vision-language understanding with advanced large language models,' arXiv preprint arXiv:2304.10592 , 2023."
+        },
+        {
+          "title": "Multimodal-gpt: A vision and language model for dialogue with humans",
+          "citation": "T. Gong, C. Lyu, S. Zhang, Y. Wang, M. Zheng, Q. Zhao, K. Liu, W. Zhang, P. Luo, and K. Chen, 'Multimodal-gpt: A vision and language model for dialogue with humans,' arXiv:2305.04790 , 2023."
+        },
+        {
+          "title": "Drivegpt4: Interpretable end-to-end autonomous driving via large language model",
+          "citation": "Z. Xu, Y. Zhang, E. Xie, Z. Zhao, Y. Guo, K. K. Wong, Z. Li, and H. Zhao, 'Drivegpt4: Interpretable end-to-end autonomous driving via large language model,' arXiv preprint arXiv:2310.01412 , 2023."
+        },
+        {
+          "title": "Gaia-1: A generative world model for autonomous driving",
+          "citation": "A. Hu, L. Russell, H. Yeo, Z. Murez, G. Fedoseev, A. Kendall, J. Shotton, and G. Corrado, 'Gaia-1: A generative world model for autonomous driving,' arXiv preprint arXiv:2309.17080 , 2023."
+        },
+        {
+          "title": "Gpt-driver: Learning to drive with gpt",
+          "citation": "J. Mao, Y. Qian, H. Zhao, and Y. Wang, 'Gpt-driver: Learning to drive with gpt,' arXiv preprint arXiv:2310.01415 , 2023."
+        },
+        {
+          "title": "Languagempc: Large language models as decision makers for autonomous driving",
+          "citation": "H. Sha, Y. Mu, Y. Jiang, L. Chen, C. Xu, P. Luo, S. E. Li, M. Tomizuka, W. Zhan, and M. Ding, 'Languagempc: Large language models as decision makers for autonomous driving,' arXiv:2310.03026 , 2023."
+        },
+        {
+          "title": "Llama-adapter v2: Parameterefficient visual instruction model",
+          "citation": "P. Gao, J. Han, R. Zhang, Z. Lin, S. Geng, A. Zhou, W. Zhang, P. Lu, C. He, X. Yue, H. Li, and Y. Qiao, 'Llama-adapter v2: Parameterefficient visual instruction model,' 2023."
+        },
+        {
+          "title": "Llama-adapter v2: Parameterefficient visual instruction model",
+          "citation": "P. Gao, J. Han, R. Zhang, Z. Lin, S. Geng, A. Zhou, W. Zhang, P. Lu, C. He, X. Yue, H. Li, and Y. Qiao, 'Llama-adapter v2: Parameterefficient visual instruction model,' 2023."
+        },
+        {
+          "title": "Blip-2: Bootstrapping languageimage pre-training with frozen image encoders and large language models",
+          "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'Blip-2: Bootstrapping languageimage pre-training with frozen image encoders and large language models,' 2023."
+        },
+        {
+          "title": "nuscenes: A multimodal dataset for autonomous driving",
+          "citation": "H. Caesar, V. Bankiti, A. H. Lang, S. Vora, V. E. Liong, Q. Xu, A. Krishnan, Y. Pan, G. Baldan, and O. Beijbom, 'nuscenes: A multimodal dataset for autonomous driving,' in Proc. of IEEE/CVF conf. on comp. vision and pattern recognition , pp. 11621-11631, 2020."
+        },
+        {
+          "title": "Scalability in perception for autonomous driving: Waymo open dataset",
+          "citation": "P. Sun, H. Kretzschmar, X. Dotiwalla, A. Chouard, V. Patnaik, P. Tsui, J. Guo, Y. Zhou, Y. Chai, B. Caine, et al. , 'Scalability in perception for autonomous driving: Waymo open dataset,' in Proc. of IEEE/CVF Conf. on comp. vision and pattern recognition , pp. 2446-2454, 2020."
+        },
+        {
+          "title": "The opencda open-source ecosystem for cooperative driving automation research",
+          "citation": "R. Xu, H. Xiang, X. Han, X. Xia, Z. Meng, C.-J. Chen, C. CorreaJullian, and J. Ma, 'The opencda open-source ecosystem for cooperative driving automation research,' IEEE Trans. on Intelligent Vehicles , vol. 8, no. 4, pp. 2698-2711, 2023."
+        },
+        {
+          "title": "V2v4real: A real-world large-scale dataset for vehicle-to-vehicle cooperative perception",
+          "citation": "R. Xu, X. Xia, J. Li, H. Li, S. Zhang, Z. Tu, Z. Meng, H. Xiang, X. Dong, R. Song, H. Yu, B. Zhou, and J. Ma, 'V2v4real: A real-world large-scale dataset for vehicle-to-vehicle cooperative perception,' in Proc. of IEEE/CVF Conf. on Computer Vision and Pattern Recognition (CVPR) , pp. 13712-13722, June 2023."
+        },
+        {
+          "title": "Learning for vehicle-to-vehicle cooperative perception under lossy communication",
+          "citation": "J. Li, R. Xu, X. Liu, J. Ma, Z. Chi, J. Ma, and H. Yu, 'Learning for vehicle-to-vehicle cooperative perception under lossy communication,' IEEE Trans. on Intelligent Vehicles , vol. 8, no. 4, pp. 2650-2660, 2023."
+        },
+        {
+          "title": "Opv2v: An open benchmark dataset and fusion pipeline for perception with vehicle-to-vehicle communication",
+          "citation": "R. Xu, H. Xiang, X. Xia, X. Han, J. Li, and J. Ma, 'Opv2v: An open benchmark dataset and fusion pipeline for perception with vehicle-to-vehicle communication,' in 2022 Int. Conf. on Robotics and Automation (ICRA) , pp. 2583-2589, 2022."
+        },
+        {
+          "title": "Tumtraf v2x cooperative perception dataset",
+          "citation": "W. Zimmer, G. A. Wardana, S. Sritharan, X. Zhou, R. Song, and A. C. Knoll, 'Tumtraf v2x cooperative perception dataset,' in Proc. of IEEE/CVF Conf. on Comp. Vision and Pattern Recog. , p. 10, 2024."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "CHALLENGES",
+      "citations": [
+        {
+          "title": "Lora: Low-rank adaptation of large language models",
+          "citation": "E. J. Hu, Y. Shen, P. Wallis, Z. Allen-Zhu, Y. Li, S. Wang, L. Wang, and W. Chen, 'Lora: Low-rank adaptation of large language models,' 2021."
+        },
+        {
+          "title": "Adaptive budget allocation for parameter-efficient finetuning",
+          "citation": "Q. Zhang, M. Chen, A. Bukharin, P. He, Y. Cheng, W. Chen, and T. Zhao, 'Adaptive budget allocation for parameter-efficient finetuning,' 2023."
+        },
+        {
+          "title": "Knowledge distillation of large language models",
+          "citation": "Y. Gu, L. Dong, F. Wei, and M. Huang, 'Knowledge distillation of large language models,' 2023."
+        },
+        {
+          "title": "Multi-granularity structural knowledge distillation for language model compression",
+          "citation": "C. Liu, C. Tao, J. Feng, and D. Zhao, 'Multi-granularity structural knowledge distillation for language model compression,' in Proc. of Association for Computational Linguistics , pp. 1001-1011, May 2022."
+        },
+        {
+          "title": "Smoothquant: Accurate and efficient post-training quantization for large language models",
+          "citation": "G. Xiao, J. Lin, M. Seznec, H. Wu, J. Demouth, and S. Han, 'Smoothquant: Accurate and efficient post-training quantization for large language models,' in Int. Conf. on Machine Learning , pp. 3808738099, PMLR, 2023."
+        },
+        {
+          "title": "Towards efficient post-training quantization of pre-trained language models",
+          "citation": "H. Bai, L. Hou, L. Shang, X. Jiang, I. King, and M. R. Lyu, 'Towards efficient post-training quantization of pre-trained language models,' Adv. in Neural Inform. Proc. Systems , vol. 35, pp. 1405-1418, 2022."
+        },
+        {
+          "title": "Drivegpt4: Interpretable end-to-end autonomous driving via large language model",
+          "citation": "Z. Xu, Y. Zhang, E. Xie, Z. Zhao, Y. Guo, K. K. Wong, Z. Li, and H. Zhao, 'Drivegpt4: Interpretable end-to-end autonomous driving via large language model,' arXiv preprint arXiv:2310.01412 , 2023."
+        },
+        {
+          "title": "Video-llama: An instruction-tuned audio-visual language model for video understanding",
+          "citation": "H. Zhang, X. Li, and L. Bing, 'Video-llama: An instruction-tuned audio-visual language model for video understanding,' 2023."
+        },
+        {
+          "title": "Video-chatgpt: Towards detailed video understanding via large vision and language models",
+          "citation": "M. Maaz, H. Rasheed, S. Khan, and F. S. Khan, 'Video-chatgpt: Towards detailed video understanding via large vision and language models,' 2023."
+        },
+        {
+          "title": "Tem-adapter: Adapting image-text pretraining for video question answer",
+          "citation": "G. Chen, X. Liu, G. Wang, K. Zhang, P. H. Torr, X.-P. Zhang, and Y. Tang, 'Tem-adapter: Adapting image-text pretraining for video question answer,' in IEEE/CVF Int. Conf. on Computer Vision , 2023."
+        },
+        {
+          "title": "A survey on hallucination in large language models: Principles, taxonomy, challenges, and open questions",
+          "citation": "L. Huang, W. Yu, W. Ma, W. Zhong, Z. Feng, H. Wang, Q. Chen, W. Peng, X. Feng, B. Qin, and T. Liu, 'A survey on hallucination in large language models: Principles, taxonomy, challenges, and open questions,' 2023."
+        },
+        {
+          "title": "Deep reinforcement learning from human preferences",
+          "citation": "P. Christiano, J. Leike, T. Brown, M. Martic, S. Legg, and D. Amodei, 'Deep reinforcement learning from human preferences,' 2023."
+        },
+        {
+          "title": "Direct preference optimization: Your language model is secretly a reward model",
+          "citation": "R. Rafailov, A. Sharma, E. Mitchell, S. Ermon, C. D. Manning, and C. Finn, 'Direct preference optimization: Your language model is secretly a reward model,' 2023."
+        },
+        {
+          "title": "A survey of deep learning architectures for privacy-preserving machine learning with fully homomorphic encryption",
+          "citation": "R. Podschwadt, D. Takabi, P. Hu, M. H. Rafiei, and Z. Cai, 'A survey of deep learning architectures for privacy-preserving machine learning with fully homomorphic encryption,' IEEE Access , vol. 10, pp. 117477-117500, 2022."
+        },
+        {
+          "title": "Signds-fl: Local differentially private federated learning with sign-based dimension selection",
+          "citation": "X. Jiang, X. Zhou, and J. Grossklags, 'Signds-fl: Local differentially private federated learning with sign-based dimension selection,' ACM Trans. Intell. Syst. Technol. , vol. 13, jun 2022."
+        },
+        {
+          "title": "A survey on federated learning systems: Vision, hype and reality for data privacy and protection",
+          "citation": "Q. Li, Z. Wen, Z. Wu, S. Hu, N. Wang, Y. Li, X. Liu, and B. He, 'A survey on federated learning systems: Vision, hype and reality for data privacy and protection,' IEEE Trans. on Knowledge and Data Engineering , vol. 35, p. 3347-3366, Apr. 2023."
+        },
+        {
+          "title": "A survey on federated learning",
+          "citation": "C. Zhang, Y. Xie, H. Bai, B. Yu, W. Li, and Y. Gao, 'A survey on federated learning,' Know.-Based Systems , vol. 216, p. 106775, 2021."
+        },
+        {
+          "title": "Adversarial driving: Attacking end-to-end autonomous driving",
+          "citation": "H. Wu, S. Yunas, S. Rowlands, W. Ruan, and J. Wahlstr¨ om, 'Adversarial driving: Attacking end-to-end autonomous driving,' in 2023 IEEE Intelligent Vehicles Symposium (IV) , IEEE, June 2023."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "CONCLUSION",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

@@ -1,0 +1,2250 @@
+{
+  "track": "Recommender Systems",
+  "paper_title": "A Survey on Knowledge Graph-Based Recommender Systems",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "INTRODUCTION",
+      "citations": [
+        {
+          "title": "Leveraging metapath based context for top-n recommendation with a neural co-attention model",
+          "citation": "B. Hu, C. Shi, W. X. Zhao, and P. S. Yu, 'Leveraging metapath based context for top-n recommendation with a neural co-attention model,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2018, pp. 1531-1540."
+        },
+        {
+          "title": "Collaborative knowledge base embedding for recommender systems",
+          "citation": "F. Zhang, N. J. Yuan, D. Lian, X. Xie, and W.-Y. Ma, 'Collaborative knowledge base embedding for recommender systems,' in Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , ser. KDD '16. New York, NY, USA: ACM, 2016, pp. 353-362."
+        },
+        {
+          "title": "Meta-graph based recommendation fusion over heterogeneous information networks",
+          "citation": "H. Zhao, Q. Yao, J. Li, Y. Song, and D. L. Lee, 'Meta-graph based recommendation fusion over heterogeneous information networks,' in Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining . ACM, 2017, pp. 635-644."
+        },
+        {
+          "title": "Toward the next generation of recommender systems: A survey of the state-of-the-art and possible extensions",
+          "citation": "G. Adomavicius and A. Tuzhilin, 'Toward the next generation of recommender systems: A survey of the state-of-the-art and possible extensions,' IEEE transactions on knowledge and data engineering , vol. 17, no. 6, pp. 734-749, 2005."
+        },
+        {
+          "title": "A survey of collaborative filtering techniques",
+          "citation": "X. Su and T. M. Khoshgoftaar, 'A survey of collaborative filtering techniques,' Advances in artificial intelligence , vol. 2009, 2009."
+        },
+        {
+          "title": "Research commentary on recommendations with side information: A survey and research directions",
+          "citation": "Z. Sun, Q. Guo, J. Yang, H. Fang, G. Guo, J. Zhang, and R. Burke, 'Research commentary on recommendations with side information: A survey and research directions,' Electronic Commerce Research and Applications , vol. 37, p. 100879, 2019."
+        },
+        {
+          "title": "Research commentary on recommendations with side information: A survey and research directions",
+          "citation": "Z. Sun, Q. Guo, J. Yang, H. Fang, G. Guo, J. Zhang, and R. Burke, 'Research commentary on recommendations with side information: A survey and research directions,' Electronic Commerce Research and Applications , vol. 37, p. 100879, 2019."
+        },
+        {
+          "title": "Tagommenders: connecting users to items through tags",
+          "citation": "S. Sen, J. Vig, and J. Riedl, 'Tagommenders: connecting users to items through tags,' in Proceedings of the 18th international conference on World wide web . ACM, 2009, pp. 671-680."
+        },
+        {
+          "title": "Tagicofi: tag informed collaborative filtering",
+          "citation": "Y. Zhen, W.-J. Li, and D.-Y. Yeung, 'Tagicofi: tag informed collaborative filtering,' in Proceedings of the third ACM conference on Recommender systems . ACM, 2009, pp. 69-76."
+        },
+        {
+          "title": "Joint deep modeling of users and items using reviews for recommendation",
+          "citation": "L. Zheng, V. Noroozi, and P. S. Yu, 'Joint deep modeling of users and items using reviews for recommendation,' in Proceedings of the Tenth ACM International Conference on Web Search and Data Mining . ACM, 2017, pp. 425-434."
+        },
+        {
+          "title": "Exploiting the sentimental bias between ratings and reviews for enhancing recommendation",
+          "citation": "Y. Xu, Y. Yang, J. Han, E. Wang, F. Zhuang, and H. Xiong, 'Exploiting the sentimental bias between ratings and reviews for enhancing recommendation,' in 2018 IEEE International Conference on Data Mining (ICDM) . IEEE, 2018, pp. 1356-1361."
+        },
+        {
+          "title": "Trust-aware recommender systems",
+          "citation": "P. Massa and P. Avesani, 'Trust-aware recommender systems,' in Proceedings of the 2007 ACM conference on Recommender systems . ACM, 2007, pp. 17-24."
+        },
+        {
+          "title": "Trustwalker: a random walk model for combining trust-based and item-based recommendation",
+          "citation": "M. Jamali and M. Ester, 'Trustwalker: a random walk model for combining trust-based and item-based recommendation,' in Proceedings of the 15th ACM SIGKDD international conference on Knowledge discovery and data mining . ACM, 2009, pp. 397-406."
+        },
+        {
+          "title": "Collaborative knowledge base embedding for recommender systems",
+          "citation": "F. Zhang, N. J. Yuan, D. Lian, X. Xie, and W.-Y. Ma, 'Collaborative knowledge base embedding for recommender systems,' in Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , ser. KDD '16. New York, NY, USA: ACM, 2016, pp. 353-362."
+        },
+        {
+          "title": "Learning over knowledge-base embeddings for recommendation",
+          "citation": "Y. Zhang, Q. Ai, X. Chen, and P. Wang, 'Learning over knowledge-base embeddings for recommendation,' arXiv preprint arXiv:1803.06540 , 2018."
+        },
+        {
+          "title": "Ripplenet: Propagating user preferences on the knowledge graph for recommender systems",
+          "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,' in Proceedings of the 27th ACM International Conference on Information and Knowledge Management . ACM, 2018, pp. 417-426."
+        },
+        {
+          "title": "Freebase: a collaboratively created graph database for structuring human knowledge",
+          "citation": "K. Bollacker, C. Evans, P. Paritosh, T. Sturge, and J. Taylor, 'Freebase: a collaboratively created graph database for structuring human knowledge,' in Proceedings of the 2008 ACM SIGMOD international conference on Management of data . AcM, 2008, pp. 1247-1250."
+        },
+        {
+          "title": "Dbpedia-a large-scale, multilingual knowledge base extracted from wikipedia",
+          "citation": "J. Lehmann, R. Isele, M. Jakob, A. Jentzsch, D. Kontokostas, P. N. Mendes, S. Hellmann, M. Morsey, P. Van Kleef, S. Auer et al. , 'Dbpedia-a large-scale, multilingual knowledge base extracted from wikipedia,' Semantic Web , vol. 6, no. 2, pp. 167-195, 2015."
+        },
+        {
+          "title": "Yago: a core of semantic knowledge",
+          "citation": "F. M. Suchanek, G. Kasneci, and G. Weikum, 'Yago: a core of semantic knowledge,' in Proceedings of the 16th international conference on World Wide Web . ACM, 2007, pp. 697-706."
+        },
+        {
+          "title": "Introducing the knowledge graph: things, not strings",
+          "citation": "A. Singhal, 'Introducing the knowledge graph: things, not strings,' 2012, https://googleblog.blogspot.com/2012/05/ introducing-knowledge-graph-things-not.html."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "RELATED WORK",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Knowledge Graphs",
+          "citations": [
+            {
+              "title": "Towards a definition of knowledge graphs.",
+              "citation": "L. Ehrlinger and W. W¨ oß, 'Towards a definition of knowledge graphs.' SEMANTiCS (Posters, Demos, SuCCESS) , vol. 48, 2016."
+            },
+            {
+              "title": "Enterprise knowledge graph: An introduction",
+              "citation": "J. M. Gomez-Perez, J. Z. Pan, G. Vetere, and H. Wu, 'Enterprise knowledge graph: An introduction,' in Exploiting linked data and knowledge graphs in large organisations . Springer, 2017, pp. 1-14."
+            },
+            {
+              "title": "25 years development of knowledge graph theory: the results and the challenge",
+              "citation": "S. Nurdiati and C. Hoede, '25 years development of knowledge graph theory: the results and the challenge,' Memorandum , vol. 1876, 2008."
+            },
+            {
+              "title": "Introducing the knowledge graph: things, not strings",
+              "citation": "A. Singhal, 'Introducing the knowledge graph: things, not strings,' 2012, https://googleblog.blogspot.com/2012/05/ introducing-knowledge-graph-things-not.html."
+            },
+            {
+              "title": "Knowledge graph embedding based question answering",
+              "citation": "X. Huang, J. Zhang, D. Li, and P. Li, 'Knowledge graph embedding based question answering,' in Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining . ACM, 2019, pp. 105-113."
+            },
+            {
+              "title": "Probabilistic enrichment of knowledge graph entities for relation detection in conversational understanding",
+              "citation": "D. Hakkani-T¨ ur, A. Celikyilmaz, L. Heck, G. Tur, and G. Zweig, 'Probabilistic enrichment of knowledge graph entities for relation detection in conversational understanding,' in Fifteenth Annual Conference of the International Speech Communication Association , 2014."
+            },
+            {
+              "title": "Freebase: a collaboratively created graph database for structuring human knowledge",
+              "citation": "K. Bollacker, C. Evans, P. Paritosh, T. Sturge, and J. Taylor, 'Freebase: a collaboratively created graph database for structuring human knowledge,' in Proceedings of the 2008 ACM SIGMOD international conference on Management of data . AcM, 2008, pp. 1247-1250."
+            },
+            {
+              "title": "Dbpedia-a large-scale, multilingual knowledge base extracted from wikipedia",
+              "citation": "J. Lehmann, R. Isele, M. Jakob, A. Jentzsch, D. Kontokostas, P. N. Mendes, S. Hellmann, M. Morsey, P. Van Kleef, S. Auer et al. , 'Dbpedia-a large-scale, multilingual knowledge base extracted from wikipedia,' Semantic Web , vol. 6, no. 2, pp. 167-195, 2015."
+            },
+            {
+              "title": "Yago: a core of semantic knowledge",
+              "citation": "F. M. Suchanek, G. Kasneci, and G. Weikum, 'Yago: a core of semantic knowledge,' in Proceedings of the 16th international conference on World Wide Web . ACM, 2007, pp. 697-706."
+            },
+            {
+              "title": "Coupled semi-supervised learning for information extraction",
+              "citation": "A. Carlson, J. Betteridge, R. C. Wang, E. R. Hruschka Jr, and T. M. Mitchell, 'Coupled semi-supervised learning for information extraction,' in Proceedings of the third ACM international conference on Web search and data mining . ACM, 2010, pp. 101-110."
+            },
+            {
+              "title": "Bio2rdf: towards a mashup to build bioinformatics knowledge systems",
+              "citation": "F. Belleau, M.-A. Nolin, N. Tourigny, P. Rigault, and J. Morissette, 'Bio2rdf: towards a mashup to build bioinformatics knowledge systems,' Journal of biomedical informatics , vol. 41, no. 5, pp. 706716, 2008."
+            },
+            {
+              "title": "Freebase: a collaboratively created graph database for structuring human knowledge",
+              "citation": "K. Bollacker, C. Evans, P. Paritosh, T. Sturge, and J. Taylor, 'Freebase: a collaboratively created graph database for structuring human knowledge,' in Proceedings of the 2008 ACM SIGMOD international conference on Management of data . AcM, 2008, pp. 1247-1250."
+            },
+            {
+              "title": "From freebase to wikidata: The great migration",
+              "citation": "T. Pellissier Tanon, D. Vrandeˇ ci´ c, S. Schaffert, T. Steiner, and L. Pintscher, 'From freebase to wikidata: The great migration,' in Proceedings of the 25th international conference on world wide web . International World Wide Web Conferences Steering Committee, 2016, pp. 1419-1428."
+            },
+            {
+              "title": "Which knowledge graph is best for me?",
+              "citation": "M. F¨ arber and A. Rettinger, 'Which knowledge graph is best for me?' arXiv preprint arXiv:1809.11099 , 2018."
+            },
+            {
+              "title": "Freebase data dumps",
+              "citation": "Google, 'Freebase data dumps,' 2013, https://developers. google.com/freebase/data."
+            },
+            {
+              "title": "Dbpedia-a large-scale, multilingual knowledge base extracted from wikipedia",
+              "citation": "J. Lehmann, R. Isele, M. Jakob, A. Jentzsch, D. Kontokostas, P. N. Mendes, S. Hellmann, M. Morsey, P. Van Kleef, S. Auer et al. , 'Dbpedia-a large-scale, multilingual knowledge base extracted from wikipedia,' Semantic Web , vol. 6, no. 2, pp. 167-195, 2015."
+            },
+            {
+              "title": "Yago: a core of semantic knowledge",
+              "citation": "F. M. Suchanek, G. Kasneci, and G. Weikum, 'Yago: a core of semantic knowledge,' in Proceedings of the 16th international conference on World Wide Web . ACM, 2007, pp. 697-706."
+            },
+            {
+              "title": "WordNet: An electronic lexical database",
+              "citation": "G. A. Miller, WordNet: An electronic lexical database . MIT press, 1998."
+            },
+            {
+              "title": "The geonames geographical database",
+              "citation": "'The geonames geographical database,' 2006, http://www. geonames.org/."
+            },
+            {
+              "title": "Understand your world with bing",
+              "citation": "R. Qian, 'Understand your world with bing,' Bing search blog, Mar , 2013."
+            },
+            {
+              "title": "Knowledge graph refinement: A survey of approaches and evaluation methods",
+              "citation": "H. Paulheim, 'Knowledge graph refinement: A survey of approaches and evaluation methods,' Semantic web , vol. 8, no. 3, pp. 489-508, 2017."
+            },
+            {
+              "title": "Cndbpedia: A never-ending chinese knowledge extraction system",
+              "citation": "B. Xu, Y. Xu, J. Liang, C. Xie, B. Liang, W. Cui, and Y. Xiao, 'Cndbpedia: A never-ending chinese knowledge extraction system,' in International Conference on Industrial, Engineering and Other Applications of Applied Intelligent Systems . Springer, 2017, pp. 428-438."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Recommender Systems",
+          "citations": [
+            {
+              "title": "Collaborative knowledge base embedding for recommender systems",
+              "citation": "F. Zhang, N. J. Yuan, D. Lian, X. Xie, and W.-Y. Ma, 'Collaborative knowledge base embedding for recommender systems,' in Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , ser. KDD '16. New York, NY, USA: ACM, 2016, pp. 353-362."
+            },
+            {
+              "title": "Improving sequential recommendation with knowledge-enhanced memory networks",
+              "citation": "J. Huang, W. X. Zhao, H. Dou, J.-R. Wen, and E. Y. Chang, 'Improving sequential recommendation with knowledge-enhanced memory networks,' in The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval . ACM, 2018, pp. 505-514."
+            },
+            {
+              "title": "Leveraging metapath based context for top-n recommendation with a neural co-attention model",
+              "citation": "B. Hu, C. Shi, W. X. Zhao, and P. S. Yu, 'Leveraging metapath based context for top-n recommendation with a neural co-attention model,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2018, pp. 1531-1540."
+            },
+            {
+              "title": "Multitask feature learning for knowledge graph enhanced recommendation",
+              "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+            },
+            {
+              "title": "Modelling of bi-directional spatio-temporal dependence and users dynamic preferences for missing poi check-in identification",
+              "citation": "D. Xi, F. Zhuang, Y. Liu, J. Gu, H. Xiong, and Q. He, 'Modelling of bi-directional spatio-temporal dependence and users dynamic preferences for missing poi check-in identification,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 33, 2019, pp. 5458-5465."
+            },
+            {
+              "title": "Where to go next: A spatio-temporal gated network for next poi recommendation",
+              "citation": "P. Zhao, H. Zhu, Y. Liu, J. Xu, Z. Li, F. Zhuang, V. S. Sheng, and X. Zhou, 'Where to go next: A spatio-temporal gated network for next poi recommendation,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 33, 2019, pp. 5877-5884."
+            },
+            {
+              "title": "Ripplenet: Propagating user preferences on the knowledge graph for recommender systems",
+              "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,' in Proceedings of the 27th ACM International Conference on Information and Knowledge Management . ACM, 2018, pp. 417-426."
+            },
+            {
+              "title": "Dkn: Deep knowledgeaware network for news recommendation",
+              "citation": "H. Wang, F. Zhang, X. Xie, and M. Guo, 'Dkn: Deep knowledgeaware network for news recommendation,' in Proceedings of the 2018 World Wide Web Conference , ser. WWW '18. Republic and Canton of Geneva, Switzerland: International World Wide Web Conferences Steering Committee, 2018, pp. 1835-1844."
+            },
+            {
+              "title": "Exploring multi-objective exercise recommendations in online education systems",
+              "citation": "Z. Huang, Q. Liu, C. Zhai, Y. Yin, E. Chen, W. Gao, and G. Hu, 'Exploring multi-objective exercise recommendations in online education systems,' in Proceedings of the 28th ACM International Conference on Information and Knowledge Management , 2019, pp. 1261-1270."
+            },
+            {
+              "title": "Duerquiz: A personalized question recommender system for intelligent job interview",
+              "citation": "C. Qin, H. Zhu, C. Zhu, T. Xu, F. Zhuang, C. Ma, J. Zhang, and H. Xiong, 'Duerquiz: A personalized question recommender system for intelligent job interview,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 2165-2173."
+            },
+            {
+              "title": "Yago: a core of semantic knowledge",
+              "citation": "F. M. Suchanek, G. Kasneci, and G. Weikum, 'Yago: a core of semantic knowledge,' in Proceedings of the 16th international conference on World Wide Web . ACM, 2007, pp. 697-706."
+            },
+            {
+              "title": "Wikipedia",
+              "citation": "'Wikipedia,' 2001, http://www.wikipedia.org/."
+            },
+            {
+              "title": "Freebase: a collaboratively created graph database for structuring human knowledge",
+              "citation": "K. Bollacker, C. Evans, P. Paritosh, T. Sturge, and J. Taylor, 'Freebase: a collaboratively created graph database for structuring human knowledge,' in Proceedings of the 2008 ACM SIGMOD international conference on Management of data . AcM, 2008, pp. 1247-1250."
+            },
+            {
+              "title": "Nndb",
+              "citation": "'Nndb,' 2007, https://www.nndb.com/."
+            },
+            {
+              "title": "The fashion model directory",
+              "citation": "'The fashion model directory,' 2000, http://www. fashionmodeldirectory.com/."
+            },
+            {
+              "title": "Musicbrainz",
+              "citation": "'Musicbrainz,' 2000, https://musicbrainz.org/."
+            },
+            {
+              "title": "Dbpedia-a large-scale, multilingual knowledge base extracted from wikipedia",
+              "citation": "J. Lehmann, R. Isele, M. Jakob, A. Jentzsch, D. Kontokostas, P. N. Mendes, S. Hellmann, M. Morsey, P. Van Kleef, S. Auer et al. , 'Dbpedia-a large-scale, multilingual knowledge base extracted from wikipedia,' Semantic Web , vol. 6, no. 2, pp. 167-195, 2015."
+            },
+            {
+              "title": "Understand your world with bing",
+              "citation": "R. Qian, 'Understand your world with bing,' Bing search blog, Mar , 2013."
+            },
+            {
+              "title": "Cndbpedia: A never-ending chinese knowledge extraction system",
+              "citation": "B. Xu, Y. Xu, J. Liang, C. Xie, B. Liang, W. Cui, and Y. Xiao, 'Cndbpedia: A never-ending chinese knowledge extraction system,' in International Conference on Industrial, Engineering and Other Applications of Applied Intelligent Systems . Springer, 2017, pp. 428-438."
+            },
+            {
+              "title": "Baidu baike",
+              "citation": "'Baidu baike,' 2006, https://baike.baidu.com/."
+            },
+            {
+              "title": "Hudong baike",
+              "citation": "'Hudong baike,' 2005, http://www.baike.com/."
+            },
+            {
+              "title": "Coupled semi-supervised learning for information extraction",
+              "citation": "A. Carlson, J. Betteridge, R. C. Wang, E. R. Hruschka Jr, and T. M. Mitchell, 'Coupled semi-supervised learning for information extraction,' in Proceedings of the third ACM international conference on Web search and data mining . ACM, 2010, pp. 101-110."
+            },
+            {
+              "title": "Wikidata",
+              "citation": "'Wikidata,' 2012, http://www.wikidata.org/."
+            },
+            {
+              "title": "Introducing the knowledge graph: things, not strings",
+              "citation": "A. Singhal, 'Introducing the knowledge graph: things, not strings,' 2012, https://googleblog.blogspot.com/2012/05/ introducing-knowledge-graph-things-not.html."
+            },
+            {
+              "title": "Under the hood: The entities graph",
+              "citation": "'Under the hood: The entities graph,' 2013, https: //www.facebook.com/notes/facebookengineering/ under-the-hood-the-entitiesgraph/10151490531588920/."
+            },
+            {
+              "title": "Facebook",
+              "citation": "'Facebook,' 2004, https://www.facebook.com/."
+            },
+            {
+              "title": "Bio2rdf: towards a mashup to build bioinformatics knowledge systems",
+              "citation": "F. Belleau, M.-A. Nolin, N. Tourigny, P. Rigault, and J. Morissette, 'Bio2rdf: towards a mashup to build bioinformatics knowledge systems,' Journal of biomedical informatics , vol. 41, no. 5, pp. 706716, 2008."
+            },
+            {
+              "title": "Knowlife: a knowledge graph for health and life sciences",
+              "citation": "P. Ernst, C. Meng, A. Siu, and G. Weikum, 'Knowlife: a knowledge graph for health and life sciences,' in 2014 IEEE 30th International Conference on Data Engineering . IEEE, 2014, pp. 12541257."
+            },
+            {
+              "title": "I like it... i like it not: Evaluating user ratings noise in recommender systems",
+              "citation": "X. Amatriain, J. M. Pujol, and N. Oliver, 'I like it... i like it not: Evaluating user ratings noise in recommender systems,' in International Conference on User Modeling, Adaptation, and Personalization . Springer, 2009, pp. 247-258."
+            },
+            {
+              "title": "Comparison of implicit and explicit feedback from an online music recommendation service",
+              "citation": "G. Jawaheer, M. Szomszor, and P. Kostkova, 'Comparison of implicit and explicit feedback from an online music recommendation service,' in proceedings of the 1st international workshop on"
+            },
+            {
+              "title": "Collaborative filtering for implicit feedback datasets",
+              "citation": "Y. Hu, Y. Koren, and C. Volinsky, 'Collaborative filtering for implicit feedback datasets,' in 2008 Eighth IEEE International Conference on Data Mining . Ieee, 2008, pp. 263-272."
+            },
+            {
+              "title": "Setrank: A setwise bayesian approach for collaborative ranking from implicit feedback",
+              "citation": "C. Wang, H. Zhu, C. Zhu, C. Qin, and H. Xiong, 'Setrank: A setwise bayesian approach for collaborative ranking from implicit feedback,' in Proceedings of the AAAI Conference on Artificial Intelligence , 2020."
+            },
+            {
+              "title": "A survey of collaborative filtering techniques",
+              "citation": "X. Su and T. M. Khoshgoftaar, 'A survey of collaborative filtering techniques,' Advances in artificial intelligence , vol. 2009, 2009."
+            },
+            {
+              "title": "Bayesian probabilistic matrix factorization using markov chain monte carlo",
+              "citation": "R. Salakhutdinov and A. Mnih, 'Bayesian probabilistic matrix factorization using markov chain monte carlo,' in Proceedings of the 25th international conference on Machine learning , 2008, pp. 880887."
+            },
+            {
+              "title": "Representation learning via dual-autoencoder for recommendation",
+              "citation": "F. Zhuang, Z. Zhang, M. Qian, C. Shi, X. Xie, and Q. He, 'Representation learning via dual-autoencoder for recommendation,' Neural Networks , vol. 90, pp. 83-89, 2017."
+            },
+            {
+              "title": "Content-based recommender systems: State of the art and trends",
+              "citation": "P. Lops, M. De Gemmis, and G. Semeraro, 'Content-based recommender systems: State of the art and trends,' in Recommender systems handbook . Springer, 2011, pp. 73-105."
+            },
+            {
+              "title": "Research commentary on recommendations with side information: A survey and research directions",
+              "citation": "Z. Sun, Q. Guo, J. Yang, H. Fang, G. Guo, J. Zhang, and R. Burke, 'Research commentary on recommendations with side information: A survey and research directions,' Electronic Commerce Research and Applications , vol. 37, p. 100879, 2019."
+            },
+            {
+              "title": "Tagommenders: connecting users to items through tags",
+              "citation": "S. Sen, J. Vig, and J. Riedl, 'Tagommenders: connecting users to items through tags,' in Proceedings of the 18th international conference on World wide web . ACM, 2009, pp. 671-680."
+            },
+            {
+              "title": "Tagicofi: tag informed collaborative filtering",
+              "citation": "Y. Zhen, W.-J. Li, and D.-Y. Yeung, 'Tagicofi: tag informed collaborative filtering,' in Proceedings of the third ACM conference on Recommender systems . ACM, 2009, pp. 69-76."
+            },
+            {
+              "title": "Taxonomydriven computation of product recommendations",
+              "citation": "C.-N. Ziegler, G. Lausen, and L. Schmidt-Thieme, 'Taxonomydriven computation of product recommendations,' in Proceedings of the thirteenth ACM international conference on Information and knowledge management . ACM, 2004, pp. 406-415."
+            },
+            {
+              "title": "Taxonomydriven computation of product recommendations",
+              "citation": "C.-N. Ziegler, G. Lausen, and L. Schmidt-Thieme, 'Taxonomydriven computation of product recommendations,' in Proceedings of the thirteenth ACM international conference on Information and knowledge management . ACM, 2004, pp. 406-415."
+            },
+            {
+              "title": "Adaptive deep modeling of users and items using side information for recommendation",
+              "citation": "J. Han, L. Zheng, Y. Xu, B. Zhang, F. Zhuang, S. Y. Philip, and W. Zuo, 'Adaptive deep modeling of users and items using side information for recommendation,' IEEE transactions on neural networks and learning systems , 2019."
+            },
+            {
+              "title": "A hybrid recommendation system considering visual information for predicting favorite restaurants",
+              "citation": "W.-T. Chu and Y.-L. Tsai, 'A hybrid recommendation system considering visual information for predicting favorite restaurants,' World Wide Web , vol. 20, no. 6, pp. 1313-1331, 2017."
+            },
+            {
+              "title": "Content-aware collaborative music recommendation using pre-trained neural networks",
+              "citation": "D. Liang, M. Zhan, and D. P. Ellis, 'Content-aware collaborative music recommendation using pre-trained neural networks.' in ISMIR , 2015, pp. 295-301."
+            },
+            {
+              "title": "Attentive collaborative filtering: Multimedia recommendation with item-and component-level attention",
+              "citation": "J. Chen, H. Zhang, X. He, L. Nie, W. Liu, and T.-S. Chua, 'Attentive collaborative filtering: Multimedia recommendation with item-and component-level attention,' in Proceedings of the 40th International ACM SIGIR conference on Research and Development in Information Retrieval . ACM, 2017, pp. 335-344."
+            },
+            {
+              "title": "Joint deep modeling of users and items using reviews for recommendation",
+              "citation": "L. Zheng, V. Noroozi, and P. S. Yu, 'Joint deep modeling of users and items using reviews for recommendation,' in Proceedings of the Tenth ACM International Conference on Web Search and Data Mining . ACM, 2017, pp. 425-434."
+            },
+            {
+              "title": "Exploiting the sentimental bias between ratings and reviews for enhancing recommendation",
+              "citation": "Y. Xu, Y. Yang, J. Han, E. Wang, F. Zhuang, and H. Xiong, 'Exploiting the sentimental bias between ratings and reviews for enhancing recommendation,' in 2018 IEEE International Conference on Data Mining (ICDM) . IEEE, 2018, pp. 1356-1361."
+            },
+            {
+              "title": "Learning attribute-to-feature mappings for cold-start recommendations",
+              "citation": "Z. Gantner, L. Drumond, C. Freudenthaler, S. Rendle, and L. Schmidt-Thieme, 'Learning attribute-to-feature mappings for cold-start recommendations.' in ICDM , vol. 10. Citeseer, 2010, pp. 176-185."
+            },
+            {
+              "title": "Trust-aware recommender systems",
+              "citation": "P. Massa and P. Avesani, 'Trust-aware recommender systems,' in Proceedings of the 2007 ACM conference on Recommender systems . ACM, 2007, pp. 17-24."
+            },
+            {
+              "title": "Trustwalker: a random walk model for combining trust-based and item-based recommendation",
+              "citation": "M. Jamali and M. Ester, 'Trustwalker: a random walk model for combining trust-based and item-based recommendation,' in Proceedings of the 15th ACM SIGKDD international conference on Knowledge discovery and data mining . ACM, 2009, pp. 397-406."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "OVERVIEW",
+      "citations": [
+        {
+          "title": "Semantic proximity search on graphs with metagraphbased learning",
+          "citation": "Y. Fang, W. Lin, V. W. Zheng, M. Wu, K. C.-C. Chang, and X.L. Li, 'Semantic proximity search on graphs with metagraphbased learning,' in 2016 IEEE 32nd International Conference on Data Engineering (ICDE) . IEEE, 2016, pp. 277-288."
+        },
+        {
+          "title": "A comprehensive survey of graph embedding: Problems, techniques, and applications",
+          "citation": "H. Cai, V. W. Zheng, and K. C.-C. Chang, 'A comprehensive survey of graph embedding: Problems, techniques, and applications,' IEEE Transactions on Knowledge and Data Engineering , vol. 30, no. 9, pp. 1616-1637, 2018."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "METHODS OF RECOMMENDER SYSTEMS WITH KNOWLEDGE GRAPHS",
+      "citations": [
+        {
+          "title": "Explainable recommendation: A survey and new perspectives",
+          "citation": "Y. Zhang and X. Chen, 'Explainable recommendation: A survey and new perspectives,' arXiv preprint arXiv:1804.11192 , 2018."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Embedding-based Methods",
+          "citations": [
+            {
+              "title": "Knowledge graph embedding: A survey of approaches and applications",
+              "citation": "Q. Wang, Z. Mao, B. Wang, and L. Guo, 'Knowledge graph embedding: A survey of approaches and applications,' IEEE Transactions on Knowledge and Data Engineering , vol. 29, no. 12, pp. 2724-2743, 2017."
+            },
+            {
+              "title": "Translating embeddings for modeling multirelational data",
+              "citation": "A. Bordes, N. Usunier, A. Garcia-Duran, J. Weston, and O. Yakhnenko, 'Translating embeddings for modeling multirelational data,' in Advances in neural information processing systems , 2013, pp. 2787-2795."
+            },
+            {
+              "title": "Knowledge graph embedding by translating on hyperplanes",
+              "citation": "Z. Wang, J. Zhang, J. Feng, and Z. Chen, 'Knowledge graph embedding by translating on hyperplanes,' in Twenty-Eighth AAAI conference on artificial intelligence , 2014."
+            },
+            {
+              "title": "Learning entity and relation embeddings for knowledge graph completion",
+              "citation": "Y. Lin, Z. Liu, M. Sun, Y. Liu, and X. Zhu, 'Learning entity and relation embeddings for knowledge graph completion,' in Twenty-ninth AAAI conference on artificial intelligence , 2015."
+            },
+            {
+              "title": "Knowledge graph embedding via dynamic mapping matrix",
+              "citation": "G. Ji, S. He, L. Xu, K. Liu, and J. Zhao, 'Knowledge graph embedding via dynamic mapping matrix,' in Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 1: Long Papers) , 2015, pp. 687-696."
+            },
+            {
+              "title": "Embedding entities and relations for learning and inference in knowledge bases",
+              "citation": "B. Yang, W.-t. Yih, X. He, J. Gao, and L. Deng, 'Embedding entities and relations for learning and inference in knowledge bases,' arXiv preprint arXiv:1412.6575 , 2014."
+            },
+            {
+              "title": "Collaborative knowledge base embedding for recommender systems",
+              "citation": "F. Zhang, N. J. Yuan, D. Lian, X. Xie, and W.-Y. Ma, 'Collaborative knowledge base embedding for recommender systems,' in Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , ser. KDD '16. New York, NY, USA: ACM, 2016, pp. 353-362."
+            },
+            {
+              "title": "Dkn: Deep knowledgeaware network for news recommendation",
+              "citation": "H. Wang, F. Zhang, X. Xie, and M. Guo, 'Dkn: Deep knowledgeaware network for news recommendation,' in Proceedings of the 2018 World Wide Web Conference , ser. WWW '18. Republic and Canton of Geneva, Switzerland: International World Wide Web Conferences Steering Committee, 2018, pp. 1835-1844."
+            },
+            {
+              "title": "Convolutional neural networks for sentence classification",
+              "citation": "Y. Kim, 'Convolutional neural networks for sentence classification,' arXiv preprint arXiv:1408.5882 , 2014."
+            },
+            {
+              "title": "Improving sequential recommendation with knowledge-enhanced memory networks",
+              "citation": "J. Huang, W. X. Zhao, H. Dou, J.-R. Wen, and E. Y. Chang, 'Improving sequential recommendation with knowledge-enhanced memory networks,' in The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval . ACM, 2018, pp. 505-514."
+            },
+            {
+              "title": "Collaborative knowledge base embedding for recommender systems",
+              "citation": "F. Zhang, N. J. Yuan, D. Lian, X. Xie, and W.-Y. Ma, 'Collaborative knowledge base embedding for recommender systems,' in Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , ser. KDD '16. New York, NY, USA: ACM, 2016, pp. 353-362."
+            },
+            {
+              "title": "Entity2rec: Learning useritem relatedness from knowledge graphs for top-n item recommendation",
+              "citation": "E. Palumbo, G. Rizzo, and R. Troncy, 'Entity2rec: Learning useritem relatedness from knowledge graphs for top-n item recommendation,' in Proceedings of the Eleventh ACM Conference on Recommender Systems . ACM, 2017, pp. 32-36."
+            },
+            {
+              "title": "Learning heterogeneous knowledge base embeddings for explainable recommendation",
+              "citation": "Q. Ai, V. Azizi, X. Chen, and Y. Zhang, 'Learning heterogeneous knowledge base embeddings for explainable recommendation,' Algorithms , vol. 11, no. 9, p. 137, 2018."
+            },
+            {
+              "title": "Shine: Signed heterogeneous information network embedding for sentiment link prediction",
+              "citation": "H. Wang, F. Zhang, M. Hou, X. Xie, M. Guo, and Q. Liu, 'Shine: Signed heterogeneous information network embedding for sentiment link prediction,' in Proceedings of the Eleventh ACM International Conference on Web Search and Data Mining . ACM, 2018, pp. 592-600."
+            },
+            {
+              "title": "Dkn: Deep knowledgeaware network for news recommendation",
+              "citation": "H. Wang, F. Zhang, X. Xie, and M. Guo, 'Dkn: Deep knowledgeaware network for news recommendation,' in Proceedings of the 2018 World Wide Web Conference , ser. WWW '18. Republic and Canton of Geneva, Switzerland: International World Wide Web Conferences Steering Committee, 2018, pp. 1835-1844."
+            },
+            {
+              "title": "Improving sequential recommendation with knowledge-enhanced memory networks",
+              "citation": "J. Huang, W. X. Zhao, H. Dou, J.-R. Wen, and E. Y. Chang, 'Improving sequential recommendation with knowledge-enhanced memory networks,' in The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval . ACM, 2018, pp. 505-514."
+            },
+            {
+              "title": "Learning over knowledge-base embeddings for recommendation",
+              "citation": "Y. Zhang, Q. Ai, X. Chen, and P. Wang, 'Learning over knowledge-base embeddings for recommendation,' arXiv preprint arXiv:1803.06540 , 2018."
+            },
+            {
+              "title": "A knowledge-enhanced deep recommendation framework incorporating gan-based models",
+              "citation": "D. Yang, Z. Guo, Z. Wang, J. Jiang, Y. Xiao, and W. Wang, 'A knowledge-enhanced deep recommendation framework incorporating gan-based models,' IEEE International Conference on Data Mining (ICDM) , pp. 1368-1373, 2018."
+            },
+            {
+              "title": "Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences",
+              "citation": "Y. Cao, X. Wang, X. He, Z. Hu, and T.-S. Chua, 'Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 151-161."
+            },
+            {
+              "title": "Multitask feature learning for knowledge graph enhanced recommendation",
+              "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+            },
+            {
+              "title": "Location embeddings for next trip recommendation",
+              "citation": "A. Dadoun, R. Troncy, O. Ratier, and R. Petitti, 'Location embeddings for next trip recommendation,' in Companion Proceedings of The 2019 World Wide Web Conference . ACM, 2019, pp. 896-903."
+            },
+            {
+              "title": "Content based news recommendation via shortest entity distance over knowledge graphs",
+              "citation": "K. Joseph and H. Jiang, 'Content based news recommendation via shortest entity distance over knowledge graphs,' in Compan-"
+            },
+            {
+              "title": "Relational collaborative filtering: Modeling multiple item relations for recommendation",
+              "citation": "X. Xin, X. He, Y. Zhang, Y. Zhang, and J. Jose, 'Relational collaborative filtering: Modeling multiple item relations for recommendation,' in Proceedings of the 42Nd International ACM SIGIR Conference on Research and Development in Information Retrieval , ser. SIGIR'19. New York, NY, USA: ACM, 2019, pp. 125-134."
+            },
+            {
+              "title": "Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks",
+              "citation": "Y. Ye, X. Wang, J. Yao, K. Jia, J. Zhou, Y. Xiao, and H. Yang, 'Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks,' in Proceedings of the 28th ACM International Conference on Information and Knowledge Management . ACM, 2019, pp. 679-688."
+            },
+            {
+              "title": "Collaborative filtering with entity similarity regularization in heterogeneous information networks",
+              "citation": "X. Yu, X. Ren, Q. Gu, Y. Sun, and J. Han, 'Collaborative filtering with entity similarity regularization in heterogeneous information networks,' IJCAI HINA , vol. 27, 2013."
+            },
+            {
+              "title": "Recommendation in heterogeneous information networks with implicit user feedback",
+              "citation": "X. Yu, X. Ren, Y. Sun, B. Sturt, U. Khandelwal, Q. Gu, B. Norick, and J. Han, 'Recommendation in heterogeneous information networks with implicit user feedback,' in Proceedings of the 7th ACM conference on Recommender systems . ACM, 2013, pp. 347350."
+            },
+            {
+              "title": "Personalized entity recommendation: A heterogeneous information network approach",
+              "citation": "X. Yu, X. Ren, Y. Sun, Q. Gu, B. Sturt, U. Khandelwal, B. Norick, and J. Han, 'Personalized entity recommendation: A heterogeneous information network approach,' in Proceedings of the 7th ACMinternational conference on Web search and data mining . ACM, 2014, pp. 283-292."
+            },
+            {
+              "title": "Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations",
+              "citation": "C. Luo, W. Pang, Z. Wang, and C. Lin, 'Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations,' in 2014 IEEE International Conference on Data Mining . IEEE, 2014, pp. 917-922."
+            },
+            {
+              "title": "Semantic path based personalized recommendation on weighted heterogeneous information networks",
+              "citation": "C. Shi, Z. Zhang, P. Luo, P. S. Yu, Y. Yue, and B. Wu, 'Semantic path based personalized recommendation on weighted heterogeneous information networks,' in Proceedings of the 24th ACM International on Conference on Information and Knowledge Management . ACM, 2015, pp. 453-462."
+            },
+            {
+              "title": "Personalized recommendations using knowledge graphs: A probabilistic logic programming approach",
+              "citation": "R. Catherine and W. Cohen, 'Personalized recommendations using knowledge graphs: A probabilistic logic programming approach,' in Proceedings of the 10th ACM Conference on Recommender Systems . ACM, 2016, pp. 325-332."
+            },
+            {
+              "title": "Meta-graph based recommendation fusion over heterogeneous information networks",
+              "citation": "H. Zhao, Q. Yao, J. Li, Y. Song, and D. L. Lee, 'Meta-graph based recommendation fusion over heterogeneous information networks,' in Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining . ACM, 2017, pp. 635-644."
+            },
+            {
+              "title": "Leveraging metapath based context for top-n recommendation with a neural co-attention model",
+              "citation": "B. Hu, C. Shi, W. X. Zhao, and P. S. Yu, 'Leveraging metapath based context for top-n recommendation with a neural co-attention model,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2018, pp. 1531-1540."
+            },
+            {
+              "title": "Recurrent knowledge graph embedding for effective recommendation",
+              "citation": "Z. Sun, J. Yang, J. Zhang, A. Bozzon, L.-K. Huang, and C. Xu, 'Recurrent knowledge graph embedding for effective recommendation,' in Proceedings of the 12th ACM Conference on Recommender Systems , ser. RecSys '18. New York, NY, USA: ACM, 2018, pp. 297-305."
+            },
+            {
+              "title": "Heterogeneous information network embedding for recommendation",
+              "citation": "C. Shi, B. Hu, W. X. Zhao, and S. Y. Philip, 'Heterogeneous information network embedding for recommendation,' IEEE Transactions on Knowledge and Data Engineering , vol. 31, no. 2, pp. 357-370, 2018."
+            },
+            {
+              "title": "Explainable reasoning over knowledge graphs for recommendation",
+              "citation": "X. Wang, D. Wang, C. Xu, X. He, Y. Cao, and T.-S. Chua, 'Explainable reasoning over knowledge graphs for recommendation,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 33, 2019, pp. 5329-5336."
+            },
+            {
+              "title": "Jointly learning explainable rules for recommendation with knowledge graph",
+              "citation": "W. Ma, M. Zhang, Y. Cao, W. Jin, C. Wang, Y. Liu, S. Ma, and X. Ren, 'Jointly learning explainable rules for recommendation with knowledge graph,' in The World Wide Web Conference . ACM, 2019, pp. 1210-1221."
+            },
+            {
+              "title": "Reinforcement knowledge graph reasoning for explainable recommendation",
+              "citation": "Y. Xian, Z. Fu, S. Muthukrishnan, G. de Melo, and Y. Zhang, 'Reinforcement knowledge graph reasoning for explainable recommendation,' arXiv preprint arXiv:1906.05237 , 2019."
+            },
+            {
+              "title": "Explainable interaction-driven user modeling over knowledge graph for sequential recommendation",
+              "citation": "X. Huang, Q. Fang, S. Qian, J. Sang, Y. Li, and C. Xu, 'Explainable interaction-driven user modeling over knowledge graph for sequential recommendation,' in Proceedings of the 27th ACM International Conference on Multimedia . ACM, 2019, pp. 548-556."
+            },
+            {
+              "title": "Explainable knowledge graph-based recommendation via deep reinforcement learning",
+              "citation": "W. Song, Z. Duan, Z. Yang, H. Zhu, M. Zhang, and J. Tang, 'Explainable knowledge graph-based recommendation via deep reinforcement learning,' arXiv preprint arXiv:1906.09506 , 2019."
+            },
+            {
+              "title": "Ripplenet: Propagating user preferences on the knowledge graph for recommender systems",
+              "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,' in Proceedings of the 27th ACM International Conference on Information and Knowledge Management . ACM, 2018, pp. 417-426."
+            },
+            {
+              "title": "Exploring high-order user preference on the knowledge graph for recommender systems",
+              "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Exploring high-order user preference on the knowledge graph for recommender systems,' ACM Transactions on Information Systems (TOIS) , vol. 37, no. 3, p. 32, 2019."
+            },
+            {
+              "title": "Knowledge graph convolutional networks for recommender systems",
+              "citation": "H. Wang, M. Zhao, X. Xie, W. Li, and M. Guo, 'Knowledge graph convolutional networks for recommender systems,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 3307-3313."
+            },
+            {
+              "title": "Kgat: Knowledge graph attention network for recommendation",
+              "citation": "X. Wang, X. He, Y. Cao, M. Liu, and T.-S. Chua, 'Kgat: Knowledge graph attention network for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 950-958."
+            },
+            {
+              "title": "Knowledge-aware graph neural networks with label smoothness regularization for recommender systems",
+              "citation": "H. Wang, F. Zhang, M. Zhang, J. Leskovec, M. Zhao, W. Li, and Z. Wang, 'Knowledge-aware graph neural networks with label smoothness regularization for recommender systems,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 968-977."
+            },
+            {
+              "title": "Akupm: Attentionenhanced knowledge-aware user preference model for recommendation",
+              "citation": "X. Tang, T. Wang, H. Yang, and H. Song, 'Akupm: Attentionenhanced knowledge-aware user preference model for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 1891-1899."
+            },
+            {
+              "title": "An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation",
+              "citation": "Y. Qu, T. Bai, W. Zhang, J. Nie, and J. Tang, 'An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation,' arXiv preprint arXiv:1908.04032 , 2019."
+            },
+            {
+              "title": "Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation",
+              "citation": "J. Zhao, Z. Zhou, Z. Guan, W. Zhao, W. Ning, G. Qiu, and X. He, 'Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 2347-2357."
+            },
+            {
+              "title": "Unifying taskoriented knowledge graph learning and recommendation",
+              "citation": "Q. Li, X. Tang, T. Wang, H. Yang, and H. Song, 'Unifying taskoriented knowledge graph learning and recommendation,' IEEE Access , vol. 7, pp. 115 816-115 828, 2019."
+            },
+            {
+              "title": "Attentive knowledge graph embedding for personalized recommendation",
+              "citation": "X. Sha, Z. Sun, and J. Zhang, 'Attentive knowledge graph embedding for personalized recommendation,' arXiv preprint arXiv:1910.08288 , 2019."
+            },
+            {
+              "title": "Learning over knowledge-base embeddings for recommendation",
+              "citation": "Y. Zhang, Q. Ai, X. Chen, and P. Wang, 'Learning over knowledge-base embeddings for recommendation,' arXiv preprint arXiv:1803.06540 , 2018."
+            },
+            {
+              "title": "Shine: Signed heterogeneous information network embedding for sentiment link prediction",
+              "citation": "H. Wang, F. Zhang, M. Hou, X. Xie, M. Guo, and Q. Liu, 'Shine: Signed heterogeneous information network embedding for sentiment link prediction,' in Proceedings of the Eleventh ACM International Conference on Web Search and Data Mining . ACM, 2018, pp. 592-600."
+            },
+            {
+              "title": "Location embeddings for next trip recommendation",
+              "citation": "A. Dadoun, R. Troncy, O. Ratier, and R. Petitti, 'Location embeddings for next trip recommendation,' in Companion Proceedings of The 2019 World Wide Web Conference . ACM, 2019, pp. 896-903."
+            },
+            {
+              "title": "A knowledge-enhanced deep recommendation framework incorporating gan-based models",
+              "citation": "D. Yang, Z. Guo, Z. Wang, J. Jiang, Y. Xiao, and W. Wang, 'A knowledge-enhanced deep recommendation framework incorporating gan-based models,' IEEE International Conference on Data Mining (ICDM) , pp. 1368-1373, 2018."
+            },
+            {
+              "title": "metapath2vec: Scalable representation learning for heterogeneous networks",
+              "citation": "Y. Dong, N. V. Chawla, and A. Swami, 'metapath2vec: Scalable representation learning for heterogeneous networks,' in Proceedings of the 23rd ACM SIGKDD international conference on knowledge discovery and data mining , 2017, pp. 135-144."
+            },
+            {
+              "title": "Efficient estimation of word representations in vector space",
+              "citation": "T. Mikolov, K. Chen, G. Corrado, and J. Dean, 'Efficient estimation of word representations in vector space,' arXiv preprint arXiv:1301.3781 , 2013."
+            },
+            {
+              "title": "Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks",
+              "citation": "Y. Ye, X. Wang, J. Yao, K. Jia, J. Zhou, Y. Xiao, and H. Yang, 'Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks,' in Proceedings of the 28th ACM International Conference on Information and Knowledge Management . ACM, 2019, pp. 679-688."
+            },
+            {
+              "title": "Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences",
+              "citation": "Y. Cao, X. Wang, X. He, Z. Hu, and T.-S. Chua, 'Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 151-161."
+            },
+            {
+              "title": "Multitask feature learning for knowledge graph enhanced recommendation",
+              "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+            },
+            {
+              "title": "Relational collaborative filtering: Modeling multiple item relations for recommendation",
+              "citation": "X. Xin, X. He, Y. Zhang, Y. Zhang, and J. Jose, 'Relational collaborative filtering: Modeling multiple item relations for recommendation,' in Proceedings of the 42Nd International ACM SIGIR Conference on Research and Development in Information Retrieval , ser. SIGIR'19. New York, NY, USA: ACM, 2019, pp. 125-134."
+            },
+            {
+              "title": "Collaborative knowledge base embedding for recommender systems",
+              "citation": "F. Zhang, N. J. Yuan, D. Lian, X. Xie, and W.-Y. Ma, 'Collaborative knowledge base embedding for recommender systems,' in Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , ser. KDD '16. New York, NY, USA: ACM, 2016, pp. 353-362."
+            },
+            {
+              "title": "Improving sequential recommendation with knowledge-enhanced memory networks",
+              "citation": "J. Huang, W. X. Zhao, H. Dou, J.-R. Wen, and E. Y. Chang, 'Improving sequential recommendation with knowledge-enhanced memory networks,' in The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval . ACM, 2018, pp. 505-514."
+            },
+            {
+              "title": "Multitask feature learning for knowledge graph enhanced recommendation",
+              "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+            },
+            {
+              "title": "Dkn: Deep knowledgeaware network for news recommendation",
+              "citation": "H. Wang, F. Zhang, X. Xie, and M. Guo, 'Dkn: Deep knowledgeaware network for news recommendation,' in Proceedings of the 2018 World Wide Web Conference , ser. WWW '18. Republic and Canton of Geneva, Switzerland: International World Wide Web Conferences Steering Committee, 2018, pp. 1835-1844."
+            },
+            {
+              "title": "A knowledge-enhanced deep recommendation framework incorporating gan-based models",
+              "citation": "D. Yang, Z. Guo, Z. Wang, J. Jiang, Y. Xiao, and W. Wang, 'A knowledge-enhanced deep recommendation framework incorporating gan-based models,' IEEE International Conference on Data Mining (ICDM) , pp. 1368-1373, 2018."
+            },
+            {
+              "title": "Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences",
+              "citation": "Y. Cao, X. Wang, X. He, Z. Hu, and T.-S. Chua, 'Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 151-161."
+            },
+            {
+              "title": "Content based news recommendation via shortest entity distance over knowledge graphs",
+              "citation": "K. Joseph and H. Jiang, 'Content based news recommendation via shortest entity distance over knowledge graphs,' in Compan-"
+            },
+            {
+              "title": "Relational collaborative filtering: Modeling multiple item relations for recommendation",
+              "citation": "X. Xin, X. He, Y. Zhang, Y. Zhang, and J. Jose, 'Relational collaborative filtering: Modeling multiple item relations for recommendation,' in Proceedings of the 42Nd International ACM SIGIR Conference on Research and Development in Information Retrieval , ser. SIGIR'19. New York, NY, USA: ACM, 2019, pp. 125-134."
+            },
+            {
+              "title": "Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks",
+              "citation": "Y. Ye, X. Wang, J. Yao, K. Jia, J. Zhou, Y. Xiao, and H. Yang, 'Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks,' in Proceedings of the 28th ACM International Conference on Information and Knowledge Management . ACM, 2019, pp. 679-688."
+            },
+            {
+              "title": "Learning over knowledge-base embeddings for recommendation",
+              "citation": "Y. Zhang, Q. Ai, X. Chen, and P. Wang, 'Learning over knowledge-base embeddings for recommendation,' arXiv preprint arXiv:1803.06540 , 2018."
+            },
+            {
+              "title": "Entity2rec: Learning useritem relatedness from knowledge graphs for top-n item recommendation",
+              "citation": "E. Palumbo, G. Rizzo, and R. Troncy, 'Entity2rec: Learning useritem relatedness from knowledge graphs for top-n item recommendation,' in Proceedings of the Eleventh ACM Conference on Recommender Systems . ACM, 2017, pp. 32-36."
+            },
+            {
+              "title": "Learning heterogeneous knowledge base embeddings for explainable recommendation",
+              "citation": "Q. Ai, V. Azizi, X. Chen, and Y. Zhang, 'Learning heterogeneous knowledge base embeddings for explainable recommendation,' Algorithms , vol. 11, no. 9, p. 137, 2018."
+            },
+            {
+              "title": "Shine: Signed heterogeneous information network embedding for sentiment link prediction",
+              "citation": "H. Wang, F. Zhang, M. Hou, X. Xie, M. Guo, and Q. Liu, 'Shine: Signed heterogeneous information network embedding for sentiment link prediction,' in Proceedings of the Eleventh ACM International Conference on Web Search and Data Mining . ACM, 2018, pp. 592-600."
+            },
+            {
+              "title": "Location embeddings for next trip recommendation",
+              "citation": "A. Dadoun, R. Troncy, O. Ratier, and R. Petitti, 'Location embeddings for next trip recommendation,' in Companion Proceedings of The 2019 World Wide Web Conference . ACM, 2019, pp. 896-903."
+            },
+            {
+              "title": "A knowledge-enhanced deep recommendation framework incorporating gan-based models",
+              "citation": "D. Yang, Z. Guo, Z. Wang, J. Jiang, Y. Xiao, and W. Wang, 'A knowledge-enhanced deep recommendation framework incorporating gan-based models,' IEEE International Conference on Data Mining (ICDM) , pp. 1368-1373, 2018."
+            },
+            {
+              "title": "Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks",
+              "citation": "Y. Ye, X. Wang, J. Yao, K. Jia, J. Zhou, Y. Xiao, and H. Yang, 'Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks,' in Proceedings of the 28th ACM International Conference on Information and Knowledge Management . ACM, 2019, pp. 679-688."
+            },
+            {
+              "title": "Multitask feature learning for knowledge graph enhanced recommendation",
+              "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+            },
+            {
+              "title": "Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences",
+              "citation": "Y. Cao, X. Wang, X. He, Z. Hu, and T.-S. Chua, 'Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 151-161."
+            },
+            {
+              "title": "Relational collaborative filtering: Modeling multiple item relations for recommendation",
+              "citation": "X. Xin, X. He, Y. Zhang, Y. Zhang, and J. Jose, 'Relational collaborative filtering: Modeling multiple item relations for recommendation,' in Proceedings of the 42Nd International ACM SIGIR Conference on Research and Development in Information Retrieval , ser. SIGIR'19. New York, NY, USA: ACM, 2019, pp. 125-134."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Wang et al.",
+              "citations": [
+                {
+                  "title": "DKN: Deep Knowledge-Aware Network for News Recommendation",
+                  "citation": "H. Wang, F. Zhang, X. Xie, and M. Guo, 'Dkn: Deep knowledgeaware network for news recommendation,' in Proceedings of the 2018 World Wide Web Conference , ser. WWW '18. Republic and Canton of Geneva, Switzerland: International World Wide Web Conferences Steering Committee, 2018, pp. 1835-1844."
+                },
+                {
+                  "title": "Convolutional neural networks for sentence classification",
+                  "citation": "Y. Kim, 'Convolutional neural networks for sentence classification,' arXiv preprint arXiv:1408.5882 , 2014."
+                },
+                {
+                  "title": "Improving sequential recommendation with knowledge-enhanced memory networks,",
+                  "citation": "J. Huang, W. X. Zhao, H. Dou, J.-R. Wen, and E. Y. Chang, 'Improving sequential recommendation with knowledge-enhanced memory networks,' in The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval . ACM, 2018, pp. 505-514."
+                },
+                {
+                  "title": "Collaborative knowledge base embedding for recommender systems,",
+                  "citation": "F. Zhang, N. J. Yuan, D. Lian, X. Xie, and W.-Y. Ma, 'Collaborative knowledge base embedding for recommender systems,' in Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , ser. KDD '16. New York, NY, USA: ACM, 2016, pp. 353-362."
+                },
+                {
+                  "title": "Entity2rec: Learning useritem relatedness from knowledge graphs for top-n item recommendation,",
+                  "citation": "E. Palumbo, G. Rizzo, and R. Troncy, 'Entity2rec: Learning useritem relatedness from knowledge graphs for top-n item recommendation,' in Proceedings of the Eleventh ACM Conference on Recommender Systems . ACM, 2017, pp. 32-36."
+                },
+                {
+                  "title": "Learning heterogeneous knowledge base embeddings for explainable recommendation,",
+                  "citation": "Q. Ai, V. Azizi, X. Chen, and Y. Zhang, 'Learning heterogeneous knowledge base embeddings for explainable recommendation,' Algorithms , vol. 11, no. 9, p. 137, 2018."
+                },
+                {
+                  "title": "Shine: Signed heterogeneous information network embedding for sentiment link prediction,",
+                  "citation": "H. Wang, F. Zhang, M. Hou, X. Xie, M. Guo, and Q. Liu, 'Shine: Signed heterogeneous information network embedding for sentiment link prediction,' in Proceedings of the Eleventh ACM International Conference on Web Search and Data Mining . ACM, 2018, pp. 592-600."
+                },
+                {
+                  "title": "Learning over knowledge-base embeddings for recommendation,",
+                  "citation": "Y. Zhang, Q. Ai, X. Chen, and P. Wang, 'Learning over knowledge-base embeddings for recommendation,' arXiv preprint arXiv:1803.06540 , 2018."
+                },
+                {
+                  "title": "A knowledge-enhanced deep recommendation framework incorporating gan-based models,",
+                  "citation": "D. Yang, Z. Guo, Z. Wang, J. Jiang, Y. Xiao, and W. Wang, 'A knowledge-enhanced deep recommendation framework incorporating gan-based models,' IEEE International Conference on Data Mining (ICDM) , pp. 1368-1373, 2018."
+                },
+                {
+                  "title": "Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,",
+                  "citation": "Y. Cao, X. Wang, X. He, Z. Hu, and T.-S. Chua, 'Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 151-161."
+                },
+                {
+                  "title": "Multitask feature learning for knowledge graph enhanced recommendation,",
+                  "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+                },
+                {
+                  "title": "Location embeddings for next trip recommendation,",
+                  "citation": "A. Dadoun, R. Troncy, O. Ratier, and R. Petitti, 'Location embeddings for next trip recommendation,' in Companion Proceedings of The 2019 World Wide Web Conference . ACM, 2019, pp. 896-903."
+                },
+                {
+                  "title": "Content based news recommendation via shortest entity distance over knowledge graphs",
+                  "citation": "K. Joseph and H. Jiang, 'Content based news recommendation via shortest entity distance over knowledge graphs,' in Compan-\n\nion Proceedings of The 2019 World Wide Web Conference . ACM, 2019, pp. 690-699."
+                },
+                {
+                  "title": "Relational collaborative filtering: Modeling multiple item relations for recommendation,",
+                  "citation": "X. Xin, X. He, Y. Zhang, Y. Zhang, and J. Jose, 'Relational collaborative filtering: Modeling multiple item relations for recommendation,' in Proceedings of the 42Nd International ACM SIGIR Conference on Research and Development in Information Retrieval , ser. SIGIR'19. New York, NY, USA: ACM, 2019, pp. 125-134."
+                },
+                {
+                  "title": "Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks,",
+                  "citation": "Y. Ye, X. Wang, J. Yao, K. Jia, J. Zhou, Y. Xiao, and H. Yang, 'Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks,' in Proceedings of the 28th ACM International Conference on Information and Knowledge Management . ACM, 2019, pp. 679-688."
+                },
+                {
+                  "title": "Collaborative filtering with entity similarity regularization in heterogeneous information networks,",
+                  "citation": "X. Yu, X. Ren, Q. Gu, Y. Sun, and J. Han, 'Collaborative filtering with entity similarity regularization in heterogeneous information networks,' IJCAI HINA , vol. 27, 2013."
+                },
+                {
+                  "title": "Recommendation in heterogeneous information networks with implicit user feedback,",
+                  "citation": "X. Yu, X. Ren, Y. Sun, B. Sturt, U. Khandelwal, Q. Gu, B. Norick, and J. Han, 'Recommendation in heterogeneous information networks with implicit user feedback,' in Proceedings of the 7th ACM conference on Recommender systems . ACM, 2013, pp. 347350."
+                },
+                {
+                  "title": "Personalized entity recommendation: A heterogeneous information network approach,",
+                  "citation": "X. Yu, X. Ren, Y. Sun, Q. Gu, B. Sturt, U. Khandelwal, B. Norick, and J. Han, 'Personalized entity recommendation: A heterogeneous information network approach,' in Proceedings of the 7th ACMinternational conference on Web search and data mining . ACM, 2014, pp. 283-292."
+                },
+                {
+                  "title": "Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations,",
+                  "citation": "C. Luo, W. Pang, Z. Wang, and C. Lin, 'Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations,' in 2014 IEEE International Conference on Data Mining . IEEE, 2014, pp. 917-922."
+                },
+                {
+                  "title": "Semantic path based personalized recommendation on weighted heterogeneous information networks,",
+                  "citation": "C. Shi, Z. Zhang, P. Luo, P. S. Yu, Y. Yue, and B. Wu, 'Semantic path based personalized recommendation on weighted heterogeneous information networks,' in Proceedings of the 24th ACM International on Conference on Information and Knowledge Management . ACM, 2015, pp. 453-462."
+                },
+                {
+                  "title": "Personalized recommendations using knowledge graphs: A probabilistic logic programming approach",
+                  "citation": "R. Catherine and W. Cohen, 'Personalized recommendations using knowledge graphs: A probabilistic logic programming approach,' in Proceedings of the 10th ACM Conference on Recommender Systems . ACM, 2016, pp. 325-332."
+                },
+                {
+                  "title": "Meta-graph based recommendation fusion over heterogeneous information networks,",
+                  "citation": "H. Zhao, Q. Yao, J. Li, Y. Song, and D. L. Lee, 'Meta-graph based recommendation fusion over heterogeneous information networks,' in Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining . ACM, 2017, pp. 635-644."
+                },
+                {
+                  "title": "Leveraging metapath based context for top-n recommendation with a neural co-attention model,",
+                  "citation": "B. Hu, C. Shi, W. X. Zhao, and P. S. Yu, 'Leveraging metapath based context for top-n recommendation with a neural co-attention model,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2018, pp. 1531-1540."
+                },
+                {
+                  "title": "Recurrent knowledge graph embedding for effective recommendation,",
+                  "citation": "Z. Sun, J. Yang, J. Zhang, A. Bozzon, L.-K. Huang, and C. Xu, 'Recurrent knowledge graph embedding for effective recommendation,' in Proceedings of the 12th ACM Conference on Recommender Systems , ser. RecSys '18. New York, NY, USA: ACM, 2018, pp. 297-305."
+                },
+                {
+                  "title": "Heterogeneous information network embedding for recommendation,",
+                  "citation": "C. Shi, B. Hu, W. X. Zhao, and S. Y. Philip, 'Heterogeneous information network embedding for recommendation,' IEEE Transactions on Knowledge and Data Engineering , vol. 31, no. 2, pp. 357-370, 2018."
+                },
+                {
+                  "title": "Explainable reasoning over knowledge graphs for recommendation,",
+                  "citation": "X. Wang, D. Wang, C. Xu, X. He, Y. Cao, and T.-S. Chua, 'Explainable reasoning over knowledge graphs for recommendation,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 33, 2019, pp. 5329-5336."
+                },
+                {
+                  "title": "Jointly learning explainable rules for recommendation with knowledge graph,",
+                  "citation": "W. Ma, M. Zhang, Y. Cao, W. Jin, C. Wang, Y. Liu, S. Ma, and X. Ren, 'Jointly learning explainable rules for recommendation with knowledge graph,' in The World Wide Web Conference . ACM, 2019, pp. 1210-1221."
+                },
+                {
+                  "title": "Reinforcement knowledge graph reasoning for explainable recommendation,",
+                  "citation": "Y. Xian, Z. Fu, S. Muthukrishnan, G. de Melo, and Y. Zhang, 'Reinforcement knowledge graph reasoning for explainable recommendation,' arXiv preprint arXiv:1906.05237 , 2019."
+                },
+                {
+                  "title": "Explainable interaction-driven user modeling over knowledge graph for sequential recommendation,",
+                  "citation": "X. Huang, Q. Fang, S. Qian, J. Sang, Y. Li, and C. Xu, 'Explainable interaction-driven user modeling over knowledge graph for sequential recommendation,' in Proceedings of the 27th ACM International Conference on Multimedia . ACM, 2019, pp. 548-556."
+                },
+                {
+                  "title": "Explainable knowledge graph-based recommendation via deep reinforcement learning,",
+                  "citation": "W. Song, Z. Duan, Z. Yang, H. Zhu, M. Zhang, and J. Tang, 'Explainable knowledge graph-based recommendation via deep reinforcement learning,' arXiv preprint arXiv:1906.09506 , 2019."
+                },
+                {
+                  "title": "Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,",
+                  "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,' in Proceedings of the 27th ACM International Conference on Information and Knowledge Management . ACM, 2018, pp. 417-426."
+                },
+                {
+                  "title": "Exploring high-order user preference on the knowledge graph for recommender systems,",
+                  "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Exploring high-order user preference on the knowledge graph for recommender systems,' ACM Transactions on Information Systems (TOIS) , vol. 37, no. 3, p. 32, 2019."
+                },
+                {
+                  "title": "Knowledge graph convolutional networks for recommender systems,",
+                  "citation": "H. Wang, M. Zhao, X. Xie, W. Li, and M. Guo, 'Knowledge graph convolutional networks for recommender systems,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 3307-3313."
+                },
+                {
+                  "title": "Kgat: Knowledge graph attention network for recommendation,",
+                  "citation": "X. Wang, X. He, Y. Cao, M. Liu, and T.-S. Chua, 'Kgat: Knowledge graph attention network for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge\n\nDiscovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 950-958."
+                },
+                {
+                  "title": "Knowledge-aware graph neural networks with label smoothness regularization for recommender systems,",
+                  "citation": "H. Wang, F. Zhang, M. Zhang, J. Leskovec, M. Zhao, W. Li, and Z. Wang, 'Knowledge-aware graph neural networks with label smoothness regularization for recommender systems,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 968-977."
+                },
+                {
+                  "title": "Akupm: Attentionenhanced knowledge-aware user preference model for recommendation,",
+                  "citation": "X. Tang, T. Wang, H. Yang, and H. Song, 'Akupm: Attentionenhanced knowledge-aware user preference model for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 1891-1899."
+                },
+                {
+                  "title": "An end-to-end neighborhood-based interaction model for knowledge-enhanced recommendation",
+                  "citation": "Y. Qu, T. Bai, W. Zhang, J. Nie, and J. Tang, 'An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation,' arXiv preprint arXiv:1908.04032 , 2019."
+                },
+                {
+                  "title": "Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation,",
+                  "citation": "J. Zhao, Z. Zhou, Z. Guan, W. Zhao, W. Ning, G. Qiu, and X. He, 'Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 2347-2357."
+                },
+                {
+                  "title": "Unifying taskoriented knowledge graph learning and recommendation,",
+                  "citation": "Q. Li, X. Tang, T. Wang, H. Yang, and H. Song, 'Unifying taskoriented knowledge graph learning and recommendation,' IEEE Access , vol. 7, pp. 115 816-115 828, 2019."
+                },
+                {
+                  "title": "Attentive knowledge graph embedding for personalized recommendation,",
+                  "citation": "X. Sha, Z. Sun, and J. Zhang, 'Attentive knowledge graph embedding for personalized recommendation,' arXiv preprint arXiv:1910.08288 , 2019."
+                },
+                {
+                  "title": "metapath2vec: Scalable representation learning for heterogeneous networks,",
+                  "citation": "Y. Dong, N. V. Chawla, and A. Swami, 'metapath2vec: Scalable representation learning for heterogeneous networks,' in Proceedings of the 23rd ACM SIGKDD international conference on knowledge discovery and data mining , 2017, pp. 135-144."
+                },
+                {
+                  "title": "Efficient estimation of word representations in vector space,",
+                  "citation": "T. Mikolov, K. Chen, G. Corrado, and J. Dean, 'Efficient estimation of word representations in vector space,' arXiv preprint arXiv:1301.3781 , 2013."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.2",
+              "sec_title": "Zhang et al.",
+              "citations": [
+                {
+                  "title": "Learning over knowledge-base embeddings for recommendation,",
+                  "citation": "Y. Zhang, Q. Ai, X. Chen, and P. Wang, 'Learning over knowledge-base embeddings for recommendation,' arXiv preprint arXiv:1803.06540 , 2018."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.3",
+              "sec_title": "Cao et al.",
+              "citations": [
+                {
+                  "title": "Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,",
+                  "citation": "Y. Cao, X. Wang, X. He, Z. Hu, and T.-S. Chua, 'Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 151-161."
+                },
+                {
+                  "title": "Multitask feature learning for knowledge graph enhanced recommendation,",
+                  "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+                },
+                {
+                  "title": "Relational collaborative filtering: Modeling multiple item relations for recommendation,",
+                  "citation": "X. Xin, X. He, Y. Zhang, Y. Zhang, and J. Jose, 'Relational collaborative filtering: Modeling multiple item relations for recommendation,' in Proceedings of the 42Nd International ACM SIGIR Conference on Research and Development in Information Retrieval , ser. SIGIR'19. New York, NY, USA: ACM, 2019, pp. 125-134."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.4",
+              "sec_title": "Summary for Embedding-based Methods.",
+              "citations": [
+                {
+                  "title": "Collaborative knowledge base embedding for recommender systems,",
+                  "citation": "F. Zhang, N. J. Yuan, D. Lian, X. Xie, and W.-Y. Ma, 'Collaborative knowledge base embedding for recommender systems,' in Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , ser. KDD '16. New York, NY, USA: ACM, 2016, pp. 353-362."
+                },
+                {
+                  "title": "Improving sequential recommendation with knowledge-enhanced memory networks,",
+                  "citation": "J. Huang, W. X. Zhao, H. Dou, J.-R. Wen, and E. Y. Chang, 'Improving sequential recommendation with knowledge-enhanced memory networks,' in The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval . ACM, 2018, pp. 505-514."
+                },
+                {
+                  "title": "Multitask feature learning for knowledge graph enhanced recommendation,",
+                  "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+                },
+                {
+                  "title": "DKN: Deep Knowledge-Aware Network for News Recommendation",
+                  "citation": "H. Wang, F. Zhang, X. Xie, and M. Guo, 'Dkn: Deep knowledgeaware network for news recommendation,' in Proceedings of the 2018 World Wide Web Conference , ser. WWW '18. Republic and Canton of Geneva, Switzerland: International World Wide Web Conferences Steering Committee, 2018, pp. 1835-1844."
+                },
+                {
+                  "title": "A knowledge-enhanced deep recommendation framework incorporating gan-based models,",
+                  "citation": "D. Yang, Z. Guo, Z. Wang, J. Jiang, Y. Xiao, and W. Wang, 'A knowledge-enhanced deep recommendation framework incorporating gan-based models,' IEEE International Conference on Data Mining (ICDM) , pp. 1368-1373, 2018."
+                },
+                {
+                  "title": "Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,",
+                  "citation": "Y. Cao, X. Wang, X. He, Z. Hu, and T.-S. Chua, 'Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 151-161."
+                },
+                {
+                  "title": "Content based news recommendation via shortest entity distance over knowledge graphs",
+                  "citation": "K. Joseph and H. Jiang, 'Content based news recommendation via shortest entity distance over knowledge graphs,' in Compan-\n\nion Proceedings of The 2019 World Wide Web Conference . ACM, 2019, pp. 690-699."
+                },
+                {
+                  "title": "Relational collaborative filtering: Modeling multiple item relations for recommendation,",
+                  "citation": "X. Xin, X. He, Y. Zhang, Y. Zhang, and J. Jose, 'Relational collaborative filtering: Modeling multiple item relations for recommendation,' in Proceedings of the 42Nd International ACM SIGIR Conference on Research and Development in Information Retrieval , ser. SIGIR'19. New York, NY, USA: ACM, 2019, pp. 125-134."
+                },
+                {
+                  "title": "Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks,",
+                  "citation": "Y. Ye, X. Wang, J. Yao, K. Jia, J. Zhou, Y. Xiao, and H. Yang, 'Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks,' in Proceedings of the 28th ACM International Conference on Information and Knowledge Management . ACM, 2019, pp. 679-688."
+                },
+                {
+                  "title": "Learning over knowledge-base embeddings for recommendation,",
+                  "citation": "Y. Zhang, Q. Ai, X. Chen, and P. Wang, 'Learning over knowledge-base embeddings for recommendation,' arXiv preprint arXiv:1803.06540 , 2018."
+                },
+                {
+                  "title": "Entity2rec: Learning useritem relatedness from knowledge graphs for top-n item recommendation,",
+                  "citation": "E. Palumbo, G. Rizzo, and R. Troncy, 'Entity2rec: Learning useritem relatedness from knowledge graphs for top-n item recommendation,' in Proceedings of the Eleventh ACM Conference on Recommender Systems . ACM, 2017, pp. 32-36."
+                },
+                {
+                  "title": "Learning heterogeneous knowledge base embeddings for explainable recommendation,",
+                  "citation": "Q. Ai, V. Azizi, X. Chen, and Y. Zhang, 'Learning heterogeneous knowledge base embeddings for explainable recommendation,' Algorithms , vol. 11, no. 9, p. 137, 2018."
+                },
+                {
+                  "title": "Shine: Signed heterogeneous information network embedding for sentiment link prediction,",
+                  "citation": "H. Wang, F. Zhang, M. Hou, X. Xie, M. Guo, and Q. Liu, 'Shine: Signed heterogeneous information network embedding for sentiment link prediction,' in Proceedings of the Eleventh ACM International Conference on Web Search and Data Mining . ACM, 2018, pp. 592-600."
+                },
+                {
+                  "title": "Location embeddings for next trip recommendation,",
+                  "citation": "A. Dadoun, R. Troncy, O. Ratier, and R. Petitti, 'Location embeddings for next trip recommendation,' in Companion Proceedings of The 2019 World Wide Web Conference . ACM, 2019, pp. 896-903."
+                },
+                {
+                  "title": "Pathsim: Meta path-based top-k similarity search in heterogeneous information networks,",
+                  "citation": "Y. Sun, J. Han, X. Yan, P. S. Yu, and T. Wu, 'Pathsim: Meta path-based top-k similarity search in heterogeneous information networks,' Proceedings of the VLDB Endowment , vol. 4, no. 11, pp. 992-1003, 2011."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Path-based Methods",
+          "citations": [
+            {
+              "title": "Pathsim: Meta path-based top-k similarity search in heterogeneous information networks",
+              "citation": "Y. Sun, J. Han, X. Yan, P. S. Yu, and T. Wu, 'Pathsim: Meta path-based top-k similarity search in heterogeneous information networks,' Proceedings of the VLDB Endowment , vol. 4, no. 11, pp. 992-1003, 2011."
+            },
+            {
+              "title": "Collaborative filtering with entity similarity regularization in heterogeneous information networks",
+              "citation": "X. Yu, X. Ren, Q. Gu, Y. Sun, and J. Han, 'Collaborative filtering with entity similarity regularization in heterogeneous information networks,' IJCAI HINA , vol. 27, 2013."
+            },
+            {
+              "title": "Learning from incomplete ratings using non-negative matrix factorization",
+              "citation": "S. Zhang, W. Wang, J. Ford, and F. Makedon, 'Learning from incomplete ratings using non-negative matrix factorization,' in Proceedings of the 2006 SIAM international conference on data mining . SIAM, 2006, pp. 549-553."
+            },
+            {
+              "title": "Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations",
+              "citation": "C. Luo, W. Pang, Z. Wang, and C. Lin, 'Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations,' in 2014 IEEE International Conference on Data Mining . IEEE, 2014, pp. 917-922."
+            },
+            {
+              "title": "Recommendation in heterogeneous information networks with implicit user feedback",
+              "citation": "X. Yu, X. Ren, Y. Sun, B. Sturt, U. Khandelwal, Q. Gu, B. Norick, and J. Han, 'Recommendation in heterogeneous information networks with implicit user feedback,' in Proceedings of the 7th ACM conference on Recommender systems . ACM, 2013, pp. 347350."
+            },
+            {
+              "title": "Pathsim: Meta path-based top-k similarity search in heterogeneous information networks",
+              "citation": "Y. Sun, J. Han, X. Yan, P. S. Yu, and T. Wu, 'Pathsim: Meta path-based top-k similarity search in heterogeneous information networks,' Proceedings of the VLDB Endowment , vol. 4, no. 11, pp. 992-1003, 2011."
+            },
+            {
+              "title": "Convex and seminonnegative matrix factorizations",
+              "citation": "C. H. Ding, T. Li, and M. I. Jordan, 'Convex and seminonnegative matrix factorizations,' IEEE transactions on pattern analysis and machine intelligence , vol. 32, no. 1, pp. 45-55, 2008."
+            },
+            {
+              "title": "Personalized entity recommendation: A heterogeneous information network approach",
+              "citation": "X. Yu, X. Ren, Y. Sun, Q. Gu, B. Sturt, U. Khandelwal, B. Norick, and J. Han, 'Personalized entity recommendation: A heterogeneous information network approach,' in Proceedings of the 7th ACMinternational conference on Web search and data mining . ACM, 2014, pp. 283-292."
+            },
+            {
+              "title": "Meta-graph based recommendation fusion over heterogeneous information networks",
+              "citation": "H. Zhao, Q. Yao, J. Li, Y. Song, and D. L. Lee, 'Meta-graph based recommendation fusion over heterogeneous information networks,' in Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining . ACM, 2017, pp. 635-644."
+            },
+            {
+              "title": "Semantic path based personalized recommendation on weighted heterogeneous information networks",
+              "citation": "C. Shi, Z. Zhang, P. Luo, P. S. Yu, Y. Yue, and B. Wu, 'Semantic path based personalized recommendation on weighted heterogeneous information networks,' in Proceedings of the 24th ACM International on Conference on Information and Knowledge Management . ACM, 2015, pp. 453-462."
+            },
+            {
+              "title": "Jointly learning explainable rules for recommendation with knowledge graph",
+              "citation": "W. Ma, M. Zhang, Y. Cao, W. Jin, C. Wang, Y. Liu, S. Ma, and X. Ren, 'Jointly learning explainable rules for recommendation with knowledge graph,' in The World Wide Web Conference . ACM, 2019, pp. 1210-1221."
+            },
+            {
+              "title": "Leveraging metapath based context for top-n recommendation with a neural co-attention model",
+              "citation": "B. Hu, C. Shi, W. X. Zhao, and P. S. Yu, 'Leveraging metapath based context for top-n recommendation with a neural co-attention model,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2018, pp. 1531-1540."
+            },
+            {
+              "title": "Recurrent knowledge graph embedding for effective recommendation",
+              "citation": "Z. Sun, J. Yang, J. Zhang, A. Bozzon, L.-K. Huang, and C. Xu, 'Recurrent knowledge graph embedding for effective recommendation,' in Proceedings of the 12th ACM Conference on Recommender Systems , ser. RecSys '18. New York, NY, USA: ACM, 2018, pp. 297-305."
+            },
+            {
+              "title": "Explainable reasoning over knowledge graphs for recommendation",
+              "citation": "X. Wang, D. Wang, C. Xu, X. He, Y. Cao, and T.-S. Chua, 'Explainable reasoning over knowledge graphs for recommendation,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 33, 2019, pp. 5329-5336."
+            },
+            {
+              "title": "Explainable interaction-driven user modeling over knowledge graph for sequential recommendation",
+              "citation": "X. Huang, Q. Fang, S. Qian, J. Sang, Y. Li, and C. Xu, 'Explainable interaction-driven user modeling over knowledge graph for sequential recommendation,' in Proceedings of the 27th ACM International Conference on Multimedia . ACM, 2019, pp. 548-556."
+            },
+            {
+              "title": "Reinforcement knowledge graph reasoning for explainable recommendation",
+              "citation": "Y. Xian, Z. Fu, S. Muthukrishnan, G. de Melo, and Y. Zhang, 'Reinforcement knowledge graph reasoning for explainable recommendation,' arXiv preprint arXiv:1906.05237 , 2019."
+            },
+            {
+              "title": "Explainable knowledge graph-based recommendation via deep reinforcement learning",
+              "citation": "W. Song, Z. Duan, Z. Yang, H. Zhu, M. Zhang, and J. Tang, 'Explainable knowledge graph-based recommendation via deep reinforcement learning,' arXiv preprint arXiv:1906.09506 , 2019."
+            },
+            {
+              "title": "Meta-graph based recommendation fusion over heterogeneous information networks",
+              "citation": "H. Zhao, Q. Yao, J. Li, Y. Song, and D. L. Lee, 'Meta-graph based recommendation fusion over heterogeneous information networks,' in Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining . ACM, 2017, pp. 635-644."
+            },
+            {
+              "title": "Collaborative filtering with entity similarity regularization in heterogeneous information networks",
+              "citation": "X. Yu, X. Ren, Q. Gu, Y. Sun, and J. Han, 'Collaborative filtering with entity similarity regularization in heterogeneous information networks,' IJCAI HINA , vol. 27, 2013."
+            },
+            {
+              "title": "Recommendation in heterogeneous information networks with implicit user feedback",
+              "citation": "X. Yu, X. Ren, Y. Sun, B. Sturt, U. Khandelwal, Q. Gu, B. Norick, and J. Han, 'Recommendation in heterogeneous information networks with implicit user feedback,' in Proceedings of the 7th ACM conference on Recommender systems . ACM, 2013, pp. 347350."
+            },
+            {
+              "title": "Personalized entity recommendation: A heterogeneous information network approach",
+              "citation": "X. Yu, X. Ren, Y. Sun, Q. Gu, B. Sturt, U. Khandelwal, B. Norick, and J. Han, 'Personalized entity recommendation: A heterogeneous information network approach,' in Proceedings of the 7th ACMinternational conference on Web search and data mining . ACM, 2014, pp. 283-292."
+            },
+            {
+              "title": "Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations",
+              "citation": "C. Luo, W. Pang, Z. Wang, and C. Lin, 'Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations,' in 2014 IEEE International Conference on Data Mining . IEEE, 2014, pp. 917-922."
+            },
+            {
+              "title": "Semantic path based personalized recommendation on weighted heterogeneous information networks",
+              "citation": "C. Shi, Z. Zhang, P. Luo, P. S. Yu, Y. Yue, and B. Wu, 'Semantic path based personalized recommendation on weighted heterogeneous information networks,' in Proceedings of the 24th ACM International on Conference on Information and Knowledge Management . ACM, 2015, pp. 453-462."
+            },
+            {
+              "title": "Heterogeneous information network embedding for recommendation",
+              "citation": "C. Shi, B. Hu, W. X. Zhao, and S. Y. Philip, 'Heterogeneous information network embedding for recommendation,' IEEE Transactions on Knowledge and Data Engineering , vol. 31, no. 2, pp. 357-370, 2018."
+            },
+            {
+              "title": "Jointly learning explainable rules for recommendation with knowledge graph",
+              "citation": "W. Ma, M. Zhang, Y. Cao, W. Jin, C. Wang, Y. Liu, S. Ma, and X. Ren, 'Jointly learning explainable rules for recommendation with knowledge graph,' in The World Wide Web Conference . ACM, 2019, pp. 1210-1221."
+            },
+            {
+              "title": "Leveraging metapath based context for top-n recommendation with a neural co-attention model",
+              "citation": "B. Hu, C. Shi, W. X. Zhao, and P. S. Yu, 'Leveraging metapath based context for top-n recommendation with a neural co-attention model,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2018, pp. 1531-1540."
+            },
+            {
+              "title": "Recurrent knowledge graph embedding for effective recommendation",
+              "citation": "Z. Sun, J. Yang, J. Zhang, A. Bozzon, L.-K. Huang, and C. Xu, 'Recurrent knowledge graph embedding for effective recommendation,' in Proceedings of the 12th ACM Conference on Recommender Systems , ser. RecSys '18. New York, NY, USA: ACM, 2018, pp. 297-305."
+            },
+            {
+              "title": "Explainable reasoning over knowledge graphs for recommendation",
+              "citation": "X. Wang, D. Wang, C. Xu, X. He, Y. Cao, and T.-S. Chua, 'Explainable reasoning over knowledge graphs for recommendation,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 33, 2019, pp. 5329-5336."
+            },
+            {
+              "title": "Reinforcement knowledge graph reasoning for explainable recommendation",
+              "citation": "Y. Xian, Z. Fu, S. Muthukrishnan, G. de Melo, and Y. Zhang, 'Reinforcement knowledge graph reasoning for explainable recommendation,' arXiv preprint arXiv:1906.05237 , 2019."
+            },
+            {
+              "title": "Explainable interaction-driven user modeling over knowledge graph for sequential recommendation",
+              "citation": "X. Huang, Q. Fang, S. Qian, J. Sang, Y. Li, and C. Xu, 'Explainable interaction-driven user modeling over knowledge graph for sequential recommendation,' in Proceedings of the 27th ACM International Conference on Multimedia . ACM, 2019, pp. 548-556."
+            },
+            {
+              "title": "Explainable knowledge graph-based recommendation via deep reinforcement learning",
+              "citation": "W. Song, Z. Duan, Z. Yang, H. Zhu, M. Zhang, and J. Tang, 'Explainable knowledge graph-based recommendation via deep reinforcement learning,' arXiv preprint arXiv:1906.09506 , 2019."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.2.1",
+              "sec_title": "Yu et al.",
+              "citations": [
+                {
+                  "title": "Collaborative filtering with entity similarity regularization in heterogeneous information networks,",
+                  "citation": "X. Yu, X. Ren, Q. Gu, Y. Sun, and J. Han, 'Collaborative filtering with entity similarity regularization in heterogeneous information networks,' IJCAI HINA , vol. 27, 2013."
+                },
+                {
+                  "title": "Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations,",
+                  "citation": "C. Luo, W. Pang, Z. Wang, and C. Lin, 'Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations,' in 2014 IEEE International Conference on Data Mining . IEEE, 2014, pp. 917-922."
+                },
+                {
+                  "title": "Learning from incomplete ratings using non-negative matrix factorization,",
+                  "citation": "S. Zhang, W. Wang, J. Ford, and F. Makedon, 'Learning from incomplete ratings using non-negative matrix factorization,' in Proceedings of the 2006 SIAM international conference on data mining . SIAM, 2006, pp. 549-553."
+                },
+                {
+                  "title": "Recommendation in heterogeneous information networks with implicit user feedback,",
+                  "citation": "X. Yu, X. Ren, Y. Sun, B. Sturt, U. Khandelwal, Q. Gu, B. Norick, and J. Han, 'Recommendation in heterogeneous information networks with implicit user feedback,' in Proceedings of the 7th ACM conference on Recommender systems . ACM, 2013, pp. 347350."
+                },
+                {
+                  "title": "Pathsim: Meta path-based top-k similarity search in heterogeneous information networks,",
+                  "citation": "Y. Sun, J. Han, X. Yan, P. S. Yu, and T. Wu, 'Pathsim: Meta path-based top-k similarity search in heterogeneous information networks,' Proceedings of the VLDB Endowment , vol. 4, no. 11, pp. 992-1003, 2011."
+                },
+                {
+                  "title": "Convex and seminonnegative matrix factorizations",
+                  "citation": "C. H. Ding, T. Li, and M. I. Jordan, 'Convex and seminonnegative matrix factorizations,' IEEE transactions on pattern analysis and machine intelligence , vol. 32, no. 1, pp. 45-55, 2008."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.2",
+              "sec_title": "Later, Yu et al.",
+              "citations": [
+                {
+                  "title": "Personalized entity recommendation: A heterogeneous information network approach,",
+                  "citation": "X. Yu, X. Ren, Y. Sun, Q. Gu, B. Sturt, U. Khandelwal, B. Norick, and J. Han, 'Personalized entity recommendation: A heterogeneous information network approach,' in Proceedings of the 7th ACMinternational conference on Web search and data mining . ACM, 2014, pp. 283-292."
+                },
+                {
+                  "title": "Meta-graph based recommendation fusion over heterogeneous information networks,",
+                  "citation": "H. Zhao, Q. Yao, J. Li, Y. Song, and D. L. Lee, 'Meta-graph based recommendation fusion over heterogeneous information networks,' in Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining . ACM, 2017, pp. 635-644."
+                },
+                {
+                  "title": "Semantic path based personalized recommendation on weighted heterogeneous information networks,",
+                  "citation": "C. Shi, Z. Zhang, P. Luo, P. S. Yu, Y. Yue, and B. Wu, 'Semantic path based personalized recommendation on weighted heterogeneous information networks,' in Proceedings of the 24th ACM International on Conference on Information and Knowledge Management . ACM, 2015, pp. 453-462."
+                },
+                {
+                  "title": "Jointly learning explainable rules for recommendation with knowledge graph,",
+                  "citation": "W. Ma, M. Zhang, Y. Cao, W. Jin, C. Wang, Y. Liu, S. Ma, and X. Ren, 'Jointly learning explainable rules for recommendation with knowledge graph,' in The World Wide Web Conference . ACM, 2019, pp. 1210-1221."
+                },
+                {
+                  "title": "Leveraging metapath based context for top-n recommendation with a neural co-attention model,",
+                  "citation": "B. Hu, C. Shi, W. X. Zhao, and P. S. Yu, 'Leveraging metapath based context for top-n recommendation with a neural co-attention model,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2018, pp. 1531-1540."
+                },
+                {
+                  "title": "Recurrent knowledge graph embedding for effective recommendation,",
+                  "citation": "Z. Sun, J. Yang, J. Zhang, A. Bozzon, L.-K. Huang, and C. Xu, 'Recurrent knowledge graph embedding for effective recommendation,' in Proceedings of the 12th ACM Conference on Recommender Systems , ser. RecSys '18. New York, NY, USA: ACM, 2018, pp. 297-305."
+                },
+                {
+                  "title": "Explainable reasoning over knowledge graphs for recommendation,",
+                  "citation": "X. Wang, D. Wang, C. Xu, X. He, Y. Cao, and T.-S. Chua, 'Explainable reasoning over knowledge graphs for recommendation,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 33, 2019, pp. 5329-5336."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.3",
+              "sec_title": "Huang et al.",
+              "citations": [
+                {
+                  "title": "Explainable interaction-driven user modeling over knowledge graph for sequential recommendation,",
+                  "citation": "X. Huang, Q. Fang, S. Qian, J. Sang, Y. Li, and C. Xu, 'Explainable interaction-driven user modeling over knowledge graph for sequential recommendation,' in Proceedings of the 27th ACM International Conference on Multimedia . ACM, 2019, pp. 548-556."
+                },
+                {
+                  "title": "Towards a definition of knowledge graphs",
+                  "citation": "L. Ehrlinger and W. W¨ oß, 'Towards a definition of knowledge graphs.' SEMANTiCS (Posters, Demos, SuCCESS) , vol. 48, 2016."
+                },
+                {
+                  "title": "Enterprise knowledge graph: An introduction",
+                  "citation": "J. M. Gomez-Perez, J. Z. Pan, G. Vetere, and H. Wu, 'Enterprise knowledge graph: An introduction,' in Exploiting linked data and knowledge graphs in large organisations . Springer, 2017, pp. 1-14."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.4",
+              "sec_title": "Recently, Xian et al.",
+              "citations": [
+                {
+                  "title": "Reinforcement knowledge graph reasoning for explainable recommendation,",
+                  "citation": "Y. Xian, Z. Fu, S. Muthukrishnan, G. de Melo, and Y. Zhang, 'Reinforcement knowledge graph reasoning for explainable recommendation,' arXiv preprint arXiv:1906.05237 , 2019."
+                },
+                {
+                  "title": "Explainable knowledge graph-based recommendation via deep reinforcement learning,",
+                  "citation": "W. Song, Z. Duan, Z. Yang, H. Zhu, M. Zhang, and J. Tang, 'Explainable knowledge graph-based recommendation via deep reinforcement learning,' arXiv preprint arXiv:1906.09506 , 2019."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.5",
+              "sec_title": "Summary for Path-based Methods.",
+              "citations": [
+                {
+                  "title": "Leveraging metapath based context for top-n recommendation with a neural co-attention model,",
+                  "citation": "B. Hu, C. Shi, W. X. Zhao, and P. S. Yu, 'Leveraging metapath based context for top-n recommendation with a neural co-attention model,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2018, pp. 1531-1540."
+                },
+                {
+                  "title": "Meta-graph based recommendation fusion over heterogeneous information networks,",
+                  "citation": "H. Zhao, Q. Yao, J. Li, Y. Song, and D. L. Lee, 'Meta-graph based recommendation fusion over heterogeneous information networks,' in Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining . ACM, 2017, pp. 635-644."
+                },
+                {
+                  "title": "Collaborative filtering with entity similarity regularization in heterogeneous information networks,",
+                  "citation": "X. Yu, X. Ren, Q. Gu, Y. Sun, and J. Han, 'Collaborative filtering with entity similarity regularization in heterogeneous information networks,' IJCAI HINA , vol. 27, 2013."
+                },
+                {
+                  "title": "Recommendation in heterogeneous information networks with implicit user feedback,",
+                  "citation": "X. Yu, X. Ren, Y. Sun, B. Sturt, U. Khandelwal, Q. Gu, B. Norick, and J. Han, 'Recommendation in heterogeneous information networks with implicit user feedback,' in Proceedings of the 7th ACM conference on Recommender systems . ACM, 2013, pp. 347350."
+                },
+                {
+                  "title": "Personalized entity recommendation: A heterogeneous information network approach,",
+                  "citation": "X. Yu, X. Ren, Y. Sun, Q. Gu, B. Sturt, U. Khandelwal, B. Norick, and J. Han, 'Personalized entity recommendation: A heterogeneous information network approach,' in Proceedings of the 7th ACMinternational conference on Web search and data mining . ACM, 2014, pp. 283-292."
+                },
+                {
+                  "title": "Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations,",
+                  "citation": "C. Luo, W. Pang, Z. Wang, and C. Lin, 'Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations,' in 2014 IEEE International Conference on Data Mining . IEEE, 2014, pp. 917-922."
+                },
+                {
+                  "title": "Semantic path based personalized recommendation on weighted heterogeneous information networks,",
+                  "citation": "C. Shi, Z. Zhang, P. Luo, P. S. Yu, Y. Yue, and B. Wu, 'Semantic path based personalized recommendation on weighted heterogeneous information networks,' in Proceedings of the 24th ACM International on Conference on Information and Knowledge Management . ACM, 2015, pp. 453-462."
+                },
+                {
+                  "title": "Recurrent knowledge graph embedding for effective recommendation,",
+                  "citation": "Z. Sun, J. Yang, J. Zhang, A. Bozzon, L.-K. Huang, and C. Xu, 'Recurrent knowledge graph embedding for effective recommendation,' in Proceedings of the 12th ACM Conference on Recommender Systems , ser. RecSys '18. New York, NY, USA: ACM, 2018, pp. 297-305."
+                },
+                {
+                  "title": "Heterogeneous information network embedding for recommendation,",
+                  "citation": "C. Shi, B. Hu, W. X. Zhao, and S. Y. Philip, 'Heterogeneous information network embedding for recommendation,' IEEE Transactions on Knowledge and Data Engineering , vol. 31, no. 2, pp. 357-370, 2018."
+                },
+                {
+                  "title": "Explainable reasoning over knowledge graphs for recommendation,",
+                  "citation": "X. Wang, D. Wang, C. Xu, X. He, Y. Cao, and T.-S. Chua, 'Explainable reasoning over knowledge graphs for recommendation,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 33, 2019, pp. 5329-5336."
+                },
+                {
+                  "title": "Jointly learning explainable rules for recommendation with knowledge graph,",
+                  "citation": "W. Ma, M. Zhang, Y. Cao, W. Jin, C. Wang, Y. Liu, S. Ma, and X. Ren, 'Jointly learning explainable rules for recommendation with knowledge graph,' in The World Wide Web Conference . ACM, 2019, pp. 1210-1221."
+                },
+                {
+                  "title": "Reinforcement knowledge graph reasoning for explainable recommendation,",
+                  "citation": "Y. Xian, Z. Fu, S. Muthukrishnan, G. de Melo, and Y. Zhang, 'Reinforcement knowledge graph reasoning for explainable recommendation,' arXiv preprint arXiv:1906.05237 , 2019."
+                },
+                {
+                  "title": "Explainable interaction-driven user modeling over knowledge graph for sequential recommendation,",
+                  "citation": "X. Huang, Q. Fang, S. Qian, J. Sang, Y. Li, and C. Xu, 'Explainable interaction-driven user modeling over knowledge graph for sequential recommendation,' in Proceedings of the 27th ACM International Conference on Multimedia . ACM, 2019, pp. 548-556."
+                },
+                {
+                  "title": "Explainable knowledge graph-based recommendation via deep reinforcement learning,",
+                  "citation": "W. Song, Z. Duan, Z. Yang, H. Zhu, M. Zhang, and J. Tang, 'Explainable knowledge graph-based recommendation via deep reinforcement learning,' arXiv preprint arXiv:1906.09506 , 2019."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.3",
+          "sec_title": "Unified Methods",
+          "citations": [
+            {
+              "title": "Ripplenet: Propagating user preferences on the knowledge graph for recommender systems",
+              "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,' in Proceedings of the 27th ACM International Conference on Information and Knowledge Management . ACM, 2018, pp. 417-426."
+            },
+            {
+              "title": "Akupm: Attentionenhanced knowledge-aware user preference model for recommendation",
+              "citation": "X. Tang, T. Wang, H. Yang, and H. Song, 'Akupm: Attentionenhanced knowledge-aware user preference model for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 1891-1899."
+            },
+            {
+              "title": "Unifying taskoriented knowledge graph learning and recommendation",
+              "citation": "Q. Li, X. Tang, T. Wang, H. Yang, and H. Song, 'Unifying taskoriented knowledge graph learning and recommendation,' IEEE Access , vol. 7, pp. 115 816-115 828, 2019."
+            },
+            {
+              "title": "Knowledge graph convolutional networks for recommender systems",
+              "citation": "H. Wang, M. Zhao, X. Xie, W. Li, and M. Guo, 'Knowledge graph convolutional networks for recommender systems,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 3307-3313."
+            },
+            {
+              "title": "Knowledge-aware graph neural networks with label smoothness regularization for recommender systems",
+              "citation": "H. Wang, F. Zhang, M. Zhang, J. Leskovec, M. Zhao, W. Li, and Z. Wang, 'Knowledge-aware graph neural networks with label smoothness regularization for recommender systems,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 968-977."
+            },
+            {
+              "title": "Kgat: Knowledge graph attention network for recommendation",
+              "citation": "X. Wang, X. He, Y. Cao, M. Liu, and T.-S. Chua, 'Kgat: Knowledge graph attention network for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 950-958."
+            },
+            {
+              "title": "An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation",
+              "citation": "Y. Qu, T. Bai, W. Zhang, J. Nie, and J. Tang, 'An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation,' arXiv preprint arXiv:1908.04032 , 2019."
+            },
+            {
+              "title": "Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation",
+              "citation": "J. Zhao, Z. Zhou, Z. Guan, W. Zhao, W. Ning, G. Qiu, and X. He, 'Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 2347-2357."
+            },
+            {
+              "title": "Attentive knowledge graph embedding for personalized recommendation",
+              "citation": "X. Sha, Z. Sun, and J. Zhang, 'Attentive knowledge graph embedding for personalized recommendation,' arXiv preprint arXiv:1910.08288 , 2019."
+            },
+            {
+              "title": "Ripplenet: Propagating user preferences on the knowledge graph for recommender systems",
+              "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,' in Proceedings of the 27th ACM International Conference on Information and Knowledge Management . ACM, 2018, pp. 417-426."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.3.1",
+              "sec_title": "Wang et al.",
+              "citations": [
+                {
+                  "title": "Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,",
+                  "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,' in Proceedings of the 27th ACM International Conference on Information and Knowledge Management . ACM, 2018, pp. 417-426."
+                },
+                {
+                  "title": "Knowledge graph convolutional networks for recommender systems,",
+                  "citation": "H. Wang, M. Zhao, X. Xie, W. Li, and M. Guo, 'Knowledge graph convolutional networks for recommender systems,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 3307-3313."
+                },
+                {
+                  "title": "Knowledge-aware graph neural networks with label smoothness regularization for recommender systems,",
+                  "citation": "H. Wang, F. Zhang, M. Zhang, J. Leskovec, M. Zhao, W. Li, and Z. Wang, 'Knowledge-aware graph neural networks with label smoothness regularization for recommender systems,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 968-977."
+                },
+                {
+                  "title": "Kgat: Knowledge graph attention network for recommendation,",
+                  "citation": "X. Wang, X. He, Y. Cao, M. Liu, and T.-S. Chua, 'Kgat: Knowledge graph attention network for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge\n\nDiscovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 950-958."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.3.2",
+              "sec_title": "Similar to RippleNet, Tang et al.",
+              "citations": [
+                {
+                  "title": "Akupm: Attentionenhanced knowledge-aware user preference model for recommendation,",
+                  "citation": "X. Tang, T. Wang, H. Yang, and H. Song, 'Akupm: Attentionenhanced knowledge-aware user preference model for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 1891-1899."
+                },
+                {
+                  "title": "Unifying taskoriented knowledge graph learning and recommendation,",
+                  "citation": "Q. Li, X. Tang, T. Wang, H. Yang, and H. Song, 'Unifying taskoriented knowledge graph learning and recommendation,' IEEE Access , vol. 7, pp. 115 816-115 828, 2019."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.3.3",
+              "sec_title": "Qu et al.",
+              "citations": [
+                {
+                  "title": "An end-to-end neighborhood-based interaction model for knowledge-enhanced recommendation",
+                  "citation": "Y. Qu, T. Bai, W. Zhang, J. Nie, and J. Tang, 'An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation,' arXiv preprint arXiv:1908.04032 , 2019."
+                },
+                {
+                  "title": "Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation,",
+                  "citation": "J. Zhao, Z. Zhou, Z. Guan, W. Zhao, W. Ning, G. Qiu, and X. He, 'Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 2347-2357."
+                },
+                {
+                  "title": "Attentive knowledge graph embedding for personalized recommendation,",
+                  "citation": "X. Sha, Z. Sun, and J. Zhang, 'Attentive knowledge graph embedding for personalized recommendation,' arXiv preprint arXiv:1910.08288 , 2019."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.3.4",
+              "sec_title": "Summary for Unified Methods.",
+              "citations": [
+                {
+                  "title": "Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,",
+                  "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,' in Proceedings of the 27th ACM International Conference on Information and Knowledge Management . ACM, 2018, pp. 417-426."
+                },
+                {
+                  "title": "Movielens dataset",
+                  "citation": "'Movielens dataset,' 1997, https://grouplens.org/datasets/ movielens/."
+                },
+                {
+                  "title": "Movielens website",
+                  "citation": "'Movielens website,' 1997, https://movielens.org/."
+                },
+                {
+                  "title": "douban",
+                  "citation": "'Douban movie,' 2005, http://movie.douban.com/."
+                },
+                {
+                  "title": "imdb",
+                  "citation": "'Imdb,' 1990, https://www.imdb.com/."
+                },
+                {
+                  "title": "Book-crossing dataset",
+                  "citation": "'Book-crossing dataset,' 2004, http://www2.informatik. uni-freiburg.de/ ∼ cziegler/BX/."
+                },
+                {
+                  "title": "Imagebased recommendations on styles and substitutes",
+                  "citation": "J. McAuley, C. Targett, Q. Shi, and A. Van Den Hengel, 'Imagebased recommendations on styles and substitutes,' in Proceedings of the 38th International ACM SIGIR Conference on Research and Development in Information Retrieval , 2015, pp. 43-52."
+                },
+                {
+                  "title": "Evaluating search features of google knowledge graph and bing satori: entity types, list searches and query interfaces",
+                  "citation": "A. Uyar and F. M. Aliyu, 'Evaluating search features of google knowledge graph and bing satori: entity types, list searches and query interfaces,' Online Information Review , vol. 39, no. 2, pp. 197-213, 2015."
+                },
+                {
+                  "title": "douban",
+                  "citation": "'Douban book,' 2005, http://book.douban.com/."
+                },
+                {
+                  "title": "The lfm-1b dataset for music retrieval and recommendation",
+                  "citation": "M. Schedl, 'The lfm-1b dataset for music retrieval and recommendation,' in Proceedings of the 2016 ACM on International Conference on Multimedia Retrieval , 2016, pp. 103-110."
+                },
+                {
+                  "title": "Last.fm online music system",
+                  "citation": "'Last.fm online music system,' 2002, http://www.last.fm/."
+                },
+                {
+                  "title": "KKBOX Dataset",
+                  "citation": "'Kkbox dataset,' 2018, https://wsdm-cup-2018.kkbox.events/."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.4",
+          "sec_title": "Summary",
+          "citations": [],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "DATASETS OF RECOMMENDER SYSTEMS WITH KNOWLEDGE GRAPH",
+      "citations": [
+        {
+          "title": "Movielens dataset",
+          "citation": "'Movielens dataset,' 1997, https://grouplens.org/datasets/ movielens/."
+        },
+        {
+          "title": "Movielens website",
+          "citation": "'Movielens website,' 1997, https://movielens.org/."
+        },
+        {
+          "title": "Douban movie",
+          "citation": "'Douban movie,' 2005, http://movie.douban.com/."
+        },
+        {
+          "title": "Collaborative knowledge base embedding for recommender systems",
+          "citation": "F. Zhang, N. J. Yuan, D. Lian, X. Xie, and W.-Y. Ma, 'Collaborative knowledge base embedding for recommender systems,' in Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , ser. KDD '16. New York, NY, USA: ACM, 2016, pp. 353-362."
+        },
+        {
+          "title": "Ripplenet: Propagating user preferences on the knowledge graph for recommender systems",
+          "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,' in Proceedings of the 27th ACM International Conference on Information and Knowledge Management . ACM, 2018, pp. 417-426."
+        },
+        {
+          "title": "Improving sequential recommendation with knowledge-enhanced memory networks",
+          "citation": "J. Huang, W. X. Zhao, H. Dou, J.-R. Wen, and E. Y. Chang, 'Improving sequential recommendation with knowledge-enhanced memory networks,' in The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval . ACM, 2018, pp. 505-514."
+        },
+        {
+          "title": "Multitask feature learning for knowledge graph enhanced recommendation",
+          "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+        },
+        {
+          "title": "A knowledge-enhanced deep recommendation framework incorporating gan-based models",
+          "citation": "D. Yang, Z. Guo, Z. Wang, J. Jiang, Y. Xiao, and W. Wang, 'A knowledge-enhanced deep recommendation framework incorporating gan-based models,' IEEE International Conference on Data Mining (ICDM) , pp. 1368-1373, 2018."
+        },
+        {
+          "title": "Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences",
+          "citation": "Y. Cao, X. Wang, X. He, Z. Hu, and T.-S. Chua, 'Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 151-161."
+        },
+        {
+          "title": "Relational collaborative filtering: Modeling multiple item relations for recommendation",
+          "citation": "X. Xin, X. He, Y. Zhang, Y. Zhang, and J. Jose, 'Relational collaborative filtering: Modeling multiple item relations for recommendation,' in Proceedings of the 42Nd International ACM SIGIR Conference on Research and Development in Information Retrieval , ser. SIGIR'19. New York, NY, USA: ACM, 2019, pp. 125-134."
+        },
+        {
+          "title": "Exploring high-order user preference on the knowledge graph for recommender systems",
+          "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Exploring high-order user preference on the knowledge graph for recommender systems,' ACM Transactions on Information Systems (TOIS) , vol. 37, no. 3, p. 32, 2019."
+        },
+        {
+          "title": "Knowledge graph convolutional networks for recommender systems",
+          "citation": "H. Wang, M. Zhao, X. Xie, W. Li, and M. Guo, 'Knowledge graph convolutional networks for recommender systems,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 3307-3313."
+        },
+        {
+          "title": "Knowledge-aware graph neural networks with label smoothness regularization for recommender systems",
+          "citation": "H. Wang, F. Zhang, M. Zhang, J. Leskovec, M. Zhao, W. Li, and Z. Wang, 'Knowledge-aware graph neural networks with label smoothness regularization for recommender systems,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 968-977."
+        },
+        {
+          "title": "Akupm: Attentionenhanced knowledge-aware user preference model for recommendation",
+          "citation": "X. Tang, T. Wang, H. Yang, and H. Song, 'Akupm: Attentionenhanced knowledge-aware user preference model for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 1891-1899."
+        },
+        {
+          "title": "An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation",
+          "citation": "Y. Qu, T. Bai, W. Zhang, J. Nie, and J. Tang, 'An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation,' arXiv preprint arXiv:1908.04032 , 2019."
+        },
+        {
+          "title": "Unifying taskoriented knowledge graph learning and recommendation",
+          "citation": "Q. Li, X. Tang, T. Wang, H. Yang, and H. Song, 'Unifying taskoriented knowledge graph learning and recommendation,' IEEE Access , vol. 7, pp. 115 816-115 828, 2019."
+        },
+        {
+          "title": "imdb",
+          "citation": "'Imdb,' 1990, https://www.imdb.com/."
+        },
+        {
+          "title": "Leveraging metapath based context for top-n recommendation with a neural co-attention model",
+          "citation": "B. Hu, C. Shi, W. X. Zhao, and P. S. Yu, 'Leveraging metapath based context for top-n recommendation with a neural co-attention model,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2018, pp. 1531-1540."
+        },
+        {
+          "title": "Semantic path based personalized recommendation on weighted heterogeneous information networks",
+          "citation": "C. Shi, Z. Zhang, P. Luo, P. S. Yu, Y. Yue, and B. Wu, 'Semantic path based personalized recommendation on weighted heterogeneous information networks,' in Proceedings of the 24th ACM International on Conference on Information and Knowledge Management . ACM, 2015, pp. 453-462."
+        },
+        {
+          "title": "Heterogeneous information network embedding for recommendation",
+          "citation": "C. Shi, B. Hu, W. X. Zhao, and S. Y. Philip, 'Heterogeneous information network embedding for recommendation,' IEEE Transactions on Knowledge and Data Engineering , vol. 31, no. 2, pp. 357-370, 2018."
+        },
+        {
+          "title": "Entity2rec: Learning useritem relatedness from knowledge graphs for top-n item recommendation",
+          "citation": "E. Palumbo, G. Rizzo, and R. Troncy, 'Entity2rec: Learning useritem relatedness from knowledge graphs for top-n item recommendation,' in Proceedings of the Eleventh ACM Conference on Recommender Systems . ACM, 2017, pp. 32-36."
+        },
+        {
+          "title": "Collaborative filtering with entity similarity regularization in heterogeneous information networks",
+          "citation": "X. Yu, X. Ren, Q. Gu, Y. Sun, and J. Han, 'Collaborative filtering with entity similarity regularization in heterogeneous information networks,' IJCAI HINA , vol. 27, 2013."
+        },
+        {
+          "title": "Recommendation in heterogeneous information networks with implicit user feedback",
+          "citation": "X. Yu, X. Ren, Y. Sun, B. Sturt, U. Khandelwal, Q. Gu, B. Norick, and J. Han, 'Recommendation in heterogeneous information networks with implicit user feedback,' in Proceedings of the 7th ACM conference on Recommender systems . ACM, 2013, pp. 347350."
+        },
+        {
+          "title": "Personalized entity recommendation: A heterogeneous information network approach",
+          "citation": "X. Yu, X. Ren, Y. Sun, Q. Gu, B. Sturt, U. Khandelwal, B. Norick, and J. Han, 'Personalized entity recommendation: A heterogeneous information network approach,' in Proceedings of the 7th ACMinternational conference on Web search and data mining . ACM, 2014, pp. 283-292."
+        },
+        {
+          "title": "Personalized recommendations using knowledge graphs: A probabilistic logic programming approach",
+          "citation": "R. Catherine and W. Cohen, 'Personalized recommendations using knowledge graphs: A probabilistic logic programming approach,' in Proceedings of the 10th ACM Conference on Recommender Systems . ACM, 2016, pp. 325-332."
+        },
+        {
+          "title": "Recurrent knowledge graph embedding for effective recommendation",
+          "citation": "Z. Sun, J. Yang, J. Zhang, A. Bozzon, L.-K. Huang, and C. Xu, 'Recurrent knowledge graph embedding for effective recommendation,' in Proceedings of the 12th ACM Conference on Recommender Systems , ser. RecSys '18. New York, NY, USA: ACM, 2018, pp. 297-305."
+        },
+        {
+          "title": "Explainable reasoning over knowledge graphs for recommendation",
+          "citation": "X. Wang, D. Wang, C. Xu, X. He, Y. Cao, and T.-S. Chua, 'Explainable reasoning over knowledge graphs for recommendation,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 33, 2019, pp. 5329-5336."
+        },
+        {
+          "title": "Explainable interaction-driven user modeling over knowledge graph for sequential recommendation",
+          "citation": "X. Huang, Q. Fang, S. Qian, J. Sang, Y. Li, and C. Xu, 'Explainable interaction-driven user modeling over knowledge graph for sequential recommendation,' in Proceedings of the 27th ACM International Conference on Multimedia . ACM, 2019, pp. 548-556."
+        },
+        {
+          "title": "Explainable knowledge graph-based recommendation via deep reinforcement learning",
+          "citation": "W. Song, Z. Duan, Z. Yang, H. Zhu, M. Zhang, and J. Tang, 'Explainable knowledge graph-based recommendation via deep reinforcement learning,' arXiv preprint arXiv:1906.09506 , 2019."
+        },
+        {
+          "title": "Attentive knowledge graph embedding for personalized recommendation",
+          "citation": "X. Sha, Z. Sun, and J. Zhang, 'Attentive knowledge graph embedding for personalized recommendation,' arXiv preprint arXiv:1910.08288 , 2019."
+        },
+        {
+          "title": "Book-crossing dataset",
+          "citation": "'Book-crossing dataset,' 2004, http://www2.informatik. uni-freiburg.de/ ∼ cziegler/BX/."
+        },
+        {
+          "title": "Imagebased recommendations on styles and substitutes",
+          "citation": "J. McAuley, C. Targett, Q. Shi, and A. Van Den Hengel, 'Imagebased recommendations on styles and substitutes,' in Proceedings of the 38th International ACM SIGIR Conference on Research and Development in Information Retrieval , 2015, pp. 43-52."
+        },
+        {
+          "title": "Evaluating search features of google knowledge graph and bing satori: entity types, list searches and query interfaces",
+          "citation": "A. Uyar and F. M. Aliyu, 'Evaluating search features of google knowledge graph and bing satori: entity types, list searches and query interfaces,' Online Information Review , vol. 39, no. 2, pp. 197-213, 2015."
+        },
+        {
+          "title": "Collaborative knowledge base embedding for recommender systems",
+          "citation": "F. Zhang, N. J. Yuan, D. Lian, X. Xie, and W.-Y. Ma, 'Collaborative knowledge base embedding for recommender systems,' in Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , ser. KDD '16. New York, NY, USA: ACM, 2016, pp. 353-362."
+        },
+        {
+          "title": "Ripplenet: Propagating user preferences on the knowledge graph for recommender systems",
+          "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,' in Proceedings of the 27th ACM International Conference on Information and Knowledge Management . ACM, 2018, pp. 417-426."
+        },
+        {
+          "title": "Multitask feature learning for knowledge graph enhanced recommendation",
+          "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+        },
+        {
+          "title": "Exploring high-order user preference on the knowledge graph for recommender systems",
+          "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Exploring high-order user preference on the knowledge graph for recommender systems,' ACM Transactions on Information Systems (TOIS) , vol. 37, no. 3, p. 32, 2019."
+        },
+        {
+          "title": "Knowledge graph convolutional networks for recommender systems",
+          "citation": "H. Wang, M. Zhao, X. Xie, W. Li, and M. Guo, 'Knowledge graph convolutional networks for recommender systems,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 3307-3313."
+        },
+        {
+          "title": "Knowledge-aware graph neural networks with label smoothness regularization for recommender systems",
+          "citation": "H. Wang, F. Zhang, M. Zhang, J. Leskovec, M. Zhao, W. Li, and Z. Wang, 'Knowledge-aware graph neural networks with label smoothness regularization for recommender systems,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 968-977."
+        },
+        {
+          "title": "Akupm: Attentionenhanced knowledge-aware user preference model for recommendation",
+          "citation": "X. Tang, T. Wang, H. Yang, and H. Song, 'Akupm: Attentionenhanced knowledge-aware user preference model for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 1891-1899."
+        },
+        {
+          "title": "An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation",
+          "citation": "Y. Qu, T. Bai, W. Zhang, J. Nie, and J. Tang, 'An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation,' arXiv preprint arXiv:1908.04032 , 2019."
+        },
+        {
+          "title": "Unifying taskoriented knowledge graph learning and recommendation",
+          "citation": "Q. Li, X. Tang, T. Wang, H. Yang, and H. Song, 'Unifying taskoriented knowledge graph learning and recommendation,' IEEE Access , vol. 7, pp. 115 816-115 828, 2019."
+        },
+        {
+          "title": "Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences",
+          "citation": "Y. Cao, X. Wang, X. He, Z. Hu, and T.-S. Chua, 'Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 151-161."
+        },
+        {
+          "title": "Explainable knowledge graph-based recommendation via deep reinforcement learning",
+          "citation": "W. Song, Z. Duan, Z. Yang, H. Zhu, M. Zhang, and J. Tang, 'Explainable knowledge graph-based recommendation via deep reinforcement learning,' arXiv preprint arXiv:1906.09506 , 2019."
+        },
+        {
+          "title": "Improving sequential recommendation with knowledge-enhanced memory networks",
+          "citation": "J. Huang, W. X. Zhao, H. Dou, J.-R. Wen, and E. Y. Chang, 'Improving sequential recommendation with knowledge-enhanced memory networks,' in The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval . ACM, 2018, pp. 505-514."
+        },
+        {
+          "title": "Kgat: Knowledge graph attention network for recommendation",
+          "citation": "X. Wang, X. He, Y. Cao, M. Liu, and T.-S. Chua, 'Kgat: Knowledge graph attention network for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 950-958."
+        },
+        {
+          "title": "An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation",
+          "citation": "Y. Qu, T. Bai, W. Zhang, J. Nie, and J. Tang, 'An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation,' arXiv preprint arXiv:1908.04032 , 2019."
+        },
+        {
+          "title": "Douban book",
+          "citation": "'Douban book,' 2005, http://book.douban.com/."
+        },
+        {
+          "title": "Heterogeneous information network embedding for recommendation",
+          "citation": "C. Shi, B. Hu, W. X. Zhao, and S. Y. Philip, 'Heterogeneous information network embedding for recommendation,' IEEE Transactions on Knowledge and Data Engineering , vol. 31, no. 2, pp. 357-370, 2018."
+        },
+        {
+          "title": "The lfm-1b dataset for music retrieval and recommendation",
+          "citation": "M. Schedl, 'The lfm-1b dataset for music retrieval and recommendation,' in Proceedings of the 2016 ACM on International Conference on Multimedia Retrieval , 2016, pp. 103-110."
+        },
+        {
+          "title": "Last.fm online music system",
+          "citation": "'Last.fm online music system,' 2002, http://www.last.fm/."
+        },
+        {
+          "title": "Improving sequential recommendation with knowledge-enhanced memory networks",
+          "citation": "J. Huang, W. X. Zhao, H. Dou, J.-R. Wen, and E. Y. Chang, 'Improving sequential recommendation with knowledge-enhanced memory networks,' in The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval . ACM, 2018, pp. 505-514."
+        },
+        {
+          "title": "Multitask feature learning for knowledge graph enhanced recommendation",
+          "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+        },
+        {
+          "title": "Knowledge graph convolutional networks for recommender systems",
+          "citation": "H. Wang, M. Zhao, X. Xie, W. Li, and M. Guo, 'Knowledge graph convolutional networks for recommender systems,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 3307-3313."
+        },
+        {
+          "title": "Kgat: Knowledge graph attention network for recommendation",
+          "citation": "X. Wang, X. He, Y. Cao, M. Liu, and T.-S. Chua, 'Kgat: Knowledge graph attention network for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 950-958."
+        },
+        {
+          "title": "Knowledge-aware graph neural networks with label smoothness regularization for recommender systems",
+          "citation": "H. Wang, F. Zhang, M. Zhang, J. Leskovec, M. Zhao, W. Li, and Z. Wang, 'Knowledge-aware graph neural networks with label smoothness regularization for recommender systems,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 968-977."
+        },
+        {
+          "title": "Explainable knowledge graph-based recommendation via deep reinforcement learning",
+          "citation": "W. Song, Z. Duan, Z. Yang, H. Zhu, M. Zhang, and J. Tang, 'Explainable knowledge graph-based recommendation via deep reinforcement learning,' arXiv preprint arXiv:1906.09506 , 2019."
+        },
+        {
+          "title": "Attentive knowledge graph embedding for personalized recommendation",
+          "citation": "X. Sha, Z. Sun, and J. Zhang, 'Attentive knowledge graph embedding for personalized recommendation,' arXiv preprint arXiv:1910.08288 , 2019."
+        },
+        {
+          "title": "Leveraging metapath based context for top-n recommendation with a neural co-attention model",
+          "citation": "B. Hu, C. Shi, W. X. Zhao, and P. S. Yu, 'Leveraging metapath based context for top-n recommendation with a neural co-attention model,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2018, pp. 1531-1540."
+        },
+        {
+          "title": "Kkbox dataset",
+          "citation": "'Kkbox dataset,' 2018, https://wsdm-cup-2018.kkbox.events/."
+        },
+        {
+          "title": "Relational collaborative filtering: Modeling multiple item relations for recommendation",
+          "citation": "X. Xin, X. He, Y. Zhang, Y. Zhang, and J. Jose, 'Relational collaborative filtering: Modeling multiple item relations for recommendation,' in Proceedings of the 42Nd International ACM SIGIR Conference on Research and Development in Information Retrieval , ser. SIGIR'19. New York, NY, USA: ACM, 2019, pp. 125-134."
+        },
+        {
+          "title": "Explainable reasoning over knowledge graphs for recommendation",
+          "citation": "X. Wang, D. Wang, C. Xu, X. He, Y. Cao, and T.-S. Chua, 'Explainable reasoning over knowledge graphs for recommendation,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 33, 2019, pp. 5329-5336."
+        },
+        {
+          "title": "Imagebased recommendations on styles and substitutes",
+          "citation": "J. McAuley, C. Targett, Q. Shi, and A. Van Den Hengel, 'Imagebased recommendations on styles and substitutes,' in Proceedings of the 38th International ACM SIGIR Conference on Research and Development in Information Retrieval , 2015, pp. 43-52."
+        },
+        {
+          "title": "Meta-graph based recommendation fusion over heterogeneous information networks",
+          "citation": "H. Zhao, Q. Yao, J. Li, Y. Song, and D. L. Lee, 'Meta-graph based recommendation fusion over heterogeneous information networks,' in Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining . ACM, 2017, pp. 635-644."
+        },
+        {
+          "title": "Learning over knowledge-base embeddings for recommendation",
+          "citation": "Y. Zhang, Q. Ai, X. Chen, and P. Wang, 'Learning over knowledge-base embeddings for recommendation,' arXiv preprint arXiv:1803.06540 , 2018."
+        },
+        {
+          "title": "Learning heterogeneous knowledge base embeddings for explainable recommendation",
+          "citation": "Q. Ai, V. Azizi, X. Chen, and Y. Zhang, 'Learning heterogeneous knowledge base embeddings for explainable recommendation,' Algorithms , vol. 11, no. 9, p. 137, 2018."
+        },
+        {
+          "title": "Reinforcement knowledge graph reasoning for explainable recommendation",
+          "citation": "Y. Xian, Z. Fu, S. Muthukrishnan, G. de Melo, and Y. Zhang, 'Reinforcement knowledge graph reasoning for explainable recommendation,' arXiv preprint arXiv:1906.05237 , 2019."
+        },
+        {
+          "title": "Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation",
+          "citation": "J. Zhao, Z. Zhou, Z. Guan, W. Zhao, W. Ning, G. Qiu, and X. He, 'Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 2347-2357."
+        },
+        {
+          "title": "Jointly learning explainable rules for recommendation with knowledge graph",
+          "citation": "W. Ma, M. Zhang, Y. Cao, W. Jin, C. Wang, Y. Liu, S. Ma, and X. Ren, 'Jointly learning explainable rules for recommendation with knowledge graph,' in The World Wide Web Conference . ACM, 2019, pp. 1210-1221."
+        },
+        {
+          "title": "Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks",
+          "citation": "Y. Ye, X. Wang, J. Yao, K. Jia, J. Zhou, Y. Xiao, and H. Yang, 'Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks,' in Proceedings of the 28th ACM International Conference on Information and Knowledge Management . ACM, 2019, pp. 679-688."
+        },
+        {
+          "title": "Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation",
+          "citation": "J. Zhao, Z. Zhou, Z. Guan, W. Zhao, W. Ning, G. Qiu, and X. He, 'Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 2347-2357."
+        },
+        {
+          "title": "Leveraging metapath based context for top-n recommendation with a neural co-attention model",
+          "citation": "B. Hu, C. Shi, W. X. Zhao, and P. S. Yu, 'Leveraging metapath based context for top-n recommendation with a neural co-attention model,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2018, pp. 1531-1540."
+        },
+        {
+          "title": "Relational collaborative filtering: Modeling multiple item relations for recommendation",
+          "citation": "X. Xin, X. He, Y. Zhang, Y. Zhang, and J. Jose, 'Relational collaborative filtering: Modeling multiple item relations for recommendation,' in Proceedings of the 42Nd International ACM SIGIR Conference on Research and Development in Information Retrieval , ser. SIGIR'19. New York, NY, USA: ACM, 2019, pp. 125-134."
+        },
+        {
+          "title": "Collaborative filtering with entity similarity regularization in heterogeneous information networks",
+          "citation": "X. Yu, X. Ren, Q. Gu, Y. Sun, and J. Han, 'Collaborative filtering with entity similarity regularization in heterogeneous information networks,' IJCAI HINA , vol. 27, 2013."
+        },
+        {
+          "title": "Recommendation in heterogeneous information networks with implicit user feedback",
+          "citation": "X. Yu, X. Ren, Y. Sun, B. Sturt, U. Khandelwal, Q. Gu, B. Norick, and J. Han, 'Recommendation in heterogeneous information networks with implicit user feedback,' in Proceedings of the 7th ACM conference on Recommender systems . ACM, 2013, pp. 347350."
+        },
+        {
+          "title": "Personalized entity recommendation: A heterogeneous information network approach",
+          "citation": "X. Yu, X. Ren, Y. Sun, Q. Gu, B. Sturt, U. Khandelwal, B. Norick, and J. Han, 'Personalized entity recommendation: A heterogeneous information network approach,' in Proceedings of the 7th ACMinternational conference on Web search and data mining . ACM, 2014, pp. 283-292."
+        },
+        {
+          "title": "Personalized recommendations using knowledge graphs: A probabilistic logic programming approach",
+          "citation": "R. Catherine and W. Cohen, 'Personalized recommendations using knowledge graphs: A probabilistic logic programming approach,' in Proceedings of the 10th ACM Conference on Recommender Systems . ACM, 2016, pp. 325-332."
+        },
+        {
+          "title": "Collaborative knowledge base embedding for recommender systems",
+          "citation": "F. Zhang, N. J. Yuan, D. Lian, X. Xie, and W.-Y. Ma, 'Collaborative knowledge base embedding for recommender systems,' in Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , ser. KDD '16. New York, NY, USA: ACM, 2016, pp. 353-362."
+        },
+        {
+          "title": "Ripplenet: Propagating user preferences on the knowledge graph for recommender systems",
+          "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,' in Proceedings of the 27th ACM International Conference on Information and Knowledge Management . ACM, 2018, pp. 417-426."
+        },
+        {
+          "title": "Improving sequential recommendation with knowledge-enhanced memory networks",
+          "citation": "J. Huang, W. X. Zhao, H. Dou, J.-R. Wen, and E. Y. Chang, 'Improving sequential recommendation with knowledge-enhanced memory networks,' in The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval . ACM, 2018, pp. 505-514."
+        },
+        {
+          "title": "Multitask feature learning for knowledge graph enhanced recommendation",
+          "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+        },
+        {
+          "title": "Entity2rec: Learning useritem relatedness from knowledge graphs for top-n item recommendation",
+          "citation": "E. Palumbo, G. Rizzo, and R. Troncy, 'Entity2rec: Learning useritem relatedness from knowledge graphs for top-n item recommendation,' in Proceedings of the Eleventh ACM Conference on Recommender Systems . ACM, 2017, pp. 32-36."
+        },
+        {
+          "title": "Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences",
+          "citation": "Y. Cao, X. Wang, X. He, Z. Hu, and T.-S. Chua, 'Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 151-161."
+        },
+        {
+          "title": "Recurrent knowledge graph embedding for effective recommendation",
+          "citation": "Z. Sun, J. Yang, J. Zhang, A. Bozzon, L.-K. Huang, and C. Xu, 'Recurrent knowledge graph embedding for effective recommendation,' in Proceedings of the 12th ACM Conference on Recommender Systems , ser. RecSys '18. New York, NY, USA: ACM, 2018, pp. 297-305."
+        },
+        {
+          "title": "Explainable reasoning over knowledge graphs for recommendation",
+          "citation": "X. Wang, D. Wang, C. Xu, X. He, Y. Cao, and T.-S. Chua, 'Explainable reasoning over knowledge graphs for recommendation,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 33, 2019, pp. 5329-5336."
+        },
+        {
+          "title": "Explainable knowledge graph-based recommendation via deep reinforcement learning",
+          "citation": "W. Song, Z. Duan, Z. Yang, H. Zhu, M. Zhang, and J. Tang, 'Explainable knowledge graph-based recommendation via deep reinforcement learning,' arXiv preprint arXiv:1906.09506 , 2019."
+        },
+        {
+          "title": "Akupm: Attentionenhanced knowledge-aware user preference model for recommendation",
+          "citation": "X. Tang, T. Wang, H. Yang, and H. Song, 'Akupm: Attentionenhanced knowledge-aware user preference model for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 1891-1899."
+        },
+        {
+          "title": "An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation",
+          "citation": "Y. Qu, T. Bai, W. Zhang, J. Nie, and J. Tang, 'An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation,' arXiv preprint arXiv:1908.04032 , 2019."
+        },
+        {
+          "title": "Unifying taskoriented knowledge graph learning and recommendation",
+          "citation": "Q. Li, X. Tang, T. Wang, H. Yang, and H. Song, 'Unifying taskoriented knowledge graph learning and recommendation,' IEEE Access , vol. 7, pp. 115 816-115 828, 2019."
+        },
+        {
+          "title": "Attentive knowledge graph embedding for personalized recommendation",
+          "citation": "X. Sha, Z. Sun, and J. Zhang, 'Attentive knowledge graph embedding for personalized recommendation,' arXiv preprint arXiv:1910.08288 , 2019."
+        },
+        {
+          "title": "Improving sequential recommendation with knowledge-enhanced memory networks",
+          "citation": "J. Huang, W. X. Zhao, H. Dou, J.-R. Wen, and E. Y. Chang, 'Improving sequential recommendation with knowledge-enhanced memory networks,' in The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval . ACM, 2018, pp. 505-514."
+        },
+        {
+          "title": "Explainable interaction-driven user modeling over knowledge graph for sequential recommendation",
+          "citation": "X. Huang, Q. Fang, S. Qian, J. Sang, Y. Li, and C. Xu, 'Explainable interaction-driven user modeling over knowledge graph for sequential recommendation,' in Proceedings of the 27th ACM International Conference on Multimedia . ACM, 2019, pp. 548-556."
+        },
+        {
+          "title": "Exploring high-order user preference on the knowledge graph for recommender systems",
+          "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Exploring high-order user preference on the knowledge graph for recommender systems,' ACM Transactions on Information Systems (TOIS) , vol. 37, no. 3, p. 32, 2019."
+        },
+        {
+          "title": "Knowledge graph convolutional networks for recommender systems",
+          "citation": "H. Wang, M. Zhao, X. Xie, W. Li, and M. Guo, 'Knowledge graph convolutional networks for recommender systems,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 3307-3313."
+        },
+        {
+          "title": "Knowledge-aware graph neural networks with label smoothness regularization for recommender systems",
+          "citation": "H. Wang, F. Zhang, M. Zhang, J. Leskovec, M. Zhao, W. Li, and Z. Wang, 'Knowledge-aware graph neural networks with label smoothness regularization for recommender systems,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 968-977."
+        },
+        {
+          "title": "An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation",
+          "citation": "Y. Qu, T. Bai, W. Zhang, J. Nie, and J. Tang, 'An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation,' arXiv preprint arXiv:1908.04032 , 2019."
+        },
+        {
+          "title": "A knowledge-enhanced deep recommendation framework incorporating gan-based models",
+          "citation": "D. Yang, Z. Guo, Z. Wang, J. Jiang, Y. Xiao, and W. Wang, 'A knowledge-enhanced deep recommendation framework incorporating gan-based models,' IEEE International Conference on Data Mining (ICDM) , pp. 1368-1373, 2018."
+        },
+        {
+          "title": "Semantic path based personalized recommendation on weighted heterogeneous information networks",
+          "citation": "C. Shi, Z. Zhang, P. Luo, P. S. Yu, Y. Yue, and B. Wu, 'Semantic path based personalized recommendation on weighted heterogeneous information networks,' in Proceedings of the 24th ACM International on Conference on Information and Knowledge Management . ACM, 2015, pp. 453-462."
+        },
+        {
+          "title": "Heterogeneous information network embedding for recommendation",
+          "citation": "C. Shi, B. Hu, W. X. Zhao, and S. Y. Philip, 'Heterogeneous information network embedding for recommendation,' IEEE Transactions on Knowledge and Data Engineering , vol. 31, no. 2, pp. 357-370, 2018."
+        },
+        {
+          "title": "Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences",
+          "citation": "Y. Cao, X. Wang, X. He, Z. Hu, and T.-S. Chua, 'Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 151-161."
+        },
+        {
+          "title": "Explainable knowledge graph-based recommendation via deep reinforcement learning",
+          "citation": "W. Song, Z. Duan, Z. Yang, H. Zhu, M. Zhang, and J. Tang, 'Explainable knowledge graph-based recommendation via deep reinforcement learning,' arXiv preprint arXiv:1906.09506 , 2019."
+        },
+        {
+          "title": "Ripplenet: Propagating user preferences on the knowledge graph for recommender systems",
+          "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,' in Proceedings of the 27th ACM International Conference on Information and Knowledge Management . ACM, 2018, pp. 417-426."
+        },
+        {
+          "title": "Multitask feature learning for knowledge graph enhanced recommendation",
+          "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+        },
+        {
+          "title": "Exploring high-order user preference on the knowledge graph for recommender systems",
+          "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Exploring high-order user preference on the knowledge graph for recommender systems,' ACM Transactions on Information Systems (TOIS) , vol. 37, no. 3, p. 32, 2019."
+        },
+        {
+          "title": "Knowledge graph convolutional networks for recommender systems",
+          "citation": "H. Wang, M. Zhao, X. Xie, W. Li, and M. Guo, 'Knowledge graph convolutional networks for recommender systems,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 3307-3313."
+        },
+        {
+          "title": "Knowledge-aware graph neural networks with label smoothness regularization for recommender systems",
+          "citation": "H. Wang, F. Zhang, M. Zhang, J. Leskovec, M. Zhao, W. Li, and Z. Wang, 'Knowledge-aware graph neural networks with label smoothness regularization for recommender systems,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 968-977."
+        },
+        {
+          "title": "Akupm: Attentionenhanced knowledge-aware user preference model for recommendation",
+          "citation": "X. Tang, T. Wang, H. Yang, and H. Song, 'Akupm: Attentionenhanced knowledge-aware user preference model for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 1891-1899."
+        },
+        {
+          "title": "An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation",
+          "citation": "Y. Qu, T. Bai, W. Zhang, J. Nie, and J. Tang, 'An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation,' arXiv preprint arXiv:1908.04032 , 2019."
+        },
+        {
+          "title": "Unifying taskoriented knowledge graph learning and recommendation",
+          "citation": "Q. Li, X. Tang, T. Wang, H. Yang, and H. Song, 'Unifying taskoriented knowledge graph learning and recommendation,' IEEE Access , vol. 7, pp. 115 816-115 828, 2019."
+        },
+        {
+          "title": "Improving sequential recommendation with knowledge-enhanced memory networks",
+          "citation": "J. Huang, W. X. Zhao, H. Dou, J.-R. Wen, and E. Y. Chang, 'Improving sequential recommendation with knowledge-enhanced memory networks,' in The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval . ACM, 2018, pp. 505-514."
+        },
+        {
+          "title": "Kgat: Knowledge graph attention network for recommendation",
+          "citation": "X. Wang, X. He, Y. Cao, M. Liu, and T.-S. Chua, 'Kgat: Knowledge graph attention network for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 950-958."
+        },
+        {
+          "title": "An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation",
+          "citation": "Y. Qu, T. Bai, W. Zhang, J. Nie, and J. Tang, 'An end-to-end neighborhood-based interaction model forknowledge-enhanced recommendation,' arXiv preprint arXiv:1908.04032 , 2019."
+        },
+        {
+          "title": "Collaborative knowledge base embedding for recommender systems",
+          "citation": "F. Zhang, N. J. Yuan, D. Lian, X. Xie, and W.-Y. Ma, 'Collaborative knowledge base embedding for recommender systems,' in Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining , ser. KDD '16. New York, NY, USA: ACM, 2016, pp. 353-362."
+        },
+        {
+          "title": "Heterogeneous information network embedding for recommendation",
+          "citation": "C. Shi, B. Hu, W. X. Zhao, and S. Y. Philip, 'Heterogeneous information network embedding for recommendation,' IEEE Transactions on Knowledge and Data Engineering , vol. 31, no. 2, pp. 357-370, 2018."
+        },
+        {
+          "title": "Ripplenet: Propagating user preferences on the knowledge graph for recommender systems",
+          "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,' in Proceedings of the 27th ACM International Conference on Information and Knowledge Management . ACM, 2018, pp. 417-426."
+        },
+        {
+          "title": "Multitask feature learning for knowledge graph enhanced recommendation",
+          "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+        },
+        {
+          "title": "Dkn: Deep knowledgeaware network for news recommendation",
+          "citation": "H. Wang, F. Zhang, X. Xie, and M. Guo, 'Dkn: Deep knowledgeaware network for news recommendation,' in Proceedings of the 2018 World Wide Web Conference , ser. WWW '18. Republic and Canton of Geneva, Switzerland: International World Wide Web Conferences Steering Committee, 2018, pp. 1835-1844."
+        },
+        {
+          "title": "Exploring high-order user preference on the knowledge graph for recommender systems",
+          "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Exploring high-order user preference on the knowledge graph for recommender systems,' ACM Transactions on Information Systems (TOIS) , vol. 37, no. 3, p. 32, 2019."
+        },
+        {
+          "title": "Meta-graph based recommendation fusion over heterogeneous information networks",
+          "citation": "H. Zhao, Q. Yao, J. Li, Y. Song, and D. L. Lee, 'Meta-graph based recommendation fusion over heterogeneous information networks,' in Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining . ACM, 2017, pp. 635-644."
+        },
+        {
+          "title": "Learning over knowledge-base embeddings for recommendation",
+          "citation": "Y. Zhang, Q. Ai, X. Chen, and P. Wang, 'Learning over knowledge-base embeddings for recommendation,' arXiv preprint arXiv:1803.06540 , 2018."
+        },
+        {
+          "title": "Learning heterogeneous knowledge base embeddings for explainable recommendation",
+          "citation": "Q. Ai, V. Azizi, X. Chen, and Y. Zhang, 'Learning heterogeneous knowledge base embeddings for explainable recommendation,' Algorithms , vol. 11, no. 9, p. 137, 2018."
+        },
+        {
+          "title": "Jointly learning explainable rules for recommendation with knowledge graph",
+          "citation": "W. Ma, M. Zhang, Y. Cao, W. Jin, C. Wang, Y. Liu, S. Ma, and X. Ren, 'Jointly learning explainable rules for recommendation with knowledge graph,' in The World Wide Web Conference . ACM, 2019, pp. 1210-1221."
+        },
+        {
+          "title": "Reinforcement knowledge graph reasoning for explainable recommendation",
+          "citation": "Y. Xian, Z. Fu, S. Muthukrishnan, G. de Melo, and Y. Zhang, 'Reinforcement knowledge graph reasoning for explainable recommendation,' arXiv preprint arXiv:1906.05237 , 2019."
+        },
+        {
+          "title": "Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation",
+          "citation": "J. Zhao, Z. Zhou, Z. Guan, W. Zhao, W. Ning, G. Qiu, and X. He, 'Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 2347-2357."
+        },
+        {
+          "title": "Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks",
+          "citation": "Y. Ye, X. Wang, J. Yao, K. Jia, J. Zhou, Y. Xiao, and H. Yang, 'Bayes embedding (bem): Refining representation by integrating knowledge graphs and behavior-specific networks,' in Proceedings of the 28th ACM International Conference on Information and Knowledge Management . ACM, 2019, pp. 679-688."
+        },
+        {
+          "title": "Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation",
+          "citation": "J. Zhao, Z. Zhou, Z. Guan, W. Zhao, W. Ning, G. Qiu, and X. He, 'Intentgc: a scalable graph convolution framework fusing heterogeneous information for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2019, pp. 2347-2357."
+        },
+        {
+          "title": "Leveraging metapath based context for top-n recommendation with a neural co-attention model",
+          "citation": "B. Hu, C. Shi, W. X. Zhao, and P. S. Yu, 'Leveraging metapath based context for top-n recommendation with a neural co-attention model,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2018, pp. 1531-1540."
+        },
+        {
+          "title": "Meta-graph based recommendation fusion over heterogeneous information networks",
+          "citation": "H. Zhao, Q. Yao, J. Li, Y. Song, and D. L. Lee, 'Meta-graph based recommendation fusion over heterogeneous information networks,' in Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining . ACM, 2017, pp. 635-644."
+        },
+        {
+          "title": "Recommendation in heterogeneous information networks with implicit user feedback",
+          "citation": "X. Yu, X. Ren, Y. Sun, B. Sturt, U. Khandelwal, Q. Gu, B. Norick, and J. Han, 'Recommendation in heterogeneous information networks with implicit user feedback,' in Proceedings of the 7th ACM conference on Recommender systems . ACM, 2013, pp. 347350."
+        },
+        {
+          "title": "Personalized entity recommendation: A heterogeneous information network approach",
+          "citation": "X. Yu, X. Ren, Y. Sun, Q. Gu, B. Sturt, U. Khandelwal, B. Norick, and J. Han, 'Personalized entity recommendation: A heterogeneous information network approach,' in Proceedings of the 7th ACMinternational conference on Web search and data mining . ACM, 2014, pp. 283-292."
+        },
+        {
+          "title": "Semantic path based personalized recommendation on weighted heterogeneous information networks",
+          "citation": "C. Shi, Z. Zhang, P. Luo, P. S. Yu, Y. Yue, and B. Wu, 'Semantic path based personalized recommendation on weighted heterogeneous information networks,' in Proceedings of the 24th ACM International on Conference on Information and Knowledge Management . ACM, 2015, pp. 453-462."
+        },
+        {
+          "title": "Personalized recommendations using knowledge graphs: A probabilistic logic programming approach",
+          "citation": "R. Catherine and W. Cohen, 'Personalized recommendations using knowledge graphs: A probabilistic logic programming approach,' in Proceedings of the 10th ACM Conference on Recommender Systems . ACM, 2016, pp. 325-332."
+        },
+        {
+          "title": "Recurrent knowledge graph embedding for effective recommendation",
+          "citation": "Z. Sun, J. Yang, J. Zhang, A. Bozzon, L.-K. Huang, and C. Xu, 'Recurrent knowledge graph embedding for effective recommendation,' in Proceedings of the 12th ACM Conference on Recommender Systems , ser. RecSys '18. New York, NY, USA: ACM, 2018, pp. 297-305."
+        },
+        {
+          "title": "Heterogeneous information network embedding for recommendation",
+          "citation": "C. Shi, B. Hu, W. X. Zhao, and S. Y. Philip, 'Heterogeneous information network embedding for recommendation,' IEEE Transactions on Knowledge and Data Engineering , vol. 31, no. 2, pp. 357-370, 2018."
+        },
+        {
+          "title": "Kgat: Knowledge graph attention network for recommendation",
+          "citation": "X. Wang, X. He, Y. Cao, M. Liu, and T.-S. Chua, 'Kgat: Knowledge graph attention network for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 950-958."
+        },
+        {
+          "title": "Attentive knowledge graph embedding for personalized recommendation",
+          "citation": "X. Sha, Z. Sun, and J. Zhang, 'Attentive knowledge graph embedding for personalized recommendation,' arXiv preprint arXiv:1910.08288 , 2019."
+        },
+        {
+          "title": "Knowledge-aware graph neural networks with label smoothness regularization for recommender systems",
+          "citation": "H. Wang, F. Zhang, M. Zhang, J. Leskovec, M. Zhao, W. Li, and Z. Wang, 'Knowledge-aware graph neural networks with label smoothness regularization for recommender systems,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 968-977."
+        },
+        {
+          "title": "Location embeddings for next trip recommendation",
+          "citation": "A. Dadoun, R. Troncy, O. Ratier, and R. Petitti, 'Location embeddings for next trip recommendation,' in Companion Proceedings of The 2019 World Wide Web Conference . ACM, 2019, pp. 896-903."
+        },
+        {
+          "title": "Leveraging metapath based context for top-n recommendation with a neural co-attention model",
+          "citation": "B. Hu, C. Shi, W. X. Zhao, and P. S. Yu, 'Leveraging metapath based context for top-n recommendation with a neural co-attention model,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2018, pp. 1531-1540."
+        },
+        {
+          "title": "Improving sequential recommendation with knowledge-enhanced memory networks",
+          "citation": "J. Huang, W. X. Zhao, H. Dou, J.-R. Wen, and E. Y. Chang, 'Improving sequential recommendation with knowledge-enhanced memory networks,' in The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval . ACM, 2018, pp. 505-514."
+        },
+        {
+          "title": "Multitask feature learning for knowledge graph enhanced recommendation",
+          "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+        },
+        {
+          "title": "Explainable knowledge graph-based recommendation via deep reinforcement learning",
+          "citation": "W. Song, Z. Duan, Z. Yang, H. Zhu, M. Zhang, and J. Tang, 'Explainable knowledge graph-based recommendation via deep reinforcement learning,' arXiv preprint arXiv:1906.09506 , 2019."
+        },
+        {
+          "title": "Knowledge graph convolutional networks for recommender systems",
+          "citation": "H. Wang, M. Zhao, X. Xie, W. Li, and M. Guo, 'Knowledge graph convolutional networks for recommender systems,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 3307-3313."
+        },
+        {
+          "title": "Kgat: Knowledge graph attention network for recommendation",
+          "citation": "X. Wang, X. He, Y. Cao, M. Liu, and T.-S. Chua, 'Kgat: Knowledge graph attention network for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 950-958."
+        },
+        {
+          "title": "Knowledge-aware graph neural networks with label smoothness regularization for recommender systems",
+          "citation": "H. Wang, F. Zhang, M. Zhang, J. Leskovec, M. Zhao, W. Li, and Z. Wang, 'Knowledge-aware graph neural networks with label smoothness regularization for recommender systems,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 968-977."
+        },
+        {
+          "title": "Attentive knowledge graph embedding for personalized recommendation",
+          "citation": "X. Sha, Z. Sun, and J. Zhang, 'Attentive knowledge graph embedding for personalized recommendation,' arXiv preprint arXiv:1910.08288 , 2019."
+        },
+        {
+          "title": "Relational collaborative filtering: Modeling multiple item relations for recommendation",
+          "citation": "X. Xin, X. He, Y. Zhang, Y. Zhang, and J. Jose, 'Relational collaborative filtering: Modeling multiple item relations for recommendation,' in Proceedings of the 42Nd International ACM SIGIR Conference on Research and Development in Information Retrieval , ser. SIGIR'19. New York, NY, USA: ACM, 2019, pp. 125-134."
+        },
+        {
+          "title": "Explainable reasoning over knowledge graphs for recommendation",
+          "citation": "X. Wang, D. Wang, C. Xu, X. He, Y. Cao, and T.-S. Chua, 'Explainable reasoning over knowledge graphs for recommendation,' in Proceedings of the AAAI Conference on Artificial Intelligence , vol. 33, 2019, pp. 5329-5336."
+        },
+        {
+          "title": "Shine: Signed heterogeneous information network embedding for sentiment link prediction",
+          "citation": "H. Wang, F. Zhang, M. Hou, X. Xie, M. Guo, and Q. Liu, 'Shine: Signed heterogeneous information network embedding for sentiment link prediction,' in Proceedings of the Eleventh ACM International Conference on Web Search and Data Mining . ACM, 2018, pp. 592-600."
+        },
+        {
+          "title": "Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations",
+          "citation": "C. Luo, W. Pang, Z. Wang, and C. Lin, 'Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations,' in 2014 IEEE International Conference on Data Mining . IEEE, 2014, pp. 917-922."
+        },
+        {
+          "title": "Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations",
+          "citation": "C. Luo, W. Pang, Z. Wang, and C. Lin, 'Hete-cf: Social-based collaborative filtering recommendation using heterogeneous relations,' in 2014 IEEE International Conference on Data Mining . IEEE, 2014, pp. 917-922."
+        },
+        {
+          "title": "Yelp challenge dataset",
+          "citation": "'Yelp challenge dataset,' 2013, https://www.yelp.com/dataset/ challenge/."
+        },
+        {
+          "title": "Leveraging metapath based context for top-n recommendation with a neural co-attention model",
+          "citation": "B. Hu, C. Shi, W. X. Zhao, and P. S. Yu, 'Leveraging metapath based context for top-n recommendation with a neural co-attention model,' in Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining . ACM, 2018, pp. 1531-1540."
+        },
+        {
+          "title": "Meta-graph based recommendation fusion over heterogeneous information networks",
+          "citation": "H. Zhao, Q. Yao, J. Li, Y. Song, and D. L. Lee, 'Meta-graph based recommendation fusion over heterogeneous information networks,' in Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining . ACM, 2017, pp. 635-644."
+        },
+        {
+          "title": "Recommendation in heterogeneous information networks with implicit user feedback",
+          "citation": "X. Yu, X. Ren, Y. Sun, B. Sturt, U. Khandelwal, Q. Gu, B. Norick, and J. Han, 'Recommendation in heterogeneous information networks with implicit user feedback,' in Proceedings of the 7th ACM conference on Recommender systems . ACM, 2013, pp. 347350."
+        },
+        {
+          "title": "Personalized entity recommendation: A heterogeneous information network approach",
+          "citation": "X. Yu, X. Ren, Y. Sun, Q. Gu, B. Sturt, U. Khandelwal, B. Norick, and J. Han, 'Personalized entity recommendation: A heterogeneous information network approach,' in Proceedings of the 7th ACMinternational conference on Web search and data mining . ACM, 2014, pp. 283-292."
+        },
+        {
+          "title": "Semantic path based personalized recommendation on weighted heterogeneous information networks",
+          "citation": "C. Shi, Z. Zhang, P. Luo, P. S. Yu, Y. Yue, and B. Wu, 'Semantic path based personalized recommendation on weighted heterogeneous information networks,' in Proceedings of the 24th ACM International on Conference on Information and Knowledge Management . ACM, 2015, pp. 453-462."
+        },
+        {
+          "title": "Personalized recommendations using knowledge graphs: A probabilistic logic programming approach",
+          "citation": "R. Catherine and W. Cohen, 'Personalized recommendations using knowledge graphs: A probabilistic logic programming approach,' in Proceedings of the 10th ACM Conference on Recommender Systems . ACM, 2016, pp. 325-332."
+        },
+        {
+          "title": "Recurrent knowledge graph embedding for effective recommendation",
+          "citation": "Z. Sun, J. Yang, J. Zhang, A. Bozzon, L.-K. Huang, and C. Xu, 'Recurrent knowledge graph embedding for effective recommendation,' in Proceedings of the 12th ACM Conference on Recommender Systems , ser. RecSys '18. New York, NY, USA: ACM, 2018, pp. 297-305."
+        },
+        {
+          "title": "Heterogeneous information network embedding for recommendation",
+          "citation": "C. Shi, B. Hu, W. X. Zhao, and S. Y. Philip, 'Heterogeneous information network embedding for recommendation,' IEEE Transactions on Knowledge and Data Engineering , vol. 31, no. 2, pp. 357-370, 2018."
+        },
+        {
+          "title": "Attentive knowledge graph embedding for personalized recommendation",
+          "citation": "X. Sha, Z. Sun, and J. Zhang, 'Attentive knowledge graph embedding for personalized recommendation,' arXiv preprint arXiv:1910.08288 , 2019."
+        },
+        {
+          "title": "Kgat: Knowledge graph attention network for recommendation",
+          "citation": "X. Wang, X. He, Y. Cao, M. Liu, and T.-S. Chua, 'Kgat: Knowledge graph attention network for recommendation,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 950-958."
+        },
+        {
+          "title": "Location embeddings for next trip recommendation",
+          "citation": "A. Dadoun, R. Troncy, O. Ratier, and R. Petitti, 'Location embeddings for next trip recommendation,' in Companion Proceedings of The 2019 World Wide Web Conference . ACM, 2019, pp. 896-903."
+        },
+        {
+          "title": "Knowledge-aware graph neural networks with label smoothness regularization for recommender systems",
+          "citation": "H. Wang, F. Zhang, M. Zhang, J. Leskovec, M. Zhao, W. Li, and Z. Wang, 'Knowledge-aware graph neural networks with label smoothness regularization for recommender systems,' in Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , ser. KDD '19. New York, NY, USA: ACM, 2019, pp. 968-977."
+        },
+        {
+          "title": "Dianping.com",
+          "citation": "'Dianping.com,' 2009, https://www.dianping.com/."
+        },
+        {
+          "title": "Dkn: Deep knowledgeaware network for news recommendation",
+          "citation": "H. Wang, F. Zhang, X. Xie, and M. Guo, 'Dkn: Deep knowledgeaware network for news recommendation,' in Proceedings of the 2018 World Wide Web Conference , ser. WWW '18. Republic and Canton of Geneva, Switzerland: International World Wide Web Conferences Steering Committee, 2018, pp. 1835-1844."
+        },
+        {
+          "title": "Ripplenet: Propagating user preferences on the knowledge graph for recommender systems",
+          "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Ripplenet: Propagating user preferences on the knowledge graph for recommender systems,' in Proceedings of the 27th ACM International Conference on Information and Knowledge Management . ACM, 2018, pp. 417-426."
+        },
+        {
+          "title": "Multitask feature learning for knowledge graph enhanced recommendation",
+          "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+        },
+        {
+          "title": "Dkn: Deep knowledgeaware network for news recommendation",
+          "citation": "H. Wang, F. Zhang, X. Xie, and M. Guo, 'Dkn: Deep knowledgeaware network for news recommendation,' in Proceedings of the 2018 World Wide Web Conference , ser. WWW '18. Republic and Canton of Geneva, Switzerland: International World Wide Web Conferences Steering Committee, 2018, pp. 1835-1844."
+        },
+        {
+          "title": "Exploring high-order user preference on the knowledge graph for recommender systems",
+          "citation": "H. Wang, F. Zhang, J. Wang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Exploring high-order user preference on the knowledge graph for recommender systems,' ACM Transactions on Information Systems (TOIS) , vol. 37, no. 3, p. 32, 2019."
+        },
+        {
+          "title": "Bing news",
+          "citation": "'Bing news,' 2009, https://www.bing.com/news."
+        },
+        {
+          "title": "Sina weibo",
+          "citation": "'Sina weibo,' 2009, http://weibo.com."
+        },
+        {
+          "title": "Shine: Signed heterogeneous information network embedding for sentiment link prediction",
+          "citation": "H. Wang, F. Zhang, M. Hou, X. Xie, M. Guo, and Q. Liu, 'Shine: Signed heterogeneous information network embedding for sentiment link prediction,' in Proceedings of the Eleventh ACM International Conference on Web Search and Data Mining . ACM, 2018, pp. 592-600."
+        },
+        {
+          "title": "Meetup",
+          "citation": "'Meetup,' 2002, http://www.meetup.com/."
+        },
+        {
+          "title": "Dblp dataset",
+          "citation": "'Dblp dataset,' 2013, https://dblp.uni-trier.de/xml/."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "FUTURE DIRECTIONS",
+      "citations": [
+        {
+          "title": "Session-based social recommendation via dynamic graph attention networks",
+          "citation": "W. Song, Z. Xiao, Y. Wang, L. Charlin, M. Zhang, and J. Tang, 'Session-based social recommendation via dynamic graph attention networks,' in Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining . ACM, 2019, pp. 555563."
+        },
+        {
+          "title": "Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences",
+          "citation": "Y. Cao, X. Wang, X. He, Z. Hu, and T.-S. Chua, 'Unifying knowledge graph learning and recommendation: Towards a better understanding of user preferences,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 151-161."
+        },
+        {
+          "title": "Unifying taskoriented knowledge graph learning and recommendation",
+          "citation": "Q. Li, X. Tang, T. Wang, H. Yang, and H. Song, 'Unifying taskoriented knowledge graph learning and recommendation,' IEEE Access , vol. 7, pp. 115 816-115 828, 2019."
+        },
+        {
+          "title": "Multitask feature learning for knowledge graph enhanced recommendation",
+          "citation": "H. Wang, F. Zhang, M. Zhao, W. Li, X. Xie, and M. Guo, 'Multitask feature learning for knowledge graph enhanced recommendation,' in The World Wide Web Conference , ser. WWW '19. New York, NY, USA: ACM, 2019, pp. 2000-2010."
+        },
+        {
+          "title": "Relational collaborative filtering: Modeling multiple item relations for recommendation",
+          "citation": "X. Xin, X. He, Y. Zhang, Y. Zhang, and J. Jose, 'Relational collaborative filtering: Modeling multiple item relations for recommendation,' in Proceedings of the 42Nd International ACM SIGIR Conference on Research and Development in Information Retrieval , ser. SIGIR'19. New York, NY, USA: ACM, 2019, pp. 125-134."
+        },
+        {
+          "title": "A cross-domain recommender system with kernel-induced knowledge transfer for overlapping entities",
+          "citation": "Q. Zhang, J. Lu, D. Wu, and G. Zhang, 'A cross-domain recommender system with kernel-induced knowledge transfer for overlapping entities,' IEEE transactions on neural networks and learning systems , 2018."
+        },
+        {
+          "title": "Cross-domain recommendation via preference propagation graphnet",
+          "citation": "C. Zhao, C. Li, and C. Fu, 'Cross-domain recommendation via preference propagation graphnet,' in Proceedings of the 28th ACM International Conference on Information and Knowledge Management . ACM, 2019, pp. 2165-2168."
+        },
+        {
+          "title": "Deep short text classification with knowledge powered attention",
+          "citation": "J. Chen, Y. Hu, J. Liu, Y. Xiao, and H. Jiang, 'Deep short text classification with knowledge powered attention,' vol. 33, no. 01, pp. 6252-6259, 2019."
+        },
+        {
+          "title": "Ernie: Enhanced language representation with informative entities",
+          "citation": "Z. Zhang, X. Han, Z. Liu, X. Jiang, M. Sun, and Q. Liu, 'Ernie: Enhanced language representation with informative entities,' pp. 1441-1451, 2019."
+        },
+        {
+          "title": "Dkn: Deep knowledgeaware network for news recommendation",
+          "citation": "H. Wang, F. Zhang, X. Xie, and M. Guo, 'Dkn: Deep knowledgeaware network for news recommendation,' in Proceedings of the 2018 World Wide Web Conference , ser. WWW '18. Republic and Canton of Geneva, Switzerland: International World Wide Web Conferences Steering Committee, 2018, pp. 1835-1844."
+        },
+        {
+          "title": "Graph neural networks for social recommendation",
+          "citation": "W. Fan, Y. Ma, Q. Li, Y. He, E. Zhao, J. Tang, and D. Yin, 'Graph neural networks for social recommendation,' in The World Wide Web Conference . ACM, 2019, pp. 417-426."
+        },
+        {
+          "title": "Attentive knowledge graph embedding for personalized recommendation",
+          "citation": "X. Sha, Z. Sun, and J. Zhang, 'Attentive knowledge graph embedding for personalized recommendation,' arXiv preprint arXiv:1910.08288 , 2019."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "CONCLUSION",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

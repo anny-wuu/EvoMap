@@ -1,0 +1,854 @@
+{
+  "track": "Video Analysis",
+  "paper_title": "An Analysis of Artificial Intelligence Techniques in Surveillance Video Anomaly Detection: A Comprehensive Survey",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "Introduction",
+      "citations": [
+        {
+          "title": "Multimedia Datasets for Anomaly Detection: A Survey",
+          "citation": "Kumari, P.; Bedi, A.K.; Saini, M. Multimedia Datasets for Anomaly Detection: A Survey. arXiv 2021 , arXiv:2112.05410."
+        },
+        {
+          "title": "A review of supervised and unsupervised machine learning techniques for suspicious behavior recognition in intelligent surveillance system",
+          "citation": "Verma, K.K.; Singh, B.M.; Dixit, A. A review of supervised and unsupervised machine learning techniques for suspicious behavior recognition in intelligent surveillance system. Int. J. Inf. Technol. 2019 , 14 , 397-410. [CrossRef]"
+        },
+        {
+          "title": "Deep Learning in Video Anomaly Detection and Its Applications",
+          "citation": "Zhao, Y. Deep Learning in Video Anomaly Detection and Its Applications. Ph.D. Thesis, The University of Liverpool, Liverpool, UK, 2021."
+        },
+        {
+          "title": "An Efficient Deep-Learning-Based Detection and Classification System for Cyber-Attacks in IoT Communication Networks",
+          "citation": "Abu Al-Haija, Q.; Zein-Sabatto, S. An Efficient Deep-Learning-Based Detection and Classification System for Cyber-Attacks in IoT Communication Networks. Electronics 2020 , 9 , 2152. [CrossRef]"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "Related Works",
+      "citations": [
+        {
+          "title": "Procedures for detecting outlying observations in samples",
+          "citation": "Grubbs, F.E. Procedures for detecting outlying observations in samples. Technometrics 1969 , 11 , 1-21. [CrossRef]"
+        },
+        {
+          "title": "Identification of Outliers",
+          "citation": "Hawkins, D.M. Identification of Outliers ; Springer: Berlin/Heidelberg, Germany, 1980; Volume 11."
+        },
+        {
+          "title": "Outliers in Statistical Data",
+          "citation": "Barnett, V.; Lewis, T. Outliers in Statistical Data ; Wiley Series in Probability and Mathematical Statistics. Applied Probability and Statistics; Wiley: New York, NY, USA, 1984."
+        },
+        {
+          "title": "Anomaly detection in video sequences: A benchmark and computational model",
+          "citation": "Wan, B.; Jiang, W.; Fang, Y.; Luo, Z.; Ding, G. Anomaly detection in video sequences: A benchmark and computational model. IET Image Process. 2021 , 15 , 3454-3465. [CrossRef]"
+        },
+        {
+          "title": "Comparative Study for Anomaly Detection in Crowded Scenes",
+          "citation": "Abdelghafour, M.; ElBery, M.; Taha, Z. Comparative Study for Anomaly Detection in Crowded Scenes. Int. J. Intell. Comput. Inf. Sci. 2021 , 21 , 84-94. [CrossRef]"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "Existing AI Techniques in SV AD",
+      "citations": [
+        {
+          "title": "A Comparison of Supervised and Unsupervised Deep Learning Methods for Anomaly Detection in Images",
+          "citation": "Wilmet, V.; Verma, S.; Redl, T.; Sandaker, H.; Li, Z. A Comparison of Supervised and Unsupervised Deep Learning Methods for Anomaly Detection in Images. arXiv 2021 , arXiv:2107.09204."
+        },
+        {
+          "title": "A Lightweight Double-Stage Scheme to Identify Malicious DNS over HTTPS Traffic Using a Hybrid Learning Approach",
+          "citation": "Abu Al-Haija, Q.; Alohaly, M.; Odeh, A.; A Lightweight Double-Stage Scheme to Identify Malicious DNS over HTTPS Traffic Using a Hybrid Learning Approach. Sensors 2023 , 23 , 3489. [CrossRef] [PubMed]"
+        },
+        {
+          "title": "Anomaly Detection Using Predictive Convolutional Long Short-Term Memory Units",
+          "citation": "Medel, J.R. Anomaly Detection Using Predictive Convolutional Long Short-Term Memory Units ; Rochester Institute of Technology: Rochester, NY, USA, 2016."
+        },
+        {
+          "title": "Attention-based residual autoencoder for video anomaly detection",
+          "citation": "Le, V.T.; Kim, Y.G. Attention-based residual autoencoder for video anomaly detection. Appl. Intell. 2022 , 53 , 3240-3254. [CrossRef]"
+        },
+        {
+          "title": "Real-time anomaly detection on surveillance video with two-stream spatiotemporal generative model",
+          "citation": "Liu, W.; Cao, J.; Zhu, Y.; Liu, B.; Zhu, X. Real-time anomaly detection on surveillance video with two-stream spatiotemporal generative model. Multimed. Syst. 2022 , 29 , 59-71. [CrossRef] It is also worth noting that the field of SVAD is still an active area of research, and there is still much room for improvement. Future research should focus on developing more robust and efficient algorithms and addressing existing methods' limitations. Additionally, more comprehensive and diverse datasets should be used to evaluate the performance of the proposed methods. Using large-scale datasets with various types of anomalies and scenarios will help improve the generalization capabilities of the proposed methods. In summary, this survey article provided an up-to-date overview of the current state-ofthe-art in the field of SVAD and highlighted the most-significant developments, techniques, and datasets used in this area. Soon, prediction-based and reconstruction-based techniques will be the trend in AI-based SVAD, providing improved anomaly detection capabilities and enabling real-time monitoring of large-scale video surveillance systems. Author Contributions: Conceptualization, E.¸ S.; Methodology, E.¸ S. and R.S.; Software, E.¸ S. and B.A.; Formal Analysis, E.¸ S. and R.S.; Investigation, E.¸ S. and Q.A.A.-H.; Data curation, R.S.; Visualization, Q.A.A.-H.; Resources, Q.A.A.-H.;Validation, B.A., A.A. and A.A.A.; Funding acquisition, B.A., A.A. and A.A.A.; Writing-original draft, E.¸ S., R.S., Q.A.A.-H., A.A. and A.A.A.; Writing-review &amp; editing, E.¸ S., R.S., Q.A.A.-H., B.A., A.A. and A.A.A. All authors have read and agreed to the published version of the manuscript. Funding: This research was funded by the Ministry of education and the Deanship of Scientific Research at Najran University under the Research Groups Funding program grant (NU/RG/SERC/12/9). Institutional Review Board Statement: Not applicable. Informed Consent Statement: Not applicable. Data Availability Statement: Not applicable. Conflicts of Interest: The authors declare no conflict of interest."
+        },
+        {
+          "title": "Long-term multiobject tracking using alternative correlation filters",
+          "citation": "Ba¸ skurt, K.B.; Samet, R. Long-term multiobject tracking using alternative correlation filters. Turk. J. Electr. Eng. Comput. Sci. 2018 , 26 , 2246-2259. [CrossRef]"
+        },
+        {
+          "title": "Video synopsis: A survey",
+          "citation": "Baskurt, K.B.; Samet, R. Video synopsis: A survey. Comput. Vis. Image Underst. 2019 , 181 , 26-38. [CrossRef]"
+        },
+        {
+          "title": "Learning a distance function with a Siamese network to localize anomalies in videos",
+          "citation": "Ramachandra, B.; Jones, M.; Vatsavai, R. Learning a distance function with a Siamese network to localize anomalies in videos. In Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision, Snowmass Village, CO, USA, 1-5 March 2020; pp. 2598-2607."
+        },
+        {
+          "title": "Robust Approaches for Anomaly Detection Applied to Video Surveillance",
+          "citation": "Colque, R.V.H.M. Robust Approaches for Anomaly Detection Applied to Video Surveillance. 2018. Available online: https: //repositorio.ufmg.br/manutencao/ (accessed on 12 January 2023)."
+        },
+        {
+          "title": "Handbook of Pattern Recognition and Computer Vision",
+          "citation": "Chen, C.H. Handbook of Pattern Recognition and Computer Vision ; World Scientific: Singapore, 2015."
+        },
+        {
+          "title": "A Survey of Deep Learning Solutions for Anomaly Detection in Surveillance Videos",
+          "citation": "Munyua, J.G.; Wambugu, G.M.; Njenga, S.T. A Survey of Deep Learning Solutions for Anomaly Detection in Surveillance Videos. Int. J. Comput. Inf. Technol. 2021 , 10 , 5. [CrossRef]"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "Analysis of AI Techniques in SVAD",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Learning",
+          "citations": [
+            {
+              "title": "An Intrusion Detection and Classification System for IoT Traffic with Improved Data Engineering",
+              "citation": "Alsulami, A.A.; Abu Al-Haija, Q.; Tayeb, A.; Alqahtani, A. An Intrusion Detection and Classification System for IoT Traffic with Improved Data Engineering. Appl. Sci. 2020 , 12 , 12336. [CrossRef]"
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Supervised Learning",
+              "citations": [
+                {
+                  "title": "An overview of the supervised machine learning methods",
+                  "citation": "Nasteski, V. An overview of the supervised machine learning methods. Horizons B 2017 , 4 , 51-62. [CrossRef]"
+                },
+                {
+                  "title": "Improving supervised learning classification methods using multigranular linguistic modeling and fuzzy entropy",
+                  "citation": "Morente-Molinera, J.A.; Mezei, J.; Carlsson, C.; Herrera-Viedma, E. Improving supervised learning classification methods using multigranular linguistic modeling and fuzzy entropy. IEEE Trans. Fuzzy Syst. 2016 , 25 , 1078-1089. [CrossRef]"
+                },
+                {
+                  "title": "A taxonomy of traffic forecasting regression problems from a supervised learning perspective",
+                  "citation": "Angarita-Zapata, J.S.; Masegosa, A.D.; Triguero, I. A taxonomy of traffic forecasting regression problems from a supervised learning perspective. IEEE Access 2019 , 7 , 68185-68205. [CrossRef]"
+                },
+                {
+                  "title": "Multi-frame feature-fusion-based model for violence detection",
+                  "citation": "Asad, M.; Yang, J.; He, J.; Shamsolmoali, P.; He, X. Multi-frame feature-fusion-based model for violence detection. Vis. Comput. 2021 , 37 , 1415-1431. [CrossRef]"
+                },
+                {
+                  "title": "Abnormal event detection based on analysis of movement information of video sequence",
+                  "citation": "Wang, T.; Qiao, M.; Deng, Y.; Zhou, Y.; Wang, H.; Lyu, Q.; Snoussi, H. Abnormal event detection based on analysis of movement information of video sequence. Optik 2018 , 152 , 50-60. [CrossRef]"
+                },
+                {
+                  "title": "Global abnormal events detection in surveillance video-A hierarchical approach",
+                  "citation": "Patil, N.; Biswas, P.K. Global abnormal events detection in surveillance video-A hierarchical approach. In Proceedings of the 2016 Sixth International Symposium on Embedded Computing and System Design (ISED), Patna, India, 15-17 December 2016; IEEE: Piscataway, NJ, USA, 2016; pp. 217-222."
+                },
+                {
+                  "title": "Multiple Hierarchical Dirichlet Processes for anomaly detection in traffic",
+                  "citation": "Kaltsa, V.; Briassouli, A.; Kompatsiaris, I.; Strintzis, M.G. Multiple Hierarchical Dirichlet Processes for anomaly detection in traffic. Comput. Vis. Image Underst. 2018 , 169 , 28-39. [CrossRef]"
+                },
+                {
+                  "title": "High-performance intrusion detection system for networked UAVs via deep learning",
+                  "citation": "Abu Al-Haija, Q., Al Badawi. A. High-performance intrusion detection system for networked UAVs via deep learning. Neural Comput. Appl. 2022 , 34 , 10885-10900."
+                },
+                {
+                  "title": "Real-world anomaly detection in surveillance videos",
+                  "citation": "Sultani, W.; Chen, C.; Shah, M. Real-world anomaly detection in surveillance videos. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, Salt Lake City, UT, USA, 18-22 June 2018; pp. 6479-6488."
+                },
+                {
+                  "title": "Symmetrical Simulation Scheme for Anomaly Detection in Autonomous Vehicles Based on LSTM Model",
+                  "citation": "Alsulami, A.A.; Abu Al-Haija, Q.; Alqahtani, A.; Alsini, R. Symmetrical Simulation Scheme for Anomaly Detection in Autonomous Vehicles Based on LSTM Model. Symmetry 2022 , 14 , 1450. [CrossRef]"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.2",
+              "sec_title": "Unsupervised Learning",
+              "citations": [
+                {
+                  "title": "Semi-supervised and unsupervised extreme learning machines",
+                  "citation": "Huang, G.; Song, S.; Gupta, J.N.; Wu, C. Semi-supervised and unsupervised extreme learning machines. IEEE Trans. Cybern. 2014 , 44 , 2405-2417. [CrossRef]"
+                },
+                {
+                  "title": "Uav-based surveillance system: An anomaly detection approach",
+                  "citation": "Chriki, A.; Touati, H.; Snoussi, H.; Kamoun, F. Uav-based surveillance system: An anomaly detection approach. In Proceedings of the 2020 IEEE Symposium on Computers and Communications (ISCC), Rennes, France, 7-10 July 2020; IEEE: Piscataway, NJ, USA, 2020; pp. 1-6."
+                },
+                {
+                  "title": "Deep learning and handcrafted features for one-class anomaly detection in UAV video",
+                  "citation": "Chriki, A.; Touati, H.; Snoussi, H.; Kamoun, F. Deep learning and handcrafted features for one-class anomaly detection in UAV video. Multimed. Tools Appl. 2021 , 80 , 2599-2620. [CrossRef]"
+                },
+                {
+                  "title": "Effective One-Class Classifier Model for Memory Dump Malware Detection",
+                  "citation": "Al-Qudah, M.; Ashi, Z.; Alnabhan, M.; Abu Al-Haija, Q. Effective One-Class Classifier Model for Memory Dump Malware Detection. J. Sens. Actuator Netw. 2022 , 12 , 5. [CrossRef]"
+                },
+                {
+                  "title": "Automatic incident classification for large-scale traffic data by adaptive boosting SVM",
+                  "citation": "Wang, L.L.; Ngan, H.Y.; Yung, N.H. Automatic incident classification for large-scale traffic data by adaptive boosting SVM. Inf. Sci. 2018 , 467 , 59-73. [CrossRef]"
+                },
+                {
+                  "title": "Abnormal event detection in videos using generative adversarial nets",
+                  "citation": "Ravanbakhsh, M.; Nabi, M.; Sangineto, E.; Marcenaro, L.; Regazzoni, C.; Sebe, N. Abnormal event detection in videos using generative adversarial nets. In Proceedings of the 2017 IEEE International Conference on Image Processing (ICIP), Beijing, China, 17-20 September 2017; IEEE: Piscataway, NJ, USA, 2017; pp. 1577-1581."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.3",
+              "sec_title": "Semi-Supervised Learning",
+              "citations": [
+                {
+                  "title": "A survey on semi-supervised learning",
+                  "citation": "Van Engelen, J.E.; Hoos, H.H. A survey on semi-supervised learning. Mach. Learn. 2020 , 109 , 373-440. [CrossRef]"
+                },
+                {
+                  "title": "Anomaly detection in surveillance videos",
+                  "citation": "Bhakat, S.; Ramakrishnan, G. Anomaly detection in surveillance videos. In Proceedings of the ACM India Joint International Conference on Data Science and Management of Data, Kolkata, India, 3-5 January 2019; pp. 252-255."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.4",
+              "sec_title": "Supervised vs. Unsupervised vs. Semi-Supervised",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Algorithms",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.2.1",
+              "sec_title": "Statistics-Based Algorithms",
+              "citations": [
+                {
+                  "title": "Anomaly detection in road traffic using visual surveillance: A survey",
+                  "citation": "Santhosh, K.K.; Dogra, D.P.; Roy, P.P. Anomaly detection in road traffic using visual surveillance: A survey. ACMComput. Surv. (CSUR) 2020 , 53 , 1-26. [CrossRef]"
+                },
+                {
+                  "title": "Anomaly detection using local kernel density estimation and context-based regression",
+                  "citation": "Hu, W.; Gao, J.; Li, B.; Wu, O.; Du, J.; Maybank, S. Anomaly detection using local kernel density estimation and context-based regression. IEEE Trans. Knowl. Data Eng. 2018 , 32 , 218-233. [CrossRef]"
+                },
+                {
+                  "title": "Local anomaly detection in hybrid rocket combustion tests",
+                  "citation": "Rüttgers, A.; Petrarolo, A. Local anomaly detection in hybrid rocket combustion tests. Exp. Fluids 2021 , 62 , 136. [CrossRef]"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.2",
+              "sec_title": "Classification-Based Algorithms",
+              "citations": [
+                {
+                  "title": "Crowd anomaly detection and localization using histogram of magnitude and momentum",
+                  "citation": "Bansod, S.D.; Nandedkar, A.V. Crowd anomaly detection and localization using histogram of magnitude and momentum. Vis. Comput. 2020 , 36 , 609-620. [CrossRef]"
+                },
+                {
+                  "title": "Combining motion and appearance cues for anomaly detection",
+                  "citation": "Zhang, Y.; Lu, H.; Zhang, L.; Ruan, X. Combining motion and appearance cues for anomaly detection. Pattern Recognit. 2016 , 51 , 443-452. [CrossRef]"
+                },
+                {
+                  "title": "Deep-anomaly: Fully convolutional neural network for fast anomaly detection in crowded scenes",
+                  "citation": "Sabokrou, M.; Fayyaz, M.; Fathy, M.; Moayed, Z.; Klette, R. Deep-anomaly: Fully convolutional neural network for fast anomaly detection in crowded scenes. Comput. Vis. Image Underst. 2018 , 172 , 88-97. [CrossRef]"
+                },
+                {
+                  "title": "Coherence pursuit: Fast, simple, and robust principal component analysis",
+                  "citation": "Rahmani, M.; Atia, G.K. Coherence pursuit: Fast, simple, and robust principal component analysis. IEEE Trans. Signal Process. 2017 , 65 , 6260-6275. [CrossRef]"
+                },
+                {
+                  "title": "Anomaly detection in road traffic using visual surveillance: A survey",
+                  "citation": "Santhosh, K.K.; Dogra, D.P.; Roy, P.P. Anomaly detection in road traffic using visual surveillance: A survey. ACMComput. Surv. (CSUR) 2020 , 53 , 1-26. [CrossRef]"
+                },
+                {
+                  "title": "Machine learning: Algorithms, real-world applications and research directions",
+                  "citation": "Sarker, I.H. Machine learning: Algorithms, real-world applications and research directions. SN Comput. Sci. 2021 , 2 , 160. [CrossRef]"
+                },
+                {
+                  "title": "Detection of abnormal visual events via global optical flow orientation histogram",
+                  "citation": "Wang, T.; Snoussi, H. Detection of abnormal visual events via global optical flow orientation histogram. IEEE Trans. Inf. Forensics Secur. 2014 , 9 , 988-998. [CrossRef]"
+                },
+                {
+                  "title": "Online anomaly detection in surveillance videos with asymptotic bound on false alarm rate",
+                  "citation": "Doshi, K.; Yilmaz, Y. Online anomaly detection in surveillance videos with asymptotic bound on false alarm rate. Pattern Recognit. 2021 , 114 , 107865. [CrossRef]"
+                },
+                {
+                  "title": "A vision-based system for traffic anomaly detection using deep learning and decision trees",
+                  "citation": "Aboah, A. A vision-based system for traffic anomaly detection using deep learning and decision trees. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, Nashville, TN, USA, 20-25 June 2021; pp. 4207-4212."
+                },
+                {
+                  "title": "Anomaly Detection for Industrial Inspection using Convolutional Autoencoder and Deep Feature-based One-class Classification",
+                  "citation": "Saeedi, J.; Giusti, A. Anomaly Detection for Industrial Inspection using Convolutional Autoencoder and Deep Feature-based One-class Classification. In Proceedings of the VISIGRAPP (5: VISAPP), Online, 6-8 February 2022; pp. 85-96."
+                },
+                {
+                  "title": "Deep one-class classification via interpolated gaussian descriptor",
+                  "citation": "Chen, Y.; Tian, Y.; Pang, G.; Carneiro, G. Deep one-class classification via interpolated gaussian descriptor. In Proceedings of the AAAI Conference on Artificial Intelligence, Washington, DC, USA, 7-14 February 2022; Volume 36, pp. 383-392."
+                },
+                {
+                  "title": "Training confidence-calibrated classifiers for detecting out-of-distribution samples",
+                  "citation": "Lee, K.; Lee, H.; Lee, K.; Shin, J. Training confidence-calibrated classifiers for detecting out-of-distribution samples. arXiv 2017 , arXiv:1711.09325."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.3",
+              "sec_title": "Reconstruction-Based Algorithms",
+              "citations": [
+                {
+                  "title": "Future frame prediction for anomaly detection-a new baseline",
+                  "citation": "Liu, W.; Luo, W.; Lian, D.; Gao, S. Future frame prediction for anomaly detection-a new baseline. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, Salt Lake City, UT, USA, 18-22 June 2018; pp. 6536-6545."
+                },
+                {
+                  "title": "Discriminative reconstruction constrained generative adversarial network for hyperspectral anomaly detection",
+                  "citation": "Jiang, T.; Li, Y.; Xie, W.; Du, Q. Discriminative reconstruction constrained generative adversarial network for hyperspectral anomaly detection. IEEE Trans. Geosci. Remote Sens. 2020 , 58 , 4666-4679. [CrossRef]"
+                },
+                {
+                  "title": "SecureAD: A secure video anomaly detection framework on convolutional neural network in edge computing environment",
+                  "citation": "Cheng, H.; Liu, X.; Wang, H.; Fang, Y.; Wang, M.; Zhao, X. SecureAD: A secure video anomaly detection framework on convolutional neural network in edge computing environment. IEEE Trans. Cloud Comput. 2020 , 10 , 1413-1427. [CrossRef]"
+                },
+                {
+                  "title": "SecureAD: A secure video anomaly detection framework on convolutional neural network in edge computing environment",
+                  "citation": "Cheng, H.; Liu, X.; Wang, H.; Fang, Y.; Wang, M.; Zhao, X. SecureAD: A secure video anomaly detection framework on convolutional neural network in edge computing environment. IEEE Trans. Cloud Comput. 2020 , 10 , 1413-1427. [CrossRef]"
+                },
+                {
+                  "title": "Discriminative reconstruction constrained generative adversarial network for hyperspectral anomaly detection",
+                  "citation": "Jiang, T.; Li, Y.; Xie, W.; Du, Q. Discriminative reconstruction constrained generative adversarial network for hyperspectral anomaly detection. IEEE Trans. Geosci. Remote Sens. 2020 , 58 , 4666-4679. [CrossRef]"
+                },
+                {
+                  "title": "spatiotemporal autoencoder for video anomaly detection",
+                  "citation": "Zhao, Y.; Deng, B.; Shen, C.; Liu, Y.; Lu, H.; Hua, X.S. spatiotemporal autoencoder for video anomaly detection. In Proceedings of the 25th ACM International Conference on Multimedia, Mountain View, CA, USA, 23-27 October 2017; pp. 1933-1941."
+                },
+                {
+                  "title": "Learning deep representations of appearance and motion for anomalous event detection",
+                  "citation": "Xu, D.; Ricci, E.; Yan, Y.; Song, J.; Sebe, N. Learning deep representations of appearance and motion for anomalous event detection. arXiv 2015 , arXiv:1510.01553."
+                },
+                {
+                  "title": "Video anomaly detection and localization via gaussian mixture fully convolutional variational autoencoder",
+                  "citation": "Fan, Y.; Wen, G.; Li, D.; Qiu, S.; Levine, M.D.; Xiao, F. Video anomaly detection and localization via gaussian mixture fully convolutional variational autoencoder. Comput. Vis. Image Underst. 2020 , 195 , 102920. [CrossRef]"
+                },
+                {
+                  "title": "Anomaly detection in videos using optical flow and convolutional autoencoder",
+                  "citation": "Duman, E.; Erdem, O.A. Anomaly detection in videos using optical flow and convolutional autoencoder. IEEE Access 2019 , 7 , 183914-183923. [CrossRef]"
+                },
+                {
+                  "title": "Temporal cues from socially unacceptable trajectories for anomaly detection",
+                  "citation": "Madan, N.; Farkhondeh, A.; Nasrollahi, K.; Escalera, S.; Moeslund, T.B. Temporal cues from socially unacceptable trajectories for anomaly detection. In Proceedings of the IEEE/CVF International Conference on Computer Vision, Montreal, BC, Canada, 11-17 October 2021; pp. 2150-2158."
+                },
+                {
+                  "title": "Learning normal patterns via adversarial attention-based autoencoder for abnormal event detection in videos",
+                  "citation": "Song, H.; Sun, C.; Wu, X.; Chen, M.; Jia, Y. Learning normal patterns via adversarial attention-based autoencoder for abnormal event detection in videos. IEEE Trans. Multimed. 2019 , 22 , 2138-2148. [CrossRef]"
+                },
+                {
+                  "title": "Adversarial 3d convolutional auto-encoder for abnormal event detection in videos",
+                  "citation": "Sun, C.; Jia, Y.; Song, H.; Wu, Y. Adversarial 3d convolutional auto-encoder for abnormal event detection in videos. IEEE Trans. Multimed. 2020 , 23 , 3292-3305. [CrossRef]"
+                },
+                {
+                  "title": "Anomaly detection in video sequence with appearance-motion correspondence",
+                  "citation": "Nguyen, T.N.; Meunier, J. Anomaly detection in video sequence with appearance-motion correspondence. In Proceedings of the IEEE/CVF International Conference on Computer Vision, Seoul, Republic of Korea, 27 October-2 November 2019; pp. 1273-1283."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.4",
+              "sec_title": "Prediction-Based Algorithms",
+              "citations": [
+                {
+                  "title": "Future frame prediction for anomaly detection-a new baseline",
+                  "citation": "Liu, W.; Luo, W.; Lian, D.; Gao, S. Future frame prediction for anomaly detection-a new baseline. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, Salt Lake City, UT, USA, 18-22 June 2018; pp. 6536-6545."
+                },
+                {
+                  "title": "SecureAD: A secure video anomaly detection framework on convolutional neural network in edge computing environment",
+                  "citation": "Cheng, H.; Liu, X.; Wang, H.; Fang, Y.; Wang, M.; Zhao, X. SecureAD: A secure video anomaly detection framework on convolutional neural network in edge computing environment. IEEE Trans. Cloud Comput. 2020 , 10 , 1413-1427. [CrossRef]"
+                },
+                {
+                  "title": "Future frame prediction for anomaly detection-a new baseline",
+                  "citation": "Liu, W.; Luo, W.; Lian, D.; Gao, S. Future frame prediction for anomaly detection-a new baseline. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, Salt Lake City, UT, USA, 18-22 June 2018; pp. 6536-6545."
+                },
+                {
+                  "title": "Action recognition in video sequences using deep bi-directional LSTM with CNN features",
+                  "citation": "Ullah, A.; Ahmad, J.; Muhammad, K.; Sajjad, M.; Baik, S.W. Action recognition in video sequences using deep bi-directional LSTM with CNN features. IEEE Access 2017 , 6 , 1155-1166. [CrossRef]"
+                },
+                {
+                  "title": "Unsupervised anomaly detection with LSTM neural networks",
+                  "citation": "Ergen, T.; Kozat, S.S. Unsupervised anomaly detection with LSTM neural networks. IEEE Trans. Neural Netw. Learn. Syst. 2019 , 31 , 3127-3141. [CrossRef] [PubMed]"
+                },
+                {
+                  "title": "Self-supervised predictive convolutional attentive block for anomaly detection",
+                  "citation": "Ristea, N.C.; Madan, N.; Ionescu, R.T.; Nasrollahi, K.; Khan, F.S.; Moeslund, T.B.; Shah, M. Self-supervised predictive convolutional attentive block for anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, New Orleans, LA, USA, 18-24 June 2022; pp. 13576-13586."
+                },
+                {
+                  "title": "Anomalynet: An anomaly detection network for video surveillance",
+                  "citation": "Zhou, J.T.; Du, J.; Zhu, H.; Peng, X.; Liu, Y.; Goh, R.S.M. Anomalynet: An anomaly detection network for video surveillance. IEEE Trans. Inf. Forensics Secur. 2019 , 14 , 2537-2550. [CrossRef]"
+                },
+                {
+                  "title": "Spatiotemporal anomaly detection using deep learning for real-time video surveillance",
+                  "citation": "Nawaratne, R.; Alahakoon, D.; De Silva, D.; Yu, X. Spatiotemporal anomaly detection using deep learning for real-time video surveillance. IEEE Trans. Ind. Inform. 2019 , 16 , 393-402. [CrossRef]"
+                },
+                {
+                  "title": "An efficient anomaly recognition framework using an attention residual LSTM in surveillance videos",
+                  "citation": "Ullah, W.; Ullah, A.; Hussain, T.; Khan, Z.A.; Baik, S.W. An efficient anomaly recognition framework using an attention residual LSTM in surveillance videos. Sensors 2021 , 21 , 2811. [CrossRef]"
+                },
+                {
+                  "title": "Convolutional transformer based dual discriminator generative adversarial networks for video anomaly detection",
+                  "citation": "Feng, X.; Song, D.; Chen, Y.; Chen, Z.; Ni, J.; Chen, H. Convolutional transformer based dual discriminator generative adversarial networks for video anomaly detection. In Proceedings of the 29th ACM International Conference on Multimedia, Nice, France, 21-25 October 2021; pp. 5546-5554."
+                },
+                {
+                  "title": "Multi-Contextual Predictions with Vision Transformer for Video Anomaly Detection",
+                  "citation": "Lee, J.; Nam, W.J.; Lee, S.W. Multi-Contextual Predictions with Vision Transformer for Video Anomaly Detection. In Proceedings of the 2022 26th International Conference on Pattern Recognition (ICPR), Montreal, QC, Canada, 21-25 August 2022; IEEE: Piscataway, NJ, USA, 2022; pp. 1012-1018."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.5",
+              "sec_title": "Other Algorithms",
+              "citations": [
+                {
+                  "title": "Anomaly detection using DBSCAN clustering technique for traffic video surveillance",
+                  "citation": "Ranjith, R.; Athanesious, J.J.; Vaidehi, V. Anomaly detection using DBSCAN clustering technique for traffic video surveillance. In Proceedings of the 2015 Seventh International Conference on Advanced Computing (ICoAC), Chennai, India, 15-17 December 2015; IEEE: Piscataway, NJ, USA, 2015; pp. 1-6."
+                },
+                {
+                  "title": "Road traffic anomaly detection based on fuzzy theory",
+                  "citation": "Li, Y.; Guo, T.; Xia, R.; Xie, W. Road traffic anomaly detection based on fuzzy theory. IEEE Access 2018 , 6 , 40281-40288. [CrossRef]"
+                },
+                {
+                  "title": "Video analytics in smart transportation for the AIC'18 challenge",
+                  "citation": "Chang, M.C.; Wei, Y.; Song, N.; Lyu, S. Video analytics in smart transportation for the AIC'18 challenge. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops, Salt Lake City, UT, USA, 18-22 June 2018; pp. 61-68."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.6",
+              "sec_title": "Analysis of Algorithms",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "Analysis of the Existing Datasets",
+      "citations": [
+        {
+          "title": "Multimedia Datasets for Anomaly Detection: A Survey",
+          "citation": "Kumari, P.; Bedi, A.K.; Saini, M. Multimedia Datasets for Anomaly Detection: A Survey. arXiv 2021 , arXiv:2112.05410."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "CUHK Avenue Dataset",
+          "citations": [
+            {
+              "title": "Abnormal event detection at 150 fps in matlab",
+              "citation": "Lu, C.; Shi, J.; Jia, J. Abnormal event detection at 150 fps in matlab. In Proceedings of the IEEE International Conference on Computer Vision, Sydney, Australia, 1-8 December 2013; pp. 2720-2727."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Subway Dataset",
+          "citations": [
+            {
+              "title": "Robust real-time unusual event detection using multiple fixed-location monitors",
+              "citation": "Adam, A.; Rivlin, E.; Shimshoni, I.; Reinitz, D. Robust real-time unusual event detection using multiple fixed-location monitors. IEEE Trans. Pattern Anal. Mach. Intell. 2008 , 30 , 555-560. [CrossRef]"
+            },
+            {
+              "title": "Deep-anomaly: Fully convolutional neural network for fast anomaly detection in crowded scenes",
+              "citation": "Sabokrou, M.; Fayyaz, M.; Fathy, M.; Moayed, Z.; Klette, R. Deep-anomaly: Fully convolutional neural network for fast anomaly detection in crowded scenes. Comput. Vis. Image Underst. 2018 , 172 , 88-97. [CrossRef]"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.3",
+          "sec_title": "UCF-Crime Dataset",
+          "citations": [
+            {
+              "title": "Real-world anomaly detection in surveillance videos",
+              "citation": "Sultani, W.; Chen, C.; Shah, M. Real-world anomaly detection in surveillance videos. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, Salt Lake City, UT, USA, 18-22 June 2018; pp. 6479-6488."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.4",
+          "sec_title": "UCSD Dataset",
+          "citations": [
+            {
+              "title": "Anomaly detection in crowded scenes",
+              "citation": "Mahadevan, V.; Li, W.; Bhalodia, V.; Vasconcelos, N. Anomaly detection in crowded scenes. In Proceedings of the 2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, San Francisco, CA, USA, 13-18 June 2010; IEEE: Piscataway, NJ, USA, 2010; pp. 1975-1981."
+            },
+            {
+              "title": "STAN: spatiotemporal adversarial networks for abnormal event detection",
+              "citation": "Lee, S.; Kim, H.G.; Ro, Y.M. STAN: spatiotemporal adversarial networks for abnormal event detection. In Proceedings of the 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Calgary, AB, Canada, 15-20 April 2018; IEEE: Piscataway, NJ, USA, 2018; pp. 1323-1327."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.5",
+          "sec_title": "UMN Dataset",
+          "citations": [
+            {
+              "title": "Abnormal crowd behavior detection using social force model",
+              "citation": "Mehran, R.; Oyama, A.; Shah, M. Abnormal crowd behavior detection using social force model. In Proceedings of the 2009 IEEE Conference on Computer Vision and Pattern Recognition, Miami, FL, USA, 20-25 June 2009; IEEE: Piscataway, NJ, USA, 2009; pp. 935-942."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.6",
+          "sec_title": "ShanghaiTech Dataset",
+          "citations": [
+            {
+              "title": "Symmetrical Simulation Scheme for Anomaly Detection in Autonomous Vehicles Based on LSTM Model",
+              "citation": "Alsulami, A.A.; Abu Al-Haija, Q.; Alqahtani, A.; Alsini, R. Symmetrical Simulation Scheme for Anomaly Detection in Autonomous Vehicles Based on LSTM Model. Symmetry 2022 , 14 , 1450. [CrossRef]"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.7",
+          "sec_title": "HR-Crime Dataset",
+          "citations": [
+            {
+              "title": "HR-Crime: Human-Related Anomaly Detection in Surveillance Videos",
+              "citation": "Boekhoudt, K.; Matei, A.; Aghaei, M.; Talavera, E. HR-Crime: Human-Related Anomaly Detection in Surveillance Videos. In Proceedings of the International Conference on Computer Analysis of Images and Patterns, Virtual, 28-30 September 2021; Springer: Berlin/Heidelberg, Germany, 2021; pp. 164-174."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.8",
+          "sec_title": "Comparison of Surveillance Datasets",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "5.8.1",
+              "sec_title": "Based on Recording Environment",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.8.2",
+              "sec_title": "Based on Color Space",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.8.3",
+              "sec_title": "Based on Ground Truth Labeling",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "Evaluation of the Performance of Existing Applications",
+      "citations": [
+        {
+          "title": "Generative neural networks for anomaly detection in crowded scenes",
+          "citation": "Wang, T.; Qiao, M.; Lin, Z.; Li, C.; Snoussi, H.; Liu, Z.; Choi, C. Generative neural networks for anomaly detection in crowded scenes. IEEE Trans. Inf. Forensics Secur. 2018 , 14 , 1390-1399. [CrossRef]"
+        },
+        {
+          "title": "A discriminative framework for anomaly detection in large videos",
+          "citation": "Del Giorno, A.; Bagnell, J.A.; Hebert, M. A discriminative framework for anomaly detection in large videos. In Proceedings of the European Conference on Computer Vision, Amsterdam, The Netherlands, 11-14 October 2016; Springer: Berlin/Heidelberg, Germany, 2016; pp. 334-349."
+        },
+        {
+          "title": "Unmasking the abnormal events in video",
+          "citation": "Tudor Ionescu, R.; Smeureanu, S.; Alexe, B.; Popescu, M. Unmasking the abnormal events in video. In Proceedings of the IEEE International Conference on Computer Vision, Venice, Italy, 22-29 October 2017; pp. 2895-2903."
+        },
+        {
+          "title": "Anomaly detection in crowded scenes by SL-HOF descriptor and foreground classification",
+          "citation": "Wang, S.; Zhu, E.; Yin, J.; Porikli, F. Anomaly detection in crowded scenes by SL-HOF descriptor and foreground classification. In Proceedings of the 2016 23rd International Conference on Pattern Recognition (ICPR), Cancun, Mexico, 4-8 December 2016; IEEE: Piscataway, NJ, USA, 2016; pp. 3398-3403."
+        },
+        {
+          "title": "Learning temporal regularity in video sequences",
+          "citation": "Hasan, M.; Choi, J.; Neumann, J.; Roy-Chowdhury, A.K.; Davis, L.S. Learning temporal regularity in video sequences. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, Las Vegas, NA, USA, 27-30 June 2016; pp. 733-742."
+        },
+        {
+          "title": "Remembering history with convolutional lstm for anomaly detection",
+          "citation": "Luo, W.; Liu, W.; Gao, S. Remembering history with convolutional lstm for anomaly detection. In Proceedings of the 2017 IEEE International Conference on Multimedia and Expo (ICME), San Diego, CA, USA, 10-14 July 2017; IEEE: Piscataway, NJ, USA, 2017; pp. 439-444."
+        },
+        {
+          "title": "Energy-based localized anomaly detection in video surveillance",
+          "citation": "Vu, H.; Nguyen, T.D.; Travers, A.; Venkatesh, S.; Phung, D. Energy-based localized anomaly detection in video surveillance. In Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining, Nanjing, China, 22-25 May 2017; Springer: Berlin/Heidelberg, Germany, 2017; pp. 641-653."
+        },
+        {
+          "title": "Abnormal event detection in videos using spatiotemporal autoencoder",
+          "citation": "Chong, Y.S.; Tay, Y.H. Abnormal event detection in videos using spatiotemporal autoencoder. In Proceedings of the International Symposium on Neural Networks, Hokkaido, Japan, 2017; Springer: Berlin/Heidelberg, Germany, 2017; pp. 189-196."
+        },
+        {
+          "title": "Unmasking the abnormal events in video",
+          "citation": "Tudor Ionescu, R.; Smeureanu, S.; Alexe, B.; Popescu, M. Unmasking the abnormal events in video. In Proceedings of the IEEE International Conference on Computer Vision, Venice, Italy, 22-29 October 2017; pp. 2895-2903."
+        },
+        {
+          "title": "Future frame prediction for anomaly detection-a new baseline",
+          "citation": "Liu, W.; Luo, W.; Lian, D.; Gao, S. Future frame prediction for anomaly detection-a new baseline. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, Salt Lake City, UT, USA, 18-22 June 2018; pp. 6536-6545."
+        },
+        {
+          "title": "Anomaly detection in moving crowds through spatiotemporal autoencoding and additional attention",
+          "citation": "Yang, B.; Cao, J.; Ni, R.; Zou, L. Anomaly detection in moving crowds through spatiotemporal autoencoding and additional attention. Adv. Multimed. 2018 , 2018 , 2087574. [CrossRef]"
+        },
+        {
+          "title": "Detecting abnormal events in video using Narrowed Normality Clusters",
+          "citation": "Tudor Ionescu, R.; Smeureanu, S.; Popescu, M.; Alexe, B. Detecting abnormal events in video using Narrowed Normality Clusters. arXiv 2018 , arXiv-1801."
+        },
+        {
+          "title": "Graph convolutional label noise cleaner: Train a plug-and-play action classifier for anomaly detection",
+          "citation": "Zhong, J.X.; Li, N.; Kong, W.; Liu, S.; Li, T.H.; Li, G. Graph convolutional label noise cleaner: Train a plug-and-play action classifier for anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, Long Beach, CA, USA, 15-20 June 2019; pp. 1237-1246."
+        },
+        {
+          "title": "Memorizing normality to detect anomaly: Memory-augmented deep autoencoder for unsupervised anomaly detection",
+          "citation": "Gong, D.; Liu, L.; Le, V.; Saha, B.; Mansour, M.R.; Venkatesh, S.; Hengel, A.V.D. Memorizing normality to detect anomaly: Memory-augmented deep autoencoder for unsupervised anomaly detection. In Proceedings of the IEEE/CVF International Conference on Computer Vision, Seoul, Republic of Korea, 27 October-2 November 2019; pp. 1705-1714."
+        },
+        {
+          "title": "Video anomaly detection with sparse coding inspired deep neural networks",
+          "citation": "Luo, W.; Liu, W.; Lian, D.; Tang, J.; Duan, L.; Peng, X.; Gao, S. Video anomaly detection with sparse coding inspired deep neural networks. IEEE Trans. Pattern Anal. Mach. Intell. 2019 , 43 , 1070-1084. [CrossRef]"
+        },
+        {
+          "title": "Attention-driven loss for anomaly detection in video surveillance",
+          "citation": "Zhou, J.T.; Zhang, L.; Fang, Z.; Du, J.; Peng, X.; Xiao, Y. Attention-driven loss for anomaly detection in video surveillance. IEEE Trans. Circuits Syst. Video Technol. 2019 , 30 , 4639-4647. [CrossRef]"
+        },
+        {
+          "title": "Anomalynet: An anomaly detection network for video surveillance",
+          "citation": "Zhou, J.T.; Du, J.; Zhu, H.; Peng, X.; Liu, Y.; Goh, R.S.M. Anomalynet: An anomaly detection network for video surveillance. IEEE Trans. Inf. Forensics Secur. 2019 , 14 , 2537-2550. [CrossRef]"
+        },
+        {
+          "title": "BMAN: Bidirectional multi-scale aggregation networks for abnormal event detection",
+          "citation": "Lee, S.; Kim, H.G.; Ro, Y.M. BMAN: Bidirectional multi-scale aggregation networks for abnormal event detection. IEEE Trans. Image Process. 2019 , 29 , 2395-2408. [CrossRef] [PubMed]"
+        },
+        {
+          "title": "3D resnet with ranking loss function for abnormal activity detection in videos",
+          "citation": "Dubey, S.; Boragule, A.; Jeon, M. 3D resnet with ranking loss function for abnormal activity detection in videos. In Proceedings of the 2019 International Conference on Control, Automation and Information Sciences (ICCAIS), Chengdu, China, 23-26 October 2019; IEEE: Piscataway, NJ, USA, 2019; pp. 1-6."
+        },
+        {
+          "title": "Dual discriminator generative adversarial network for video anomaly detection",
+          "citation": "Dong, F.; Zhang, Y.; Nie, X. Dual discriminator generative adversarial network for video anomaly detection. IEEE Access 2020 , 8 , 88170-88176. [CrossRef]"
+        },
+        {
+          "title": "Few-shot scene-adaptive anomaly detection",
+          "citation": "Lu, Y.; Yu, F.; Reddy, M.K.K.; Wang, Y. Few-shot scene-adaptive anomaly detection. In Proceedings of the European Conference on Computer Vision, Glasgow, UK, 23-28 August 2020; Springer: Berlin/Heidelberg, Germany, 2020; pp. 125-141."
+        },
+        {
+          "title": "Improving video anomaly detection performance with patch-level loss and segmentation map",
+          "citation": "Yang, Y.; Zhan, D.; Yang, F.; Zhou, X.D.; Yan, Y.; Wang, Y. Improving video anomaly detection performance with patch-level loss and segmentation map. In Proceedings of the 2020 IEEE 6th International Conference on Computer and Communications (ICCC), Chengdu, China, 11-14 December 2020; IEEE: Piscataway, NJ, USA, 2020; pp. 1832-1839."
+        },
+        {
+          "title": "Clustering driven deep autoencoder for video anomaly detection",
+          "citation": "Chang, Y.; Tu, Z.; Xie, W.; Yuan, J. Clustering driven deep autoencoder for video anomaly detection. In Proceedings of the European Conference on Computer Vision, Glasgow, UK, 23-28 August 2020; Springer: Berlin/Heidelberg, Germany, 2020; pp. 329-345."
+        },
+        {
+          "title": "Learning a distance function with a Siamese network to localize anomalies in videos",
+          "citation": "Ramachandra, B.; Jones, M.; Vatsavai, R. Learning a distance function with a Siamese network to localize anomalies in videos. In Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision, Snowmass Village, CO, USA, 1-5 March 2020; pp. 2598-2607."
+        },
+        {
+          "title": "Learning memory-guided normality for anomaly detection",
+          "citation": "Park, H.; Noh, J.; Ham, B. Learning memory-guided normality for anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, Seattle, WA, USA, 13-19 June 2020; pp. 14372-14381."
+        },
+        {
+          "title": "A self-reasoning framework for anomaly detection using video-level labels",
+          "citation": "Zaheer, M.Z.; Mahmood, A.; Shin, H.; Lee, S.I. A self-reasoning framework for anomaly detection using video-level labels. IEEE Signal Process. Lett. 2020 , 27 , 1705-1709. [CrossRef]"
+        },
+        {
+          "title": "Anomaly detection in videos using two-stream autoencoder with post hoc interpretability",
+          "citation": "Feng, J.; Liang, Y.; Li, L. Anomaly detection in videos using two-stream autoencoder with post hoc interpretability. Comput. Intell. Neurosci. 2021 , 2021 , 7367870. [CrossRef]"
+        },
+        {
+          "title": "Human-machine cooperative video anomaly detection",
+          "citation": "Yang, F.; Yu, Z.; Chen, L.; Gu, J.; Li, Q.; Guo, B. Human-machine cooperative video anomaly detection. Proc. ACM -Hum.-Comput. Interact. 2021 , 4 , 1-18. [CrossRef]"
+        },
+        {
+          "title": "Anomaly detection in video via self-supervised and multi-task learning",
+          "citation": "Georgescu, M.I.; Barbalau, A.; Ionescu, R.T.; Khan, F.S.; Popescu, M.; Shah, M. Anomaly detection in video via self-supervised and multi-task learning. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, Nashville, TN, USA, 20-25 June 2021; pp. 12742-12752."
+        },
+        {
+          "title": "Decoupled appearance and motion learning for efficient anomaly detection in surveillance video",
+          "citation": "Li, B.; Leroux, S.; Simoens, P. Decoupled appearance and motion learning for efficient anomaly detection in surveillance video. Comput. Vis. Image Underst. 2021 , 210 , 103249. [CrossRef]"
+        },
+        {
+          "title": "Video anomaly detection by estimating likelihood of representations",
+          "citation": "Ouyang, Y.; Sanchez, V. Video anomaly detection by estimating likelihood of representations. In Proceedings of the 2020 25th International Conference on Pattern Recognition (ICPR), Milan, Italy, 10-15 January 2021; IEEE: Piscataway, NJ, USA, 2021; pp. 8984-8991."
+        },
+        {
+          "title": "Anomalous event recognition in videos based on joint learning of motion and appearance with multiple ranking measures",
+          "citation": "Dubey, S.; Boragule, A.; Gwak, J.; Jeon, M. Anomalous event recognition in videos based on joint learning of motion and appearance with multiple ranking measures. Appl. Sci. 2021 , 11 , 1344. [CrossRef]"
+        },
+        {
+          "title": "Attention-based residual autoencoder for video anomaly detection",
+          "citation": "Le, V.T.; Kim, Y.G. Attention-based residual autoencoder for video anomaly detection. Appl. Intell. 2022 , 53 , 3240-3254. [CrossRef]"
+        },
+        {
+          "title": "Video Anomaly Detection Based on Convolutional Recurrent AutoEncoder",
+          "citation": "Wang, B.; Yang, C. Video Anomaly Detection Based on Convolutional Recurrent AutoEncoder. Sensors 2022 , 22 , 4647. [CrossRef]"
+        },
+        {
+          "title": "EADN: An Efficient Deep Learning Model for Anomaly Detection in Videos",
+          "citation": "Ul Amin, S.; Ullah, M.; Sajjad, M.; Cheikh, F.A.; Hijji, M.; Hijji, A.; Muhammad, K. EADN: An Efficient Deep Learning Model for Anomaly Detection in Videos. Mathematics 2022 , 10 , 1555. [CrossRef]"
+        },
+        {
+          "title": "Video anomaly detection using deep residual-spatiotemporal translation network",
+          "citation": "Ganokratanaa, T.; Aramvith, S.; Sebe, N. Video anomaly detection using deep residual-spatiotemporal translation network. Pattern Recognit. Lett. 2022 , 155 , 143-150. [CrossRef]"
+        },
+        {
+          "title": "A Video Anomaly Detection Framework based on Appearance-Motion Semantics Representation Consistency",
+          "citation": "Huang, X.; Zhao, C.; Wang, Y.; Wu, Z. A Video Anomaly Detection Framework based on Appearance-Motion Semantics Representation Consistency. arXiv 2022 , arXiv:2204.04151."
+        },
+        {
+          "title": "Diversity-Measurable Anomaly Detection",
+          "citation": "Liu, W.; Chang, H.; Ma, B.; Shan, S.; Chen, X. Diversity-Measurable Anomaly Detection. arXiv 2023 , arXiv:2303.05047."
+        },
+        {
+          "title": "Look at adjacent frames: Video anomaly detection without offline training",
+          "citation": "Ouyang, Y.; Shen, G.; Sanchez, V. Look at adjacent frames: Video anomaly detection without offline training. In Computer Vision-ECCV 2022 Workshops ; Springer: Berlin/Heidelberg, Germany, 2023; pp. 642-658."
+        },
+        {
+          "title": "EADN: An Efficient Deep Learning Model for Anomaly Detection in Videos",
+          "citation": "Ul Amin, S.; Ullah, M.; Sajjad, M.; Cheikh, F.A.; Hijji, M.; Hijji, A.; Muhammad, K. EADN: An Efficient Deep Learning Model for Anomaly Detection in Videos. Mathematics 2022 , 10 , 1555. [CrossRef]"
+        },
+        {
+          "title": "A Video Anomaly Detection Framework based on Appearance-Motion Semantics Representation Consistency",
+          "citation": "Huang, X.; Zhao, C.; Wang, Y.; Wu, Z. A Video Anomaly Detection Framework based on Appearance-Motion Semantics Representation Consistency. arXiv 2022 , arXiv:2204.04151."
+        },
+        {
+          "title": "Learning temporal regularity in video sequences",
+          "citation": "Hasan, M.; Choi, J.; Neumann, J.; Roy-Chowdhury, A.K.; Davis, L.S. Learning temporal regularity in video sequences. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, Las Vegas, NA, USA, 27-30 June 2016; pp. 733-742."
+        },
+        {
+          "title": "Detecting abnormal events in video using Narrowed Normality Clusters",
+          "citation": "Tudor Ionescu, R.; Smeureanu, S.; Popescu, M.; Alexe, B. Detecting abnormal events in video using Narrowed Normality Clusters. arXiv 2018 , arXiv-1801."
+        },
+        {
+          "title": "Human-machine cooperative video anomaly detection",
+          "citation": "Yang, F.; Yu, Z.; Chen, L.; Gu, J.; Li, Q.; Guo, B. Human-machine cooperative video anomaly detection. Proc. ACM -Hum.-Comput. Interact. 2021 , 4 , 1-18. [CrossRef]"
+        },
+        {
+          "title": "Learning temporal regularity in video sequences",
+          "citation": "Hasan, M.; Choi, J.; Neumann, J.; Roy-Chowdhury, A.K.; Davis, L.S. Learning temporal regularity in video sequences. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, Las Vegas, NA, USA, 27-30 June 2016; pp. 733-742."
+        },
+        {
+          "title": "Detecting abnormal events in video using Narrowed Normality Clusters",
+          "citation": "Tudor Ionescu, R.; Smeureanu, S.; Popescu, M.; Alexe, B. Detecting abnormal events in video using Narrowed Normality Clusters. arXiv 2018 , arXiv-1801."
+        },
+        {
+          "title": "Human-machine cooperative video anomaly detection",
+          "citation": "Yang, F.; Yu, Z.; Chen, L.; Gu, J.; Li, Q.; Guo, B. Human-machine cooperative video anomaly detection. Proc. ACM -Hum.-Comput. Interact. 2021 , 4 , 1-18. [CrossRef]"
+        },
+        {
+          "title": "Learning temporal regularity in video sequences",
+          "citation": "Hasan, M.; Choi, J.; Neumann, J.; Roy-Chowdhury, A.K.; Davis, L.S. Learning temporal regularity in video sequences. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, Las Vegas, NA, USA, 27-30 June 2016; pp. 733-742."
+        },
+        {
+          "title": "Video anomaly detection using deep residual-spatiotemporal translation network",
+          "citation": "Ganokratanaa, T.; Aramvith, S.; Sebe, N. Video anomaly detection using deep residual-spatiotemporal translation network. Pattern Recognit. Lett. 2022 , 155 , 143-150. [CrossRef]"
+        },
+        {
+          "title": "Decoupled appearance and motion learning for efficient anomaly detection in surveillance video",
+          "citation": "Li, B.; Leroux, S.; Simoens, P. Decoupled appearance and motion learning for efficient anomaly detection in surveillance video. Comput. Vis. Image Underst. 2021 , 210 , 103249. [CrossRef]"
+        },
+        {
+          "title": "Energy-based localized anomaly detection in video surveillance",
+          "citation": "Vu, H.; Nguyen, T.D.; Travers, A.; Venkatesh, S.; Phung, D. Energy-based localized anomaly detection in video surveillance. In Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining, Nanjing, China, 22-25 May 2017; Springer: Berlin/Heidelberg, Germany, 2017; pp. 641-653."
+        },
+        {
+          "title": "Diversity-Measurable Anomaly Detection",
+          "citation": "Liu, W.; Chang, H.; Ma, B.; Shan, S.; Chen, X. Diversity-Measurable Anomaly Detection. arXiv 2023 , arXiv:2303.05047."
+        },
+        {
+          "title": "A Video Anomaly Detection Framework based on Appearance-Motion Semantics Representation Consistency",
+          "citation": "Huang, X.; Zhao, C.; Wang, Y.; Wu, Z. A Video Anomaly Detection Framework based on Appearance-Motion Semantics Representation Consistency. arXiv 2022 , arXiv:2204.04151."
+        },
+        {
+          "title": "Unmasking the abnormal events in video",
+          "citation": "Tudor Ionescu, R.; Smeureanu, S.; Alexe, B.; Popescu, M. Unmasking the abnormal events in video. In Proceedings of the IEEE International Conference on Computer Vision, Venice, Italy, 22-29 October 2017; pp. 2895-2903."
+        },
+        {
+          "title": "A self-reasoning framework for anomaly detection using video-level labels",
+          "citation": "Zaheer, M.Z.; Mahmood, A.; Shin, H.; Lee, S.I. A self-reasoning framework for anomaly detection using video-level labels. IEEE Signal Process. Lett. 2020 , 27 , 1705-1709. [CrossRef]"
+        },
+        {
+          "title": "Anomaly detection in video via self-supervised and multi-task learning",
+          "citation": "Georgescu, M.I.; Barbalau, A.; Ionescu, R.T.; Khan, F.S.; Popescu, M.; Shah, M. Anomaly detection in video via self-supervised and multi-task learning. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, Nashville, TN, USA, 20-25 June 2021; pp. 12742-12752."
+        },
+        {
+          "title": "Video anomaly detection with sparse coding inspired deep neural networks",
+          "citation": "Luo, W.; Liu, W.; Lian, D.; Tang, J.; Duan, L.; Peng, X.; Gao, S. Video anomaly detection with sparse coding inspired deep neural networks. IEEE Trans. Pattern Anal. Mach. Intell. 2019 , 43 , 1070-1084. [CrossRef]"
+        },
+        {
+          "title": "EADN: An Efficient Deep Learning Model for Anomaly Detection in Videos",
+          "citation": "Ul Amin, S.; Ullah, M.; Sajjad, M.; Cheikh, F.A.; Hijji, M.; Hijji, A.; Muhammad, K. EADN: An Efficient Deep Learning Model for Anomaly Detection in Videos. Mathematics 2022 , 10 , 1555. [CrossRef]"
+        },
+        {
+          "title": "3D resnet with ranking loss function for abnormal activity detection in videos",
+          "citation": "Dubey, S.; Boragule, A.; Jeon, M. 3D resnet with ranking loss function for abnormal activity detection in videos. In Proceedings of the 2019 International Conference on Control, Automation and Information Sciences (ICCAIS), Chengdu, China, 23-26 October 2019; IEEE: Piscataway, NJ, USA, 2019; pp. 1-6."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "Discussion",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "7.1",
+          "sec_title": "Current Developments",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.2",
+          "sec_title": "Limitations and Challenges",
+          "citations": [
+            {
+              "title": "A Comprehensive Study on Automated Anomaly Detection Techniques in Video Surveillance",
+              "citation": "Pannirselvam, P.M.; Geetha, M.K.; Kumaravelan, G. A Comprehensive Study on Automated Anomaly Detection Techniques in Video Surveillance. Ann. Rom. Soc. Cell Biol. 2021 , 25 , 4027-4037."
+            },
+            {
+              "title": "Deep Crowd Anomaly Detection: State-of-the-Art, Challenges, and Future Research Directions",
+              "citation": "Sharif, M.; Jiao, L.; Omlin, C.W. Deep Crowd Anomaly Detection: State-of-the-Art, Challenges, and Future Research Directions. arXiv 2022 , arXiv:2210.13927."
+            },
+            {
+              "title": "Real-time abnormal event detection for enhanced security in autonomous shuttles mobility infrastructures",
+              "citation": "Tsiktsiris, D.; Dimitriou, N.; Lalas, A.; Dasygenis, M.; Votis, K.; Tzovaras, D. Real-time abnormal event detection for enhanced security in autonomous shuttles mobility infrastructures. Sensors 2020 , 20 , 4943. [CrossRef]"
+            },
+            {
+              "title": "An anomaly-introduced learning method for abnormal event detection",
+              "citation": "He, C.; Shao, J.; Sun, J. An anomaly-introduced learning method for abnormal event detection. Multimed. Tools Appl. 2018 , 77 , 29573-29588. [CrossRef] Disclaimer/Publisher's Note: The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.3",
+          "sec_title": "Future Directions",
+          "citations": [],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "Conclusions",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

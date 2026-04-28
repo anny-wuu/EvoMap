@@ -1,0 +1,2357 @@
+{
+  "track": "Autonomous Driving",
+  "paper_title": "End-to-end Autonomous Driving: Challenges and Frontiers",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "INTRODUCTION",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "1.1",
+          "sec_title": "Motivation of an End-to-end System",
+          "citations": [
+            {
+              "title": "Mp3: A unified model to map, perceive, predict and plan",
+              "citation": "S. Casas, A. Sadat, and R. Urtasun, 'Mp3: A unified model to map, perceive, predict and plan,' in CVPR , 2021."
+            },
+            {
+              "title": "Planning-oriented autonomous driving",
+              "citation": "Y. Hu, J. Yang, L. Chen, K. Li, C. Sima, X. Zhu, S. Chai, S. Du, T. Lin, W. Wang, L. Lu, X. Jia, Q. Liu, J. Dai, Y. Qiao, and H. Li, 'Planning-oriented autonomous driving,' in CVPR , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "1.2",
+          "sec_title": "Roadmap",
+          "citations": [
+            {
+              "title": "Alvinn: An autonomous land vehicle in a neural network",
+              "citation": "D. A. Pomerleau, 'Alvinn: An autonomous land vehicle in a neural network,' in NeurIPS , 1988."
+            },
+            {
+              "title": "End to end learning for self-driving cars",
+              "citation": "M. Bojarski, D. Del Testa, D. Dworakowski, B. Firner, B. Flepp, P. Goyal, L. D. Jackel, M. Monfort, U. Muller, J. Zhang, et al. , 'End to end learning for self-driving cars,' arXiv.org , vol. 1604.07316, 2016."
+            },
+            {
+              "title": "Urban driving with conditional imitation learning",
+              "citation": "J. Hawke, R. Shen, C. Gurau, S. Sharma, D. Reda, N. Nikolov, P. Mazur, S. Micklethwaite, N. Griffiths, A. Shah, et al. , 'Urban driving with conditional imitation learning,' in ICRA , 2020."
+            },
+            {
+              "title": "Exploring the limitations of behavior cloning for autonomous driving",
+              "citation": "F. Codevilla, E. Santana, A. M. López, and A. Gaidon, 'Exploring the limitations of behavior cloning for autonomous driving,' in ICCV , 2019."
+            },
+            {
+              "title": "Learning to drive in a day",
+              "citation": "A. Kendall, J. Hawke, D. Janz, P. Mazur, D. Reda, J.-M. Allen, V.-D. Lam, A. Bewley, and A. Shah, 'Learning to drive in a day,' in ICRA , 2019."
+            },
+            {
+              "title": "Cirl: Controllable imitative reinforcement learning for vision-based self-driving",
+              "citation": "X. Liang, T. Wang, L. Yang, and E. Xing, 'Cirl: Controllable imitative reinforcement learning for vision-based self-driving,' in ECCV , 2018."
+            },
+            {
+              "title": "End-toend model-free reinforcement learning for urban driving using implicit affordances",
+              "citation": "M. Toromanoff, E. Wirbel, and F. Moutarde, 'End-toend model-free reinforcement learning for urban driving using implicit affordances,' in CVPR , 2020."
+            },
+            {
+              "title": "Gri: General reinforced imitation and its application to vision-based autonomous driving",
+              "citation": "R. Chekroun, M. Toromanoff, S. Hornauer, and F. Moutarde, 'Gri: General reinforced imitation and its application to vision-based autonomous driving,' Robotics , 2023."
+            },
+            {
+              "title": "Learning by cheating",
+              "citation": "D. Chen, B. Zhou, V. Koltun, and P. Krähenbühl, 'Learning by cheating,' in CoRL , 2020."
+            },
+            {
+              "title": "Learning to drive from a world on rails",
+              "citation": "D. Chen, V. Koltun, and P. Krähenbühl, 'Learning to drive from a world on rails,' in ICCV , 2021."
+            },
+            {
+              "title": "End-to-end urban driving by imitating a reinforcement learning coach",
+              "citation": "Z. Zhang, A. Liniger, D. Dai, F. Yu, and L. Van Gool, 'End-to-end urban driving by imitating a reinforcement learning coach,' in ICCV , 2021."
+            },
+            {
+              "title": "Trajectory-guided control prediction for end-to-end autonomous driving: A simple yet strong baseline",
+              "citation": "P. Wu, X. Jia, L. Chen, J. Yan, H. Li, and Y. Qiao, 'Trajectory-guided control prediction for end-to-end autonomous driving: A simple yet strong baseline,' in NeurIPS , 2022."
+            },
+            {
+              "title": "Coaching a teachable student",
+              "citation": "J. Zhang, Z. Huang, and E. Ohn-Bar, 'Coaching a teachable student,' in CVPR , 2023."
+            },
+            {
+              "title": "Exploring data aggregation in policy learning for visionbased urban autonomous driving",
+              "citation": "A. Prakash, A. Behl, E. Ohn-Bar, K. Chitta, and A. Geiger, 'Exploring data aggregation in policy learning for visionbased urban autonomous driving,' in CVPR , 2020."
+            },
+            {
+              "title": "Agile autonomous driving using end-to-end deep imitation learning",
+              "citation": "Y. Pan, C.-A. Cheng, K. Saigol, K. Lee, X. Yan, E. A. Theodorou, and B. Boots, 'Agile autonomous driving using end-to-end deep imitation learning,' in RSS , 2017."
+            },
+            {
+              "title": "Query-efficient imitation learning for end-to-end simulated driving",
+              "citation": "J. Zhang and K. Cho, 'Query-efficient imitation learning for end-to-end simulated driving,' in AAAI , 2017."
+            },
+            {
+              "title": "A reduction of imitation learning and structured prediction to no-regret online learning",
+              "citation": "S. Ross, G. Gordon, and D. Bagnell, 'A reduction of imitation learning and structured prediction to no-regret online learning,' in AISTATS , 2011."
+            },
+            {
+              "title": "Attention is all you need",
+              "citation": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, 'Attention is all you need,' in NeurIPS , 2017."
+            },
+            {
+              "title": "Multi-modal fusion transformer for end-to-end autonomous driving",
+              "citation": "A. Prakash, K. Chitta, and A. Geiger, 'Multi-modal fusion transformer for end-to-end autonomous driving,' in CVPR , 2021."
+            },
+            {
+              "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+              "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+            },
+            {
+              "title": "Safetyenhanced autonomous driving using interpretable sensor fusion transformer",
+              "citation": "H. Shao, L. Wang, R. Chen, H. Li, and Y. Liu, 'Safetyenhanced autonomous driving using interpretable sensor fusion transformer,' in CoRL , 2022."
+            },
+            {
+              "title": "Think twice before driving: Towards scalable decoders for end-to-end autonomous driving",
+              "citation": "X. Jia, P. Wu, L. Chen, J. Xie, C. He, J. Yan, and H. Li, 'Think twice before driving: Towards scalable decoders for end-to-end autonomous driving,' in CVPR , 2023."
+            },
+            {
+              "title": "Hidden biases of endto-end driving models",
+              "citation": "B. Jaeger, K. Chitta, and A. Geiger, 'Hidden biases of endto-end driving models,' in ICCV , 2023."
+            },
+            {
+              "title": "CARLA autonomous driving leaderboard",
+              "citation": "CARLA, 'CARLA autonomous driving leaderboard.' https://leaderboard.carla.org/, 2022."
+            },
+            {
+              "title": "Neat: Neural attention fields for end-to-end autonomous driving",
+              "citation": "K. Chitta, A. Prakash, and A. Geiger, 'Neat: Neural attention fields for end-to-end autonomous driving,' in ICCV , 2021."
+            },
+            {
+              "title": "End-to-end interpretable neural motion planner",
+              "citation": "W. Zeng, W. Luo, S. Suo, A. Sadat, B. Yang, S. Casas, and R. Urtasun, 'End-to-end interpretable neural motion planner,' in CVPR , 2019."
+            },
+            {
+              "title": "Textual explanations for self-driving vehicles",
+              "citation": "J. Kim, A. Rohrbach, T. Darrell, J. Canny, and Z. Akata, 'Textual explanations for self-driving vehicles,' in ECCV , 2018."
+            },
+            {
+              "title": "King: Generating safety-critical driving scenarios for robust imitation via kinematics gradients",
+              "citation": "N. Hanselmann, K. Renz, K. Chitta, A. Bhattacharyya, and A. Geiger, 'King: Generating safety-critical driving scenarios for robust imitation via kinematics gradients,' in ECCV , 2022."
+            },
+            {
+              "title": "Advsim: Generating safety-critical scenarios for self-driving vehicles",
+              "citation": "J. Wang, A. Pun, J. Tu, S. Manivasagam, A. Sadat, S. Casas, M. Ren, and R. Urtasun, 'Advsim: Generating safety-critical scenarios for self-driving vehicles,' in CVPR , 2021."
+            },
+            {
+              "title": "Learning to collide: An adaptive safety-critical scenarios generating method",
+              "citation": "W. Ding, B. Chen, M. Xu, and D. Zhao, 'Learning to collide: An adaptive safety-critical scenarios generating method,' in IROS , 2020."
+            },
+            {
+              "title": "CARLA autonomous driving leaderboard",
+              "citation": "CARLA, 'CARLA autonomous driving leaderboard.' https://leaderboard.carla.org/, 2022."
+            },
+            {
+              "title": "Nuplan: A closed-loop ml-based planning benchmark for autonomous vehicles",
+              "citation": "H. Caesar, J. Kabzan, K. S. Tan, W. K. Fong, E. Wolff, A. Lang, L. Fletcher, O. Beijbom, and S. Omari, 'Nuplan: A closed-loop ml-based planning benchmark for autonomous vehicles,' in CVPR Workshops , 2021."
+            },
+            {
+              "title": "Policy pre-training for autonomous driving via self-supervised geometric modeling",
+              "citation": "P. Wu, L. Chen, H. Li, X. Jia, J. Yan, and Y. Qiao, 'Policy pre-training for autonomous driving via self-supervised geometric modeling,' in ICLR , 2023."
+            },
+            {
+              "title": "Learning to drive by",
+              "citation": "Q. Zhang, Z. Peng, and B. Zhou, 'Learning to drive by"
+            },
+            {
+              "title": "Selfd: Self-learning large-scale driving policies from the web",
+              "citation": "J. Zhang, R. Zhu, and E. Ohn-Bar, 'Selfd: Self-learning large-scale driving policies from the web,' in CVPR , 2022."
+            },
+            {
+              "title": "Mp3: A unified model to map, perceive, predict and plan",
+              "citation": "S. Casas, A. Sadat, and R. Urtasun, 'Mp3: A unified model to map, perceive, predict and plan,' in CVPR , 2021."
+            },
+            {
+              "title": "Planning-oriented autonomous driving",
+              "citation": "Y. Hu, J. Yang, L. Chen, K. Li, C. Sima, X. Zhu, S. Chai, S. Du, T. Lin, W. Wang, L. Lu, X. Jia, Q. Liu, J. Dai, Y. Qiao, and H. Li, 'Planning-oriented autonomous driving,' in CVPR , 2023."
+            },
+            {
+              "title": "St-p3: End-to-end vision-based autonomous driving via spatialtemporal feature learning",
+              "citation": "S. Hu, L. Chen, P. Wu, H. Li, J. Yan, and D. Tao, 'St-p3: End-to-end vision-based autonomous driving via spatialtemporal feature learning,' in ECCV , 2022."
+            },
+            {
+              "title": "Perceive, predict, and plan: Safe motion planning through interpretable semantic representations",
+              "citation": "A. Sadat, S. Casas, M. Ren, X. Wu, P. Dhawan, and R. Urtasun, 'Perceive, predict, and plan: Safe motion planning through interpretable semantic representations,' in ECCV , 2020."
+            },
+            {
+              "title": "CARLA autonomous driving leaderboard",
+              "citation": "CARLA, 'CARLA autonomous driving leaderboard.' https://leaderboard.carla.org/, 2022."
+            },
+            {
+              "title": "Nuplan: A closed-loop ml-based planning benchmark for autonomous vehicles",
+              "citation": "H. Caesar, J. Kabzan, K. S. Tan, W. K. Fong, E. Wolff, A. Lang, L. Fletcher, O. Beijbom, and S. Omari, 'Nuplan: A closed-loop ml-based planning benchmark for autonomous vehicles,' in CVPR Workshops , 2021."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "1.3",
+          "sec_title": "Comparison to Related Surveys",
+          "citations": [
+            {
+              "title": "Computer vision for autonomous vehicles: Problems, datasets and state-of-the-art",
+              "citation": "J. Janai, F. Güney, A. Behl, and A. Geiger, 'Computer vision for autonomous vehicles: Problems, datasets and state-of-the-art,' arXiv.org , vol. 1704.05519, 2017."
+            },
+            {
+              "title": "A survey of end-to-end driving: Architectures and training methods",
+              "citation": "A. Tampuu, T. Matiisen, M. Semikin, D. Fishman, and N. Muhammad, 'A survey of end-to-end driving: Architectures and training methods,' TNNLS , 2020."
+            },
+            {
+              "title": "Motion planning for autonomous driving: The state of the art and future perspectives",
+              "citation": "S. Teng, X. Hu, P. Deng, B. Li, Y. Li, D. Yang, Y. Ai, L. Li, L. Chen, Z. Xuanyuan, et al. , 'Motion planning for autonomous driving: The state of the art and future perspectives,' TIV , 2023."
+            },
+            {
+              "title": "A review of end-to-end autonomous driving in urban environments",
+              "citation": "D. Coelho and M. Oliveira, 'A review of end-to-end autonomous driving in urban environments,' IEEE Access , 2022."
+            },
+            {
+              "title": "Learning to drive by imitation: An overview of deep behavior cloning methods",
+              "citation": "A. O. Ly and M. Akhloufi, 'Learning to drive by imitation: An overview of deep behavior cloning methods,' TIV , 2020."
+            },
+            {
+              "title": "A survey on imitation learning techniques for end-to-end autonomous vehicles",
+              "citation": "L. Le Mero, D. Yi, M. Dianati, and A. Mouzakitis, 'A survey on imitation learning techniques for end-to-end autonomous vehicles,' TITS , 2022."
+            },
+            {
+              "title": "Imitation learning: Progress, taxonomies and challenges",
+              "citation": "B. Zheng, S. Verma, J. Zhou, I. W. Tsang, and F. Chen, 'Imitation learning: Progress, taxonomies and challenges,' TNNLS , 2022."
+            },
+            {
+              "title": "A survey of deep RL and IL for autonomous driving policy learning",
+              "citation": "Z. Zhu and H. Zhao, 'A survey of deep RL and IL for autonomous driving policy learning,' TITS , 2021."
+            },
+            {
+              "title": "Deep reinforcement learning for autonomous driving: A survey",
+              "citation": "B. R. Kiran, I. Sobh, V. Talpaert, P. Mannion, A. A. A. Sallab, S. K. Yogamani, and P. Pérez, 'Deep reinforcement learning for autonomous driving: A survey,' TITS , 2021."
+            },
+            {
+              "title": "Computer vision for autonomous vehicles: Problems, datasets and state-of-the-art",
+              "citation": "J. Janai, F. Güney, A. Behl, and A. Geiger, 'Computer vision for autonomous vehicles: Problems, datasets and state-of-the-art,' arXiv.org , vol. 1704.05519, 2017."
+            },
+            {
+              "title": "A survey of end-to-end driving: Architectures and training methods",
+              "citation": "A. Tampuu, T. Matiisen, M. Semikin, D. Fishman, and N. Muhammad, 'A survey of end-to-end driving: Architectures and training methods,' TNNLS , 2020."
+            },
+            {
+              "title": "Motion planning for autonomous driving: The state of the art and future perspectives",
+              "citation": "S. Teng, X. Hu, P. Deng, B. Li, Y. Li, D. Yang, Y. Ai, L. Li, L. Chen, Z. Xuanyuan, et al. , 'Motion planning for autonomous driving: The state of the art and future perspectives,' TIV , 2023."
+            },
+            {
+              "title": "A review of end-to-end autonomous driving in urban environments",
+              "citation": "D. Coelho and M. Oliveira, 'A review of end-to-end autonomous driving in urban environments,' IEEE Access , 2022."
+            },
+            {
+              "title": "Learning to drive by imitation: An overview of deep behavior cloning methods",
+              "citation": "A. O. Ly and M. Akhloufi, 'Learning to drive by imitation: An overview of deep behavior cloning methods,' TIV , 2020."
+            },
+            {
+              "title": "A survey on imitation learning techniques for end-to-end autonomous vehicles",
+              "citation": "L. Le Mero, D. Yi, M. Dianati, and A. Mouzakitis, 'A survey on imitation learning techniques for end-to-end autonomous vehicles,' TITS , 2022."
+            },
+            {
+              "title": "Imitation learning: Progress, taxonomies and challenges",
+              "citation": "B. Zheng, S. Verma, J. Zhou, I. W. Tsang, and F. Chen, 'Imitation learning: Progress, taxonomies and challenges,' TNNLS , 2022."
+            },
+            {
+              "title": "A survey of deep RL and IL for autonomous driving policy learning",
+              "citation": "Z. Zhu and H. Zhao, 'A survey of deep RL and IL for autonomous driving policy learning,' TITS , 2021."
+            },
+            {
+              "title": "Deep reinforcement learning for autonomous driving: A survey",
+              "citation": "B. R. Kiran, I. Sobh, V. Talpaert, P. Mannion, A. A. A. Sallab, S. K. Yogamani, and P. Pérez, 'Deep reinforcement learning for autonomous driving: A survey,' TITS , 2021."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "1.4",
+          "sec_title": "Contributions",
+          "citations": [],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "METHODS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Imitation Learning",
+          "citations": [
+            {
+              "title": "Trajectory-guided control prediction for end-to-end autonomous driving: A simple yet strong baseline",
+              "citation": "P. Wu, X. Jia, L. Chen, J. Yan, H. Li, and Y. Qiao, 'Trajectory-guided control prediction for end-to-end autonomous driving: A simple yet strong baseline,' in NeurIPS , 2022."
+            },
+            {
+              "title": "A framework for behavioural cloning",
+              "citation": "M. Bain and C. Sammut, 'A framework for behavioural cloning,' in Machine Intelligence 15 , 1995."
+            },
+            {
+              "title": "Maximum entropy inverse reinforcement learning",
+              "citation": "B. D. Ziebart, A. L. Maas, J. A. Bagnell, A. K. Dey, et al. , 'Maximum entropy inverse reinforcement learning,' in AAAI , 2008."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "2.1.1",
+              "sec_title": "Behavior Cloning",
+              "citations": [
+                {
+                  "title": "Alvinn: An autonomous land vehicle in a neural network",
+                  "citation": "D. A. Pomerleau, 'Alvinn: An autonomous land vehicle in a neural network,' in NeurIPS , 1988."
+                },
+                {
+                  "title": "End to end learning for self-driving cars",
+                  "citation": "M. Bojarski, D. Del Testa, D. Dworakowski, B. Firner, B. Flepp, P. Goyal, L. D. Jackel, M. Monfort, U. Muller, J. Zhang, et al. , 'End to end learning for self-driving cars,' arXiv.org , vol. 1604.07316, 2016."
+                },
+                {
+                  "title": "Dave: Autonomous off-road vehicle control using endto-end learning",
+                  "citation": "Y. Lecun, E. Cosatto, J. Ben, U. Muller, and B. Flepp, 'Dave: Autonomous off-road vehicle control using endto-end learning,' Tech. Rep. DARPA-IPTO Final Report, Courant Institute/CBLL, 2004."
+                },
+                {
+                  "title": "Multi-modal fusion transformer for end-to-end autonomous driving",
+                  "citation": "A. Prakash, K. Chitta, and A. Geiger, 'Multi-modal fusion transformer for end-to-end autonomous driving,' in CVPR , 2021."
+                },
+                {
+                  "title": "Learning from all vehicles",
+                  "citation": "D. Chen and P. Krähenbühl, 'Learning from all vehicles,' in CVPR , 2022."
+                },
+                {
+                  "title": "Exploring the limitations of behavior cloning for autonomous driving",
+                  "citation": "F. Codevilla, E. Santana, A. M. López, and A. Gaidon, 'Exploring the limitations of behavior cloning for autonomous driving,' in ICCV , 2019."
+                },
+                {
+                  "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+                  "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+                },
+                {
+                  "title": "End-to-end urban driving by imitating a reinforcement learning coach",
+                  "citation": "Z. Zhang, A. Liniger, D. Dai, F. Yu, and L. Van Gool, 'End-to-end urban driving by imitating a reinforcement learning coach,' in ICCV , 2021."
+                },
+                {
+                  "title": "A reduction of imitation learning and structured prediction to no-regret online learning",
+                  "citation": "S. Ross, G. Gordon, and D. Bagnell, 'A reduction of imitation learning and structured prediction to no-regret online learning,' in AISTATS , 2011."
+                },
+                {
+                  "title": "Active imitation learning: Formal and practical reductions to iid learning",
+                  "citation": "K. Judah, A. P. Fern, T. G. Dietterich, and P. Tadepalli, 'Active imitation learning: Formal and practical reductions to iid learning,' JMLR , 2014."
+                },
+                {
+                  "title": "Efficient reductions for imitation learning",
+                  "citation": "S. Ross and D. Bagnell, 'Efficient reductions for imitation learning,' in AISTATS , 2010."
+                },
+                {
+                  "title": "Reinforcement and imitation learning via interactive no-regret learning",
+                  "citation": "S. Ross and J. A. Bagnell, 'Reinforcement and imitation learning via interactive no-regret learning,' arXiv.org , vol. 1406.5979, 2014."
+                },
+                {
+                  "title": "A reduction of imitation learning and structured prediction to no-regret online learning",
+                  "citation": "S. Ross, G. Gordon, and D. Bagnell, 'A reduction of imitation learning and structured prediction to no-regret online learning,' in AISTATS , 2011."
+                },
+                {
+                  "title": "Learning by cheating",
+                  "citation": "D. Chen, B. Zhou, V. Koltun, and P. Krähenbühl, 'Learning by cheating,' in CoRL , 2020."
+                },
+                {
+                  "title": "Exploring data aggregation in policy learning for visionbased urban autonomous driving",
+                  "citation": "A. Prakash, A. Behl, E. Ohn-Bar, K. Chitta, and A. Geiger, 'Exploring data aggregation in policy learning for visionbased urban autonomous driving,' in CVPR , 2020."
+                },
+                {
+                  "title": "Query-efficient imitation learning for end-to-end simulated driving",
+                  "citation": "J. Zhang and K. Cho, 'Query-efficient imitation learning for end-to-end simulated driving,' in AAAI , 2017."
+                },
+                {
+                  "title": "Meta learning framework for automated driving",
+                  "citation": "A. E. Sallab, M. Saeed, O. A. Tawab, and M. Abdou, 'Meta learning framework for automated driving,' arXiv.org , vol. 1706.04038, 2017."
+                },
+                {
+                  "title": "Fighting copycat agents in behavioral cloning from observation histories",
+                  "citation": "C. Wen, J. Lin, T. Darrell, D. Jayaraman, and Y. Gao, 'Fighting copycat agents in behavioral cloning from observation histories,' in NeurIPS , 2020."
+                },
+                {
+                  "title": "Keyframe-focused visual imitation learning",
+                  "citation": "C. Wen, J. Lin, J. Qian, Y. Gao, and D. Jayaraman, 'Keyframe-focused visual imitation learning,' in ICML , 2021."
+                },
+                {
+                  "title": "Object-aware regularization for addressing causal confusion in imitation learning",
+                  "citation": "J. Park, Y. Seo, C. Liu, L. Zhao, T. Qin, J. Shin, and T.-Y. Liu, 'Object-aware regularization for addressing causal confusion in imitation learning,' in NeurIPS , 2021."
+                },
+                {
+                  "title": "",
+                  "citation": "C. Wen, J. Qian, J. Lin, J. Teng, D. Jayaraman, and Y. Gao,"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.2",
+              "sec_title": "Inverse Optimal Control",
+              "citations": [
+                {
+                  "title": "Maximum entropy inverse reinforcement learning",
+                  "citation": "B. D. Ziebart, A. L. Maas, J. A. Bagnell, A. K. Dey, et al. , 'Maximum entropy inverse reinforcement learning,' in AAAI , 2008."
+                },
+                {
+                  "title": "Extrapolating beyond suboptimal demonstrations via inverse reinforcement learning from observations",
+                  "citation": "D. Brown, W. Goo, P. Nagarajan, and S. Niekum, 'Extrapolating beyond suboptimal demonstrations via inverse reinforcement learning from observations,' in ICML , 2019."
+                },
+                {
+                  "title": "Guided cost learning: Deep inverse optimal control via policy optimization",
+                  "citation": "C. Finn, S. Levine, and P. Abbeel, 'Guided cost learning: Deep inverse optimal control via policy optimization,' in ICML , 2016."
+                },
+                {
+                  "title": "Sqil: Imitation learning via reinforcement learning with sparse rewards",
+                  "citation": "S. Reddy, A. D. Dragan, and S. Levine, 'Sqil: Imitation learning via reinforcement learning with sparse rewards,' arXiv.org , vol. 1905.11108, 2019."
+                },
+                {
+                  "title": "Self-imitation learning by planning",
+                  "citation": "S. Luo, H. Kasaei, and L. Schomaker, 'Self-imitation learning by planning,' in ICRA , 2021."
+                },
+                {
+                  "title": "Generative adversarial imitation learning",
+                  "citation": "J. Ho and S. Ermon, 'Generative adversarial imitation learning,' in NeurIPS , 2016."
+                },
+                {
+                  "title": "Infogail: Interpretable imitation learning from visual demonstrations",
+                  "citation": "Y. Li, J. Song, and S. Ermon, 'Infogail: Interpretable imitation learning from visual demonstrations,' in NeurIPS , 2017."
+                },
+                {
+                  "title": "Mixgail: Autonomous driving using demonstrations with mixed qualities",
+                  "citation": "G. Lee, D. Kim, W. Oh, K. Lee, and S. Oh, 'Mixgail: Autonomous driving using demonstrations with mixed qualities,' in IROS , 2020."
+                },
+                {
+                  "title": "Generative adversarial networks",
+                  "citation": "I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, and Y. Bengio, 'Generative adversarial networks,' ACM , 2020."
+                },
+                {
+                  "title": "End-to-end interpretable neural motion planner",
+                  "citation": "W. Zeng, W. Luo, S. Suo, A. Sadat, B. Yang, S. Casas, and R. Urtasun, 'End-to-end interpretable neural motion planner,' in CVPR , 2019."
+                },
+                {
+                  "title": "End-toend interactive prediction and planning with optical flow distillation for autonomous driving",
+                  "citation": "H. Wang, P. Cai, R. Fan, Y. Sun, and M. Liu, 'End-toend interactive prediction and planning with optical flow distillation for autonomous driving,' in CVPR Workshops , 2021."
+                },
+                {
+                  "title": "Perceive, predict, and plan: Safe motion planning through interpretable semantic representations",
+                  "citation": "A. Sadat, S. Casas, M. Ren, X. Wu, P. Dhawan, and R. Urtasun, 'Perceive, predict, and plan: Safe motion planning through interpretable semantic representations,' in ECCV , 2020."
+                },
+                {
+                  "title": "Safe local motion planning with self-supervised freespace forecasting",
+                  "citation": "P. Hu, A. Huang, J. Dolan, D. Held, and D. Ramanan, 'Safe local motion planning with self-supervised freespace forecasting,' in CVPR , 2021."
+                },
+                {
+                  "title": "Differentiable raycasting for self-supervised occupancy forecasting",
+                  "citation": "T. Khurana, P. Hu, A. Dave, J. Ziglar, D. Held, and D. Ramanan, 'Differentiable raycasting for self-supervised occupancy forecasting,' in ECCV , 2022."
+                },
+                {
+                  "title": "Mp3: A unified model to map, perceive, predict and plan",
+                  "citation": "S. Casas, A. Sadat, and R. Urtasun, 'Mp3: A unified model to map, perceive, predict and plan,' in CVPR , 2021."
+                },
+                {
+                  "title": "Vadv2: End-to-end vectorized autonomous driving via probabilistic planning",
+                  "citation": "S. Chen, B. Jiang, H. Gao, B. Liao, Q. Xu, Q. Zhang, C. Huang, W. Liu, and X. Wang, 'Vadv2: End-to-end vectorized autonomous driving via probabilistic planning,' arXiv.org , vol. 2402.13243, 2024."
+                },
+                {
+                  "title": "End-to-end interpretable neural motion planner",
+                  "citation": "W. Zeng, W. Luo, S. Suo, A. Sadat, B. Yang, S. Casas, and R. Urtasun, 'End-to-end interpretable neural motion planner,' in CVPR , 2019."
+                },
+                {
+                  "title": "St-p3: End-to-end vision-based autonomous driving via spatialtemporal feature learning",
+                  "citation": "S. Hu, L. Chen, P. Wu, H. Li, J. Yan, and D. Tao, 'St-p3: End-to-end vision-based autonomous driving via spatialtemporal feature learning,' in ECCV , 2022."
+                },
+                {
+                  "title": "Perceive, predict, and plan: Safe motion planning through interpretable semantic representations",
+                  "citation": "A. Sadat, S. Casas, M. Ren, X. Wu, P. Dhawan, and R. Urtasun, 'Perceive, predict, and plan: Safe motion planning through interpretable semantic representations,' in ECCV , 2020."
+                },
+                {
+                  "title": "Safe local motion planning with self-supervised freespace forecasting",
+                  "citation": "P. Hu, A. Huang, J. Dolan, D. Held, and D. Ramanan, 'Safe local motion planning with self-supervised freespace forecasting,' in CVPR , 2021."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Reinforcement Learning",
+          "citations": [
+            {
+              "title": "Reinforcement learning: An introduction",
+              "citation": "R. S. Sutton and A. G. Barto, 'Reinforcement learning: An introduction,' TNNLS , 1998."
+            },
+            {
+              "title": "An invitation to deep reinforcement learning",
+              "citation": "B. Jaeger and A. Geiger, 'An invitation to deep reinforcement learning,' arXiv.org , vol. 2312.08365, 2023."
+            },
+            {
+              "title": "Human-level control through deep reinforcement learning",
+              "citation": "V. Mnih, K. Kavukcuoglu, D. Silver, A. A. Rusu, J. Veness, M. G. Bellemare, A. Graves, M. Riedmiller, A. K. Fidjeland, G. Ostrovski, et al. , 'Human-level control through deep reinforcement learning,' Nature , 2015."
+            },
+            {
+              "title": "The arcade learning environment: An evaluation platform for general agents",
+              "citation": "M. G. Bellemare, Y. Naddaf, J. Veness, and M. Bowling, 'The arcade learning environment: An evaluation platform for general agents,' JAIR , 2013."
+            },
+            {
+              "title": "Distributed prioritized experience replay",
+              "citation": "D. Horgan, J. Quan, D. Budden, G. Barth-Maron, M. Hessel, H. Van Hasselt, and D. Silver, 'Distributed prioritized experience replay,' arXiv.org , vol. 1803.00933, 2018."
+            },
+            {
+              "title": "Learning to drive in a day",
+              "citation": "A. Kendall, J. Hawke, D. Janz, P. Mazur, D. Reda, J.-M. Allen, V.-D. Lam, A. Bewley, and A. Shah, 'Learning to drive in a day,' in ICRA , 2019."
+            },
+            {
+              "title": "Alvinn: An autonomous land vehicle in a neural network",
+              "citation": "D. A. Pomerleau, 'Alvinn: An autonomous land vehicle in a neural network,' in NeurIPS , 1988."
+            },
+            {
+              "title": "Towards deeper deep reinforcement learning with spectral normalization",
+              "citation": "J. Bjorck, C. P. Gomes, and K. Q. Weinberger, 'Towards deeper deep reinforcement learning with spectral normalization,' in NeurIPS , 2021."
+            },
+            {
+              "title": "End-toend model-free reinforcement learning for urban driving using implicit affordances",
+              "citation": "M. Toromanoff, E. Wirbel, and F. Moutarde, 'End-toend model-free reinforcement learning for urban driving using implicit affordances,' in CVPR , 2020."
+            },
+            {
+              "title": "Gri: General reinforced imitation and its application to vision-based autonomous driving",
+              "citation": "R. Chekroun, M. Toromanoff, S. Hornauer, and F. Moutarde, 'Gri: General reinforced imitation and its application to vision-based autonomous driving,' Robotics , 2023."
+            },
+            {
+              "title": "Is deep reinforcement learning really superhuman on atari? leveling the playing field",
+              "citation": "M. Toromanoff, E. Wirbel, and F. Moutarde, 'Is deep reinforcement learning really superhuman on atari? leveling the playing field,' arXiv.org , vol. 1908.04683, 2019."
+            },
+            {
+              "title": "Cirl: Controllable imitative reinforcement learning for vision-based self-driving",
+              "citation": "X. Liang, T. Wang, L. Yang, and E. Xing, 'Cirl: Controllable imitative reinforcement learning for vision-based self-driving,' in ECCV , 2018."
+            },
+            {
+              "title": "Learning situational driving",
+              "citation": "E. Ohn-Bar, A. Prakash, A. Behl, K. Chitta, and A. Geiger, 'Learning situational driving,' in CVPR , 2020."
+            },
+            {
+              "title": "Deep reinforcement learning for autonomous driving: A survey",
+              "citation": "B. R. Kiran, I. Sobh, V. Talpaert, P. Mannion, A. A. A. Sallab, S. K. Yogamani, and P. Pérez, 'Deep reinforcement learning for autonomous driving: A survey,' TITS , 2021."
+            },
+            {
+              "title": "Reward (mis)design for autonomous driving",
+              "citation": "W. B. Knox, A. Allievi, H. Banzhaf, F. Schmitt, and P. Stone, 'Reward (mis)design for autonomous driving,' AI , 2023."
+            },
+            {
+              "title": "Rethinking closed-loop training for autonomous driving",
+              "citation": "C. Zhang, R. Guo, W. Zeng, Y. Xiong, B. Dai, R. Hu, M. Ren, and R. Urtasun, 'Rethinking closed-loop training for autonomous driving,' in ECCV , 2022."
+            },
+            {
+              "title": "End-to-end urban driving by imitating a reinforcement learning coach",
+              "citation": "Z. Zhang, A. Liniger, D. Dai, F. Yu, and L. Van Gool, 'End-to-end urban driving by imitating a reinforcement learning coach,' in ICCV , 2021."
+            },
+            {
+              "title": "Learning to drive from a world on rails",
+              "citation": "D. Chen, V. Koltun, and P. Krähenbühl, 'Learning to drive from a world on rails,' in ICCV , 2021."
+            },
+            {
+              "title": "Reward (mis)design for autonomous driving",
+              "citation": "W. B. Knox, A. Allievi, H. Banzhaf, F. Schmitt, and P. Stone, 'Reward (mis)design for autonomous driving,' AI , 2023."
+            },
+            {
+              "title": "Dream to control: Learning behaviors by latent imagination",
+              "citation": "D. Hafner, T. Lillicrap, J. Ba, and M. Norouzi, 'Dream to control: Learning behaviors by latent imagination,' in ICLR , 2020."
+            },
+            {
+              "title": "Mastering atari with discrete world models",
+              "citation": "D. Hafner, T. Lillicrap, M. Norouzi, and J. Ba, 'Mastering atari with discrete world models,' in ICLR , 2021."
+            },
+            {
+              "title": "Recurrent world models facilitate policy evolution",
+              "citation": "D. Ha and J. Schmidhuber, 'Recurrent world models facilitate policy evolution,' in NeurIPS , 2018."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "BENCHMARKING",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Real-world Evaluation",
+          "citations": [
+            {
+              "title": "The 2005 DARPA grand challenge: the great robot race",
+              "citation": "M. Buehler, K. Iagnemma, and S. Singh, The 2005 DARPA grand challenge: the great robot race , vol. 36. Springer, 2007."
+            },
+            {
+              "title": "The DARPA urban challenge: autonomous vehicles in city traffic",
+              "citation": "M. Buehler, K. Iagnemma, and S. Singh, The DARPA urban challenge: autonomous vehicles in city traffic , vol. 56. Springer Science &amp; Business Media, 2009."
+            },
+            {
+              "title": "Mcity",
+              "citation": "U. of Michigan, 'Mcity.' https://mcity.umich.edu/, 2015."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Online/Closed-loop Simulation",
+          "citations": [
+            {
+              "title": "Nuplan: A closed-loop ml-based planning benchmark for autonomous vehicles",
+              "citation": "H. Caesar, J. Kabzan, K. S. Tan, W. K. Fong, E. Wolff, A. Lang, L. Fletcher, O. Beijbom, and S. Omari, 'Nuplan: A closed-loop ml-based planning benchmark for autonomous vehicles,' in CVPR Workshops , 2021."
+            },
+            {
+              "title": "Torcs, the open racing car simulator",
+              "citation": "T. Team, 'Torcs, the open racing car simulator.' https: //sourceforge.net/projects/torcs/, 2000."
+            },
+            {
+              "title": "Beyond grand theft auto v for training, testing and enhancing deep learning in self driving cars",
+              "citation": "M. Martinez, C. Sitawarin, K. Finch, L. Meincke, A. Yablonski, and A. Kornhauser, 'Beyond grand theft auto v for training, testing and enhancing deep learning in self driving cars,' arXiv.org , vol. 1712.01397, 2017."
+            },
+            {
+              "title": "CARLA: An open urban driving simulator",
+              "citation": "A. Dosovitskiy, G. Ros, F. Codevilla, A. Lopez, and V. Koltun, 'CARLA: An open urban driving simulator,' in CoRL , 2017."
+            },
+            {
+              "title": "Deepdrive: a simulator that allows anyone with a pc to push the state-of-the-art in self-driving",
+              "citation": "D. Team, 'Deepdrive: a simulator that allows anyone with a pc to push the state-of-the-art in self-driving.' https://github.com/deepdrive/deepdrive, 2020."
+            },
+            {
+              "title": "Metadrive: Composing diverse driving scenarios for generalizable reinforcement learning",
+              "citation": "Q. Li, Z. Peng, L. Feng, Q. Zhang, Z. Xue, and B. Zhou, 'Metadrive: Composing diverse driving scenarios for generalizable reinforcement learning,' PAMI , 2022."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.2.1",
+              "sec_title": "Parameter Initialization",
+              "citations": [
+                {
+                  "title": "Torcs, the open racing car simulator",
+                  "citation": "T. Team, 'Torcs, the open racing car simulator.' https: //sourceforge.net/projects/torcs/, 2000."
+                },
+                {
+                  "title": "Beyond grand theft auto v for training, testing and enhancing deep learning in self driving cars",
+                  "citation": "M. Martinez, C. Sitawarin, K. Finch, L. Meincke, A. Yablonski, and A. Kornhauser, 'Beyond grand theft auto v for training, testing and enhancing deep learning in self driving cars,' arXiv.org , vol. 1712.01397, 2017."
+                },
+                {
+                  "title": "CARLA: An open urban driving simulator",
+                  "citation": "A. Dosovitskiy, G. Ros, F. Codevilla, A. Lopez, and V. Koltun, 'CARLA: An open urban driving simulator,' in CoRL , 2017."
+                },
+                {
+                  "title": "Deepdrive: a simulator that allows anyone with a pc to push the state-of-the-art in self-driving",
+                  "citation": "D. Team, 'Deepdrive: a simulator that allows anyone with a pc to push the state-of-the-art in self-driving.' https://github.com/deepdrive/deepdrive, 2020."
+                },
+                {
+                  "title": "Procedural content generation for games: A survey",
+                  "citation": "M. Hendrikx, S. Meijer, J. Van Der Velden, and A. Iosup, 'Procedural content generation for games: A survey,' TOMM , 2013."
+                },
+                {
+                  "title": "Scenic: a language for scenario specification and scene generation",
+                  "citation": "D. J. Fremont, T. Dreossi, S. Ghosh, X. Yue, A. L. Sangiovanni-Vincentelli, and S. A. Seshia, 'Scenic: a language for scenario specification and scene generation,' in PLDI , 2019."
+                },
+                {
+                  "title": "Did we test all scenarios for automated and autonomous driving systems?",
+                  "citation": "F. Hauer, T. Schmidt, B. Holzmüller, and A. Pretschner, 'Did we test all scenarios for automated and autonomous driving systems?,' in ITSC , 2019."
+                },
+                {
+                  "title": "Nuplan: A closed-loop ml-based planning benchmark for autonomous vehicles",
+                  "citation": "H. Caesar, J. Kabzan, K. S. Tan, W. K. Fong, E. Wolff, A. Lang, L. Fletcher, O. Beijbom, and S. Omari, 'Nuplan: A closed-loop ml-based planning benchmark for autonomous vehicles,' in CVPR Workshops , 2021."
+                },
+                {
+                  "title": "Metadrive: Composing diverse driving scenarios for generalizable reinforcement learning",
+                  "citation": "Q. Li, Z. Peng, L. Feng, Q. Zhang, Z. Xue, and B. Zhou, 'Metadrive: Composing diverse driving scenarios for generalizable reinforcement learning,' PAMI , 2022."
+                },
+                {
+                  "title": "King: Generating safety-critical driving scenarios for robust imitation via kinematics gradients",
+                  "citation": "N. Hanselmann, K. Renz, K. Chitta, A. Bhattacharyya, and A. Geiger, 'King: Generating safety-critical driving scenarios for robust imitation via kinematics gradients,' in ECCV , 2022."
+                },
+                {
+                  "title": "Advsim: Generating safety-critical scenarios for self-driving vehicles",
+                  "citation": "J. Wang, A. Pun, J. Tu, S. Manivasagam, A. Sadat, S. Casas, M. Ren, and R. Urtasun, 'Advsim: Generating safety-critical scenarios for self-driving vehicles,' in CVPR , 2021."
+                },
+                {
+                  "title": "Learning to collide: An adaptive safety-critical scenarios generating method",
+                  "citation": "W. Ding, B. Chen, M. Xu, and D. Zhao, 'Learning to collide: An adaptive safety-critical scenarios generating method,' in IROS , 2020."
+                },
+                {
+                  "title": "Scenegen: Learning to generate realistic traffic scenes",
+                  "citation": "S. Tan, K. Wong, S. Wang, S. Manivasagam, M. Ren, and R. Urtasun, 'Scenegen: Learning to generate realistic traffic scenes,' in CVPR , 2021."
+                },
+                {
+                  "title": "Simnet: Learning reactive self-driving simulations from realworld observations",
+                  "citation": "L. Bergamini, Y. Ye, O. Scheel, L. Chen, C. Hu, L. D. Pero, B. Osinski, H. Grimmett, and P. Ondruska, 'Simnet: Learning reactive self-driving simulations from realworld observations,' in ICRA , 2021."
+                },
+                {
+                  "title": "Trafficgen: Learning to generate diverse and realistic traffic scenarios",
+                  "citation": "L. Feng, Q. Li, Z. Peng, S. Tan, and B. Zhou, 'Trafficgen: Learning to generate diverse and realistic traffic scenarios,' in ICRA , 2023."
+                },
+                {
+                  "title": "Sledge: Synthesizing simulation environments for driving agents with generative models",
+                  "citation": "K. Chitta, D. Dauner, and A. Geiger, 'Sledge: Synthesizing simulation environments for driving agents with generative models,' in ECCV , 2024."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.2",
+              "sec_title": "Traffic Simulation",
+              "citations": [
+                {
+                  "title": "Simnet: Learning reactive self-driving simulations from realworld observations",
+                  "citation": "L. Bergamini, Y. Ye, O. Scheel, L. Chen, C. Hu, L. D. Pero, B. Osinski, H. Grimmett, and P. Ondruska, 'Simnet: Learning reactive self-driving simulations from realworld observations,' in ICRA , 2021."
+                },
+                {
+                  "title": "Trafficsim: Learning to simulate realistic multi-agent behaviors",
+                  "citation": "S. Suo, S. Regalado, S. Casas, and R. Urtasun, 'Trafficsim: Learning to simulate realistic multi-agent behaviors,' in CVPR , 2021."
+                },
+                {
+                  "title": "Congested traffic states in empirical observations and microscopic simulations",
+                  "citation": "M. Treiber, A. Hennecke, and D. Helbing, 'Congested traffic states in empirical observations and microscopic simulations,' Physical review E , 2000."
+                },
+                {
+                  "title": "Simnet: Learning reactive self-driving simulations from realworld observations",
+                  "citation": "L. Bergamini, Y. Ye, O. Scheel, L. Chen, C. Hu, L. D. Pero, B. Osinski, H. Grimmett, and P. Ondruska, 'Simnet: Learning reactive self-driving simulations from realworld observations,' in ICRA , 2021."
+                },
+                {
+                  "title": "Trafficgen: Learning to generate diverse and realistic traffic scenarios",
+                  "citation": "L. Feng, Q. Li, Z. Peng, S. Tan, and B. Zhou, 'Trafficgen: Learning to generate diverse and realistic traffic scenarios,' in ICRA , 2023."
+                },
+                {
+                  "title": "Trafficsim: Learning to simulate realistic multi-agent behaviors",
+                  "citation": "S. Suo, S. Regalado, S. Casas, and R. Urtasun, 'Trafficsim: Learning to simulate realistic multi-agent behaviors,' in CVPR , 2021."
+                },
+                {
+                  "title": "Guided conditional diffusion for controllable traffic simulation",
+                  "citation": "Z. Zhong, D. Rempe, D. Xu, Y. Chen, S. Veer, T. Che, B. Ray, and M. Pavone, 'Guided conditional diffusion for controllable traffic simulation,' in ICRA , 2023."
+                },
+                {
+                  "title": "Bits: Bi-level imitation for traffic simulation",
+                  "citation": "D. Xu, Y. Chen, B. Ivanovic, and M. Pavone, 'Bits: Bi-level imitation for traffic simulation,' in ICRA , 2023."
+                },
+                {
+                  "title": "TrafficBots: Towards world models for autonomous driving simulation and motion prediction",
+                  "citation": "Z. Zhang, A. Liniger, D. Dai, F. Yu, and L. Van Gool, 'TrafficBots: Towards world models for autonomous driving simulation and motion prediction,' in ICRA , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.3",
+              "sec_title": "Sensor Simulation",
+              "citations": [
+                {
+                  "title": "Lidarsim: Realistic lidar simulation by leveraging the real world",
+                  "citation": "S. Manivasagam, S. Wang, K. Wong, W. Zeng, M. Sazanovich, S. Tan, B. Yang, W. Ma, and R. Urtasun, 'Lidarsim: Realistic lidar simulation by leveraging the real world,' in CVPR , 2020."
+                },
+                {
+                  "title": "Geosim: Realistic video simulation via geometry-aware composition",
+                  "citation": "Y. Chen, F. Rong, S. Duggal, S. Wang, X. Yan, S. Manivasagam, S. Xue, E. Yumer, and R. Urtasun, 'Geosim: Realistic video simulation via geometry-aware composition"
+                },
+                {
+                  "title": "Unisim: A neural closedloop sensor simulator",
+                  "citation": "Z. Yang, Y. Chen, J. Wang, S. Manivasagam, W.-C. Ma, A. J. Yang, and R. Urtasun, 'Unisim: A neural closedloop sensor simulator,' in CVPR , 2023."
+                },
+                {
+                  "title": "Beyond grand theft auto v for training, testing and enhancing deep learning in self driving cars",
+                  "citation": "M. Martinez, C. Sitawarin, K. Finch, L. Meincke, A. Yablonski, and A. Kornhauser, 'Beyond grand theft auto v for training, testing and enhancing deep learning in self driving cars,' arXiv.org , vol. 1712.01397, 2017."
+                },
+                {
+                  "title": "CARLA: An open urban driving simulator",
+                  "citation": "A. Dosovitskiy, G. Ros, F. Codevilla, A. Lopez, and V. Koltun, 'CARLA: An open urban driving simulator,' in CoRL , 2017."
+                },
+                {
+                  "title": "Megaverse: Simulating embodied agents at one million experiences per second",
+                  "citation": "A. Petrenko, E. Wijmans, B. Shacklett, and V. Koltun, 'Megaverse: Simulating embodied agents at one million experiences per second,' in ICML , 2021."
+                },
+                {
+                  "title": "Synthetic datasets for autonomous driving: A survey",
+                  "citation": "Z. Song, Z. He, X. Li, Q. Ma, R. Ming, Z. Mao, H. Pei, L. Peng, J. Hu, D. Yao, et al. , 'Synthetic datasets for autonomous driving: A survey,' TIV , 2024."
+                },
+                {
+                  "title": "Learning robust control policies for end-to-end autonomous driving from data-driven simulation",
+                  "citation": "A. Amini, I. Gilitschenski, J. Phillips, J. Moseyko, R. Banerjee, S. Karaman, and D. Rus, 'Learning robust control policies for end-to-end autonomous driving from data-driven simulation,' RA-L , 2020."
+                },
+                {
+                  "title": "Vista 2.0: An open, data-driven simulator for multimodal sensing and policy learning for autonomous vehicles",
+                  "citation": "A. Amini, T.-H. Wang, I. Gilitschenski, W. Schwarting, Z. Liu, S. Han, S. Karaman, and D. Rus, 'Vista 2.0: An open, data-driven simulator for multimodal sensing and policy learning for autonomous vehicles,' in ICRA , 2022."
+                },
+                {
+                  "title": "Learning interactive driving policies via data-driven simulation",
+                  "citation": "T.-H. Wang, A. Amini, W. Schwarting, I. Gilitschenski, S. Karaman, and D. Rus, 'Learning interactive driving policies via data-driven simulation,' in ICRA , 2022."
+                },
+                {
+                  "title": "Nerf: Representing scenes as neural radiance fields for view synthesis",
+                  "citation": "B. Mildenhall, P. P. Srinivasan, M. Tancik, J. T. Barron, R. Ramamoorthi, and R. Ng, 'Nerf: Representing scenes as neural radiance fields for view synthesis,' in ECCV , 2020."
+                },
+                {
+                  "title": "3d gaussian splatting for real-time radiance field rendering",
+                  "citation": "B. Kerbl, G. Kopanas, T. Leimkühler, and G. Drettakis, '3d gaussian splatting for real-time radiance field rendering,' ACM Trans. on Graphics , 2023."
+                },
+                {
+                  "title": "CARLA: An open urban driving simulator",
+                  "citation": "A. Dosovitskiy, G. Ros, F. Codevilla, A. Lopez, and V. Koltun, 'CARLA: An open urban driving simulator,' in CoRL , 2017."
+                },
+                {
+                  "title": "On offline evaluation of vision-based driving models",
+                  "citation": "F. Codevilla, A. M. Lopez, V. Koltun, and A. Dosovitskiy, 'On offline evaluation of vision-based driving models,' in ECCV , 2018."
+                },
+                {
+                  "title": "Multi-modal fusion transformer for end-to-end autonomous driving",
+                  "citation": "A. Prakash, K. Chitta, and A. Geiger, 'Multi-modal fusion transformer for end-to-end autonomous driving,' in CVPR , 2021."
+                },
+                {
+                  "title": "Learning from all vehicles",
+                  "citation": "D. Chen and P. Krähenbühl, 'Learning from all vehicles,' in CVPR , 2022."
+                },
+                {
+                  "title": "End-to-end urban driving by imitating a reinforcement learning coach",
+                  "citation": "Z. Zhang, A. Liniger, D. Dai, F. Yu, and L. Van Gool, 'End-to-end urban driving by imitating a reinforcement learning coach,' in ICCV , 2021."
+                },
+                {
+                  "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+                  "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+                },
+                {
+                  "title": "CARLA autonomous driving leaderboard",
+                  "citation": "CARLA, 'CARLA autonomous driving leaderboard.' https://leaderboard.carla.org/, 2022."
+                },
+                {
+                  "title": "Navsim: Data-driven non-reactive autonomous vehicle simulation and benchmarking",
+                  "citation": "D. Dauner, M. Hallgarten, T. Li, X. Weng, Z. Huang, Z. Yang, H. Li, I. Gilitschenski, B. Ivanovic, M. Pavone, et al. , 'Navsim: Data-driven non-reactive autonomous vehicle simulation and benchmarking,' arXiv.org , vol. 2406.15349, 2024."
+                },
+                {
+                  "title": "Parting with misconceptions about learning-based vehicle motion planning",
+                  "citation": "D. Dauner, M. Hallgarten, A. Geiger, and K. Chitta, 'Parting with misconceptions about learning-based vehicle motion planning,' in CoRL , 2023."
+                },
+                {
+                  "title": "Nuplan: A closed-loop ml-based planning benchmark for autonomous vehicles",
+                  "citation": "H. Caesar, J. Kabzan, K. S. Tan, W. K. Fong, E. Wolff, A. Lang, L. Fletcher, O. Beijbom, and S. Omari, 'Nuplan: A closed-loop ml-based planning benchmark for autonomous vehicles,' in CVPR Workshops , 2021."
+                },
+                {
+                  "title": "Unisim: A neural closedloop sensor simulator",
+                  "citation": "Z. Yang, Y. Chen, J. Wang, S. Manivasagam, W.-C. Ma, A. J. Yang, and R. Urtasun, 'Unisim: A neural closedloop sensor simulator,' in CVPR , 2023."
+                },
+                {
+                  "title": "Block-nerf: Scalable large scene neural view synthesis",
+                  "citation": "M. Tancik, V. Casser, X. Yan, S. Pradhan, B. Mildenhall, P. P. Srinivasan, J. T. Barron, and H. Kretzschmar, 'Block-nerf: Scalable large scene neural view synthesis,' in CVPR , 2022."
+                },
+                {
+                  "title": "Meganerf: Scalable construction of large-scale nerfs for virtual fly-throughs",
+                  "citation": "H. Turki, D. Ramanan, and M. Satyanarayanan, 'Meganerf: Scalable construction of large-scale nerfs for virtual fly-throughs,' in CVPR , 2022."
+                },
+                {
+                  "title": "Panoptic Neural Fields: A Semantic Object-Aware Neural Scene Representation",
+                  "citation": "A. Kundu, K. Genova, X. Yin, A. Fathi, C. Pantofaru, L. Guibas, A. Tagliasacchi, F. Dellaert, and T. Funkhouser, 'Panoptic Neural Fields: A Semantic Object-Aware Neural Scene Representation,' in CVPR , 2022."
+                },
+                {
+                  "title": "Urbangiraffe: Representing urban scenes as compositional generative neural feature fields",
+                  "citation": "Y. Yang, Y. Yang, H. Guo, R. Xiong, Y. Wang, and Y. Liao, 'Urbangiraffe: Representing urban scenes as compositional generative neural feature fields,' in ICCV , 2023."
+                },
+                {
+                  "title": "Enhancing photorealism enhancement",
+                  "citation": "S. R. Richter, H. A. Alhaija, and V. Koltun, 'Enhancing photorealism enhancement,' PAMI , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.4",
+              "sec_title": "Vehicle Dynamics Simulation",
+              "citations": [
+                {
+                  "title": "Design and test of a computer-stabilized unicycle",
+                  "citation": "A. Schoonwinkel, Design and test of a computer-stabilized unicycle . Stanford University, 1988."
+                },
+                {
+                  "title": "The kinematic bicycle model: A consistent model for planning feasible trajectories for autonomous vehicles?",
+                  "citation": "P. Polack, F. Altché, B. d'Andréa Novel, and A. de La Fortelle, 'The kinematic bicycle model: A consistent model for planning feasible trajectories for autonomous vehicles?,' in IV , 2017."
+                },
+                {
+                  "title": "Vehicle dynamics and control",
+                  "citation": "R. Rajamani, Vehicle dynamics and control . Springer Science &amp; Business Media, 2011."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.5",
+              "sec_title": "Benchmarks",
+              "citations": [
+                {
+                  "title": "CARLA: An open urban driving simulator",
+                  "citation": "A. Dosovitskiy, G. Ros, F. Codevilla, A. Lopez, and V. Koltun, 'CARLA: An open urban driving simulator,' in CoRL , 2017."
+                },
+                {
+                  "title": "Learning by cheating",
+                  "citation": "D. Chen, B. Zhou, V. Koltun, and P. Krähenbühl, 'Learning by cheating,' in CoRL , 2020."
+                },
+                {
+                  "title": "On offline evaluation of vision-based driving models",
+                  "citation": "F. Codevilla, A. M. Lopez, V. Koltun, and A. Dosovitskiy, 'On offline evaluation of vision-based driving models,' in ECCV , 2018."
+                },
+                {
+                  "title": "Multi-modal fusion transformer for end-to-end autonomous driving",
+                  "citation": "A. Prakash, K. Chitta, and A. Geiger, 'Multi-modal fusion transformer for end-to-end autonomous driving,' in CVPR , 2021."
+                },
+                {
+                  "title": "End-to-end urban driving by imitating a reinforcement learning coach",
+                  "citation": "Z. Zhang, A. Liniger, D. Dai, F. Yu, and L. Van Gool, 'End-to-end urban driving by imitating a reinforcement learning coach,' in ICCV , 2021."
+                },
+                {
+                  "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+                  "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+                },
+                {
+                  "title": "CARLA autonomous driving leaderboard",
+                  "citation": "CARLA, 'CARLA autonomous driving leaderboard.' https://leaderboard.carla.org/, 2022."
+                },
+                {
+                  "title": "Navsim: Data-driven non-reactive autonomous vehicle simulation and benchmarking",
+                  "citation": "D. Dauner, M. Hallgarten, T. Li, X. Weng, Z. Huang, Z. Yang, H. Li, I. Gilitschenski, B. Ivanovic, M. Pavone, et al. , 'Navsim: Data-driven non-reactive autonomous vehicle simulation and benchmarking,' arXiv.org , vol. 2406.15349, 2024."
+                },
+                {
+                  "title": "Parting with misconceptions about learning-based vehicle motion planning",
+                  "citation": "D. Dauner, M. Hallgarten, A. Geiger, and K. Chitta, 'Parting with misconceptions about learning-based vehicle motion planning,' in CoRL , 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "Offline/Open-loop Evaluation",
+          "citations": [
+            {
+              "title": "Parting with misconceptions about learning-based vehicle motion planning",
+              "citation": "D. Dauner, M. Hallgarten, A. Geiger, and K. Chitta, 'Parting with misconceptions about learning-based vehicle motion planning,' in CoRL , 2023."
+            },
+            {
+              "title": "nuscenes: A multimodal dataset for autonomous driving",
+              "citation": "H. Caesar, V. Bankiti, A. H. Lang, S. Vora, V. E. Liong, Q. Xu, A. Krishnan, Y. Pan, G. Baldan, and O. Beijbom, 'nuscenes: A multimodal dataset for autonomous driving,' in CVPR , 2020."
+            },
+            {
+              "title": "Argoverse 2: Next generation datasets",
+              "citation": "B. Wilson, W. Qi, T. Agarwal, J. Lambert, J. Singh, S. Khandelwal, B. Pan, R. Kumar, A. Hartnett, J. K. Pontes, et al. , 'Argoverse 2: Next generation datasets"
+            },
+            {
+              "title": "Scalability in perception for autonomous driving: Waymo open dataset",
+              "citation": "P. Sun, H. Kretzschmar, X. Dotiwalla, A. Chouard, V. Patnaik, P. Tsui, J. Guo, Y. Zhou, Y. Chai, B. Caine, et al. , 'Scalability in perception for autonomous driving: Waymo open dataset,' in CVPR , 2020."
+            },
+            {
+              "title": "Nuplan: A closed-loop ml-based planning benchmark for autonomous vehicles",
+              "citation": "H. Caesar, J. Kabzan, K. S. Tan, W. K. Fong, E. Wolff, A. Lang, L. Fletcher, O. Beijbom, and S. Omari, 'Nuplan: A closed-loop ml-based planning benchmark for autonomous vehicles,' in CVPR Workshops , 2021."
+            },
+            {
+              "title": "On offline evaluation of vision-based driving models",
+              "citation": "F. Codevilla, A. M. Lopez, V. Koltun, and A. Dosovitskiy, 'On offline evaluation of vision-based driving models,' in ECCV , 2018."
+            },
+            {
+              "title": "Parting with misconceptions about learning-based vehicle motion planning",
+              "citation": "D. Dauner, M. Hallgarten, A. Geiger, and K. Chitta, 'Parting with misconceptions about learning-based vehicle motion planning,' in CoRL , 2023."
+            },
+            {
+              "title": "Rethinking the open-loop evaluation of end-to-end autonomous driving in nuscenes",
+              "citation": "J.-T. Zhai, Z. Feng, J. Du, Y. Mao, J.-J. Liu, Z. Tan, Y. Zhang, X. Ye, and J. Wang, 'Rethinking the open-loop evaluation of end-to-end autonomous driving in nuscenes,' arXiv.org , vol. 2305.10430, 2023."
+            },
+            {
+              "title": "Is ego status all you need for open-loop endto-end autonomous driving?",
+              "citation": "Z. Li, Z. Yu, S. Lan, J. Li, J. Kautz, T. Lu, and J. M. Alvarez, 'Is ego status all you need for open-loop endto-end autonomous driving?,' in CVPR , 2024."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "CHALLENGES",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Dilemma over Sensing and Input Modalities",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Sensing and Multi-sensor Fusion",
+              "citations": [
+                {
+                  "title": "End to end learning for self-driving cars",
+                  "citation": "M. Bojarski, D. Del Testa, D. Dworakowski, B. Firner, B. Flepp, P. Goyal, L. D. Jackel, M. Monfort, U. Muller, J. Zhang, et al. , 'End to end learning for self-driving cars,' arXiv.org , vol. 1604.07316, 2016."
+                },
+                {
+                  "title": "BEVFusion: A simple and robust liDAR-camera fusion framework",
+                  "citation": "T. Liang, H. Xie, K. Yu, Z. Xia, Z. Lin, Y. Wang, T. Tang, B. Wang, and Z. Tang, 'BEVFusion: A simple and robust liDAR-camera fusion framework,' in NeurIPS , 2022."
+                },
+                {
+                  "title": "Bevfusion: Multi-task multi-sensor fusion with unified bird's-eye view representation",
+                  "citation": "Z. Liu, H. Tang, A. Amini, X. Yang, H. Mao, D. Rus, and S. Han, 'Bevfusion: Multi-task multi-sensor fusion with unified bird's-eye view representation,' in ICRA , 2023."
+                },
+                {
+                  "title": "Sensor fusion for semantic segmentation of urban scenes",
+                  "citation": "R. Zhang, S. A. Candra, K. Vetter, and A. Zakhor, 'Sensor fusion for semantic segmentation of urban scenes,' in ICRA , 2015."
+                },
+                {
+                  "title": "Sensor fusion for joint 3d object detection and semantic segmentation",
+                  "citation": "G. P. Meyer, J. Charland, D. Hegde, A. Laddha, and C. Vallespi-Gonzalez, 'Sensor fusion for joint 3d object detection and semantic segmentation,' in CVPR Workshops , 2019."
+                },
+                {
+                  "title": "End-to-end interpretable neural motion planner",
+                  "citation": "W. Zeng, W. Luo, S. Suo, A. Sadat, B. Yang, S. Casas, and R. Urtasun, 'End-to-end interpretable neural motion planner,' in CVPR , 2019."
+                },
+                {
+                  "title": "Does computer vision matter for action?",
+                  "citation": "B. Zhou, P. Krähenbühl, and V. Koltun, 'Does computer vision matter for action?,' Science Robotics , 2019."
+                },
+                {
+                  "title": "Enhance sample efficiency and robustness of end-to-end urban autonomous driving via semantic masked world model",
+                  "citation": "Z. Gao, Y. Mu, R. Shen, C. Chen, Y. Ren, J. Chen, S. E. Li, P. Luo, and Y. Lu, 'Enhance sample efficiency and robustness of end-to-end urban autonomous driving via semantic masked world model,' TITS , 2024."
+                },
+                {
+                  "title": "Interpretable endto-end urban autonomous driving with latent deep reinforcement learning",
+                  "citation": "J. Chen, S. E. Li, and M. Tomizuka, 'Interpretable endto-end urban autonomous driving with latent deep reinforcement learning,' TITS , 2022."
+                },
+                {
+                  "title": "Carl-lead: Lidarbased end-to-end autonomous driving with contrastive deep reinforcement learning",
+                  "citation": "P. Cai, S. Wang, H. Wang, and M. Liu, 'Carl-lead: Lidarbased end-to-end autonomous driving with contrastive deep reinforcement learning,' arXiv.org , vol. 2109.08473, 2021."
+                },
+                {
+                  "title": "Multi-modal sensor fusion-based deep neural network for end-to-end autonomous driving with scene understanding",
+                  "citation": "Z. Huang, C. Lv, Y. Xing, and J. Wu, 'Multi-modal sensor fusion-based deep neural network for end-to-end autonomous driving with scene understanding,' IEEE Sensors Journal , 2020."
+                },
+                {
+                  "title": "Learning from all vehicles",
+                  "citation": "D. Chen and P. Krähenbühl, 'Learning from all vehicles,' in CVPR , 2022."
+                },
+                {
+                  "title": "Fully end-to-end autonomous driving with semantic depth cloud mapping and multiagent",
+                  "citation": "O. Natan and J. Miura, 'Fully end-to-end autonomous driving with semantic depth cloud mapping and multiagent,' in IV , 2022."
+                },
+                {
+                  "title": "Multi-modal fusion transformer for end-to-end autonomous driving",
+                  "citation": "A. Prakash, K. Chitta, and A. Geiger, 'Multi-modal fusion transformer for end-to-end autonomous driving,' in CVPR , 2021."
+                },
+                {
+                  "title": "Multimodal end-to-end autonomous driving",
+                  "citation": "Y. Xiao, F. Codevilla, A. Gurram, O. Urfalioglu, and A. M. López, 'Multimodal end-to-end autonomous driving,' TITS , 2020."
+                },
+                {
+                  "title": "Urban driving with conditional imitation learning",
+                  "citation": "J. Hawke, R. Shen, C. Gurau, S. Sharma, D. Reda, N. Nikolov, P. Mazur, S. Micklethwaite, N. Griffiths, A. Shah, et al. , 'Urban driving with conditional imitation learning,' in ICRA , 2020."
+                },
+                {
+                  "title": "Trajectory-guided control prediction for end-to-end autonomous driving: A simple yet strong baseline",
+                  "citation": "P. Wu, X. Jia, L. Chen, J. Yan, H. Li, and Y. Qiao, 'Trajectory-guided control prediction for end-to-end autonomous driving: A simple yet strong baseline,' in NeurIPS , 2022."
+                },
+                {
+                  "title": "Think twice before driving: Towards scalable decoders for end-to-end autonomous driving",
+                  "citation": "X. Jia, P. Wu, L. Chen, J. Xie, C. He, J. Yan, and H. Li, 'Think twice before driving: Towards scalable decoders for end-to-end autonomous driving,' in CVPR , 2023."
+                },
+                {
+                  "title": "End-toend multi-modal sensors fusion system for urban automated driving",
+                  "citation": "I. Sobh, L. Amin, S. Abdelkarim, K. Elmadawy, M. Saeed, O. Abdeltawab, M. E. Gamal, and A. E. Sallab, 'End-toend multi-modal sensors fusion system for urban automated driving,' in NeurIPS Workshops , 2018."
+                },
+                {
+                  "title": "Lidar-video driving dataset: Learning driving policies effectively",
+                  "citation": "Y. Chen, J. Wang, J. Li, C. Lu, Z. Luo, H. Xue, and C. Wang, 'Lidar-video driving dataset: Learning driving policies effectively,' in CVPR , 2018."
+                },
+                {
+                  "title": "Dynamic conditional imitation learning for autonomous driving",
+                  "citation": "H. M. Eraqi, M. N. Moustafa, and J. Honer, 'Dynamic conditional imitation learning for autonomous driving,' TITS , 2022."
+                },
+                {
+                  "title": "Multinet: Multimodal multi-task learning for autonomous driving",
+                  "citation": "S. Chowdhuri, T. Pankaj, and K. Zipser, 'Multinet: Multimodal multi-task learning for autonomous driving,' in WACV , 2019."
+                },
+                {
+                  "title": "Probabilistic endto-end vehicle navigation in complex dynamic environments with multimodal sensor fusion",
+                  "citation": "P. Cai, S. Wang, Y. Sun, and M. Liu, 'Probabilistic endto-end vehicle navigation in complex dynamic environments with multimodal sensor fusion,' RA-L , 2020."
+                },
+                {
+                  "title": "Attention is all you need",
+                  "citation": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, 'Attention is all you need,' in NeurIPS , 2017."
+                },
+                {
+                  "title": "Multi-modal fusion transformer for end-to-end autonomous driving",
+                  "citation": "A. Prakash, K. Chitta, and A. Geiger, 'Multi-modal fusion transformer for end-to-end autonomous driving,' in CVPR , 2021."
+                },
+                {
+                  "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+                  "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+                },
+                {
+                  "title": "Safetyenhanced autonomous driving using interpretable sensor fusion transformer",
+                  "citation": "H. Shao, L. Wang, R. Chen, H. Li, and Y. Liu, 'Safetyenhanced autonomous driving using interpretable sensor fusion transformer,' in CoRL , 2022."
+                },
+                {
+                  "title": "Mmfn: Multi-modal-fusion-net for end-to-end driving",
+                  "citation": "Q. Zhang, M. Tang, R. Geng, F. Chen, R. Xin, and L. Wang, 'Mmfn: Multi-modal-fusion-net for end-to-end driving,' in IROS , 2022."
+                },
+                {
+                  "title": "Reasonnet: End-to-end driving with temporal",
+                  "citation": "H. Shao, L. Wang, R. Chen, S. L. Waslander, H. Li, and Y. Liu, 'Reasonnet: End-to-end driving with temporal"
+                },
+                {
+                  "title": "BEVFusion: A simple and robust liDAR-camera fusion framework",
+                  "citation": "T. Liang, H. Xie, K. Yu, Z. Xia, Z. Lin, Y. Wang, T. Tang, B. Wang, and Z. Tang, 'BEVFusion: A simple and robust liDAR-camera fusion framework,' in NeurIPS , 2022."
+                },
+                {
+                  "title": "Bevfusion: Multi-task multi-sensor fusion with unified bird's-eye view representation",
+                  "citation": "Z. Liu, H. Tang, A. Amini, X. Yang, H. Mao, D. Rus, and S. Han, 'Bevfusion: Multi-task multi-sensor fusion with unified bird's-eye view representation,' in ICRA , 2023."
+                },
+                {
+                  "title": "Deepfusion: Lidarcamera deep fusion for multi-modal 3d object detection",
+                  "citation": "Y. Li, A. W. Yu, T. Meng, B. Caine, J. Ngiam, D. Peng, J. Shen, Y. Lu, D. Zhou, Q. V. Le, et al. , 'Deepfusion: Lidarcamera deep fusion for multi-modal 3d object detection,' in CVPR , 2022."
+                },
+                {
+                  "title": "X-align: Cross-modal crossview alignment for bird's-eye-view segmentation",
+                  "citation": "S. Borse, M. Klingner, V. R. Kumar, H. Cai, A. Almuzairee, S. Yogamani, and F. Porikli, 'X-align: Cross-modal crossview alignment for bird's-eye-view segmentation,' in WACV , 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.2",
+              "sec_title": "Language as Input",
+              "citations": [
+                {
+                  "title": "Vision-and-language navigation: Interpreting visuallygrounded navigation instructions in real environments",
+                  "citation": "P. Anderson, Q. Wu, D. Teney, J. Bruce, M. Johnson, N. Sünderhauf, I. Reid, S. Gould, and A. Van Den Hengel, 'Vision-and-language navigation: Interpreting visuallygrounded navigation instructions in real environments,' in CVPR , 2018."
+                },
+                {
+                  "title": "Cliport: What and where pathways for robotic manipulation",
+                  "citation": "M. Shridhar, L. Manuelli, and D. Fox, 'Cliport: What and where pathways for robotic manipulation,' in CoRL , 2022."
+                },
+                {
+                  "title": "A survey of embodied ai: From simulators to research tasks",
+                  "citation": "J. Duan, S. Yu, H. L. Tan, H. Zhu, and C. Tan, 'A survey of embodied ai: From simulators to research tasks,' TETCI , 2022."
+                },
+                {
+                  "title": "Chatgpt for robotics: Design principles and model abilities",
+                  "citation": "S. Vemprala, R. Bonatti, A. Bucker, and A. Kapoor, 'Chatgpt for robotics: Design principles and model abilities,' arXiv.org , vol. 2306.17582, 2023."
+                },
+                {
+                  "title": "Talk2car: Taking control of your selfdriving car",
+                  "citation": "T. Deruyttere, S. Vandenhende, D. Grujicic, L. Van Gool, and M. F. Moens, 'Talk2car: Taking control of your selfdriving car,' in EMNLP , 2019."
+                },
+                {
+                  "title": "Learning to navigate in cities without a map",
+                  "citation": "P. Mirowski, M. Grimes, M. Malinowski, K. M. Hermann, K. Anderson, D. Teplyashin, K. Simonyan, A. Zisserman, R. Hadsell, et al. , 'Learning to navigate in cities without a map,' in NeurIPS , 2018."
+                },
+                {
+                  "title": "Touchdown: Natural language navigation and spatial reasoning in visual street environments",
+                  "citation": "H. Chen, A. Suhr, D. Misra, N. Snavely, and Y. Artzi, 'Touchdown: Natural language navigation and spatial reasoning in visual street environments,' in CVPR , 2019."
+                },
+                {
+                  "title": "Generating landmark navigation instructions from maps as a graph-to-text problem",
+                  "citation": "R. Schumann and S. Riezler, 'Generating landmark navigation instructions from maps as a graph-to-text problem,' in ACL , 2021."
+                },
+                {
+                  "title": "Grounding human-to-vehicle advice for self-driving vehicles",
+                  "citation": "J. Kim, T. Misu, Y.-T. Chen, A. Tawari, and J. Canny, 'Grounding human-to-vehicle advice for self-driving vehicles,' in CVPR , 2019."
+                },
+                {
+                  "title": "Talk to the vehicle: Language conditioned autonomous navigation of self driving cars",
+                  "citation": "S. Narayanan, T. Maniar, J. Kalyanasundaram, V. Gandhi, B. Bhowmick, and K. M. Krishna, 'Talk to the vehicle: Language conditioned autonomous navigation of self driving cars,' in IROS , 2019."
+                },
+                {
+                  "title": "Advisable learning for self-driving vehicles by internalizing observation-to-action rules",
+                  "citation": "J. Kim, S. Moon, A. Rohrbach, T. Darrell, and J. Canny, 'Advisable learning for self-driving vehicles by internalizing observation-to-action rules,' in CVPR , 2020."
+                },
+                {
+                  "title": "Conditional driving from natural language instructions",
+                  "citation": "J. Roh, C. Paxton, A. Pronobis, A. Farhadi, and D. Fox, 'Conditional driving from natural language instructions,' in CoRL , 2019."
+                },
+                {
+                  "title": "Ground then navigate: Language-guided navigation in dynamic scenes",
+                  "citation": "K. Jain, V. Chhangani, A. Tiwari, K. M. Krishna, and V. Gandhi, 'Ground then navigate: Language-guided navigation in dynamic scenes,' in ICRA , 2023."
+                },
+                {
+                  "title": "Lm-nav: Robotic navigation with large pre-trained models of language, vision, and action",
+                  "citation": "D. Shah, B. Osi´ nski, b. ichter, and S. Levine, 'Lm-nav: Robotic navigation with large pre-trained models of language, vision, and action,' in CoRL , 2023."
+                },
+                {
+                  "title": "Learning transferable visual models from natural language supervision",
+                  "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+                },
+                {
+                  "title": "GPT-4 Technical Report",
+                  "citation": "OpenAI, 'GPT-4 Technical Report,' arXiv.org , vol. 2303.08774, 2023."
+                },
+                {
+                  "title": "Llama: Open and efficient foundation language models",
+                  "citation": "H. Touvron, T. Lavril, G. Izacard, X. Martinet, M.-A. Lachaux, T. Lacroix, B. Rozière, N. Goyal, E. Hambro, F. Azhar, et al. , 'Llama: Open and efficient foundation language models,' arXiv.org , vol. 2302.13971, 2023."
+                },
+                {
+                  "title": "Gpt-driver: Learning to drive with gpt",
+                  "citation": "J. Mao, Y. Qian, H. Zhao, and Y. Wang, 'Gpt-driver: Learning to drive with gpt,' arXiv.org , vol. 2310.01415, 2023."
+                },
+                {
+                  "title": "Drivegpt4: Interpretable end-to-end au-",
+                  "citation": "Z. Xu, Y. Zhang, E. Xie, Z. Zhao, Y. Guo, K. K. Wong, Z. Li, and H. Zhao, 'Drivegpt4: Interpretable end-to-end au-"
+                },
+                {
+                  "title": "Lmdrive: Closed-loop end-to-end driving with large language models",
+                  "citation": "H. Shao, Y. Hu, L. Wang, S. L. Waslander, Y. Liu, and H. Li, 'Lmdrive: Closed-loop end-to-end driving with large language models,' in CVPR , 2024."
+                },
+                {
+                  "title": "Drivelm: Driving with graph visual question answering",
+                  "citation": "C. Sima, K. Renz, K. Chitta, L. Chen, H. Zhang, C. Xie, J. Beißwenger, P. Luo, A. Geiger, and H. Li, 'Drivelm: Driving with graph visual question answering,' in ECCV , 2024."
+                },
+                {
+                  "title": "Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario",
+                  "citation": "T. Qian, J. Chen, L. Zhuo, Y. Jiao, and Y.-G. Jiang, 'Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario,' in AAAI , 2024."
+                },
+                {
+                  "title": "A survey of large language models for autonomous driving",
+                  "citation": "Z. Yang, X. Jia, H. Li, and J. Yan, 'A survey of large language models for autonomous driving,' arXiv.org , vol. 2311.01043, 2023."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Dependence on Visual Abstraction",
+          "citations": [
+            {
+              "title": "End-toend model-free reinforcement learning for urban driving using implicit affordances",
+              "citation": "M. Toromanoff, E. Wirbel, and F. Moutarde, 'End-toend model-free reinforcement learning for urban driving using implicit affordances,' in CVPR , 2020."
+            },
+            {
+              "title": "Toward deep reinforcement learning without a simulator: An autonomous steering example",
+              "citation": "B. Hilleli and R. El-Yaniv, 'Toward deep reinforcement learning without a simulator: An autonomous steering example,' in AAAI , 2018."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.2.1",
+              "sec_title": "Representation Design",
+              "citations": [
+                {
+                  "title": "Deep residual learning for image recognition",
+                  "citation": "K. He, X. Zhang, S. Ren, and J. Sun, 'Deep residual learning for image recognition,' in CVPR , 2016."
+                },
+                {
+                  "title": "An energy and gpu-computation efficient backbone network for real-time object detection",
+                  "citation": "Y. Lee, J.-w. Hwang, S. Lee, Y. Bae, and J. Park, 'An energy and gpu-computation efficient backbone network for real-time object detection,' in CVPR Workshops , 2019."
+                },
+                {
+                  "title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+                  "citation": "A. Dosovitskiy, L. Beyer, A. Kolesnikov, D. Weissenborn, X. Zhai, T. Unterthiner, M. Dehghani, M. Minderer, G. Heigold, S. Gelly, et al. , 'An image is worth 16x16 words: Transformers for image recognition at scale,' in ICLR , 2021."
+                },
+                {
+                  "title": "Scaling vision transformers to 22 billion parameters",
+                  "citation": "M. Dehghani, J. Djolonga, B. Mustafa, P. Padlewski, J. Heek, J. Gilmer, A. P. Steiner, M. Caron, R. Geirhos, I. Alabdulmohsin, et al. , 'Scaling vision transformers to 22 billion parameters,' in ICML , 2023."
+                },
+                {
+                  "title": "Bevfusion: Multi-task multi-sensor fusion with unified bird's-eye view representation",
+                  "citation": "Z. Liu, H. Tang, A. Amini, X. Yang, H. Mao, D. Rus, and S. Han, 'Bevfusion: Multi-task multi-sensor fusion with unified bird's-eye view representation,' in ICRA , 2023."
+                },
+                {
+                  "title": "Delving into the devils of bird's-eye-view perception: A review, evaluation and recipe",
+                  "citation": "H. Li, C. Sima, J. Dai, W. Wang, L. Lu, H. Wang, J. Zeng, Z. Li, J. Yang, H. Deng, et al. , 'Delving into the devils of bird's-eye-view perception: A review, evaluation and recipe,' PAMI , 2023."
+                },
+                {
+                  "title": "Bevformer: Learning bird's-eye-view representation from multi-camera images via spatiotemporal transformers",
+                  "citation": "Z. Li, W. Wang, H. Li, E. Xie, C. Sima, T. Lu, Y. Qiao, and J. Dai, 'Bevformer: Learning bird's-eye-view representation from multi-camera images via spatiotemporal transformers,' in ECCV , 2022."
+                },
+                {
+                  "title": "Planning-oriented autonomous driving",
+                  "citation": "Y. Hu, J. Yang, L. Chen, K. Li, C. Sima, X. Zhu, S. Chai, S. Du, T. Lin, W. Wang, L. Lu, X. Jia, Q. Liu, J. Dai, Y. Qiao, and H. Li, 'Planning-oriented autonomous driving,' in CVPR , 2023."
+                },
+                {
+                  "title": "Think twice before driving: Towards scalable decoders for end-to-end autonomous driving",
+                  "citation": "X. Jia, P. Wu, L. Chen, J. Xie, C. He, J. Yan, and H. Li, 'Think twice before driving: Towards scalable decoders for end-to-end autonomous driving,' in CVPR , 2023."
+                },
+                {
+                  "title": "Driveadapter: Breaking the coupling barrier of perception and planning in end-to-end autonomous driving",
+                  "citation": "X. Jia, Y. Gao, L. Chen, J. Yan, P. L. Liu, and H. Li, 'Driveadapter: Breaking the coupling barrier of perception and planning in end-to-end autonomous driving,' in ICCV , 2023."
+                },
+                {
+                  "title": "Vad: Vectorized scene representation for efficient autonomous driving",
+                  "citation": "B. Jiang, S. Chen, Q. Xu, B. Liao, J. Chen, H. Zhou, Q. Zhang, W. Liu, C. Huang, and X. Wang, 'Vad: Vectorized scene representation for efficient autonomous driving,' in ICCV , 2023."
+                },
+                {
+                  "title": "Scene as occupancy",
+                  "citation": "W. Tong, C. Sima, T. Wang, L. Chen, S. Wu, H. Deng, Y. Gu, L. Lu, P. Luo, D. Lin, et al. , 'Scene as occupancy,' in ICCV , 2023."
+                },
+                {
+                  "title": "Hdmapnet: An online hd map construction and evaluation framework",
+                  "citation": "Q. Li, Y. Wang, Y. Wang, and H. Zhao, 'Hdmapnet: An online hd map construction and evaluation framework,' in ICRA , 2022."
+                },
+                {
+                  "title": "MapTR: Structured modeling and learning for online vectorized HD map construction",
+                  "citation": "B. Liao, S. Chen, X. Wang, T. Cheng, Q. Zhang, W. Liu, and C. Huang, 'MapTR: Structured modeling and learning for online vectorized HD map construction,' in ICLR , 2023."
+                },
+                {
+                  "title": "Openlane-v2: A topology reasoning benchmark for unified 3d hd mapping",
+                  "citation": "H. Wang, T. Li, Y. Li, L. Chen, C. Sima, Z. Liu, B. Wang, P. Jia, Y. Wang, S. Jiang, et al. , 'Openlane-v2: A topology reasoning benchmark for unified 3d hd mapping,' in NeurIPS Datasets and Benchmarks , 2023."
+                },
+                {
+                  "title": "Graph-based topology reasoning for driving scenes",
+                  "citation": "T. Li, L. Chen, H. Wang, Y. Li, J. Yang, X. Geng, S. Jiang, Y. Wang, H. Xu, C. Xu, et al. , 'Graph-based topology reasoning for driving scenes,' arXiv.org , vol. 2304.05277, 2023."
+                },
+                {
+                  "title": "Lanesegnet: Map learning with lane segment perception for autonomous driving",
+                  "citation": "T. Li, P . Jia, B. Wang, L. Chen, K. JIANG, J. Yan, and H. Li, 'Lanesegnet: Map learning with lane segment perception for autonomous driving,' in ICLR , 2024."
+                },
+                {
+                  "title": "Trajectory-guided control prediction for end-to-end autonomous driving: A simple yet strong baseline",
+                  "citation": "P. Wu, X. Jia, L. Chen, J. Yan, H. Li, and Y. Qiao, 'Trajectory-guided control prediction for end-to-end autonomous driving: A simple yet strong baseline,' in NeurIPS , 2022."
+                },
+                {
+                  "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+                  "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.2",
+              "sec_title": "Representation Learning",
+              "citations": [
+                {
+                  "title": "A versatile and efficient reinforcement learning framework for autonomous driving",
+                  "citation": "G. Wang, H. Niu, D. Zhu, J. Hu, X. Zhan, and G. Zhou, 'A versatile and efficient reinforcement learning framework for autonomous driving,' arXiv.org , vol. 2110.11573, 2021."
+                },
+                {
+                  "title": "Label efficient visual abstractions for autonomous driving",
+                  "citation": "A. Behl, K. Chitta, A. Prakash, E. Ohn-Bar, and A. Geiger, 'Label efficient visual abstractions for autonomous driving,' in IROS , 2020."
+                },
+                {
+                  "title": "Segmented encoding for sim2real of rl-based end-to-end autonomous driving",
+                  "citation": "S.-H. Chung, S.-H. Kong, S. Cho, and I. M. A. Nahrendra, 'Segmented encoding for sim2real of rl-based end-to-end autonomous driving,' in IV , 2022."
+                },
+                {
+                  "title": "Auto-encoding variational bayes",
+                  "citation": "D. P. Kingma and M. Welling, 'Auto-encoding variational bayes,' arXiv.org , vol. 1312.6114, 2013."
+                },
+                {
+                  "title": "Policy-based reinforcement learning for training autonomous driving agents in urban areas with affordance learning",
+                  "citation": "M. Ahmed, A. Abobakr, C. P. Lim, and S. Nahavandi, 'Policy-based reinforcement learning for training autonomous driving agents in urban areas with affordance learning,' TITS , 2022."
+                },
+                {
+                  "title": "Conditional affordance learning for driving in urban environments",
+                  "citation": "A. Sauer, N. Savinov, and A. Geiger, 'Conditional affordance learning for driving in urban environments,' in CoRL , 2018."
+                },
+                {
+                  "title": "End-toend model-free reinforcement learning for urban driving using implicit affordances",
+                  "citation": "M. Toromanoff, E. Wirbel, and F. Moutarde, 'End-toend model-free reinforcement learning for urban driving using implicit affordances,' in CVPR , 2020."
+                },
+                {
+                  "title": "Gri: General reinforced imitation and its application to vision-based autonomous driving",
+                  "citation": "R. Chekroun, M. Toromanoff, S. Hornauer, and F. Moutarde, 'Gri: General reinforced imitation and its application to vision-based autonomous driving,' Robotics , 2023."
+                },
+                {
+                  "title": "Multi-task long-range urban driving based on hierarchical planning and reinforcement learning",
+                  "citation": "X. Zhang, M. Wu, H. Ma, T. Hu, and J. Yuan, 'Multi-task long-range urban driving based on hierarchical planning and reinforcement learning,' in ITSC , 2021."
+                },
+                {
+                  "title": "Deductive reinforcement learning for visual autonomous urban driving navigation",
+                  "citation": "C. Huang, R. Zhang, M. Ouyang, P. Wei, J. Lin, J. Su, and L. Lin, 'Deductive reinforcement learning for visual autonomous urban driving navigation,' TNNLS , 2021."
+                },
+                {
+                  "title": "Latent attention augmentation for robust autonomous driving policies",
+                  "citation": "R. Cheng, C. Agia, F. Shkurti, D. Meger, and G. Dudek, 'Latent attention augmentation for robust autonomous driving policies,' in IROS , 2021."
+                },
+                {
+                  "title": "Taskinduced representation learning",
+                  "citation": "J. Yamada, K. Pertsch, A. Gunjal, and J. J. Lim, 'Taskinduced representation learning,' in ICLR , 2022."
+                },
+                {
+                  "title": "Learning generalizable representations for reinforcement learning via adaptive metalearner of behavioral similarities",
+                  "citation": "J. Chen and S. Pan, 'Learning generalizable representations for reinforcement learning via adaptive metalearner of behavioral similarities,' in ICLR , 2022."
+                },
+                {
+                  "title": "Learning to drive by",
+                  "citation": "Q. Zhang, Z. Peng, and B. Zhou, 'Learning to drive by"
+                },
+                {
+                  "title": "Policy pre-training for autonomous driving via self-supervised geometric modeling",
+                  "citation": "P. Wu, L. Chen, H. Li, X. Jia, J. Yan, and Y. Qiao, 'Policy pre-training for autonomous driving via self-supervised geometric modeling,' in ICLR , 2023."
+                },
+                {
+                  "title": "Visual point cloud forecasting enables scalable autonomous driving",
+                  "citation": "Z. Yang, L. Chen, Y. Sun, and H. Li, 'Visual point cloud forecasting enables scalable autonomous driving,' in CVPR , 2024."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.3",
+          "sec_title": "Complexity of World Modeling for Model-based RL",
+          "citations": [
+            {
+              "title": "Learning to drive from a world on rails",
+              "citation": "D. Chen, V. Koltun, and P. Krähenbühl, 'Learning to drive from a world on rails,' in ICCV , 2021."
+            },
+            {
+              "title": "Interpretable endto-end urban autonomous driving with latent deep reinforcement learning",
+              "citation": "J. Chen, S. E. Li, and M. Tomizuka, 'Interpretable endto-end urban autonomous driving with latent deep reinforcement learning,' TITS , 2022."
+            },
+            {
+              "title": "Model-predictive policy learning with uncertainty regularization for driving in dense traffic",
+              "citation": "M. Henaff, A. Canziani, and Y. LeCun, 'Model-predictive policy learning with uncertainty regularization for driving in dense traffic,' in ICLR , 2019."
+            },
+            {
+              "title": "Uncertainty-aware modelbased reinforcement learning: Methodology and application in autonomous driving",
+              "citation": "J. Wu, Z. Huang, and C. Lv, 'Uncertainty-aware modelbased reinforcement learning: Methodology and application in autonomous driving,' IV , 2022."
+            },
+            {
+              "title": "Dream to control: Learning behaviors by latent imagination",
+              "citation": "D. Hafner, T. Lillicrap, J. Ba, and M. Norouzi, 'Dream to control: Learning behaviors by latent imagination,' in ICLR , 2020."
+            },
+            {
+              "title": "Iso-dream: Isolating and leveraging noncontrollable visual dynamics in world models",
+              "citation": "M. Pan, X. Zhu, Y. Wang, and X. Yang, 'Iso-dream: Isolating and leveraging noncontrollable visual dynamics in world models,' in NeurIPS , 2022."
+            },
+            {
+              "title": "Generalized predictive model for autonomous driving",
+              "citation": "J. Yang, S. Gao, Y. Qiu, L. Chen, T. Li, B. Dai, K. Chitta, P. Wu, J. Zeng, P. Luo, et al. , 'Generalized predictive model for autonomous driving,' in CVPR , 2024."
+            },
+            {
+              "title": "Vista: A generalizable driving world model with high fidelity and versatile controllability",
+              "citation": "S. Gao, J. Yang, L. Chen, K. Chitta, Y. Qiu, A. Geiger, J. Zhang, and H. Li, 'Vista: A generalizable driving world model with high fidelity and versatile controllability,' arXiv.org , vol. 2405.17398, 2024."
+            },
+            {
+              "title": "Driving into the future: Multiview visual forecasting and planning with world model for autonomous driving",
+              "citation": "Y. Wang, J. He, L. Fan, H. Li, Y. Chen, and Z. Zhang, 'Driving into the future: Multiview visual forecasting and planning with world model for autonomous driving,' in CVPR , 2024."
+            },
+            {
+              "title": "High-resolution image synthesis with latent diffusion models",
+              "citation": "R. Rombach, A. Blattmann, D. Lorenz, P. Esser, and B. Ommer, 'High-resolution image synthesis with latent diffusion models,' in CVPR , 2022."
+            },
+            {
+              "title": "Model-based imitation learning for urban driving",
+              "citation": "A. Hu, G. Corrado, N. Griffiths, Z. Murez, C. Gurau, H. Yeo, A. Kendall, R. Cipolla, and J. Shotton, 'Modelbased imitation learning for urban driving,' in NeurIPS , 2022."
+            },
+            {
+              "title": "Enhance sample efficiency and robustness of end-to-end urban autonomous driving via semantic masked world model",
+              "citation": "Z. Gao, Y. Mu, R. Shen, C. Chen, Y. Ren, J. Chen, S. E. Li, P. Luo, and Y. Lu, 'Enhance sample efficiency and robustness of end-to-end urban autonomous driving via semantic masked world model,' TITS , 2024."
+            },
+            {
+              "title": "Deductive reinforcement learning for visual autonomous urban driving navigation",
+              "citation": "C. Huang, R. Zhang, M. Ouyang, P. Wei, J. Lin, J. Su, and L. Lin, 'Deductive reinforcement learning for visual autonomous urban driving navigation,' TNNLS , 2021."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.4",
+          "sec_title": "Reliance on Multi-Task Learning",
+          "citations": [
+            {
+              "title": "Multitask learning",
+              "citation": "R. Caruana, 'Multitask learning,' Machine Learning , 1997."
+            },
+            {
+              "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+              "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+            },
+            {
+              "title": "Hidden biases of endto-end driving models",
+              "citation": "B. Jaeger, K. Chitta, and A. Geiger, 'Hidden biases of endto-end driving models,' in ICCV , 2023."
+            },
+            {
+              "title": "Multi-modal sensor fusion-based deep neural network for end-to-end autonomous driving with scene understanding",
+              "citation": "Z. Huang, C. Lv, Y. Xing, and J. Wu, 'Multi-modal sensor fusion-based deep neural network for end-to-end autonomous driving with scene understanding,' IEEE Sensors Journal , 2020."
+            },
+            {
+              "title": "Multi-task learning with attention for end-to-end autonomous driving",
+              "citation": "K. Ishihara, A. Kanervisto, J. Miura, and V. Hautamaki, 'Multi-task learning with attention for end-to-end autonomous driving,' in CVPR Workshops , 2021."
+            },
+            {
+              "title": "Rethinking self-driving: Multi-task knowledge for better generalization and accident explanation ability",
+              "citation": "Z. Li, T. Motoyoshi, K. Sasaki, T. Ogata, and S. Sugano, 'Rethinking self-driving: Multi-task knowledge for better generalization and accident explanation ability,' arXiv.org , vol. 1809.11100, 2018."
+            },
+            {
+              "title": "End-to-end learning of driving models from large-scale video datasets",
+              "citation": "H. Xu, Y. Gao, F. Yu, and T. Darrell, 'End-to-end learning of driving models from large-scale video datasets,' in CVPR , 2017."
+            },
+            {
+              "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+              "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+            },
+            {
+              "title": "Hidden biases of endto-end driving models",
+              "citation": "B. Jaeger, K. Chitta, and A. Geiger, 'Hidden biases of endto-end driving models,' in ICCV , 2023."
+            },
+            {
+              "title": "Multi-task learning with attention for end-to-end autonomous driving",
+              "citation": "K. Ishihara, A. Kanervisto, J. Miura, and V. Hautamaki, 'Multi-task learning with attention for end-to-end autonomous driving,' in CVPR Workshops , 2021."
+            },
+            {
+              "title": "Rethinking self-driving: Multi-task knowledge for better generalization and accident explanation ability",
+              "citation": "Z. Li, T. Motoyoshi, K. Sasaki, T. Ogata, and S. Sugano, 'Rethinking self-driving: Multi-task knowledge for better generalization and accident explanation ability,' arXiv.org , vol. 1809.11100, 2018."
+            },
+            {
+              "title": "End-to-end learning of driving models from large-scale video datasets",
+              "citation": "H. Xu, Y. Gao, F. Yu, and T. Darrell, 'End-to-end learning of driving models from large-scale video datasets,' in CVPR , 2017."
+            },
+            {
+              "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+              "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+            },
+            {
+              "title": "Hidden biases of endto-end driving models",
+              "citation": "B. Jaeger, K. Chitta, and A. Geiger, 'Hidden biases of endto-end driving models,' in ICCV , 2023."
+            },
+            {
+              "title": "Learning from all vehicles",
+              "citation": "D. Chen and P. Krähenbühl, 'Learning from all vehicles,' in CVPR , 2022."
+            },
+            {
+              "title": "Neat: Neural attention fields for end-to-end autonomous driving",
+              "citation": "K. Chitta, A. Prakash, and A. Geiger, 'Neat: Neural attention fields for end-to-end autonomous driving,' in ICCV , 2021."
+            },
+            {
+              "title": "Coaching a teachable student",
+              "citation": "J. Zhang, Z. Huang, and E. Ohn-Bar, 'Coaching a teachable student,' in CVPR , 2023."
+            },
+            {
+              "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+              "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+            },
+            {
+              "title": "Safetyenhanced autonomous driving using interpretable sensor fusion transformer",
+              "citation": "H. Shao, L. Wang, R. Chen, H. Li, and Y. Liu, 'Safetyenhanced autonomous driving using interpretable sensor fusion transformer,' in CoRL , 2022."
+            },
+            {
+              "title": "Think twice before driving: Towards scalable decoders for end-to-end autonomous driving",
+              "citation": "X. Jia, P. Wu, L. Chen, J. Xie, C. He, J. Yan, and H. Li, 'Think twice before driving: Towards scalable decoders for end-to-end autonomous driving,' in CVPR , 2023."
+            },
+            {
+              "title": "Hidden biases of endto-end driving models",
+              "citation": "B. Jaeger, K. Chitta, and A. Geiger, 'Hidden biases of endto-end driving models,' in ICCV , 2023."
+            },
+            {
+              "title": "Learning from all vehicles",
+              "citation": "D. Chen and P. Krähenbühl, 'Learning from all vehicles,' in CVPR , 2022."
+            },
+            {
+              "title": "Reasonnet: End-to-end driving with temporal",
+              "citation": "H. Shao, L. Wang, R. Chen, S. L. Waslander, H. Li, and Y. Liu, 'Reasonnet: End-to-end driving with temporal"
+            },
+            {
+              "title": "Safetyenhanced autonomous driving using interpretable sensor fusion transformer",
+              "citation": "H. Shao, L. Wang, R. Chen, H. Li, and Y. Liu, 'Safetyenhanced autonomous driving using interpretable sensor fusion transformer,' in CoRL , 2022."
+            },
+            {
+              "title": "Multi-task learning with attention for end-to-end autonomous driving",
+              "citation": "K. Ishihara, A. Kanervisto, J. Miura, and V. Hautamaki, 'Multi-task learning with attention for end-to-end autonomous driving,' in CVPR Workshops , 2021."
+            },
+            {
+              "title": "Learning end-to-end autonomous driving using guided auxiliary supervision",
+              "citation": "A. Mehta, A. Subramanian, and A. Subramanian, 'Learning end-to-end autonomous driving using guided auxiliary supervision,' in ICVGIP , 2018."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.5",
+          "sec_title": "Inefficient Experts and Policy Distillation",
+          "citations": [
+            {
+              "title": "Learning by cheating",
+              "citation": "D. Chen, B. Zhou, V. Koltun, and P. Krähenbühl, 'Learning by cheating,' in CoRL , 2020."
+            },
+            {
+              "title": "Learning from all vehicles",
+              "citation": "D. Chen and P. Krähenbühl, 'Learning from all vehicles,' in CVPR , 2022."
+            },
+            {
+              "title": "Learning to steer by mimicking features from heterogeneous auxiliary networks",
+              "citation": "Y. Hou, Z. Ma, C. Liu, and C. C. Loy, 'Learning to steer by mimicking features from heterogeneous auxiliary networks,' in AAAI , 2019."
+            },
+            {
+              "title": "Sam: Squeeze-and-mimic networks for conditional visual driving policy learning",
+              "citation": "A. Zhao, T. He, Y. Liang, H. Huang, G. Van den Broeck, and S. Soatto, 'Sam: Squeeze-and-mimic networks for conditional visual driving policy learning,' in CoRL , 2020."
+            },
+            {
+              "title": "Coaching a teachable student",
+              "citation": "J. Zhang, Z. Huang, and E. Ohn-Bar, 'Coaching a teachable student,' in CVPR , 2023."
+            },
+            {
+              "title": "Learning to drive from a world on rails",
+              "citation": "D. Chen, V. Koltun, and P. Krähenbühl, 'Learning to drive from a world on rails,' in ICCV , 2021."
+            },
+            {
+              "title": "End-to-end urban driving by imitating a reinforcement learning coach",
+              "citation": "Z. Zhang, A. Liniger, D. Dai, F. Yu, and L. Van Gool, 'End-to-end urban driving by imitating a reinforcement learning coach,' in ICCV , 2021."
+            },
+            {
+              "title": "Trajectory-guided control prediction for end-to-end autonomous driving: A simple yet strong baseline",
+              "citation": "P. Wu, X. Jia, L. Chen, J. Yan, H. Li, and Y. Qiao, 'Trajectory-guided control prediction for end-to-end autonomous driving: A simple yet strong baseline,' in NeurIPS , 2022."
+            },
+            {
+              "title": "Driveadapter: Breaking the coupling barrier of perception and planning in end-to-end autonomous driving",
+              "citation": "X. Jia, Y. Gao, L. Chen, J. Yan, P. L. Liu, and H. Li, 'Driveadapter: Breaking the coupling barrier of perception and planning in end-to-end autonomous driving,' in ICCV , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.6",
+          "sec_title": "Lack of Interpretability",
+          "citations": [
+            {
+              "title": "Explainability of deep vision-based autonomous driving systems: Review and challenges",
+              "citation": "É. Zablocki, H. Ben-Younes, P. Pérez, and M. Cord, 'Explainability of deep vision-based autonomous driving systems: Review and challenges,' IJCV , 2022."
+            },
+            {
+              "title": "Multi-task learning with attention for end-to-end autonomous driving",
+              "citation": "K. Ishihara, A. Kanervisto, J. Miura, and V. Hautamaki, 'Multi-task learning with attention for end-to-end autonomous driving,' in CVPR Workshops , 2021."
+            },
+            {
+              "title": "Explaining how a deep neural network trained with end-to-end learning steers a car",
+              "citation": "M. Bojarski, P. Yeres, A. Choromanska, K. Choromanski, B. Firner, L. Jackel, and U. Muller, 'Explaining how a deep neural network trained with end-to-end learning steers a car,' arXiv.org , vol. 1704.07911, 2017."
+            },
+            {
+              "title": "Visualbackprop: Efficient visualization of cnns for autonomous driving",
+              "citation": "M. Bojarski, A. Choromanska, K. Choromanski, B. Firner, L. J. Ackel, U. Muller, P. Yeres, and K. Zieba, 'Visualbackprop: Efficient visualization of cnns for autonomous driving,' in ICRA , 2018."
+            },
+            {
+              "title": "Predicting model failure using saliency maps in autonomous driving systems",
+              "citation": "S. Mohseni, A. Jagadeesh, and Z. Wang, 'Predicting model failure using saliency maps in autonomous driving systems,' arXiv.org , vol. 1905.07679, 2019."
+            },
+            {
+              "title": "Interpretable learning for selfdriving cars by visualizing causal attention",
+              "citation": "J. Kim and J. Canny, 'Interpretable learning for selfdriving cars by visualizing causal attention,' in ICCV , 2017."
+            },
+            {
+              "title": "Textual explanations for self-driving vehicles",
+              "citation": "J. Kim, A. Rohrbach, T. Darrell, J. Canny, and Z. Akata, 'Textual explanations for self-driving vehicles,' in ECCV , 2018."
+            },
+            {
+              "title": "Multi-task learning with attention for end-to-end autonomous driving",
+              "citation": "K. Ishihara, A. Kanervisto, J. Miura, and V. Hautamaki, 'Multi-task learning with attention for end-to-end autonomous driving,' in CVPR Workshops , 2021."
+            },
+            {
+              "title": "Learning end-to-end autonomous driving using guided auxiliary supervision",
+              "citation": "A. Mehta, A. Subramanian, and A. Subramanian, 'Learning end-to-end autonomous driving using guided auxiliary supervision,' in ICVGIP , 2018."
+            },
+            {
+              "title": "Interpretable learning for selfdriving cars by visualizing causal attention",
+              "citation": "J. Kim and J. Canny, 'Interpretable learning for selfdriving cars by visualizing causal attention,' in ICCV , 2017."
+            },
+            {
+              "title": "Visual explanation by attention branch network for end-to-end learning-based self-driving",
+              "citation": "K. Mori, H. Fukui, T. Murase, T. Hirakawa, T. Yamashita, and H. Fujiyoshi, 'Visual explanation by attention branch network for end-to-end learning-based self-driving,' in IV , 2019."
+            },
+            {
+              "title": "Deep object-centric policies for autonomous driving",
+              "citation": "D. Wang, C. Devin, Q.-Z. Cai, F. Yu, and T. Darrell, 'Deep object-centric policies for autonomous driving,' in ICRA , 2019."
+            },
+            {
+              "title": "Explaining autonomous driving by learning end-to-end visual attention",
+              "citation": "L. Cultrera, L. Seidenari, F. Becattini, P. Pala, and A. Del Bimbo, 'Explaining autonomous driving by learning end-to-end visual attention,' in CVPR Workshops , 2020."
+            },
+            {
+              "title": "Neat: Neural attention fields for end-to-end autonomous driving",
+              "citation": "K. Chitta, A. Prakash, and A. Geiger, 'Neat: Neural attention fields for end-to-end autonomous driving,' in ICCV , 2021."
+            },
+            {
+              "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+              "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+            },
+            {
+              "title": "Safetyenhanced autonomous driving using interpretable sensor fusion transformer",
+              "citation": "H. Shao, L. Wang, R. Chen, H. Li, and Y. Liu, 'Safetyenhanced autonomous driving using interpretable sensor fusion transformer,' in CoRL , 2022."
+            },
+            {
+              "title": "Hidden biases of endto-end driving models",
+              "citation": "B. Jaeger, K. Chitta, and A. Geiger, 'Hidden biases of endto-end driving models,' in ICCV , 2023."
+            },
+            {
+              "title": "Mmfn: Multi-modal-fusion-net for end-to-end driving",
+              "citation": "Q. Zhang, M. Tang, R. Geng, F. Chen, R. Xin, and L. Wang, 'Mmfn: Multi-modal-fusion-net for end-to-end driving,' in IROS , 2022."
+            },
+            {
+              "title": "Scaling self-supervised end-to-end driving with multiview attention learning",
+              "citation": "Y. Xiao, F. Codevilla, D. P. Bustamante, and A. M. Lopez, 'Scaling self-supervised end-to-end driving with multiview attention learning,' arXiv.org , vol. 2302.03198, 2023."
+            },
+            {
+              "title": "Plant: Explainable planning transformers via object-level representations",
+              "citation": "K. Renz, K. Chitta, O.-B. Mercea, A. S. Koepke, Z. Akata, and A. Geiger, 'Plant: Explainable planning transformers via object-level representations,' in CoRL , 2022."
+            },
+            {
+              "title": "Planning-oriented autonomous driving",
+              "citation": "Y. Hu, J. Yang, L. Chen, K. Li, C. Sima, X. Zhu, S. Chai, S. Du, T. Lin, W. Wang, L. Lu, X. Jia, Q. Liu, J. Dai, Y. Qiao, and H. Li, 'Planning-oriented autonomous driving,' in CVPR , 2023."
+            },
+            {
+              "title": "Neat: Neural attention fields for end-to-end autonomous driving",
+              "citation": "K. Chitta, A. Prakash, and A. Geiger, 'Neat: Neural attention fields for end-to-end autonomous driving,' in ICCV , 2021."
+            },
+            {
+              "title": "Urban driving with conditional imitation learning",
+              "citation": "J. Hawke, R. Shen, C. Gurau, S. Sharma, D. Reda, N. Nikolov, P. Mazur, S. Micklethwaite, N. Griffiths, A. Shah, et al. , 'Urban driving with conditional imitation learning,' in ICRA , 2020."
+            },
+            {
+              "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+              "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+            },
+            {
+              "title": "Safetyenhanced autonomous driving using interpretable sensor fusion transformer",
+              "citation": "H. Shao, L. Wang, R. Chen, H. Li, and Y. Liu, 'Safetyenhanced autonomous driving using interpretable sensor fusion transformer,' in CoRL , 2022."
+            },
+            {
+              "title": "Hidden biases of endto-end driving models",
+              "citation": "B. Jaeger, K. Chitta, and A. Geiger, 'Hidden biases of endto-end driving models,' in ICCV , 2023."
+            },
+            {
+              "title": "Learning from all vehicles",
+              "citation": "D. Chen and P. Krähenbühl, 'Learning from all vehicles,' in CVPR , 2022."
+            },
+            {
+              "title": "Multi-modal sensor fusion-based deep neural network for end-to-end autonomous driving with scene understanding",
+              "citation": "Z. Huang, C. Lv, Y. Xing, and J. Wu, 'Multi-modal sensor fusion-based deep neural network for end-to-end autonomous driving with scene understanding,' IEEE Sensors Journal , 2020."
+            },
+            {
+              "title": "Ground then navigate: Language-guided navigation in dynamic scenes",
+              "citation": "K. Jain, V. Chhangani, A. Tiwari, K. M. Krishna, and V. Gandhi, 'Ground then navigate: Language-guided navigation in dynamic scenes,' in ICRA , 2023."
+            },
+            {
+              "title": "Multi-task learning with attention for end-to-end autonomous driving",
+              "citation": "K. Ishihara, A. Kanervisto, J. Miura, and V. Hautamaki, 'Multi-task learning with attention for end-to-end autonomous driving,' in CVPR Workshops , 2021."
+            },
+            {
+              "title": "Rethinking self-driving: Multi-task knowledge for better generalization and accident explanation ability",
+              "citation": "Z. Li, T. Motoyoshi, K. Sasaki, T. Ogata, and S. Sugano, 'Rethinking self-driving: Multi-task knowledge for better generalization and accident explanation ability,' arXiv.org , vol. 1809.11100, 2018."
+            },
+            {
+              "title": "End-to-end learning of driving models from large-scale video datasets",
+              "citation": "H. Xu, Y. Gao, F. Yu, and T. Darrell, 'End-to-end learning of driving models from large-scale video datasets,' in CVPR , 2017."
+            },
+            {
+              "title": "Interpretable end-to-end driving model for implicit scene understanding",
+              "citation": "Y. Sun, X. Wang, Y. Zhang, J. Tang, X. Tang, and J. Yao, 'Interpretable end-to-end driving model for implicit scene understanding,' in ITSC , 2023."
+            },
+            {
+              "title": "Urban driving with conditional imitation learning",
+              "citation": "J. Hawke, R. Shen, C. Gurau, S. Sharma, D. Reda, N. Nikolov, P. Mazur, S. Micklethwaite, N. Griffiths, A. Shah, et al. , 'Urban driving with conditional imitation learning,' in ICRA , 2020."
+            },
+            {
+              "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+              "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+            },
+            {
+              "title": "Hidden biases of endto-end driving models",
+              "citation": "B. Jaeger, K. Chitta, and A. Geiger, 'Hidden biases of endto-end driving models,' in ICCV , 2023."
+            },
+            {
+              "title": "Multi-task learning with attention for end-to-end autonomous driving",
+              "citation": "K. Ishihara, A. Kanervisto, J. Miura, and V. Hautamaki, 'Multi-task learning with attention for end-to-end autonomous driving,' in CVPR Workshops , 2021."
+            },
+            {
+              "title": "Rethinking self-driving: Multi-task knowledge for better generalization and accident explanation ability",
+              "citation": "Z. Li, T. Motoyoshi, K. Sasaki, T. Ogata, and S. Sugano, 'Rethinking self-driving: Multi-task knowledge for better generalization and accident explanation ability,' arXiv.org , vol. 1809.11100, 2018."
+            },
+            {
+              "title": "Planning-oriented autonomous driving",
+              "citation": "Y. Hu, J. Yang, L. Chen, K. Li, C. Sima, X. Zhu, S. Chai, S. Du, T. Lin, W. Wang, L. Lu, X. Jia, Q. Liu, J. Dai, Y. Qiao, and H. Li, 'Planning-oriented autonomous driving,' in CVPR , 2023."
+            },
+            {
+              "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+              "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+            },
+            {
+              "title": "Hidden biases of endto-end driving models",
+              "citation": "B. Jaeger, K. Chitta, and A. Geiger, 'Hidden biases of endto-end driving models,' in ICCV , 2023."
+            },
+            {
+              "title": "Learning from all vehicles",
+              "citation": "D. Chen and P. Krähenbühl, 'Learning from all vehicles,' in CVPR , 2022."
+            },
+            {
+              "title": "Safetyenhanced autonomous driving using interpretable sensor fusion transformer",
+              "citation": "H. Shao, L. Wang, R. Chen, H. Li, and Y. Liu, 'Safetyenhanced autonomous driving using interpretable sensor fusion transformer,' in CoRL , 2022."
+            },
+            {
+              "title": "Multi-task learning with attention for end-to-end autonomous driving",
+              "citation": "K. Ishihara, A. Kanervisto, J. Miura, and V. Hautamaki, 'Multi-task learning with attention for end-to-end autonomous driving,' in CVPR Workshops , 2021."
+            },
+            {
+              "title": "Learning end-to-end autonomous driving using guided auxiliary supervision",
+              "citation": "A. Mehta, A. Subramanian, and A. Subramanian, 'Learning end-to-end autonomous driving using guided auxiliary supervision,' in ICVGIP , 2018."
+            },
+            {
+              "title": "Planning-oriented autonomous driving",
+              "citation": "Y. Hu, J. Yang, L. Chen, K. Li, C. Sima, X. Zhu, S. Chai, S. Du, T. Lin, W. Wang, L. Lu, X. Jia, Q. Liu, J. Dai, Y. Qiao, and H. Li, 'Planning-oriented autonomous driving,' in CVPR , 2023."
+            },
+            {
+              "title": "Learning from all vehicles",
+              "citation": "D. Chen and P. Krähenbühl, 'Learning from all vehicles,' in CVPR , 2022."
+            },
+            {
+              "title": "Using eye gaze to enhance generalization of imitation networks to unseen environments",
+              "citation": "C. Liu, Y. Chen, M. Liu, and B. E. Shi, 'Using eye gaze to enhance generalization of imitation networks to unseen environments,' TNNLS , 2020."
+            },
+            {
+              "title": "Neat: Neural attention fields for end-to-end autonomous driving",
+              "citation": "K. Chitta, A. Prakash, and A. Geiger, 'Neat: Neural attention fields for end-to-end autonomous driving,' in ICCV , 2021."
+            },
+            {
+              "title": "Urban driving with conditional imitation learning",
+              "citation": "J. Hawke, R. Shen, C. Gurau, S. Sharma, D. Reda, N. Nikolov, P. Mazur, S. Micklethwaite, N. Griffiths, A. Shah, et al. , 'Urban driving with conditional imitation learning,' in ICRA , 2020."
+            },
+            {
+              "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+              "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+            },
+            {
+              "title": "Hidden biases of endto-end driving models",
+              "citation": "B. Jaeger, K. Chitta, and A. Geiger, 'Hidden biases of endto-end driving models,' in ICCV , 2023."
+            },
+            {
+              "title": "Multi-modal sensor fusion-based deep neural network for end-to-end autonomous driving with scene understanding",
+              "citation": "Z. Huang, C. Lv, Y. Xing, and J. Wu, 'Multi-modal sensor fusion-based deep neural network for end-to-end autonomous driving with scene understanding,' IEEE Sensors Journal , 2020."
+            },
+            {
+              "title": "Multi-task learning with attention for end-to-end autonomous driving",
+              "citation": "K. Ishihara, A. Kanervisto, J. Miura, and V. Hautamaki, 'Multi-task learning with attention for end-to-end autonomous driving,' in CVPR Workshops , 2021."
+            },
+            {
+              "title": "Rethinking self-driving: Multi-task knowledge for better generalization and accident explanation ability",
+              "citation": "Z. Li, T. Motoyoshi, K. Sasaki, T. Ogata, and S. Sugano, 'Rethinking self-driving: Multi-task knowledge for better generalization and accident explanation ability,' arXiv.org , vol. 1809.11100, 2018."
+            },
+            {
+              "title": "Learning end-to-end autonomous driving using guided auxiliary supervision",
+              "citation": "A. Mehta, A. Subramanian, and A. Subramanian, 'Learning end-to-end autonomous driving using guided auxiliary supervision,' in ICVGIP , 2018."
+            },
+            {
+              "title": "Safetyenhanced autonomous driving using interpretable sensor fusion transformer",
+              "citation": "H. Shao, L. Wang, R. Chen, H. Li, and Y. Liu, 'Safetyenhanced autonomous driving using interpretable sensor fusion transformer,' in CoRL , 2022."
+            },
+            {
+              "title": "Learning from all vehicles",
+              "citation": "D. Chen and P. Krähenbühl, 'Learning from all vehicles,' in CVPR , 2022."
+            },
+            {
+              "title": "End-to-end interpretable neural motion planner",
+              "citation": "W. Zeng, W. Luo, S. Suo, A. Sadat, B. Yang, S. Casas, and R. Urtasun, 'End-to-end interpretable neural motion planner,' in CVPR , 2019."
+            },
+            {
+              "title": "Dsdnet: Deep structured self-driving network",
+              "citation": "W. Zeng, S. Wang, R. Liao, Y. Chen, B. Yang, and R. Urtasun, 'Dsdnet: Deep structured self-driving network,' in ECCV , 2020."
+            },
+            {
+              "title": "Perceive, predict, and plan: Safe motion planning through interpretable semantic representations",
+              "citation": "A. Sadat, S. Casas, M. Ren, X. Wu, P. Dhawan, and R. Urtasun, 'Perceive, predict, and plan: Safe motion planning through interpretable semantic representations,' in ECCV , 2020."
+            },
+            {
+              "title": "Mp3: A unified model to map, perceive, predict and plan",
+              "citation": "S. Casas, A. Sadat, and R. Urtasun, 'Mp3: A unified model to map, perceive, predict and plan,' in CVPR , 2021."
+            },
+            {
+              "title": "Differentiable raycasting for self-supervised occupancy forecasting",
+              "citation": "T. Khurana, P. Hu, A. Dave, J. Ziglar, D. Held, and D. Ramanan, 'Differentiable raycasting for self-supervised occupancy forecasting,' in ECCV , 2022."
+            },
+            {
+              "title": "Safe local motion planning with self-supervised freespace forecasting",
+              "citation": "P. Hu, A. Huang, J. Dolan, D. Held, and D. Ramanan, 'Safe local motion planning with self-supervised freespace forecasting,' in CVPR , 2021."
+            },
+            {
+              "title": "St-p3: End-to-end vision-based autonomous driving via spatialtemporal feature learning",
+              "citation": "S. Hu, L. Chen, P. Wu, H. Li, J. Yan, and D. Tao, 'St-p3: End-to-end vision-based autonomous driving via spatialtemporal feature learning,' in ECCV , 2022."
+            },
+            {
+              "title": "Parting with misconceptions about learning-based vehicle motion planning",
+              "citation": "D. Dauner, M. Hallgarten, A. Geiger, and K. Chitta, 'Parting with misconceptions about learning-based vehicle motion planning,' in CoRL , 2023."
+            },
+            {
+              "title": "Vad: Vectorized scene representation for efficient autonomous driving",
+              "citation": "B. Jiang, S. Chen, Q. Xu, B. Liao, J. Chen, H. Zhou, Q. Zhang, W. Liu, C. Huang, and X. Wang, 'Vad: Vectorized scene representation for efficient autonomous driving,' in ICCV , 2023."
+            },
+            {
+              "title": "Lookout: Diverse multi-future prediction and planning for self-driving",
+              "citation": "A. Cui, S. Casas, A. Sadat, R. Liao, and R. Urtasun, 'Lookout: Diverse multi-future prediction and planning for self-driving,' in ICCV , 2021."
+            },
+            {
+              "title": "Textual explanations for self-driving vehicles",
+              "citation": "J. Kim, A. Rohrbach, T. Darrell, J. Canny, and Z. Akata, 'Textual explanations for self-driving vehicles,' in ECCV , 2018."
+            },
+            {
+              "title": "Explainable object-induced action decision for autonomous vehicles",
+              "citation": "Y. Xu, X. Yang, L. Gong, H.-C. Lin, T.-Y. Wu, Y. Li, and N. Vasconcelos, 'Explainable object-induced action decision for autonomous vehicles,' in CVPR , 2020."
+            },
+            {
+              "title": "Driving behavior explanation with multi-level fusion",
+              "citation": "H. Ben-Younes, É. Zablocki, P. Pérez, and M. Cord, 'Driving behavior explanation with multi-level fusion,' Pattern Recognition , 2022."
+            },
+            {
+              "title": "Adapt: Action-aware driving caption transformer",
+              "citation": "B. Jin, X. Liu, Y. Zheng, P. Li, H. Zhao, T. Zhang, Y. Zheng, G. Zhou, and J. Liu, 'Adapt: Action-aware driving caption transformer,' in ICRA , 2023."
+            },
+            {
+              "title": "Drivegpt4: Interpretable end-to-end au-",
+              "citation": "Z. Xu, Y. Zhang, E. Xie, Z. Zhao, Y. Guo, K. K. Wong, Z. Li, and H. Zhao, 'Drivegpt4: Interpretable end-to-end au-"
+            },
+            {
+              "title": "Drivelm: Driving with graph visual question answering",
+              "citation": "C. Sima, K. Renz, K. Chitta, L. Chen, H. Zhang, C. Xie, J. Beißwenger, P. Luo, A. Geiger, and H. Li, 'Drivelm: Driving with graph visual question answering,' in ECCV , 2024."
+            },
+            {
+              "title": "Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario",
+              "citation": "T. Qian, J. Chen, L. Zhuo, Y. Jiao, and Y.-G. Jiang, 'Nuscenes-qa: A multi-modal visual question answering benchmark for autonomous driving scenario,' in AAAI , 2024."
+            },
+            {
+              "title": "On calibration of modern neural networks",
+              "citation": "C. Guo, G. Pleiss, Y. Sun, and K. Q. Weinberger, 'On calibration of modern neural networks,' in ICML , 2017."
+            },
+            {
+              "title": "A general framework for uncertainty estimation in deep learning",
+              "citation": "A. Loquercio, M. Segu, and D. Scaramuzza, 'A general framework for uncertainty estimation in deep learning,' RA-L , 2020."
+            },
+            {
+              "title": "Evaluating uncertainty quantification in end-to-end autonomous driving control",
+              "citation": "R. Michelmore, M. Kwiatkowska, and Y. Gal, 'Evaluating uncertainty quantification in end-to-end autonomous driving control,' arXiv.org , vol. 1811.06817, 2018."
+            },
+            {
+              "title": "A general framework for uncertainty estimation in deep learning",
+              "citation": "A. Loquercio, M. Segu, and D. Scaramuzza, 'A general framework for uncertainty estimation in deep learning,' RA-L , 2020."
+            },
+            {
+              "title": "Can autonomous vehicles identify, recover from, and adapt to distribution shifts?",
+              "citation": "A. Filos, P. Tigkas, R. McAllister, N. Rhinehart, S. Levine, and Y. Gal, 'Can autonomous vehicles identify, recover from, and adapt to distribution shifts?,' in ICML , 2020."
+            },
+            {
+              "title": "Probabilistic endto-end vehicle navigation in complex dynamic environments with multimodal sensor fusion",
+              "citation": "P. Cai, S. Wang, Y. Sun, and M. Liu, 'Probabilistic endto-end vehicle navigation in complex dynamic environments with multimodal sensor fusion,' RA-L , 2020."
+            },
+            {
+              "title": "Visualbased autonomous driving deployment from a stochastic and uncertainty-aware perspective",
+              "citation": "L. Tai, P. Yun, Y. Chen, C. Liu, H. Ye, and M. Liu, 'Visualbased autonomous driving deployment from a stochastic and uncertainty-aware perspective,' in IROS , 2019."
+            },
+            {
+              "title": "Vtgnet: A visionbased trajectory generation network for autonomous vehicles in urban environments",
+              "citation": "P. Cai, Y. Sun, H. Wang, and M. Liu, 'Vtgnet: A visionbased trajectory generation network for autonomous vehicles in urban environments,' IV , 2020."
+            },
+            {
+              "title": "Visualbased autonomous driving deployment from a stochastic and uncertainty-aware perspective",
+              "citation": "L. Tai, P. Yun, Y. Chen, C. Liu, H. Ye, and M. Liu, 'Visualbased autonomous driving deployment from a stochastic and uncertainty-aware perspective,' in IROS , 2019."
+            },
+            {
+              "title": "Probabilistic endto-end vehicle navigation in complex dynamic environments with multimodal sensor fusion",
+              "citation": "P. Cai, S. Wang, Y. Sun, and M. Liu, 'Probabilistic endto-end vehicle navigation in complex dynamic environments with multimodal sensor fusion,' RA-L , 2020."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.7",
+          "sec_title": "Lack of Safety Guarantees",
+          "citations": [
+            {
+              "title": "On a formal model of safe and scalable self-driving cars",
+              "citation": "S. Shalev-Shwartz, S. Shammah, and A. Shashua, 'On a formal model of safe and scalable self-driving cars,' arXiv.org , vol. 1708.06374, 2017."
+            },
+            {
+              "title": "Stochastic model predictive control with a safety guarantee for automated driving",
+              "citation": "T. Brüdigam, M. Olbrich, D. Wollherr, and M. Leibold, 'Stochastic model predictive control with a safety guarantee for automated driving,' IV , 2021."
+            },
+            {
+              "title": "Probabilistic safetyassured adaptive merging control for autonomous vehicles",
+              "citation": "Y. Lyu, W. Luo, and J. M. Dolan, 'Probabilistic safetyassured adaptive merging control for autonomous vehicles,' in ICRA , 2021."
+            },
+            {
+              "title": "Realtime mpc with control barrier functions for autonomous driving using safety enhanced collocation",
+              "citation": "J. P . Allamaa, P . Patrinos, T. Ohtsuka, and T. D. Son, 'Realtime mpc with control barrier functions for autonomous driving using safety enhanced collocation,' arXiv.org , vol. 2401.06648, 2024."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.8",
+          "sec_title": "Causal Confusion",
+          "citations": [
+            {
+              "title": "Shortcut learning in deep neural networks",
+              "citation": "R. Geirhos, J. Jacobsen, C. Michaelis, R. S. Zemel, W. Brendel, M. Bethge, and F. A. Wichmann, 'Shortcut learning in deep neural networks,' Nature Machine Intelligence , 2020."
+            },
+            {
+              "title": "Fighting copycat agents in behavioral cloning from observation histories",
+              "citation": "C. Wen, J. Lin, T. Darrell, D. Jayaraman, and Y. Gao, 'Fighting copycat agents in behavioral cloning from observation histories,' in NeurIPS , 2020."
+            },
+            {
+              "title": "Causal confusion in imitation learning",
+              "citation": "P. de Haan, D. Jayaraman, and S. Levine, 'Causal confusion in imitation learning,' in NeurIPS , 2019."
+            },
+            {
+              "title": "Offroad obstacle avoidance through end-to-end learning",
+              "citation": "U. Muller, J. Ben, E. Cosatto, B. Flepp, and Y. LeCun, 'Offroad obstacle avoidance through end-to-end learning,' in NeurIPS , 2005."
+            },
+            {
+              "title": "Trajectory-guided control prediction for end-to-end autonomous driving: A simple yet strong baseline",
+              "citation": "P. Wu, X. Jia, L. Chen, J. Yan, H. Li, and Y. Qiao, 'Trajectory-guided control prediction for end-to-end autonomous driving: A simple yet strong baseline,' in NeurIPS , 2022."
+            },
+            {
+              "title": "Transfuser: Imitation with transformer-based sensor fusion for autonomous driving",
+              "citation": "K. Chitta, A. Prakash, B. Jaeger, Z. Yu, K. Renz, and A. Geiger, 'Transfuser: Imitation with transformer-based sensor fusion for autonomous driving,' PAMI , 2022."
+            },
+            {
+              "title": "Exploring the limitations of behavior cloning for autonomous driving",
+              "citation": "F. Codevilla, E. Santana, A. M. López, and A. Gaidon, 'Exploring the limitations of behavior cloning for autonomous driving,' in ICCV , 2019."
+            },
+            {
+              "title": "Fighting copycat agents in behavioral cloning from observation histories",
+              "citation": "C. Wen, J. Lin, T. Darrell, D. Jayaraman, and Y. Gao, 'Fighting copycat agents in behavioral cloning from observation histories,' in NeurIPS , 2020."
+            },
+            {
+              "title": "Object-aware regularization for addressing causal confusion in imitation learning",
+              "citation": "J. Park, Y. Seo, C. Liu, L. Zhao, T. Qin, J. Shin, and T.-Y. Liu, 'Object-aware regularization for addressing causal confusion in imitation learning,' in NeurIPS , 2021."
+            },
+            {
+              "title": "Chauffeurnet: Learning to drive by imitating the best and synthesizing the worst",
+              "citation": "M. Bansal, A. Krizhevsky, and A. S. Ogale, 'Chauffeurnet: Learning to drive by imitating the best and synthesizing the worst,' in RSS , 2019."
+            },
+            {
+              "title": "Keyframe-focused visual imitation learning",
+              "citation": "C. Wen, J. Lin, J. Qian, Y. Gao, and D. Jayaraman, 'Keyframe-focused visual imitation learning,' in ICML , 2021."
+            },
+            {
+              "title": "",
+              "citation": "C. Wen, J. Qian, J. Lin, J. Teng, D. Jayaraman, and Y. Gao,"
+            },
+            {
+              "title": "Resolving copycat problems in visual imitation learning via residual action prediction",
+              "citation": "C. Chuang, D. Yang, C. Wen, and Y. Gao, 'Resolving copycat problems in visual imitation learning via residual action prediction,' in ECCV , 2022."
+            },
+            {
+              "title": "Mp3: A unified model to map, perceive, predict and plan",
+              "citation": "S. Casas, A. Sadat, and R. Urtasun, 'Mp3: A unified model to map, perceive, predict and plan,' in CVPR , 2021."
+            },
+            {
+              "title": "End-to-end interpretable neural motion planner",
+              "citation": "W. Zeng, W. Luo, S. Suo, A. Sadat, B. Yang, S. Casas, and R. Urtasun, 'End-to-end interpretable neural motion planner,' in CVPR , 2019."
+            },
+            {
+              "title": "Learning from all vehicles",
+              "citation": "D. Chen and P. Krähenbühl, 'Learning from all vehicles,' in CVPR , 2022."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.9",
+          "sec_title": "Lack of Robustness",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.9.1",
+              "sec_title": "Long-tailed Distribution",
+              "citations": [
+                {
+                  "title": "A systematic study of the class imbalance problem in convolutional neural networks",
+                  "citation": "M. Buda, A. Maki, and M. A. Mazurowski, 'A systematic study of the class imbalance problem in convolutional neural networks,' NN , 2018."
+                },
+                {
+                  "title": "What is the effect of importance weighting in deep learning?",
+                  "citation": "J. Byrd and Z. Lipton, 'What is the effect of importance weighting in deep learning?,' in ICML , 2019."
+                },
+                {
+                  "title": "knn approach to unbalanced data distributions: a case study involving information extraction",
+                  "citation": "I. Mani and I. Zhang, 'knn approach to unbalanced data distributions: a case study involving information extraction,' in ICML Workshops , 2003."
+                },
+                {
+                  "title": "Exploratory undersampling for class-imbalance learning",
+                  "citation": "X.-Y. Liu, J. Wu, and Z.-H. Zhou, 'Exploratory undersampling for class-imbalance learning,' TCYB , 2008."
+                },
+                {
+                  "title": "Dynamic few-shot visual learning without forgetting",
+                  "citation": "S. Gidaris and N. Komodakis, 'Dynamic few-shot visual learning without forgetting,' in CVPR , 2018."
+                },
+                {
+                  "title": "mixup: Beyond empirical risk minimization",
+                  "citation": "H. Zhang, M. Cisse, Y. N. Dauphin, and D. Lopez-Paz, 'mixup: Beyond empirical risk minimization,' in ICLR , 2017."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T.-Y. Lin, P . Goyal, R. Girshick, K. He, and P. Dollár, 'Focal loss for dense object detection,' in ICCV , 2017."
+                },
+                {
+                  "title": "Classbalanced loss based on effective number of samples",
+                  "citation": "Y. Cui, M. Jia, T.-Y. Lin, Y. Song, and S. Belongie, 'Classbalanced loss based on effective number of samples,' in CVPR , 2019."
+                },
+                {
+                  "title": "CARLA autonomous driving leaderboard",
+                  "citation": "CARLA, 'CARLA autonomous driving leaderboard.' https://leaderboard.carla.org/, 2022."
+                },
+                {
+                  "title": "Trafficsim: Learning to simulate realistic multi-agent behaviors",
+                  "citation": "S. Suo, S. Regalado, S. Casas, and R. Urtasun, 'Trafficsim: Learning to simulate realistic multi-agent behaviors,' in CVPR , 2021."
+                },
+                {
+                  "title": "Enhanced transfer learning for autonomous driving with systematic accident simulation",
+                  "citation": "S. Akhauri, L. Y. Zheng, and M. C. Lin, 'Enhanced transfer learning for autonomous driving with systematic accident simulation,' in IROS , 2020."
+                },
+                {
+                  "title": "Improving the generalization of end-to-end driving through procedural generation",
+                  "citation": "Q. Li, Z. Peng, Q. Zhang, C. Liu, and B. Zhou, 'Improving the generalization of end-to-end driving through procedural generation,' arXiv.org , vol. 2012.13681, 2020."
+                },
+                {
+                  "title": "",
+                  "citation": "P. A. Lopez, M. Behrisch, L. Bieker-Walz, J. Erdmann, Y.-P. Flötteröd, R. Hilbrich, L. Lücken, J. Rummel, P. Wagner,"
+                },
+                {
+                  "title": "Learning by cheating",
+                  "citation": "D. Chen, B. Zhou, V. Koltun, and P. Krähenbühl, 'Learning by cheating,' in CoRL , 2020."
+                },
+                {
+                  "title": "Learning from all vehicles",
+                  "citation": "D. Chen and P. Krähenbühl, 'Learning from all vehicles,' in CVPR , 2022."
+                },
+                {
+                  "title": "Scalable end-to-end autonomous vehicle testing via rare-event simulation",
+                  "citation": "M. O'Kelly, A. Sinha, H. Namkoong, R. Tedrake, and J. C. Duchi, 'Scalable end-to-end autonomous vehicle testing via rare-event simulation,' in NeurIPS , 2018."
+                },
+                {
+                  "title": "King: Generating safety-critical driving scenarios for robust imitation via kinematics gradients",
+                  "citation": "N. Hanselmann, K. Renz, K. Chitta, A. Bhattacharyya, and A. Geiger, 'King: Generating safety-critical driving scenarios for robust imitation via kinematics gradients,' in ECCV , 2022."
+                },
+                {
+                  "title": "Advsim: Generating safety-critical scenarios for self-driving vehicles",
+                  "citation": "J. Wang, A. Pun, J. Tu, S. Manivasagam, A. Sadat, S. Casas, M. Ren, and R. Urtasun, 'Advsim: Generating safety-critical scenarios for self-driving vehicles,' in CVPR , 2021."
+                },
+                {
+                  "title": "Learning to collide: An adaptive safety-critical scenarios generating method",
+                  "citation": "W. Ding, B. Chen, M. Xu, and D. Zhao, 'Learning to collide: An adaptive safety-critical scenarios generating method,' in IROS , 2020."
+                },
+                {
+                  "title": "Generating adversarial driving scenarios in high-fidelity simulators",
+                  "citation": "Y. Abeysirigoonawardena, F. Shkurti, and G. Dudek, 'Generating adversarial driving scenarios in high-fidelity simulators,' in ICRA , 2019."
+                },
+                {
+                  "title": "Multimodal safety-critical scenarios generation for decisionmaking algorithms evaluation",
+                  "citation": "W. Ding, B. Chen, B. Li, K. J. Eun, and D. Zhao, 'Multimodal safety-critical scenarios generation for decisionmaking algorithms evaluation,' RA-L , 2021."
+                },
+                {
+                  "title": "CAT: Closedloop adversarial training for safe end-to-end driving",
+                  "citation": "L. Zhang, Z. Peng, Q. Li, and B. Zhou, 'CAT: Closedloop adversarial training for safe end-to-end driving,' in CoRL , 2023."
+                },
+                {
+                  "title": "Generating adversarial driving scenarios in high-fidelity simulators",
+                  "citation": "Y. Abeysirigoonawardena, F. Shkurti, and G. Dudek, 'Generating adversarial driving scenarios in high-fidelity simulators,' in ICRA , 2019."
+                },
+                {
+                  "title": "Learning to collide: An adaptive safety-critical scenarios generating method",
+                  "citation": "W. Ding, B. Chen, M. Xu, and D. Zhao, 'Learning to collide: An adaptive safety-critical scenarios generating method,' in IROS , 2020."
+                },
+                {
+                  "title": "Advsim: Generating safety-critical scenarios for self-driving vehicles",
+                  "citation": "J. Wang, A. Pun, J. Tu, S. Manivasagam, A. Sadat, S. Casas, M. Ren, and R. Urtasun, 'Advsim: Generating safety-critical scenarios for self-driving vehicles,' in CVPR , 2021."
+                },
+                {
+                  "title": "King: Generating safety-critical driving scenarios for robust imitation via kinematics gradients",
+                  "citation": "N. Hanselmann, K. Renz, K. Chitta, A. Bhattacharyya, and A. Geiger, 'King: Generating safety-critical driving scenarios for robust imitation via kinematics gradients,' in ECCV , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.9.2",
+              "sec_title": "Covariate Shift",
+              "citations": [
+                {
+                  "title": "A reduction of imitation learning and structured prediction to no-regret online learning",
+                  "citation": "S. Ross, G. Gordon, and D. Bagnell, 'A reduction of imitation learning and structured prediction to no-regret online learning,' in AISTATS , 2011."
+                },
+                {
+                  "title": "Agile autonomous driving using end-to-end deep imitation learning",
+                  "citation": "Y. Pan, C.-A. Cheng, K. Saigol, K. Lee, X. Yan, E. A. Theodorou, and B. Boots, 'Agile autonomous driving using end-to-end deep imitation learning,' in RSS , 2017."
+                },
+                {
+                  "title": "Query-efficient imitation learning for end-to-end simulated driving",
+                  "citation": "J. Zhang and K. Cho, 'Query-efficient imitation learning for end-to-end simulated driving,' in AAAI , 2017."
+                },
+                {
+                  "title": "Meta learning framework for automated driving",
+                  "citation": "A. E. Sallab, M. Saeed, O. A. Tawab, and M. Abdou, 'Meta learning framework for automated driving,' arXiv.org , vol. 1706.04038, 2017."
+                },
+                {
+                  "title": "Learning by cheating",
+                  "citation": "D. Chen, B. Zhou, V. Koltun, and P. Krähenbühl, 'Learning by cheating,' in CoRL , 2020."
+                },
+                {
+                  "title": "Exploring data aggregation in policy learning for visionbased urban autonomous driving",
+                  "citation": "A. Prakash, A. Behl, E. Ohn-Bar, K. Chitta, and A. Geiger, 'Exploring data aggregation in policy learning for visionbased urban autonomous driving,' in CVPR , 2020."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.9.3",
+              "sec_title": "Domain Adaptation",
+              "citations": [
+                {
+                  "title": "A survey on deep domain adaptation for lidar perception",
+                  "citation": "L. T. Triess, M. Dreissig, C. B. Rist, and J. M. Zöllner, 'A survey on deep domain adaptation for lidar perception,' in IV Workshops , 2021."
+                },
+                {
+                  "title": "Virtual to real reinforcement learning for autonomous driving",
+                  "citation": "Y. You, X. Pan, Z. Wang, and C. Lu, 'Virtual to real reinforcement learning for autonomous driving,' in BMVC , 2017."
+                },
+                {
+                  "title": "Learning to drive from simulation without real world labels",
+                  "citation": "A. Bewley, J. Rigley, Y. Liu, J. Hawke, R. Shen, V.-D. Lam, and A. Kendall, 'Learning to drive from simulation without real world labels,' in ICRA , 2019."
+                },
+                {
+                  "title": "Domain adaptation in reinforcement learning via latent unified state representation",
+                  "citation": "J. Xing, T. Nagata, K. Chen, X. Zou, E. Neftci, and J. L. Krichmar, 'Domain adaptation in reinforcement learning via latent unified state representation,' in AAAI , 2021."
+                },
+                {
+                  "title": "Visualbased autonomous driving deployment from a stochastic and uncertainty-aware perspective",
+                  "citation": "L. Tai, P. Yun, Y. Chen, C. Liu, H. Ye, and M. Liu, 'Visualbased autonomous driving deployment from a stochastic and uncertainty-aware perspective,' in IROS , 2019."
+                },
+                {
+                  "title": "Segmented encoding for sim2real of rl-based end-to-end autonomous driving",
+                  "citation": "S.-H. Chung, S.-H. Kong, S. Cho, and I. M. A. Nahrendra, 'Segmented encoding for sim2real of rl-based end-to-end autonomous driving,' in IV , 2022."
+                },
+                {
+                  "title": "Domain randomization for transferring deep neural networks from simulation to the real world",
+                  "citation": "J. Tobin, R. Fong, A. Ray, J. Schneider, W. Zaremba, and P. Abbeel, 'Domain randomization for transferring deep neural networks from simulation to the real world,' in IROS , 2017."
+                },
+                {
+                  "title": "Sim-to-real transfer of robotic control with dynamics randomization",
+                  "citation": "X. B. Peng, M. Andrychowicz, W. Zaremba, and P. Abbeel, 'Sim-to-real transfer of robotic control with dynamics randomization,' in ICRA , 2018."
+                },
+                {
+                  "title": "Sim-to-real reinforcement learning for deformable object manipulation",
+                  "citation": "J. Matas, S. James, and A. J. Davison, 'Sim-to-real reinforcement learning for deformable object manipulation,' in CoRL , 2018."
+                },
+                {
+                  "title": "A versatile and efficient reinforcement learning framework for autonomous driving",
+                  "citation": "G. Wang, H. Niu, D. Zhu, J. Hu, X. Zhan, and G. Zhou, 'A versatile and efficient reinforcement learning framework for autonomous driving,' arXiv.org , vol. 2110.11573, 2021."
+                },
+                {
+                  "title": "Simulation-based reinforcement learning for real-world autonomous driving",
+                  "citation": "B. Osi´ nski, A. Jakubowski, P. Zi˛ ecina, P. Miło´ s, C. Galias, S. Homoceanu, and H. Michalewski, 'Simulation-based reinforcement learning for real-world autonomous driving,' in ICRA , 2020."
+                },
+                {
+                  "title": "Nerf: Representing scenes as neural radiance fields for view synthesis",
+                  "citation": "B. Mildenhall, P. P. Srinivasan, M. Tancik, J. T. Barron, R. Ramamoorthi, and R. Ng, 'Nerf: Representing scenes as neural radiance fields for view synthesis,' in ECCV , 2020."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "FUTURE TRENDS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "Zero-shot and Few-shot Learning",
+          "citations": [
+            {
+              "title": "A survey of zero-shot generalisation in deep reinforcement learning",
+              "citation": "R. Kirk, A. Zhang, E. Grefenstette, and T. Rocktäschel, 'A survey of zero-shot generalisation in deep reinforcement learning,' JAIR , 2023."
+            },
+            {
+              "title": "Prototypical networks for few-shot learning",
+              "citation": "J. Snell, K. Swersky, and R. Zemel, 'Prototypical networks for few-shot learning,' in NeurIPS , 2017."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Modular End-to-end Planning",
+          "citations": [
+            {
+              "title": "Planning-oriented autonomous driving",
+              "citation": "Y. Hu, J. Yang, L. Chen, K. Li, C. Sima, X. Zhu, S. Chai, S. Du, T. Lin, W. Wang, L. Lu, X. Jia, Q. Liu, J. Dai, Y. Qiao, and H. Li, 'Planning-oriented autonomous driving,' in CVPR , 2023."
+            },
+            {
+              "title": "Diffstack: A differentiable and modular control stack for autonomous vehicles",
+              "citation": "P. Karkus, B. Ivanovic, S. Mannor, and M. Pavone, 'Diffstack: A differentiable and modular control stack for autonomous vehicles,' in CoRL , 2022."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.3",
+          "sec_title": "Data Engine",
+          "citations": [
+            {
+              "title": "Open-sourced data ecosystem in autonomous driving: the present and future",
+              "citation": "H. Li, Y. Li, H. Wang, J. Zeng, P. Cai, H. Xu, D. Lin, J. Yan, F. Xu, L. Xiong, et al. , 'Open-sourced data ecosystem in autonomous driving: the present and future,' arXiv.org , vol. 2312.03408, 2023."
+            },
+            {
+              "title": "Segment anything",
+              "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo, et al. , 'Segment anything,' in ICCV , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.4",
+          "sec_title": "Foundation Model",
+          "citations": [
+            {
+              "title": "GPT-4 Technical Report",
+              "citation": "OpenAI, 'GPT-4 Technical Report,' arXiv.org , vol. 2303.08774, 2023."
+            },
+            {
+              "title": "Llama: Open and efficient foundation language models",
+              "citation": "H. Touvron, T. Lavril, G. Izacard, X. Martinet, M.-A. Lachaux, T. Lacroix, B. Rozière, N. Goyal, E. Hambro, F. Azhar, et al. , 'Llama: Open and efficient foundation language models,' arXiv.org , vol. 2302.13971, 2023."
+            },
+            {
+              "title": "Segment anything",
+              "citation": "A. Kirillov, E. Mintun, N. Ravi, H. Mao, C. Rolland, L. Gustafson, T. Xiao, S. Whitehead, A. C. Berg, W.-Y. Lo, et al. , 'Segment anything,' in ICCV , 2023."
+            },
+            {
+              "title": "Dinov2: Learning robust visual features without supervision",
+              "citation": "M. Oquab, T. Darcet, T. Moutakanni, H. Vo, M. Szafraniec, V. Khalidov, P. Fernandez, D. Haziza, F. Massa, A. ElNouby, et al. , 'Dinov2: Learning robust visual features without supervision,' TMLR , 2024."
+            },
+            {
+              "title": "Flamingo: a visual language model for few-shot learning",
+              "citation": "J.-B. Alayrac, J. Donahue, P. Luc, A. Miech, I. Barr, Y. Hasson, K. Lenc, A. Mensch, K. Millican, M. Reynolds, et al. , 'Flamingo: a visual language model for few-shot learning,' in NeurIPS , 2022."
+            },
+            {
+              "title": "Training language models to follow instructions with human feedback",
+              "citation": "L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray, et al. , 'Training language models to follow instructions with human feedback,' in NeurIPS , 2022."
+            },
+            {
+              "title": "Masked autoencoders are scalable vision learners",
+              "citation": "K. He, X. Chen, S. Xie, Y. Li, P. Dollár, and R. Girshick, 'Masked autoencoders are scalable vision learners,' in CVPR , 2022."
+            },
+            {
+              "title": "Learning transferable visual models from natural language supervision",
+              "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, et al. , 'Learning transferable visual models from natural language supervision,' in ICML , 2021."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "CONCLUSION AND OUTLOOK",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

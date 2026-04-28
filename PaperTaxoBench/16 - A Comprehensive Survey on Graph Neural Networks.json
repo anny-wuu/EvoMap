@@ -1,0 +1,2657 @@
+{
+  "track": "Graph Neural Networks",
+  "paper_title": "A Comprehensive Survey on Graph Neural Networks",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "INTRODUCTION",
+      "citations": [
+        {
+          "title": "You only look once: Unified, real-time object detection",
+          "citation": "J. Redmon, S. Divvala, R. Girshick, and A. Farhadi, 'You only look once: Unified, real-time object detection,' in Proc. of CVPR , 2016, pp. 779-788."
+        },
+        {
+          "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+          "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' in Proc. of NIPS , 2015, pp. 91-99."
+        },
+        {
+          "title": "Effective approaches to attention-based neural machine translation",
+          "citation": "M.-T. Luong, H. Pham, and C. D. Manning, 'Effective approaches to attention-based neural machine translation,' in Proc. of EMNLP , 2015, pp. 1412-1421."
+        },
+        {
+          "title": "Google's neural machine translation system: Bridging the gap between human and machine translation",
+          "citation": "Y. Wu, M. Schuster, Z. Chen, Q. V. Le, M. Norouzi, W. Macherey, M. Krikun, Y. Cao, Q. Gao, K. Macherey et al. , 'Google's neural machine translation system: Bridging the gap between human and machine translation,' arXiv preprint arXiv:1609.08144 , 2016."
+        },
+        {
+          "title": "Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups",
+          "citation": "G. Hinton, L. Deng, D. Yu, G. E. Dahl, A.-r. Mohamed, N. Jaitly, A. Senior, V. Vanhoucke, P. Nguyen, T. N. Sainath et al. , 'Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups,' IEEE Signal processing magazine , vol. 29, no. 6, pp. 82-97, 2012."
+        },
+        {
+          "title": "Convolutional networks for images, speech, and time series",
+          "citation": "Y. LeCun, Y. Bengio et al. , 'Convolutional networks for images, speech, and time series,' The handbook of brain theory and neural networks , vol. 3361, no. 10, p. 1995, 1995."
+        },
+        {
+          "title": "Long short-term memory",
+          "citation": "S. Hochreiter and J. Schmidhuber, 'Long short-term memory,' Neural computation , vol. 9, no. 8, pp. 1735-1780, 1997."
+        },
+        {
+          "title": "Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion",
+          "citation": "P. Vincent, H. Larochelle, I. Lajoie, Y. Bengio, and P.-A. Manzagol, 'Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion,' Journal of machine learning research , vol. 11, no. Dec, pp. 3371-3408, 2010."
+        },
+        {
+          "title": "Geometric deep learning: going beyond euclidean data",
+          "citation": "M. M. Bronstein, J. Bruna, Y. LeCun, A. Szlam, and P. Vandergheynst, 'Geometric deep learning: going beyond euclidean data,' IEEE Signal Processing Magazine , vol. 34, no. 4, pp. 18-42, 2017."
+        },
+        {
+          "title": "Geometric deep learning: going beyond euclidean data",
+          "citation": "M. M. Bronstein, J. Bruna, Y. LeCun, A. Szlam, and P. Vandergheynst, 'Geometric deep learning: going beyond euclidean data,' IEEE Signal Processing Magazine , vol. 34, no. 4, pp. 18-42, 2017."
+        },
+        {
+          "title": "Representation learning on graphs: Methods and applications",
+          "citation": "W. L. Hamilton, R. Ying, and J. Leskovec, 'Representation learning on graphs: Methods and applications,' in Proc. of NIPS , 2017, pp. 1024-1034."
+        },
+        {
+          "title": "Relational inductive biases, deep learning, and graph networks",
+          "citation": "P. W. Battaglia, J. B. Hamrick, V. Bapst, A. Sanchez-Gonzalez, V. Zambaldi, M. Malinowski, A. Tacchetti, D. Raposo, A. Santoro, R. Faulkner et al. , 'Relational inductive biases, deep learning, and graph networks,' arXiv preprint arXiv:1806.01261 , 2018."
+        },
+        {
+          "title": "Attention models in graphs: A survey",
+          "citation": "J. B. Lee, R. A. Rossi, S. Kim, N. K. Ahmed, and E. Koh, 'Attention models in graphs: A survey,' arXiv preprint arXiv:1807.07984 , 2018."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "BACKGROUND & DEFINITION",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Background",
+          "citations": [
+            {
+              "title": "Supervised neural networks for the classification of structures",
+              "citation": "A. Sperduti and A. Starita, 'Supervised neural networks for the classification of structures,' IEEE Transactions on Neural Networks , vol. 8, no. 3, pp. 714-735, 1997."
+            },
+            {
+              "title": "A new model for learning in graph domains",
+              "citation": "M. Gori, G. Monfardini, and F. Scarselli, 'A new model for learning in graph domains,' in Proc. of IJCNN , vol. 2. IEEE, 2005, pp. 729-734."
+            },
+            {
+              "title": "The graph neural network model",
+              "citation": "F. Scarselli, M. Gori, A. C. Tsoi, M. Hagenbuchner, and G. Monfardini, 'The graph neural network model,' IEEE Transactions on Neural Networks , vol. 20, no. 1, pp. 61-80, 2009."
+            },
+            {
+              "title": "Graph echo state networks",
+              "citation": "C. Gallicchio and A. Micheli, 'Graph echo state networks,' in IJCNN . IEEE, 2010, pp. 1-8."
+            },
+            {
+              "title": "Gated graph sequence neural networks",
+              "citation": "Y. Li, D. Tarlow, M. Brockschmidt, and R. Zemel, 'Gated graph sequence neural networks,' in Proc. of ICLR , 2015."
+            },
+            {
+              "title": "Learning steadystates of iterative algorithms over graphs",
+              "citation": "H. Dai, Z. Kozareva, B. Dai, A. Smola, and L. Song, 'Learning steadystates of iterative algorithms over graphs,' in Proc. of ICML , 2018, pp. 1114-1122."
+            },
+            {
+              "title": "Spectral networks and locally connected networks on graphs",
+              "citation": "J. Bruna, W. Zaremba, A. Szlam, and Y. LeCun, 'Spectral networks and locally connected networks on graphs,' in Proc. of ICLR , 2014."
+            },
+            {
+              "title": "Deep convolutional networks on graph-structured data",
+              "citation": "M. Henaff, J. Bruna, and Y. LeCun, 'Deep convolutional networks on graph-structured data,' arXiv preprint arXiv:1506.05163 , 2015."
+            },
+            {
+              "title": "Convolutional neural networks on graphs with fast localized spectral filtering",
+              "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Cayleynets: Graph convolutional neural networks with complex rational spectral filters",
+              "citation": "R. Levie, F. Monti, X. Bresson, and M. M. Bronstein, 'Cayleynets: Graph convolutional neural networks with complex rational spectral filters,' IEEE Transactions on Signal Processing , vol. 67, no. 1, pp. 97-109, 2017."
+            },
+            {
+              "title": "Neural network for graphs: A contextual constructive approach",
+              "citation": "A. Micheli, 'Neural network for graphs: A contextual constructive approach,' IEEE Transactions on Neural Networks , vol. 20, no. 3, pp. 498-511, 2009."
+            },
+            {
+              "title": "Diffusion-convolutional neural networks",
+              "citation": "J. Atwood and D. Towsley, 'Diffusion-convolutional neural networks,' in Proc. of NIPS , 2016, pp. 1993-2001."
+            },
+            {
+              "title": "Learning convolutional neural networks for graphs",
+              "citation": "M. Niepert, M. Ahmed, and K. Kutzkov, 'Learning convolutional neural networks for graphs,' in Proc. of ICML , 2016, pp. 2014-2023."
+            },
+            {
+              "title": "Neural message passing for quantum chemistry",
+              "citation": "J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, 'Neural message passing for quantum chemistry,' in Proc. of ICML , 2017, pp. 1263-1272."
+            },
+            {
+              "title": "Representation learning on graphs: Methods and applications",
+              "citation": "W. L. Hamilton, R. Ying, and J. Leskovec, 'Representation learning on graphs: Methods and applications,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "orbital energies and hydrophobicity",
+              "citation": "orbital energies and hydrophobicity,' Journal of medicinal chemistry , vol. 34, no. 2, pp. 786-797, 1991."
+            },
+            {
+              "title": "Network representation learning: A survey",
+              "citation": "D. Zhang, J. Yin, X. Zhu, and C. Zhang, 'Network representation learning: A survey,' IEEE Transactions on Big Data , 2018."
+            },
+            {
+              "title": "A comprehensive survey of graph embedding: problems, techniques and applications",
+              "citation": "H. Cai, V. W. Zheng, and K. Chang, 'A comprehensive survey of graph embedding: problems, techniques and applications,' IEEE Transactions on Knowledge and Data Engineering , 2018."
+            },
+            {
+              "title": "Graph embedding techniques, applications, and performance: A survey",
+              "citation": "P. Goyal and E. Ferrara, 'Graph embedding techniques, applications, and performance: A survey,' Knowledge-Based Systems , vol. 151, pp. 78-94, 2018."
+            },
+            {
+              "title": "Tri-party deep network representation",
+              "citation": "S. Pan, J. Wu, X. Zhu, C. Zhang, and Y. Wang, 'Tri-party deep network representation,' in Proc. of IJCAI , 2016, pp. 1895-1901."
+            },
+            {
+              "title": "Discrete network embedding",
+              "citation": "X. Shen, S. Pan, W. Liu, Y.-S. Ong, and Q.-S. Sun, 'Discrete network embedding,' in Proc. of IJCAI , 2018, pp. 3549-3555."
+            },
+            {
+              "title": "Binarized attributed network embedding",
+              "citation": "H. Yang, S. Pan, P. Zhang, L. Chen, D. Lian, and C. Zhang, 'Binarized attributed network embedding,' in Proc. of ICDM . IEEE, 2018."
+            },
+            {
+              "title": "Deepwalk: Online learning of social representations",
+              "citation": "B. Perozzi, R. Al-Rfou, and S. Skiena, 'Deepwalk: Online learning of social representations,' in Proc. of KDD . ACM, 2014, pp. 701-710."
+            },
+            {
+              "title": "Graph kernels",
+              "citation": "S. V. N. Vishwanathan, N. N. Schraudolph, R. Kondor, and K. M. Borgwardt, 'Graph kernels,' Journal of Machine Learning Research , vol. 11, no. Apr, pp. 1201-1242, 2010."
+            },
+            {
+              "title": "Weisfeiler-lehman graph kernels",
+              "citation": "N. Shervashidze, P. Schweitzer, E. J. v. Leeuwen, K. Mehlhorn, and K. M. Borgwardt, 'Weisfeiler-lehman graph kernels,' Journal of Machine Learning Research , vol. 12, no. Sep, pp. 2539-2561, 2011."
+            },
+            {
+              "title": "Approximated neighbours minhash graph node kernel",
+              "citation": "N. Navarin and A. Sperduti, 'Approximated neighbours minhash graph node kernel.' in Proc. of ESANN , 2017."
+            },
+            {
+              "title": "A survey on graph kernels",
+              "citation": "N. M. Kriege, F. D. Johansson, and C. Morris, 'A survey on graph kernels,' arXiv preprint arXiv:1903.11835 , 2019."
+            },
+            {
+              "title": "Supervised neural networks for the classification of structures",
+              "citation": "A. Sperduti and A. Starita, 'Supervised neural networks for the classification of structures,' IEEE Transactions on Neural Networks , vol. 8, no. 3, pp. 714-735, 1997."
+            },
+            {
+              "title": "A new model for learning in graph domains",
+              "citation": "M. Gori, G. Monfardini, and F. Scarselli, 'A new model for learning in graph domains,' in Proc. of IJCNN , vol. 2. IEEE, 2005, pp. 729-734."
+            },
+            {
+              "title": "The graph neural network model",
+              "citation": "F. Scarselli, M. Gori, A. C. Tsoi, M. Hagenbuchner, and G. Monfardini, 'The graph neural network model,' IEEE Transactions on Neural Networks , vol. 20, no. 1, pp. 61-80, 2009."
+            },
+            {
+              "title": "Graph echo state networks",
+              "citation": "C. Gallicchio and A. Micheli, 'Graph echo state networks,' in IJCNN . IEEE, 2010, pp. 1-8."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "2.1.1",
+              "sec_title": "Graph neural networks vs.",
+              "citations": [
+                {
+                  "title": "Graph kernels",
+                  "citation": "S. V. N. Vishwanathan, N. N. Schraudolph, R. Kondor, and K. M. Borgwardt, 'Graph kernels,' Journal of Machine Learning Research , vol. 11, no. Apr, pp. 1201-1242, 2010."
+                },
+                {
+                  "title": "Weisfeiler-lehman graph kernels,",
+                  "citation": "N. Shervashidze, P. Schweitzer, E. J. v. Leeuwen, K. Mehlhorn, and K. M. Borgwardt, 'Weisfeiler-lehman graph kernels,' Journal of Machine Learning Research , vol. 12, no. Sep, pp. 2539-2561, 2011."
+                },
+                {
+                  "title": "Approximated neighbours minhash graph node kernel",
+                  "citation": "N. Navarin and A. Sperduti, 'Approximated neighbours minhash graph node kernel.' in Proc. of ESANN , 2017."
+                },
+                {
+                  "title": "A survey on graph kernels,",
+                  "citation": "N. M. Kriege, F. D. Johansson, and C. Morris, 'A survey on graph kernels,' arXiv preprint arXiv:1903.11835 , 2019."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Definition",
+          "citations": [],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "CATEGORIZATION AND FRAMEWORKS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Taxonomy of Graph Neural Networks (GNNs)",
+          "citations": [
+            {
+              "title": "The graph neural network model",
+              "citation": "F. Scarselli, M. Gori, A. C. Tsoi, M. Hagenbuchner, and G. Monfardini, 'The graph neural network model,' IEEE Transactions on Neural Networks , vol. 20, no. 1, pp. 61-80, 2009."
+            },
+            {
+              "title": "Graph echo state networks",
+              "citation": "C. Gallicchio and A. Micheli, 'Graph echo state networks,' in IJCNN . IEEE, 2010, pp. 1-8."
+            },
+            {
+              "title": "Gated graph sequence neural networks",
+              "citation": "Y. Li, D. Tarlow, M. Brockschmidt, and R. Zemel, 'Gated graph sequence neural networks,' in Proc. of ICLR , 2015."
+            },
+            {
+              "title": "Learning steadystates of iterative algorithms over graphs",
+              "citation": "H. Dai, Z. Kozareva, B. Dai, A. Smola, and L. Song, 'Learning steadystates of iterative algorithms over graphs,' in Proc. of ICML , 2018, pp. 1114-1122."
+            },
+            {
+              "title": "Spectral networks and locally connected networks on graphs",
+              "citation": "J. Bruna, W. Zaremba, A. Szlam, and Y. LeCun, 'Spectral networks and locally connected networks on graphs,' in Proc. of ICLR , 2014."
+            },
+            {
+              "title": "Deep convolutional networks on graph-structured data",
+              "citation": "M. Henaff, J. Bruna, and Y. LeCun, 'Deep convolutional networks on graph-structured data,' arXiv preprint arXiv:1506.05163 , 2015."
+            },
+            {
+              "title": "Convolutional neural networks on graphs with fast localized spectral filtering",
+              "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Cayleynets: Graph convolutional neural networks with complex rational spectral filters",
+              "citation": "R. Levie, F. Monti, X. Bresson, and M. M. Bronstein, 'Cayleynets: Graph convolutional neural networks with complex rational spectral filters,' IEEE Transactions on Signal Processing , vol. 67, no. 1, pp. 97-109, 2017."
+            },
+            {
+              "title": "Adaptive graph convolutional neural networks",
+              "citation": "R. Li, S. Wang, F. Zhu, and J. Huang, 'Adaptive graph convolutional neural networks,' in Proc. of AAAI , 2018, pp. 3546-3553."
+            },
+            {
+              "title": "Dual graph convolutional networks for graphbased semi-supervised classification",
+              "citation": "C. Zhuang and Q. Ma, 'Dual graph convolutional networks for graphbased semi-supervised classification,' in WWW , 2018, pp. 499-508."
+            },
+            {
+              "title": "Neural network for graphs: A contextual constructive approach",
+              "citation": "A. Micheli, 'Neural network for graphs: A contextual constructive approach,' IEEE Transactions on Neural Networks , vol. 20, no. 3, pp. 498-511, 2009."
+            },
+            {
+              "title": "Diffusion-convolutional neural networks",
+              "citation": "J. Atwood and D. Towsley, 'Diffusion-convolutional neural networks,' in Proc. of NIPS , 2016, pp. 1993-2001."
+            },
+            {
+              "title": "Learning convolutional neural networks for graphs",
+              "citation": "M. Niepert, M. Ahmed, and K. Kutzkov, 'Learning convolutional neural networks for graphs,' in Proc. of ICML , 2016, pp. 2014-2023."
+            },
+            {
+              "title": "Neural message passing for quantum chemistry",
+              "citation": "J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, 'Neural message passing for quantum chemistry,' in Proc. of ICML , 2017, pp. 1263-1272."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "Graph attention networks",
+              "citation": "P. Velickovic, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Geometric deep learning on graphs and manifolds using mixture model cnns",
+              "citation": "F. Monti, D. Boscaini, J. Masci, E. Rodola, J. Svoboda, and M. M. Bronstein, 'Geometric deep learning on graphs and manifolds using mixture model cnns,' in Proc. of CVPR , 2017, pp. 5115-5124."
+            },
+            {
+              "title": "Large-scale learnable graph convolutional networks",
+              "citation": "H. Gao, Z. Wang, and S. Ji, 'Large-scale learnable graph convolutional networks,' in Proc. of KDD . ACM, 2018, pp. 1416-1424."
+            },
+            {
+              "title": "On filter size in graph convolutional networks",
+              "citation": "D. V. Tran, A. Sperduti et al. , 'On filter size in graph convolutional networks,' in SSCI . IEEE, 2018, pp. 1534-1541."
+            },
+            {
+              "title": "Contextual graph markov model: A deep and generative approach to graph processing",
+              "citation": "D. Bacciu, F. Errica, and A. Micheli, 'Contextual graph markov model: Adeep and generative approach to graph processing,' in Proc. of ICML , 2018."
+            },
+            {
+              "title": "Gaan: Gated attention networks for learning on large and spatiotemporal graphs",
+              "citation": "J. Zhang, X. Shi, J. Xie, H. Ma, I. King, and D.-Y. Yeung, 'Gaan: Gated attention networks for learning on large and spatiotemporal graphs,' in Proc. of UAI , 2018."
+            },
+            {
+              "title": "Fastgcn: fast learning with graph convolutional networks via importance sampling",
+              "citation": "J. Chen, T. Ma, and C. Xiao, 'Fastgcn: fast learning with graph convolutional networks via importance sampling,' in Proc. of ICLR , 2018."
+            },
+            {
+              "title": "Stochastic training of graph convolutional networks with variance reduction",
+              "citation": "J. Chen, J. Zhu, and L. Song, 'Stochastic training of graph convolutional networks with variance reduction,' in Proc. of ICML , 2018, pp. 941-949."
+            },
+            {
+              "title": "Adaptive sampling towards fast graph representation learning",
+              "citation": "W. Huang, T. Zhang, Y. Rong, and J. Huang, 'Adaptive sampling towards fast graph representation learning,' in Proc. of NeurIPS , 2018, pp. 4563-4572."
+            },
+            {
+              "title": "An end-to-end deep learning architecture for graph classification",
+              "citation": "M. Zhang, Z. Cui, M. Neumann, and Y. Chen, 'An end-to-end deep learning architecture for graph classification,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "Deeper insights into graph convolutional networks for semi-supervised learning",
+              "citation": "Q. Li, Z. Han, and X.-M. Wu, 'Deeper insights into graph convolutional networks for semi-supervised learning,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "Hierarchical graph representation learning with differentiable pooling",
+              "citation": "Z. Ying, J. You, C. Morris, X. Ren, W. Hamilton, and J. Leskovec, 'Hierarchical graph representation learning with differentiable pooling,' in Proc. of NeurIPS , 2018, pp. 4801-4811."
+            },
+            {
+              "title": "Geniepath: Graph neural networks with adaptive receptive paths",
+              "citation": "Z. Liu, C. Chen, L. Li, J. Zhou, X. Li, and L. Song, 'Geniepath: Graph neural networks with adaptive receptive paths,' in Proc. of AAAI , 2019."
+            },
+            {
+              "title": "Deep graph infomax",
+              "citation": "P. Veliˇ ckovi´ c, W. Fedus, W. L. Hamilton, P. Li` o, Y. Bengio, and R. D. Hjelm, 'Deep graph infomax,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "How powerful are graph neural networks",
+              "citation": "K. Xu, W. Hu, J. Leskovec, and S. Jegelka, 'How powerful are graph neural networks,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "Cluster-gcn: An efficient algorithm for training deep and large graph convolutional networks",
+              "citation": "W.-L. Chiang, X. Liu, S. Si, Y. Li, S. Bengio, and C.-J. Hsieh, 'Cluster-gcn: An efficient algorithm for training deep and large graph convolutional networks,' in Proc. of KDD . ACM, 2019."
+            },
+            {
+              "title": "Deep neural networks for learning graph representations",
+              "citation": "S. Cao, W. Lu, and Q. Xu, 'Deep neural networks for learning graph representations,' in Proc. of AAAI , 2016, pp. 1145-1152."
+            },
+            {
+              "title": "Structural deep network embedding",
+              "citation": "D. Wang, P. Cui, and W. Zhu, 'Structural deep network embedding,' in Proc. of KDD . ACM, 2016, pp. 1225-1234."
+            },
+            {
+              "title": "Variational graph auto-encoders",
+              "citation": "T. N. Kipf and M. Welling, 'Variational graph auto-encoders,' NIPS Workshop on Bayesian Deep Learning , 2016."
+            },
+            {
+              "title": "Adversarially regularized graph autoencoder for graph embedding",
+              "citation": "S. Pan, R. Hu, G. Long, J. Jiang, L. Yao, and C. Zhang, 'Adversarially regularized graph autoencoder for graph embedding.' in Proc. of IJCAI , 2018, pp. 2609-2615."
+            },
+            {
+              "title": "Deep recursive network embedding with regular equivalence",
+              "citation": "K. Tu, P. Cui, X. Wang, P. S. Yu, and W. Zhu, 'Deep recursive network embedding with regular equivalence,' in Proc. of KDD . ACM, 2018, pp. 2357-2366."
+            },
+            {
+              "title": "Learning deep network representations with adversarially regularized autoencoders",
+              "citation": "W. Yu, C. Zheng, W. Cheng, C. C. Aggarwal, D. Song, B. Zong, H. Chen, and W. Wang, 'Learning deep network representations with adversarially regularized autoencoders,' in Proc. of AAAI . ACM, 2018, pp. 2663-2671."
+            },
+            {
+              "title": "Learning deep generative models of graphs",
+              "citation": "Y. Li, O. Vinyals, C. Dyer, R. Pascanu, and P. Battaglia, 'Learning deep generative models of graphs,' in Proc. of ICML , 2018."
+            },
+            {
+              "title": "Graphrnn: A deep generative model for graphs",
+              "citation": "J. You, R. Ying, X. Ren, W. L. Hamilton, and J. Leskovec, 'Graphrnn: A deep generative model for graphs,' Proc. of ICML , 2018."
+            },
+            {
+              "title": "Graphvae: Towards generation of small graphs using variational autoencoders",
+              "citation": "M. Simonovsky and N. Komodakis, 'Graphvae: Towards generation of small graphs using variational autoencoders,' in ICANN . Springer, 2018, pp. 412-422."
+            },
+            {
+              "title": "Constrained generation of semantically valid graphs via regularizing variational autoencoders",
+              "citation": "T. Ma, J. Chen, and C. Xiao, 'Constrained generation of semantically valid graphs via regularizing variational autoencoders,' in Proc. of NeurIPS , 2018, pp. 7110-7121."
+            },
+            {
+              "title": "MolGAN: An implicit generative model for small molecular graphs",
+              "citation": "N. De Cao and T. Kipf, 'MolGAN: An implicit generative model for small molecular graphs,' ICML 2018 workshop on Theoretical Foundations and Applications of Deep Generative Models , 2018."
+            },
+            {
+              "title": "Netgan: Generating graphs via random walks",
+              "citation": "A. Bojchevski, O. Shchur, D. Z¨ ugner, and S. G¨ unnemann, 'Netgan: Generating graphs via random walks,' in Proc. of ICML , 2018."
+            },
+            {
+              "title": "Structured sequence modeling with graph convolutional recurrent networks",
+              "citation": "Y. Seo, M. Defferrard, P. Vandergheynst, and X. Bresson, 'Structured sequence modeling with graph convolutional recurrent networks,' in International Conference on Neural Information Processing . Springer, 2018, pp. 362-373."
+            },
+            {
+              "title": "Diffusion convolutional recurrent neural network: Data-driven traffic forecasting",
+              "citation": "Y. Li, R. Yu, C. Shahabi, and Y. Liu, 'Diffusion convolutional recurrent neural network: Data-driven traffic forecasting,' in Proc. of ICLR , 2018."
+            },
+            {
+              "title": "Structural-rnn: Deep learning on spatio-temporal graphs",
+              "citation": "A. Jain, A. R. Zamir, S. Savarese, and A. Saxena, 'Structural-rnn: Deep learning on spatio-temporal graphs,' in Proc. of CVPR , 2016, pp. 5308-5317."
+            },
+            {
+              "title": "Spatio-temporal graph convolutional networks: A deep learning framework for traffic forecasting",
+              "citation": "B. Yu, H. Yin, and Z. Zhu, 'Spatio-temporal graph convolutional networks: A deep learning framework for traffic forecasting,' in Proc. of IJCAI , 2018, pp. 3634-3640."
+            },
+            {
+              "title": "Spatial temporal graph convolutional networks for skeleton-based action recognition",
+              "citation": "S. Yan, Y. Xiong, and D. Lin, 'Spatial temporal graph convolutional networks for skeleton-based action recognition,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "Graph wavenet for deep spatial-temporal graph modeling",
+              "citation": "Z. Wu, S. Pan, G. Long, J. Jiang, and C. Zhang, 'Graph wavenet for deep spatial-temporal graph modeling,' in Proc. of IJCAI , 2019."
+            },
+            {
+              "title": "Attention based spatialtemporal graph convolutional networks for traffic flow forecasting",
+              "citation": "S. Guo, Y. Lin, N. Feng, C. Song, and H. Wan, 'Attention based spatialtemporal graph convolutional networks for traffic flow forecasting,' in Proc. of AAAI , 2019."
+            },
+            {
+              "title": "Diffusion convolutional recurrent neural network: Data-driven traffic forecasting",
+              "citation": "Y. Li, R. Yu, C. Shahabi, and Y. Liu, 'Diffusion convolutional recurrent neural network: Data-driven traffic forecasting,' in Proc. of ICLR , 2018."
+            },
+            {
+              "title": "Structural-rnn: Deep learning on spatio-temporal graphs",
+              "citation": "A. Jain, A. R. Zamir, S. Savarese, and A. Saxena, 'Structural-rnn: Deep learning on spatio-temporal graphs,' in Proc. of CVPR , 2016, pp. 5308-5317."
+            },
+            {
+              "title": "Spatial temporal graph convolutional networks for skeleton-based action recognition",
+              "citation": "S. Yan, Y. Xiong, and D. Lin, 'Spatial temporal graph convolutional networks for skeleton-based action recognition,' in Proc. of AAAI , 2018."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Frameworks",
+          "citations": [
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "An end-to-end deep learning architecture for graph classification",
+              "citation": "M. Zhang, Z. Cui, M. Neumann, and Y. Chen, 'An end-to-end deep learning architecture for graph classification,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "Hierarchical graph representation learning with differentiable pooling",
+              "citation": "Z. Ying, J. You, C. Morris, X. Ren, W. Hamilton, and J. Leskovec, 'Hierarchical graph representation learning with differentiable pooling,' in Proc. of NeurIPS , 2018, pp. 4801-4811."
+            },
+            {
+              "title": "Joint structure feature exploration and regularization for multi-task graph classification",
+              "citation": "S. Pan, J. Wu, X. Zhu, C. Zhang, and P. S. Yu, 'Joint structure feature exploration and regularization for multi-task graph classification,' IEEE Transactions on Knowledge and Data Engineering , vol. 28, no. 3, pp. 715-728, 2016."
+            },
+            {
+              "title": "Task sensitive feature exploration and learning for multitask graph classification",
+              "citation": "S. Pan, J. Wu, X. Zhu, G. Long, and C. Zhang, 'Task sensitive feature exploration and learning for multitask graph classification,' IEEE transactions on cybernetics , vol. 47, no. 3, pp. 744-758, 2017."
+            },
+            {
+              "title": "Variational graph auto-encoders",
+              "citation": "T. N. Kipf and M. Welling, 'Variational graph auto-encoders,' NIPS Workshop on Bayesian Deep Learning , 2016."
+            },
+            {
+              "title": "Adversarially regularized graph autoencoder for graph embedding",
+              "citation": "S. Pan, R. Hu, G. Long, J. Jiang, L. Yao, and C. Zhang, 'Adversarially regularized graph autoencoder for graph embedding.' in Proc. of IJCAI , 2018, pp. 2609-2615."
+            },
+            {
+              "title": "Convolutional neural networks on graphs with fast localized spectral filtering",
+              "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+            },
+            {
+              "title": "Variational graph auto-encoders",
+              "citation": "T. N. Kipf and M. Welling, 'Variational graph auto-encoders,' NIPS Workshop on Bayesian Deep Learning , 2016."
+            },
+            {
+              "title": "Spatio-temporal graph convolutional networks: A deep learning framework for traffic forecasting",
+              "citation": "B. Yu, H. Yin, and Z. Zhu, 'Spatio-temporal graph convolutional networks: A deep learning framework for traffic forecasting,' in Proc. of IJCAI , 2018, pp. 3634-3640."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "Spectral networks and locally connected networks on graphs",
+              "citation": "J. Bruna, W. Zaremba, A. Szlam, and Y. LeCun, 'Spectral networks and locally connected networks on graphs,' in Proc. of ICLR , 2014."
+            },
+            {
+              "title": "Deep convolutional networks on graph-structured data",
+              "citation": "M. Henaff, J. Bruna, and Y. LeCun, 'Deep convolutional networks on graph-structured data,' arXiv preprint arXiv:1506.05163 , 2015."
+            },
+            {
+              "title": "On filter size in graph convolutional networks",
+              "citation": "D. V. Tran, A. Sperduti et al. , 'On filter size in graph convolutional networks,' in SSCI . IEEE, 2018, pp. 1534-1541."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.2.1",
+              "sec_title": "Training Frameworks.",
+              "citations": [
+                {
+                  "title": "Semi-supervised classification with graph convolutional networks,",
+                  "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+                },
+                {
+                  "title": "An end-to-end deep learning architecture for graph classification,",
+                  "citation": "M. Zhang, Z. Cui, M. Neumann, and Y. Chen, 'An end-to-end deep learning architecture for graph classification,' in Proc. of AAAI , 2018."
+                },
+                {
+                  "title": "Hierarchical graph representation learning with differentiable pooling,",
+                  "citation": "Z. Ying, J. You, C. Morris, X. Ren, W. Hamilton, and J. Leskovec, 'Hierarchical graph representation learning with differentiable pooling,' in Proc. of NeurIPS , 2018, pp. 4801-4811."
+                },
+                {
+                  "title": "Joint structure feature exploration and regularization for multi-task graph classification,",
+                  "citation": "S. Pan, J. Wu, X. Zhu, C. Zhang, and P. S. Yu, 'Joint structure feature exploration and regularization for multi-task graph classification,' IEEE Transactions on Knowledge and Data Engineering , vol. 28, no. 3, pp. 715-728, 2016."
+                },
+                {
+                  "title": "Task sensitive feature exploration and learning for multitask graph classification,",
+                  "citation": "S. Pan, J. Wu, X. Zhu, G. Long, and C. Zhang, 'Task sensitive feature exploration and learning for multitask graph classification,' IEEE transactions on cybernetics , vol. 47, no. 3, pp. 744-758, 2017."
+                },
+                {
+                  "title": "Variational graph auto-encoders,",
+                  "citation": "T. N. Kipf and M. Welling, 'Variational graph auto-encoders,' NIPS Workshop on Bayesian Deep Learning , 2016."
+                },
+                {
+                  "title": "Adversarially regularized graph autoencoder for graph embedding.",
+                  "citation": "S. Pan, R. Hu, G. Long, J. Jiang, L. Yao, and C. Zhang, 'Adversarially regularized graph autoencoder for graph embedding.' in Proc. of IJCAI , 2018, pp. 2609-2615."
+                },
+                {
+                  "title": "Inductive representation learning on large graphs,",
+                  "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+                },
+                {
+                  "title": "Spectral networks and locally connected networks on graphs,",
+                  "citation": "J. Bruna, W. Zaremba, A. Szlam, and Y. LeCun, 'Spectral networks and locally connected networks on graphs,' in Proc. of ICLR , 2014."
+                },
+                {
+                  "title": "Deep convolutional networks on graph-structured data,",
+                  "citation": "M. Henaff, J. Bruna, and Y. LeCun, 'Deep convolutional networks on graph-structured data,' arXiv preprint arXiv:1506.05163 , 2015."
+                },
+                {
+                  "title": "On filter size in graph convolutional networks,",
+                  "citation": "D. V. Tran, A. Sperduti et al. , 'On filter size in graph convolutional networks,' in SSCI . IEEE, 2018, pp. 1534-1541."
+                },
+                {
+                  "title": "Supervised neural networks for the classification of structures",
+                  "citation": "A. Sperduti and A. Starita, 'Supervised neural networks for the classification of structures,' IEEE Transactions on Neural Networks , vol. 8, no. 3, pp. 714-735, 1997."
+                },
+                {
+                  "title": "Contextual processing of structured data by recursive cascade correlation,",
+                  "citation": "A. Micheli, D. Sona, and A. Sperduti, 'Contextual processing of structured data by recursive cascade correlation,' IEEE Transactions on Neural Networks , vol. 15, no. 6, pp. 1396-1410, 2004."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "RECURRENT GRAPH NEURAL NETWORKS",
+      "citations": [
+        {
+          "title": "Supervised neural networks for the classification of structures",
+          "citation": "A. Sperduti and A. Starita, 'Supervised neural networks for the classification of structures,' IEEE Transactions on Neural Networks , vol. 8, no. 3, pp. 714-735, 1997."
+        },
+        {
+          "title": "Contextual processing of structured data by recursive cascade correlation",
+          "citation": "A. Micheli, D. Sona, and A. Sperduti, 'Contextual processing of structured data by recursive cascade correlation,' IEEE Transactions on Neural Networks , vol. 15, no. 6, pp. 1396-1410, 2004."
+        },
+        {
+          "title": "The graph neural network model",
+          "citation": "F. Scarselli, M. Gori, A. C. Tsoi, M. Hagenbuchner, and G. Monfardini, 'The graph neural network model,' IEEE Transactions on Neural Networks , vol. 20, no. 1, pp. 61-80, 2009."
+        },
+        {
+          "title": "Graph echo state networks",
+          "citation": "C. Gallicchio and A. Micheli, 'Graph echo state networks,' in IJCNN . IEEE, 2010, pp. 1-8."
+        },
+        {
+          "title": "The graph neural network model",
+          "citation": "F. Scarselli, M. Gori, A. C. Tsoi, M. Hagenbuchner, and G. Monfardini, 'The graph neural network model,' IEEE Transactions on Neural Networks , vol. 20, no. 1, pp. 61-80, 2009."
+        },
+        {
+          "title": "Graph echo state networks",
+          "citation": "C. Gallicchio and A. Micheli, 'Graph echo state networks,' in IJCNN . IEEE, 2010, pp. 1-8."
+        },
+        {
+          "title": "Gated graph sequence neural networks",
+          "citation": "Y. Li, D. Tarlow, M. Brockschmidt, and R. Zemel, 'Gated graph sequence neural networks,' in Proc. of ICLR , 2015."
+        },
+        {
+          "title": "Learning steadystates of iterative algorithms over graphs",
+          "citation": "H. Dai, Z. Kozareva, B. Dai, A. Smola, and L. Song, 'Learning steadystates of iterative algorithms over graphs,' in Proc. of ICML , 2018, pp. 1114-1122."
+        },
+        {
+          "title": "Spectral networks and locally connected networks on graphs",
+          "citation": "J. Bruna, W. Zaremba, A. Szlam, and Y. LeCun, 'Spectral networks and locally connected networks on graphs,' in Proc. of ICLR , 2014."
+        },
+        {
+          "title": "Deep convolutional networks on graph-structured data",
+          "citation": "M. Henaff, J. Bruna, and Y. LeCun, 'Deep convolutional networks on graph-structured data,' arXiv preprint arXiv:1506.05163 , 2015."
+        },
+        {
+          "title": "Convolutional neural networks on graphs with fast localized spectral filtering",
+          "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+        },
+        {
+          "title": "Semi-supervised classification with graph convolutional networks",
+          "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+        },
+        {
+          "title": "Cayleynets: Graph convolutional neural networks with complex rational spectral filters",
+          "citation": "R. Levie, F. Monti, X. Bresson, and M. M. Bronstein, 'Cayleynets: Graph convolutional neural networks with complex rational spectral filters,' IEEE Transactions on Signal Processing , vol. 67, no. 1, pp. 97-109, 2017."
+        },
+        {
+          "title": "Adaptive graph convolutional neural networks",
+          "citation": "R. Li, S. Wang, F. Zhu, and J. Huang, 'Adaptive graph convolutional neural networks,' in Proc. of AAAI , 2018, pp. 3546-3553."
+        },
+        {
+          "title": "Dual graph convolutional networks for graphbased semi-supervised classification",
+          "citation": "C. Zhuang and Q. Ma, 'Dual graph convolutional networks for graphbased semi-supervised classification,' in WWW , 2018, pp. 499-508."
+        },
+        {
+          "title": "Neural network for graphs: A contextual constructive approach",
+          "citation": "A. Micheli, 'Neural network for graphs: A contextual constructive approach,' IEEE Transactions on Neural Networks , vol. 20, no. 3, pp. 498-511, 2009."
+        },
+        {
+          "title": "Diffusion-convolutional neural networks",
+          "citation": "J. Atwood and D. Towsley, 'Diffusion-convolutional neural networks,' in Proc. of NIPS , 2016, pp. 1993-2001."
+        },
+        {
+          "title": "Learning convolutional neural networks for graphs",
+          "citation": "M. Niepert, M. Ahmed, and K. Kutzkov, 'Learning convolutional neural networks for graphs,' in Proc. of ICML , 2016, pp. 2014-2023."
+        },
+        {
+          "title": "Neural message passing for quantum chemistry",
+          "citation": "J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, 'Neural message passing for quantum chemistry,' in Proc. of ICML , 2017, pp. 1263-1272."
+        },
+        {
+          "title": "Inductive representation learning on large graphs",
+          "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+        },
+        {
+          "title": "Graph attention networks",
+          "citation": "P. Velickovic, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in Proc. of ICLR , 2017."
+        },
+        {
+          "title": "Geometric deep learning on graphs and manifolds using mixture model cnns",
+          "citation": "F. Monti, D. Boscaini, J. Masci, E. Rodola, J. Svoboda, and M. M. Bronstein, 'Geometric deep learning on graphs and manifolds using mixture model cnns,' in Proc. of CVPR , 2017, pp. 5115-5124."
+        },
+        {
+          "title": "Large-scale learnable graph convolutional networks",
+          "citation": "H. Gao, Z. Wang, and S. Ji, 'Large-scale learnable graph convolutional networks,' in Proc. of KDD . ACM, 2018, pp. 1416-1424."
+        },
+        {
+          "title": "On filter size in graph convolutional networks",
+          "citation": "D. V. Tran, A. Sperduti et al. , 'On filter size in graph convolutional networks,' in SSCI . IEEE, 2018, pp. 1534-1541."
+        },
+        {
+          "title": "Contextual graph markov model: A deep and generative approach to graph processing",
+          "citation": "D. Bacciu, F. Errica, and A. Micheli, 'Contextual graph markov model: Adeep and generative approach to graph processing,' in Proc. of ICML , 2018."
+        },
+        {
+          "title": "Gaan: Gated attention networks for learning on large and spatiotemporal graphs",
+          "citation": "J. Zhang, X. Shi, J. Xie, H. Ma, I. King, and D.-Y. Yeung, 'Gaan: Gated attention networks for learning on large and spatiotemporal graphs,' in Proc. of UAI , 2018."
+        },
+        {
+          "title": "Fastgcn: fast learning with graph convolutional networks via importance sampling",
+          "citation": "J. Chen, T. Ma, and C. Xiao, 'Fastgcn: fast learning with graph convolutional networks via importance sampling,' in Proc. of ICLR , 2018."
+        },
+        {
+          "title": "Stochastic training of graph convolutional networks with variance reduction",
+          "citation": "J. Chen, J. Zhu, and L. Song, 'Stochastic training of graph convolutional networks with variance reduction,' in Proc. of ICML , 2018, pp. 941-949."
+        },
+        {
+          "title": "Adaptive sampling towards fast graph representation learning",
+          "citation": "W. Huang, T. Zhang, Y. Rong, and J. Huang, 'Adaptive sampling towards fast graph representation learning,' in Proc. of NeurIPS , 2018, pp. 4563-4572."
+        },
+        {
+          "title": "An end-to-end deep learning architecture for graph classification",
+          "citation": "M. Zhang, Z. Cui, M. Neumann, and Y. Chen, 'An end-to-end deep learning architecture for graph classification,' in Proc. of AAAI , 2018."
+        },
+        {
+          "title": "Hierarchical graph representation learning with differentiable pooling",
+          "citation": "Z. Ying, J. You, C. Morris, X. Ren, W. Hamilton, and J. Leskovec, 'Hierarchical graph representation learning with differentiable pooling,' in Proc. of NeurIPS , 2018, pp. 4801-4811."
+        },
+        {
+          "title": "Geniepath: Graph neural networks with adaptive receptive paths",
+          "citation": "Z. Liu, C. Chen, L. Li, J. Zhou, X. Li, and L. Song, 'Geniepath: Graph neural networks with adaptive receptive paths,' in Proc. of AAAI , 2019."
+        },
+        {
+          "title": "Deep graph infomax",
+          "citation": "P. Veliˇ ckovi´ c, W. Fedus, W. L. Hamilton, P. Li` o, Y. Bengio, and R. D. Hjelm, 'Deep graph infomax,' in Proc. of ICLR , 2019."
+        },
+        {
+          "title": "How powerful are graph neural networks",
+          "citation": "K. Xu, W. Hu, J. Leskovec, and S. Jegelka, 'How powerful are graph neural networks,' in Proc. of ICLR , 2019."
+        },
+        {
+          "title": "Cluster-gcn: An efficient algorithm for training deep and large graph convolutional networks",
+          "citation": "W.-L. Chiang, X. Liu, S. Si, Y. Li, S. Bengio, and C.-J. Hsieh, 'Cluster-gcn: An efficient algorithm for training deep and large graph convolutional networks,' in Proc. of KDD . ACM, 2019."
+        },
+        {
+          "title": "Gated graph sequence neural networks",
+          "citation": "Y. Li, D. Tarlow, M. Brockschmidt, and R. Zemel, 'Gated graph sequence neural networks,' in Proc. of ICLR , 2015."
+        },
+        {
+          "title": "Learning phrase representations using rnn encoder-decoder for statistical machine translation",
+          "citation": "K. Cho, B. Van Merri¨ enboer, C. Gulcehre, D. Bahdanau, F. Bougares, H. Schwenk, and Y. Bengio, 'Learning phrase representations using rnn encoder-decoder for statistical machine translation,' in Proc. of EMNLP , 2014, pp. 1724-1734."
+        },
+        {
+          "title": "Learning steadystates of iterative algorithms over graphs",
+          "citation": "H. Dai, Z. Kozareva, B. Dai, A. Smola, and L. Song, 'Learning steadystates of iterative algorithms over graphs,' in Proc. of ICML , 2018, pp. 1114-1122."
+        },
+        {
+          "title": "Deep convolutional networks on graph-structured data",
+          "citation": "M. Henaff, J. Bruna, and Y. LeCun, 'Deep convolutional networks on graph-structured data,' arXiv preprint arXiv:1506.05163 , 2015."
+        },
+        {
+          "title": "Adaptive sampling towards fast graph representation learning",
+          "citation": "W. Huang, T. Zhang, Y. Rong, and J. Huang, 'Adaptive sampling towards fast graph representation learning,' in Proc. of NeurIPS , 2018, pp. 4563-4572."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "CONVOLUTIONAL GRAPH NEURAL NETWORKS",
+      "citations": [
+        {
+          "title": "The emerging field of signal processing on graphs: Extending high-dimensional data analysis to networks and other irregular domains",
+          "citation": "D. I. Shuman, S. K. Narang, P. Frossard, A. Ortega, and P. Vandergheynst, 'The emerging field of signal processing on graphs: Extending high-dimensional data analysis to networks and other irregular domains,' IEEE Signal Processing Magazine , vol. 30, no. 3, pp. 83-98, 2013."
+        },
+        {
+          "title": "Semi-supervised classification with graph convolutional networks",
+          "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "Spectral-based ConvGNNs",
+          "citations": [
+            {
+              "title": "The emerging field of signal processing on graphs: Extending high-dimensional data analysis to networks and other irregular domains",
+              "citation": "D. I. Shuman, S. K. Narang, P. Frossard, A. Ortega, and P. Vandergheynst, 'The emerging field of signal processing on graphs: Extending high-dimensional data analysis to networks and other irregular domains,' IEEE Signal Processing Magazine , vol. 30, no. 3, pp. 83-98, 2013."
+            },
+            {
+              "title": "Discrete signal processing on graphs",
+              "citation": "A. Sandryhaila and J. M. Moura, 'Discrete signal processing on graphs,' IEEE transactions on signal processing , vol. 61, no. 7, pp. 1644-1656, 2013."
+            },
+            {
+              "title": "Discrete signal processing on graphs: Sampling theory",
+              "citation": "S. Chen, R. Varma, A. Sandryhaila, and J. Kovaˇ cevi´ c, 'Discrete signal processing on graphs: Sampling theory,' IEEE Transactions on Signal Processing , vol. 63, no. 24, pp. 6510-6523, 2015."
+            },
+            {
+              "title": "Spectral networks and locally connected networks on graphs",
+              "citation": "J. Bruna, W. Zaremba, A. Szlam, and Y. LeCun, 'Spectral networks and locally connected networks on graphs,' in Proc. of ICLR , 2014."
+            },
+            {
+              "title": "Convolutional neural networks on graphs with fast localized spectral filtering",
+              "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Convolutional neural networks on graphs with fast localized spectral filtering",
+              "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+            },
+            {
+              "title": "Cayleynets: Graph convolutional neural networks with complex rational spectral filters",
+              "citation": "R. Levie, F. Monti, X. Bresson, and M. M. Bronstein, 'Cayleynets: Graph convolutional neural networks with complex rational spectral filters,' IEEE Transactions on Signal Processing , vol. 67, no. 1, pp. 97-109, 2017."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Adaptive graph convolutional neural networks",
+              "citation": "R. Li, S. Wang, F. Zhu, and J. Huang, 'Adaptive graph convolutional neural networks,' in Proc. of AAAI , 2018, pp. 3546-3553."
+            },
+            {
+              "title": "Dual graph convolutional networks for graphbased semi-supervised classification",
+              "citation": "C. Zhuang and Q. Ma, 'Dual graph convolutional networks for graphbased semi-supervised classification,' in WWW , 2018, pp. 499-508."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "5.1.1",
+              "sec_title": "Spectral-based ConvGNNs all follow this definition.",
+              "citations": [
+                {
+                  "title": "Spectral networks and locally connected networks on graphs,",
+                  "citation": "J. Bruna, W. Zaremba, A. Szlam, and Y. LeCun, 'Spectral networks and locally connected networks on graphs,' in Proc. of ICLR , 2014."
+                },
+                {
+                  "title": "Convolutional neural networks on graphs with fast localized spectral filtering,",
+                  "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+                },
+                {
+                  "title": "Semi-supervised classification with graph convolutional networks,",
+                  "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+                },
+                {
+                  "title": "Cayleynets: Graph convolutional neural networks with complex rational spectral filters,",
+                  "citation": "R. Levie, F. Monti, X. Bresson, and M. M. Bronstein, 'Cayleynets: Graph convolutional neural networks with complex rational spectral filters,' IEEE Transactions on Signal Processing , vol. 67, no. 1, pp. 97-109, 2017."
+                },
+                {
+                  "title": "Adaptive graph convolutional neural networks,",
+                  "citation": "R. Li, S. Wang, F. Zhu, and J. Huang, 'Adaptive graph convolutional neural networks,' in Proc. of AAAI , 2018, pp. 3546-3553."
+                },
+                {
+                  "title": "Dual graph convolutional networks for graphbased semi-supervised classification",
+                  "citation": "C. Zhuang and Q. Ma, 'Dual graph convolutional networks for graphbased semi-supervised classification,' in WWW , 2018, pp. 499-508."
+                },
+                {
+                  "title": "Neural network for graphs: A contextual constructive approach",
+                  "citation": "A. Micheli, 'Neural network for graphs: A contextual constructive approach,' IEEE Transactions on Neural Networks , vol. 20, no. 3, pp. 498-511, 2009."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Spatial-based ConvGNNs",
+          "citations": [
+            {
+              "title": "Neural network for graphs: A contextual constructive approach",
+              "citation": "A. Micheli, 'Neural network for graphs: A contextual constructive approach,' IEEE Transactions on Neural Networks , vol. 20, no. 3, pp. 498-511, 2009."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Contextual graph markov model: A deep and generative approach to graph processing",
+              "citation": "D. Bacciu, F. Errica, and A. Micheli, 'Contextual graph markov model: Adeep and generative approach to graph processing,' in Proc. of ICML , 2018."
+            },
+            {
+              "title": "Diffusion-convolutional neural networks",
+              "citation": "J. Atwood and D. Towsley, 'Diffusion-convolutional neural networks,' in Proc. of NIPS , 2016, pp. 1993-2001."
+            },
+            {
+              "title": "Diffusion convolutional recurrent neural network: Data-driven traffic forecasting",
+              "citation": "Y. Li, R. Yu, C. Shahabi, and Y. Liu, 'Diffusion convolutional recurrent neural network: Data-driven traffic forecasting,' in Proc. of ICLR , 2018."
+            },
+            {
+              "title": "On filter size in graph convolutional networks",
+              "citation": "D. V. Tran, A. Sperduti et al. , 'On filter size in graph convolutional networks,' in SSCI . IEEE, 2018, pp. 1534-1541."
+            },
+            {
+              "title": "Spatial temporal graph convolutional networks for skeleton-based action recognition",
+              "citation": "S. Yan, Y. Xiong, and D. Lin, 'Spatial temporal graph convolutional networks for skeleton-based action recognition,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Neural message passing for quantum chemistry",
+              "citation": "J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, 'Neural message passing for quantum chemistry,' in Proc. of ICML , 2017, pp. 1263-1272."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Graph attention networks",
+              "citation": "P. Velickovic, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Graph attention networks",
+              "citation": "P. Velickovic, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Convolutional networks on graphs for learning molecular fingerprints",
+              "citation": "D. K. Duvenaud, D. Maclaurin, J. Iparraguirre, R. Bombarell, T. Hirzel, A. Aspuru-Guzik, and R. P. Adams, 'Convolutional networks on graphs for learning molecular fingerprints,' in Proc. of NIPS , 2015, pp. 22242232."
+            },
+            {
+              "title": "Molecular graph convolutions: moving beyond fingerprints",
+              "citation": "S. Kearnes, K. McCloskey, M. Berndl, V. Pande, and P. Riley, 'Molecular graph convolutions: moving beyond fingerprints,' Journal of computer-aided molecular design , vol. 30, no. 8, pp. 595-608, 2016."
+            },
+            {
+              "title": "Quantum-chemical insights from deep tensor neural networks",
+              "citation": "K. T. Sch¨ utt, F. Arbabzadah, S. Chmiela, K. R. M¨ uller, and A. Tkatchenko, 'Quantum-chemical insights from deep tensor neural networks,' Nature communications , vol. 8, p. 13890, 2017."
+            },
+            {
+              "title": "How powerful are graph neural networks",
+              "citation": "K. Xu, W. Hu, J. Leskovec, and S. Jegelka, 'How powerful are graph neural networks,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "Graph attention networks",
+              "citation": "P. Velickovic, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Gaan: Gated attention networks for learning on large and spatiotemporal graphs",
+              "citation": "J. Zhang, X. Shi, J. Xie, H. Ma, I. King, and D.-Y. Yeung, 'Gaan: Gated attention networks for learning on large and spatiotemporal graphs,' in Proc. of UAI , 2018."
+            },
+            {
+              "title": "Geniepath: Graph neural networks with adaptive receptive paths",
+              "citation": "Z. Liu, C. Chen, L. Li, J. Zhou, X. Li, and L. Song, 'Geniepath: Graph neural networks with adaptive receptive paths,' in Proc. of AAAI , 2019."
+            },
+            {
+              "title": "Graph classification using structural attention",
+              "citation": "J. B. Lee, R. Rossi, and X. Kong, 'Graph classification using structural attention,' in Proc. of KDD . ACM, 2018, pp. 1666-1674."
+            },
+            {
+              "title": "Watch your step: Learning node embeddings via graph attention",
+              "citation": "S. Abu-El-Haija, B. Perozzi, R. Al-Rfou, and A. A. Alemi, 'Watch your step: Learning node embeddings via graph attention,' in Proc. of NeurIPS , 2018, pp. 9197-9207."
+            },
+            {
+              "title": "Geometric deep learning on graphs and manifolds using mixture model cnns",
+              "citation": "F. Monti, D. Boscaini, J. Masci, E. Rodola, J. Svoboda, and M. M. Bronstein, 'Geometric deep learning on graphs and manifolds using mixture model cnns,' in Proc. of CVPR , 2017, pp. 5115-5124."
+            },
+            {
+              "title": "Geodesic convolutional neural networks on riemannian manifolds",
+              "citation": "J. Masci, D. Boscaini, M. Bronstein, and P. Vandergheynst, 'Geodesic convolutional neural networks on riemannian manifolds,' in Proc. of CVPR Workshops , 2015, pp. 37-45."
+            },
+            {
+              "title": "Learning shape correspondence with anisotropic convolutional neural networks",
+              "citation": "D. Boscaini, J. Masci, E. Rodol` a, and M. Bronstein, 'Learning shape correspondence with anisotropic convolutional neural networks,' in Proc. of NIPS , 2016, pp. 3189-3197."
+            },
+            {
+              "title": "Splinecnn: Fast geometric deep learning with continuous b-spline kernels",
+              "citation": "M. Fey, J. E. Lenssen, F. Weichert, and H. M¨ uller, 'Splinecnn: Fast geometric deep learning with continuous b-spline kernels,' in Proc. of CVPR , 2018, pp. 869-877."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Diffusion-convolutional neural networks",
+              "citation": "J. Atwood and D. Towsley, 'Diffusion-convolutional neural networks,' in Proc. of NIPS , 2016, pp. 1993-2001."
+            },
+            {
+              "title": "Learning convolutional neural networks for graphs",
+              "citation": "M. Niepert, M. Ahmed, and K. Kutzkov, 'Learning convolutional neural networks for graphs,' in Proc. of ICML , 2016, pp. 2014-2023."
+            },
+            {
+              "title": "A reduction of a graph to a canonical form and an algebra arising during this reduction",
+              "citation": "B. Weisfeiler and A. Lehman, 'A reduction of a graph to a canonical form and an algebra arising during this reduction,' NauchnoTechnicheskaya Informatsia , vol. 2, no. 9, pp. 12-16, 1968."
+            },
+            {
+              "title": "The weisfeiler-lehman method and graph isomorphism testing",
+              "citation": "B. L. Douglas, 'The weisfeiler-lehman method and graph isomorphism testing,' arXiv preprint arXiv:1101.5211 , 2011."
+            },
+            {
+              "title": "Large-scale learnable graph convolutional networks",
+              "citation": "H. Gao, Z. Wang, and S. Ji, 'Large-scale learnable graph convolutional networks,' in Proc. of KDD . ACM, 2018, pp. 1416-1424."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "Fastgcn: fast learning with graph convolutional networks via importance sampling",
+              "citation": "J. Chen, T. Ma, and C. Xiao, 'Fastgcn: fast learning with graph convolutional networks via importance sampling,' in Proc. of ICLR , 2018."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "Adaptive sampling towards fast graph representation learning",
+              "citation": "W. Huang, T. Zhang, Y. Rong, and J. Huang, 'Adaptive sampling towards fast graph representation learning,' in Proc. of NeurIPS , 2018, pp. 4563-4572."
+            },
+            {
+              "title": "Stochastic training of graph convolutional networks with variance reduction",
+              "citation": "J. Chen, J. Zhu, and L. Song, 'Stochastic training of graph convolutional networks with variance reduction,' in Proc. of ICML , 2018, pp. 941-949."
+            },
+            {
+              "title": "Cluster-gcn: An efficient algorithm for training deep and large graph convolutional networks",
+              "citation": "W.-L. Chiang, X. Liu, S. Si, Y. Li, S. Bengio, and C.-J. Hsieh, 'Cluster-gcn: An efficient algorithm for training deep and large graph convolutional networks,' in Proc. of KDD . ACM, 2019."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Cluster-gcn: An efficient algorithm for training deep and large graph convolutional networks",
+              "citation": "W.-L. Chiang, X. Liu, S. Si, Y. Li, S. Bengio, and C.-J. Hsieh, 'Cluster-gcn: An efficient algorithm for training deep and large graph convolutional networks,' in Proc. of KDD . ACM, 2019."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "Fastgcn: fast learning with graph convolutional networks via importance sampling",
+              "citation": "J. Chen, T. Ma, and C. Xiao, 'Fastgcn: fast learning with graph convolutional networks via importance sampling,' in Proc. of ICLR , 2018."
+            },
+            {
+              "title": "Stochastic training of graph convolutional networks with variance reduction",
+              "citation": "J. Chen, J. Zhu, and L. Song, 'Stochastic training of graph convolutional networks with variance reduction,' in Proc. of ICML , 2018, pp. 941-949."
+            },
+            {
+              "title": "Cluster-gcn: An efficient algorithm for training deep and large graph convolutional networks",
+              "citation": "W.-L. Chiang, X. Liu, S. Si, Y. Li, S. Bengio, and C.-J. Hsieh, 'Cluster-gcn: An efficient algorithm for training deep and large graph convolutional networks,' in Proc. of KDD . ACM, 2019."
+            },
+            {
+              "title": "Cayleynets: Graph convolutional neural networks with complex rational spectral filters",
+              "citation": "R. Levie, F. Monti, X. Bresson, and M. M. Bronstein, 'Cayleynets: Graph convolutional neural networks with complex rational spectral filters,' IEEE Transactions on Signal Processing , vol. 67, no. 1, pp. 97-109, 2017."
+            },
+            {
+              "title": "The graph neural network model",
+              "citation": "F. Scarselli, M. Gori, A. C. Tsoi, M. Hagenbuchner, and G. Monfardini, 'The graph neural network model,' IEEE Transactions on Neural Networks , vol. 20, no. 1, pp. 61-80, 2009."
+            },
+            {
+              "title": "Neural message passing for quantum chemistry",
+              "citation": "J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, 'Neural message passing for quantum chemistry,' in Proc. of ICML , 2017, pp. 1263-1272."
+            },
+            {
+              "title": "Molecular graph convolutions: moving beyond fingerprints",
+              "citation": "S. Kearnes, K. McCloskey, M. Berndl, V. Pande, and P. Riley, 'Molecular graph convolutions: moving beyond fingerprints,' Journal of computer-aided molecular design , vol. 30, no. 8, pp. 595-608, 2016."
+            },
+            {
+              "title": "Column networks for collective classification",
+              "citation": "T. Pham, T. Tran, D. Q. Phung, and S. Venkatesh, 'Column networks for collective classification,' in Proc. of AAAI , 2017, pp. 2485-2491."
+            },
+            {
+              "title": "Dynamic edgeconditioned filters in convolutional neural networks on graphs",
+              "citation": "M. Simonovsky and N. Komodakis, 'Dynamic edgeconditioned filters in convolutional neural networks on graphs,' in Proc. of CVPR , 2017."
+            },
+            {
+              "title": "Diffusion-convolutional neural networks",
+              "citation": "J. Atwood and D. Towsley, 'Diffusion-convolutional neural networks,' in Proc. of NIPS , 2016, pp. 1993-2001."
+            },
+            {
+              "title": "Diffusion convolutional recurrent neural network: Data-driven traffic forecasting",
+              "citation": "Y. Li, R. Yu, C. Shahabi, and Y. Liu, 'Diffusion convolutional recurrent neural network: Data-driven traffic forecasting,' in Proc. of ICLR , 2018."
+            },
+            {
+              "title": "Signed graph convolutional network",
+              "citation": "T. Derr, Y. Ma, and J. Tang, 'Signed graph convolutional network,' in Proc. of ICDM , 2018."
+            },
+            {
+              "title": "Robust spatial filtering with graph convolutional neural networks",
+              "citation": "F. P. Such, S. Sah, M. A. Dominguez, S. Pillai, C. Zhang, A. Michael, N. D. Cahill, and R. Ptucha, 'Robust spatial filtering with graph convolutional neural networks,' IEEE Journal of Selected Topics in Signal Processing , vol. 11, no. 6, pp. 884-896, 2017."
+            },
+            {
+              "title": "Heterogeneous graph attention network",
+              "citation": "X. Wang, H. Ji, C. Shi, B. Wang, C. Peng, Y. P., and Y. Ye, 'Heterogeneous graph attention network,' in WWW , 2019."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.3",
+          "sec_title": "Graph Pooling Modules",
+          "citations": [
+            {
+              "title": "Weighted graph cuts without eigenvectors a multilevel approach",
+              "citation": "I. S. Dhillon, Y. Guan, and B. Kulis, 'Weighted graph cuts without eigenvectors a multilevel approach,' IEEE transactions on pattern analysis and machine intelligence , vol. 29, no. 11, pp. 1944-1957, 2007."
+            },
+            {
+              "title": "Cayleynets: Graph convolutional neural networks with complex rational spectral filters",
+              "citation": "R. Levie, F. Monti, X. Bresson, and M. M. Bronstein, 'Cayleynets: Graph convolutional neural networks with complex rational spectral filters,' IEEE Transactions on Signal Processing , vol. 67, no. 1, pp. 97-109, 2017."
+            },
+            {
+              "title": "Deep convolutional networks on graph-structured data",
+              "citation": "M. Henaff, J. Bruna, and Y. LeCun, 'Deep convolutional networks on graph-structured data,' arXiv preprint arXiv:1506.05163 , 2015."
+            },
+            {
+              "title": "Gated graph sequence neural networks",
+              "citation": "Y. Li, D. Tarlow, M. Brockschmidt, and R. Zemel, 'Gated graph sequence neural networks,' in Proc. of ICLR , 2015."
+            },
+            {
+              "title": "Neural message passing for quantum chemistry",
+              "citation": "J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, 'Neural message passing for quantum chemistry,' in Proc. of ICML , 2017, pp. 1263-1272."
+            },
+            {
+              "title": "On filter size in graph convolutional networks",
+              "citation": "D. V. Tran, A. Sperduti et al. , 'On filter size in graph convolutional networks,' in SSCI . IEEE, 2018, pp. 1534-1541."
+            },
+            {
+              "title": "Order matters: Sequence to sequence for sets",
+              "citation": "O. Vinyals, S. Bengio, and M. Kudlur, 'Order matters: Sequence to sequence for sets,' in Proc. of ICLR , 2016."
+            },
+            {
+              "title": "Convolutional neural networks on graphs with fast localized spectral filtering",
+              "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+            },
+            {
+              "title": "Weighted graph cuts without eigenvectors a multilevel approach",
+              "citation": "I. S. Dhillon, Y. Guan, and B. Kulis, 'Weighted graph cuts without eigenvectors a multilevel approach,' IEEE transactions on pattern analysis and machine intelligence , vol. 29, no. 11, pp. 1944-1957, 2007."
+            },
+            {
+              "title": "An end-to-end deep learning architecture for graph classification",
+              "citation": "M. Zhang, Z. Cui, M. Neumann, and Y. Chen, 'An end-to-end deep learning architecture for graph classification,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "Convolutional neural networks on graphs with fast localized spectral filtering",
+              "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+            },
+            {
+              "title": "A reduction of a graph to a canonical form and an algebra arising during this reduction",
+              "citation": "B. Weisfeiler and A. Lehman, 'A reduction of a graph to a canonical form and an algebra arising during this reduction,' NauchnoTechnicheskaya Informatsia , vol. 2, no. 9, pp. 12-16, 1968."
+            },
+            {
+              "title": "Hierarchical graph representation learning with differentiable pooling",
+              "citation": "Z. Ying, J. You, C. Morris, X. Ren, W. Hamilton, and J. Leskovec, 'Hierarchical graph representation learning with differentiable pooling,' in Proc. of NeurIPS , 2018, pp. 4801-4811."
+            },
+            {
+              "title": "Self-attention graph pooling",
+              "citation": "J. Lee, I. Lee, and J. Kang, 'Self-attention graph pooling,' in Proc. of ICML , 2019, pp. 3734-3743."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "5.3.1",
+              "sec_title": "Henaff et al.",
+              "citations": [
+                {
+                  "title": "Deep convolutional networks on graph-structured data,",
+                  "citation": "M. Henaff, J. Bruna, and Y. LeCun, 'Deep convolutional networks on graph-structured data,' arXiv preprint arXiv:1506.05163 , 2015."
+                },
+                {
+                  "title": "Gated graph sequence neural networks,",
+                  "citation": "Y. Li, D. Tarlow, M. Brockschmidt, and R. Zemel, 'Gated graph sequence neural networks,' in Proc. of ICLR , 2015."
+                },
+                {
+                  "title": "Neural message passing for quantum chemistry,",
+                  "citation": "J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, 'Neural message passing for quantum chemistry,' in Proc. of ICML , 2017, pp. 1263-1272."
+                },
+                {
+                  "title": "On filter size in graph convolutional networks,",
+                  "citation": "D. V. Tran, A. Sperduti et al. , 'On filter size in graph convolutional networks,' in SSCI . IEEE, 2018, pp. 1534-1541."
+                },
+                {
+                  "title": "Order matters: Sequence to sequence for sets,",
+                  "citation": "O. Vinyals, S. Bengio, and M. Kudlur, 'Order matters: Sequence to sequence for sets,' in Proc. of ICLR , 2016."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.3.2",
+              "sec_title": "Defferrard et al.",
+              "citations": [
+                {
+                  "title": "Convolutional neural networks on graphs with fast localized spectral filtering,",
+                  "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+                },
+                {
+                  "title": "Weighted graph cuts without eigenvectors a multilevel approach",
+                  "citation": "I. S. Dhillon, Y. Guan, and B. Kulis, 'Weighted graph cuts without eigenvectors a multilevel approach,' IEEE transactions on pattern analysis and machine intelligence , vol. 29, no. 11, pp. 1944-1957, 2007."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.3.3",
+              "sec_title": "Zhang et al.",
+              "citations": [
+                {
+                  "title": "An end-to-end deep learning architecture for graph classification,",
+                  "citation": "M. Zhang, Z. Cui, M. Neumann, and Y. Chen, 'An end-to-end deep learning architecture for graph classification,' in Proc. of AAAI , 2018."
+                },
+                {
+                  "title": "Convolutional neural networks on graphs with fast localized spectral filtering,",
+                  "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+                },
+                {
+                  "title": "A reduction of a graph to a canonical form and an algebra arising during this reduction",
+                  "citation": "B. Weisfeiler and A. Lehman, 'A reduction of a graph to a canonical form and an algebra arising during this reduction,' NauchnoTechnicheskaya Informatsia , vol. 2, no. 9, pp. 12-16, 1968."
+                },
+                {
+                  "title": "Hierarchical graph representation learning with differentiable pooling,",
+                  "citation": "Z. Ying, J. You, C. Morris, X. Ren, W. Hamilton, and J. Leskovec, 'Hierarchical graph representation learning with differentiable pooling,' in Proc. of NeurIPS , 2018, pp. 4801-4811."
+                },
+                {
+                  "title": "Self-attention graph pooling,",
+                  "citation": "J. Lee, I. Lee, and J. Kang, 'Self-attention graph pooling,' in Proc. of ICML , 2019, pp. 3734-3743."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.3.4",
+              "sec_title": "Overall, pooling is an essential operation to reduce graph size.",
+              "citations": [
+                {
+                  "title": "Neural network for graphs: A contextual constructive approach",
+                  "citation": "A. Micheli, 'Neural network for graphs: A contextual constructive approach,' IEEE Transactions on Neural Networks , vol. 20, no. 3, pp. 498-511, 2009."
+                },
+                {
+                  "title": "The vapnikchervonenkis dimension of graph and recursive neural networks,",
+                  "citation": "F. Scarselli, A. C. Tsoi, and M. Hagenbuchner, 'The vapnikchervonenkis dimension of graph and recursive neural networks,' Neural Networks , vol. 108, pp. 248-259, 2018."
+                },
+                {
+                  "title": "The graph neural network model,",
+                  "citation": "F. Scarselli, M. Gori, A. C. Tsoi, M. Hagenbuchner, and G. Monfardini, 'The graph neural network model,' IEEE Transactions on Neural Networks , vol. 20, no. 1, pp. 61-80, 2009."
+                },
+                {
+                  "title": "How powerful are graph neural networks,",
+                  "citation": "K. Xu, W. Hu, J. Leskovec, and S. Jegelka, 'How powerful are graph neural networks,' in Proc. of ICLR , 2019."
+                },
+                {
+                  "title": "A reduction of a graph to a canonical form and an algebra arising during this reduction",
+                  "citation": "B. Weisfeiler and A. Lehman, 'A reduction of a graph to a canonical form and an algebra arising during this reduction,' NauchnoTechnicheskaya Informatsia , vol. 2, no. 9, pp. 12-16, 1968."
+                },
+                {
+                  "title": "Semi-supervised classification with graph convolutional networks,",
+                  "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+                },
+                {
+                  "title": "Inductive representation learning on large graphs,",
+                  "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+                },
+                {
+                  "title": "Invariant and equivariant graph networks,",
+                  "citation": "H. Maron, H. Ben-Hamu, N. Shamir, and Y. Lipman, 'Invariant and equivariant graph networks,' in ICLR , 2019."
+                },
+                {
+                  "title": "Multilayer feedforward networks are universal approximators,",
+                  "citation": "K. Hornik, M. Stinchcombe, and H. White, 'Multilayer feedforward networks are universal approximators,' Neural networks , vol. 2, no. 5, pp. 359-366, 1989."
+                },
+                {
+                  "title": "Universal approximation capability of cascade correlation for structures,",
+                  "citation": "B. Hammer, A. Micheli, and A. Sperduti, 'Universal approximation capability of cascade correlation for structures,' Neural Computation , vol. 17, no. 5, pp. 1109-1159, 2005."
+                },
+                {
+                  "title": "Computational capabilities of graph neural networks,",
+                  "citation": "F. Scarselli, M. Gori, A. C. Tsoi, M. Hagenbuchner, and G. Monfardini, 'Computational capabilities of graph neural networks,' IEEE Transactions on Neural Networks , vol. 20, no. 1, pp. 81-102, 2008."
+                },
+                {
+                  "title": "Neural message passing for quantum chemistry,",
+                  "citation": "J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, 'Neural message passing for quantum chemistry,' in Proc. of ICML , 2017, pp. 1263-1272."
+                },
+                {
+                  "title": "Deep neural networks for learning graph representations,",
+                  "citation": "S. Cao, W. Lu, and Q. Xu, 'Deep neural networks for learning graph representations,' in Proc. of AAAI , 2016, pp. 1145-1152."
+                },
+                {
+                  "title": "Structural deep network embedding,",
+                  "citation": "D. Wang, P. Cui, and W. Zhu, 'Structural deep network embedding,' in Proc. of KDD . ACM, 2016, pp. 1225-1234."
+                },
+                {
+                  "title": "Extracting and composing robust features with denoising autoencoders,",
+                  "citation": "P. Vincent, H. Larochelle, Y. Bengio, and P.-A. Manzagol, 'Extracting and composing robust features with denoising autoencoders,' in Proc. of ICML . ACM, 2008, pp. 1096-1103."
+                },
+                {
+                  "title": "Variational graph auto-encoders,",
+                  "citation": "T. N. Kipf and M. Welling, 'Variational graph auto-encoders,' NIPS Workshop on Bayesian Deep Learning , 2016."
+                },
+                {
+                  "title": "Adversarially regularized graph autoencoder for graph embedding.",
+                  "citation": "S. Pan, R. Hu, G. Long, J. Jiang, L. Yao, and C. Zhang, 'Adversarially regularized graph autoencoder for graph embedding.' in Proc. of IJCAI , 2018, pp. 2609-2615."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.4",
+          "sec_title": "Discussion of Theoretical Aspects",
+          "citations": [
+            {
+              "title": "Neural network for graphs: A contextual constructive approach",
+              "citation": "A. Micheli, 'Neural network for graphs: A contextual constructive approach,' IEEE Transactions on Neural Networks , vol. 20, no. 3, pp. 498-511, 2009."
+            },
+            {
+              "title": "The vapnikchervonenkis dimension of graph and recursive neural networks",
+              "citation": "F. Scarselli, A. C. Tsoi, and M. Hagenbuchner, 'The vapnikchervonenkis dimension of graph and recursive neural networks,' Neural Networks , vol. 108, pp. 248-259, 2018."
+            },
+            {
+              "title": "The graph neural network model",
+              "citation": "F. Scarselli, M. Gori, A. C. Tsoi, M. Hagenbuchner, and G. Monfardini, 'The graph neural network model,' IEEE Transactions on Neural Networks , vol. 20, no. 1, pp. 61-80, 2009."
+            },
+            {
+              "title": "The graph neural network model",
+              "citation": "F. Scarselli, M. Gori, A. C. Tsoi, M. Hagenbuchner, and G. Monfardini, 'The graph neural network model,' IEEE Transactions on Neural Networks , vol. 20, no. 1, pp. 61-80, 2009."
+            },
+            {
+              "title": "How powerful are graph neural networks",
+              "citation": "K. Xu, W. Hu, J. Leskovec, and S. Jegelka, 'How powerful are graph neural networks,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "A reduction of a graph to a canonical form and an algebra arising during this reduction",
+              "citation": "B. Weisfeiler and A. Lehman, 'A reduction of a graph to a canonical form and an algebra arising during this reduction,' NauchnoTechnicheskaya Informatsia , vol. 2, no. 9, pp. 12-16, 1968."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "How powerful are graph neural networks",
+              "citation": "K. Xu, W. Hu, J. Leskovec, and S. Jegelka, 'How powerful are graph neural networks,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "Invariant and equivariant graph networks",
+              "citation": "H. Maron, H. Ben-Hamu, N. Shamir, and Y. Lipman, 'Invariant and equivariant graph networks,' in ICLR , 2019."
+            },
+            {
+              "title": "Multilayer feedforward networks are universal approximators",
+              "citation": "K. Hornik, M. Stinchcombe, and H. White, 'Multilayer feedforward networks are universal approximators,' Neural networks , vol. 2, no. 5, pp. 359-366, 1989."
+            },
+            {
+              "title": "Universal approximation capability of cascade correlation for structures",
+              "citation": "B. Hammer, A. Micheli, and A. Sperduti, 'Universal approximation capability of cascade correlation for structures,' Neural Computation , vol. 17, no. 5, pp. 1109-1159, 2005."
+            },
+            {
+              "title": "Computational capabilities of graph neural networks",
+              "citation": "F. Scarselli, M. Gori, A. C. Tsoi, M. Hagenbuchner, and G. Monfardini, 'Computational capabilities of graph neural networks,' IEEE Transactions on Neural Networks , vol. 20, no. 1, pp. 81-102, 2008."
+            },
+            {
+              "title": "The graph neural network model",
+              "citation": "F. Scarselli, M. Gori, A. C. Tsoi, M. Hagenbuchner, and G. Monfardini, 'The graph neural network model,' IEEE Transactions on Neural Networks , vol. 20, no. 1, pp. 61-80, 2009."
+            },
+            {
+              "title": "How powerful are graph neural networks",
+              "citation": "K. Xu, W. Hu, J. Leskovec, and S. Jegelka, 'How powerful are graph neural networks,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "Neural message passing for quantum chemistry",
+              "citation": "J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, 'Neural message passing for quantum chemistry,' in Proc. of ICML , 2017, pp. 1263-1272."
+            },
+            {
+              "title": "Invariant and equivariant graph networks",
+              "citation": "H. Maron, H. Ben-Hamu, N. Shamir, and Y. Lipman, 'Invariant and equivariant graph networks,' in ICLR , 2019."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "GRAPH AUTOENCODERS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "6.1",
+          "sec_title": "Network Embedding",
+          "citations": [
+            {
+              "title": "Deep neural networks for learning graph representations",
+              "citation": "S. Cao, W. Lu, and Q. Xu, 'Deep neural networks for learning graph representations,' in Proc. of AAAI , 2016, pp. 1145-1152."
+            },
+            {
+              "title": "Extracting and composing robust features with denoising autoencoders",
+              "citation": "P. Vincent, H. Larochelle, Y. Bengio, and P.-A. Manzagol, 'Extracting and composing robust features with denoising autoencoders,' in Proc. of ICML . ACM, 2008, pp. 1096-1103."
+            },
+            {
+              "title": "Structural deep network embedding",
+              "citation": "D. Wang, P. Cui, and W. Zhu, 'Structural deep network embedding,' in Proc. of KDD . ACM, 2016, pp. 1225-1234."
+            },
+            {
+              "title": "Deep neural networks for learning graph representations",
+              "citation": "S. Cao, W. Lu, and Q. Xu, 'Deep neural networks for learning graph representations,' in Proc. of AAAI , 2016, pp. 1145-1152."
+            },
+            {
+              "title": "Structural deep network embedding",
+              "citation": "D. Wang, P. Cui, and W. Zhu, 'Structural deep network embedding,' in Proc. of KDD . ACM, 2016, pp. 1225-1234."
+            },
+            {
+              "title": "Variational graph auto-encoders",
+              "citation": "T. N. Kipf and M. Welling, 'Variational graph auto-encoders,' NIPS Workshop on Bayesian Deep Learning , 2016."
+            },
+            {
+              "title": "Variational graph auto-encoders",
+              "citation": "T. N. Kipf and M. Welling, 'Variational graph auto-encoders,' NIPS Workshop on Bayesian Deep Learning , 2016."
+            },
+            {
+              "title": "Adversarially regularized graph autoencoder for graph embedding",
+              "citation": "S. Pan, R. Hu, G. Long, J. Jiang, L. Yao, and C. Zhang, 'Adversarially regularized graph autoencoder for graph embedding.' in Proc. of IJCAI , 2018, pp. 2609-2615."
+            },
+            {
+              "title": "Deep recursive network embedding with regular equivalence",
+              "citation": "K. Tu, P. Cui, X. Wang, P. S. Yu, and W. Zhu, 'Deep recursive network embedding with regular equivalence,' in Proc. of KDD . ACM, 2018, pp. 2357-2366."
+            },
+            {
+              "title": "Learning deep network representations with adversarially regularized autoencoders",
+              "citation": "W. Yu, C. Zheng, W. Cheng, C. C. Aggarwal, D. Song, B. Zong, H. Chen, and W. Wang, 'Learning deep network representations with adversarially regularized autoencoders,' in Proc. of AAAI . ACM, 2018, pp. 2663-2671."
+            },
+            {
+              "title": "Learning deep generative models of graphs",
+              "citation": "Y. Li, O. Vinyals, C. Dyer, R. Pascanu, and P. Battaglia, 'Learning deep generative models of graphs,' in Proc. of ICML , 2018."
+            },
+            {
+              "title": "Graphrnn: A deep generative model for graphs",
+              "citation": "J. You, R. Ying, X. Ren, W. L. Hamilton, and J. Leskovec, 'Graphrnn: A deep generative model for graphs,' Proc. of ICML , 2018."
+            },
+            {
+              "title": "Graphvae: Towards generation of small graphs using variational autoencoders",
+              "citation": "M. Simonovsky and N. Komodakis, 'Graphvae: Towards generation of small graphs using variational autoencoders,' in ICANN . Springer, 2018, pp. 412-422."
+            },
+            {
+              "title": "Constrained generation of semantically valid graphs via regularizing variational autoencoders",
+              "citation": "T. Ma, J. Chen, and C. Xiao, 'Constrained generation of semantically valid graphs via regularizing variational autoencoders,' in Proc. of NeurIPS , 2018, pp. 7110-7121."
+            },
+            {
+              "title": "MolGAN: An implicit generative model for small molecular graphs",
+              "citation": "N. De Cao and T. Kipf, 'MolGAN: An implicit generative model for small molecular graphs,' ICML 2018 workshop on Theoretical Foundations and Applications of Deep Generative Models , 2018."
+            },
+            {
+              "title": "Netgan: Generating graphs via random walks",
+              "citation": "A. Bojchevski, O. Shchur, D. Z¨ ugner, and S. G¨ unnemann, 'Netgan: Generating graphs via random walks,' in Proc. of ICML , 2018."
+            },
+            {
+              "title": "Deep neural networks for learning graph representations",
+              "citation": "S. Cao, W. Lu, and Q. Xu, 'Deep neural networks for learning graph representations,' in Proc. of AAAI , 2016, pp. 1145-1152."
+            },
+            {
+              "title": "Structural deep network embedding",
+              "citation": "D. Wang, P. Cui, and W. Zhu, 'Structural deep network embedding,' in Proc. of KDD . ACM, 2016, pp. 1225-1234."
+            },
+            {
+              "title": "Variational graph auto-encoders",
+              "citation": "T. N. Kipf and M. Welling, 'Variational graph auto-encoders,' NIPS Workshop on Bayesian Deep Learning , 2016."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Variational graph auto-encoders",
+              "citation": "T. N. Kipf and M. Welling, 'Variational graph auto-encoders,' NIPS Workshop on Bayesian Deep Learning , 2016."
+            },
+            {
+              "title": "Adversarially regularized graph autoencoder for graph embedding",
+              "citation": "S. Pan, R. Hu, G. Long, J. Jiang, L. Yao, and C. Zhang, 'Adversarially regularized graph autoencoder for graph embedding.' in Proc. of IJCAI , 2018, pp. 2609-2615."
+            },
+            {
+              "title": "Learning graph embedding with adversarial training methods",
+              "citation": "S. Pan, R. Hu, S.-f. Fung, G. Long, J. Jiang, and C. Zhang, 'Learning graph embedding with adversarial training methods,' IEEE Transactions on Cybernetics , 2019."
+            },
+            {
+              "title": "Generative adversarial nets",
+              "citation": "I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, and Y. Bengio, 'Generative adversarial nets,' in Proc. of NIPS , 2014, pp. 2672-2680."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "Deep graph infomax",
+              "citation": "P. Veliˇ ckovi´ c, W. Fedus, W. L. Hamilton, P. Li` o, Y. Bengio, and R. D. Hjelm, 'Deep graph infomax,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "Deep recursive network embedding with regular equivalence",
+              "citation": "K. Tu, P. Cui, X. Wang, P. S. Yu, and W. Zhu, 'Deep recursive network embedding with regular equivalence,' in Proc. of KDD . ACM, 2018, pp. 2357-2366."
+            },
+            {
+              "title": "Long short-term memory",
+              "citation": "S. Hochreiter and J. Schmidhuber, 'Long short-term memory,' Neural computation , vol. 9, no. 8, pp. 1735-1780, 1997."
+            },
+            {
+              "title": "Learning deep network representations with adversarially regularized autoencoders",
+              "citation": "W. Yu, C. Zheng, W. Cheng, C. C. Aggarwal, D. Song, B. Zong, H. Chen, and W. Wang, 'Learning deep network representations with adversarially regularized autoencoders,' in Proc. of AAAI . ACM, 2018, pp. 2663-2671."
+            },
+            {
+              "title": "Adversarially regularized graph autoencoder for graph embedding",
+              "citation": "S. Pan, R. Hu, G. Long, J. Jiang, L. Yao, and C. Zhang, 'Adversarially regularized graph autoencoder for graph embedding.' in Proc. of IJCAI , 2018, pp. 2609-2615."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.2",
+          "sec_title": "Graph Generation",
+          "citations": [
+            {
+              "title": "Automatic chemical design using a data-driven continuous representation of molecules",
+              "citation": "R. G´ omez-Bombarelli, J. N. Wei, D. Duvenaud, J. M. Hern´ andezLobato, B. S´ anchez-Lengeling, D. Sheberla, J. Aguilera-Iparraguirre, T. D. Hirzel, R. P. Adams, and A. Aspuru-Guzik, 'Automatic chemical design using a data-driven continuous representation of molecules,' ACS central science , vol. 4, no. 2, pp. 268-276, 2018."
+            },
+            {
+              "title": "Grammar variational autoencoder",
+              "citation": "M. J. Kusner, B. Paige, and J. M. Hern´ andez-Lobato, 'Grammar variational autoencoder,' in Proc. of ICML , 2017."
+            },
+            {
+              "title": "Syntax-directed variational autoencoder for molecule generation",
+              "citation": "H. Dai, Y. Tian, B. Dai, S. Skiena, and L. Song, 'Syntax-directed variational autoencoder for molecule generation,' in Proc. of ICLR , 2018."
+            },
+            {
+              "title": "Learning deep generative models of graphs",
+              "citation": "Y. Li, O. Vinyals, C. Dyer, R. Pascanu, and P. Battaglia, 'Learning deep generative models of graphs,' in Proc. of ICML , 2018."
+            },
+            {
+              "title": "Graphrnn: A deep generative model for graphs",
+              "citation": "J. You, R. Ying, X. Ren, W. L. Hamilton, and J. Leskovec, 'Graphrnn: A deep generative model for graphs,' Proc. of ICML , 2018."
+            },
+            {
+              "title": "Graphvae: Towards generation of small graphs using variational autoencoders",
+              "citation": "M. Simonovsky and N. Komodakis, 'Graphvae: Towards generation of small graphs using variational autoencoders,' in ICANN . Springer, 2018, pp. 412-422."
+            },
+            {
+              "title": "Constrained generation of semantically valid graphs via regularizing variational autoencoders",
+              "citation": "T. Ma, J. Chen, and C. Xiao, 'Constrained generation of semantically valid graphs via regularizing variational autoencoders,' in Proc. of NeurIPS , 2018, pp. 7110-7121."
+            },
+            {
+              "title": "MolGAN: An implicit generative model for small molecular graphs",
+              "citation": "N. De Cao and T. Kipf, 'MolGAN: An implicit generative model for small molecular graphs,' ICML 2018 workshop on Theoretical Foundations and Applications of Deep Generative Models , 2018."
+            },
+            {
+              "title": "Modeling relational data with graph convolutional networks",
+              "citation": "M. Schlichtkrull, T. N. Kipf, P. Bloem, R. van den Berg, I. Titov, and M. Welling, 'Modeling relational data with graph convolutional networks,' in ESWC . Springer, 2018, pp. 593-607."
+            },
+            {
+              "title": "Improved training of wasserstein gans",
+              "citation": "I. Gulrajani, F. Ahmed, M. Arjovsky, V. Dumoulin, and A. C. Courville, 'Improved training of wasserstein gans,' in Proc. of NIPS , 2017, pp. 5767-5777."
+            },
+            {
+              "title": "Netgan: Generating graphs via random walks",
+              "citation": "A. Bojchevski, O. Shchur, D. Z¨ ugner, and S. G¨ unnemann, 'Netgan: Generating graphs via random walks,' in Proc. of ICML , 2018."
+            },
+            {
+              "title": "Long short-term memory",
+              "citation": "S. Hochreiter and J. Schmidhuber, 'Long short-term memory,' Neural computation , vol. 9, no. 8, pp. 1735-1780, 1997."
+            },
+            {
+              "title": "Wasserstein gan",
+              "citation": "M. Arjovsky, S. Chintala, and L. Bottou, 'Wasserstein gan,' arXiv preprint arXiv:1701.07875 , 2017."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "6.2.1",
+              "sec_title": "Global approaches output a graph all at once.",
+              "citations": [
+                {
+                  "title": "Graphvae: Towards generation of small graphs using variational autoencoders",
+                  "citation": "M. Simonovsky and N. Komodakis, 'Graphvae: Towards generation of small graphs using variational autoencoders,' in ICANN . Springer, 2018, pp. 412-422."
+                },
+                {
+                  "title": "Constrained generation of semantically valid graphs via regularizing variational autoencoders,",
+                  "citation": "T. Ma, J. Chen, and C. Xiao, 'Constrained generation of semantically valid graphs via regularizing variational autoencoders,' in Proc. of NeurIPS , 2018, pp. 7110-7121."
+                },
+                {
+                  "title": "MolGAN: An implicit generative model for small molecular graphs",
+                  "citation": "N. De Cao and T. Kipf, 'MolGAN: An implicit generative model for small molecular graphs,' ICML 2018 workshop on Theoretical Foundations and Applications of Deep Generative Models , 2018."
+                },
+                {
+                  "title": "Modeling relational data with graph convolutional networks,",
+                  "citation": "M. Schlichtkrull, T. N. Kipf, P. Bloem, R. van den Berg, I. Titov, and M. Welling, 'Modeling relational data with graph convolutional networks,' in ESWC . Springer, 2018, pp. 593-607."
+                },
+                {
+                  "title": "Improved training of wasserstein gans,",
+                  "citation": "I. Gulrajani, F. Ahmed, M. Arjovsky, V. Dumoulin, and A. C. Courville, 'Improved training of wasserstein gans,' in Proc. of NIPS , 2017, pp. 5767-5777."
+                },
+                {
+                  "title": "Netgan: Generating graphs via random walks,",
+                  "citation": "A. Bojchevski, O. Shchur, D. Z¨ ugner, and S. G¨ unnemann, 'Netgan: Generating graphs via random walks,' in Proc. of ICML , 2018."
+                },
+                {
+                  "title": "Wasserstein gan",
+                  "citation": "M. Arjovsky, S. Chintala, and L. Bottou, 'Wasserstein gan,' arXiv preprint arXiv:1701.07875 , 2017."
+                },
+                {
+                  "title": "Long short-term memory",
+                  "citation": "S. Hochreiter and J. Schmidhuber, 'Long short-term memory,' Neural computation , vol. 9, no. 8, pp. 1735-1780, 1997."
+                },
+                {
+                  "title": "Gaan: Gated attention networks for learning on large and spatiotemporal graphs,",
+                  "citation": "J. Zhang, X. Shi, J. Xie, H. Ma, I. King, and D.-Y. Yeung, 'Gaan: Gated attention networks for learning on large and spatiotemporal graphs,' in Proc. of UAI , 2018."
+                },
+                {
+                  "title": "Structured sequence modeling with graph convolutional recurrent networks,",
+                  "citation": "Y. Seo, M. Defferrard, P. Vandergheynst, and X. Bresson, 'Structured sequence modeling with graph convolutional recurrent networks,' in International Conference on Neural Information Processing . Springer, 2018, pp. 362-373."
+                },
+                {
+                  "title": "Diffusion convolutional recurrent neural network: Data-driven traffic forecasting,",
+                  "citation": "Y. Li, R. Yu, C. Shahabi, and Y. Liu, 'Diffusion convolutional recurrent neural network: Data-driven traffic forecasting,' in Proc. of ICLR , 2018."
+                },
+                {
+                  "title": "Convolutional neural networks on graphs with fast localized spectral filtering,",
+                  "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+                },
+                {
+                  "title": "Structural-rnn: Deep learning on spatio-temporal graphs,",
+                  "citation": "A. Jain, A. R. Zamir, S. Savarese, and A. Saxena, 'Structural-rnn: Deep learning on spatio-temporal graphs,' in Proc. of CVPR , 2016, pp. 5308-5317."
+                },
+                {
+                  "title": "Spatio-temporal graph convolutional networks: A deep learning framework for traffic forecasting,",
+                  "citation": "B. Yu, H. Yin, and Z. Zhu, 'Spatio-temporal graph convolutional networks: A deep learning framework for traffic forecasting,' in Proc. of IJCAI , 2018, pp. 3634-3640."
+                },
+                {
+                  "title": "Spatial temporal graph convolutional networks for skeleton-based action recognition,",
+                  "citation": "S. Yan, Y. Xiong, and D. Lin, 'Spatial temporal graph convolutional networks for skeleton-based action recognition,' in Proc. of AAAI , 2018."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "SPATIAL-TEMPORAL GRAPH NEURAL NETWORKS",
+      "citations": [
+        {
+          "title": "Gaan: Gated attention networks for learning on large and spatiotemporal graphs",
+          "citation": "J. Zhang, X. Shi, J. Xie, H. Ma, I. King, and D.-Y. Yeung, 'Gaan: Gated attention networks for learning on large and spatiotemporal graphs,' in Proc. of UAI , 2018."
+        },
+        {
+          "title": "Structured sequence modeling with graph convolutional recurrent networks",
+          "citation": "Y. Seo, M. Defferrard, P. Vandergheynst, and X. Bresson, 'Structured sequence modeling with graph convolutional recurrent networks,' in International Conference on Neural Information Processing . Springer, 2018, pp. 362-373."
+        },
+        {
+          "title": "Diffusion convolutional recurrent neural network: Data-driven traffic forecasting",
+          "citation": "Y. Li, R. Yu, C. Shahabi, and Y. Liu, 'Diffusion convolutional recurrent neural network: Data-driven traffic forecasting,' in Proc. of ICLR , 2018."
+        },
+        {
+          "title": "Structured sequence modeling with graph convolutional recurrent networks",
+          "citation": "Y. Seo, M. Defferrard, P. Vandergheynst, and X. Bresson, 'Structured sequence modeling with graph convolutional recurrent networks,' in International Conference on Neural Information Processing . Springer, 2018, pp. 362-373."
+        },
+        {
+          "title": "Convolutional neural networks on graphs with fast localized spectral filtering",
+          "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+        },
+        {
+          "title": "Diffusion convolutional recurrent neural network: Data-driven traffic forecasting",
+          "citation": "Y. Li, R. Yu, C. Shahabi, and Y. Liu, 'Diffusion convolutional recurrent neural network: Data-driven traffic forecasting,' in Proc. of ICLR , 2018."
+        },
+        {
+          "title": "Structural-rnn: Deep learning on spatio-temporal graphs",
+          "citation": "A. Jain, A. R. Zamir, S. Savarese, and A. Saxena, 'Structural-rnn: Deep learning on spatio-temporal graphs,' in Proc. of CVPR , 2016, pp. 5308-5317."
+        },
+        {
+          "title": "Spatio-temporal graph convolutional networks: A deep learning framework for traffic forecasting",
+          "citation": "B. Yu, H. Yin, and Z. Zhu, 'Spatio-temporal graph convolutional networks: A deep learning framework for traffic forecasting,' in Proc. of IJCAI , 2018, pp. 3634-3640."
+        },
+        {
+          "title": "Convolutional neural networks on graphs with fast localized spectral filtering",
+          "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+        },
+        {
+          "title": "Semi-supervised classification with graph convolutional networks",
+          "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+        },
+        {
+          "title": "Spatial temporal graph convolutional networks for skeleton-based action recognition",
+          "citation": "S. Yan, Y. Xiong, and D. Lin, 'Spatial temporal graph convolutional networks for skeleton-based action recognition,' in Proc. of AAAI , 2018."
+        },
+        {
+          "title": "Graph wavenet for deep spatial-temporal graph modeling",
+          "citation": "Z. Wu, S. Pan, G. Long, J. Jiang, and C. Zhang, 'Graph wavenet for deep spatial-temporal graph modeling,' in Proc. of IJCAI , 2019."
+        },
+        {
+          "title": "Gaan: Gated attention networks for learning on large and spatiotemporal graphs",
+          "citation": "J. Zhang, X. Shi, J. Xie, H. Ma, I. King, and D.-Y. Yeung, 'Gaan: Gated attention networks for learning on large and spatiotemporal graphs,' in Proc. of UAI , 2018."
+        },
+        {
+          "title": "Attention based spatialtemporal graph convolutional networks for traffic flow forecasting",
+          "citation": "S. Guo, Y. Lin, N. Feng, C. Song, and H. Wan, 'Attention based spatialtemporal graph convolutional networks for traffic flow forecasting,' in Proc. of AAAI , 2019."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "APPLICATIONS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "8.1",
+          "sec_title": "Data Sets",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "8.2",
+          "sec_title": "Evaluation & Open-source Implementations",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "8.3",
+          "sec_title": "Practical Applications",
+          "citations": [
+            {
+              "title": "Mgae: Marginalized graph autoencoder for graph clustering",
+              "citation": "C. Wang, S. Pan, G. Long, X. Zhu, and J. Jiang, 'Mgae: Marginalized graph autoencoder for graph clustering,' in Proc. of CIKM . ACM, 2017, pp. 889-898."
+            },
+            {
+              "title": "Link prediction based on graph neural networks",
+              "citation": "M. Zhang and Y. Chen, 'Link prediction based on graph neural networks,' in Proc. of NeurIPS , 2018."
+            },
+            {
+              "title": "Mean-field theory of graph neural networks in graph partitioning",
+              "citation": "T. Kawamoto, M. Tsubaki, and T. Obuchi, 'Mean-field theory of graph neural networks in graph partitioning,' in Proc. of NeurIPS , 2018, pp. 4362-4372."
+            },
+            {
+              "title": "Scene graph generation by iterative message passing",
+              "citation": "D. Xu, Y. Zhu, C. B. Choy, and L. Fei-Fei, 'Scene graph generation by iterative message passing,' in Proc. of CVPR , vol. 2, 2017."
+            },
+            {
+              "title": "Graph r-cnn for scene graph generation",
+              "citation": "J. Yang, J. Lu, S. Lee, D. Batra, and D. Parikh, 'Graph r-cnn for scene graph generation,' in Proc. of ECCV . Springer, 2018, pp. 690-706."
+            },
+            {
+              "title": "Factorizable net: an efficient subgraph-based framework for scene graph generation",
+              "citation": "Y. Li, W. Ouyang, B. Zhou, J. Shi, C. Zhang, and X. Wang, 'Factorizable net: an efficient subgraph-based framework for scene graph generation,' in Proc. of ECCV . Springer, 2018, pp. 346-363."
+            },
+            {
+              "title": "Image generation from scene graphs",
+              "citation": "J. Johnson, A. Gupta, and L. Fei-Fei, 'Image generation from scene graphs,' in Proc. of CVPR , 2018."
+            },
+            {
+              "title": "Dynamic graph cnn for learning on point clouds",
+              "citation": "Y. Wang, Y. Sun, Z. Liu, S. E. Sarma, M. M. Bronstein, and J. M. Solomon, 'Dynamic graph cnn for learning on point clouds,' ACM Transactions on Graphics (TOG) , 2019."
+            },
+            {
+              "title": "Large-scale point cloud semantic segmentation with superpoint graphs",
+              "citation": "L. Landrieu and M. Simonovsky, 'Large-scale point cloud semantic segmentation with superpoint graphs,' in Proc. of CVPR , 2018."
+            },
+            {
+              "title": "Rgcnn: Regularized graph cnn for point cloud segmentation",
+              "citation": "G. Te, W. Hu, A. Zheng, and Z. Guo, 'Rgcnn: Regularized graph cnn for point cloud segmentation,' in 2018 ACM Multimedia Conference on Multimedia Conference . ACM, 2018, pp. 746-754."
+            },
+            {
+              "title": "Structural-rnn: Deep learning on spatio-temporal graphs",
+              "citation": "A. Jain, A. R. Zamir, S. Savarese, and A. Saxena, 'Structural-rnn: Deep learning on spatio-temporal graphs,' in Proc. of CVPR , 2016, pp. 5308-5317."
+            },
+            {
+              "title": "Spatial temporal graph convolutional networks for skeleton-based action recognition",
+              "citation": "S. Yan, Y. Xiong, and D. Lin, 'Spatial temporal graph convolutional networks for skeleton-based action recognition,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "Learning human-object interactions by graph parsing neural networks",
+              "citation": "S. Qi, W. Wang, B. Jia, J. Shen, and S.-C. Zhu, 'Learning human-object interactions by graph parsing neural networks,' in Proc. of ECCV . Springer, 2018, pp. 401-417."
+            },
+            {
+              "title": "Few-shot learning with graph neural networks",
+              "citation": "V. G. Satorras and J. B. Estrach, 'Few-shot learning with graph neural networks,' in Proc. of ICLR , 2018."
+            },
+            {
+              "title": "Neural graph matching networks for fewshot 3d action recognition",
+              "citation": "M. Guo, E. Chou, D.-A. Huang, S. Song, S. Yeung, and L. Fei-Fei, 'Neural graph matching networks for fewshot 3d action recognition,' in Proc. of ECCV . Springer, 2018, pp. 673-689."
+            },
+            {
+              "title": "Prototype propagation networks (ppn) for weakly-supervised few-shot learning on category graph",
+              "citation": "L. Liu, T. Zhou, G. Long, J. Jiang, L. Yao, and C. Zhang, 'Prototype propagation networks (ppn) for weakly-supervised few-shot learning on category graph,' in Proc. of IJCAI , 2019."
+            },
+            {
+              "title": "3d graph neural networks for rgbd semantic segmentation",
+              "citation": "X. Qi, R. Liao, J. Jia, S. Fidler, and R. Urtasun, '3d graph neural networks for rgbd semantic segmentation,' in Proc. of CVPR , 2017, pp. 5199-5208."
+            },
+            {
+              "title": "Syncspeccnn: Synchronized spectral cnn for 3d shape segmentation",
+              "citation": "L. Yi, H. Su, X. Guo, and L. J. Guibas, 'Syncspeccnn: Synchronized spectral cnn for 3d shape segmentation.' in Proc. of CVPR , 2017, pp. 6584-6592."
+            },
+            {
+              "title": "Iterative visual reasoning beyond convolutions",
+              "citation": "X. Chen, L.-J. Li, L. Fei-Fei, and A. Gupta, 'Iterative visual reasoning beyond convolutions,' in Proc. of CVPR , 2018."
+            },
+            {
+              "title": "Out of the box: Reasoning with graph convolution nets for factual visual question answering",
+              "citation": "M. Narasimhan, S. Lazebnik, and A. Schwing, 'Out of the box: Reasoning with graph convolution nets for factual visual question answering,' in Proc. of NeurIPS , 2018, pp. 2655-2666."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "Graph attention networks",
+              "citation": "P. Velickovic, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Encoding sentences with graph convolutional networks for semantic role labeling",
+              "citation": "D. Marcheggiani and I. Titov, 'Encoding sentences with graph convolutional networks for semantic role labeling,' in Proc. of EMNLP , 2017, pp. 1506-1515."
+            },
+            {
+              "title": "Graph convolutional encoders for syntax-aware neural machine translation",
+              "citation": "J. Bastings, I. Titov, W. Aziz, D. Marcheggiani, and K. Sima'an, 'Graph convolutional encoders for syntax-aware neural machine translation,' in Proc. of EMNLP , 2017, pp. 1957-1967."
+            },
+            {
+              "title": "Exploiting semantics in neural machine translation with graph convolutional networks",
+              "citation": "D. Marcheggiani, J. Bastings, and I. Titov, 'Exploiting semantics in neural machine translation with graph convolutional networks,' in Proc. of NAACL , 2018."
+            },
+            {
+              "title": "Graph convolutional encoders for syntax-aware neural machine translation",
+              "citation": "J. Bastings, I. Titov, W. Aziz, D. Marcheggiani, and K. Sima'an, 'Graph convolutional encoders for syntax-aware neural machine translation,' in Proc. of EMNLP , 2017, pp. 1957-1967."
+            },
+            {
+              "title": "Collective classification in network data",
+              "citation": "P. Sen, G. Namata, M. Bilgic, L. Getoor, B. Galligher, and T. EliassiRad, 'Collective classification in network data,' AI magazine , vol. 29, no. 3, p. 93, 2008."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Cayleynets: Graph convolutional neural networks with complex rational spectral filters",
+              "citation": "R. Levie, F. Monti, X. Bresson, and M. M. Bronstein, 'Cayleynets: Graph convolutional neural networks with complex rational spectral filters,' IEEE Transactions on Signal Processing , vol. 67, no. 1, pp. 97-109, 2017."
+            },
+            {
+              "title": "Diffusion-convolutional neural networks",
+              "citation": "J. Atwood and D. Towsley, 'Diffusion-convolutional neural networks,' in Proc. of NIPS , 2016, pp. 1993-2001."
+            },
+            {
+              "title": "Dual graph convolutional networks for graphbased semi-supervised classification",
+              "citation": "C. Zhuang and Q. Ma, 'Dual graph convolutional networks for graphbased semi-supervised classification,' in WWW , 2018, pp. 499-508."
+            },
+            {
+              "title": "Graph attention networks",
+              "citation": "P. Velickovic, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Geometric deep learning on graphs and manifolds using mixture model cnns",
+              "citation": "F. Monti, D. Boscaini, J. Masci, E. Rodola, J. Svoboda, and M. M. Bronstein, 'Geometric deep learning on graphs and manifolds using mixture model cnns,' in Proc. of CVPR , 2017, pp. 5115-5124."
+            },
+            {
+              "title": "Large-scale learnable graph convolutional networks",
+              "citation": "H. Gao, Z. Wang, and S. Ji, 'Large-scale learnable graph convolutional networks,' in Proc. of KDD . ACM, 2018, pp. 1416-1424."
+            },
+            {
+              "title": "Fastgcn: fast learning with graph convolutional networks via importance sampling",
+              "citation": "J. Chen, T. Ma, and C. Xiao, 'Fastgcn: fast learning with graph convolutional networks via importance sampling,' in Proc. of ICLR , 2018."
+            },
+            {
+              "title": "Stochastic training of graph convolutional networks with variance reduction",
+              "citation": "J. Chen, J. Zhu, and L. Song, 'Stochastic training of graph convolutional networks with variance reduction,' in Proc. of ICML , 2018, pp. 941-949."
+            },
+            {
+              "title": "Adaptive sampling towards fast graph representation learning",
+              "citation": "W. Huang, T. Zhang, Y. Rong, and J. Huang, 'Adaptive sampling towards fast graph representation learning,' in Proc. of NeurIPS , 2018, pp. 4563-4572."
+            },
+            {
+              "title": "Deeper insights into graph convolutional networks for semi-supervised learning",
+              "citation": "Q. Li, Z. Han, and X.-M. Wu, 'Deeper insights into graph convolutional networks for semi-supervised learning,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "Deep graph infomax",
+              "citation": "P. Veliˇ ckovi´ c, W. Fedus, W. L. Hamilton, P. Li` o, Y. Bengio, and R. D. Hjelm, 'Deep graph infomax,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "Variational graph auto-encoders",
+              "citation": "T. N. Kipf and M. Welling, 'Variational graph auto-encoders,' NIPS Workshop on Bayesian Deep Learning , 2016."
+            },
+            {
+              "title": "Adversarially regularized graph autoencoder for graph embedding",
+              "citation": "S. Pan, R. Hu, G. Long, J. Jiang, L. Yao, and C. Zhang, 'Adversarially regularized graph autoencoder for graph embedding.' in Proc. of IJCAI , 2018, pp. 2609-2615."
+            },
+            {
+              "title": "Collective classification in network data",
+              "citation": "P. Sen, G. Namata, M. Bilgic, L. Getoor, B. Galligher, and T. EliassiRad, 'Collective classification in network data,' AI magazine , vol. 29, no. 3, p. 93, 2008."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Dual graph convolutional networks for graphbased semi-supervised classification",
+              "citation": "C. Zhuang and Q. Ma, 'Dual graph convolutional networks for graphbased semi-supervised classification,' in WWW , 2018, pp. 499-508."
+            },
+            {
+              "title": "Graph attention networks",
+              "citation": "P. Velickovic, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Large-scale learnable graph convolutional networks",
+              "citation": "H. Gao, Z. Wang, and S. Ji, 'Large-scale learnable graph convolutional networks,' in Proc. of KDD . ACM, 2018, pp. 1416-1424."
+            },
+            {
+              "title": "Stochastic training of graph convolutional networks with variance reduction",
+              "citation": "J. Chen, J. Zhu, and L. Song, 'Stochastic training of graph convolutional networks with variance reduction,' in Proc. of ICML , 2018, pp. 941-949."
+            },
+            {
+              "title": "Adaptive sampling towards fast graph representation learning",
+              "citation": "W. Huang, T. Zhang, Y. Rong, and J. Huang, 'Adaptive sampling towards fast graph representation learning,' in Proc. of NeurIPS , 2018, pp. 4563-4572."
+            },
+            {
+              "title": "Deeper insights into graph convolutional networks for semi-supervised learning",
+              "citation": "Q. Li, Z. Han, and X.-M. Wu, 'Deeper insights into graph convolutional networks for semi-supervised learning,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "Deep graph infomax",
+              "citation": "P. Veliˇ ckovi´ c, W. Fedus, W. L. Hamilton, P. Li` o, Y. Bengio, and R. D. Hjelm, 'Deep graph infomax,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "Variational graph auto-encoders",
+              "citation": "T. N. Kipf and M. Welling, 'Variational graph auto-encoders,' NIPS Workshop on Bayesian Deep Learning , 2016."
+            },
+            {
+              "title": "Adversarially regularized graph autoencoder for graph embedding",
+              "citation": "S. Pan, R. Hu, G. Long, J. Jiang, L. Yao, and C. Zhang, 'Adversarially regularized graph autoencoder for graph embedding.' in Proc. of IJCAI , 2018, pp. 2609-2615."
+            },
+            {
+              "title": "Collective classification in network data",
+              "citation": "P. Sen, G. Namata, M. Bilgic, L. Getoor, B. Galligher, and T. EliassiRad, 'Collective classification in network data,' AI magazine , vol. 29, no. 3, p. 93, 2008."
+            },
+            {
+              "title": "Learning steadystates of iterative algorithms over graphs",
+              "citation": "H. Dai, Z. Kozareva, B. Dai, A. Smola, and L. Song, 'Learning steadystates of iterative algorithms over graphs,' in Proc. of ICML , 2018, pp. 1114-1122."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Diffusion-convolutional neural networks",
+              "citation": "J. Atwood and D. Towsley, 'Diffusion-convolutional neural networks,' in Proc. of NIPS , 2016, pp. 1993-2001."
+            },
+            {
+              "title": "Dual graph convolutional networks for graphbased semi-supervised classification",
+              "citation": "C. Zhuang and Q. Ma, 'Dual graph convolutional networks for graphbased semi-supervised classification,' in WWW , 2018, pp. 499-508."
+            },
+            {
+              "title": "Graph attention networks",
+              "citation": "P. Velickovic, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Geometric deep learning on graphs and manifolds using mixture model cnns",
+              "citation": "F. Monti, D. Boscaini, J. Masci, E. Rodola, J. Svoboda, and M. M. Bronstein, 'Geometric deep learning on graphs and manifolds using mixture model cnns,' in Proc. of CVPR , 2017, pp. 5115-5124."
+            },
+            {
+              "title": "Large-scale learnable graph convolutional networks",
+              "citation": "H. Gao, Z. Wang, and S. Ji, 'Large-scale learnable graph convolutional networks,' in Proc. of KDD . ACM, 2018, pp. 1416-1424."
+            },
+            {
+              "title": "Fastgcn: fast learning with graph convolutional networks via importance sampling",
+              "citation": "J. Chen, T. Ma, and C. Xiao, 'Fastgcn: fast learning with graph convolutional networks via importance sampling,' in Proc. of ICLR , 2018."
+            },
+            {
+              "title": "Adaptive sampling towards fast graph representation learning",
+              "citation": "W. Huang, T. Zhang, Y. Rong, and J. Huang, 'Adaptive sampling towards fast graph representation learning,' in Proc. of NeurIPS , 2018, pp. 4563-4572."
+            },
+            {
+              "title": "Deeper insights into graph convolutional networks for semi-supervised learning",
+              "citation": "Q. Li, Z. Han, and X.-M. Wu, 'Deeper insights into graph convolutional networks for semi-supervised learning,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "Geniepath: Graph neural networks with adaptive receptive paths",
+              "citation": "Z. Liu, C. Chen, L. Li, J. Zhou, X. Li, and L. Song, 'Geniepath: Graph neural networks with adaptive receptive paths,' in Proc. of AAAI , 2019."
+            },
+            {
+              "title": "Deep graph infomax",
+              "citation": "P. Veliˇ ckovi´ c, W. Fedus, W. L. Hamilton, P. Li` o, Y. Bengio, and R. D. Hjelm, 'Deep graph infomax,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "Variational graph auto-encoders",
+              "citation": "T. N. Kipf and M. Welling, 'Variational graph auto-encoders,' NIPS Workshop on Bayesian Deep Learning , 2016."
+            },
+            {
+              "title": "Adversarially regularized graph autoencoder for graph embedding",
+              "citation": "S. Pan, R. Hu, G. Long, J. Jiang, L. Yao, and C. Zhang, 'Adversarially regularized graph autoencoder for graph embedding.' in Proc. of IJCAI , 2018, pp. 2609-2615."
+            },
+            {
+              "title": "Netgan: Generating graphs via random walks",
+              "citation": "A. Bojchevski, O. Shchur, D. Z¨ ugner, and S. G¨ unnemann, 'Netgan: Generating graphs via random walks,' in Proc. of ICML , 2018."
+            },
+            {
+              "title": "Column networks for collective classification",
+              "citation": "T. Pham, T. Tran, D. Q. Phung, and S. Venkatesh, 'Column networks for collective classification,' in Proc. of AAAI , 2017, pp. 2485-2491."
+            },
+            {
+              "title": "Arnetminer: extraction and mining of academic social networks",
+              "citation": "J. Tang, J. Zhang, L. Yao, J. Li, L. Zhang, and Z. Su, 'Arnetminer: extraction and mining of academic social networks,' in Proc. of KDD . ACM, 2008, pp. 990-998."
+            },
+            {
+              "title": "Learning deep network representations with adversarially regularized autoencoders",
+              "citation": "W. Yu, C. Zheng, W. Cheng, C. C. Aggarwal, D. Song, B. Zong, H. Chen, and W. Wang, 'Learning deep network representations with adversarially regularized autoencoders,' in Proc. of AAAI . ACM, 2018, pp. 2663-2671."
+            },
+            {
+              "title": "Netgan: Generating graphs via random walks",
+              "citation": "A. Bojchevski, O. Shchur, D. Z¨ ugner, and S. G¨ unnemann, 'Netgan: Generating graphs via random walks,' in Proc. of ICML , 2018."
+            },
+            {
+              "title": "Heterogeneous graph attention network",
+              "citation": "X. Wang, H. Ji, C. Shi, B. Wang, C. Peng, Y. P., and Y. Ye, 'Heterogeneous graph attention network,' in WWW , 2019."
+            },
+            {
+              "title": "Predicting multicellular function through multi-layer tissue networks",
+              "citation": "M. Zitnik and J. Leskovec, 'Predicting multicellular function through multi-layer tissue networks,' Bioinformatics , vol. 33, no. 14, pp. i190i198, 2017."
+            },
+            {
+              "title": "Learning steadystates of iterative algorithms over graphs",
+              "citation": "H. Dai, Z. Kozareva, B. Dai, A. Smola, and L. Song, 'Learning steadystates of iterative algorithms over graphs,' in Proc. of ICML , 2018, pp. 1114-1122."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "Graph attention networks",
+              "citation": "P. Velickovic, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Gaan: Gated attention networks for learning on large and spatiotemporal graphs",
+              "citation": "J. Zhang, X. Shi, J. Xie, H. Ma, I. King, and D.-Y. Yeung, 'Gaan: Gated attention networks for learning on large and spatiotemporal graphs,' in Proc. of UAI , 2018."
+            },
+            {
+              "title": "Large-scale learnable graph convolutional networks",
+              "citation": "H. Gao, Z. Wang, and S. Ji, 'Large-scale learnable graph convolutional networks,' in Proc. of KDD . ACM, 2018, pp. 1416-1424."
+            },
+            {
+              "title": "Stochastic training of graph convolutional networks with variance reduction",
+              "citation": "J. Chen, J. Zhu, and L. Song, 'Stochastic training of graph convolutional networks with variance reduction,' in Proc. of ICML , 2018, pp. 941-949."
+            },
+            {
+              "title": "Geniepath: Graph neural networks with adaptive receptive paths",
+              "citation": "Z. Liu, C. Chen, L. Li, J. Zhou, X. Li, and L. Song, 'Geniepath: Graph neural networks with adaptive receptive paths,' in Proc. of AAAI , 2019."
+            },
+            {
+              "title": "Deep graph infomax",
+              "citation": "P. Veliˇ ckovi´ c, W. Fedus, W. L. Hamilton, P. Li` o, Y. Bengio, and R. D. Hjelm, 'Deep graph infomax,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "Cluster-gcn: An efficient algorithm for training deep and large graph convolutional networks",
+              "citation": "W.-L. Chiang, X. Liu, S. Si, Y. Li, S. Bengio, and C.-J. Hsieh, 'Cluster-gcn: An efficient algorithm for training deep and large graph convolutional networks,' in Proc. of KDD . ACM, 2019."
+            },
+            {
+              "title": "Learning deep network representations with adversarially regularized autoencoders",
+              "citation": "W. Yu, C. Zheng, W. Cheng, C. C. Aggarwal, D. Song, B. Zong, H. Chen, and W. Wang, 'Learning deep network representations with adversarially regularized autoencoders,' in Proc. of AAAI . ACM, 2018, pp. 2663-2671."
+            },
+            {
+              "title": "Comparison of descriptor spaces for chemical compound retrieval and classification",
+              "citation": "N. Wale, I. A. Watson, and G. Karypis, 'Comparison of descriptor spaces for chemical compound retrieval and classification,' Knowledge and Information Systems , vol. 14, no. 3, pp. 347-375, 2008."
+            },
+            {
+              "title": "Diffusion-convolutional neural networks",
+              "citation": "J. Atwood and D. Towsley, 'Diffusion-convolutional neural networks,' in Proc. of NIPS , 2016, pp. 1993-2001."
+            },
+            {
+              "title": "Learning convolutional neural networks for graphs",
+              "citation": "M. Niepert, M. Ahmed, and K. Kutzkov, 'Learning convolutional neural networks for graphs,' in Proc. of ICML , 2016, pp. 2014-2023."
+            },
+            {
+              "title": "On filter size in graph convolutional networks",
+              "citation": "D. V. Tran, A. Sperduti et al. , 'On filter size in graph convolutional networks,' in SSCI . IEEE, 2018, pp. 1534-1541."
+            },
+            {
+              "title": "An end-to-end deep learning architecture for graph classification",
+              "citation": "M. Zhang, Z. Cui, M. Neumann, and Y. Chen, 'An end-to-end deep learning architecture for graph classification,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "How powerful are graph neural networks",
+              "citation": "K. Xu, W. Hu, J. Leskovec, and S. Jegelka, 'How powerful are graph neural networks,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "Dynamic edgeconditioned filters in convolutional neural networks on graphs",
+              "citation": "M. Simonovsky and N. Komodakis, 'Dynamic edgeconditioned filters in convolutional neural networks on graphs,' in Proc. of CVPR , 2017."
+            },
+            {
+              "title": "Robust spatial filtering with graph convolutional neural networks",
+              "citation": "F. P. Such, S. Sah, M. A. Dominguez, S. Pillai, C. Zhang, A. Michael, N. D. Cahill, and R. Ptucha, 'Robust spatial filtering with graph convolutional neural networks,' IEEE Journal of Selected Topics in Signal Processing , vol. 11, no. 6, pp. 884-896, 2017."
+            },
+            {
+              "title": "Structure-activity relationship of mutagenic aromatic and heteroaromatic nitro compounds. correlation with molecular",
+              "citation": "A. K. Debnath, R. L. Lopez de Compadre, G. Debnath, A. J. Shusterman, and C. Hansch, 'Structure-activity relationship of mutagenic aromatic and heteroaromatic nitro compounds. correlation with molecular"
+            },
+            {
+              "title": "Diffusion-convolutional neural networks",
+              "citation": "J. Atwood and D. Towsley, 'Diffusion-convolutional neural networks,' in Proc. of NIPS , 2016, pp. 1993-2001."
+            },
+            {
+              "title": "Learning convolutional neural networks for graphs",
+              "citation": "M. Niepert, M. Ahmed, and K. Kutzkov, 'Learning convolutional neural networks for graphs,' in Proc. of ICML , 2016, pp. 2014-2023."
+            },
+            {
+              "title": "On filter size in graph convolutional networks",
+              "citation": "D. V. Tran, A. Sperduti et al. , 'On filter size in graph convolutional networks,' in SSCI . IEEE, 2018, pp. 1534-1541."
+            },
+            {
+              "title": "An end-to-end deep learning architecture for graph classification",
+              "citation": "M. Zhang, Z. Cui, M. Neumann, and Y. Chen, 'An end-to-end deep learning architecture for graph classification,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "How powerful are graph neural networks",
+              "citation": "K. Xu, W. Hu, J. Leskovec, and S. Jegelka, 'How powerful are graph neural networks,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "Dynamic edgeconditioned filters in convolutional neural networks on graphs",
+              "citation": "M. Simonovsky and N. Komodakis, 'Dynamic edgeconditioned filters in convolutional neural networks on graphs,' in Proc. of CVPR , 2017."
+            },
+            {
+              "title": "Distinguishing enzyme structures from non-enzymes without alignments",
+              "citation": "P. D. Dobson and A. J. Doig, 'Distinguishing enzyme structures from non-enzymes without alignments,' Journal of molecular biology , vol. 330, no. 4, pp. 771-783, 2003."
+            },
+            {
+              "title": "Learning convolutional neural networks for graphs",
+              "citation": "M. Niepert, M. Ahmed, and K. Kutzkov, 'Learning convolutional neural networks for graphs,' in Proc. of ICML , 2016, pp. 2014-2023."
+            },
+            {
+              "title": "On filter size in graph convolutional networks",
+              "citation": "D. V. Tran, A. Sperduti et al. , 'On filter size in graph convolutional networks,' in SSCI . IEEE, 2018, pp. 1534-1541."
+            },
+            {
+              "title": "An end-to-end deep learning architecture for graph classification",
+              "citation": "M. Zhang, Z. Cui, M. Neumann, and Y. Chen, 'An end-to-end deep learning architecture for graph classification,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "Hierarchical graph representation learning with differentiable pooling",
+              "citation": "Z. Ying, J. You, C. Morris, X. Ren, W. Hamilton, and J. Leskovec, 'Hierarchical graph representation learning with differentiable pooling,' in Proc. of NeurIPS , 2018, pp. 4801-4811."
+            },
+            {
+              "title": "Dynamic edgeconditioned filters in convolutional neural networks on graphs",
+              "citation": "M. Simonovsky and N. Komodakis, 'Dynamic edgeconditioned filters in convolutional neural networks on graphs,' in Proc. of CVPR , 2017."
+            },
+            {
+              "title": "Robust spatial filtering with graph convolutional neural networks",
+              "citation": "F. P. Such, S. Sah, M. A. Dominguez, S. Pillai, C. Zhang, A. Michael, N. D. Cahill, and R. Ptucha, 'Robust spatial filtering with graph convolutional neural networks,' IEEE Journal of Selected Topics in Signal Processing , vol. 11, no. 6, pp. 884-896, 2017."
+            },
+            {
+              "title": "Protein function prediction via graph kernels",
+              "citation": "K. M. Borgwardt, C. S. Ong, S. Sch¨ onauer, S. Vishwanathan, A. J. Smola, and H.-P. Kriegel, 'Protein function prediction via graph kernels,' Bioinformatics , vol. 21, no. suppl 1, pp. i47-i56, 2005."
+            },
+            {
+              "title": "Learning convolutional neural networks for graphs",
+              "citation": "M. Niepert, M. Ahmed, and K. Kutzkov, 'Learning convolutional neural networks for graphs,' in Proc. of ICML , 2016, pp. 2014-2023."
+            },
+            {
+              "title": "On filter size in graph convolutional networks",
+              "citation": "D. V. Tran, A. Sperduti et al. , 'On filter size in graph convolutional networks,' in SSCI . IEEE, 2018, pp. 1534-1541."
+            },
+            {
+              "title": "An end-to-end deep learning architecture for graph classification",
+              "citation": "M. Zhang, Z. Cui, M. Neumann, and Y. Chen, 'An end-to-end deep learning architecture for graph classification,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "Hierarchical graph representation learning with differentiable pooling",
+              "citation": "Z. Ying, J. You, C. Morris, X. Ren, W. Hamilton, and J. Leskovec, 'Hierarchical graph representation learning with differentiable pooling,' in Proc. of NeurIPS , 2018, pp. 4801-4811."
+            },
+            {
+              "title": "How powerful are graph neural networks",
+              "citation": "K. Xu, W. Hu, J. Leskovec, and S. Jegelka, 'How powerful are graph neural networks,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "Statistical evaluation of the predictive toxicology challenge 20002001",
+              "citation": "H. Toivonen, A. Srinivasan, R. D. King, S. Kramer, and C. Helma, 'Statistical evaluation of the predictive toxicology challenge 20002001,' Bioinformatics , vol. 19, no. 10, pp. 1183-1193, 2003."
+            },
+            {
+              "title": "Diffusion-convolutional neural networks",
+              "citation": "J. Atwood and D. Towsley, 'Diffusion-convolutional neural networks,' in Proc. of NIPS , 2016, pp. 1993-2001."
+            },
+            {
+              "title": "Learning convolutional neural networks for graphs",
+              "citation": "M. Niepert, M. Ahmed, and K. Kutzkov, 'Learning convolutional neural networks for graphs,' in Proc. of ICML , 2016, pp. 2014-2023."
+            },
+            {
+              "title": "On filter size in graph convolutional networks",
+              "citation": "D. V. Tran, A. Sperduti et al. , 'On filter size in graph convolutional networks,' in SSCI . IEEE, 2018, pp. 1534-1541."
+            },
+            {
+              "title": "An end-to-end deep learning architecture for graph classification",
+              "citation": "M. Zhang, Z. Cui, M. Neumann, and Y. Chen, 'An end-to-end deep learning architecture for graph classification,' in Proc. of AAAI , 2018."
+            },
+            {
+              "title": "How powerful are graph neural networks",
+              "citation": "K. Xu, W. Hu, J. Leskovec, and S. Jegelka, 'How powerful are graph neural networks,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "Quantum chemistry structures and properties of 134 kilo molecules",
+              "citation": "R. Ramakrishnan, P. O. Dral, M. Rupp, and O. A. Von Lilienfeld, 'Quantum chemistry structures and properties of 134 kilo molecules,' Scientific data , vol. 1, p. 140022, 2014."
+            },
+            {
+              "title": "Neural message passing for quantum chemistry",
+              "citation": "J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, 'Neural message passing for quantum chemistry,' in Proc. of ICML , 2017, pp. 1263-1272."
+            },
+            {
+              "title": "MolGAN: An implicit generative model for small molecular graphs",
+              "citation": "N. De Cao and T. Kipf, 'MolGAN: An implicit generative model for small molecular graphs,' ICML 2018 workshop on Theoretical Foundations and Applications of Deep Generative Models , 2018."
+            },
+            {
+              "title": "Alchemy: A quantum chemistry dataset for benchmarking ai models",
+              "citation": "G. Chen, P. Chen, C.-Y. Hsieh, C.-K. Lee, B. Liao, R. Liao, W. Liu, J. Qiu, Q. Sun, J. Tang et al. , 'Alchemy: A quantum chemistry dataset for benchmarking ai models,' arXiv preprint arXiv:1906.09427 , 2019."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "Inductive representation learning on large graphs",
+              "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+            },
+            {
+              "title": "Gaan: Gated attention networks for learning on large and spatiotemporal graphs",
+              "citation": "J. Zhang, X. Shi, J. Xie, H. Ma, I. King, and D.-Y. Yeung, 'Gaan: Gated attention networks for learning on large and spatiotemporal graphs,' in Proc. of UAI , 2018."
+            },
+            {
+              "title": "Fastgcn: fast learning with graph convolutional networks via importance sampling",
+              "citation": "J. Chen, T. Ma, and C. Xiao, 'Fastgcn: fast learning with graph convolutional networks via importance sampling,' in Proc. of ICLR , 2018."
+            },
+            {
+              "title": "Stochastic training of graph convolutional networks with variance reduction",
+              "citation": "J. Chen, J. Zhu, and L. Song, 'Stochastic training of graph convolutional networks with variance reduction,' in Proc. of ICML , 2018, pp. 941-949."
+            },
+            {
+              "title": "Adaptive sampling towards fast graph representation learning",
+              "citation": "W. Huang, T. Zhang, Y. Rong, and J. Huang, 'Adaptive sampling towards fast graph representation learning,' in Proc. of NeurIPS , 2018, pp. 4563-4572."
+            },
+            {
+              "title": "Deep graph infomax",
+              "citation": "P. Veliˇ ckovi´ c, W. Fedus, W. L. Hamilton, P. Li` o, Y. Bengio, and R. D. Hjelm, 'Deep graph infomax,' in Proc. of ICLR , 2019."
+            },
+            {
+              "title": "Relational learning via latent social dimensions",
+              "citation": "L. Tang and H. Liu, 'Relational learning via latent social dimensions,' in Proc. of KDD . ACM, 2009, pp. 817-826."
+            },
+            {
+              "title": "Learning steadystates of iterative algorithms over graphs",
+              "citation": "H. Dai, Z. Kozareva, B. Dai, A. Smola, and L. Song, 'Learning steadystates of iterative algorithms over graphs,' in Proc. of ICML , 2018, pp. 1114-1122."
+            },
+            {
+              "title": "Geniepath: Graph neural networks with adaptive receptive paths",
+              "citation": "Z. Liu, C. Chen, L. Li, J. Zhou, X. Li, and L. Song, 'Geniepath: Graph neural networks with adaptive receptive paths,' in Proc. of AAAI , 2019."
+            },
+            {
+              "title": "Structural deep network embedding",
+              "citation": "D. Wang, P. Cui, and W. Zhu, 'Structural deep network embedding,' in Proc. of KDD . ACM, 2016, pp. 1225-1234."
+            },
+            {
+              "title": "Learning deep network representations with adversarially regularized autoencoders",
+              "citation": "W. Yu, C. Zheng, W. Cheng, C. C. Aggarwal, D. Song, B. Zong, H. Chen, and W. Wang, 'Learning deep network representations with adversarially regularized autoencoders,' in Proc. of AAAI . ACM, 2018, pp. 2663-2671."
+            },
+            {
+              "title": "Gradient-based learning applied to document recognition",
+              "citation": "Y. LeCun, L. Bottou, Y. Bengio, P. Haffner et al. , 'Gradient-based learning applied to document recognition,' Proceedings of the IEEE , vol. 86, no. 11, pp. 2278-2324, 1998."
+            },
+            {
+              "title": "Spectral networks and locally connected networks on graphs",
+              "citation": "J. Bruna, W. Zaremba, A. Szlam, and Y. LeCun, 'Spectral networks and locally connected networks on graphs,' in Proc. of ICLR , 2014."
+            },
+            {
+              "title": "Cayleynets: Graph convolutional neural networks with complex rational spectral filters",
+              "citation": "R. Levie, F. Monti, X. Bresson, and M. M. Bronstein, 'Cayleynets: Graph convolutional neural networks with complex rational spectral filters,' IEEE Transactions on Signal Processing , vol. 67, no. 1, pp. 97-109, 2017."
+            },
+            {
+              "title": "Convolutional neural networks on graphs with fast localized spectral filtering",
+              "citation": "M. Defferrard, X. Bresson, and P. Vandergheynst, 'Convolutional neural networks on graphs with fast localized spectral filtering,' in Proc. of NIPS , 2016, pp. 3844-3852."
+            },
+            {
+              "title": "Geometric deep learning on graphs and manifolds using mixture model cnns",
+              "citation": "F. Monti, D. Boscaini, J. Masci, E. Rodola, J. Svoboda, and M. M. Bronstein, 'Geometric deep learning on graphs and manifolds using mixture model cnns,' in Proc. of CVPR , 2017, pp. 5115-5124."
+            },
+            {
+              "title": "Dynamic edgeconditioned filters in convolutional neural networks on graphs",
+              "citation": "M. Simonovsky and N. Komodakis, 'Dynamic edgeconditioned filters in convolutional neural networks on graphs,' in Proc. of CVPR , 2017."
+            },
+            {
+              "title": "Big data and its technical challenges",
+              "citation": "H. Jagadish, J. Gehrke, A. Labrinidis, Y. Papakonstantinou, J. M. Patel, R. Ramakrishnan, and C. Shahabi, 'Big data and its technical challenges,' Communications of the ACM , vol. 57, no. 7, pp. 86-94, 2014."
+            },
+            {
+              "title": "Gaan: Gated attention networks for learning on large and spatiotemporal graphs",
+              "citation": "J. Zhang, X. Shi, J. Xie, H. Ma, I. King, and D.-Y. Yeung, 'Gaan: Gated attention networks for learning on large and spatiotemporal graphs,' in Proc. of UAI , 2018."
+            },
+            {
+              "title": "Diffusion convolutional recurrent neural network: Data-driven traffic forecasting",
+              "citation": "Y. Li, R. Yu, C. Shahabi, and Y. Liu, 'Diffusion convolutional recurrent neural network: Data-driven traffic forecasting,' in Proc. of ICLR , 2018."
+            },
+            {
+              "title": "Graph wavenet for deep spatial-temporal graph modeling",
+              "citation": "Z. Wu, S. Pan, G. Long, J. Jiang, and C. Zhang, 'Graph wavenet for deep spatial-temporal graph modeling,' in Proc. of IJCAI , 2019."
+            },
+            {
+              "title": "Toward an architecture for never-ending language learning",
+              "citation": "A. Carlson, J. Betteridge, B. Kisiel, B. Settles, E. R. Hruschka Jr, and T. M. Mitchell, 'Toward an architecture for never-ending language learning.' in Proc. of AAAI , 2010, pp. 1306-1313."
+            },
+            {
+              "title": "Semi-supervised classification with graph convolutional networks",
+              "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Dual graph convolutional networks for graphbased semi-supervised classification",
+              "citation": "C. Zhuang and Q. Ma, 'Dual graph convolutional networks for graphbased semi-supervised classification,' in WWW , 2018, pp. 499-508."
+            },
+            {
+              "title": "Stochastic training of graph convolutional networks with variance reduction",
+              "citation": "J. Chen, J. Zhu, and L. Song, 'Stochastic training of graph convolutional networks with variance reduction,' in Proc. of ICML , 2018, pp. 941-949."
+            },
+            {
+              "title": "A graph-to-sequence model for amr-to-text generation",
+              "citation": "L. Song, Y. Zhang, Z. Wang, and D. Gildea, 'A graph-to-sequence model for amr-to-text generation,' in Proc. of ACL , 2018."
+            },
+            {
+              "title": "Graph-to-sequence learning using gated graph neural networks",
+              "citation": "D. Beck, G. Haffari, and T. Cohn, 'Graph-to-sequence learning using gated graph neural networks,' in Proc. of ACL , 2018."
+            },
+            {
+              "title": "Gated graph sequence neural networks",
+              "citation": "Y. Li, D. Tarlow, M. Brockschmidt, and R. Zemel, 'Gated graph sequence neural networks,' in Proc. of ICLR , 2015."
+            },
+            {
+              "title": "Learning graphical state transitions",
+              "citation": "D. D. Johnson, 'Learning graphical state transitions,' in Proc. of ICLR , 2016."
+            },
+            {
+              "title": "Sequence-to-action: End-to-end semantic graph generation for semantic parsing",
+              "citation": "B. Chen, L. Sun, and X. Han, 'Sequence-to-action: End-to-end semantic graph generation for semantic parsing,' in Proc. of ACL , 2018, pp. 766-777."
+            },
+            {
+              "title": "Gaan: Gated attention networks for learning on large and spatiotemporal graphs",
+              "citation": "J. Zhang, X. Shi, J. Xie, H. Ma, I. King, and D.-Y. Yeung, 'Gaan: Gated attention networks for learning on large and spatiotemporal graphs,' in Proc. of UAI , 2018."
+            },
+            {
+              "title": "Diffusion convolutional recurrent neural network: Data-driven traffic forecasting",
+              "citation": "Y. Li, R. Yu, C. Shahabi, and Y. Liu, 'Diffusion convolutional recurrent neural network: Data-driven traffic forecasting,' in Proc. of ICLR , 2018."
+            },
+            {
+              "title": "Spatio-temporal graph convolutional networks: A deep learning framework for traffic forecasting",
+              "citation": "B. Yu, H. Yin, and Z. Zhu, 'Spatio-temporal graph convolutional networks: A deep learning framework for traffic forecasting,' in Proc. of IJCAI , 2018, pp. 3634-3640."
+            },
+            {
+              "title": "Deep multi-view spatial-temporal network for taxi demand prediction",
+              "citation": "H. Yao, F. Wu, J. Ke, X. Tang, Y. Jia, S. Lu, P. Gong, J. Ye, and Z. Li, 'Deep multi-view spatial-temporal network for taxi demand prediction,' in Proc. of AAAI , 2018, pp. 2588-2595."
+            },
+            {
+              "title": "Line: Largescale information network embedding",
+              "citation": "J. Tang, M. Qu, M. Wang, M. Zhang, J. Yan, and Q. Mei, 'Line: Largescale information network embedding,' in WWW , 2015, pp. 1067-1077."
+            },
+            {
+              "title": "Graph convolutional matrix completion",
+              "citation": "R. van den Berg, T. N. Kipf, and M. Welling, 'Graph convolutional matrix completion,' stat , vol. 1050, p. 7, 2017."
+            },
+            {
+              "title": "Graph convolutional neural networks for web-scale recommender systems",
+              "citation": "R. Ying, R. He, K. Chen, P. Eksombatchai, W. L. Hamilton, and J. Leskovec, 'Graph convolutional neural networks for web-scale recommender systems,' in Proc. of KDD . ACM, 2018, pp. 974-983."
+            },
+            {
+              "title": "Geometric matrix completion with recurrent multi-graph neural networks",
+              "citation": "F. Monti, M. Bronstein, and X. Bresson, 'Geometric matrix completion with recurrent multi-graph neural networks,' in Proc. of NIPS , 2017, pp. 3697-3707."
+            },
+            {
+              "title": "Convolutional networks on graphs for learning molecular fingerprints",
+              "citation": "D. K. Duvenaud, D. Maclaurin, J. Iparraguirre, R. Bombarell, T. Hirzel, A. Aspuru-Guzik, and R. P. Adams, 'Convolutional networks on graphs for learning molecular fingerprints,' in Proc. of NIPS , 2015, pp. 22242232."
+            },
+            {
+              "title": "Molecular graph convolutions: moving beyond fingerprints",
+              "citation": "S. Kearnes, K. McCloskey, M. Berndl, V. Pande, and P. Riley, 'Molecular graph convolutions: moving beyond fingerprints,' Journal of computer-aided molecular design , vol. 30, no. 8, pp. 595-608, 2016."
+            },
+            {
+              "title": "Neural message passing for quantum chemistry",
+              "citation": "J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals, and G. E. Dahl, 'Neural message passing for quantum chemistry,' in Proc. of ICML , 2017, pp. 1263-1272."
+            },
+            {
+              "title": "Protein interface prediction using graph convolutional networks",
+              "citation": "A. Fout, J. Byrd, B. Shariat, and A. Ben-Hur, 'Protein interface prediction using graph convolutional networks,' in Proc. of NIPS , 2017, pp. 6530-6539."
+            },
+            {
+              "title": "Learning deep generative models of graphs",
+              "citation": "Y. Li, O. Vinyals, C. Dyer, R. Pascanu, and P. Battaglia, 'Learning deep generative models of graphs,' in Proc. of ICML , 2018."
+            },
+            {
+              "title": "MolGAN: An implicit generative model for small molecular graphs",
+              "citation": "N. De Cao and T. Kipf, 'MolGAN: An implicit generative model for small molecular graphs,' ICML 2018 workshop on Theoretical Foundations and Applications of Deep Generative Models , 2018."
+            },
+            {
+              "title": "Graph convolutional policy network for goal-directed molecular graph generation",
+              "citation": "J. You, B. Liu, R. Ying, V. Pande, and J. Leskovec, 'Graph convolutional policy network for goal-directed molecular graph generation,' in Proc. of NeurIPS , 2018."
+            },
+            {
+              "title": "Gated graph sequence neural networks",
+              "citation": "Y. Li, D. Tarlow, M. Brockschmidt, and R. Zemel, 'Gated graph sequence neural networks,' in Proc. of ICLR , 2015."
+            },
+            {
+              "title": "Learning to represent programs with graphs",
+              "citation": "M. Allamanis, M. Brockschmidt, and M. Khademi, 'Learning to represent programs with graphs,' in Proc. of ICLR , 2017."
+            },
+            {
+              "title": "Deepinf: Social influence prediction with deep learning",
+              "citation": "J. Qiu, J. Tang, H. Ma, Y. Dong, K. Wang, and J. Tang, 'Deepinf: Social influence prediction with deep learning,' in Proc. of KDD . ACM, 2018, pp. 2110-2119."
+            },
+            {
+              "title": "Adversarial attacks on neural networks for graph data",
+              "citation": "D. Z¨ ugner, A. Akbarnejad, and S. G¨ unnemann, 'Adversarial attacks on neural networks for graph data,' in Proc. of KDD . ACM, 2018, pp. 2847-2856."
+            },
+            {
+              "title": "Gram: graph-based attention model for healthcare representation learning",
+              "citation": "E. Choi, M. T. Bahadori, L. Song, W. F. Stewart, and J. Sun, 'Gram: graph-based attention model for healthcare representation learning,' in Proc. of KDD . ACM, 2017, pp. 787-795."
+            },
+            {
+              "title": "Mime: Multilevel medical embedding of electronic health records for predictive healthcare",
+              "citation": "E. Choi, C. Xiao, W. Stewart, and J. Sun, 'Mime: Multilevel medical embedding of electronic health records for predictive healthcare,' in Proc. of NeurIPS , 2018, pp. 4548-4558."
+            },
+            {
+              "title": "Brainnetcnn: convolutional neural networks for brain networks; towards predicting neurodevelopment",
+              "citation": "J. Kawahara, C. J. Brown, S. P. Miller, B. G. Booth, V. Chau, R. E. Grunau, J. G. Zwicker, and G. Hamarneh, 'Brainnetcnn: convolutional neural networks for brain networks; towards predicting neurodevelopment,' NeuroImage , vol. 146, pp. 1038-1049, 2017."
+            },
+            {
+              "title": "Graph convolutional networks with argument-aware pooling for event detection",
+              "citation": "T. H. Nguyen and R. Grishman, 'Graph convolutional networks with argument-aware pooling for event detection,' in Proc. of AAAI , 2018, pp. 5900-5907."
+            },
+            {
+              "title": "Combinatorial optimization with graph convolutional networks and guided tree search",
+              "citation": "Z. Li, Q. Chen, and V. Koltun, 'Combinatorial optimization with graph convolutional networks and guided tree search,' in Proc. of NeurIPS , 2018, pp. 536-545."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "8.3.1",
+              "sec_title": "GNNs have many applications across different tasks and domains.",
+              "citations": [
+                {
+                  "title": "Mgae: Marginalized graph autoencoder for graph clustering,",
+                  "citation": "C. Wang, S. Pan, G. Long, X. Zhu, and J. Jiang, 'Mgae: Marginalized graph autoencoder for graph clustering,' in Proc. of CIKM . ACM, 2017, pp. 889-898."
+                },
+                {
+                  "title": "Link prediction based on graph neural networks",
+                  "citation": "M. Zhang and Y. Chen, 'Link prediction based on graph neural networks,' in Proc. of NeurIPS , 2018."
+                },
+                {
+                  "title": "Mean-field theory of graph neural networks in graph partitioning,",
+                  "citation": "T. Kawamoto, M. Tsubaki, and T. Obuchi, 'Mean-field theory of graph neural networks in graph partitioning,' in Proc. of NeurIPS , 2018, pp. 4362-4372."
+                },
+                {
+                  "title": "Scene graph generation by iterative message passing,",
+                  "citation": "D. Xu, Y. Zhu, C. B. Choy, and L. Fei-Fei, 'Scene graph generation by iterative message passing,' in Proc. of CVPR , vol. 2, 2017."
+                },
+                {
+                  "title": "Graph r-cnn for scene graph generation,",
+                  "citation": "J. Yang, J. Lu, S. Lee, D. Batra, and D. Parikh, 'Graph r-cnn for scene graph generation,' in Proc. of ECCV . Springer, 2018, pp. 690-706."
+                },
+                {
+                  "title": "Factorizable net: an efficient subgraph-based framework for scene graph generation,",
+                  "citation": "Y. Li, W. Ouyang, B. Zhou, J. Shi, C. Zhang, and X. Wang, 'Factorizable net: an efficient subgraph-based framework for scene graph generation,' in Proc. of ECCV . Springer, 2018, pp. 346-363."
+                },
+                {
+                  "title": "Image generation from scene graphs,",
+                  "citation": "J. Johnson, A. Gupta, and L. Fei-Fei, 'Image generation from scene graphs,' in Proc. of CVPR , 2018."
+                },
+                {
+                  "title": "Dynamic graph cnn for learning on point clouds,",
+                  "citation": "Y. Wang, Y. Sun, Z. Liu, S. E. Sarma, M. M. Bronstein, and J. M. Solomon, 'Dynamic graph cnn for learning on point clouds,' ACM Transactions on Graphics (TOG) , 2019."
+                },
+                {
+                  "title": "Large-scale point cloud semantic segmentation with superpoint graphs",
+                  "citation": "L. Landrieu and M. Simonovsky, 'Large-scale point cloud semantic segmentation with superpoint graphs,' in Proc. of CVPR , 2018."
+                },
+                {
+                  "title": "Rgcnn: Regularized graph cnn for point cloud segmentation,",
+                  "citation": "G. Te, W. Hu, A. Zheng, and Z. Guo, 'Rgcnn: Regularized graph cnn for point cloud segmentation,' in 2018 ACM Multimedia Conference on Multimedia Conference . ACM, 2018, pp. 746-754."
+                },
+                {
+                  "title": "Structural-rnn: Deep learning on spatio-temporal graphs,",
+                  "citation": "A. Jain, A. R. Zamir, S. Savarese, and A. Saxena, 'Structural-rnn: Deep learning on spatio-temporal graphs,' in Proc. of CVPR , 2016, pp. 5308-5317."
+                },
+                {
+                  "title": "Spatial temporal graph convolutional networks for skeleton-based action recognition,",
+                  "citation": "S. Yan, Y. Xiong, and D. Lin, 'Spatial temporal graph convolutional networks for skeleton-based action recognition,' in Proc. of AAAI , 2018."
+                },
+                {
+                  "title": "Learning human-object interactions by graph parsing neural networks,",
+                  "citation": "S. Qi, W. Wang, B. Jia, J. Shen, and S.-C. Zhu, 'Learning human-object interactions by graph parsing neural networks,' in Proc. of ECCV . Springer, 2018, pp. 401-417."
+                },
+                {
+                  "title": "Few-shot learning with graph neural networks,",
+                  "citation": "V. G. Satorras and J. B. Estrach, 'Few-shot learning with graph neural networks,' in Proc. of ICLR , 2018."
+                },
+                {
+                  "title": "Neural graph matching networks for fewshot 3d action recognition,",
+                  "citation": "M. Guo, E. Chou, D.-A. Huang, S. Song, S. Yeung, and L. Fei-Fei, 'Neural graph matching networks for fewshot 3d action recognition,' in Proc. of ECCV . Springer, 2018, pp. 673-689."
+                },
+                {
+                  "title": "Prototype propagation networks (ppn) for weakly-supervised few-shot learning on category graph,",
+                  "citation": "L. Liu, T. Zhou, G. Long, J. Jiang, L. Yao, and C. Zhang, 'Prototype propagation networks (ppn) for weakly-supervised few-shot learning on category graph,' in Proc. of IJCAI , 2019."
+                },
+                {
+                  "title": "3d graph neural networks for rgbd semantic segmentation,",
+                  "citation": "X. Qi, R. Liao, J. Jia, S. Fidler, and R. Urtasun, '3d graph neural networks for rgbd semantic segmentation,' in Proc. of CVPR , 2017, pp. 5199-5208."
+                },
+                {
+                  "title": "Syncspeccnn: Synchronized spectral cnn for 3d shape segmentation.",
+                  "citation": "L. Yi, H. Su, X. Guo, and L. J. Guibas, 'Syncspeccnn: Synchronized spectral cnn for 3d shape segmentation.' in Proc. of CVPR , 2017, pp. 6584-6592."
+                },
+                {
+                  "title": "Iterative visual reasoning beyond convolutions,",
+                  "citation": "X. Chen, L.-J. Li, L. Fei-Fei, and A. Gupta, 'Iterative visual reasoning beyond convolutions,' in Proc. of CVPR , 2018."
+                },
+                {
+                  "title": "Out of the box: Reasoning with graph convolution nets for factual visual question answering,",
+                  "citation": "M. Narasimhan, S. Lazebnik, and A. Schwing, 'Out of the box: Reasoning with graph convolution nets for factual visual question answering,' in Proc. of NeurIPS , 2018, pp. 2655-2666."
+                },
+                {
+                  "title": "Semi-supervised classification with graph convolutional networks,",
+                  "citation": "T. N. Kipf and M. Welling, 'Semi-supervised classification with graph convolutional networks,' in Proc. of ICLR , 2017."
+                },
+                {
+                  "title": "Inductive representation learning on large graphs,",
+                  "citation": "W. Hamilton, Z. Ying, and J. Leskovec, 'Inductive representation learning on large graphs,' in Proc. of NIPS , 2017, pp. 1024-1034."
+                },
+                {
+                  "title": "Graph attention networks,",
+                  "citation": "P. Velickovic, G. Cucurull, A. Casanova, A. Romero, P. Lio, and Y. Bengio, 'Graph attention networks,' in Proc. of ICLR , 2017."
+                },
+                {
+                  "title": "Encoding sentences with graph convolutional networks for semantic role labeling",
+                  "citation": "D. Marcheggiani and I. Titov, 'Encoding sentences with graph convolutional networks for semantic role labeling,' in Proc. of EMNLP , 2017, pp. 1506-1515."
+                },
+                {
+                  "title": "Graph convolutional encoders for syntax-aware neural machine translation",
+                  "citation": "J. Bastings, I. Titov, W. Aziz, D. Marcheggiani, and K. Sima'an, 'Graph convolutional encoders for syntax-aware neural machine translation,' in Proc. of EMNLP , 2017, pp. 1957-1967."
+                },
+                {
+                  "title": "Exploiting semantics in neural machine translation with graph convolutional networks,",
+                  "citation": "D. Marcheggiani, J. Bastings, and I. Titov, 'Exploiting semantics in neural machine translation with graph convolutional networks,' in Proc. of NAACL , 2018."
+                },
+                {
+                  "title": "Collective classification in network data,",
+                  "citation": "P. Sen, G. Namata, M. Bilgic, L. Getoor, B. Galligher, and T. EliassiRad, 'Collective classification in network data,' AI magazine , vol. 29, no. 3, p. 93, 2008."
+                },
+                {
+                  "title": "Arnetminer: extraction and mining of academic social networks,",
+                  "citation": "J. Tang, J. Zhang, L. Yao, J. Li, L. Zhang, and Z. Su, 'Arnetminer: extraction and mining of academic social networks,' in Proc. of KDD . ACM, 2008, pp. 990-998."
+                },
+                {
+                  "title": "Predicting multicellular function through multi-layer tissue networks",
+                  "citation": "M. Zitnik and J. Leskovec, 'Predicting multicellular function through multi-layer tissue networks,' Bioinformatics , vol. 33, no. 14, pp. i190i198, 2017."
+                },
+                {
+                  "title": "Comparison of descriptor spaces for chemical compound retrieval and classification,",
+                  "citation": "N. Wale, I. A. Watson, and G. Karypis, 'Comparison of descriptor spaces for chemical compound retrieval and classification,' Knowledge and Information Systems , vol. 14, no. 3, pp. 347-375, 2008."
+                },
+                {
+                  "title": "Structure-activity relationship of mutagenic aromatic and heteroaromatic nitro compounds. correlation with molecular\n28. orbital energies and hydrophobicity,",
+                  "citation": "A. K. Debnath, R. L. Lopez de Compadre, G. Debnath, A. J. Shusterman, and C. Hansch, 'Structure-activity relationship of mutagenic aromatic and heteroaromatic nitro compounds. correlation with molecular\n28. orbital energies and hydrophobicity,' Journal of medicinal chemistry , vol. 34, no. 2, pp. 786-797, 1991."
+                },
+                {
+                  "title": "Distinguishing enzyme structures from non-enzymes without alignments,",
+                  "citation": "P. D. Dobson and A. J. Doig, 'Distinguishing enzyme structures from non-enzymes without alignments,' Journal of molecular biology , vol. 330, no. 4, pp. 771-783, 2003."
+                },
+                {
+                  "title": "Protein function prediction via graph kernels,",
+                  "citation": "K. M. Borgwardt, C. S. Ong, S. Sch¨ onauer, S. Vishwanathan, A. J. Smola, and H.-P. Kriegel, 'Protein function prediction via graph kernels,' Bioinformatics , vol. 21, no. suppl 1, pp. i47-i56, 2005."
+                },
+                {
+                  "title": "Statistical evaluation of the predictive toxicology challenge 20002001,",
+                  "citation": "H. Toivonen, A. Srinivasan, R. D. King, S. Kramer, and C. Helma, 'Statistical evaluation of the predictive toxicology challenge 20002001,' Bioinformatics , vol. 19, no. 10, pp. 1183-1193, 2003."
+                },
+                {
+                  "title": "Quantum chemistry structures and properties of 134 kilo molecules,",
+                  "citation": "R. Ramakrishnan, P. O. Dral, M. Rupp, and O. A. Von Lilienfeld, 'Quantum chemistry structures and properties of 134 kilo molecules,' Scientific data , vol. 1, p. 140022, 2014."
+                },
+                {
+                  "title": "Alchemy: A quantum chemistry dataset for benchmarking ai models,",
+                  "citation": "G. Chen, P. Chen, C.-Y. Hsieh, C.-K. Lee, B. Liao, R. Liao, W. Liu, J. Qiu, Q. Sun, J. Tang et al. , 'Alchemy: A quantum chemistry dataset for benchmarking ai models,' arXiv preprint arXiv:1906.09427 , 2019."
+                },
+                {
+                  "title": "Relational learning via latent social dimensions",
+                  "citation": "L. Tang and H. Liu, 'Relational learning via latent social dimensions,' in Proc. of KDD . ACM, 2009, pp. 817-826."
+                },
+                {
+                  "title": "Gradient-based learning applied to document recognition,",
+                  "citation": "Y. LeCun, L. Bottou, Y. Bengio, P. Haffner et al. , 'Gradient-based learning applied to document recognition,' Proceedings of the IEEE , vol. 86, no. 11, pp. 2278-2324, 1998."
+                },
+                {
+                  "title": "Big data and its technical challenges,",
+                  "citation": "H. Jagadish, J. Gehrke, A. Labrinidis, Y. Papakonstantinou, J. M. Patel, R. Ramakrishnan, and C. Shahabi, 'Big data and its technical challenges,' Communications of the ACM , vol. 57, no. 7, pp. 86-94, 2014."
+                },
+                {
+                  "title": "Toward an architecture for never-ending language learning.",
+                  "citation": "A. Carlson, J. Betteridge, B. Kisiel, B. Settles, E. R. Hruschka Jr, and T. M. Mitchell, 'Toward an architecture for never-ending language learning.' in Proc. of AAAI , 2010, pp. 1306-1313."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "9",
+      "sec_title": "FUTURE DIRECTIONS",
+      "citations": [
+        {
+          "title": "Deep residual learning for image recognition",
+          "citation": "K. He, X. Zhang, S. Ren, and J. Sun, 'Deep residual learning for image recognition,' in Proc. of CVPR , 2016, pp. 770-778."
+        },
+        {
+          "title": "Deeper insights into graph convolutional networks for semi-supervised learning",
+          "citation": "Q. Li, Z. Han, and X.-M. Wu, 'Deeper insights into graph convolutional networks for semi-supervised learning,' in Proc. of AAAI , 2018."
+        },
+        {
+          "title": "Deeper insights into graph convolutional networks for semi-supervised learning",
+          "citation": "Q. Li, Z. Han, and X.-M. Wu, 'Deeper insights into graph convolutional networks for semi-supervised learning,' in Proc. of AAAI , 2018."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "10",
+      "sec_title": "CONCLUSION",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

@@ -1,0 +1,1248 @@
+{
+  "track": "Recommender Systems",
+  "paper_title": "Reinforcement Learning based Recommender Systems: A Survey",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "1 INTRODUCTION",
+      "citations": [
+        {
+          "title": "Cisco Visual Networking Index",
+          "citation": "Cisco Visual Networking Index. The zettabyte era-trends and analysis. Cisco white paper , 2013."
+        },
+        {
+          "title": "Recommender systems: an introduction",
+          "citation": "Dietmar Jannach, Markus Zanker, Alexander Felfernig, and Gerhard Friedrich. Recommender systems: an introduction . Cambridge University Press, 2010."
+        },
+        {
+          "title": "Introduction to recommender systems handbook",
+          "citation": "Francesco Ricci, Lior Rokach, and Bracha Shapira. Introduction to recommender systems handbook. In Recommender systems handbook , pages 1-35. 2011."
+        },
+        {
+          "title": "A hybrid approach for movie recommendation",
+          "citation": "George Lekakos and Petros Caravelas. A hybrid approach for movie recommendation. Multimedia tools and applications , 36(1):55-70, 2008."
+        },
+        {
+          "title": "A music recommendation system based on music data grouping and user interests",
+          "citation": "Hung-Chen Chen and Arbee LP Chen. A music recommendation system based on music data grouping and user interests. In CIKM'01 , pages 231-238, 2001."
+        },
+        {
+          "title": "An integrated music recommendation system",
+          "citation": "Xuan Zhu, Yuan-Yuan Shi, Hyoung-Gook Kim, and Ki-Wan Eom. An integrated music recommendation system. IEEE Transactions on Consumer Electronics , 52(3):917-925, 2006."
+        },
+        {
+          "title": "Recommender systems in e-commerce",
+          "citation": "J Ben Schafer, Joseph Konstan, and John Riedl. Recommender systems in e-commerce. In EC'99 , pages 158-166, 1999."
+        },
+        {
+          "title": "News recommender systems – Survey and roads ahead",
+          "citation": "Mozhgan Karimi, Dietmar Jannach, and Michael Jugovac. News recommender systems-survey and roads ahead. Information Processing &amp; Management , 54(6):1203-1227, 2018."
+        },
+        {
+          "title": "Recommender systems in e-learning environments: a survey of the state-of-the-art and possible extensions",
+          "citation": "Aleksandra Klašnja-Milićević, Mirjana Ivanović, and Alexandros Nanopoulos. Recommender systems in e-learning environments: a survey of the state-of-the-art and possible extensions. Artificial Intelligence Review , 44(4):571-604, 2015."
+        },
+        {
+          "title": "A systematic literature review on health recommender systems",
+          "citation": "Emre Sezgin and Sevgi Özkan. A systematic literature review on health recommender systems. In EHB'13 , pages 1-4, 2013."
+        },
+        {
+          "title": "Netflix update: Try this at home",
+          "citation": "Netflix update: Try this at home. https://sifter.org/~simon/journal/20061211.html."
+        },
+        {
+          "title": "Recommender systems survey",
+          "citation": "Jesús Bobadilla, Fernando Ortega, Antonio Hernando, and Abraham Gutiérrez. Recommender systems survey. Knowledge-based systems , 46:109-132, 2013."
+        },
+        {
+          "title": "Deep learning",
+          "citation": "Ian Goodfellow, Yoshua Bengio, Aaron Courville, and Yoshua Bengio. Deep learning . MIT press Cambridge, 2016."
+        },
+        {
+          "title": "Deep learning based recommender system: A survey and new perspectives",
+          "citation": "Shuai Zhang, Lina Yao, Aixin Sun, and Yi Tay. Deep learning based recommender system: A survey and new perspectives. ACM Computing Surveys (CSUR) , 52(1):1-38, 2019."
+        },
+        {
+          "title": "Deep reinforcement learning: An overview",
+          "citation": "Yuxi Li. Deep reinforcement learning: An overview. arXiv preprint arXiv:1701.07274 , 2017."
+        },
+        {
+          "title": "Deep reinforcement learning that matters",
+          "citation": "Peter Henderson, Riashat Islam, Philip Bachman, Joelle Pineau, Doina Precup, and David Meger. Deep reinforcement learning that matters. In AAAI'18 , 2018."
+        },
+        {
+          "title": "Deep reinforcement learning framework for autonomous driving",
+          "citation": "Ahmad EL Sallab, Mohammed Abdou, Etienne Perot, and Senthil Yogamani. Deep reinforcement learning framework for autonomous driving. Electronic Imaging , 2017(19):70-76, 2017."
+        },
+        {
+          "title": "Advanced planning for autonomous vehicles using reinforcement learning and deep inverse reinforcement learning",
+          "citation": "Changxi You, Jianbo Lu, Dimitar Filev, and Panagiotis Tsiotras. Advanced planning for autonomous vehicles using reinforcement learning and deep inverse reinforcement learning. Robotics and Autonomous Systems , 114:1-18, 2019."
+        },
+        {
+          "title": "Reinforcement learning in robotics: A survey",
+          "citation": "Jens Kober, J Andrew Bagnell, and Jan Peters. Reinforcement learning in robotics: A survey. International Journal of Robotics Research , 32(11):12381274, 2013."
+        },
+        {
+          "title": "Motion planning for industrial robots using reinforcement learning",
+          "citation": "Richard Meyes, Hasan Tercan, Simon Roggendorf, Thomas Thiele, Christian Büscher, Markus Obdenbusch, Christian Brecher, Sabina Jeschke, and Tobias Meisen. Motion planning for industrial robots using reinforcement learning. CIRP'17 , 63:107-112, 2017."
+        },
+        {
+          "title": "A deep reinforcement learning framework for the financial portfolio management problem",
+          "citation": "Zhengyao Jiang, Dixing Xu, and Jinjun Liang. A deep reinforcement learning framework for the financial portfolio management problem. arXiv preprint arXiv:1706.10059 , 2017."
+        },
+        {
+          "title": "Adaptive treatment of epilepsy via batch-mode reinforcement learning",
+          "citation": "Arthur Guez, Robert D Vincent, Massimo Avoli, and Joelle Pineau. Adaptive treatment of epilepsy via batch-mode reinforcement learning. In AAAI'08 , pages 1671-1678, 2008."
+        },
+        {
+          "title": "Guidelines for reinforcement learning in healthcare",
+          "citation": "Omer Gottesman, Fredrik Johansson, Matthieu Komorowski, Aldo Faisal, David Sontag, Finale Doshi-Velez, and Leo Anthony Celi. Guidelines for reinforcement learning in healthcare. Nature Medicine , 25(1):16-18, 2019."
+        },
+        {
+          "title": "Deep reinforcement learning in large discrete action spaces",
+          "citation": "Gabriel Dulac-Arnold, Richard Evans, Hado van Hasselt, Peter Sunehag, Timothy Lillicrap, Jonathan Hunt, Timothy Mann, Theophane Weber, Thomas Degris, and Ben Coppin. Deep reinforcement learning in large discrete action spaces. arXiv preprint arXiv:1512.07679 , 2015."
+        },
+        {
+          "title": "Top-k off-policy correction for a reinforce recommender system",
+          "citation": "Minmin Chen, Alex Beutel, Paul Covington, Sagar Jain, Francois Belletti, and Ed H Chi. Top-k off-policy correction for a reinforce recommender system. In WSDM'19 , pages 456-464, 2019."
+        },
+        {
+          "title": "Introduction to multi-armed bandits",
+          "citation": "Aleksandrs Slivkins. Introduction to multi-armed bandits. arXiv preprint arXiv:1904.07272 , 2019."
+        },
+        {
+          "title": "Reinforcement learning: An introduction",
+          "citation": "Richard S Sutton and Andrew G Barto. Reinforcement learning: An introduction . MIT press, 2018."
+        },
+        {
+          "title": "A contextual-bandit approach to personalized news article recommendation",
+          "citation": "Lihong Li, Wei Chu, John Langford, and Robert E Schapire. A contextual-bandit approach to personalized news article recommendation. In WWW'10 , pages 661-670, 2010."
+        },
+        {
+          "title": "Collaborative filtering bandits",
+          "citation": "Shuai Li, Alexandros Karatzoglou, and Claudio Gentile. Collaborative filtering bandits. In SIGIR'16 , pages 539-548, 2016."
+        },
+        {
+          "title": "Recommender systems",
+          "citation": "Charu C Aggarwal. Recommender systems . Springer, 2016."
+        },
+        {
+          "title": "An exploration on-demand article recommender system for cancer patients information provisioning",
+          "citation": "M. Mehdi Afsar, Trafford Crump, and Behrouz Far. An exploration on-demand article recommender system for cancer patients information provisioning. In FLAIRS'21 , volume 34, 2021."
+        },
+        {
+          "title": "Survey of multiarmed bandit algorithms applied to recommendation systems",
+          "citation": "Gangan Elena, Kudus Milos, and Ilyushin Eugene. Survey of multiarmed bandit algorithms applied to recommendation systems. International Journal of Open Information Technologies , 9(4):12-27, 2021."
+        },
+        {
+          "title": "A survey of collaborative filtering techniques",
+          "citation": "Xiaoyuan Su and Taghi M Khoshgoftaar. A survey of collaborative filtering techniques. Advances in artificial intelligence , 2009."
+        },
+        {
+          "title": "Collaborative filtering beyond the user-item matrix: A survey of the state of the art and future challenges",
+          "citation": "Yue Shi, Martha Larson, and Alan Hanjalic. Collaborative filtering beyond the user-item matrix: A survey of the state of the art and future challenges. ACM Computing Surveys (CSUR) , 47(1):1-45, 2014."
+        },
+        {
+          "title": "Hybrid recommender systems: Survey and experiments",
+          "citation": "Robin Burke. Hybrid recommender systems: Survey and experiments. User modeling and user-adapted interaction , 12(4):331-370, 2002."
+        },
+        {
+          "title": "Mobile multimedia recommendation in smart communities: A survey",
+          "citation": "Feng Xia, Nana Yaw Asabere, Ahmedin Mohammed Ahmed, Jing Li, and Xiangjie Kong. Mobile multimedia recommendation in smart communities: A survey. IEEE Access , 1:606-624, 2013."
+        },
+        {
+          "title": "Recommender systems leveraging multimedia content",
+          "citation": "Yashar Deldjoo, Markus Schedl, Paolo Cremonesi, and Gabriella Pasi. Recommender systems leveraging multimedia content. ACM Computing Surveys (CSUR) , 53(5):1-38, 2020."
+        },
+        {
+          "title": "Explainable recommendation: A survey and new perspectives",
+          "citation": "Yongfeng Zhang and Xu Chen. Explainable recommendation: A survey and new perspectives. arXiv preprint arXiv:1804.11192 , 2018."
+        },
+        {
+          "title": "paper recommender systems: A literature survey",
+          "citation": "Joeran Beel, Bela Gipp, Stefan Langer, and Corinna Breitinger. paper recommender systems: A literature survey. International Journal on Digital Libraries , 17(4):305-338, 2016."
+        },
+        {
+          "title": "Deep reinforcement learning for search, recommendation, and online advertising: a survey",
+          "citation": "Xiangyu Zhao, Long Xia, Jiliang Tang, and Dawei Yin. Deep reinforcement learning for search, recommendation, and online advertising: a survey. ACM SIGWEB Newsletter , pages 1-15, 2019."
+        },
+        {
+          "title": "Sequence-aware recommender systems",
+          "citation": "Massimo Quadrana, Paolo Cremonesi, and Dietmar Jannach. Sequence-aware recommender systems. ACM Computing Surveys (CSUR) , 51(4):1-36, 2018."
+        },
+        {
+          "title": "A survey on session-based recommender systems",
+          "citation": "Shoujin Wang, Longbing Cao, Yan Wang, Quan Z Sheng, Mehmet A Orgun, and Defu Lian. A survey on session-based recommender systems. ACM Computing Surveys (CSUR) , 54(7):1-38, 2021."
+        },
+        {
+          "title": "Stabilizing reinforcement learning in dynamic environment with application to online recommendation",
+          "citation": "Shi-Yong Chen, Yang Yu, Qing Da, Jun Tan, Hai-Kuan Huang, and Hai-Hong Tang. Stabilizing reinforcement learning in dynamic environment with application to online recommendation. In SIGKDD'18 , pages 1187-1196, 2018."
+        },
+        {
+          "title": "Reinforcement learning based recommender system using biclustering technique",
+          "citation": "Sungwoon Choi, Heonseok Ha, Uiwon Hwang, Chanju Kim, Jung-Woo Ha, and Sungroh Yoon. Reinforcement learning based recommender system using biclustering technique. arXiv preprint arXiv:1801.05532 , 2018."
+        },
+        {
+          "title": "Deep reinforcement learning for recommender systems",
+          "citation": "Isshu Munemasa, Yuta Tomomatsu, Kunioki Hayashi, and Tomohiro Takagi. Deep reinforcement learning for recommender systems. In ICOIACT'18 , pages 226-233, 2018."
+        },
+        {
+          "title": "Deep reinforcement learning for page-wise recommendations",
+          "citation": "Xiangyu Zhao, Long Xia, Liang Zhang, Zhuoye Ding, Dawei Yin, and Jiliang Tang. Deep reinforcement learning for page-wise recommendations. In RecSys'18 , pages 95-103, 2018."
+        },
+        {
+          "title": "Drn: A deep reinforcement learning framework for news recommendation",
+          "citation": "Guanjie Zheng, Fuzheng Zhang, Zihan Zheng, Yang Xiang, Nicholas Jing Yuan, Xing Xie, and Zhenhui Li. Drn: A deep reinforcement learning framework for news recommendation. In WWW'18 , pages 167-176, 2018."
+        },
+        {
+          "title": "Recommendations with negative feedback via pairwise deep reinforcement learning",
+          "citation": "Xiangyu Zhao, Liang Zhang, Zhuoye Ding, Long Xia, Jiliang Tang, and Dawei Yin. Recommendations with negative feedback via pairwise deep reinforcement learning. In SIGKDD'18 , pages 1040-1048, 2018."
+        },
+        {
+          "title": "Optimal radio channel recommendations with explicit and implicit feedback",
+          "citation": "Omar Moling, Linas Baltrunas, and Francesco Ricci. Optimal radio channel recommendations with explicit and implicit feedback. In RecSys , pages 75-82, 2012."
+        },
+        {
+          "title": "An MDP-Based Recommender System",
+          "citation": "Guy Shani, David Heckerman, and Ronen I Brafman. An mdp-based recommender system. Journal of Machine Learning Research , 6:1265-1295, 2005."
+        },
+        {
+          "title": "Playlist recommendation based on reinforcement learning",
+          "citation": "Binbin Hu, Chuan Shi, and Jian Liu. Playlist recommendation based on reinforcement learning. In ICIS'17 , pages 172-182, 2017."
+        },
+        {
+          "title": "Deep reinforcement learning for list-wise recommendations",
+          "citation": "Xiangyu Zhao, Liang Zhang, Long Xia, Zhuoye Ding, Dawei Yin, and Jiliang Tang. Deep reinforcement learning for list-wise recommendations. arXiv preprint arXiv:1801.00209 , 2017."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "2.1 Recommender Systems",
+      "citations": [
+        {
+          "title": "Introduction to recommender systems handbook",
+          "citation": "Francesco Ricci, Lior Rokach, and Bracha Shapira. Introduction to recommender systems handbook. In Recommender systems handbook , pages 1-35. 2011."
+        },
+        {
+          "title": "A survey of collaborative filtering techniques",
+          "citation": "Xiaoyuan Su and Taghi M Khoshgoftaar. A survey of collaborative filtering techniques. Advances in artificial intelligence , 2009."
+        },
+        {
+          "title": "Recommender systems",
+          "citation": "Paul Resnick and Hal R Varian. Recommender systems. Communications of the ACM , 40(3):56-58, 1997."
+        },
+        {
+          "title": "Using collaborative filtering to weave an information tapestry",
+          "citation": "David Goldberg, David Nichols, Brian M Oki, and Douglas Terry. Using collaborative filtering to weave an information tapestry. Communications of the ACM , 35(12):61-70, 1992."
+        },
+        {
+          "title": "Content-based recommender systems: State of the art and trends",
+          "citation": "Pasquale Lops, Marco De Gemmis, and Giovanni Semeraro. Content-based recommender systems: State of the art and trends. In Recommender systems handbook , pages 73-105. 2011."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "2.2 From Reinforcement Learning to Deep Reinforcement Learning",
+      "citations": [
+        {
+          "title": "Deep learning",
+          "citation": "Ian Goodfellow, Yoshua Bengio, Aaron Courville, and Yoshua Bengio. Deep learning . MIT press Cambridge, 2016."
+        },
+        {
+          "title": "Reinforcement learning: An introduction",
+          "citation": "Richard S Sutton and Andrew G Barto. Reinforcement learning: An introduction . MIT press, 2018."
+        },
+        {
+          "title": "Optimal radio channel recommendations with explicit and implicit feedback",
+          "citation": "Omar Moling, Linas Baltrunas, and Francesco Ricci. Optimal radio channel recommendations with explicit and implicit feedback. In RecSys , pages 75-82, 2012."
+        },
+        {
+          "title": "Learning from delayed rewards",
+          "citation": "Christopher Watkins. Learning from delayed rewards . University of Cambridge, 1989."
+        },
+        {
+          "title": "On-line Q-learning using connectionist systems",
+          "citation": "Gavin A Rummery and Mahesan Niranjan. On-line Q-learning using connectionist systems , volume 37. University of Cambridge, 1994."
+        },
+        {
+          "title": "A reinforcement learning method for maximizing undiscounted rewards",
+          "citation": "Anton Schwartz. A reinforcement learning method for maximizing undiscounted rewards. In ICML'93 , pages 298-305, 1993."
+        },
+        {
+          "title": "A survey of monte carlo tree search methods",
+          "citation": "Cameron B Browne, Edward Powley, Daniel Whitehouse, Simon M Lucas, Peter I Cowling, Philipp Rohlfshagen, Stephen Tavener, Diego Perez, Spyridon Samothrakis, and Simon Colton. A survey of monte carlo tree search methods. IEEE Transactions on Computational Intelligence and AI in games , 4(1):1-43, 2012."
+        },
+        {
+          "title": "Monte-Carlo Tree Search: A New Framework for Game AI",
+          "citation": "Guillaume Chaslot, Sander Bakkes, Istvan Szita, and Pieter Spronck. Monte-carlo tree search: A new framework for game ai. AIIDE , 8:216-217, 2008."
+        },
+        {
+          "title": "Mastering the game of go with deep neural networks and tree search",
+          "citation": "David Silver et al. Mastering the game of go with deep neural networks and tree search. Nature , 529(7587):484-489, 2016."
+        },
+        {
+          "title": "Approximate solutions to Markov decision processes",
+          "citation": "Geoffrey J Gordon. Approximate solutions to Markov decision processes . Carnegie Mellon University, 1999."
+        },
+        {
+          "title": "Tree-based batch mode reinforcement learning",
+          "citation": "Damien Ernst, Pierre Geurts, and Louis Wehenkel. Tree-based batch mode reinforcement learning. Journal of Machine Learning Research , 6:503-556, 2005."
+        },
+        {
+          "title": "Simple statistical gradient-following algorithms for connectionist reinforcement learning",
+          "citation": "Ronald J Williams. Simple statistical gradient-following algorithms for connectionist reinforcement learning. Machine learning , 8(3-4):229-256, 1992."
+        },
+        {
+          "title": "Neuronlike adaptive elements that can solve difficult learning control problems",
+          "citation": "Andrew G Barto, Richard S Sutton, and Charles W Anderson. Neuronlike adaptive elements that can solve difficult learning control problems. IEEE transactions on systems, man, and cybernetics , (5):834-846, 1983."
+        },
+        {
+          "title": "Playing atari with deep reinforcement learning",
+          "citation": "Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, and Martin Riedmiller. Playing atari with deep reinforcement learning. arXiv preprint arXiv:1312.5602 , 2013."
+        },
+        {
+          "title": "Human-level control through deep reinforcement learning",
+          "citation": "Volodymyr Mnih et al. Human-level control through deep reinforcement learning. Nature , 518(7540):529-533, 2015."
+        },
+        {
+          "title": "Self-improving reactive agents based on reinforcement learning, planning and teaching",
+          "citation": "Long-Ji Lin. Self-improving reactive agents based on reinforcement learning, planning and teaching. Machine learning , 8(3-4):293-321, 1992."
+        },
+        {
+          "title": "Issues in using function approximation for reinforcement learning",
+          "citation": "Sebastian Thrun and Anton Schwartz. Issues in using function approximation for reinforcement learning. In Connectionist Models Summer School Hillsdale , 1993."
+        },
+        {
+          "title": "Deep reinforcement learning with double q-learning",
+          "citation": "Hado Van Hasselt, Arthur Guez, and David Silver. Deep reinforcement learning with double q-learning. arXiv preprint arXiv:1509.06461 , 2015."
+        },
+        {
+          "title": "Dueling network architectures for deep reinforcement learning",
+          "citation": "Ziyu Wang, Tom Schaul, Matteo Hessel, Hado Hasselt, Marc Lanctot, and Nando Freitas. Dueling network architectures for deep reinforcement learning. In ICML'16 , pages 1995-2003, 2016."
+        },
+        {
+          "title": "Prioritized experience replay",
+          "citation": "Tom Schaul, John Quan, Ioannis Antonoglou, and David Silver. Prioritized experience replay. arXiv preprint arXiv:1511.05952 , 2015."
+        },
+        {
+          "title": "Continuous control with deep reinforcement learning",
+          "citation": "Timothy P Lillicrap, Jonathan J Hunt, Alexander Pritzel, Nicolas Heess, Tom Erez, Yuval Tassa, David Silver, and Daan Wierstra. Continuous control with deep reinforcement learning. arXiv preprint arXiv:1509.02971 , 2015."
+        },
+        {
+          "title": "Deterministic policy gradient algorithms",
+          "citation": "David Silver et al. Deterministic policy gradient algorithms. In ICML'14 , 2014."
+        },
+        {
+          "title": "Proximal policy optimization algorithms",
+          "citation": "John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, and Oleg Klimov. Proximal policy optimization algorithms. arXiv preprint arXiv:1707.06347 , 2017."
+        },
+        {
+          "title": "Trust region policy optimization",
+          "citation": "John Schulman, Sergey Levine, Pieter Abbeel, Michael Jordan, and Philipp Moritz. Trust region policy optimization. In ICML'15 , pages 1889-1897, 2015."
+        },
+        {
+          "title": "Sample Efficiency in Deep Reinforcement Learning based Recommender Systems with Imitation Learning",
+          "citation": "Mohammad Mehdi Afsar, Trafford Crump, and Behrouz Far. Sample Efficiency in Deep Reinforcement Learning based Recommender Systems with Imitation Learning. In Canadian Conference on Artificial Intelligence , 2022."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "2.3 Why Reinforcement Learning for Recommendation?",
+      "citations": [
+        {
+          "title": "Top-k off-policy correction for a reinforce recommender system",
+          "citation": "Minmin Chen, Alex Beutel, Paul Covington, Sagar Jain, Francois Belletti, and Ed H Chi. Top-k off-policy correction for a reinforce recommender system. In WSDM'19 , pages 456-464, 2019."
+        },
+        {
+          "title": "An MDP-Based Recommender System",
+          "citation": "Guy Shani, David Heckerman, and Ronen I Brafman. An mdp-based recommender system. Journal of Machine Learning Research , 6:1265-1295, 2005."
+        },
+        {
+          "title": "Using temporal data for making recommendations",
+          "citation": "A. Zimdars, D. M. Chickering, and C. Meek. Using temporal data for making recommendations. In UAI'01 , pages 580-588, 2001."
+        },
+        {
+          "title": "Reinforcement learning for slate-based recommender systems: A tractable decomposition and practical methodology",
+          "citation": "Eugene Ie et al. Reinforcement learning for slate-based recommender systems: A tractable decomposition and practical methodology. arXiv preprint arXiv:1905.12767 , 2019."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "2.4 Problem Formulation",
+      "citations": [
+        {
+          "title": "Introduction to recommender systems handbook",
+          "citation": "Francesco Ricci, Lior Rokach, and Bracha Shapira. Introduction to recommender systems handbook. In Recommender systems handbook , pages 1-35. 2011."
+        },
+        {
+          "title": "Reinforcement learning: An introduction",
+          "citation": "Richard S Sutton and Andrew G Barto. Reinforcement learning: An introduction . MIT press, 2018."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "2.5 Proposed RLRS Framework",
+      "citations": [
+        {
+          "title": "Introduction to recommender systems handbook",
+          "citation": "Francesco Ricci, Lior Rokach, and Bracha Shapira. Introduction to recommender systems handbook. In Recommender systems handbook , pages 1-35. 2011."
+        },
+        {
+          "title": "Reinforcement learning: An introduction",
+          "citation": "Richard S Sutton and Andrew G Barto. Reinforcement learning: An introduction . MIT press, 2018."
+        },
+        {
+          "title": "Recommendations with negative feedback via pairwise deep reinforcement learning",
+          "citation": "Xiangyu Zhao, Liang Zhang, Zhuoye Ding, Long Xia, Jiliang Tang, and Dawei Yin. Recommendations with negative feedback via pairwise deep reinforcement learning. In SIGKDD'18 , pages 1040-1048, 2018."
+        },
+        {
+          "title": "Empirical evaluation of gated recurrent neural networks on sequence modeling",
+          "citation": "Junyoung Chung, Caglar Gulcehre, KyungHyun Cho, and Yoshua Bengio. Empirical evaluation of gated recurrent neural networks on sequence modeling. arXiv preprint arXiv:1412.3555 , 2014."
+        },
+        {
+          "title": "A comparison of offline evaluations, online evaluations, and user studies in the context of research-paper recommender systems",
+          "citation": "Joeran Beel and Stefan Langer. A comparison of offline evaluations, online evaluations, and user studies in the context of research-paper recommender systems. In TPDL'15 , pages 153-168, 2015."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "3.1 RL-based RSs",
+      "citations": [
+        {
+          "title": "Reinforcement learning: An introduction",
+          "citation": "Richard S Sutton and Andrew G Barto. Reinforcement learning: An introduction . MIT press, 2018."
+        },
+        {
+          "title": "Reinforcement learning based recommender system using biclustering technique",
+          "citation": "Sungwoon Choi, Heonseok Ha, Uiwon Hwang, Chanju Kim, Jung-Woo Ha, and Sungroh Yoon. Reinforcement learning based recommender system using biclustering technique. arXiv preprint arXiv:1801.05532 , 2018."
+        },
+        {
+          "title": "Optimal radio channel recommendations with explicit and implicit feedback",
+          "citation": "Omar Moling, Linas Baltrunas, and Francesco Ricci. Optimal radio channel recommendations with explicit and implicit feedback. In RecSys , pages 75-82, 2012."
+        },
+        {
+          "title": "An MDP-Based Recommender System",
+          "citation": "Guy Shani, David Heckerman, and Ronen I Brafman. An mdp-based recommender system. Journal of Machine Learning Research , 6:1265-1295, 2005."
+        },
+        {
+          "title": "Playlist recommendation based on reinforcement learning",
+          "citation": "Binbin Hu, Chuan Shi, and Jian Liu. Playlist recommendation based on reinforcement learning. In ICIS'17 , pages 172-182, 2017."
+        },
+        {
+          "title": "A reinforcement learning method for maximizing undiscounted rewards",
+          "citation": "Anton Schwartz. A reinforcement learning method for maximizing undiscounted rewards. In ICML'93 , pages 298-305, 1993."
+        },
+        {
+          "title": "Mastering the game of go with deep neural networks and tree search",
+          "citation": "David Silver et al. Mastering the game of go with deep neural networks and tree search. Nature , 529(7587):484-489, 2016."
+        },
+        {
+          "title": "Tree-based batch mode reinforcement learning",
+          "citation": "Damien Ernst, Pierre Geurts, and Louis Wehenkel. Tree-based batch mode reinforcement learning. Journal of Machine Learning Research , 6:503-556, 2005."
+        },
+        {
+          "title": "Webwatcher: A tour guide for the world wide web",
+          "citation": "Thorsten Joachims, Dayne Freitag, Tom Mitchell, et al. Webwatcher: A tour guide for the world wide web. In IJCAI'97 , pages 770-777, 1997."
+        },
+        {
+          "title": "Personalized web recommendations: supporting epistemic information about end-users",
+          "citation": "Mircea Preda and Dan Popescu. Personalized web recommendations: supporting epistemic information about end-users. In WI'05 , pages 692-695, 2005."
+        },
+        {
+          "title": "Usage-based web recommendations: a reinforcement learning approach",
+          "citation": "Nima Taghipour, Ahmad Kardan, and Saeed Shiry Ghidary. Usage-based web recommendations: a reinforcement learning approach. In RecSys'07 , pages 113-120, 2007."
+        },
+        {
+          "title": "Learning and adaptivity in interactive recommender systems",
+          "citation": "Tariq Mahmood and Francesco Ricci. Learning and adaptivity in interactive recommender systems. In EC'07 , pages 75-84, 2007."
+        },
+        {
+          "title": "A hybrid web recommender system based on q-learning",
+          "citation": "Nima Taghipour and Ahmad Kardan. A hybrid web recommender system based on q-learning. In SAC'08 , pages 1164-1168, 2008."
+        },
+        {
+          "title": "Improving recommender systems with adaptive conversational strategies",
+          "citation": "Tariq Mahmood and Francesco Ricci. Improving recommender systems with adaptive conversational strategies. In HT'09 , pages 73-82, 2009."
+        },
+        {
+          "title": "A reinforcement learning approach to emotion-based automatic playlist generation",
+          "citation": "Chung-Yi Chi, Richard Tzong-Han Tsai, Jeng-You Lai, and Jane Yung-jen Hsu. A reinforcement learning approach to emotion-based automatic playlist generation. In TAAI'10 , pages 60-65, 2010."
+        },
+        {
+          "title": "Informing sequential clinical decision-making through reinforcement learning: an empirical study",
+          "citation": "Susan M Shortreed, Eric Laber, Daniel J Lizotte, T Scott Stroup, Joelle Pineau, and Susan A Murphy. Informing sequential clinical decision-making through reinforcement learning: an empirical study. Machine learning , 84(1-2):109-136, 2011."
+        },
+        {
+          "title": "Reinforcement learning strategies for clinical trials in nonsmall cell lung cancer",
+          "citation": "Yufan Zhao, Donglin Zeng, Mark A Socinski, and Michael R Kosorok. Reinforcement learning strategies for clinical trials in nonsmall cell lung cancer. Biometrics , 67(4):1422-1433, 2011."
+        },
+        {
+          "title": "Dynamic personalization in conversational recommender systems",
+          "citation": "Tariq Mahmood, Ghulam Mujtaba, and Adriano Venturini. Dynamic personalization in conversational recommender systems. Information Systems and e-Business Management , 12(2):213-238, 2014."
+        },
+        {
+          "title": "Dj-mc: A reinforcement-learning agent for music playlist recommendation",
+          "citation": "Elad Liebman, Maytal Saar-Tsechansky, and Peter Stone. Dj-mc: A reinforcement-learning agent for music playlist recommendation. arXiv preprint arXiv:1401.1880 , 2014."
+        },
+        {
+          "title": "Personalized ad recommendation systems for life-time value optimization with guarantees",
+          "citation": "Georgios Theocharous, Philip S Thomas, and Mohammad Ghavamzadeh. Personalized ad recommendation systems for life-time value optimization with guarantees. In IJCAI'15 , 2015."
+        },
+        {
+          "title": "Partially observable markov decision process for recommender systems",
+          "citation": "Zhongqi Lu and Qiang Yang. Partially observable markov decision process for recommender systems. arXiv preprint arXiv:1608.07793 , 2016."
+        },
+        {
+          "title": "Dynamic scholarly collaborator recommendation via competitive multi-agent reinforcement learning",
+          "citation": "Yang Zhang, Chenwei Zhang, and Xiaozhong Liu. Dynamic scholarly collaborator recommendation via competitive multi-agent reinforcement learning. In RecSys'17 , pages 331-335, 2017."
+        },
+        {
+          "title": "Reinforcement learning for online learning recommendation system",
+          "citation": "Wacharawan Intayoad, Chayapol Kamyod, and Punnarumol Temdee. Reinforcement learning for online learning recommendation system. In GWS , pages 167-170, 2018."
+        },
+        {
+          "title": "Music recommender using deep embedding-based features and behavior-based reinforcement learning",
+          "citation": "Jia-Wei Chang, Ching-Yi Chiou, Jia-Yi Liao, Ying-Kai Hung, Chien-Che Huang, Kuan-Cheng Lin, and Ying-Hung Pu. Music recommender using deep embedding-based features and behavior-based reinforcement learning. Multimedia Tools and Applications , pages 1-28, 2019."
+        },
+        {
+          "title": "Context-aware personalized POI sequence recommendation",
+          "citation": "Jing Chen and Wenjun Jiang. Context-aware personalized poi sequence recommendation. In iSCI'19 , pages 197-210. Springer, 2019."
+        },
+        {
+          "title": "A hybrid recommendation for music based on reinforcement learning",
+          "citation": "Yu Wang. A hybrid recommendation for music based on reinforcement learning. In PAKDD'20 , pages 91-103, 2020."
+        },
+        {
+          "title": "Demand-aware career path recommendations: A reinforcement learning approach",
+          "citation": "Marios Kokkodis and Panagiotis G Ipeirotis. Demand-aware career path recommendations: A reinforcement learning approach. Management Science , 67(7):4362-4383, 2021."
+        },
+        {
+          "title": "Automatic personalization based on web usage mining",
+          "citation": "Bamshad Mobasher, Robert Cooley, and Jaideep Srivastava. Automatic personalization based on web usage mining. Communications of the ACM , 43(8):142-151, 2000."
+        },
+        {
+          "title": "Probabilistic matrix factorization",
+          "citation": "Andriy Mnih and Russ R Salakhutdinov. Probabilistic matrix factorization. In NIPS'08 , pages 1257-1264, 2008."
+        },
+        {
+          "title": "Distributed representations of words and phrases and their compositionality",
+          "citation": "Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, and Jeff Dean. Distributed representations of words and phrases and their compositionality. In NIPS'13 , pages 3111-3119, 2013."
+        },
+        {
+          "title": "Wavenet: A generative model for raw audio",
+          "citation": "Aaron van den Oord, Sander Dieleman, Heiga Zen, Karen Simonyan, Oriol Vinyals, Alex Graves, Nal Kalchbrenner, Andrew Senior, and Koray Kavukcuoglu. Wavenet: A generative model for raw audio. arXiv preprint arXiv:1609.03499 , 2016."
+        },
+        {
+          "title": "Fexipro: fast and exact inner product retrieval in recommender systems",
+          "citation": "Hui Li, Tsz Nam Chan, Man Lung Yiu, and Nikos Mamoulis. Fexipro: fast and exact inner product retrieval in recommender systems. In SIGMOD'17 , pages 835-850, 2017."
+        },
+        {
+          "title": "Adaptive control processes",
+          "citation": "Richard E Bellman. Adaptive control processes . Princeton university press, 2015."
+        },
+        {
+          "title": "Reinforcement learning and dynamic programming",
+          "citation": "Andrew G Barto. Reinforcement learning and dynamic programming. In Analysis, Design and Evaluation of Man-Machine Systems , pages 407-412. 1995."
+        },
+        {
+          "title": "Bandit based monte-carlo planning",
+          "citation": "Levente Kocsis and Csaba Szepesvári. Bandit based monte-carlo planning. In ECML'06 , pages 282-293, 2006."
+        },
+        {
+          "title": "Movielens",
+          "citation": "Movielens. https://grouplens.org/datasets/movielens/."
+        },
+        {
+          "title": "The million song dataset",
+          "citation": "Thierry Bertin-Mahieux, Daniel PW Ellis, Brian Whitman, and Paul Lamere. The million song dataset. In ISMIR'11 , pages 591-596, 2011."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "3.2 DRL-based RSs",
+      "citations": [
+        {
+          "title": "Deep reinforcement learning in large discrete action spaces",
+          "citation": "Gabriel Dulac-Arnold, Richard Evans, Hado van Hasselt, Peter Sunehag, Timothy Lillicrap, Jonathan Hunt, Timothy Mann, Theophane Weber, Thomas Degris, and Ben Coppin. Deep reinforcement learning in large discrete action spaces. arXiv preprint arXiv:1512.07679 , 2015."
+        },
+        {
+          "title": "Top-k off-policy correction for a reinforce recommender system",
+          "citation": "Minmin Chen, Alex Beutel, Paul Covington, Sagar Jain, Francois Belletti, and Ed H Chi. Top-k off-policy correction for a reinforce recommender system. In WSDM'19 , pages 456-464, 2019."
+        },
+        {
+          "title": "Reinforcement learning: An introduction",
+          "citation": "Richard S Sutton and Andrew G Barto. Reinforcement learning: An introduction . MIT press, 2018."
+        },
+        {
+          "title": "Deep reinforcement learning for search, recommendation, and online advertising: a survey",
+          "citation": "Xiangyu Zhao, Long Xia, Jiliang Tang, and Dawei Yin. Deep reinforcement learning for search, recommendation, and online advertising: a survey. ACM SIGWEB Newsletter , pages 1-15, 2019."
+        },
+        {
+          "title": "Stabilizing reinforcement learning in dynamic environment with application to online recommendation",
+          "citation": "Shi-Yong Chen, Yang Yu, Qing Da, Jun Tan, Hai-Kuan Huang, and Hai-Hong Tang. Stabilizing reinforcement learning in dynamic environment with application to online recommendation. In SIGKDD'18 , pages 1187-1196, 2018."
+        },
+        {
+          "title": "Deep reinforcement learning for recommender systems",
+          "citation": "Isshu Munemasa, Yuta Tomomatsu, Kunioki Hayashi, and Tomohiro Takagi. Deep reinforcement learning for recommender systems. In ICOIACT'18 , pages 226-233, 2018."
+        },
+        {
+          "title": "Deep reinforcement learning for page-wise recommendations",
+          "citation": "Xiangyu Zhao, Long Xia, Liang Zhang, Zhuoye Ding, Dawei Yin, and Jiliang Tang. Deep reinforcement learning for page-wise recommendations. In RecSys'18 , pages 95-103, 2018."
+        },
+        {
+          "title": "Drn: A deep reinforcement learning framework for news recommendation",
+          "citation": "Guanjie Zheng, Fuzheng Zhang, Zihan Zheng, Yang Xiang, Nicholas Jing Yuan, Xing Xie, and Zhenhui Li. Drn: A deep reinforcement learning framework for news recommendation. In WWW'18 , pages 167-176, 2018."
+        },
+        {
+          "title": "Recommendations with negative feedback via pairwise deep reinforcement learning",
+          "citation": "Xiangyu Zhao, Liang Zhang, Zhuoye Ding, Long Xia, Jiliang Tang, and Dawei Yin. Recommendations with negative feedback via pairwise deep reinforcement learning. In SIGKDD'18 , pages 1040-1048, 2018."
+        },
+        {
+          "title": "Playing atari with deep reinforcement learning",
+          "citation": "Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, and Martin Riedmiller. Playing atari with deep reinforcement learning. arXiv preprint arXiv:1312.5602 , 2013."
+        },
+        {
+          "title": "Human-level control through deep reinforcement learning",
+          "citation": "Volodymyr Mnih et al. Human-level control through deep reinforcement learning. Nature , 518(7540):529-533, 2015."
+        },
+        {
+          "title": "Reinforcement learning for slate-based recommender systems: A tractable decomposition and practical methodology",
+          "citation": "Eugene Ie et al. Reinforcement learning for slate-based recommender systems: A tractable decomposition and practical methodology. arXiv preprint arXiv:1905.12767 , 2019."
+        },
+        {
+          "title": "Probabilistic matrix factorization",
+          "citation": "Andriy Mnih and Russ R Salakhutdinov. Probabilistic matrix factorization. In NIPS'08 , pages 1257-1264, 2008."
+        },
+        {
+          "title": "Deep reinforcement learning with attention for slate markov decision processes with high-dimensional states and actions",
+          "citation": "Peter Sunehag, Richard Evans, Gabriel Dulac-Arnold, Yori Zwols, Daniel Visentin, and Ben Coppin. Deep reinforcement learning with attention for slate markov decision processes with high-dimensional states and actions. arXiv preprint arXiv:1512.01124 , 2015."
+        },
+        {
+          "title": "Optimal medication dosing from suboptimal clinical examples: A deep reinforcement learning approach",
+          "citation": "Shamim Nemati, Mohammad M Ghassemi, and Gari D Clifford. Optimal medication dosing from suboptimal clinical examples: A deep reinforcement learning approach. In EMBC'16 , pages 2978-2981, 2016."
+        },
+        {
+          "title": "Converse-et-impera: Exploiting deep learning and hierarchical reinforcement learning for conversational recommender systems",
+          "citation": "Claudio Greco, Alessandro Suglia, Pierpaolo Basile, and Giovanni Semeraro. Converse-et-impera: Exploiting deep learning and hierarchical reinforcement learning for conversational recommender systems. In AIxIA'17 , pages 372-386, 2017."
+        },
+        {
+          "title": "Deep reinforcement learning for sepsis treatment",
+          "citation": "Aniruddh Raghu, Matthieu Komorowski, Imran Ahmed, Leo Celi, Peter Szolovits, and Marzyeh Ghassemi. Deep reinforcement learning for sepsis treatment. arXiv preprint arXiv:1711.09602 , 2017."
+        },
+        {
+          "title": "Supervised reinforcement learning with recurrent neural network for dynamic treatment recommendation",
+          "citation": "Lu Wang, Wei Zhang, Xiaofeng He, and Hongyuan Zha. Supervised reinforcement learning with recurrent neural network for dynamic treatment recommendation. In SIGKDD'18 , pages 2447-2456, 2018."
+        },
+        {
+          "title": "Conversational recommender system",
+          "citation": "Yueming Sun and Yi Zhang. Conversational recommender system. In SIGIR'18 , pages 235-244, 2018."
+        },
+        {
+          "title": "Capdrl: A deep capsule reinforcement learning for movie recommendation",
+          "citation": "Chenfei Zhao and Lan Hu. Capdrl: A deep capsule reinforcement learning for movie recommendation. In PRICAI'19 , pages 734-739. Springer, 2019."
+        },
+        {
+          "title": "Reinforcement learning to optimize long-term user engagement in recommender systems",
+          "citation": "Lixin Zou, Long Xia, Zhuoye Ding, Jiaxing Song, Weidong Liu, and Dawei Yin. Reinforcement learning to optimize long-term user engagement in recommender systems. In SIGKDD'19 , pages 2810-2818, 2019."
+        },
+        {
+          "title": "DRCGR: Deep Reinforcement Learning Framework Incorporating CNN and GAN-Based for Interactive Recommendation",
+          "citation": "Rong Gao, Haifeng Xia, Jing Li, Donghua Liu, Shuai Chen, and Gang Chun. Drcgr: Deep reinforcement learning framework incorporating cnn and gan-based for interactive recommendation. In ICDM'19 , pages 1048-1053, 2019."
+        },
+        {
+          "title": "Vision-language recommendation via attribute augmented multimodal reinforcement learning",
+          "citation": "Tong Yu, Yilin Shen, Ruiyi Zhang, Xiangyu Zeng, and Hongxia Jin. Vision-language recommendation via attribute augmented multimodal reinforcement learning. In MM'19 , pages 39-47, 2019."
+        },
+        {
+          "title": "Dialogue based recommender system that flexibly mixes utterances and recommendations",
+          "citation": "Daisuke Tsumita and Tomohiro Takagi. Dialogue based recommender system that flexibly mixes utterances and recommendations. In WI'19 , pages 51-58, 2019."
+        },
+        {
+          "title": "Deep reinforcement learning for personalized search story recommendation",
+          "citation": "Jason Zhang, Junming Yin, Dongwon Lee, and Linhong Zhu. Deep reinforcement learning for personalized search story recommendation. Journal of Environmental Sciences , 2019."
+        },
+        {
+          "title": "A deep reinforcement learning approach to proactive content pushing and recommendation for mobile users",
+          "citation": "Dong Liu and Chenyang Yang. A deep reinforcement learning approach to proactive content pushing and recommendation for mobile users. IEEE Access , 7:83120-83136, 2019."
+        },
+        {
+          "title": "A novel movie recommendation system based on deep reinforcement learning with prioritized experience replay",
+          "citation": "Zhang Yuyan, Su Xiayao, and Liu Yong. A novel movie recommendation system based on deep reinforcement learning with prioritized experience replay. In ICCT'19 , pages 1496-1500, 2019."
+        },
+        {
+          "title": "Mention recommendation in twitter with cooperative multi-agent reinforcement learning",
+          "citation": "Tao Gui, Peng Liu, Qi Zhang, Liang Zhu, Minlong Peng, Yunhua Zhou, and Xuanjing Huang. Mention recommendation in twitter with cooperative multi-agent reinforcement learning. In SIGIR'19 , pages 535-544, 2019."
+        },
+        {
+          "title": "Text-based interactive recommendation via constraint-augmented reinforcement learning",
+          "citation": "Ruiyi Zhang, Tong Yu, Yilin Shen, Hongxia Jin, and Changyou Chen. Text-based interactive recommendation via constraint-augmented reinforcement learning. In NIPS'19 , 2019."
+        },
+        {
+          "title": "Interactive recommendation with user-specific deep reinforcement learning",
+          "citation": "Yu Lei and Wenjie Li. Interactive recommendation with user-specific deep reinforcement learning. ACM Transactions on Knowledge Discovery from Data (TKDD) , 13(6):1-15, 2019."
+        },
+        {
+          "title": "Model-based reinforcement learning with adversarial training for online recommendation",
+          "citation": "Xueying Bai, Jian Guan, and Hongning Wang. Model-based reinforcement learning with adversarial training for online recommendation. arXiv preprint arXiv:1911.03845 , 2019."
+        },
+        {
+          "title": "Reinforcement learning for personalized dialogue management",
+          "citation": "Floris Den Hengst, Mark Hoogendoorn, Frank Van Harmelen, and Joost Bosman. Reinforcement learning for personalized dialogue management. In WI'19 , pages 59-67, 2019."
+        },
+        {
+          "title": "Reinforcement knowledge graph reasoning for explainable recommendation",
+          "citation": "Yikun Xian, Zuohui Fu, S Muthukrishnan, Gerard De Melo, and Yongfeng Zhang. Reinforcement knowledge graph reasoning for explainable recommendation. In SIGIR'19 , pages 285-294, 2019."
+        },
+        {
+          "title": "Large-scale interactive recommendation with tree-structured policy gradient",
+          "citation": "Haokun Chen, Xinyi Dai, Han Cai, Weinan Zhang, Xuejian Wang, Ruiming Tang, Yuzhou Zhang, and Yong Yu. Large-scale interactive recommendation with tree-structured policy gradient. In AAAI'19 , volume 33, pages 3312-3320, 2019."
+        },
+        {
+          "title": "Reinforcement learning to diversify top-n recommendation",
+          "citation": "Lixin Zou, Long Xia, Zhuoye Ding, Dawei Yin, Jiaxing Song, and Weidong Liu. Reinforcement learning to diversify top-n recommendation. In DASFAA'19 , pages 104-120, 2019."
+        },
+        {
+          "title": "Generative adversarial user model for reinforcement learning based recommendation system",
+          "citation": "Xinshi Chen, Shuang Li, Hui Li, Shaohua Jiang, Yuan Qi, and Le Song. Generative adversarial user model for reinforcement learning based recommendation system. In ICML'19 , pages 1052-1061, 2019."
+        },
+        {
+          "title": "Explainable knowledge graph-based recommendation via deep reinforcement learning",
+          "citation": "Weiping Song, Zhijian Duan, Ziqing Yang, Hao Zhu, Ming Zhang, and Jian Tang. Explainable knowledge graph-based recommendation via deep reinforcement learning. arXiv preprint arXiv:1906.09506 , 2019."
+        },
+        {
+          "title": "Pseudo Dyna-Q: A Reinforcement Learning Framework for Interactive Recommendation",
+          "citation": "Lixin Zou, Long Xia, Pan Du, Zhuo Zhang, Ting Bai, Weidong Liu, Jian-Yun Nie, and Dawei Yin. Pseudo dyna-q: A reinforcement learning framework for interactive recommendation. In WSDM'20 , pages 816-824, 2020."
+        },
+        {
+          "title": "Social Attentive Deep Q-Networks for Recommender Systems",
+          "citation": "Yu Lei, Zhitao Wang, Wenjie Li, Hongbin Pei, and Quanyu Dai. Social attentive deep q-networks for recommender systems. IEEE Transactions on Knowledge and Data Engineering , 2020."
+        },
+        {
+          "title": "Jointly learning to recommend and advertise",
+          "citation": "Xiangyu Zhao, Xudong Zheng, Xiwang Yang, Xiaobing Liu, and Jiliang Tang. Jointly learning to recommend and advertise. In Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining , pages 3319-3327, 2020."
+        },
+        {
+          "title": "Spatio-temporal feature fusion for dynamic taxi route recommendation via deep reinforcement learning",
+          "citation": "Shenggong Ji, Zhaoyuan Wang, Tianrui Li, and Yu Zheng. Spatio-temporal feature fusion for dynamic taxi route recommendation via deep reinforcement learning. Knowledge-Based Systems , 205:106302, 2020."
+        },
+        {
+          "title": "A deep reinforcement learning based recommender system for occupant-driven energy optimization in commercial buildings",
+          "citation": "Peter Wei, Stephen Xia, Runfeng Chen, Jingyi Qian, Chong Li, and Xiaofan Jiang. A deep reinforcement learning based recommender system for occupant-driven energy optimization in commercial buildings. IEEE Internet of Things Journal , 2020."
+        },
+        {
+          "title": "Reinforcement learning based recommendation with graph convolutional q-network",
+          "citation": "Yu Lei, Hongbin Pei, Hanqi Yan, and Wenjie Li. Reinforcement learning based recommendation with graph convolutional q-network. In SIGIR'20 , pages 1757-1760, 2020."
+        },
+        {
+          "title": "Mahrl: Multi-goals abstraction based deep hierarchical reinforcement learning for recommendations",
+          "citation": "Dongyang Zhao, Liang Zhang, Bo Zhang, Lizhou Zheng, Yongjun Bao, and Weipeng Yan. Mahrl: Multi-goals abstraction based deep hierarchical reinforcement learning for recommendations. In SIGIR'20 , pages 871-880, 2020."
+        },
+        {
+          "title": "Deep reinforcement learning based recommendation with explicit user-item interactions modeling",
+          "citation": "Feng Liu, Ruiming Tang, Xutao Li, Weinan Zhang, Yunming Ye, Haokun Chen, Huifeng Guo, and Yuzhou Zhang. Deep reinforcement learning based recommendation with explicit user-item interactions modeling. arXiv preprint arXiv:1810.12027 , 2018."
+        },
+        {
+          "title": "State representation modeling for deep reinforcement learning based recommendation",
+          "citation": "Feng Liu, Ruiming Tang, Xutao Li, Weinan Zhang, Yunming Ye, Haokun Chen, Huifeng Guo, Yuzhou Zhang, and Xiuqiang He. State representation modeling for deep reinforcement learning based recommendation. Knowledge-Based Systems , 205:106170, 2020."
+        },
+        {
+          "title": "Balancing between accuracy and fairness for interactive recommendation with reinforcement learning",
+          "citation": "Weiwen Liu, Feng Liu, Ruiming Tang, Ben Liao, Guangyong Chen, and Pheng Ann Heng. Balancing between accuracy and fairness for interactive recommendation with reinforcement learning. Advances in Knowledge Discovery and Data Mining , 12084:155, 2020."
+        },
+        {
+          "title": "Estimation-action-reflection: Towards deep interaction between conversational and recommender systems",
+          "citation": "Wenqiang Lei, Xiangnan He, Yisong Miao, Qingyun Wu, Richang Hong, Min-Yen Kan, and Tat-Seng Chua. Estimation-action-reflection: Towards deep interaction between conversational and recommender systems. In WSDM'20 , pages 304-312, 2020."
+        },
+        {
+          "title": "Learning to collaborate in multi-module recommendation via multi-agent reinforcement learning without communication",
+          "citation": "Xu He, Bo An, Yanghua Li, Haikai Chen, Rundong Wang, Xinrun Wang, Runsheng Yu, Xin Li, and Zhirong Wang. Learning to collaborate in multi-module recommendation via multi-agent reinforcement learning without communication. In RecSys'20 , pages 210-219, 2020."
+        },
+        {
+          "title": "Whole-chain recommendations",
+          "citation": "Xiangyu Zhao, Long Xia, Lixin Zou, Hui Liu, Dawei Yin, and Jiliang Tang. Whole-chain recommendations. In CIKM'20 , pages 1883-1891, 2020."
+        },
+        {
+          "title": "Reinforced negative sampling over knowledge graph for recommendation",
+          "citation": "Xiang Wang, Yaokun Xu, Xiangnan He, Yixin Cao, Meng Wang, and Tat-Seng Chua. Reinforced negative sampling over knowledge graph for recommendation. In WWW'20 , pages 99-109, 2020."
+        },
+        {
+          "title": "Knowledge-guided deep reinforcement learning for interactive recommendation",
+          "citation": "Xiaocong Chen, Chaoran Huang, Lina Yao, Xianzhi Wang, Wenjie Zhang, et al. Knowledge-guided deep reinforcement learning for interactive recommendation. In IJCNN'20 , pages 1-8, 2020."
+        },
+        {
+          "title": "CRSAL: Conversational Recommender Systems with Adversarial Learning",
+          "citation": "Xuhui Ren, Hongzhi Yin, Tong Chen, Hao Wang, Nguyen Quoc Viet Hung, Zi Huang, and Xiangliang Zhang. Crsal: Conversational recommender systems with adversarial learning. ACM Transactions on Information Systems (TOIS) , 38(4):1-40, 2020."
+        },
+        {
+          "title": "Interactive Path Reasoning on Graph for Conversational Recommendation",
+          "citation": "Wenqiang Lei, Gangyi Zhang, Xiangnan He, Yisong Miao, Xiang Wang, Liang Chen, and Tat-Seng Chua. Interactive path reasoning on graph for conversational recommendation. In SIGKDD'20 , pages 2073-2083, 2020."
+        },
+        {
+          "title": "Self-supervised reinforcement learning for recommender systems",
+          "citation": "Xin Xin, Alexandros Karatzoglou, Ioannis Arapakis, and Joemon M Jose. Self-supervised reinforcement learning for recommender systems. In SIGIR'20 , pages 931-940, 2020."
+        },
+        {
+          "title": "Leveraging demonstrations for reinforcement recommendation reasoning over knowledge graphs",
+          "citation": "Kangzhi Zhao, Xiting Wang, Yuren Zhang, Li Zhao, Zheng Liu, Chunxiao Xing, and Xing Xie. Leveraging demonstrations for reinforcement recommendation reasoning over knowledge graphs. In SIGIR'20 , pages 239-248, 2020."
+        },
+        {
+          "title": "KERL: A Knowledge-Guided Reinforcement Learning Model for Sequential Recommendation",
+          "citation": "Pengfei Wang, Yu Fan, Long Xia, Wayne Xin Zhao, ShaoZhang Niu, and Jimmy Huang. Kerl: A knowledge-guided reinforcement learning model for sequential recommendation. In SIGIR'20 , pages 209-218, 2020."
+        },
+        {
+          "title": "Drprofiling: deep reinforcement user profiling for recommendations in heterogenous information networks",
+          "citation": "Huizhi Liang. Drprofiling: deep reinforcement user profiling for recommendations in heterogenous information networks. IEEE Transactions on Knowledge and Data Engineering , 2020."
+        },
+        {
+          "title": "Interactive recommender system via knowledge graph-enhanced reinforcement learning",
+          "citation": "Sijin Zhou, Xinyi Dai, Haokun Chen, Weinan Zhang, Kan Ren, Ruiming Tang, Xiuqiang He, and Yong Yu. Interactive recommender system via knowledge graph-enhanced reinforcement learning. In SIGIR'20 , pages 179-188, 2020."
+        },
+        {
+          "title": "Building healthy recommendation sequences for everyone: A safe reinforcement learning approach",
+          "citation": "Ashudeep Singh, Yoni Halpern, Nithum Thain, Konstantina Christakopoulou, EH Chi, Jilin Chen, and Alex Beutel. Building healthy recommendation sequences for everyone: A safe reinforcement learning approach. In FAccTRec Workshop , 2020."
+        },
+        {
+          "title": "End-to-end deep reinforcement learning based recommendation with supervised embedding",
+          "citation": "Feng Liu, Huifeng Guo, Xutao Li, Ruiming Tang, Yunming Ye, and Xiuqiang He. End-to-end deep reinforcement learning based recommendation with supervised embedding. In WSDM'20 , pages 384-392, 2020."
+        },
+        {
+          "title": "Top-aware reinforcement learning based recommendation",
+          "citation": "Feng Liu, Ruiming Tang, Huifeng Guo, Xutao Li, Yunming Ye, and Xiuqiang He. Top-aware reinforcement learning based recommendation. Neurocomputing , 417:255-269, 2020."
+        },
+        {
+          "title": "Improving ranking function and diversification in interactive recommendation systems based on deep reinforcement learning",
+          "citation": "Vahid Baghi, Seyed Mohammad Seyed Motehayeri, Ali Moeini, and Rooholah Abedian. Improving ranking function and diversification in interactive recommendation systems based on deep reinforcement learning. In CSICC'21 , pages 1-7, 2021."
+        },
+        {
+          "title": "Deep reinforcement learning based group recommender system",
+          "citation": "Zefang Liu, Shuran Wen, and Yinzhu Quan. Deep reinforcement learning based group recommender system. arXiv preprint arXiv:2106.06900 , 2021."
+        },
+        {
+          "title": "Towards long-term fairness in recommendation",
+          "citation": "Yingqiang Ge, Shuchang Liu, Ruoyuan Gao, Yikun Xian, Yunqi Li, Xiangyu Zhao, Changhua Pei, Fei Sun, Junfeng Ge, Wenwu Ou, et al. Towards long-term fairness in recommendation. In WSDM'21 , pages 445-453, 2021."
+        },
+        {
+          "title": "Deep reinforcement learning framework for category-based item recommendation",
+          "citation": "Mingsheng Fu, Anubha Agrawal, Athirai A Irissappane, Jie Zhang, Liwei Huang, and Hong Qu. Deep reinforcement learning framework for category-based item recommendation. IEEE Transactions on Cybernetics , 2021."
+        },
+        {
+          "title": "Adaptive course recommendation in moocs",
+          "citation": "Yuanguo Lin, Shibo Feng, Fan Lin, Wenhua Zeng, Yong Liu, and Pengcheng Wu. Adaptive course recommendation in moocs. Knowledge-Based Systems , 224:107085, 2021."
+        },
+        {
+          "title": "Multi-modal knowledge-aware reinforcement learning network for explainable recommendation",
+          "citation": "Shaohua Tao, Runhe Qiu, Yuan Ping, and Hui Ma. Multi-modal knowledge-aware reinforcement learning network for explainable recommendation. Knowledge-Based Systems , page 107217, 2021."
+        },
+        {
+          "title": "Intelligent electric vehicle charging recommendation based on multi-agent reinforcement learning",
+          "citation": "Weijia Zhang, Hao Liu, Fan Wang, Tong Xu, Haoran Xin, Dejing Dou, and Hui Xiong. Intelligent electric vehicle charging recommendation based on multi-agent reinforcement learning. In WWW'21 , pages 1856-1867, 2021."
+        },
+        {
+          "title": "Reinforced anchor knowledge graph generation for news recommendation reasoning",
+          "citation": "Danyang Liu, Jianxun Lian, Zheng Liu, Xiting Wang, Guangzhong Sun, and Xing Xie. Reinforced anchor knowledge graph generation for news recommendation reasoning. In SIGKDD'21 , pages 1055-1065, 2021."
+        },
+        {
+          "title": "Unified conversational recommendation policy learning via graph-based reinforcement learning",
+          "citation": "Yang Deng, Yaliang Li, Fei Sun, Bolin Ding, and Wai Lam. Unified conversational recommendation policy learning via graph-based reinforcement learning. arXiv preprint arXiv:2105.09710 , 2021."
+        },
+        {
+          "title": "Hierarchical reinforcement learning for integrated recommendation",
+          "citation": "Ruobing Xie, Shaoliang Zhang, Rui Wang, Feng Xia, and Leyu Lin. Hierarchical reinforcement learning for integrated recommendation. In AAAI'21 , 2021."
+        },
+        {
+          "title": "Reinforcement learning with a disentangled universal value function for item recommendation",
+          "citation": "Kai Wang, Zhene Zou, Qilin Deng, Runze Wu, Jianrong Tao, Changjie Fan, Liang Chen, and Peng Cui. Reinforcement learning with a disentangled universal value function for item recommendation. arXiv preprint arXiv:2104.02981 , 2021."
+        },
+        {
+          "title": "Dear: Deep reinforcement learning for online advertising impression in recommender systems",
+          "citation": "Xiangyu Zhao, Changsheng Gu, Haoshenglun Zhang, Xiwang Yang, Xiaobing Liu, Hui Liu, and Jiliang Tang. Dear: Deep reinforcement learning for online advertising impression in recommender systems. In AAAI'21 , pages 750-758, 2021."
+        },
+        {
+          "title": "Value penalized q-learning for recommender systems",
+          "citation": "Chengqian Gao, Ke Xu, and Peilin Zhao. Value penalized q-learning for recommender systems. arXiv preprint arXiv:2110.07923 , 2021."
+        },
+        {
+          "title": "A general offline reinforcement learning framework for interactive recommendation",
+          "citation": "Teng Xiao and Donglin Wang. A general offline reinforcement learning framework for interactive recommendation. In AAAI'21 , 2021."
+        },
+        {
+          "title": "User response models to improve a reinforce recommender system",
+          "citation": "Minmin Chen, Bo Chang, Can Xu, and Ed H Chi. User response models to improve a reinforce recommender system. In WSDM'21 , pages 121-129, 2021."
+        },
+        {
+          "title": "Survey sampling: Theory and methods",
+          "citation": "Dankit K Nassiuma. Survey sampling: Theory and methods, 2001."
+        },
+        {
+          "title": "Hindsight experience replay",
+          "citation": "Marcin Andrychowicz, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, Pieter Abbeel, and Wojciech Zaremba. Hindsight experience replay. arXiv preprint arXiv:1707.01495 , 2017."
+        },
+        {
+          "title": "Interactively optimizing information retrieval systems as a dueling bandits problem",
+          "citation": "Yisong Yue and Thorsten Joachims. Interactively optimizing information retrieval systems as a dueling bandits problem. In ICML'09 , pages 1201-1208, 2009."
+        },
+        {
+          "title": "Seqgan: Sequence generative adversarial nets with policy gradient",
+          "citation": "Lantao Yu, Weinan Zhang, Jun Wang, and Yong Yu. Seqgan: Sequence generative adversarial nets with policy gradient. In AAAI'17 , 2017."
+        },
+        {
+          "title": "On the theory of the brownian motion",
+          "citation": "George E Uhlenbeck and Leonard S Ornstein. On the theory of the brownian motion. Physical review , 36(5):823, 1930."
+        },
+        {
+          "title": "Soft actor-critic: Off-policy maximum entropy deep reinforcement learning with a stochastic actor",
+          "citation": "Tuomas Haarnoja, Aurick Zhou, Pieter Abbeel, and Sergey Levine. Soft actor-critic: Off-policy maximum entropy deep reinforcement learning with a stochastic actor. In ICML'18 , pages 1861-1870, 2018."
+        },
+        {
+          "title": "Learning to communicate with deep multi-agent reinforcement learning",
+          "citation": "Jakob N Foerster, Yannis M Assael, Nando De Freitas, and Shimon Whiteson. Learning to communicate with deep multi-agent reinforcement learning. arXiv preprint arXiv:1605.06676 , 2016."
+        },
+        {
+          "title": "Multi-agent actor-critic for mixed cooperative-competitive environments",
+          "citation": "Ryan Lowe, Yi Wu, Aviv Tamar, Jean Harb, Pieter Abbeel, and Igor Mordatch. Multi-agent actor-critic for mixed cooperative-competitive environments. arXiv preprint arXiv:1706.02275 , 2017."
+        },
+        {
+          "title": "Generative adversarial imitation learning",
+          "citation": "Jonathan Ho and Stefano Ermon. Generative adversarial imitation learning. NIPS'16 , 29:4565-4573, 2016."
+        },
+        {
+          "title": "Survival analysis",
+          "citation": "David G Kleinbaum and Mitchel Klein. Survival analysis . Springer, 2010."
+        },
+        {
+          "title": "Neural survival recommender",
+          "citation": "How Jing and Alexander J Smola. Neural survival recommender. In WSDM'17 , pages 515-524, 2017."
+        },
+        {
+          "title": "Recsim: A configurable simulation platform for recommender systems",
+          "citation": "Eugene Ie et al. Recsim: A configurable simulation platform for recommender systems. arXiv preprint arXiv:1909.04847 , 2019."
+        },
+        {
+          "title": "Truncated importance sampling",
+          "citation": "Edward L Ionides. Truncated importance sampling. Journal of Computational and Graphical Statistics , 17(2):295-311, 2008."
+        },
+        {
+          "title": "Yelp",
+          "citation": "Yelp. https://www.yelp.com/academic\\_dataset."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "9",
+      "sec_title": "4 EMERGING TOPICS",
+      "citations": [
+        {
+          "title": "Explainable recommendation: A survey and new perspectives",
+          "citation": "Yongfeng Zhang and Xu Chen. Explainable recommendation: A survey and new perspectives. arXiv preprint arXiv:1804.11192 , 2018."
+        },
+        {
+          "title": "Dynamic scholarly collaborator recommendation via competitive multi-agent reinforcement learning",
+          "citation": "Yang Zhang, Chenwei Zhang, and Xiaozhong Liu. Dynamic scholarly collaborator recommendation via competitive multi-agent reinforcement learning. In RecSys'17 , pages 331-335, 2017."
+        },
+        {
+          "title": "Converse-et-impera: Exploiting deep learning and hierarchical reinforcement learning for conversational recommender systems",
+          "citation": "Claudio Greco, Alessandro Suglia, Pierpaolo Basile, and Giovanni Semeraro. Converse-et-impera: Exploiting deep learning and hierarchical reinforcement learning for conversational recommender systems. In AIxIA'17 , pages 372-386, 2017."
+        },
+        {
+          "title": "Supervised reinforcement learning with recurrent neural network for dynamic treatment recommendation",
+          "citation": "Lu Wang, Wei Zhang, Xiaofeng He, and Hongyuan Zha. Supervised reinforcement learning with recurrent neural network for dynamic treatment recommendation. In SIGKDD'18 , pages 2447-2456, 2018."
+        },
+        {
+          "title": "Conversational recommender system",
+          "citation": "Yueming Sun and Yi Zhang. Conversational recommender system. In SIGIR'18 , pages 235-244, 2018."
+        },
+        {
+          "title": "Dialogue based recommender system that flexibly mixes utterances and recommendations",
+          "citation": "Daisuke Tsumita and Tomohiro Takagi. Dialogue based recommender system that flexibly mixes utterances and recommendations. In WI'19 , pages 51-58, 2019."
+        },
+        {
+          "title": "Deep reinforcement learning for personalized search story recommendation",
+          "citation": "Jason Zhang, Junming Yin, Dongwon Lee, and Linhong Zhu. Deep reinforcement learning for personalized search story recommendation. Journal of Environmental Sciences , 2019."
+        },
+        {
+          "title": "Mention recommendation in twitter with cooperative multi-agent reinforcement learning",
+          "citation": "Tao Gui, Peng Liu, Qi Zhang, Liang Zhu, Minlong Peng, Yunhua Zhou, and Xuanjing Huang. Mention recommendation in twitter with cooperative multi-agent reinforcement learning. In SIGIR'19 , pages 535-544, 2019."
+        },
+        {
+          "title": "Model-based reinforcement learning with adversarial training for online recommendation",
+          "citation": "Xueying Bai, Jian Guan, and Hongning Wang. Model-based reinforcement learning with adversarial training for online recommendation. arXiv preprint arXiv:1911.03845 , 2019."
+        },
+        {
+          "title": "Reinforcement learning for personalized dialogue management",
+          "citation": "Floris Den Hengst, Mark Hoogendoorn, Frank Van Harmelen, and Joost Bosman. Reinforcement learning for personalized dialogue management. In WI'19 , pages 59-67, 2019."
+        },
+        {
+          "title": "Reinforcement knowledge graph reasoning for explainable recommendation",
+          "citation": "Yikun Xian, Zuohui Fu, S Muthukrishnan, Gerard De Melo, and Yongfeng Zhang. Reinforcement knowledge graph reasoning for explainable recommendation. In SIGIR'19 , pages 285-294, 2019."
+        },
+        {
+          "title": "Mahrl: Multi-goals abstraction based deep hierarchical reinforcement learning for recommendations",
+          "citation": "Dongyang Zhao, Liang Zhang, Bo Zhang, Lizhou Zheng, Yongjun Bao, and Weipeng Yan. Mahrl: Multi-goals abstraction based deep hierarchical reinforcement learning for recommendations. In SIGIR'20 , pages 871-880, 2020."
+        },
+        {
+          "title": "Estimation-action-reflection: Towards deep interaction between conversational and recommender systems",
+          "citation": "Wenqiang Lei, Xiangnan He, Yisong Miao, Qingyun Wu, Richang Hong, Min-Yen Kan, and Tat-Seng Chua. Estimation-action-reflection: Towards deep interaction between conversational and recommender systems. In WSDM'20 , pages 304-312, 2020."
+        },
+        {
+          "title": "Learning to collaborate in multi-module recommendation via multi-agent reinforcement learning without communication",
+          "citation": "Xu He, Bo An, Yanghua Li, Haikai Chen, Rundong Wang, Xinrun Wang, Runsheng Yu, Xin Li, and Zhirong Wang. Learning to collaborate in multi-module recommendation via multi-agent reinforcement learning without communication. In RecSys'20 , pages 210-219, 2020."
+        },
+        {
+          "title": "Whole-chain recommendations",
+          "citation": "Xiangyu Zhao, Long Xia, Lixin Zou, Hui Liu, Dawei Yin, and Jiliang Tang. Whole-chain recommendations. In CIKM'20 , pages 1883-1891, 2020."
+        },
+        {
+          "title": "CRSAL: Conversational Recommender Systems with Adversarial Learning",
+          "citation": "Xuhui Ren, Hongzhi Yin, Tong Chen, Hao Wang, Nguyen Quoc Viet Hung, Zi Huang, and Xiangliang Zhang. Crsal: Conversational recommender systems with adversarial learning. ACM Transactions on Information Systems (TOIS) , 38(4):1-40, 2020."
+        },
+        {
+          "title": "Interactive Path Reasoning on Graph for Conversational Recommendation",
+          "citation": "Wenqiang Lei, Gangyi Zhang, Xiangnan He, Yisong Miao, Xiang Wang, Liang Chen, and Tat-Seng Chua. Interactive path reasoning on graph for conversational recommendation. In SIGKDD'20 , pages 2073-2083, 2020."
+        },
+        {
+          "title": "Self-supervised reinforcement learning for recommender systems",
+          "citation": "Xin Xin, Alexandros Karatzoglou, Ioannis Arapakis, and Joemon M Jose. Self-supervised reinforcement learning for recommender systems. In SIGIR'20 , pages 931-940, 2020."
+        },
+        {
+          "title": "Leveraging demonstrations for reinforcement recommendation reasoning over knowledge graphs",
+          "citation": "Kangzhi Zhao, Xiting Wang, Yuren Zhang, Li Zhao, Zheng Liu, Chunxiao Xing, and Xing Xie. Leveraging demonstrations for reinforcement recommendation reasoning over knowledge graphs. In SIGIR'20 , pages 239-248, 2020."
+        },
+        {
+          "title": "Building healthy recommendation sequences for everyone: A safe reinforcement learning approach",
+          "citation": "Ashudeep Singh, Yoni Halpern, Nithum Thain, Konstantina Christakopoulou, EH Chi, Jilin Chen, and Alex Beutel. Building healthy recommendation sequences for everyone: A safe reinforcement learning approach. In FAccTRec Workshop , 2020."
+        },
+        {
+          "title": "End-to-end deep reinforcement learning based recommendation with supervised embedding",
+          "citation": "Feng Liu, Huifeng Guo, Xutao Li, Ruiming Tang, Yunming Ye, and Xiuqiang He. End-to-end deep reinforcement learning based recommendation with supervised embedding. In WSDM'20 , pages 384-392, 2020."
+        },
+        {
+          "title": "Top-aware reinforcement learning based recommendation",
+          "citation": "Feng Liu, Ruiming Tang, Huifeng Guo, Xutao Li, Yunming Ye, and Xiuqiang He. Top-aware reinforcement learning based recommendation. Neurocomputing , 417:255-269, 2020."
+        },
+        {
+          "title": "Deep reinforcement learning framework for category-based item recommendation",
+          "citation": "Mingsheng Fu, Anubha Agrawal, Athirai A Irissappane, Jie Zhang, Liwei Huang, and Hong Qu. Deep reinforcement learning framework for category-based item recommendation. IEEE Transactions on Cybernetics , 2021."
+        },
+        {
+          "title": "Adaptive course recommendation in moocs",
+          "citation": "Yuanguo Lin, Shibo Feng, Fan Lin, Wenhua Zeng, Yong Liu, and Pengcheng Wu. Adaptive course recommendation in moocs. Knowledge-Based Systems , 224:107085, 2021."
+        },
+        {
+          "title": "Intelligent electric vehicle charging recommendation based on multi-agent reinforcement learning",
+          "citation": "Weijia Zhang, Hao Liu, Fan Wang, Tong Xu, Haoran Xin, Dejing Dou, and Hui Xiong. Intelligent electric vehicle charging recommendation based on multi-agent reinforcement learning. In WWW'21 , pages 1856-1867, 2021."
+        },
+        {
+          "title": "Unified conversational recommendation policy learning via graph-based reinforcement learning",
+          "citation": "Yang Deng, Yaliang Li, Fei Sun, Bolin Ding, and Wai Lam. Unified conversational recommendation policy learning via graph-based reinforcement learning. arXiv preprint arXiv:2105.09710 , 2021."
+        },
+        {
+          "title": "Hierarchical reinforcement learning for integrated recommendation",
+          "citation": "Ruobing Xie, Shaoliang Zhang, Rui Wang, Feng Xia, and Leyu Lin. Hierarchical reinforcement learning for integrated recommendation. In AAAI'21 , 2021."
+        },
+        {
+          "title": "Stochastic games",
+          "citation": "Lloyd S Shapley. Stochastic games. PNAS'53 , 39(10):1095-1100, 1953."
+        },
+        {
+          "title": "Multi-agent reinforcement learning: A selective overview of theories and algorithms",
+          "citation": "Kaiqing Zhang, Zhuoran Yang, and Tamer Başar. Multi-agent reinforcement learning: A selective overview of theories and algorithms. Handbook of Reinforcement Learning and Control , pages 321-384, 2021."
+        },
+        {
+          "title": "Subjectivity and correlation in randomized strategies",
+          "citation": "Robert J Aumann. Subjectivity and correlation in randomized strategies. Journal of mathematical Economics , 1(1):67-96, 1974."
+        },
+        {
+          "title": "Recent advances in hierarchical reinforcement learning",
+          "citation": "Andrew G Barto and Sridhar Mahadevan. Recent advances in hierarchical reinforcement learning. Discrete event dynamic systems , 13(1):41-77, 2003."
+        },
+        {
+          "title": "Feudal networks for hierarchical reinforcement learning",
+          "citation": "Alexander Sasha Vezhnevets, Simon Osindero, Tom Schaul, Nicolas Heess, Max Jaderberg, David Silver, and Koray Kavukcuoglu. Feudal networks for hierarchical reinforcement learning. In ICML'17 , pages 3540-3549, 2017."
+        },
+        {
+          "title": "Data-efficient hierarchical reinforcement learning",
+          "citation": "Ofir Nachum, Shixiang Gu, Honglak Lee, and Sergey Levine. Data-efficient hierarchical reinforcement learning. arXiv preprint arXiv:1805.08296 , 2018."
+        },
+        {
+          "title": "Hierarchical deep reinforcement learning: Integrating temporal abstraction and intrinsic motivation",
+          "citation": "Tejas D Kulkarni, Karthik Narasimhan, Ardavan Saeedi, and Josh Tenenbaum. Hierarchical deep reinforcement learning: Integrating temporal abstraction and intrinsic motivation. NIPS'16 , 29:3675-3683, 2016."
+        },
+        {
+          "title": "Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning",
+          "citation": "Richard S Sutton, Doina Precup, and Satinder Singh. Between mdps and semi-mdps: A framework for temporal abstraction in reinforcement learning. Artificial intelligence , 112(1-2):181-211, 1999."
+        },
+        {
+          "title": "Factorization machines",
+          "citation": "Steffen Rendle. Factorization machines. In ICDM'10 , pages 995-1000, 2010."
+        },
+        {
+          "title": "Supervised actor-critic reinforcement learning",
+          "citation": "Michael T Rosenstein, Andrew G Barto, Jennie Si, Andy Barto, Warren Powell, and Donald Wunsch. Supervised actor-critic reinforcement learning. Learning and Approximate Dynamic Programming: Scaling Up to the Real World , pages 359-380, 2004."
+        },
+        {
+          "title": "A comprehensive survey on safe reinforcement learning",
+          "citation": "Javier Garcıa and Fernando Fernández. A comprehensive survey on safe reinforcement learning. Journal of Machine Learning Research , 16(1):14371480, 2015."
+        },
+        {
+          "title": "Imitation learning: A survey of learning methods",
+          "citation": "Ahmed Hussein, Mohamed Medhat Gaber, Eyad Elyan, and Chrisina Jayne. Imitation learning: A survey of learning methods. ACM Computing Surveys (CSUR) , 50(2):1-35, 2017."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "10",
+      "sec_title": "5 OPEN RESEARCH DIRECTIONS",
+      "citations": [
+        {
+          "title": "Deep learning based recommender system: A survey and new perspectives",
+          "citation": "Shuai Zhang, Lina Yao, Aixin Sun, and Yi Tay. Deep learning based recommender system: A survey and new perspectives. ACM Computing Surveys (CSUR) , 52(1):1-38, 2019."
+        },
+        {
+          "title": "Top-k off-policy correction for a reinforce recommender system",
+          "citation": "Minmin Chen, Alex Beutel, Paul Covington, Sagar Jain, Francois Belletti, and Ed H Chi. Top-k off-policy correction for a reinforce recommender system. In WSDM'19 , pages 456-464, 2019."
+        },
+        {
+          "title": "Explainable recommendation: A survey and new perspectives",
+          "citation": "Yongfeng Zhang and Xu Chen. Explainable recommendation: A survey and new perspectives. arXiv preprint arXiv:1804.11192 , 2018."
+        },
+        {
+          "title": "Deep reinforcement learning for search, recommendation, and online advertising: a survey",
+          "citation": "Xiangyu Zhao, Long Xia, Jiliang Tang, and Dawei Yin. Deep reinforcement learning for search, recommendation, and online advertising: a survey. ACM SIGWEB Newsletter , pages 1-15, 2019."
+        },
+        {
+          "title": "Mastering the game of go with deep neural networks and tree search",
+          "citation": "David Silver et al. Mastering the game of go with deep neural networks and tree search. Nature , 529(7587):484-489, 2016."
+        },
+        {
+          "title": "Playing atari with deep reinforcement learning",
+          "citation": "Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, and Martin Riedmiller. Playing atari with deep reinforcement learning. arXiv preprint arXiv:1312.5602 , 2013."
+        },
+        {
+          "title": "Continuous control with deep reinforcement learning",
+          "citation": "Timothy P Lillicrap, Jonathan J Hunt, Alexander Pritzel, Nicolas Heess, Tom Erez, Yuval Tassa, David Silver, and Daan Wierstra. Continuous control with deep reinforcement learning. arXiv preprint arXiv:1509.02971 , 2015."
+        },
+        {
+          "title": "Reinforcement learning for slate-based recommender systems: A tractable decomposition and practical methodology",
+          "citation": "Eugene Ie et al. Reinforcement learning for slate-based recommender systems: A tractable decomposition and practical methodology. arXiv preprint arXiv:1905.12767 , 2019."
+        },
+        {
+          "title": "Deep reinforcement learning with attention for slate markov decision processes with high-dimensional states and actions",
+          "citation": "Peter Sunehag, Richard Evans, Gabriel Dulac-Arnold, Yori Zwols, Daniel Visentin, and Ben Coppin. Deep reinforcement learning with attention for slate markov decision processes with high-dimensional states and actions. arXiv preprint arXiv:1512.01124 , 2015."
+        },
+        {
+          "title": "Reinforcement knowledge graph reasoning for explainable recommendation",
+          "citation": "Yikun Xian, Zuohui Fu, S Muthukrishnan, Gerard De Melo, and Yongfeng Zhang. Reinforcement knowledge graph reasoning for explainable recommendation. In SIGIR'19 , pages 285-294, 2019."
+        },
+        {
+          "title": "Generative adversarial user model for reinforcement learning based recommendation system",
+          "citation": "Xinshi Chen, Shuang Li, Hui Li, Shaohua Jiang, Yuan Qi, and Le Song. Generative adversarial user model for reinforcement learning based recommendation system. In ICML'19 , pages 1052-1061, 2019."
+        },
+        {
+          "title": "Explainable knowledge graph-based recommendation via deep reinforcement learning",
+          "citation": "Weiping Song, Zhijian Duan, Ziqing Yang, Hao Zhu, Ming Zhang, and Jian Tang. Explainable knowledge graph-based recommendation via deep reinforcement learning. arXiv preprint arXiv:1906.09506 , 2019."
+        },
+        {
+          "title": "Leveraging demonstrations for reinforcement recommendation reasoning over knowledge graphs",
+          "citation": "Kangzhi Zhao, Xiting Wang, Yuren Zhang, Li Zhao, Zheng Liu, Chunxiao Xing, and Xing Xie. Leveraging demonstrations for reinforcement recommendation reasoning over knowledge graphs. In SIGIR'20 , pages 239-248, 2020."
+        },
+        {
+          "title": "Multi-modal knowledge-aware reinforcement learning network for explainable recommendation",
+          "citation": "Shaohua Tao, Runhe Qiu, Yuan Ping, and Hui Ma. Multi-modal knowledge-aware reinforcement learning network for explainable recommendation. Knowledge-Based Systems , page 107217, 2021."
+        },
+        {
+          "title": "Reinforced anchor knowledge graph generation for news recommendation reasoning",
+          "citation": "Danyang Liu, Jianxun Lian, Zheng Liu, Xiting Wang, Guangzhong Sun, and Xing Xie. Reinforced anchor knowledge graph generation for news recommendation reasoning. In SIGKDD'21 , pages 1055-1065, 2021."
+        },
+        {
+          "title": "Non-deterministic policies in markovian decision processes",
+          "citation": "MMilani Fard and Joelle Pineau. Non-deterministic policies in markovian decision processes. Journal of Artificial Intelligence Research , 40:1-24, 2011."
+        },
+        {
+          "title": "Is seeing believing? how recommender system interfaces affect users' opinions",
+          "citation": "Dan Cosley, Shyong K Lam, Istvan Albert, Joseph A Konstan, and John Riedl. Is seeing believing? how recommender system interfaces affect users' opinions. In SIGCHI'03 , pages 585-592, 2003."
+        },
+        {
+          "title": "Trust building in recommender agents",
+          "citation": "Li Chen and Pearl Pu. Trust building in recommender agents. In ICETE'05 , pages 135-145, 2005."
+        },
+        {
+          "title": "Effective explanations of recommendations: user-centered design",
+          "citation": "Nava Tintarev and Judith Masthoff. Effective explanations of recommendations: user-centered design. In RecSys'07 , pages 153-156, 2007."
+        },
+        {
+          "title": "The mythos of model interpretability",
+          "citation": "Zachary C Lipton. The mythos of model interpretability. Queue , 16(3):31-57, 2018."
+        },
+        {
+          "title": "A reinforcement learning framework for explainable recommendation",
+          "citation": "Xiting Wang, Yiru Chen, Jie Yang, Le Wu, Zhengtao Wu, and Xing Xie. A reinforcement learning framework for explainable recommendation. In ICDM'18 , pages 587-596, 2018."
+        },
+        {
+          "title": "Value-aware recommendation based on reinforcement profit maximization",
+          "citation": "Changhua Pei, Xinru Yang, Qing Cui, Xiao Lin, Fei Sun, Peng Jiang, Wenwu Ou, and Yongfeng Zhang. Value-aware recommendation based on reinforcement profit maximization. In WWW'19 , pages 3123-3129, 2019."
+        },
+        {
+          "title": "Evolution strategies as a scalable alternative to reinforcement learning",
+          "citation": "Tim Salimans, Jonathan Ho, Xi Chen, Szymon Sidor, and Ilya Sutskever. Evolution strategies as a scalable alternative to reinforcement learning. arXiv preprint arXiv:1703.03864 , 2017."
+        },
+        {
+          "title": "A load balanced recommendation approach",
+          "citation": "Mehdi Afsar, Trafford Crump, and Behrouz Far. A load balanced recommendation approach. arXiv preprint arXiv:2105.09981 , 2021."
+        },
+        {
+          "title": "OpenAI Gym",
+          "citation": "Greg Brockman, Vicki Cheung, Ludwig Pettersson, Jonas Schneider, John Schulman, Jie Tang, and Wojciech Zaremba. Openai gym. arXiv preprint arXiv:1606.01540 , 2016."
+        },
+        {
+          "title": "Horizon: Facebook's open source applied reinforcement learning platform",
+          "citation": "Jason Gauci, Edoardo Conti, Yitao Liang, Kittipat Virochsiri, Yuchen He, Zachary Kaden, Vivek Narayanan, Xiaohui Ye, Zhengxing Chen, and Scott Fujimoto. Horizon: Facebook's open source applied reinforcement learning platform. arXiv preprint arXiv:1811.00260 , 2018."
+        },
+        {
+          "title": "Recogym: A reinforcement learning environment for the problem of product recommendation in online advertising",
+          "citation": "David Rohde, Stephen Bonner, Travis Dunlop, Flavian Vasile, and Alexandros Karatzoglou. Recogym: A reinforcement learning environment for the problem of product recommendation in online advertising. arXiv preprint arXiv:1808.00720 , 2018."
+        },
+        {
+          "title": "Toward simulating environments in reinforcement learning based recommendations",
+          "citation": "Xiangyu Zhao, Long Xia, Zhuoye Ding, Dawei Yin, and Jiliang Tang. Toward simulating environments in reinforcement learning based recommendations. arXiv preprint arXiv:1906.11462 , 2019."
+        },
+        {
+          "title": "PyRecGym: A Reinforcement Learning Gym for Recommender Systems",
+          "citation": "Bichen Shi, Makbule Gulcin Ozsoy, Neil Hurley, Barry Smyth, Elias Z Tragos, James Geraci, and Aonghus Lawlor. Pyrecgym: a reinforcement learning gym for recommender systems. In RecSys'19 , pages 491-495, 2019."
+        },
+        {
+          "title": "Keeping dataset biases out of the simulation: A debiased simulator for reinforcement learning based recommender systems",
+          "citation": "Jin Huang, Harrie Oosterhuis, Maarten de Rijke, and Herke van Hoof. Keeping dataset biases out of the simulation: A debiased simulator for reinforcement learning based recommender systems. In RecSys'20 , pages 190-199, 2020."
+        },
+        {
+          "title": "Progressive growing of gans for improved quality, stability, and variation",
+          "citation": "Tero Karras, Timo Aila, Samuli Laine, and Jaakko Lehtinen. Progressive growing of gans for improved quality, stability, and variation. arXiv preprint arXiv:1710.10196 , 2017."
+        },
+        {
+          "title": "A style-based generator architecture for generative adversarial networks",
+          "citation": "Tero Karras, Samuli Laine, and Timo Aila. A style-based generator architecture for generative adversarial networks. In CVPR'19 , pages 4401-4410, 2019."
+        },
+        {
+          "title": "MSG-GAN: Multi-scale gradients for generative adversarial networks",
+          "citation": "Animesh Karnewar and Oliver Wang. Msg-gan: Multi-scale gradients for generative adversarial networks. In CVPR'20 , pages 7799-7808, 2020."
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

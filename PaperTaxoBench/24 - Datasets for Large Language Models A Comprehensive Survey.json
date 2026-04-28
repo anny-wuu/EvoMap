@@ -1,0 +1,3032 @@
+{
+  "track": "LLM Training",
+  "paper_title": "Datasets for Large Language Models: A Comprehensive Survey",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "Introduction",
+      "citations": [
+        {
+          "title": "Introducing ChatGPT",
+          "citation": "OpenAI (2022) Introducing ChatGPT. https://openai.com/blog/chatgpt/"
+        },
+        {
+          "title": "Textbooks Are All You Need",
+          "citation": "Gunasekar et al (2023) Textbooks Are All You Need"
+        },
+        {
+          "title": "Textbooks Are All You Need II: phi-1.5 technical report",
+          "citation": "Li et al (2023k) Textbooks Are All You Need II: phi-1.5 technical report"
+        },
+        {
+          "title": "Phi-2: The surprising power of small language models",
+          "citation": "Javaheripi et al (2023) Phi-2: The surprising power of small language models"
+        },
+        {
+          "title": "GLM-130B: An Open Bilingual Pre-trained Model",
+          "citation": "Du et al (2022) GLM-130B: An Open Bilingual Pre-trained Model"
+        },
+        {
+          "title": "GLM-130B: An Open Bilingual Pre-trained Model",
+          "citation": "Zeng et al (2023a) GLM-130B: An Open Bilingual Pre-trained Model"
+        },
+        {
+          "title": "Qwen Technical Report",
+          "citation": "Bai et al (2023a) Qwen Technical Report"
+        },
+        {
+          "title": "Baichuan 2: Open large-scale language models",
+          "citation": "Yang et al (2023a) Baichuan 2: Open large-scale language models"
+        },
+        {
+          "title": "Message Understanding Conference-6: A brief history",
+          "citation": "Grishman and Sundheim (1996) Message Understanding Conference-6: A brief history"
+        },
+        {
+          "title": "Reinforcement learning for spoken dialogue systems",
+          "citation": "Paek (2006) Reinforcement learning for spoken dialogue systems"
+        },
+        {
+          "title": "Building task-oriented dialogue systems for online shopping",
+          "citation": "Yan et al (2017) Building task-oriented dialogue systems for online shopping"
+        },
+        {
+          "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+          "citation": "Devlin et al (2019) BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+        },
+        {
+          "title": "CLUE: A Chinese language understanding evaluation benchmark",
+          "citation": "Zhang et al (2020b) CLUE: A Chinese language understanding evaluation benchmark"
+        },
+        {
+          "title": "Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models",
+          "citation": "Srivastava et al (2023) Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models"
+        },
+        {
+          "title": "Holistic evaluation of language models",
+          "citation": "Liang et al (2023) Holistic evaluation of language models"
+        },
+        {
+          "title": "CLEVA: Chinese language models evaluation platform",
+          "citation": "Li et al (2023n) CLEVA: Chinese language models evaluation platform"
+        },
+        {
+          "title": "MedDialog: Large-scale medical dialogue datasets",
+          "citation": "Zeng et al (2020) MedDialog: Large-scale medical dialogue datasets"
+        },
+        {
+          "title": "RedGPT: Reference-enlightened-dialogue by GPT and for GPT",
+          "citation": "Yang et al (2023b) RedGPT: Reference-enlightened-dialogue by GPT and for GPT"
+        },
+        {
+          "title": "Enhancing chat language models by scaling high-quality instructional conversations",
+          "citation": "Ding et al (2023) Enhancing chat language models by scaling high-quality instructional conversations"
+        },
+        {
+          "title": "Measuring massive multitask language understanding",
+          "citation": "Hendrycks et al (2021b) Measuring massive multitask language understanding"
+        },
+        {
+          "title": "FewCLUE: A Chinese few-shot learning evaluation benchmark",
+          "citation": "Xu et al (2021) FewCLUE: A Chinese few-shot learning evaluation benchmark"
+        },
+        {
+          "title": "The FLAN collection: Designing data and methods for effective instruction tuning",
+          "citation": "Longpre et al (2023a) The FLAN collection: Designing data and methods for effective instruction tuning"
+        },
+        {
+          "title": "XNLI: Evaluating cross-lingual sentence representations",
+          "citation": "Conneau et al (2018) XNLI: Evaluating cross-lingual sentence representations"
+        },
+        {
+          "title": "XTREME: A massively multilingual multi-task benchmark",
+          "citation": "Siddhant et al (2020) XTREME: A massively multilingual multi-task benchmark"
+        },
+        {
+          "title": "CONDAQA: A contrastive reading comprehension dataset for reasoning about negation",
+          "citation": "Costa-juss` a et al (2022) CONDAQA: A contrastive reading comprehension dataset for reasoning about negation"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "Pre-training Corpora",
+      "citations": [
+        {
+          "title": "A pretrainer guide to training data: Measuring the effects of data age",
+          "citation": "Longpre et al (2023c) A pretrainer guide to training data: Measuring the effects of data age"
+        },
+        {
+          "title": "The Pile: An 800GB dataset of diverse text for language modeling",
+          "citation": "Gao et al (2020) The Pile: An 800GB dataset of diverse text for language modeling"
+        },
+        {
+          "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+          "citation": "Raffel et al (2020) Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "General Pre-training Corpora",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "2.1.1",
+              "sec_title": "Webpages",
+              "citations": [
+                {
+                  "title": "The RefinedWeb Dataset for Falcon LLM",
+                  "citation": "Penedo et al (2023) The RefinedWeb Dataset for Falcon LLM"
+                },
+                {
+                  "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+                  "citation": "Raffel et al (2020) Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+                },
+                {
+                  "title": "MT5: A massively multilingual pre-trained text-to-text Transformer",
+                  "citation": "Xue et al (2021) MT5: A massively multilingual pre-trained text-to-text Transformer"
+                },
+                {
+                  "title": "Unsupervised Cross-lingual Representation Learning at Scale",
+                  "citation": "Conneau et al (2020) Unsupervised Cross-lingual Representation Learning at Scale"
+                },
+                {
+                  "title": "Towards a cleaner document-oriented multilingual crawled corpus",
+                  "citation": "Abadji et al (2022) Towards a cleaner document-oriented multilingual crawled corpus"
+                },
+                {
+                  "title": "RedPajama-Data-v2: An open dataset with 30 trillion tokens for training large language models. https://www.together.ai/blog/redpajama-data-v2",
+                  "citation": "Together (2023) RedPajama-Data-v2: An open dataset with 30 trillion tokens for training large language models. https://www.together.ai/blog/redpajama-data-v2"
+                },
+                {
+                  "title": "A simple method for commonsense reasoning",
+                  "citation": "Trinh and Le (2018) A simple method for commonsense reasoning"
+                },
+                {
+                  "title": "The winograd schema challenge",
+                  "citation": "Levesque et al (2012) The winograd schema challenge"
+                },
+                {
+                  "title": "HellaSwag: Can a machine really finish your sentence?",
+                  "citation": "Zellers et al (2019b) HellaSwag: Can a machine really finish your sentence?"
+                },
+                {
+                  "title": "CLUECorpus2020: A large-scale Chinese corpus for pre-training",
+                  "citation": "Xu et al (2020c) CLUECorpus2020: A large-scale Chinese corpus for pre-training"
+                },
+                {
+                  "title": "CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages",
+                  "citation": "Nguyen et al (2023) CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages"
+                },
+                {
+                  "title": "WuDaoCorpora: A super large-scale Chinese corpora",
+                  "citation": "Yuan et al (2021) WuDaoCorpora: A super large-scale Chinese corpora"
+                },
+                {
+                  "title": "MNBVC: Massive never-ending BT vast Chinese corpus. https://github.com/esbatmop/MNBVC",
+                  "citation": "MOP-LIWU Community and MNBVC Team (2023) MNBVC: Massive never-ending BT vast Chinese corpus. https://github.com/esbatmop/MNBVC"
+                },
+                {
+                  "title": "WanJuan: A Comprehensive Multimodal Dataset",
+                  "citation": "He et al (2023a) WanJuan: A Comprehensive Multimodal Dataset"
+                },
+                {
+                  "title": "TigerBot: An open multilingual multitask LLM",
+                  "citation": "Chen et al (2023c) TigerBot: An open multilingual multitask LLM"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.2",
+              "sec_title": "Languages Texts",
+              "citations": [
+                {
+                  "title": "FinGLM: A Chinese financial LLM benchmark",
+                  "citation": "MetaGLM (2023) FinGLM: A Chinese financial LLM benchmark"
+                },
+                {
+                  "title": "TigerBot: An open multilingual multitask LLM",
+                  "citation": "Chen et al (2023c) TigerBot: An open multilingual multitask LLM"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.3",
+              "sec_title": "Books",
+              "citations": [
+                {
+                  "title": "The BookCorpus: A large-scale corpus of books",
+                  "citation": "Zhu et al (2015) The BookCorpus: A large-scale corpus of books"
+                },
+                {
+                  "title": "Compressive Transformers for long-range sequence modelling",
+                  "citation": "Rae et al (2020) Compressive Transformers for long-range sequence modelling"
+                },
+                {
+                  "title": "Addressing documentation debt in machine learning: A retrospective datasheet for bookcorpus",
+                  "citation": "Bandy and Vincent (2021) Addressing documentation debt in machine learning: A retrospective datasheet for bookcorpus"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.4",
+              "sec_title": "Academic Materials",
+              "citations": [
+                {
+                  "title": "S2ORC: The semantic scholar open research corpus",
+                  "citation": "Lo et al (2020) S2ORC: The semantic scholar open research corpus"
+                },
+                {
+                  "title": "The Pile: An 800GB dataset of diverse text for language modeling",
+                  "citation": "Gao et al (2020) The Pile: An 800GB dataset of diverse text for language modeling"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.5",
+              "sec_title": "Code",
+              "citations": [
+                {
+                  "title": "Measuring Coding Challenge Competence With APPS",
+                  "citation": "Hendrycks et al (2021a) Measuring Coding Challenge Competence With APPS"
+                },
+                {
+                  "title": "DS-1000: A natural and reliable benchmark for data science code generation",
+                  "citation": "Lai et al (2023) DS-1000: A natural and reliable benchmark for data science code generation"
+                },
+                {
+                  "title": "Evaluating large language models trained on code",
+                  "citation": "Chen et al (2021) Evaluating large language models trained on code"
+                },
+                {
+                  "title": "CodeGen: An open large language model for code with multi-turn program synthesis",
+                  "citation": "Nijkamp et al (2023) CodeGen: An open large language model for code with multi-turn program synthesis"
+                },
+                {
+                  "title": "Execution-based evaluation for open-domain code generation",
+                  "citation": "Wang et al (2023h) Execution-based evaluation for open-domain code generation"
+                },
+                {
+                  "title": "Can LLM already serve as a database interface",
+                  "citation": "Li et al (2023f) Can LLM already serve as a database interface"
+                },
+                {
+                  "title": "Spider: A large-scale human-labeled dataset for complex semantic parsing",
+                  "citation": "Yu et al (2018) Spider: A large-scale human-labeled dataset for complex semantic parsing"
+                },
+                {
+                  "title": "CodeXGLUE: A machine learning benchmark dataset for code understanding and generation",
+                  "citation": "Lu et al (2021) CodeXGLUE: A machine learning benchmark dataset for code understanding and generation"
+                },
+                {
+                  "title": "OctoPack: Instruction tuning code large language models",
+                  "citation": "Muennighoff et al (2023a) OctoPack: Instruction tuning code large language models"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.6",
+              "sec_title": "Parallel Corpus",
+              "citations": [
+                {
+                  "title": "ParaCrawl: Web-scale acquisition of parallel corpora",
+                  "citation": "Ba˜ n´ on et al (2020) ParaCrawl: Web-scale acquisition of parallel corpora"
+                },
+                {
+                  "title": "MultiUN: A multilingual corpus from United Nation documents",
+                  "citation": "Eisele and Chen (2010) MultiUN: A multilingual corpus from United Nation documents"
+                },
+                {
+                  "title": "The United Nations parallel corpus v1.0",
+                  "citation": "Ziemski et al (2016) The United Nations parallel corpus v1.0"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.7",
+              "sec_title": "Social Media",
+              "citations": [
+                {
+                  "title": "Language models are unsupervised multitask learners",
+                  "citation": "Radford et al (2019) Language models are unsupervised multitask learners"
+                },
+                {
+                  "title": "OpenWebText corpus. http://Skylion007.github.io/ OpenWebTextCorpus",
+                  "citation": "Gokaslan and Cohen (2019) OpenWebText corpus. http://Skylion007.github.io/ OpenWebTextCorpus"
+                },
+                {
+                  "title": "The Pushshift reddit dataset",
+                  "citation": "Baumgartner et al (2020) The Pushshift reddit dataset"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.8",
+              "sec_title": "Encyclopedia",
+              "citations": [
+                {
+                  "title": "TigerBot: An open multilingual multitask LLM",
+                  "citation": "Chen et al (2023c) TigerBot: An open multilingual multitask LLM"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.1.9",
+              "sec_title": "Multi-category Corpora",
+              "citations": [
+                {
+                  "title": "The Pile: An 800GB dataset of diverse text for language modeling",
+                  "citation": "Gao et al (2020) The Pile: An 800GB dataset of diverse text for language modeling"
+                },
+                {
+                  "title": "TigerBot: An open multilingual multitask LLM",
+                  "citation": "Chen et al (2023c) TigerBot: An open multilingual multitask LLM"
+                },
+                {
+                  "title": "Dolma: An open corpus of three trillion tokens for language model pretraining research",
+                  "citation": "Soldaini et al (2024) Dolma: An open corpus of three trillion tokens for language model pretraining research"
+                },
+                {
+                  "title": "LLaMA: Open and efficient foundation language models",
+                  "citation": "Touvron et al (2023a) LLaMA: Open and efficient foundation language models"
+                },
+                {
+                  "title": "MNBVC: Massive never-ending BT vast Chinese corpus. https://github.com/esbatmop/MNBVC",
+                  "citation": "MOP-LIWU Community and MNBVC Team (2023) MNBVC: Massive never-ending BT vast Chinese corpus. https://github.com/esbatmop/MNBVC"
+                },
+                {
+                  "title": "TigerBot: An open multilingual multitask LLM",
+                  "citation": "Chen et al (2023c) TigerBot: An open multilingual multitask LLM"
+                },
+                {
+                  "title": "WanJuan: A Comprehensive Multimodal Dataset",
+                  "citation": "He et al (2023a) WanJuan: A Comprehensive Multimodal Dataset"
+                },
+                {
+                  "title": "The BigScience ROOTS corpus: A 1.6TB composite multilingual dataset",
+                  "citation": "Lauracon et al (2022) The BigScience ROOTS corpus: A 1.6TB composite multilingual dataset"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Domain-specific Pre-training Corpora",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "2.2.1",
+              "sec_title": "Financial Domain",
+              "citations": [
+                {
+                  "title": "BBT-Fin: Comprehensive construction of Chinese financial domain pre-trained language model",
+                  "citation": "Lu et al (2023a) BBT-Fin: Comprehensive construction of Chinese financial domain pre-trained language model"
+                },
+                {
+                  "title": "BBT-Fin: Comprehensive construction of Chinese financial domain pre-trained language model",
+                  "citation": "Lu et al (2023a) BBT-Fin: Comprehensive construction of Chinese financial domain pre-trained language model"
+                },
+                {
+                  "title": "Chinese open instruction generalist: A preliminary release",
+                  "citation": "Zhang and Yang (2023) Chinese open instruction generalist: A preliminary release"
+                },
+                {
+                  "title": "Chinese open instruction generalist: A preliminary release",
+                  "citation": "Zhang and Yang (2023) Chinese open instruction generalist: A preliminary release"
+                },
+                {
+                  "title": "FinGLM: A Chinese financial LLM benchmark",
+                  "citation": "MetaGLM (2023) FinGLM: A Chinese financial LLM benchmark"
+                },
+                {
+                  "title": "TigerBot: An open multilingual multitask LLM",
+                  "citation": "Chen et al (2023c) TigerBot: An open multilingual multitask LLM"
+                },
+                {
+                  "title": "TigerBot: An open multilingual multitask LLM",
+                  "citation": "Chen et al (2023c) TigerBot: An open multilingual multitask LLM"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.2",
+              "sec_title": "Medical Domain",
+              "citations": [
+                {
+                  "title": "Zhongjing: Enhancing the Chinese medical capabilities of large language model",
+                  "citation": "Yang et al (2023d) Zhongjing: Enhancing the Chinese medical capabilities of large language model"
+                },
+                {
+                  "title": "MedDialog: Large-scale medical dialogue datasets",
+                  "citation": "Zeng et al (2020) MedDialog: Large-scale medical dialogue datasets"
+                },
+                {
+                  "title": "ShenNong-TCM: A traditional Chinese medicine large language model",
+                  "citation": "Zhu and Wang (2023) ShenNong-TCM: A traditional Chinese medicine large language model"
+                },
+                {
+                  "title": "ShenNong-TCM: A traditional Chinese medicine large language model",
+                  "citation": "Wei Zhu and Wang (2023) ShenNong-TCM: A traditional Chinese medicine large language model"
+                },
+                {
+                  "title": "Huatuo-26M, a large-scale Chinese medical QA dataset",
+                  "citation": "Li et al (2023h) Huatuo-26M, a large-scale Chinese medical QA dataset"
+                },
+                {
+                  "title": "ChatDoctor: A medical chat model fine-tuned on LLaMA",
+                  "citation": "Li et al (2023l) ChatDoctor: A medical chat model fine-tuned on LLaMA"
+                },
+                {
+                  "title": "HuatuoGPT, towards taming language model to be a doctor",
+                  "citation": "Zhang et al (2023b) HuatuoGPT, towards taming language model to be a doctor"
+                },
+                {
+                  "title": "DISC-MedLLM: Bridging general large language models and real-world medical consultation",
+                  "citation": "Bao et al (2023) DISC-MedLLM: Bridging general large language models and real-world medical consultation"
+                },
+                {
+                  "title": "MedAlpaca-An open-source collection of medical conversational AI models and training data",
+                  "citation": "Han et al (2023) MedAlpaca-An open-source collection of medical conversational AI models and training data"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.3",
+              "sec_title": "Other Domains",
+              "citations": [
+                {
+                  "title": "DISC-FinLLM: A Chinese financial large language model based on multiple experts fine-tuning",
+                  "citation": "Chen et al (2023a) DISC-FinLLM: A Chinese financial large language model based on multiple experts fine-tuning"
+                },
+                {
+                  "title": "LoRA: Low-rank adaptation of large language models",
+                  "citation": "Hu et al (2022a) LoRA: Low-rank adaptation of large language models"
+                },
+                {
+                  "title": "DISC-FinLLM: A Chinese financial large language model based on multiple experts fine-tuning",
+                  "citation": "Chen et al (2023a) DISC-FinLLM: A Chinese financial large language model based on multiple experts fine-tuning"
+                },
+                {
+                  "title": "K2: A foundation language model for geoscience knowledge understanding and utilization",
+                  "citation": "Deng et al (2023) K2: A foundation language model for geoscience knowledge understanding and utilization"
+                },
+                {
+                  "title": "K2: A foundation language model for geoscience knowledge understanding and utilization",
+                  "citation": "Deng et al (2023) K2: A foundation language model for geoscience knowledge understanding and utilization"
+                },
+                {
+                  "title": "SMILE: Single-turn to multi-turn inclusive language expansion via ChatGPT for mental health support",
+                  "citation": "Qiu et al (2023) SMILE: Single-turn to multi-turn inclusive language expansion via ChatGPT for mental health support"
+                },
+                {
+                  "title": "Mol-Instructions: A large-scale biomolecular instruction dataset for large language models",
+                  "citation": "Fang et al (2023) Mol-Instructions: A large-scale biomolecular instruction dataset for large language models"
+                },
+                {
+                  "title": "OWL: A large language model for IT operations",
+                  "citation": "Guo et al (2023b) OWL: A large language model for IT operations"
+                },
+                {
+                  "title": "OWL: A large language model for IT operations",
+                  "citation": "Guo et al (2023b) OWL: A large language model for IT operations"
+                },
+                {
+                  "title": "ProsocialDialog: A prosocial backbone for conversational agents",
+                  "citation": "Kim et al (2022) ProsocialDialog: A prosocial backbone for conversational agents"
+                },
+                {
+                  "title": "TransGPT. https://github.com/DUOMO/TransGPT",
+                  "citation": "Duomo (2023) TransGPT. https://github.com/DUOMO/TransGPT"
+                },
+                {
+                  "title": "TransGPT. https://github.com/DUOMO/TransGPT",
+                  "citation": "Duomo (2023) TransGPT. https://github.com/DUOMO/TransGPT"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.3",
+          "sec_title": "Distribution Statistics of Pre-training Corpora",
+          "citations": [
+            {
+              "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+              "citation": "Devlin et al (2019) BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+            },
+            {
+              "title": "Language models are unsupervised multitask learners",
+              "citation": "Radford et al (2019) Language models are unsupervised multitask learners"
+            },
+            {
+              "title": "Language models are few-shot learners",
+              "citation": "Brown et al (2020) Language models are few-shot learners"
+            },
+            {
+              "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+              "citation": "Raffel et al (2020) Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+            },
+            {
+              "title": "Textbooks Are All You Need",
+              "citation": "Gunasekar et al (2023) Textbooks Are All You Need"
+            },
+            {
+              "title": "A survey of large language models",
+              "citation": "Zhao et al (2023) A survey of large language models"
+            },
+            {
+              "title": "Galactica: A large language model for science",
+              "citation": "Taylor et al (2022) Galactica: A large language model for science"
+            },
+            {
+              "title": "Scaling language models: Methods, analysis &amp; insights from training gopher",
+              "citation": "Rae et al (2021) Scaling language models: Methods, analysis &amp; insights from training gopher"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.4",
+          "sec_title": "Preprocessing of Pre-training Data",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "2.4.1",
+              "sec_title": "Data Collection",
+              "citations": [
+                {
+                  "title": "CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages",
+                  "citation": "Nguyen et al (2023) CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages"
+                },
+                {
+                  "title": "The RefinedWeb Dataset for Falcon LLM",
+                  "citation": "Penedo et al (2023) The RefinedWeb Dataset for Falcon LLM"
+                },
+                {
+                  "title": "ParaCrawl: Web-scale acquisition of parallel corpora",
+                  "citation": "Ba˜ n´ on et al (2020) ParaCrawl: Web-scale acquisition of parallel corpora"
+                },
+                {
+                  "title": "S2ORC: The semantic scholar open research corpus",
+                  "citation": "Lo et al (2020) S2ORC: The semantic scholar open research corpus"
+                },
+                {
+                  "title": "MNBVC: Massive never-ending BT vast Chinese corpus. https://github.com/esbatmop/MNBVC",
+                  "citation": "MOP-LIWU Community and MNBVC Team (2023) MNBVC: Massive never-ending BT vast Chinese corpus. https://github.com/esbatmop/MNBVC"
+                },
+                {
+                  "title": "WanJuan: A Comprehensive Multimodal Dataset",
+                  "citation": "He et al (2023a) WanJuan: A Comprehensive Multimodal Dataset"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.4.2",
+              "sec_title": "Data Filtering",
+              "citations": [
+                {
+                  "title": "WanJuan: A Comprehensive Multimodal Dataset",
+                  "citation": "He et al (2023a) WanJuan: A Comprehensive Multimodal Dataset"
+                },
+                {
+                  "title": "The RefinedWeb Dataset for Falcon LLM",
+                  "citation": "Penedo et al (2023) The RefinedWeb Dataset for Falcon LLM"
+                },
+                {
+                  "title": "The Pile: An 800GB dataset of diverse text for language modeling",
+                  "citation": "Gao et al (2020) The Pile: An 800GB dataset of diverse text for language modeling"
+                },
+                {
+                  "title": "WuDaoCorpora: A super large-scale Chinese corpora",
+                  "citation": "Yuan et al (2021) WuDaoCorpora: A super large-scale Chinese corpora"
+                },
+                {
+                  "title": "CLUECorpus2020: A large-scale Chinese corpus for pre-training",
+                  "citation": "Xu et al (2020c) CLUECorpus2020: A large-scale Chinese corpus for pre-training"
+                },
+                {
+                  "title": "The RefinedWeb Dataset for Falcon LLM",
+                  "citation": "Penedo et al (2023) The RefinedWeb Dataset for Falcon LLM"
+                },
+                {
+                  "title": "TigerBot: An open multilingual multitask LLM",
+                  "citation": "Chen et al (2023c) TigerBot: An open multilingual multitask LLM"
+                },
+                {
+                  "title": "WuDaoCorpora: A super large-scale Chinese corpora",
+                  "citation": "Yuan et al (2021) WuDaoCorpora: A super large-scale Chinese corpora"
+                },
+                {
+                  "title": "The BigScience ROOTS corpus: A 1.6TB composite multilingual dataset",
+                  "citation": "Lauren¸ con et al (2022) The BigScience ROOTS corpus: A 1.6TB composite multilingual dataset"
+                },
+                {
+                  "title": "WanJuan: A Comprehensive Multimodal Dataset",
+                  "citation": "He et al (2023a) WanJuan: A Comprehensive Multimodal Dataset"
+                },
+                {
+                  "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+                  "citation": "Raffel et al (2020) Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+                },
+                {
+                  "title": "MT5: A massively multilingual pre-trained text-to-text Transformer",
+                  "citation": "Xue et al (2021) MT5: A massively multilingual pre-trained text-to-text Transformer"
+                },
+                {
+                  "title": "WuDaoCorpora: A super large-scale Chinese corpora",
+                  "citation": "Yuan et al (2021) WuDaoCorpora: A super large-scale Chinese corpora"
+                },
+                {
+                  "title": "The BigScience ROOTS corpus: A 1.6TB composite multilingual dataset",
+                  "citation": "Lauren¸ con et al (2022) The BigScience ROOTS corpus: A 1.6TB composite multilingual dataset"
+                },
+                {
+                  "title": "CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages",
+                  "citation": "Nguyen et al (2023) CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages"
+                },
+                {
+                  "title": "The BookCorpus: A large-scale corpus of books",
+                  "citation": "Zhu et al (2015) The BookCorpus: A large-scale corpus of books"
+                },
+                {
+                  "title": "WanJuan: A Comprehensive Multimodal Dataset",
+                  "citation": "He et al (2023a) WanJuan: A Comprehensive Multimodal Dataset"
+                },
+                {
+                  "title": "The BigScience ROOTS corpus: A 1.6TB composite multilingual dataset",
+                  "citation": "Lauren¸ con et al (2022) The BigScience ROOTS corpus: A 1.6TB composite multilingual dataset"
+                },
+                {
+                  "title": "CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages",
+                  "citation": "Nguyen et al (2023) CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages"
+                },
+                {
+                  "title": "WanJuan: A Comprehensive Multimodal Dataset",
+                  "citation": "He et al (2023a) WanJuan: A Comprehensive Multimodal Dataset"
+                },
+                {
+                  "title": "CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages",
+                  "citation": "Nguyen et al (2023) CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages"
+                },
+                {
+                  "title": "CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages",
+                  "citation": "Nguyen et al (2023) CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages"
+                },
+                {
+                  "title": "S2ORC: The semantic scholar open research corpus",
+                  "citation": "Lo et al (2020) S2ORC: The semantic scholar open research corpus"
+                },
+                {
+                  "title": "WuDaoCorpora: A super large-scale Chinese corpora",
+                  "citation": "Yuan et al (2021) WuDaoCorpora: A super large-scale Chinese corpora"
+                },
+                {
+                  "title": "WuDaoCorpora: A super large-scale Chinese corpora",
+                  "citation": "Yuan et al (2021) WuDaoCorpora: A super large-scale Chinese corpora"
+                },
+                {
+                  "title": "CLUECorpus2020: A large-scale Chinese corpus for pre-training",
+                  "citation": "Xu et al (2020c) CLUECorpus2020: A large-scale Chinese corpus for pre-training"
+                },
+                {
+                  "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+                  "citation": "Raffel et al (2020) Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+                },
+                {
+                  "title": "WuDaoCorpora: A super large-scale Chinese corpora",
+                  "citation": "Yuan et al (2021) WuDaoCorpora: A super large-scale Chinese corpora"
+                },
+                {
+                  "title": "CLUECorpus2020: A large-scale Chinese corpus for pre-training",
+                  "citation": "Xu et al (2020c) CLUECorpus2020: A large-scale Chinese corpus for pre-training"
+                },
+                {
+                  "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+                  "citation": "Raffel et al (2020) Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+                },
+                {
+                  "title": "MT5: A massively multilingual pre-trained text-to-text Transformer",
+                  "citation": "Xue et al (2021) MT5: A massively multilingual pre-trained text-to-text Transformer"
+                },
+                {
+                  "title": "WuDaoCorpora: A super large-scale Chinese corpora",
+                  "citation": "Yuan et al (2021) WuDaoCorpora: A super large-scale Chinese corpora"
+                },
+                {
+                  "title": "CLUECorpus2020: A large-scale Chinese corpus for pre-training",
+                  "citation": "Xu et al (2020c) CLUECorpus2020: A large-scale Chinese corpus for pre-training"
+                },
+                {
+                  "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+                  "citation": "Raffel et al (2020) Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+                },
+                {
+                  "title": "CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages",
+                  "citation": "Nguyen et al (2023) CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages"
+                },
+                {
+                  "title": "WanJuan: A Comprehensive Multimodal Dataset",
+                  "citation": "He et al (2023a) WanJuan: A Comprehensive Multimodal Dataset"
+                },
+                {
+                  "title": "WuDaoCorpora: A super large-scale Chinese corpora",
+                  "citation": "Yuan et al (2021) WuDaoCorpora: A super large-scale Chinese corpora"
+                },
+                {
+                  "title": "Towards a cleaner document-oriented multilingual crawled corpus",
+                  "citation": "Abadji et al (2022) Towards a cleaner document-oriented multilingual crawled corpus"
+                },
+                {
+                  "title": "CLUECorpus2020: A large-scale Chinese corpus for pre-training",
+                  "citation": "Xu et al (2020c) CLUECorpus2020: A large-scale Chinese corpus for pre-training"
+                },
+                {
+                  "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+                  "citation": "Raffel et al (2020) Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+                },
+                {
+                  "title": "The RefinedWeb Dataset for Falcon LLM",
+                  "citation": "Penedo et al (2023) The RefinedWeb Dataset for Falcon LLM"
+                },
+                {
+                  "title": "CLUECorpus2020: A large-scale Chinese corpus for pre-training",
+                  "citation": "Xu et al (2020c) CLUECorpus2020: A large-scale Chinese corpus for pre-training"
+                },
+                {
+                  "title": "Towards a cleaner document-oriented multilingual crawled corpus",
+                  "citation": "Abadji et al (2022) Towards a cleaner document-oriented multilingual crawled corpus"
+                },
+                {
+                  "title": "CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages",
+                  "citation": "Nguyen et al (2023) CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages"
+                },
+                {
+                  "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+                  "citation": "Raffel et al (2020) Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.4.3",
+              "sec_title": "Data Deduplication",
+              "citations": [
+                {
+                  "title": "TigerBot: An open multilingual multitask LLM",
+                  "citation": "Chen et al (2023c) TigerBot: An open multilingual multitask LLM"
+                },
+                {
+                  "title": "The RefinedWeb Dataset for Falcon LLM",
+                  "citation": "Penedo et al (2023) The RefinedWeb Dataset for Falcon LLM"
+                },
+                {
+                  "title": "CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages",
+                  "citation": "Nguyen et al (2023) CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages"
+                },
+                {
+                  "title": "WuDaoCorpora: A super large-scale Chinese corpora",
+                  "citation": "Yuan et al (2021) WuDaoCorpora: A super large-scale Chinese corpora"
+                },
+                {
+                  "title": "Towards a cleaner document-oriented multilingual crawled corpus",
+                  "citation": "Abadji et al (2022) Towards a cleaner document-oriented multilingual crawled corpus"
+                },
+                {
+                  "title": "CLUECorpus2020: A large-scale Chinese corpus for pre-training",
+                  "citation": "Xu et al (2020c) CLUECorpus2020: A large-scale Chinese corpus for pre-training"
+                },
+                {
+                  "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+                  "citation": "Raffel et al (2020) Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+                },
+                {
+                  "title": "The RefinedWeb Dataset for Falcon LLM",
+                  "citation": "Penedo et al (2023) The RefinedWeb Dataset for Falcon LLM"
+                },
+                {
+                  "title": "CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages",
+                  "citation": "Nguyen et al (2023) CulturaX: A cleaned, enormous, and multilingual dataset for large language models in 167 languages"
+                },
+                {
+                  "title": "WanJuan: A Comprehensive Multimodal Dataset",
+                  "citation": "He et al (2023a) WanJuan: A Comprehensive Multimodal Dataset"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.4.4",
+              "sec_title": "Data Standardization",
+              "citations": [
+                {
+                  "title": "MultiUN: A multilingual corpus from United Nation documents",
+                  "citation": "Eisele and Chen (2010) MultiUN: A multilingual corpus from United Nation documents"
+                },
+                {
+                  "title": "CLUECorpus2020: A large-scale Chinese corpus for pre-training",
+                  "citation": "Xu et al (2020c) CLUECorpus2020: A large-scale Chinese corpus for pre-training"
+                },
+                {
+                  "title": "WuDaoCorpora: A super large-scale Chinese corpora",
+                  "citation": "Yuan et al (2021) WuDaoCorpora: A super large-scale Chinese corpora"
+                },
+                {
+                  "title": "WuDaoCorpora: A super large-scale Chinese corpora",
+                  "citation": "Yuan et al (2021) WuDaoCorpora: A super large-scale Chinese corpora"
+                },
+                {
+                  "title": "CLUECorpus2020: A large-scale Chinese corpus for pre-training",
+                  "citation": "Xu et al (2020c) CLUECorpus2020: A large-scale Chinese corpus for pre-training"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.4.5",
+              "sec_title": "Data Review",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "Instruction Fine-tuning Datasets",
+      "citations": [
+        {
+          "title": "Stanford Alpaca: An instruction-following LLaMA model. https://github.com/tatsu-lab/ stanford alpaca",
+          "citation": "Taori et al (2023) Stanford Alpaca: An instruction-following LLaMA model. https://github.com/tatsu-lab/ stanford alpaca"
+        },
+        {
+          "title": "Baichuan 2: Open large-scale language models",
+          "citation": "Yang (2023) Baichuan 2: Open large-scale language models"
+        },
+        {
+          "title": "BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE",
+          "citation": "BELLEGroup (2023) BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE"
+        },
+        {
+          "title": "Safety assessment of Chinese large language models",
+          "citation": "Zhou et al (2023b) Safety assessment of Chinese large language models"
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Instruction Category",
+          "citations": [
+            {
+              "title": "Training language models to follow instructions with human feedback",
+              "citation": "Ouyang et al (2022) Training language models to follow instructions with human feedback"
+            },
+            {
+              "title": "BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE",
+              "citation": "BELLEGroup (2023) BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE"
+            },
+            {
+              "title": "Baichuan 2: Open large-scale language models",
+              "citation": "Yang (2023) Baichuan 2: Open large-scale language models"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "General Instruction Fine-tuning Datasets",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "3.2.1",
+              "sec_title": "Human Generated Datasets",
+              "citations": [
+                {
+                  "title": "Free Dolly: Introducing the world's first truly open instruction-tuned LLM. https://www.databricks. com/blog/2023/04/12/dolly-first-open-commercially-viable-instruction-tuned-llm",
+                  "citation": "Conover et al (2023) Free Dolly: Introducing the world's first truly open instruction-tuned LLM. https://www.databricks. com/blog/2023/04/12/dolly-first-open-commercially-viable-instruction-tuned-llm"
+                },
+                {
+                  "title": "Training language models to follow instructions with human feedback",
+                  "citation": "Ouyang et al (2022) Training language models to follow instructions with human feedback"
+                },
+                {
+                  "title": "OpenChat: Advancing open-source language models with mixed-quality data",
+                  "citation": "Wang et al (2023a) OpenChat: Advancing open-source language models with mixed-quality data"
+                },
+                {
+                  "title": "Aya Dataset: An open-access collection for multilingual instruction tuning",
+                  "citation": "Singh et al (2024) Aya Dataset: An open-access collection for multilingual instruction tuning"
+                },
+                {
+                  "title": "Aya Dataset: An open-access collection for multilingual instruction tuning",
+                  "citation": "Singh et al (2024) Aya Dataset: An open-access collection for multilingual instruction tuning"
+                },
+                {
+                  "title": "CulturaX: A cleaned, enormous, multilingual dataset",
+                  "citation": "Ni et al (2023) CulturaX: A cleaned, enormous, multilingual dataset"
+                },
+                {
+                  "title": "A large-scale Chinese short-text conversation dataset",
+                  "citation": "Wang et al (2020b) A large-scale Chinese short-text conversation dataset"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.2",
+              "sec_title": "Model Constructed Datasets",
+              "citations": [
+                {
+                  "title": "Self-Instruct: Aligning language model with self generated instructions",
+                  "citation": "Wang et al (2023f) Self-Instruct: Aligning language model with self generated instructions"
+                },
+                {
+                  "title": "Self-Instruct: Aligning language model with self generated instructions",
+                  "citation": "Wang et al (2023f) Self-Instruct: Aligning language model with self generated instructions"
+                },
+                {
+                  "title": "Stanford Alpaca: An instruction-following LLaMA model. https://github.com/tatsu-lab/ stanford alpaca",
+                  "citation": "Taori et al (2023) Stanford Alpaca: An instruction-following LLaMA model. https://github.com/tatsu-lab/ stanford alpaca"
+                },
+                {
+                  "title": "BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE",
+                  "citation": "BELLEGroup (2023) BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE"
+                },
+                {
+                  "title": "BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE",
+                  "citation": "BELLEGroup (2023) BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE"
+                },
+                {
+                  "title": "CulturaX: A cleaned, enormous, multilingual dataset",
+                  "citation": "Ni et al (2023) CulturaX: A cleaned, enormous, multilingual dataset"
+                },
+                {
+                  "title": "Safety assessment of Chinese large language models",
+                  "citation": "Sun et al (2023b) Safety assessment of Chinese large language models"
+                },
+                {
+                  "title": "BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE",
+                  "citation": "BELLEGroup (2023) BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE"
+                },
+                {
+                  "title": "BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE",
+                  "citation": "BELLEGroup (2023) BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE"
+                },
+                {
+                  "title": "BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE",
+                  "citation": "BELLEGroup (2023) BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE"
+                },
+                {
+                  "title": "BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE",
+                  "citation": "BELLEGroup (2023) BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE"
+                },
+                {
+                  "title": "Unnatural Instructions: Tuning language models with (almost) no human labor",
+                  "citation": "Honovich et al (2023) Unnatural Instructions: Tuning language models with (almost) no human labor"
+                },
+                {
+                  "title": "Safety assessment of Chinese large language models",
+                  "citation": "Sun et al (2023b) Safety assessment of Chinese large language models"
+                },
+                {
+                  "title": "RedGPT: Reference-enlightened-dialogue by GPT and for GPT",
+                  "citation": "Yang et al (2023b) RedGPT: Reference-enlightened-dialogue by GPT and for GPT"
+                },
+                {
+                  "title": "RedGPT: Reference-enlightened-dialogue by GPT and for GPT",
+                  "citation": "Yang et al (2023b) RedGPT: Reference-enlightened-dialogue by GPT and for GPT"
+                },
+                {
+                  "title": "WebGLM: Towards an efficient web-enhanced question answering system",
+                  "citation": "Liu et al (2023e) WebGLM: Towards an efficient web-enhanced question answering system"
+                },
+                {
+                  "title": "WizardLM: Empowering large language models to follow complex instructions",
+                  "citation": "Xu et al (2023b) WizardLM: Empowering large language models to follow complex instructions"
+                },
+                {
+                  "title": "WizardLM: Empowering large language models to follow complex instructions",
+                  "citation": "Xu et al (2023b) WizardLM: Empowering large language models to follow complex instructions"
+                },
+                {
+                  "title": "OpenChat: Advancing open-source language models with mixed-quality data",
+                  "citation": "Wang et al (2023a) OpenChat: Advancing open-source language models with mixed-quality data"
+                },
+                {
+                  "title": "LMSYS-Chat-1M: A large-scale real-world LLM conversation dataset",
+                  "citation": "Zheng et al (2023a) LMSYS-Chat-1M: A large-scale real-world LLM conversation dataset"
+                },
+                {
+                  "title": "Safety assessment of Chinese large language models",
+                  "citation": "Sun et al (2023b) Safety assessment of Chinese large language models"
+                },
+                {
+                  "title": "Safety assessment of Chinese large language models",
+                  "citation": "Sun et al (2023b) Safety assessment of Chinese large language models"
+                },
+                {
+                  "title": "CAMEL: Communicative agents for mind exploration of large language model society",
+                  "citation": "Li et al (2023b) CAMEL: Communicative agents for mind exploration of large language model society"
+                },
+                {
+                  "title": "Enhancing chat language models by scaling high-quality instructional conversations",
+                  "citation": "Ding et al (2023) Enhancing chat language models by scaling high-quality instructional conversations"
+                },
+                {
+                  "title": "Long short-term memory. Neural Computation 9(8):1735-1780",
+                  "citation": "Hochreiter and Schmidhuber (1997) Long short-term memory. Neural Computation 9(8):1735-1780"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.3",
+              "sec_title": "Collection and Improvement of Existing Datasets",
+              "citations": [
+                {
+                  "title": "CrossFit: A few-shot learning challenge for crosstask generalization in NLP",
+                  "citation": "Ye et al (2021) CrossFit: A few-shot learning challenge for crosstask generalization in NLP"
+                },
+                {
+                  "title": "Super-NaturalInstructions: Generalization via declarative instructions on 1600+ NLP tasks",
+                  "citation": "Wang et al (2022) Super-NaturalInstructions: Generalization via declarative instructions on 1600+ NLP tasks"
+                },
+                {
+                  "title": "DialogStudio: Towards richest and most diverse unified dataset collection",
+                  "citation": "Zhang et al (2023c) DialogStudio: Towards richest and most diverse unified dataset collection"
+                },
+                {
+                  "title": "Dynosaur: A dynamic growth paradigm for instruction-tuning data curation",
+                  "citation": "Yin et al (2023a) Dynosaur: A dynamic growth paradigm for instruction-tuning data curation"
+                },
+                {
+                  "title": "Flacuna: Unleashing the problem solving power of Vicuna using FLAN fine-tuning",
+                  "citation": "Ghosal et al (2023) Flacuna: Unleashing the problem solving power of Vicuna using FLAN fine-tuning"
+                },
+                {
+                  "title": "The FLAN collection: Designing data and methods for effective instruction tuning",
+                  "citation": "Longpre et al (2023a) The FLAN collection: Designing data and methods for effective instruction tuning"
+                },
+                {
+                  "title": "Finetuned language models are zero-shot learners",
+                  "citation": "Wei et al (2022) Finetuned language models are zero-shot learners"
+                },
+                {
+                  "title": "The FLAN collection: Designing data and methods for effective instruction tuning",
+                  "citation": "Longpre et al (2023a) The FLAN collection: Designing data and methods for effective instruction tuning"
+                },
+                {
+                  "title": "Multitask prompted training enables zero-shot task generalization",
+                  "citation": "Victor et al (2022) Multitask prompted training enables zero-shot task generalization"
+                },
+                {
+                  "title": "Super-NaturalInstructions: Generalization via declarative instructions on 1600+ NLP tasks",
+                  "citation": "Wang et al (2022) Super-NaturalInstructions: Generalization via declarative instructions on 1600+ NLP tasks"
+                },
+                {
+                  "title": "InstructDial: Improving zero and few-shot generalization in dialogue through instruction tuning",
+                  "citation": "Gupta et al (2022) InstructDial: Improving zero and few-shot generalization in dialogue through instruction tuning"
+                },
+                {
+                  "title": "LILA: A unified benchmark for mathematical reasoning",
+                  "citation": "Mishra et al (2022b) LILA: A unified benchmark for mathematical reasoning"
+                },
+                {
+                  "title": "Beyond scale: The diversity coefficient as a data quality metric demonstrates LLMs are pre-trained on formally diverse data",
+                  "citation": "Lee et al (2023b) Beyond scale: The diversity coefficient as a data quality metric demonstrates LLMs are pre-trained on formally diverse data"
+                },
+                {
+                  "title": "Beyond scale: The diversity coefficient as a data quality metric demonstrates LLMs are pre-trained on formally diverse data",
+                  "citation": "Lee et al (2023b) Beyond scale: The diversity coefficient as a data quality metric demonstrates LLMs are pre-trained on formally diverse data"
+                },
+                {
+                  "title": "Transformers: State-of-the-art natural language processing",
+                  "citation": "Wolf et al (2020) Transformers: State-of-the-art natural language processing"
+                },
+                {
+                  "title": "OPT-IML: Scaling language model instruction meta learning through the lens of generalization",
+                  "citation": "Iyer et al (2022) OPT-IML: Scaling language model instruction meta learning through the lens of generalization"
+                },
+                {
+                  "title": "UnifiedSKG: Unifying and multi-tasking structured knowledge grounding with text-to-text language models",
+                  "citation": "Xie et al (2022) UnifiedSKG: Unifying and multi-tasking structured knowledge grounding with text-to-text language models"
+                },
+                {
+                  "title": "PromptSource: An integrated development environment and repository for natural language prompts",
+                  "citation": "Bach et al (2022) PromptSource: An integrated development environment and repository for natural language prompts"
+                },
+                {
+                  "title": "PromptSource: An integrated development environment and repository for natural language prompts",
+                  "citation": "Bach et al (2022) PromptSource: An integrated development environment and repository for natural language prompts"
+                },
+                {
+                  "title": "Super-NaturalInstructions: Generalization via declarative instructions on 1600+ NLP tasks",
+                  "citation": "Wang et al (2022) Super-NaturalInstructions: Generalization via declarative instructions on 1600+ NLP tasks"
+                },
+                {
+                  "title": "Multitask prompted training enables zero-shot task generalization",
+                  "citation": "Victor et al (2022) Multitask prompted training enables zero-shot task generalization"
+                },
+                {
+                  "title": "UnifiedSKG: Unifying and multi-tasking structured knowledge grounding with text-to-text language models",
+                  "citation": "Xie et al (2022) UnifiedSKG: Unifying and multi-tasking structured knowledge grounding with text-to-text language models"
+                },
+                {
+                  "title": "OctoPack: Instruction tuning code large language models",
+                  "citation": "Muennighoff et al (2023b) OctoPack: Instruction tuning code large language models"
+                },
+                {
+                  "title": "OctoPack: Instruction tuning code large language models",
+                  "citation": "Muennighoff et al (2023b) OctoPack: Instruction tuning code large language models"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.2.4",
+              "sec_title": "Datasets Created with Multiple Methods",
+              "citations": [
+                {
+                  "title": "Baichuan 2: Open large-scale language models",
+                  "citation": "Yang (2023) Baichuan 2: Open large-scale language models"
+                },
+                {
+                  "title": "HuatuoGPT, towards taming language model to be a doctor",
+                  "citation": "Zhou et al (2023a) HuatuoGPT, towards taming language model to be a doctor"
+                },
+                {
+                  "title": "Training language models to follow instructions with human feedback",
+                  "citation": "Ouyang et al (2022) Training language models to follow instructions with human feedback"
+                },
+                {
+                  "title": "Training language models to follow instructions with human feedback",
+                  "citation": "Ouyang et al (2022) Training language models to follow instructions with human feedback"
+                },
+                {
+                  "title": "Instruction tuning with GPT-4",
+                  "citation": "Peng et al (2023) Instruction tuning with GPT-4"
+                },
+                {
+                  "title": "Stanford Alpaca: An instruction-following LLaMA model. https://github.com/tatsu-lab/ stanford alpaca",
+                  "citation": "Taori et al (2023) Stanford Alpaca: An instruction-following LLaMA model. https://github.com/tatsu-lab/ stanford alpaca"
+                },
+                {
+                  "title": "GPT-4 technical report",
+                  "citation": "Achiam et al (2023) GPT-4 technical report"
+                },
+                {
+                  "title": "Instruction tuning with GPT-4",
+                  "citation": "Peng et al (2023) Instruction tuning with GPT-4"
+                },
+                {
+                  "title": "Luotuo: An instruction-following Chinese language model, LoRA tuning on LLaMA. https://github.com/LC1332/Chinese-alpaca-lora",
+                  "citation": "Ziang Leng and Li (2023) Luotuo: An instruction-following Chinese language model, LoRA tuning on LLaMA. https://github.com/LC1332/Chinese-alpaca-lora"
+                },
+                {
+                  "title": "Bactrian-X: A multilingual replicable instruction-following model",
+                  "citation": "Li et al (2023c) Bactrian-X: A multilingual replicable instruction-following model"
+                },
+                {
+                  "title": "GPT4All: An ecosystem of open source compressed language models",
+                  "citation": "Anand et al (2023) GPT4All: An ecosystem of open source compressed language models"
+                },
+                {
+                  "title": "LogiCoT: Logical chain-of-thought instruction tuning",
+                  "citation": "Liu et al (2023c) LogiCoT: Logical chain-of-thought instruction tuning"
+                },
+                {
+                  "title": "Orca: Progressive learning from complex explanation traces of GPT-4",
+                  "citation": "Mukherjee et al (2023) Orca: Progressive learning from complex explanation traces of GPT-4"
+                },
+                {
+                  "title": "LaMini-LM: A diverse herd of distilled models from large-scale instructions",
+                  "citation": "Wu et al (2023) LaMini-LM: A diverse herd of distilled models from large-scale instructions"
+                },
+                {
+                  "title": "Baize: An open-source chat model with parameter-efficient tuning",
+                  "citation": "Xu et al (2023a) Baize: An open-source chat model with parameter-efficient tuning"
+                },
+                {
+                  "title": "Longform: Optimizing instruction tuning for long text generation with corpus extraction",
+                  "citation": "K¨ oksal et al (2023) Longform: Optimizing instruction tuning for long text generation with corpus extraction"
+                },
+                {
+                  "title": "Luotuo-QA: Better conversational question answering model with answer completion. https://github.com/LC1332/ Luotuo-QA",
+                  "citation": "Liao et al (2023) Luotuo-QA: Better conversational question answering model with answer completion. https://github.com/LC1332/ Luotuo-QA"
+                },
+                {
+                  "title": "Chinese open instruction generalist",
+                  "citation": "Zhang et al (2023a) Chinese open instruction generalist"
+                },
+                {
+                  "title": "CN-DBpedia: A neverending Chinese knowledge extraction system",
+                  "citation": "Xu et al (2017) CN-DBpedia: A neverending Chinese knowledge extraction system"
+                },
+                {
+                  "title": "How close is ChatGPT to human experts",
+                  "citation": "Guo et al (2023a) How close is ChatGPT to human experts"
+                },
+                {
+                  "title": "DISC-FinLLM: A Chinese financial large language model based on multiple experts fine-tuning",
+                  "citation": "Chen et al (2023d) DISC-FinLLM: A Chinese financial large language model based on multiple experts fine-tuning"
+                },
+                {
+                  "title": "TigerBot: An open multilingual multitask LLM",
+                  "citation": "Chen et al (2023c) TigerBot: An open multilingual multitask LLM"
+                },
+                {
+                  "title": "TigerBot: An open multilingual multitask LLM",
+                  "citation": "Chen et al (2023c) TigerBot: An open multilingual multitask LLM"
+                },
+                {
+                  "title": "Aya Dataset: An open-access collection for multilingual instruction tuning",
+                  "citation": "Singh et al (2024) Aya Dataset: An open-access collection for multilingual instruction tuning"
+                },
+                {
+                  "title": "Aya Dataset: An open-access collection for multilingual instruction tuning",
+                  "citation": "Singh et al (2024) Aya Dataset: An open-access collection for multilingual instruction tuning"
+                },
+                {
+                  "title": "CONDAQA: A contrastive reading comprehension dataset for reasoning about negation",
+                  "citation": "Costa-juss` a et al (2022) CONDAQA: A contrastive reading comprehension dataset for reasoning about negation"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "Domain-specific Instruction Fine-tuning Datasets",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "3.3.1",
+              "sec_title": "Medical Domain",
+              "citations": [
+                {
+                  "title": "Zhongjing: Enhancing the Chinese medical capabilities of large language model",
+                  "citation": "Yang et al (2023d) Zhongjing: Enhancing the Chinese medical capabilities of large language model"
+                },
+                {
+                  "title": "MedDialog: Large-scale medical dialogue datasets",
+                  "citation": "Zeng et al (2020) MedDialog: Large-scale medical dialogue datasets"
+                },
+                {
+                  "title": "ShenNong-TCM: A traditional Chinese medicine large language model",
+                  "citation": "Zhu and Wang (2023) ShenNong-TCM: A traditional Chinese medicine large language model"
+                },
+                {
+                  "title": "ShenNong-TCM: A traditional Chinese medicine large language model",
+                  "citation": "Wei Zhu and Wang (2023) ShenNong-TCM: A traditional Chinese medicine large language model"
+                },
+                {
+                  "title": "Huatuo-26M, a large-scale Chinese medical QA dataset",
+                  "citation": "Li et al (2023h) Huatuo-26M, a large-scale Chinese medical QA dataset"
+                },
+                {
+                  "title": "ChatDoctor: A medical chat model fine-tuned on LLaMA",
+                  "citation": "Li et al (2023l) ChatDoctor: A medical chat model fine-tuned on LLaMA"
+                },
+                {
+                  "title": "HuatuoGPT, towards taming language model to be a doctor",
+                  "citation": "Zhang et al (2023b) HuatuoGPT, towards taming language model to be a doctor"
+                },
+                {
+                  "title": "DISC-MedLLM: Bridging general large language models and real-world medical consultation",
+                  "citation": "Bao et al (2023) DISC-MedLLM: Bridging general large language models and real-world medical consultation"
+                },
+                {
+                  "title": "MedAlpaca-An open-source collection of medical conversational AI models and training data",
+                  "citation": "Han et al (2023) MedAlpaca-An open-source collection of medical conversational AI models and training data"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.3.2",
+              "sec_title": "Code Domain",
+              "citations": [
+                {
+                  "title": "OctoPack: Instruction tuning code large language models",
+                  "citation": "Muennighoff et al (2023a) OctoPack: Instruction tuning code large language models"
+                },
+                {
+                  "title": "Code Alpaca: An instruction-following LLaMA model for code generation. https://github.com/sahil280114/codealpaca",
+                  "citation": "Chaudhary (2023) Code Alpaca: An instruction-following LLaMA model for code generation. https://github.com/sahil280114/codealpaca"
+                },
+                {
+                  "title": "Stanford Alpaca: An instruction-following LLaMA model. https://github.com/tatsu-lab/ stanford alpaca",
+                  "citation": "Taori et al (2023) Stanford Alpaca: An instruction-following LLaMA model. https://github.com/tatsu-lab/ stanford alpaca"
+                },
+                {
+                  "title": "Code Alpaca: An instruction-following LLaMA model for code generation. https://github.com/sahil280114/codealpaca",
+                  "citation": "Chaudhary (2023) Code Alpaca: An instruction-following LLaMA model for code generation. https://github.com/sahil280114/codealpaca"
+                },
+                {
+                  "title": "Competition-level code generation with AlphaCode",
+                  "citation": "Li et al (2022a) Competition-level code generation with AlphaCode"
+                },
+                {
+                  "title": "Description2Code dataset. https://github. com/ethancaballero/description2code",
+                  "citation": "Caballero et al (2016) Description2Code dataset. https://github. com/ethancaballero/description2code"
+                },
+                {
+                  "title": "CodeNet: A large-scale AI for code dataset for learning a diversity of coding tasks",
+                  "citation": "Puri et al (2021) CodeNet: A large-scale AI for code dataset for learning a diversity of coding tasks"
+                },
+                {
+                  "title": "ToolAlpaca: Generalized tool learning for language models with 3000 simulated cases",
+                  "citation": "Tang et al (2023) ToolAlpaca: Generalized tool learning for language models with 3000 simulated cases"
+                },
+                {
+                  "title": "ToolLLM: Facilitating large language models to master 16000+ real-world APIs",
+                  "citation": "Anonymous (2024) ToolLLM: Facilitating large language models to master 16000+ real-world APIs"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.3.3",
+              "sec_title": "Legal Domain",
+              "citations": [
+                {
+                  "title": "DISC-LawLLM: Fine-tuning large language models for intelligent legal services",
+                  "citation": "Yue et al (2023) DISC-LawLLM: Fine-tuning large language models for intelligent legal services"
+                },
+                {
+                  "title": "HanFei-1.0",
+                  "citation": "He et al (2023c) HanFei-1.0"
+                },
+                {
+                  "title": "LawGpt: Chinese legal dialogue language model",
+                  "citation": "Liu et al (2023b) LawGpt: Chinese legal dialogue language model"
+                },
+                {
+                  "title": "Lawyer LLaMA technical report",
+                  "citation": "Huang et al (2023b) Lawyer LLaMA technical report"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.3.4",
+              "sec_title": "Mathematics Domain",
+              "citations": [
+                {
+                  "title": "BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE",
+                  "citation": "BELLEGroup (2023) BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE"
+                },
+                {
+                  "title": "Goat: Fine-tuned LLaMA outperforms GPT-4 on arithmetic tasks",
+                  "citation": "Liu and Low (2023) Goat: Fine-tuned LLaMA outperforms GPT-4 on arithmetic tasks"
+                },
+                {
+                  "title": "MWPToolkit: An open-source framework for deep learning-based math word problem solvers. Proceedings of the AAAI Conference on Artificial Intelligence 36(11):13188-13190. https://doi.org/10.1609/aaai.v36i11.21723",
+                  "citation": "Lan et al (2022) MWPToolkit: An open-source framework for deep learning-based math word problem solvers. Proceedings of the AAAI Conference on Artificial Intelligence 36(11):13188-13190. https://doi.org/10.1609/aaai.v36i11.21723"
+                },
+                {
+                  "title": "OpenMathInstruct-1: A 1.8 million math instruction tuning dataset",
+                  "citation": "Toshniwal et al (2024) OpenMathInstruct-1: A 1.8 million math instruction tuning dataset"
+                },
+                {
+                  "title": "Mixtral of experts",
+                  "citation": "Jiang et al (2024) Mixtral of experts"
+                },
+                {
+                  "title": "Training verifiers to solve math word problems",
+                  "citation": "Cobbe et al (2021) Training verifiers to solve math word problems"
+                },
+                {
+                  "title": "Measuring coding challenge competence with APPS",
+                  "citation": "Hendrycks et al (2021d) Measuring coding challenge competence with APPS"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.3.5",
+              "sec_title": "Education Domain",
+              "citations": [
+                {
+                  "title": "EduChat: A large-scale language model-based chatbot system for intelligent education",
+                  "citation": "Dan et al (2023) EduChat: A large-scale language model-based chatbot system for intelligent education"
+                },
+                {
+                  "title": "Taoli LLaMA",
+                  "citation": "Yu et al (2023b) Taoli LLaMA"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.3.6",
+              "sec_title": "Other Domains",
+              "citations": [
+                {
+                  "title": "DISC-FinLLM: A Chinese financial large language model based on multiple experts fine-tuning",
+                  "citation": "Chen et al (2023a) DISC-FinLLM: A Chinese financial large language model based on multiple experts fine-tuning"
+                },
+                {
+                  "title": "LoRA: Low-rank adaptation of large language models",
+                  "citation": "Hu et al (2022a) LoRA: Low-rank adaptation of large language models"
+                },
+                {
+                  "title": "DISC-FinLLM: A Chinese financial large language model based on multiple experts fine-tuning",
+                  "citation": "Chen et al (2023a) DISC-FinLLM: A Chinese financial large language model based on multiple experts fine-tuning"
+                },
+                {
+                  "title": "K2: A foundation language model for geoscience knowledge understanding and utilization",
+                  "citation": "Deng et al (2023) K2: A foundation language model for geoscience knowledge understanding and utilization"
+                },
+                {
+                  "title": "K2: A foundation language model for geoscience knowledge understanding and utilization",
+                  "citation": "Deng et al (2023) K2: A foundation language model for geoscience knowledge understanding and utilization"
+                },
+                {
+                  "title": "SMILE: Single-turn to multi-turn inclusive language expansion via ChatGPT for mental health support",
+                  "citation": "Qiu et al (2023) SMILE: Single-turn to multi-turn inclusive language expansion via ChatGPT for mental health support"
+                },
+                {
+                  "title": "Mol-Instructions: A large-scale biomolecular instruction dataset for large language models",
+                  "citation": "Fang et al (2023) Mol-Instructions: A large-scale biomolecular instruction dataset for large language models"
+                },
+                {
+                  "title": "OWL: A large language model for IT operations",
+                  "citation": "Guo et al (2023b) OWL: A large language model for IT operations"
+                },
+                {
+                  "title": "OWL: A large language model for IT operations",
+                  "citation": "Guo et al (2023b) OWL: A large language model for IT operations"
+                },
+                {
+                  "title": "ProsocialDialog: A prosocial backbone for conversational agents",
+                  "citation": "Kim et al (2022) ProsocialDialog: A prosocial backbone for conversational agents"
+                },
+                {
+                  "title": "TransGPT. https://github.com/DUOMO/TransGPT",
+                  "citation": "Duomo (2023) TransGPT. https://github.com/DUOMO/TransGPT"
+                },
+                {
+                  "title": "TransGPT. https://github.com/DUOMO/TransGPT",
+                  "citation": "Duomo (2023) TransGPT. https://github.com/DUOMO/TransGPT"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.4",
+          "sec_title": "Distribution Statistics of Instruction Fine-tuning Datasets",
+          "citations": [],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "Preference Datasets",
+      "citations": [
+        {
+          "title": "Ultrafeedback: Boosting language models with high-quality feedback",
+          "citation": "Cui et al (2023) Ultrafeedback: Boosting language models with high-quality feedback"
+        },
+        {
+          "title": "Ultrafeedback: Boosting language models with high-quality feedback",
+          "citation": "Cui et al (2023) Ultrafeedback: Boosting language models with high-quality feedback"
+        },
+        {
+          "title": "Ultrafeedback: Boosting language models with high-quality feedback",
+          "citation": "Cui et al (2023) Ultrafeedback: Boosting language models with high-quality feedback"
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Preference Evaluation Methods",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Vote",
+              "citations": [
+                {
+                  "title": "LMSYS-Chat-1M: A large-scale real-world LLM conversation dataset",
+                  "citation": "Zheng et al (2023b) LMSYS-Chat-1M: A large-scale real-world LLM conversation dataset"
+                },
+                {
+                  "title": "Training a helpful and harmless assistant with reinforcement learning from human feedback",
+                  "citation": "Bai et al (2022) Training a helpful and harmless assistant with reinforcement learning from human feedback"
+                },
+                {
+                  "title": "Red teaming language models with language models",
+                  "citation": "Perez et al (2022) Red teaming language models with language models"
+                },
+                {
+                  "title": "LMSYS-Chat-1M: A large-scale real-world LLM conversation dataset",
+                  "citation": "Zheng et al (2023b) LMSYS-Chat-1M: A large-scale real-world LLM conversation dataset"
+                },
+                {
+                  "title": "BeaverTails: Towards improved safety alignment of LLM via a human-preference dataset",
+                  "citation": "Ji et al (2023a) BeaverTails: Towards improved safety alignment of LLM via a human-preference dataset"
+                },
+                {
+                  "title": "Understanding dataset difficulty with V -usable information",
+                  "citation": "Ethayarajh et al (2022) Understanding dataset difficulty with V -usable information"
+                },
+                {
+                  "title": "Learning to summarize with human feedback",
+                  "citation": "Stiennon et al (2020) Learning to summarize with human feedback"
+                },
+                {
+                  "title": "CValues: Measuring the values of Chinese large language models",
+                  "citation": "Xu et al (2023d) CValues: Measuring the values of Chinese large language models"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.2",
+              "sec_title": "Sort",
+              "citations": [
+                {
+                  "title": "OpenChat: Advancing open-source language models with mixed-quality data",
+                  "citation": "Wang et al (2023a) OpenChat: Advancing open-source language models with mixed-quality data"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.3",
+              "sec_title": "Score",
+              "citations": [
+                {
+                  "title": "A general language assistant as a laboratory for alignment",
+                  "citation": "Askell et al (2021) A general language assistant as a laboratory for alignment"
+                },
+                {
+                  "title": "Learning to summarize with human feedback",
+                  "citation": "Stiennon et al (2020) Learning to summarize with human feedback"
+                },
+                {
+                  "title": "WebGPT: Browserassisted question-answering with human feedback",
+                  "citation": "Nakano et al (2021) WebGPT: Browserassisted question-answering with human feedback"
+                },
+                {
+                  "title": "Instruction tuning with GPT-4",
+                  "citation": "Peng et al (2023) Instruction tuning with GPT-4"
+                },
+                {
+                  "title": "Training socially aligned language models in simulated human society",
+                  "citation": "Liu et al (2023d) Training socially aligned language models in simulated human society"
+                },
+                {
+                  "title": "Ultrafeedback: Boosting language models with high-quality feedback",
+                  "citation": "Cui et al (2023) Ultrafeedback: Boosting language models with high-quality feedback"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.4",
+              "sec_title": "Other",
+              "citations": [
+                {
+                  "title": "EcomGPT: Instruction-tuning large language model for E-commerce",
+                  "citation": "Li et al (2023m) EcomGPT: Instruction-tuning large language model for E-commerce"
+                },
+                {
+                  "title": "FewCLUE: A Chinese few-shot learning evaluation benchmark",
+                  "citation": "Xu et al (2021) FewCLUE: A Chinese few-shot learning evaluation benchmark"
+                },
+                {
+                  "title": "K2: A foundation language model for geoscience knowledge understanding and utilization",
+                  "citation": "Deng et al (2023) K2: A foundation language model for geoscience knowledge understanding and utilization"
+                },
+                {
+                  "title": "OWL: A large language model for IT operations",
+                  "citation": "Guo et al (2023b) OWL: A large language model for IT operations"
+                },
+                {
+                  "title": "MINT: Evaluating LLMs in multi-turn interaction",
+                  "citation": "Wang et al (2023e) MINT: Evaluating LLMs in multi-turn interaction"
+                },
+                {
+                  "title": "Phoenix: Democratizing ChatGPT across languages",
+                  "citation": "Zhu et al (2023) Phoenix: Democratizing ChatGPT across languages"
+                },
+                {
+                  "title": "Emotionally numb or empathetic",
+                  "citation": "Huang et al (2023a) Emotionally numb or empathetic"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Distribution Statistics of Preference Datasets",
+          "citations": [
+            {
+              "title": "Deep reinforcement learning from human preferences",
+              "citation": "Christiano et al (2017) Deep reinforcement learning from human preferences"
+            },
+            {
+              "title": "Finetuning language models from human preferences",
+              "citation": "Ziegler et al (2019) Finetuning language models from human preferences"
+            },
+            {
+              "title": "Beyond scale: The diversity coefficient as a data quality metric demonstrates LLMs are pre-trained on formally diverse data",
+              "citation": "Lee et al (2023c) Beyond scale: The diversity coefficient as a data quality metric demonstrates LLMs are pre-trained on formally diverse data"
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "Evaluation Datasets",
+      "citations": [
+        {
+          "title": "Can we trust the evaluation on ChatGPT?",
+          "citation": "Aiyappa et al (2023) Can we trust the evaluation on ChatGPT?"
+        },
+        {
+          "title": "Safety assessment of Chinese large language models",
+          "citation": "Zhou et al (2023b) Safety assessment of Chinese large language models"
+        },
+        {
+          "title": "ARB: Advanced reasoning benchmark for large language models",
+          "citation": "Sawada et al (2023) ARB: Advanced reasoning benchmark for large language models"
+        },
+        {
+          "title": "EcomGPT: Instruction-tuning large language model for E-commerce",
+          "citation": "Li et al (2023m) EcomGPT: Instruction-tuning large language model for E-commerce"
+        },
+        {
+          "title": "K2: A foundation language model for geoscience knowledge understanding and utilization",
+          "citation": "Deng et al (2023) K2: A foundation language model for geoscience knowledge understanding and utilization"
+        },
+        {
+          "title": "Evaluating large language models: A comprehensive survey",
+          "citation": "Guo et al (2023c) Evaluating large language models: A comprehensive survey"
+        },
+        {
+          "title": "Holistic evaluation of language models",
+          "citation": "Liang et al (2023) Holistic evaluation of language models"
+        },
+        {
+          "title": "OpenCompass: A universal evaluation platform for foundation models. https://github.com/open-compass/opencompass",
+          "citation": "Contributors (2023) OpenCompass: A universal evaluation platform for foundation models. https://github.com/open-compass/opencompass"
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "Evaluation Domains",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "5.1.1",
+              "sec_title": "General",
+              "citations": [
+                {
+                  "title": "AlpacaFarm: A simulation framework for methods that learn from human feedback",
+                  "citation": "Dubois et al (2023) AlpacaFarm: A simulation framework for methods that learn from human feedback"
+                },
+                {
+                  "title": "Chinese open instruction generalist",
+                  "citation": "Zhang et al (2023h) Chinese open instruction generalist"
+                },
+                {
+                  "title": "BeaverTails: Towards improved safety alignment of LLM via a human-preference dataset",
+                  "citation": "Ji et al (2023b) BeaverTails: Towards improved safety alignment of LLM via a human-preference dataset"
+                },
+                {
+                  "title": "LMSYS-Chat-1M: A large-scale real-world LLM conversation dataset",
+                  "citation": "Zheng et al (2023b) LMSYS-Chat-1M: A large-scale real-world LLM conversation dataset"
+                },
+                {
+                  "title": "SuperCLUE: A comprehensive Chinese large language model benchmark",
+                  "citation": "Xu et al (2023e) SuperCLUE: A comprehensive Chinese large language model benchmark"
+                },
+                {
+                  "title": "Can large language models understand real-world complex instructions",
+                  "citation": "He et al (2023b) Can large language models understand real-world complex instructions"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.2",
+              "sec_title": "Exam",
+              "citations": [
+                {
+                  "title": "Chinese open instruction generalist: A preliminary release",
+                  "citation": "Zhang et al (2023k) Chinese open instruction generalist: A preliminary release"
+                },
+                {
+                  "title": "Safety assessment of Chinese large language models",
+                  "citation": "Zhong et al (2023) Safety assessment of Chinese large language models"
+                },
+                {
+                  "title": "Safety assessment of Chinese large language models",
+                  "citation": "Zhang et al (2023i) Safety assessment of Chinese large language models"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.3",
+              "sec_title": "Subject",
+              "citations": [
+                {
+                  "title": "Measuring massive multitask Chinese understanding",
+                  "citation": "Zeng (2023) Measuring massive multitask Chinese understanding"
+                },
+                {
+                  "title": "SCIBENCH: Evaluating college-level scientific problem-solving abilities",
+                  "citation": "Wang et al (2023d) SCIBENCH: Evaluating college-level scientific problem-solving abilities"
+                },
+                {
+                  "title": "DISC-FinLLM: A Chinese financial large language model based on multiple experts fine-tuning",
+                  "citation": "Chen et al (2023b) DISC-FinLLM: A Chinese financial large language model based on multiple experts fine-tuning"
+                },
+                {
+                  "title": "ARB: Advanced reasoning benchmark for large language models",
+                  "citation": "Sawada et al (2023) ARB: Advanced reasoning benchmark for large language models"
+                },
+                {
+                  "title": "Learn to explain: Multimodal reasoning via thought chains for science question answering",
+                  "citation": "Lu et al (2022) Learn to explain: Multimodal reasoning via thought chains for science question answering"
+                },
+                {
+                  "title": "C-Eval: A multi-level multi-discipline Chinese evaluation suite",
+                  "citation": "Huang et al (2023c) C-Eval: A multi-level multi-discipline Chinese evaluation suite"
+                },
+                {
+                  "title": "Evaluating the generation capabilities of large Chinese language models",
+                  "citation": "Zeng et al (2023b) Evaluating the generation capabilities of large Chinese language models"
+                },
+                {
+                  "title": "Measuring massive multitask language understanding",
+                  "citation": "Hendrycks et al (2021b) Measuring massive multitask language understanding"
+                },
+                {
+                  "title": "CMMLU: Measuring massive multitask language understanding in Chinese",
+                  "citation": "Li et al (2023d) CMMLU: Measuring massive multitask language understanding in Chinese"
+                },
+                {
+                  "title": "M3KE: A massive multi-level multi-subject knowledge evaluation benchmark",
+                  "citation": "Liu et al (2023a) M3KE: A massive multi-level multi-subject knowledge evaluation benchmark"
+                },
+                {
+                  "title": "Xiezhi: An everupdating benchmark for holistic domain knowledge evaluation",
+                  "citation": "Gu et al (2023) Xiezhi: An everupdating benchmark for holistic domain knowledge evaluation"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.4",
+              "sec_title": "Natural Language Understanding",
+              "citations": [
+                {
+                  "title": "MCTS: A multi-reference Chinese text simplification dataset",
+                  "citation": "Chong et al (2023) MCTS: A multi-reference Chinese text simplification dataset"
+                },
+                {
+                  "title": "RAFT: A real-world few-shot text classification benchmark",
+                  "citation": "Alex et al (2021) RAFT: A real-world few-shot text classification benchmark"
+                },
+                {
+                  "title": "GLUE: A multi-task benchmark and analysis platform for natural language understanding",
+                  "citation": "Wang et al (2018) GLUE: A multi-task benchmark and analysis platform for natural language understanding"
+                },
+                {
+                  "title": "SuperGLUE: A stickier benchmark for general-purpose language understanding systems",
+                  "citation": "Wang et al (2019) SuperGLUE: A stickier benchmark for general-purpose language understanding systems"
+                },
+                {
+                  "title": "CLUE: A Chinese language understanding evaluation benchmark",
+                  "citation": "Xu et al (2020b) CLUE: A Chinese language understanding evaluation benchmark"
+                },
+                {
+                  "title": "CUGE: A Chinese language understanding and generation evaluation benchmark",
+                  "citation": "Yao et al (2021) CUGE: A Chinese language understanding and generation evaluation benchmark"
+                },
+                {
+                  "title": "SentEval: An evaluation toolkit for universal sentence representations",
+                  "citation": "Conneau and Kiela (2018) SentEval: An evaluation toolkit for universal sentence representations"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.5",
+              "sec_title": "Reasoning",
+              "citations": [
+                {
+                  "title": "Chain-of-Thought Hub: A continuous effort to measure large language models' reasoning performance",
+                  "citation": "Fu et al (2023) Chain-of-Thought Hub: A continuous effort to measure large language models' reasoning performance"
+                },
+                {
+                  "title": "Choice-75: A dataset on decision branching in script learning",
+                  "citation": "Hou et al (2023) Choice-75: A dataset on decision branching in script learning"
+                },
+                {
+                  "title": "Are large language models really good logical reasoners",
+                  "citation": "Xu et al (2023c) Are large language models really good logical reasoners"
+                },
+                {
+                  "title": "BBT-Fin: Comprehensive construction of Chinese financial domain pre-trained language model, corpus and benchmark",
+                  "citation": "Lu et al (2023b) BBT-Fin: Comprehensive construction of Chinese financial domain pre-trained language model, corpus and benchmark"
+                },
+                {
+                  "title": "LILA: A unified benchmark for mathematical reasoning",
+                  "citation": "Mishra et al (2022a) LILA: A unified benchmark for mathematical reasoning"
+                },
+                {
+                  "title": "MiniF2F: A cross-system benchmark for formal Olympiad-level mathematics",
+                  "citation": "Zheng et al (2022) MiniF2F: A cross-system benchmark for formal Olympiad-level mathematics"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.6",
+              "sec_title": "Knowledge",
+              "citations": [
+                {
+                  "title": "LLMEval-2",
+                  "citation": "Zhang et al (2023e) LLMEval-2"
+                },
+                {
+                  "title": "Benchmarking foundation models with language-model-as-an-examiner",
+                  "citation": "Bai et al (2023c) Benchmarking foundation models with language-model-as-an-examiner"
+                },
+                {
+                  "title": "KoLA: Carefully benchmarking world knowledge of large language models",
+                  "citation": "Yu et al (2023a) KoLA: Carefully benchmarking world knowledge of large language models"
+                },
+                {
+                  "title": "Do LLMs understand social knowledge? Evaluating the sociability of large language models with SocKET benchmark",
+                  "citation": "Choi et al (2023) Do LLMs understand social knowledge? Evaluating the sociability of large language models with SocKET benchmark"
+                },
+                {
+                  "title": "Dynosaur: A dynamic growth paradigm for instruction-tuning data curation",
+                  "citation": "Yin et al (2023b) Dynosaur: A dynamic growth paradigm for instruction-tuning data curation"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.7",
+              "sec_title": "Long Text",
+              "citations": [
+                {
+                  "title": "Longbench: A bilingual, multitask benchmark for long context understanding",
+                  "citation": "Bai et al (2023b) Longbench: A bilingual, multitask benchmark for long context understanding"
+                },
+                {
+                  "title": "ZeroSCROLLS: A zero-shot benchmark for long text understanding",
+                  "citation": "Shaham et al (2023) ZeroSCROLLS: A zero-shot benchmark for long text understanding"
+                },
+                {
+                  "title": "L-Eval: Instituting standardized evaluation for long context language models",
+                  "citation": "An et al (2023) L-Eval: Instituting standardized evaluation for long context language models"
+                },
+                {
+                  "title": "How long can open-source LLMs truly promise on context length",
+                  "citation": "Li et al (2023a) How long can open-source LLMs truly promise on context length"
+                },
+                {
+                  "title": "LooGLE: Can long-context language models understand long contexts",
+                  "citation": "Li et al (2023g) LooGLE: Can long-context language models understand long contexts"
+                },
+                {
+                  "title": "Longbench: A bilingual, multitask benchmark for long context understanding",
+                  "citation": "Bai et al (2023b) Longbench: A bilingual, multitask benchmark for long context understanding"
+                },
+                {
+                  "title": "Evaluating the generation capabilities of large Chinese language models",
+                  "citation": "Zhang et al (2023j) Evaluating the generation capabilities of large Chinese language models"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.8",
+              "sec_title": "Tool",
+              "citations": [
+                {
+                  "title": "API-Bank: A comprehensive benchmark for tool-augmented LLMs",
+                  "citation": "Li et al (2023i) API-Bank: A comprehensive benchmark for tool-augmented LLMs"
+                },
+                {
+                  "title": "Gorilla: Large language model connected with massive APIs",
+                  "citation": "Patil et al (2023) Gorilla: Large language model connected with massive APIs"
+                },
+                {
+                  "title": "On the tool manipulation capability of open-source LLMs",
+                  "citation": "Xu et al (2023f) On the tool manipulation capability of open-source LLMs"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.9",
+              "sec_title": "Agent",
+              "citations": [
+                {
+                  "title": "AgentBench: Evaluating LLMs as agents",
+                  "citation": "Liu et al (2023f) AgentBench: Evaluating LLMs as agents"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.10",
+              "sec_title": "Code",
+              "citations": [
+                {
+                  "title": "Measuring Coding Challenge Competence With APPS",
+                  "citation": "Hendrycks et al (2021a) Measuring Coding Challenge Competence With APPS"
+                },
+                {
+                  "title": "DS-1000: A natural and reliable benchmark for data science code generation",
+                  "citation": "Lai et al (2023) DS-1000: A natural and reliable benchmark for data science code generation"
+                },
+                {
+                  "title": "Evaluating large language models trained on code",
+                  "citation": "Chen et al (2021) Evaluating large language models trained on code"
+                },
+                {
+                  "title": "CodeGen: An open large language model for code with multi-turn program synthesis",
+                  "citation": "Nijkamp et al (2023) CodeGen: An open large language model for code with multi-turn program synthesis"
+                },
+                {
+                  "title": "Execution-based evaluation for open-domain code generation",
+                  "citation": "Wang et al (2023h) Execution-based evaluation for open-domain code generation"
+                },
+                {
+                  "title": "Can LLM already serve as a database interface",
+                  "citation": "Li et al (2023f) Can LLM already serve as a database interface"
+                },
+                {
+                  "title": "Spider: A large-scale human-labeled dataset for complex semantic parsing",
+                  "citation": "Yu et al (2018) Spider: A large-scale human-labeled dataset for complex semantic parsing"
+                },
+                {
+                  "title": "CodeXGLUE: A machine learning benchmark dataset for code understanding and generation",
+                  "citation": "Lu et al (2021) CodeXGLUE: A machine learning benchmark dataset for code understanding and generation"
+                },
+                {
+                  "title": "OctoPack: Instruction tuning code large language models",
+                  "citation": "Muennighoff et al (2023a) OctoPack: Instruction tuning code large language models"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.11",
+              "sec_title": "Out-of-Distribution",
+              "citations": [
+                {
+                  "title": "Revisiting out-of-distribution robustness in NLP",
+                  "citation": "Yuan et al (2023) Revisiting out-of-distribution robustness in NLP"
+                },
+                {
+                  "title": "Baichuan 2: Open large-scale language models",
+                  "citation": "Yang et al (2023c) Baichuan 2: Open large-scale language models"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.12",
+              "sec_title": "Law",
+              "citations": [
+                {
+                  "title": "LAiW: A Chinese legal large language models benchmark (a technical report)",
+                  "citation": "Dai et al (2023) LAiW: A Chinese legal large language models benchmark (a technical report)"
+                },
+                {
+                  "title": "LawBench: Benchmarking legal knowledge of large language models",
+                  "citation": "Fei et al (2023) LawBench: Benchmarking legal knowledge of large language models"
+                },
+                {
+                  "title": "LegalBench: A collaboratively built benchmark for measuring legal reasoning in large language models",
+                  "citation": "Guha et al (2023) LegalBench: A collaboratively built benchmark for measuring legal reasoning in large language models"
+                },
+                {
+                  "title": "LexGLUE: A benchmark dataset for legal language understanding in English",
+                  "citation": "Chalkidis et al (2022) LexGLUE: A benchmark dataset for legal language understanding in English"
+                },
+                {
+                  "title": "LEXTREME: A multi-lingual and multi-task benchmark for the legal domain",
+                  "citation": "Niklaus et al (2023) LEXTREME: A multi-lingual and multi-task benchmark for the legal domain"
+                },
+                {
+                  "title": "SCALE: Scaling up the complexity for advanced language model evaluation",
+                  "citation": "Rasiah et al (2023) SCALE: Scaling up the complexity for advanced language model evaluation"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.13",
+              "sec_title": "Medical",
+              "citations": [
+                {
+                  "title": "Large language models encode clinical knowledge. Nature 620(7972):172-180",
+                  "citation": "Singhal et al (2023) Large language models encode clinical knowledge. Nature 620(7972):172-180"
+                },
+                {
+                  "title": "CBLUE: A Chinese biomedical language understanding evaluation benchmark",
+                  "citation": "Zhang et al (2022) CBLUE: A Chinese biomedical language understanding evaluation benchmark"
+                },
+                {
+                  "title": "CMB: A comprehensive medical benchmark in Chinese",
+                  "citation": "Wang et al (2023c) CMB: A comprehensive medical benchmark in Chinese"
+                },
+                {
+                  "title": "Huatuo-26M, a large-scale Chinese medical QA dataset",
+                  "citation": "Li et al (2023h) Huatuo-26M, a large-scale Chinese medical QA dataset"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.14",
+              "sec_title": "Financial",
+              "citations": [
+                {
+                  "title": "BBT-Fin: Comprehensive construction of Chinese financial domain pre-trained language model",
+                  "citation": "Lu et al (2023a) BBT-Fin: Comprehensive construction of Chinese financial domain pre-trained language model"
+                },
+                {
+                  "title": "FinEval: A Chinese financial domain knowledge evaluation benchmark",
+                  "citation": "Zhang et al (2023d) FinEval: A Chinese financial domain knowledge evaluation benchmark"
+                },
+                {
+                  "title": "When FLUE meets FLANG: Benchmarks and large pretrained language model for financial domain",
+                  "citation": "Shah et al (2022) When FLUE meets FLANG: Benchmarks and large pretrained language model for financial domain"
+                },
+                {
+                  "title": "The FinBen: An holistic financial benchmark for large language models",
+                  "citation": "Xie et al (2024) The FinBen: An holistic financial benchmark for large language models"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.15",
+              "sec_title": "Social Norms",
+              "citations": [
+                {
+                  "title": "CrowS-Pairs: A challenge dataset for measuring social biases in masked language models",
+                  "citation": "Nangia et al (2020) CrowS-Pairs: A challenge dataset for measuring social biases in masked language models"
+                },
+                {
+                  "title": "Chinese open instruction generalist: A preliminary release",
+                  "citation": "Zhang et al (2023n) Chinese open instruction generalist: A preliminary release"
+                },
+                {
+                  "title": "Safety assessment of Chinese large language models",
+                  "citation": "Sun et al (2023a) Safety assessment of Chinese large language models"
+                },
+                {
+                  "title": "TrustGPT: A benchmark for trustworthy and responsible LLM",
+                  "citation": "Huang et al (2023d) TrustGPT: A benchmark for trustworthy and responsible LLM"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.16",
+              "sec_title": "Factuality",
+              "citations": [
+                {
+                  "title": "Chinese open instruction generalist: A preliminary release",
+                  "citation": "Zhang et al (2023m) Chinese open instruction generalist: A preliminary release"
+                },
+                {
+                  "title": "Generating benchmarks for factuality evaluation of language models",
+                  "citation": "Muhlgay et al (2023) Generating benchmarks for factuality evaluation of language models"
+                },
+                {
+                  "title": "HaluEval: A large-scale hallucination evaluation benchmark",
+                  "citation": "Li et al (2023e) HaluEval: A large-scale hallucination evaluation benchmark"
+                },
+                {
+                  "title": "FActScore: Finegrained atomic evaluation of factual precision in long form text generation",
+                  "citation": "Min et al (2023) FActScore: Finegrained atomic evaluation of factual precision in long form text generation"
+                },
+                {
+                  "title": "Factuality enhanced language models for open-ended text generation",
+                  "citation": "Lee et al (2022) Factuality enhanced language models for open-ended text generation"
+                },
+                {
+                  "title": "TruthfulQA: Measuring how models mimic human falsehoods",
+                  "citation": "Lin et al (2022) TruthfulQA: Measuring how models mimic human falsehoods"
+                },
+                {
+                  "title": "Evaluating hallucinations in Chinese large language models",
+                  "citation": "Cheng et al (2023) Evaluating hallucinations in Chinese large language models"
+                },
+                {
+                  "title": "FreshLLMs: Refreshing large language models with search engine augmentation",
+                  "citation": "Vu et al (2023) FreshLLMs: Refreshing large language models with search engine augmentation"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.17",
+              "sec_title": "Evaluation",
+              "citations": [
+                {
+                  "title": "Large language models are not fair evaluators",
+                  "citation": "Wang et al (2023b) Large language models are not fair evaluators"
+                },
+                {
+                  "title": "PandaLM: An automatic evaluation benchmark for LLM instruction tuning",
+                  "citation": "Wang et al (2023g) PandaLM: An automatic evaluation benchmark for LLM instruction tuning"
+                },
+                {
+                  "title": "PandaLM: An automatic evaluation benchmark for LLM instruction tuning",
+                  "citation": "Wang et al (2023g) PandaLM: An automatic evaluation benchmark for LLM instruction tuning"
+                },
+                {
+                  "title": "Chinese open instruction generalist: A preliminary release",
+                  "citation": "Zhang et al (2023l) Chinese open instruction generalist: A preliminary release"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.18",
+              "sec_title": "Multitask",
+              "citations": [
+                {
+                  "title": "CSL: A large-scale Chinese scientific literature dataset",
+                  "citation": "Li et al (2022b) CSL: A large-scale Chinese scientific literature dataset"
+                },
+                {
+                  "title": "QED: A framework and dataset for explanations in question answering",
+                  "citation": "Lamm et al (2021) QED: A framework and dataset for explanations in question answering. Transactions of the Association for Computational Linguistics 9:790-806. https://doi.org/10.1162/ tacl a 00398"
+                },
+                {
+                  "title": "Natural Questions: A benchmark for question answering research",
+                  "citation": "Kwiatkowski et al (2019) Natural Questions: A benchmark for question answering research. Transactions of the Association for Computational Linguistics 7:452-466. https://doi.org/10.1162/ tacl a 00276"
+                },
+                {
+                  "title": "METS-CoV: Medical annotations for COVID-19-related social media",
+                  "citation": "Zhou et al (2022) METS-CoV: Medical annotations for COVID-19-related social media"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.19",
+              "sec_title": "Multilingual",
+              "citations": [
+                {
+                  "title": "XNLI: Evaluating cross-lingual sentence representations",
+                  "citation": "Conneau et al (2018) XNLI: Evaluating cross-lingual sentence representations"
+                },
+                {
+                  "title": "XTREME: A massively multilingual multi-task benchmark",
+                  "citation": "Siddhant et al (2020) XTREME: A massively multilingual multi-task benchmark"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.20",
+              "sec_title": "Other",
+              "citations": [
+                {
+                  "title": "EcomGPT: Instruction-tuning large language model for E-commerce",
+                  "citation": "Li et al (2023m) EcomGPT: Instruction-tuning large language model for E-commerce"
+                },
+                {
+                  "title": "FewCLUE: A Chinese few-shot learning evaluation benchmark",
+                  "citation": "Xu et al (2021) FewCLUE: A Chinese few-shot learning evaluation benchmark"
+                },
+                {
+                  "title": "K2: A foundation language model for geoscience knowledge understanding and utilization",
+                  "citation": "Deng et al (2023) K2: A foundation language model for geoscience knowledge understanding and utilization"
+                },
+                {
+                  "title": "OWL: A large language model for IT operations",
+                  "citation": "Guo et al (2023b) OWL: A large language model for IT operations"
+                },
+                {
+                  "title": "MINT: Evaluating LLMs in multi-turn interaction",
+                  "citation": "Wang et al (2023e) MINT: Evaluating LLMs in multi-turn interaction"
+                },
+                {
+                  "title": "Phoenix: Democratizing ChatGPT across languages",
+                  "citation": "Zhu et al (2023) Phoenix: Democratizing ChatGPT across languages"
+                },
+                {
+                  "title": "Emotionally numb or empathetic",
+                  "citation": "Huang et al (2023a) Emotionally numb or empathetic"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Evaluation Methods",
+          "citations": [
+            {
+              "title": "BLEU: A method for automatic evaluation of machine translation",
+              "citation": "Papineni et al (2002) BLEU: A method for automatic evaluation of machine translation"
+            },
+            {
+              "title": "ROUGE: A package for automatic evaluation of summaries",
+              "citation": "Lin (2004) ROUGE: A package for automatic evaluation of summaries"
+            },
+            {
+              "title": "SuperCLUE: A comprehensive Chinese large language model benchmark",
+              "citation": "Xu et al (2023e) SuperCLUE: A comprehensive Chinese large language model benchmark"
+            },
+            {
+              "title": "BeaverTails: Towards improved safety alignment of LLM via a human-preference dataset",
+              "citation": "Ji et al (2023b) BeaverTails: Towards improved safety alignment of LLM via a human-preference dataset"
+            },
+            {
+              "title": "LMSYS-Chat-1M: A large-scale real-world LLM conversation dataset",
+              "citation": "Zheng et al (2023b) LMSYS-Chat-1M: A large-scale real-world LLM conversation dataset"
+            },
+            {
+              "title": "Chinese open instruction generalist",
+              "citation": "Zhang et al (2023h) Chinese open instruction generalist"
+            },
+            {
+              "title": "AlpacaFarm: A simulation framework for methods that learn from human feedback",
+              "citation": "Dubois et al (2023) AlpacaFarm: A simulation framework for methods that learn from human feedback"
+            },
+            {
+              "title": "Evaluating hallucinations in Chinese large language models",
+              "citation": "Cheng et al (2023) Evaluating hallucinations in Chinese large language models"
+            },
+            {
+              "title": "Benchmarking foundation models with language-model-as-an-examiner",
+              "citation": "Bai et al (2023c) Benchmarking foundation models with language-model-as-an-examiner"
+            },
+            {
+              "title": "OWL: A large language model for IT operations",
+              "citation": "Guo et al (2023b) OWL: A large language model for IT operations"
+            },
+            {
+              "title": "L-Eval: Instituting standardized evaluation for long context language models",
+              "citation": "An et al (2023) L-Eval: Instituting standardized evaluation for long context language models"
+            },
+            {
+              "title": "Chinese open instruction generalist: A preliminary release",
+              "citation": "Zhang et al (2023k) Chinese open instruction generalist: A preliminary release"
+            },
+            {
+              "title": "Safety assessment of Chinese large language models",
+              "citation": "Sun et al (2023a) Safety assessment of Chinese large language models"
+            },
+            {
+              "title": "ARB: Advanced reasoning benchmark for large language models",
+              "citation": "Sawada et al (2023) ARB: Advanced reasoning benchmark for large language models"
+            },
+            {
+              "title": "API-Bank: A comprehensive benchmark for tool-augmented LLMs",
+              "citation": "Li et al (2023i) API-Bank: A comprehensive benchmark for tool-augmented LLMs"
+            },
+            {
+              "title": "CMB: A comprehensive medical benchmark in Chinese",
+              "citation": "Wang et al (2023c) CMB: A comprehensive medical benchmark in Chinese"
+            },
+            {
+              "title": "FActScore: Finegrained atomic evaluation of factual precision in long form text generation",
+              "citation": "Min et al (2023) FActScore: Finegrained atomic evaluation of factual precision in long form text generation"
+            },
+            {
+              "title": "K2: A foundation language model for geoscience knowledge understanding and utilization",
+              "citation": "Deng et al (2023) K2: A foundation language model for geoscience knowledge understanding and utilization"
+            },
+            {
+              "title": "Holistic evaluation of language models",
+              "citation": "Liang et al (2023) Holistic evaluation of language models"
+            },
+            {
+              "title": "LegalBench: A collaboratively built benchmark for measuring legal reasoning in large language models",
+              "citation": "Guha et al (2023) LegalBench: A collaboratively built benchmark for measuring legal reasoning in large language models"
+            },
+            {
+              "title": "Large language models encode clinical knowledge. Nature 620(7972):172-180",
+              "citation": "Singhal et al (2023) Large language models encode clinical knowledge. Nature 620(7972):172-180"
+            },
+            {
+              "title": "SuperCLUE: A comprehensive Chinese large language model benchmark",
+              "citation": "Xu et al (2023e) SuperCLUE: A comprehensive Chinese large language model benchmark"
+            },
+            {
+              "title": "TruthfulQA: Measuring how models mimic human falsehoods",
+              "citation": "Lin et al (2022) TruthfulQA: Measuring how models mimic human falsehoods"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.3",
+          "sec_title": "Distribution Statistics of Evaluation Datasets",
+          "citations": [],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "Traditional NLP Datasets",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "6.1",
+          "sec_title": "Question Answering",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "6.1.1",
+              "sec_title": "Reading Comprehension",
+              "citations": [
+                {
+                  "title": "RACE: Large-scale reading comprehension dataset from examinations",
+                  "citation": "Lai et al (2017) RACE: Large-scale reading comprehension dataset from examinations"
+                },
+                {
+                  "title": "DREAM: A Challenge Data Set and Models for Dialogue-Based Reading Comprehension",
+                  "citation": "Sun et al (2019) DREAM: A challenge data set and models for dialogue-based reading comprehension. Transactions of the Association for Computational Linguistics 7:217-231. https://doi.org/10.1162/ tacl a 00264"
+                },
+                {
+                  "title": "Investigating prior knowledge for challenging Chinese machine reading comprehension. Transactions of the Association for Computational Linguistics 8:141-155. https://doi.org/10.1162/tacl a 00305",
+                  "citation": "Sun et al (2020) Investigating prior knowledge for challenging Chinese machine reading comprehension. Transactions of the Association for Computational Linguistics 8:141-155. https://doi.org/10.1162/tacl a 00305"
+                },
+                {
+                  "title": "ReClor: A reading comprehension dataset requiring logical reasoning",
+                  "citation": "Yu et al (2020b) ReClor: A reading comprehension dataset requiring logical reasoning"
+                },
+                {
+                  "title": "BoolQ: Exploring the surprising difficulty of natural yes/no questions",
+                  "citation": "Clark et al (2019) BoolQ: Exploring the surprising difficulty of natural yes/no questions"
+                },
+                {
+                  "title": "CONDAQA: A contrastive reading comprehension dataset for reasoning about negation",
+                  "citation": "Ravichander et al (2022) CONDAQA: A contrastive reading comprehension dataset for reasoning about negation"
+                },
+                {
+                  "title": "PubMedQA: A dataset for biomedical research question answering",
+                  "citation": "Jin et al (2019) PubMedQA: A dataset for biomedical research question answering"
+                },
+                {
+                  "title": "The LAMBADA dataset: Word prediction requiring a broad discourse context",
+                  "citation": "Paperno et al (2016) The LAMBADA dataset: Word prediction requiring a broad discourse context"
+                },
+                {
+                  "title": "Large-scale cloze test dataset created by teachers",
+                  "citation": "Xie et al (2018) Large-scale cloze test dataset created by teachers"
+                },
+                {
+                  "title": "ChID: A large-scale Chinese idiom dataset for cloze test",
+                  "citation": "Zheng et al (2019) ChID: A large-scale Chinese idiom dataset for cloze test"
+                },
+                {
+                  "title": "A sentence cloze dataset for Chinese machine reading comprehension",
+                  "citation": "Cui et al (2020) A sentence cloze dataset for Chinese machine reading comprehension"
+                },
+                {
+                  "title": "SQuAD: 100,000+ questions for machine comprehension of text",
+                  "citation": "Rajpurkar et al (2016) SQuAD: 100,000+ questions for machine comprehension of text"
+                },
+                {
+                  "title": "Know what you don't know: Unanswerable questions for SQuAD",
+                  "citation": "Rajpurkar et al (2018) Know what you don't know: Unanswerable questions for SQuAD"
+                },
+                {
+                  "title": "Beat the AI: Investigating adversarial human annotation for reading comprehension",
+                  "citation": "Bartolo et al (2020) Beat the AI: Investigating adversarial human annotation for reading comprehension"
+                },
+                {
+                  "title": "TriviaQA: A large scale distantly supervised challenge dataset for reading comprehension",
+                  "citation": "Joshi et al (2017) TriviaQA: A large scale distantly supervised challenge dataset for reading comprehension"
+                },
+                {
+                  "title": "Natural Questions: A benchmark for question answering research",
+                  "citation": "Kwiatkowski et al (2019) Natural Questions: A benchmark for question answering research. Transactions of the Association for Computational Linguistics 7:452-466. https://doi.org/10.1162/ tacl a 00276"
+                },
+                {
+                  "title": "A span-extraction dataset for Chinese machine reading comprehension",
+                  "citation": "Cui et al (2019) A span-extraction dataset for Chinese machine reading comprehension"
+                },
+                {
+                  "title": "DROP: A reading comprehension benchmark requiring discrete reasoning over paragraphs",
+                  "citation": "Dua et al (2019) DROP: A reading comprehension benchmark requiring discrete reasoning over paragraphs"
+                },
+                {
+                  "title": "A dataset of information-seeking questions and answers anchored in research papers",
+                  "citation": "Dasigi et al (2021) A dataset of information-seeking questions and answers anchored in research papers"
+                },
+                {
+                  "title": "CoQA: A conversational question answering challenge",
+                  "citation": "Reddy et al (2019) CoQA: A conversational question answering challenge. Transactions of the Association for Computational Linguistics 7:249-266. https://doi.org/10.1162/tacl a 00266"
+                },
+                {
+                  "title": "DuReader: A Chinese machine reading comprehension dataset from real-world applications",
+                  "citation": "He et al (2018) DuReader: A Chinese machine reading comprehension dataset from real-world applications"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.1.2",
+              "sec_title": "Knowledge QA",
+              "citations": [
+                {
+                  "title": "Think you have solved question answering? Try ARC, the AI2 reasoning challenge",
+                  "citation": "Clark et al (2018) Think you have solved question answering? Try ARC, the AI2 reasoning challenge"
+                },
+                {
+                  "title": "CommonsenseQA: A question answering challenge targeting commonsense knowledge",
+                  "citation": "Talmor et al (2019) CommonsenseQA: A question answering challenge targeting commonsense knowledge"
+                },
+                {
+                  "title": "Can a suit of armor conduct electricity? A new dataset for open book question answering",
+                  "citation": "Mihaylov et al (2018) Can a suit of armor conduct electricity? A new dataset for open book question answering"
+                },
+                {
+                  "title": "PIQA: Reasoning about physical commonsense in natural language",
+                  "citation": "Bisk et al (2020) PIQA: Reasoning about physical commonsense in natural language"
+                },
+                {
+                  "title": "Crowdsourcing multiple choice science questions",
+                  "citation": "Welbl et al (2017) Crowdsourcing multiple choice science questions"
+                },
+                {
+                  "title": "CNewSum: A large-scale summarization dataset",
+                  "citation": "Zhong et al (2020) CNewSum: A large-scale summarization dataset"
+                },
+                {
+                  "title": "Applying deep matching networks to Chinese medical question answering: A study and a dataset. BMC medical informatics and decision making 19(2):91-100",
+                  "citation": "He et al (2019) Applying deep matching networks to Chinese medical question answering: A study and a dataset. BMC medical informatics and decision making 19(2):91-100"
+                },
+                {
+                  "title": "PsyQA: A Chinese dataset for generating long counseling text for mental health support",
+                  "citation": "Sun et al (2021a) PsyQA: A Chinese dataset for generating long counseling text for mental health support"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "6.1.3",
+              "sec_title": "Reasoning QA",
+              "citations": [
+                {
+                  "title": "HellaSwag: Can a machine really finish your sentence?",
+                  "citation": "Zellers et al (2019a) HellaSwag: Can a machine really finish your sentence?"
+                },
+                {
+                  "title": "Social IQa: Commonsense reasoning about social interactions",
+                  "citation": "Sap et al (2019) Social IQa: Commonsense reasoning about social interactions"
+                },
+                {
+                  "title": "Reasoning over paragraph effects in situations",
+                  "citation": "Lin et al (2019) Reasoning over paragraph effects in situations"
+                },
+                {
+                  "title": "WIQA: A dataset for 'what if...' reasoning over procedural text",
+                  "citation": "Tandon et al (2019) WIQA: A dataset for 'what if...' reasoning over procedural text"
+                },
+                {
+                  "title": "Choice of plausible alternatives: An evaluation of commonsense causal reasoning",
+                  "citation": "Roemmele et al (2011) Choice of plausible alternatives: An evaluation of commonsense causal reasoning"
+                },
+                {
+                  "title": "LogiQA: A challenge dataset for machine reading comprehension with logical reasoning",
+                  "citation": "Liu et al (2021) LogiQA: A challenge dataset for machine reading comprehension with logical reasoning"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "6.2",
+          "sec_title": "Recognizing Textual Entailment",
+          "citations": [
+            {
+              "title": "The PASCAL recognising textual entailment challenge",
+              "citation": "Dagan et al (2006) The PASCAL recognising textual entailment challenge"
+            },
+            {
+              "title": "The second PASCAL recognising textual entailment challenge",
+              "citation": "Bar-Haim et al (2006) The second PASCAL recognising textual entailment challenge"
+            },
+            {
+              "title": "The third PASCAL recognizing textual entailment challenge",
+              "citation": "Giampiccolo et al (2007) The third PASCAL recognizing textual entailment challenge"
+            },
+            {
+              "title": "The fifth PASCAL recognizing textual entailment challenge",
+              "citation": "Bentivogli et al (2009) The fifth PASCAL recognizing textual entailment challenge"
+            },
+            {
+              "title": "The CommitmentBank: Investigating projection in naturally occurring discourse",
+              "citation": "De Marneffe et al (2019) The CommitmentBank: Investigating projection in naturally occurring discourse"
+            },
+            {
+              "title": "OCNLI: Original Chinese natural language inference",
+              "citation": "Hu et al (2020) OCNLI: Original Chinese natural language inference"
+            },
+            {
+              "title": "Adversarial NLI: A new benchmark for natural language understanding",
+              "citation": "Nie et al (2020) Adversarial NLI: A new benchmark for natural language understanding"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.3",
+          "sec_title": "Math",
+          "citations": [
+            {
+              "title": "Training verifiers to solve math word problems",
+              "citation": "Cobbe et al (2021) Training verifiers to solve math word problems"
+            },
+            {
+              "title": "A diverse corpus for evaluating and developing English math word problem solvers",
+              "citation": "Miao et al (2021) A diverse corpus for evaluating and developing English math word problem solvers"
+            },
+            {
+              "title": "Deep neural solver for math word problems",
+              "citation": "Wang et al (2017) Deep neural solver for math word problems"
+            },
+            {
+              "title": "Ape210K: A large-scale and templaterich dataset of math word problems",
+              "citation": "Zhao et al (2020) Ape210K: A large-scale and templaterich dataset of math word problems"
+            },
+            {
+              "title": "Measuring coding challenge competence with APPS",
+              "citation": "Hendrycks et al (2021d) Measuring coding challenge competence with APPS"
+            },
+            {
+              "title": "NaturalProofs: Mathematical theorem proving in natural language",
+              "citation": "Welleck et al (2021) NaturalProofs: Mathematical theorem proving in natural language"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.4",
+          "sec_title": "Coreference Resolution",
+          "citations": [
+            {
+              "title": "WiC: The word-in-context dataset for evaluating context-sensitive meaning representations",
+              "citation": "Pilehvar and Camacho-Collados (2019) WiC: The word-in-context dataset for evaluating context-sensitive meaning representations"
+            },
+            {
+              "title": "CLUE: A Chinese language understanding evaluation benchmark",
+              "citation": "Xu et al (2020b) CLUE: A Chinese language understanding evaluation benchmark"
+            },
+            {
+              "title": "The winograd schema challenge",
+              "citation": "Levesque et al (2012) The winograd schema challenge"
+            },
+            {
+              "title": "WinoGrande: An adversarial winograd schema challenge at scale. Commun ACM 64(9):99-106. https://doi.org/ 10.1145/3474381",
+              "citation": "Sakaguchi et al (2021) WinoGrande: An adversarial winograd schema challenge at scale. Commun ACM 64(9):99-106. https://doi.org/ 10.1145/3474381"
+            },
+            {
+              "title": "WinoWhy: A deep diagnosis of essential commonsense knowledge",
+              "citation": "Zhang et al (2020a) WinoWhy: A deep diagnosis of essential commonsense knowledge"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.5",
+          "sec_title": "Sentiment Analysis",
+          "citations": [
+            {
+              "title": "Learning word vectors for sentiment analysis",
+              "citation": "Maas et al (2011) Learning word vectors for sentiment analysis"
+            },
+            {
+              "title": "Twitter sentiment classification using distant supervision. CS224N project report, Stanford 1(12)",
+              "citation": "Go et al (2009) Twitter sentiment classification using distant supervision. CS224N project report, Stanford 1(12)"
+            },
+            {
+              "title": "Recursive deep models for semantic compositionality over a sentiment treebank",
+              "citation": "Socher et al (2013) Recursive deep models for semantic compositionality over a sentiment treebank"
+            },
+            {
+              "title": "FewCLUE: A Chinese few-shot learning evaluation benchmark",
+              "citation": "Xu et al (2021) FewCLUE: A Chinese few-shot learning evaluation benchmark"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.6",
+          "sec_title": "Semantic Matching",
+          "citations": [
+            {
+              "title": "Automatically constructing a corpus of sentential paraphrases",
+              "citation": "Dolan and Brockett (2005) Automatically constructing a corpus of sentential paraphrases"
+            },
+            {
+              "title": "GLUE: A multi-task benchmark and analysis platform for natural language understanding",
+              "citation": "Wang et al (2018) GLUE: A multi-task benchmark and analysis platform for natural language understanding"
+            },
+            {
+              "title": "This email could save your life: Introducing the task of email subject line generation",
+              "citation": "Zhang et al (2019) This email could save your life: Introducing the task of email subject line generation"
+            },
+            {
+              "title": "CLUE: A Chinese language understanding evaluation benchmark",
+              "citation": "Xu et al (2020b) CLUE: A Chinese language understanding evaluation benchmark"
+            },
+            {
+              "title": "LCQMC: A large-scale Chinese question matching corpus",
+              "citation": "Liu et al (2018) LCQMC: A large-scale Chinese question matching corpus"
+            },
+            {
+              "title": "PAWS-X: A cross-lingual adversarial dataset for paraphrase identification",
+              "citation": "Yang et al (2019) PAWS-X: A cross-lingual adversarial dataset for paraphrase identification"
+            },
+            {
+              "title": "SemEval-2017 task 1: Semantic textual similarity multilingual and crosslingual focused evaluation",
+              "citation": "Cer et al (2017) SemEval-2017 task 1: Semantic textual similarity multilingual and crosslingual focused evaluation"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.7",
+          "sec_title": "Text Generation",
+          "citations": [
+            {
+              "title": "CommonGen: A constrained text generation challenge",
+              "citation": "Lin et al (2020) CommonGen: A constrained text generation challenge"
+            },
+            {
+              "title": "The E2E dataset: New challenges for end-toend generation",
+              "citation": "Novikova et al (2017) The E2E dataset: New challenges for end-toend generation"
+            },
+            {
+              "title": "DART: Opendomain structured data record to text generation",
+              "citation": "Nan et al (2021) DART: Opendomain structured data record to text generation"
+            },
+            {
+              "title": "Creating training corpora for NLG micro-planners",
+              "citation": "Gardent et al (2017) Creating training corpora for NLG micro-planners"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.8",
+          "sec_title": "Text Translation",
+          "citations": [
+            {
+              "title": "CONDAQA: A contrastive reading comprehension dataset for reasoning about negation",
+              "citation": "Costa-juss` a et al (2022) CONDAQA: A contrastive reading comprehension dataset for reasoning about negation"
+            },
+            {
+              "title": "Overview of the IWSLT 2017 evaluation campaign",
+              "citation": "Cettolo et al (2017) Overview of the IWSLT 2017 evaluation campaign"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.9",
+          "sec_title": "Text Summarization",
+          "citations": [
+            {
+              "title": "Get to the point: Summarization with pointergenerator networks",
+              "citation": "See et al (2017) Get to the point: Summarization with pointergenerator networks"
+            },
+            {
+              "title": "Don't give me the details, just the summary! Topic-aware convolutional neural networks for extreme summarization",
+              "citation": "Narayan et al (2018) Don't give me the details, just the summary! Topic-aware convolutional neural networks for extreme summarization"
+            },
+            {
+              "title": "SAMSum corpus: A human-annotated dialogue dataset for abstractive summarization",
+              "citation": "Gliwa et al (2019) SAMSum corpus: A human-annotated dialogue dataset for abstractive summarization"
+            },
+            {
+              "title": "Neural network-based abstract generation for opinions and arguments",
+              "citation": "Wang and Ling (2016) Neural network-based abstract generation for opinions and arguments"
+            },
+            {
+              "title": "LCSTS: A large scale Chinese short text summarization dataset",
+              "citation": "Hu et al (2015) LCSTS: A large scale Chinese short text summarization dataset"
+            },
+            {
+              "title": "A large-scale corpus of Chinese scientific literature",
+              "citation": "Zhu et al (2021) A large-scale corpus of Chinese scientific literature"
+            },
+            {
+              "title": "This email could save your life: Introducing the task of email subject line generation",
+              "citation": "Zhang and Tetreault (2019) This email could save your life: Introducing the task of email subject line generation"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.10",
+          "sec_title": "Text Classification",
+          "citations": [
+            {
+              "title": "Character-level convolutional networks for text classification",
+              "citation": "Zhang et al (2015) Character-level convolutional networks for text classification"
+            },
+            {
+              "title": "CLUE: A Chinese language understanding evaluation benchmark",
+              "citation": "Xu et al (2020b) CLUE: A Chinese language understanding evaluation benchmark"
+            },
+            {
+              "title": "FewCLUE: A Chinese few-shot learning evaluation benchmark",
+              "citation": "Xu et al (2021) FewCLUE: A Chinese few-shot learning evaluation benchmark"
+            },
+            {
+              "title": "CLUE: A Chinese language understanding evaluation benchmark",
+              "citation": "Xu et al (2020b) CLUE: A Chinese language understanding evaluation benchmark"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.11",
+          "sec_title": "Text Quality Evaluation",
+          "citations": [
+            {
+              "title": "Neural network acceptability judgments. Transactions of the Association for Computational Linguistics 7:625-641. https: //doi.org/10.1162/tacl a 00290",
+              "citation": "Warstadt et al (2019) Neural network acceptability judgments. Transactions of the Association for Computational Linguistics 7:625-641. https: //doi.org/10.1162/tacl a 00290"
+            },
+            {
+              "title": "Chinese spelling check evaluation at SIGHAN bakeoff 2013",
+              "citation": "Wu et al (2013) Chinese spelling check evaluation at SIGHAN bakeoff 2013"
+            },
+            {
+              "title": "Overview of SIGHAN 2014 bake-off for Chinese spelling check",
+              "citation": "Yu et al (2014) Overview of SIGHAN 2014 bake-off for Chinese spelling check"
+            },
+            {
+              "title": "Introduction to SIGHAN 2015 bakeoff for Chinese spelling check",
+              "citation": "Tseng et al (2015) Introduction to SIGHAN 2015 bakeoff for Chinese spelling check"
+            },
+            {
+              "title": "YACLC: A Chinese learner corpus with multidimensional annotation",
+              "citation": "Wang et al (2021b) YACLC: A Chinese learner corpus with multidimensional annotation"
+            },
+            {
+              "title": "CSCD-IME: Correcting spelling errors generated by Pinyin IME",
+              "citation": "Hu et al (2022b) CSCD-IME: Correcting spelling errors generated by Pinyin IME"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.12",
+          "sec_title": "Text-to-Code",
+          "citations": [
+            {
+              "title": "Program synthesis with large language models",
+              "citation": "Austin et al (2021) Program synthesis with large language models"
+            },
+            {
+              "title": "DuSQL: A large-scale and pragmatic Chinese text-to-SQL dataset",
+              "citation": "Wang et al (2020a) DuSQL: A large-scale and pragmatic Chinese text-to-SQL dataset"
+            },
+            {
+              "title": "A pilot study for Chinese SQL semantic parsing",
+              "citation": "Min et al (2019) A pilot study for Chinese SQL semantic parsing"
+            },
+            {
+              "title": "Spider: A large-scale human-labeled dataset for complex semantic parsing",
+              "citation": "Yu et al (2018) Spider: A large-scale human-labeled dataset for complex semantic parsing"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.13",
+          "sec_title": "Named Entity Recognition",
+          "citations": [
+            {
+              "title": "Introduction to the CoNLL-2003 shared task: Language-independent named entity recognition",
+              "citation": "Tjong Kim Sang and De Meulder (2003) Introduction to the CoNLL-2003 shared task: Language-independent named entity recognition"
+            },
+            {
+              "title": "OntoNotes release 5.0 with OntoNotes DB tool v0.999 beta. Linguistic Data Consortium pp 1-53",
+              "citation": "Weischedel et al (2012) OntoNotes release 5.0 with OntoNotes DB tool v0.999 beta. Linguistic Data Consortium pp 1-53"
+            },
+            {
+              "title": "Results of the WNUT2017 shared task on novel and emerging entity recognition",
+              "citation": "Derczynski et al (2017) Results of the WNUT2017 shared task on novel and emerging entity recognition"
+            },
+            {
+              "title": "Better modeling of incomplete annotations for named entity recognition",
+              "citation": "Jie et al (2019) Better modeling of incomplete annotations for named entity recognition"
+            },
+            {
+              "title": "Better modeling of incomplete annotations for named entity recognition",
+              "citation": "Jie et al (2019) Better modeling of incomplete annotations for named entity recognition"
+            },
+            {
+              "title": "Named entity recognition for Chinese social media with jointly trained embeddings",
+              "citation": "Peng and Dredze (2015) Named entity recognition for Chinese social media with jointly trained embeddings"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.14",
+          "sec_title": "Relation Extraction",
+          "citations": [
+            {
+              "title": "Dialogue-based relation extraction",
+              "citation": "Yu et al (2020a) Dialogue-based relation extraction"
+            },
+            {
+              "title": "DocRED: A large-scale document-level relation extraction dataset",
+              "citation": "Yao et al (2019) DocRED: A large-scale document-level relation extraction dataset"
+            },
+            {
+              "title": "FewRel: A large-scale supervised few-shot relation classification dataset with state-of-the-art evaluation",
+              "citation": "Han et al (2018) FewRel: A large-scale supervised few-shot relation classification dataset with state-of-the-art evaluation"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.15",
+          "sec_title": "Multitask",
+          "citations": [
+            {
+              "title": "CSL: A large-scale Chinese scientific literature dataset",
+              "citation": "Li et al (2022b) CSL: A large-scale Chinese scientific literature dataset"
+            },
+            {
+              "title": "QED: A framework and dataset for explanations in question answering",
+              "citation": "Lamm et al (2021) QED: A framework and dataset for explanations in question answering. Transactions of the Association for Computational Linguistics 9:790-806. https://doi.org/10.1162/ tacl a 00398"
+            },
+            {
+              "title": "Natural Questions: A benchmark for question answering research",
+              "citation": "Kwiatkowski et al (2019) Natural Questions: A benchmark for question answering research. Transactions of the Association for Computational Linguistics 7:452-466. https://doi.org/10.1162/ tacl a 00276"
+            },
+            {
+              "title": "METS-CoV: Medical annotations for COVID-19-related social media",
+              "citation": "Zhou et al (2022) METS-CoV: Medical annotations for COVID-19-related social media"
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "Challenges and Future Directions",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "7.1",
+          "sec_title": "Pre-training Corpora",
+          "citations": [
+            {
+              "title": "A pretrainer guide to training data: Measuring the effects of data age",
+              "citation": "Longpre et al (2023c) A pretrainer guide to training data: Measuring the effects of data age"
+            },
+            {
+              "title": "The Pile: An 800GB dataset of diverse text for language modeling",
+              "citation": "Gao et al (2020) The Pile: An 800GB dataset of diverse text for language modeling"
+            },
+            {
+              "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+              "citation": "Raffel et al (2020) Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.2",
+          "sec_title": "Instruction Fine-tuning Datasets",
+          "citations": [
+            {
+              "title": "Stanford Alpaca: An instruction-following LLaMA model. https://github.com/tatsu-lab/ stanford alpaca",
+              "citation": "Taori et al (2023) Stanford Alpaca: An instruction-following LLaMA model. https://github.com/tatsu-lab/ stanford alpaca"
+            },
+            {
+              "title": "Baichuan 2: Open large-scale language models",
+              "citation": "Yang (2023) Baichuan 2: Open large-scale language models"
+            },
+            {
+              "title": "BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE",
+              "citation": "BELLEGroup (2023) BELLE: Be everyone's large language model engine. https:// github.com/LianjiaTech/BELLE"
+            },
+            {
+              "title": "Safety assessment of Chinese large language models",
+              "citation": "Zhou et al (2023b) Safety assessment of Chinese large language models"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.3",
+          "sec_title": "Preference Datasets",
+          "citations": [
+            {
+              "title": "Ultrafeedback: Boosting language models with high-quality feedback",
+              "citation": "Cui et al (2023) Ultrafeedback: Boosting language models with high-quality feedback"
+            },
+            {
+              "title": "Ultrafeedback: Boosting language models with high-quality feedback",
+              "citation": "Cui et al (2023) Ultrafeedback: Boosting language models with high-quality feedback"
+            },
+            {
+              "title": "Ultrafeedback: Boosting language models with high-quality feedback",
+              "citation": "Cui et al (2023) Ultrafeedback: Boosting language models with high-quality feedback"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.4",
+          "sec_title": "Evaluation Datasets",
+          "citations": [
+            {
+              "title": "Can we trust the evaluation on ChatGPT?",
+              "citation": "Aiyappa et al (2023) Can we trust the evaluation on ChatGPT?"
+            },
+            {
+              "title": "Safety assessment of Chinese large language models",
+              "citation": "Zhou et al (2023b) Safety assessment of Chinese large language models"
+            },
+            {
+              "title": "ARB: Advanced reasoning benchmark for large language models",
+              "citation": "Sawada et al (2023) ARB: Advanced reasoning benchmark for large language models"
+            },
+            {
+              "title": "EcomGPT: Instruction-tuning large language model for E-commerce",
+              "citation": "Li et al (2023m) EcomGPT: Instruction-tuning large language model for E-commerce"
+            },
+            {
+              "title": "K2: A foundation language model for geoscience knowledge understanding and utilization",
+              "citation": "Deng et al (2023) K2: A foundation language model for geoscience knowledge understanding and utilization"
+            },
+            {
+              "title": "Evaluating large language models: A comprehensive survey",
+              "citation": "Guo et al (2023c) Evaluating large language models: A comprehensive survey"
+            },
+            {
+              "title": "Holistic evaluation of language models",
+              "citation": "Liang et al (2023) Holistic evaluation of language models"
+            },
+            {
+              "title": "OpenCompass: A universal evaluation platform for foundation models. https://github.com/open-compass/opencompass",
+              "citation": "Contributors (2023) OpenCompass: A universal evaluation platform for foundation models. https://github.com/open-compass/opencompass"
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "Conclusion",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

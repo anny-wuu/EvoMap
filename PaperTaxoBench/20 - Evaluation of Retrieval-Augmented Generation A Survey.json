@@ -1,0 +1,649 @@
+{
+  "track": "Information Retrieval",
+  "paper_title": "Evaluation of Retrieval-Augmented Generation: A Survey",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "Introduction",
+      "citations": [
+        {
+          "title": "Retrieval-augmented generation for knowledge-intensive NLP tasks",
+          "citation": "Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W.t., Rocktäschel, T., Riedel, S., Kiela, D.: Retrieval-augmented generation for knowledge-intensive NLP tasks. In: Proceedings of the 34th International Conference on Neural Information Processing Systems. pp. 9459-9474. NIPS'20, Curran Associates Inc., Red Hook, NY, USA (Dec 2020)"
+        },
+        {
+          "title": "A survey on hallucination in large language models: Principles, taxonomy, challenges, and open questions",
+          "citation": "Huang, L., Yu, W., Ma, W., Zhong, W., Feng, Z., Wang, H., Chen, Q., Peng, W., Feng, X., Qin, B., Liu, T.: A survey on hallucination in large language models: Principles, taxonomy, challenges, and open questions (Nov 2023). https://doi.org/10.48550/ARXIV. 2311.05232"
+        },
+        {
+          "title": "Merging Generated and Retrieved Knowledge for Open-Domain QA",
+          "citation": "Zhang, Y., Khalifa, M., Logeswaran, L., Lee, M., Lee, H., Wang, L.: Merging Generated and Retrieved Knowledge for Open-Domain QA. In: Bouamor, H., Pino, J., Bali, K. (eds.) Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing. pp. 4710-4728. Association for Computational Linguistics, Singapore (Dec 2023). https://doi.org/10.18653/v1/2023.emnlp-main.286 , https:// aclanthology.org/2023.emnlp-main.286"
+        },
+        {
+          "title": "Merging Generated and Retrieved Knowledge for Open-Domain QA",
+          "citation": "Zhang, Y., Khalifa, M., Logeswaran, L., Lee, M., Lee, H., Wang, L.: Merging Generated and Retrieved Knowledge for Open-Domain QA. In: Bouamor, H., Pino, J., Bali, K. (eds.) Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing. pp. 4710-4728. Association for Computational Linguistics, Singapore (Dec 2023). https://doi.org/10.18653/v1/2023.emnlp-main.286 , https:// aclanthology.org/2023.emnlp-main.286"
+        },
+        {
+          "title": "Llm lies: Hallucinations are not bugs, but features as adversarial examples",
+          "citation": "Yao, J.Y., Ning, K.P., Liu, Z.H., Ning, M.N., Yuan, L.: Llm lies: Hallucinations are not bugs, but features as adversarial examples. arXiv preprint arXiv:2310.01469 (2023)"
+        },
+        {
+          "title": "Attention is all you need",
+          "citation": "Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L., Polosukhin, I.: Attention is all you need (Jun 2017). https://doi.org/10.48550/ ARXIV.1706.03762"
+        },
+        {
+          "title": "Language models are unsupervised multitask learners",
+          "citation": "Radford, A., Wu, J., Child, R., Luan, D., Amodei, D., Sutskever, I., et al.: Language models are unsupervised multitask learners. OpenAI blog 1 (8), 9 (2019)"
+        },
+        {
+          "title": "Emergent abilities of large language models",
+          "citation": "Wei, J., Tay, Y., Bommasani, R., Raffel, C., Zoph, B., Borgeaud, S., Yogatama, D., Bosma, M., Zhou, D., Metzler, D., Chi, E.H., Hashimoto, T., Vinyals, O., Liang, P., Dean, J., Fedus, W.: Emergent abilities of large language models (Jun 2022). https://doi.org/10. 48550/ARXIV.2206.07682"
+        },
+        {
+          "title": "Training language models to follow instructions with human feedback",
+          "citation": "Ouyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C.L., Mishkin, P., Zhang, C., Agarwal, S., Slama, K., Ray, A., Schulman, J., Hilton, J., Kelton, F., Miller, L., Simens, M., Askell, A., Welinder, P., Christiano, P., Leike, J., Lowe, R.: Training language models to follow instructions with human feedback. Tech. rep. (Mar 2022). https://doi. org/10.48550/arXiv.2203.02155 , http://arxiv.org/abs/2203.02155 , arXiv:2203.02155 [cs] type: article"
+        },
+        {
+          "title": "GPT-4 Technical Report",
+          "citation": "OpenAI, Achiam, J., Adler, S., Agarwal, S., Ahmad, L., Akkaya, I., Aleman, F.L., Almeida, D., Altenschmidt, J., Altman, S., Anadkat, S., Avila, R., Babuschkin, I., Balaji, S., Balcom, V., Baltescu, P., Bao, H., Bavarian, M., Belgum, J., Bello, I., Berdine, J., BernadettShapiro, G., Berner, C., Bogdonoff, L., Boiko, O., Boyd, M., Brakman, A.L., Brockman, G., Brooks, T., Brundage, M., Button, K., Cai, T., Campbell, R., Cann, A., Carey, B., Carlson, C., Carmichael, R., Chan, B., Chang, C., Chantzis, F., Chen, D., Chen, S., Chen, R., Chen, J., Chen, M., Chess, B., Cho, C., Chu, C., Chung, H.W., Cummings, D., Currier, J., Dai, Y., Decareaux, C., Degry, T., Deutsch, N., Deville, D., Dhar, A., Dohan, D., Dowling, S., Dunning, S., Ecoffet, A., Eleti, A., Eloundou, T., Farhi, D., Fedus, L., Felix, N., Fishman, S.P., Forte, J., Fulford, I., Gao, L., Georges, E., Gibson, C., Goel, V., Gogineni, T.,"
+        },
+        {
+          "title": "Incorporating dynamic semantics into pre-trained language model for aspect-based sentiment analysis",
+          "citation": "Zhang, K., Zhang, K., Zhang, M., Zhao, H., Liu, Q., Wu, W., Chen, E.: Incorporating dynamic semantics into pre-trained language model for aspect-based sentiment analysis. arXiv preprint arXiv:2203.16369 (2022)"
+        },
+        {
+          "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+          "citation": "Gao, Y., Xiong, Y., Gao, X., Jia, K., Pan, J., Bi, Y., Dai, Y., Sun, J., Guo, Q., Wang, M., Wang, H.: Retrieval-Augmented Generation for Large Language Models: A Survey. Tech. rep. (Jan 2024), http://arxiv.org/abs/2312.10997 , arXiv:2312.10997 [cs] type: article"
+        },
+        {
+          "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+          "citation": "Gao, Y., Xiong, Y., Gao, X., Jia, K., Pan, J., Bi, Y., Dai, Y., Sun, J., Guo, Q., Wang, M., Wang, H.: Retrieval-Augmented Generation for Large Language Models: A Survey. Tech. rep. (Jan 2024), http://arxiv.org/abs/2312.10997 , arXiv:2312.10997 [cs] type: article"
+        },
+        {
+          "title": "The faiss library",
+          "citation": "Douze, M., Guzhva, A., Deng, C., Johnson, J., Szilvasy, G., Mazaré, P.E., Lomeli, M., Hosseini, L., Jégou, H.: The faiss library (2024)"
+        },
+        {
+          "title": "Colbert: Efficient and effective passage search via contextualized late interaction over bert",
+          "citation": "Khattab, O., Zaharia, M.: Colbert: Efficient and effective passage search via contextualized late interaction over bert (Apr 2020). https://doi.org/10.48550/ARXIV.2004. 12832"
+        },
+        {
+          "title": "Enhancing RAG Pipelines in Haystack: Introducing DiversityRanker and LostInTheMiddleRanker",
+          "citation": "Blagojevic, V.: Enhancing RAG Pipelines in Haystack: Introducing DiversityRanker and LostInTheMiddleRanker (Aug 2023), https://towardsdatascience.com/ enhancing-rag-pipelines-in-haystack-45f14e2bc9f5"
+        },
+        {
+          "title": "Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models",
+          "citation": "Lyu, Y., Li, Z., Niu, S., Xiong, F., Tang, B., Wang, W., Wu, H., Liu, H., Xu, T., Chen, E., Luo, Y., Cheng, P., Deng, H., Wang, Z., Lu, Z.: Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models (Jan 2024). https://doi. org/10.48550/ARXIV.2401.17043"
+        },
+        {
+          "title": "Benchmarking large language models in retrieval-augmented generation",
+          "citation": "Chen, J., Lin, H., Han, X., Sun, L.: Benchmarking large language models in retrievalaugmented generation (Sep 2023). https://doi.org/10.48550/ARXIV.2309. 01431"
+        },
+        {
+          "title": "Multihop-rag: Benchmarking retrieval-augmented generation for multihop queries",
+          "citation": "Tang, Y., Yang, Y.: Multihop-rag: Benchmarking retrieval-augmented generation for multihop queries (Jan 2024). https://doi.org/10.48550/ARXIV.2401.15391"
+        },
+        {
+          "title": "Emergent abilities of large language models",
+          "citation": "Wei, J., Tay, Y., Bommasani, R., Raffel, C., Zoph, B., Borgeaud, S., Yogatama, D., Bosma, M., Zhou, D., Metzler, D., Chi, E.H., Hashimoto, T., Vinyals, O., Liang, P., Dean, J., Fedus, W.: Emergent abilities of large language models (Jun 2022). https://doi.org/10. 48550/ARXIV.2206.07682"
+        },
+        {
+          "title": "Training language models to follow instructions with human feedback",
+          "citation": "Ouyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C.L., Mishkin, P., Zhang, C., Agarwal, S., Slama, K., Ray, A., Schulman, J., Hilton, J., Kelton, F., Miller, L., Simens, M., Askell, A., Welinder, P., Christiano, P., Leike, J., Lowe, R.: Training language models to follow instructions with human feedback. Tech. rep. (Mar 2022). https://doi. org/10.48550/arXiv.2203.02155 , http://arxiv.org/abs/2203.02155 , arXiv:2203.02155 [cs] type: article"
+        },
+        {
+          "title": "Chain-of-thought prompting elicits reasoning in large language models",
+          "citation": "Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., Chi, E., Le, Q., Zhou, D.: Chain-of-thought prompting elicits reasoning in large language models (Jan 2022). https: //doi.org/10.48550/ARXIV.2201.11903"
+        },
+        {
+          "title": "Tree of Thoughts: Deliberate problem solving with large language models",
+          "citation": "Yao, S., Yu, D., Zhao, J., Shafran, I., Griffiths, T.L., Cao, Y., Narasimhan, K.: Tree of Thoughts: Deliberate problem solving with large language models (2023)"
+        },
+        {
+          "title": "Rephrase and respond: Let large language models ask better questions for themselves",
+          "citation": "Deng, Y., Zhang, W., Chen, Z., Gu, Q.: Rephrase and respond: Let large language models ask better questions for themselves (Nov 2023). https://doi.org/10.48550/ARXIV. 2311.04205"
+        },
+        {
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "citation": "Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W.t., Rocktäschel, T., Riedel, S., Kiela, D.: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. Tech. rep. (Apr 2021), http://arxiv.org/abs/ 2005.11401 , arXiv:2005.11401 [cs] type: article"
+        },
+        {
+          "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+          "citation": "Devlin, J., Chang, M.W., Lee, K., Toutanova, K.: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. In: Burstein, J., Doran, C., Solorio, T. (eds.) Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers). pp. 4171-4186. Association for Computational Linguistics, Minneapolis, Minnesota (Jun 2019). https://doi.org/10.18653/v1/N19-1423 , https: //aclanthology.org/N19-1423"
+        },
+        {
+          "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+          "citation": "Gao, Y., Xiong, Y., Gao, X., Jia, K., Pan, J., Bi, Y., Dai, Y., Sun, J., Guo, Q., Wang, M., Wang, H.: Retrieval-Augmented Generation for Large Language Models: A Survey. Tech. rep. (Jan 2024), http://arxiv.org/abs/2312.10997 , arXiv:2312.10997 [cs] type: article"
+        },
+        {
+          "title": "RAG vs Fine-tuning: Pipelines, Tradeoffs, and a Case Study on Agriculture",
+          "citation": "Balaguer, A., Benara, V., Cunha, R.L.d.F., Filho, R.d.M.E., Hendry, T., Holstein, D., Marsman, J., Mecklenburg, N., Malvar, S., Nunes, L.O., Padilha, R., Sharp, M., Silva, B., Sharma, S., Aski, V., Chandra, R.: RAG vs Fine-tuning: Pipelines, Tradeoffs, and a Case Study on Agriculture. Tech. rep. (Jan 2024), http://arxiv.org/abs/2401.08406 , arXiv:2401.08406 [cs] type: article"
+        },
+        {
+          "title": "Eatn: An efficient adaptive transfer network for aspect-level sentiment analysis",
+          "citation": "Zhang, K., Liu, Q., Qian, H., Xiang, B., Cui, Q., Zhou, J., Chen, E.: Eatn: An efficient adaptive transfer network for aspect-level sentiment analysis. IEEE Transactions on Knowledge and Data Engineering 35 (1), 377-389 (2021)"
+        },
+        {
+          "title": "Interactive attention transfer network for cross-domain sentiment classification",
+          "citation": "Zhang, K., Zhang, H., Liu, Q., Zhao, H., Zhu, H., Chen, E.: Interactive attention transfer network for cross-domain sentiment classification. In: Proceedings of the AAAI Conference on Artificial Intelligence. vol. 33, pp. 5773-5780 (2019)"
+        },
+        {
+          "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+          "citation": "Hu, E.J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L., Chen, W.: LoRA: Low-Rank Adaptation of Large Language Models. Tech. rep. (Oct 2021). https://doi. org/10.48550/arXiv.2106.09685 , http://arxiv.org/abs/2106.09685 , arXiv:2106.09685 [cs] type: article"
+        },
+        {
+          "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+          "citation": "Gao, Y., Xiong, Y., Gao, X., Jia, K., Pan, J., Bi, Y., Dai, Y., Sun, J., Guo, Q., Wang, M., Wang, H.: Retrieval-Augmented Generation for Large Language Models: A Survey. Tech. rep. (Jan 2024), http://arxiv.org/abs/2312.10997 , arXiv:2312.10997 [cs] type: article"
+        },
+        {
+          "title": "A Survey for Efficient Open Domain Question Answering",
+          "citation": "Zhang, Q., Chen, S., Xu, D., Cao, Q., Chen, X., Cohn, T., Fang, M.: A Survey for Efficient Open Domain Question Answering. In: Rogers, A., Boyd-Graber, J., Okazaki, N. (eds.) Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (V olume 1: Long Papers). pp. 14447-14465. Association for Computational Linguistics, Toronto, Canada (Jul 2023). https://doi.org/10.18653/v1/2023.acl-long. 808 , https://aclanthology.org/2023.acl-long.808"
+        },
+        {
+          "title": "Seven failure points when engineering a retrieval augmented generation system",
+          "citation": "Barnett, S., Kurniawan, S., Thudumu, S., Brannelly, Z., Abdelrazek, M.: Seven failure points when engineering a retrieval augmented generation system (Jan 2024). https://doi. org/10.48550/ARXIV.2401.05856"
+        },
+        {
+          "title": "The power of noise: Redefining retrieval for rag systems",
+          "citation": "Cuconasu, F., Trappolini, G., Siciliano, F., Filice, S., Campagnano, C., Maarek, Y., Tonellotto, N., Silvestri, F.: The power of noise: Redefining retrieval for rag systems (Jan 2024). https://doi.org/10.48550/ARXIV.2401.14887"
+        },
+        {
+          "title": "Retrieval-augmented generation for ai-generated content: A survey",
+          "citation": "Zhao, P., Zhang, H., Yu, Q., Wang, Z., Geng, Y., Fu, F., Yang, L., Zhang, W., Cui, B.: Retrieval-augmented generation for ai-generated content: A survey (Feb 2024). https: //doi.org/10.48550/ARXIV.2402.19473"
+        },
+        {
+          "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+          "citation": "Gao, Y., Xiong, Y., Gao, X., Jia, K., Pan, J., Bi, Y., Dai, Y., Sun, J., Guo, Q., Wang, M., Wang, H.: Retrieval-Augmented Generation for Large Language Models: A Survey. Tech. rep. (Jan 2024), http://arxiv.org/abs/2312.10997 , arXiv:2312.10997 [cs] type: article"
+        },
+        {
+          "title": "A survey on retrieval-augmented text generation for large language models",
+          "citation": "Huang, Y., Huang, J.: A survey on retrieval-augmented text generation for large language models (Apr 2024). https://doi.org/10.48550/ARXIV.2404.10981"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "Challenges in Evaluating RAG Systems",
+      "citations": [
+        {
+          "title": "Multihop-rag: Benchmarking retrieval-augmented generation for multihop queries",
+          "citation": "Tang, Y., Yang, Y.: Multihop-rag: Benchmarking retrieval-augmented generation for multihop queries (Jan 2024). https://doi.org/10.48550/ARXIV.2401.15391"
+        },
+        {
+          "title": "Evaluating rag architectures on benchmark tasks",
+          "citation": "LangChain: Evaluating rag architectures on benchmark tasks (Nov 2023), https: //langchain-ai.github.io/langchain-benchmarks/notebooks/ retrieval/langchain\\_docs\\_qa.html"
+        },
+        {
+          "title": "Benchmarking large language models in retrieval-augmented generation",
+          "citation": "Chen, J., Lin, H., Han, X., Sun, L.: Benchmarking large language models in retrievalaugmented generation (Sep 2023). https://doi.org/10.48550/ARXIV.2309. 01431"
+        },
+        {
+          "title": "Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models",
+          "citation": "Lyu, Y., Li, Z., Niu, S., Xiong, F., Tang, B., Wang, W., Wu, H., Liu, H., Xu, T., Chen, E., Luo, Y., Cheng, P., Deng, H., Wang, Z., Lu, Z.: Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models (Jan 2024). https://doi. org/10.48550/ARXIV.2401.17043"
+        },
+        {
+          "title": "Ares: An automated evaluation framework for retrieval-augmented generation systems",
+          "citation": "Saad-Falcon, J., Khattab, O., Potts, C., Zaharia, M.: Ares: An automated evaluation framework for retrieval-augmented generation systems (Nov 2023). https://doi.org/10. 48550/ARXIV.2311.09476"
+        },
+        {
+          "title": "Judging llm-as-a-judge with mt-bench and chatbot arena",
+          "citation": "Zheng, L., Chiang, W.L., Sheng, Y., Zhuang, S., Wu, Z., Zhuang, Y., Lin, Z., Li, Z., Li, D., Xing, E.P., Zhang, H., Gonzalez, J.E., Stoica, I.: Judging llm-as-a-judge with mt-bench and chatbot arena (Jun 2023). https://doi.org/10.48550/ARXIV.2306.05685"
+        },
+        {
+          "title": "Ares: An automated evaluation framework for retrieval-augmented generation systems",
+          "citation": "Saad-Falcon, J., Khattab, O., Potts, C., Zaharia, M.: Ares: An automated evaluation framework for retrieval-augmented generation systems (Nov 2023). https://doi.org/10. 48550/ARXIV.2311.09476"
+        },
+        {
+          "title": "Researchy questions: A dataset of multi-perspective, decompositional questions for llm web agents",
+          "citation": "Rosset, C., Chung, H.L., Qin, G., Chau, E.C., Feng, Z., Awadallah, A., Neville, J., Rao, N.: Researchy questions: A dataset of multi-perspective, decompositional questions for llm web agents (Feb 2024). https://doi.org/10.48550/ARXIV.2402.17896"
+        },
+        {
+          "title": "Ares: An automated evaluation framework for retrieval-augmented generation systems",
+          "citation": "Saad-Falcon, J., Khattab, O., Potts, C., Zaharia, M.: Ares: An automated evaluation framework for retrieval-augmented generation systems (Nov 2023). https://doi.org/10. 48550/ARXIV.2311.09476"
+        },
+        {
+          "title": "Ragas: Automated evaluation of retrieval augmented generation",
+          "citation": "Es, S., James, J., Espinosa-Anke, L., Schockaert, S.: Ragas: Automated evaluation of retrieval augmented generation (Sep 2023). https://doi.org/10.48550/ARXIV. 2309.15217"
+        },
+        {
+          "title": "Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models",
+          "citation": "Lyu, Y., Li, Z., Niu, S., Xiong, F., Tang, B., Wang, W., Wu, H., Liu, H., Xu, T., Chen, E., Luo, Y., Cheng, P., Deng, H., Wang, Z., Lu, Z.: Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models (Jan 2024). https://doi. org/10.48550/ARXIV.2401.17043"
+        },
+        {
+          "title": "Benchmarking large language models in retrieval-augmented generation",
+          "citation": "Chen, J., Lin, H., Han, X., Sun, L.: Benchmarking large language models in retrievalaugmented generation (Sep 2023). https://doi.org/10.48550/ARXIV.2309. 01431"
+        },
+        {
+          "title": "A survey on evaluation of large language models",
+          "citation": "Chang, Y., Wang, X., Wang, J., Wu, Y., Yang, L., Zhu, K., Chen, H., Yi, X., Wang, C., Wang, Y., et al.: A survey on evaluation of large language models. ACM Transactions on Intelligent Systems and Technology 15 (3), 1-45 (2024)"
+        },
+        {
+          "title": "A survey of evaluation metrics used for nlg systems",
+          "citation": "Sai, A.B., Mohankumar, A.K., Khapra, M.M.: A survey of evaluation metrics used for nlg systems. ACM Computing Surveys (CSUR) 55 (2), 1-39 (2022)"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "A Unified Evaluation Process of RAG (Auepora)",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Evaluation Target (What to Evaluate?)",
+          "citations": [
+            {
+              "title": "Enhancing RAG Pipelines in Haystack: Introducing DiversityRanker and LostInTheMiddleRanker",
+              "citation": "Blagojevic, V.: Enhancing RAG Pipelines in Haystack: Introducing DiversityRanker and LostInTheMiddleRanker (Aug 2023), https://towardsdatascience.com/ enhancing-rag-pipelines-in-haystack-45f14e2bc9f5"
+            },
+            {
+              "title": "Benchmarking large language models in retrievalaugmented generation",
+              "citation": "Chen, J., Lin, H., Han, X., Sun, L.: Benchmarking large language models in retrievalaugmented generation (Sep 2023). https://doi.org/10.48550/ARXIV.2309. 01431"
+            },
+            {
+              "title": "RAGAS: Automated Evaluation of Retrieval Augmented Generation",
+              "citation": "Es, S., James, J., Espinosa-Anke, L., Schockaert, S.: Ragas: Automated evaluation of retrieval augmented generation (Sep 2023). https://doi.org/10.48550/ARXIV. 2309.15217"
+            },
+            {
+              "title": "Evaluating Generative Ad Hoc Information Retrieval",
+              "citation": "Gienapp, L., Scells, H., Deckers, N., Bevendorff, J., Wang, S., Kiesel, J., Syed, S., Fröbe, M., Zuccon, G., Stein, B., Hagen, M., Potthast, M.: Evaluating Generative Ad Hoc Information Retrieval. Tech. rep. (Nov 2023), http://arxiv.org/abs/2311.04694 , arXiv:2311.04694 [cs] type: article"
+            },
+            {
+              "title": "FiD-Light: Efficient and Effective Retrieval-Augmented Text Generation",
+              "citation": "Hofstätter, S., Chen, J., Raman, K., Zamani, H.: FiD-Light: Efficient and Effective Retrieval-Augmented Text Generation. In: Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval. pp. 14371447. SIGIR '23, Association for Computing Machinery, New York, NY, USA (Jul 2023). https://doi.org/10.1145/3539618.3591687 , https://doi.org/ 10.1145/3539618.3591687"
+            },
+            {
+              "title": "Cosine similarity to determine similarity measure: Study case in online essay assessment",
+              "citation": "Lahitani, A.R., Permanasari, A.E., Setiawan, N.A.: Cosine similarity to determine similarity measure: Study case in online essay assessment. In: 2016 4th International Conference on Cyber and IT Service Management. pp. 1-6 (2016). https://doi.org/10.1109/ CITSM.2016.7577578"
+            },
+            {
+              "title": "Evaluating rag architectures on benchmark tasks",
+              "citation": "LangChain: Evaluating rag architectures on benchmark tasks (Nov 2023), https: //langchain-ai.github.io/langchain-benchmarks/notebooks/ retrieval/langchain\\_docs\\_qa.html"
+            },
+            {
+              "title": "Best Practices for LLM Evaluation of RAG Applications",
+              "citation": "Leng, Q., Uhlenhuth, K., Polyzotis, A.: Best Practices for LLM Evaluation of RAG Applications (Dec 2023), https://www.databricks.com/blog/ LLM-auto-eval-best-practices-RAG"
+            },
+            {
+              "title": "ROUGE: A package for automatic evaluation of summaries",
+              "citation": "Lin, C.Y.: ROUGE: A package for automatic evaluation of summaries. In: Text Summarization Branches Out. pp. 74-81. Association for Computational Linguistics, Barcelona, Spain (Jul 2004), https://aclanthology.org/W04-1013"
+            },
+            {
+              "title": "Recall: A benchmark for llms robustness against external counterfactual knowledge",
+              "citation": "Liu, Y., Huang, L., Li, S., Chen, S., Zhou, H., Meng, F., Zhou, J., Sun, X.: Recall: A benchmark for llms robustness against external counterfactual knowledge (Nov 2023). https: //doi.org/10.48550/ARXIV.2311.08147"
+            },
+            {
+              "title": "Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models",
+              "citation": "Lyu, Y., Li, Z., Niu, S., Xiong, F., Tang, B., Wang, W., Wu, H., Liu, H., Xu, T., Chen, E., Luo, Y., Cheng, P., Deng, H., Wang, Z., Lu, Z.: Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models (Jan 2024). https://doi. org/10.48550/ARXIV.2401.17043"
+            },
+            {
+              "title": "KILT: a benchmark for knowledge intensive language tasks",
+              "citation": "Petroni, F., Piktus, A., Fan, A., Lewis, P., Yazdani, M., De Cao, N., Thorne, J., Jernite, Y., Karpukhin, V., Maillard, J., Plachouras, V., Rocktäschel, T., Riedel, S.: KILT: a benchmark for knowledge intensive language tasks. In: Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. pp. 2523-2544. Association for Computational Linguistics, Online (Jun 2021). https://doi.org/10.18653/v1/2021.naacl-main.200 , https://aclanthology.org/2021.naacl-main.200"
+            },
+            {
+              "title": "Ares: An automated evaluation framework for retrieval-augmented generation systems",
+              "citation": "Saad-Falcon, J., Khattab, O., Potts, C., Zaharia, M.: Ares: An automated evaluation framework for retrieval-augmented generation systems (Nov 2023). https://doi.org/10. 48550/ARXIV.2311.09476"
+            },
+            {
+              "title": "Multihop-rag: Benchmarking retrieval-augmented generation for multihop queries",
+              "citation": "Tang, Y., Yang, Y.: Multihop-rag: Benchmarking retrieval-augmented generation for multihop queries (Jan 2024). https://doi.org/10.48550/ARXIV.2401.15391"
+            },
+            {
+              "title": "FEVER: a large-scale dataset for fact extraction and VERification",
+              "citation": "Thorne, J., Vlachos, A., Christodoulopoulos, C., Mittal, A.: FEVER: a large-scale dataset for fact extraction and VERification. In: NAACL-HLT (2018)"
+            },
+            {
+              "title": "TruLens",
+              "citation": "TruLens: TruLens (2023), https://www.trulens.org/trulens\\_eval/ getting\\_started/quickstarts/quickstart/"
+            },
+            {
+              "title": "SuperGLUE: A stickier benchmark for general-purpose language understanding systems",
+              "citation": "Wang, A., Pruksachatkun, Y., Nangia, N., Singh, A., Michael, J., Hill, F., Levy, O., Bowman, S.R.: SuperGLUE: A stickier benchmark for general-purpose language understanding systems. arXiv preprint 1905.00537 (2019)"
+            },
+            {
+              "title": "Feb4rag: Evaluating federated search in the context of retrieval augmented generation",
+              "citation": "Wang, S., Khramtsova, E., Zhuang, S., Zuccon, G.: Feb4rag: Evaluating federated search in the context of retrieval augmented generation (Feb 2024). https://doi.org/10. 48550/ARXIV.2402.11891"
+            },
+            {
+              "title": "Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation",
+              "citation": "Wang, S., Liu, J., Song, S., Cheng, J., Fu, Y ., Guo, P., Fang, K., Zhu, Y ., Dou, Z.: Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation (Jun 2024). https://doi.org/10.48550/ARXIV.2406.05654"
+            },
+            {
+              "title": "Let LLMs take on the latest challenges! A Chinese dynamic question answering benchmark",
+              "citation": "Xu, Z., Li, Y., Ding, R., Wang, X., Chen, B., Jiang, Y., Zheng, H.T., Lu, W., Xie, P., Huang, F.: Let llms take on the latest challenges! a chinese dynamic question answering benchmark (Feb 2024). https://doi.org/10.48550/ARXIV.2402.19248"
+            },
+            {
+              "title": "HotpotQA: A dataset for diverse, explainable multi-hop question answering",
+              "citation": "Yang, Z., Qi, P., Zhang, S., Bengio, Y., Cohen, W.W., Salakhutdinov, R., Manning, C.D.: HotpotQA: A dataset for diverse, explainable multi-hop question answering. In: Conference on Empirical Methods in Natural Language Processing (EMNLP) (2018)"
+            },
+            {
+              "title": "ReEval: Automatic hallucination evaluation for retrieval-augmented large language models via transferable adversarial attacks",
+              "citation": "Yu, X., Cheng, H., Liu, X., Roth, D., Gao, J.: ReEval: Automatic hallucination evaluation for retrieval-augmented large language models via transferable adversarial attacks. In: Duh, K., Gomez, H., Bethard, S. (eds.) Findings of the Association for Computational Linguistics: NAACL 2024. pp. 1333-1351. Association for Computational Linguistics, Mexico City, Mexico (Jun 2024), https://aclanthology.org/2024.findings-naacl.85"
+            },
+            {
+              "title": "Record: Bridging the gap between human and machine commonsense reading comprehension",
+              "citation": "Zhang, S., Liu, X., Liu, J., Gao, J., Duh, K., Van Durme, B.: Record: Bridging the gap between human and machine commonsense reading comprehension (Oct 2018). https: //doi.org/10.48550/ARXIV.1810.12885"
+            },
+            {
+              "title": "BERTScore: Evaluating Text Generation with BERT",
+              "citation": "Zhang, T., Kishore, V., Wu, F., Weinberger, K.Q., Artzi, Y.: BERTScore: Evaluating Text Generation with BERT. In: 8th International Conference on Learning Representations, ICLR 2020, Addis Ababa, Ethiopia, April 26-30, 2020. OpenReview.net (2020), https: //openreview.net/forum?id=SkeHuCVFDr"
+            },
+            {
+              "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+              "citation": "Zheng, L., Chiang, W.L., Sheng, Y., Zhuang, S., Wu, Z., Zhuang, Y., Lin, Z., Li, Z., Li, D., Xing, E.P., Zhang, H., Gonzalez, J.E., Stoica, I.: Judging llm-as-a-judge with mt-bench and chatbot arena (Jun 2023). https://doi.org/10.48550/ARXIV.2306.05685"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Evaluation Dataset (How to evaluate?)",
+          "citations": [
+            {
+              "title": "Benchmarking large language models in retrievalaugmented generation",
+              "citation": "Chen, J., Lin, H., Han, X., Sun, L.: Benchmarking large language models in retrievalaugmented generation (Sep 2023). https://doi.org/10.48550/ARXIV.2309. 01431"
+            },
+            {
+              "title": "Eraser: A benchmark to evaluate rationalized nlp models",
+              "citation": "DeYoung, J., Jain, S., Rajani, N.F., Lehman, E., Xiong, C., Socher, R., Wallace, B.C.: Eraser: A benchmark to evaluate rationalized nlp models"
+            },
+            {
+              "title": "RAGAS: Automated Evaluation of Retrieval Augmented Generation",
+              "citation": "Es, S., James, J., Espinosa-Anke, L., Schockaert, S.: Ragas: Automated evaluation of retrieval augmented generation (Sep 2023). https://doi.org/10.48550/ARXIV. 2309.15217"
+            },
+            {
+              "title": "Natural questions: A benchmark for question answering",
+              "citation": "Kwiatkowski, T., Palomaki, J., Redfield, O., Collins, M., Parikh, A., Alberti, C., Epstein, D., Polosukhin, I., Devlin, J., Lee, K., Toutanova, K., Jones, L., Kelcey, M., Chang, M.W., Dai, A.M., Uszkoreit, J., Le, Q., Petrov, S.: Natural questions: A benchmark for question"
+            },
+            {
+              "title": "Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models",
+              "citation": "Lyu, Y., Li, Z., Niu, S., Xiong, F., Tang, B., Wang, W., Wu, H., Liu, H., Xu, T., Chen, E., Luo, Y., Cheng, P., Deng, H., Wang, Z., Lu, Z.: Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models (Jan 2024). https://doi. org/10.48550/ARXIV.2401.17043"
+            },
+            {
+              "title": "KILT: a benchmark for knowledge intensive language tasks",
+              "citation": "Petroni, F., Piktus, A., Fan, A., Lewis, P., Yazdani, M., De Cao, N., Thorne, J., Jernite, Y., Karpukhin, V., Maillard, J., Plachouras, V., Rocktäschel, T., Riedel, S.: KILT: a benchmark for knowledge intensive language tasks. In: Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. pp. 2523-2544. Association for Computational Linguistics, Online (Jun 2021). https://doi.org/10.18653/v1/2021.naacl-main.200 , https://aclanthology.org/2021.naacl-main.200"
+            },
+            {
+              "title": "Multihop-rag: Benchmarking retrieval-augmented generation for multihop queries",
+              "citation": "Tang, Y., Yang, Y.: Multihop-rag: Benchmarking retrieval-augmented generation for multihop queries (Jan 2024). https://doi.org/10.48550/ARXIV.2401.15391"
+            },
+            {
+              "title": "FEVER: a large-scale dataset for fact extraction and VERification",
+              "citation": "Thorne, J., Vlachos, A., Christodoulopoulos, C., Mittal, A.: FEVER: a large-scale dataset for fact extraction and VERification. In: NAACL-HLT (2018)"
+            },
+            {
+              "title": "SuperGLUE: A stickier benchmark for general-purpose language understanding systems",
+              "citation": "Wang, A., Pruksachatkun, Y., Nangia, N., Singh, A., Michael, J., Hill, F., Levy, O., Bowman, S.R.: SuperGLUE: A stickier benchmark for general-purpose language understanding systems. arXiv preprint 1905.00537 (2019)"
+            },
+            {
+              "title": "Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation",
+              "citation": "Wang, S., Liu, J., Song, S., Cheng, J., Fu, Y ., Guo, P., Fang, K., Zhu, Y ., Dou, Z.: Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation (Jun 2024). https://doi.org/10.48550/ARXIV.2406.05654"
+            },
+            {
+              "title": "Let LLMs take on the latest challenges! A Chinese dynamic question answering benchmark",
+              "citation": "Xu, Z., Li, Y., Ding, R., Wang, X., Chen, B., Jiang, Y., Zheng, H.T., Lu, W., Xie, P., Huang, F.: Let llms take on the latest challenges! a chinese dynamic question answering benchmark (Feb 2024). https://doi.org/10.48550/ARXIV.2402.19248"
+            },
+            {
+              "title": "HotpotQA: A dataset for diverse, explainable multi-hop question answering",
+              "citation": "Yang, Z., Qi, P., Zhang, S., Bengio, Y., Cohen, W.W., Salakhutdinov, R., Manning, C.D.: HotpotQA: A dataset for diverse, explainable multi-hop question answering. In: Conference on Empirical Methods in Natural Language Processing (EMNLP) (2018)"
+            },
+            {
+              "title": "Record: Bridging the gap between human and machine commonsense reading comprehension",
+              "citation": "Zhang, S., Liu, X., Liu, J., Gao, J., Duh, K., Van Durme, B.: Record: Bridging the gap between human and machine commonsense reading comprehension (Oct 2018). https: //doi.org/10.48550/ARXIV.1810.12885"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "Evaluation Metric (How to quantify?)",
+          "citations": [
+            {
+              "title": "RAG vs Fine-tuning: Pipelines, Tradeoffs, and a Case Study on Agriculture",
+              "citation": "Balaguer, A., Benara, V., Cunha, R.L.d.F., Filho, R.d.M.E., Hendry, T., Holstein, D., Marsman, J., Mecklenburg, N., Malvar, S., Nunes, L.O., Padilha, R., Sharp, M., Silva, B., Sharma, S., Aski, V., Chandra, R.: RAG vs Fine-tuning: Pipelines, Tradeoffs, and a Case Study on Agriculture. Tech. rep. (Jan 2024), http://arxiv.org/abs/2401.08406 , arXiv:2401.08406 [cs] type: article"
+            },
+            {
+              "title": "Enhancing RAG Pipelines in Haystack: Introducing DiversityRanker and LostInTheMiddleRanker",
+              "citation": "Blagojevic, V.: Enhancing RAG Pipelines in Haystack: Introducing DiversityRanker and LostInTheMiddleRanker (Aug 2023), https://towardsdatascience.com/ enhancing-rag-pipelines-in-haystack-45f14e2bc9f5"
+            },
+            {
+              "title": "Benchmarking large language models in retrievalaugmented generation",
+              "citation": "Chen, J., Lin, H., Han, X., Sun, L.: Benchmarking large language models in retrievalaugmented generation (Sep 2023). https://doi.org/10.48550/ARXIV.2309. 01431"
+            },
+            {
+              "title": "RAGAS: Automated Evaluation of Retrieval Augmented Generation",
+              "citation": "Es, S., James, J., Espinosa-Anke, L., Schockaert, S.: Ragas: Automated evaluation of retrieval augmented generation (Sep 2023). https://doi.org/10.48550/ARXIV. 2309.15217"
+            },
+            {
+              "title": "Evaluating Generative Ad Hoc Information Retrieval",
+              "citation": "Gienapp, L., Scells, H., Deckers, N., Bevendorff, J., Wang, S., Kiesel, J., Syed, S., Fröbe, M., Zuccon, G., Stein, B., Hagen, M., Potthast, M.: Evaluating Generative Ad Hoc Information Retrieval. Tech. rep. (Nov 2023), http://arxiv.org/abs/2311.04694 , arXiv:2311.04694 [cs] type: article"
+            },
+            {
+              "title": "FiD-Light: Efficient and Effective Retrieval-Augmented Text Generation",
+              "citation": "Hofstätter, S., Chen, J., Raman, K., Zamani, H.: FiD-Light: Efficient and Effective Retrieval-Augmented Text Generation. In: Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval. pp. 14371447. SIGIR '23, Association for Computing Machinery, New York, NY, USA (Jul 2023). https://doi.org/10.1145/3539618.3591687 , https://doi.org/ 10.1145/3539618.3591687"
+            },
+            {
+              "title": "Cosine similarity to determine similarity measure: Study case in online essay assessment",
+              "citation": "Lahitani, A.R., Permanasari, A.E., Setiawan, N.A.: Cosine similarity to determine similarity measure: Study case in online essay assessment. In: 2016 4th International Conference on Cyber and IT Service Management. pp. 1-6 (2016). https://doi.org/10.1109/ CITSM.2016.7577578"
+            },
+            {
+              "title": "ROUGE: A package for automatic evaluation of summaries",
+              "citation": "Lin, C.Y.: ROUGE: A package for automatic evaluation of summaries. In: Text Summarization Branches Out. pp. 74-81. Association for Computational Linguistics, Barcelona, Spain (Jul 2004), https://aclanthology.org/W04-1013"
+            },
+            {
+              "title": "Recall: A benchmark for llms robustness against external counterfactual knowledge",
+              "citation": "Liu, Y., Huang, L., Li, S., Chen, S., Zhou, H., Meng, F., Zhou, J., Sun, X.: Recall: A benchmark for llms robustness against external counterfactual knowledge (Nov 2023). https: //doi.org/10.48550/ARXIV.2311.08147"
+            },
+            {
+              "title": "Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models",
+              "citation": "Lyu, Y., Li, Z., Niu, S., Xiong, F., Tang, B., Wang, W., Wu, H., Liu, H., Xu, T., Chen, E., Luo, Y., Cheng, P., Deng, H., Wang, Z., Lu, Z.: Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models (Jan 2024). https://doi. org/10.48550/ARXIV.2401.17043"
+            },
+            {
+              "title": "Bleu: a method for automatic evaluation of machine translation",
+              "citation": "Papineni, K., Roukos, S., Ward, T., Zhu, W.J.: Bleu: a method for automatic evaluation of machine translation. In: Isabelle, P., Charniak, E., Lin, D. (eds.) Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics. pp. 311-318. Association for Computational Linguistics, Philadelphia, Pennsylvania, USA (Jul 2002). https://doi. org/10.3115/1073083.1073135 , https://aclanthology.org/P02-1040"
+            },
+            {
+              "title": "Ares: An automated evaluation framework for retrieval-augmented generation systems",
+              "citation": "Saad-Falcon, J., Khattab, O., Potts, C., Zaharia, M.: Ares: An automated evaluation framework for retrieval-augmented generation systems (Nov 2023). https://doi.org/10. 48550/ARXIV.2311.09476"
+            },
+            {
+              "title": "Multihop-rag: Benchmarking retrieval-augmented generation for multihop queries",
+              "citation": "Tang, Y., Yang, Y.: Multihop-rag: Benchmarking retrieval-augmented generation for multihop queries (Jan 2024). https://doi.org/10.48550/ARXIV.2401.15391"
+            },
+            {
+              "title": "Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation",
+              "citation": "Wang, S., Liu, J., Song, S., Cheng, J., Fu, Y ., Guo, P., Fang, K., Zhu, Y ., Dou, Z.: Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation (Jun 2024). https://doi.org/10.48550/ARXIV.2406.05654"
+            },
+            {
+              "title": "Let LLMs take on the latest challenges! A Chinese dynamic question answering benchmark",
+              "citation": "Xu, Z., Li, Y., Ding, R., Wang, X., Chen, B., Jiang, Y., Zheng, H.T., Lu, W., Xie, P., Huang, F.: Let llms take on the latest challenges! a chinese dynamic question answering benchmark (Feb 2024). https://doi.org/10.48550/ARXIV.2402.19248"
+            },
+            {
+              "title": "BERTScore: Evaluating Text Generation with BERT",
+              "citation": "Zhang, T., Kishore, V., Wu, F., Weinberger, K.Q., Artzi, Y.: BERTScore: Evaluating Text Generation with BERT. In: 8th International Conference on Learning Representations, ICLR 2020, Addis Ababa, Ethiopia, April 26-30, 2020. OpenReview.net (2020), https: //openreview.net/forum?id=SkeHuCVFDr"
+            },
+            {
+              "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+              "citation": "Zheng, L., Chiang, W.L., Sheng, Y., Zhuang, S., Wu, Z., Zhuang, Y., Lin, Z., Li, Z., Li, D., Xing, E.P., Zhang, H., Gonzalez, J.E., Stoica, I.: Judging llm-as-a-judge with mt-bench and chatbot arena (Jun 2023). https://doi.org/10.48550/ARXIV.2306.05685"
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "Discussion",
+      "citations": [
+        {
+          "title": "Ragas: Automated evaluation of retrieval augmented generation",
+          "citation": "Es, S., James, J., Espinosa-Anke, L., Schockaert, S.: Ragas: Automated evaluation of retrieval augmented generation (Sep 2023). https://doi.org/10.48550/ARXIV. 2309.15217"
+        },
+        {
+          "title": "Ares: An automated evaluation framework for retrieval-augmented generation systems",
+          "citation": "Saad-Falcon, J., Khattab, O., Potts, C., Zaharia, M.: Ares: An automated evaluation framework for retrieval-augmented generation systems (Nov 2023). https://doi.org/10. 48550/ARXIV.2311.09476"
+        },
+        {
+          "title": "Recall: A benchmark for llms robustness against external counterfactual knowledge",
+          "citation": "Liu, Y., Huang, L., Li, S., Chen, S., Zhou, H., Meng, F., Zhou, J., Sun, X.: Recall: A benchmark for llms robustness against external counterfactual knowledge (Nov 2023). https: //doi.org/10.48550/ARXIV.2311.08147"
+        },
+        {
+          "title": "Benchmarking large language models in retrieval-augmented generation",
+          "citation": "Chen, J., Lin, H., Han, X., Sun, L.: Benchmarking large language models in retrievalaugmented generation (Sep 2023). https://doi.org/10.48550/ARXIV.2309. 01431"
+        },
+        {
+          "title": "Benchmarking retrieval-augmented generation for medicine",
+          "citation": "Xiong, G., Jin, Q., Lu, Z., Zhang, A.: Benchmarking retrieval-augmented generation for medicine (Feb 2024). https://doi.org/10.48550/ARXIV.2402.13178"
+        },
+        {
+          "title": "Let llms take on the latest challenges! a chinese dynamic question answering benchmark",
+          "citation": "Xu, Z., Li, Y., Ding, R., Wang, X., Chen, B., Jiang, Y., Zheng, H.T., Lu, W., Xie, P., Huang, F.: Let llms take on the latest challenges! a chinese dynamic question answering benchmark (Feb 2024). https://doi.org/10.48550/ARXIV.2402.19248"
+        },
+        {
+          "title": "Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation",
+          "citation": "Wang, S., Liu, J., Song, S., Cheng, J., Fu, Y ., Guo, P., Fang, K., Zhu, Y ., Dou, Z.: Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation (Jun 2024). https://doi.org/10.48550/ARXIV.2406.05654"
+        },
+        {
+          "title": "ReEval: Automatic hallucination evaluation for retrieval-augmented large language models via transferable adversarial attacks",
+          "citation": "Yu, X., Cheng, H., Liu, X., Roth, D., Gao, J.: ReEval: Automatic hallucination evaluation for retrieval-augmented large language models via transferable adversarial attacks. In: Duh, K., Gomez, H., Bethard, S. (eds.) Findings of the Association for Computational Linguistics: NAACL 2024. pp. 1333-1351. Association for Computational Linguistics, Mexico City, Mexico (Jun 2024), https://aclanthology.org/2024.findings-naacl.85"
+        },
+        {
+          "title": "Multihop-rag: Benchmarking retrieval-augmented generation for multihop queries",
+          "citation": "Tang, Y., Yang, Y.: Multihop-rag: Benchmarking retrieval-augmented generation for multihop queries (Jan 2024). https://doi.org/10.48550/ARXIV.2401.15391"
+        },
+        {
+          "title": "ReEval: Automatic hallucination evaluation for retrieval-augmented large language models via transferable adversarial attacks",
+          "citation": "Yu, X., Cheng, H., Liu, X., Roth, D., Gao, J.: ReEval: Automatic hallucination evaluation for retrieval-augmented large language models via transferable adversarial attacks. In: Duh, K., Gomez, H., Bethard, S. (eds.) Findings of the Association for Computational Linguistics: NAACL 2024. pp. 1333-1351. Association for Computational Linguistics, Mexico City, Mexico (Jun 2024), https://aclanthology.org/2024.findings-naacl.85"
+        },
+        {
+          "title": "Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models",
+          "citation": "Lyu, Y., Li, Z., Niu, S., Xiong, F., Tang, B., Wang, W., Wu, H., Liu, H., Xu, T., Chen, E., Luo, Y., Cheng, P., Deng, H., Wang, Z., Lu, Z.: Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models (Jan 2024). https://doi. org/10.48550/ARXIV.2401.17043"
+        },
+        {
+          "title": "Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation",
+          "citation": "Wang, S., Liu, J., Song, S., Cheng, J., Fu, Y ., Guo, P., Fang, K., Zhu, Y ., Dou, Z.: Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation (Jun 2024). https://doi.org/10.48550/ARXIV.2406.05654"
+        },
+        {
+          "title": "Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation",
+          "citation": "Wang, S., Liu, J., Song, S., Cheng, J., Fu, Y ., Guo, P., Fang, K., Zhu, Y ., Dou, Z.: Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation (Jun 2024). https://doi.org/10.48550/ARXIV.2406.05654"
+        },
+        {
+          "title": "Benchmarking large language models in retrieval-augmented generation",
+          "citation": "Chen, J., Lin, H., Han, X., Sun, L.: Benchmarking large language models in retrievalaugmented generation (Sep 2023). https://doi.org/10.48550/ARXIV.2309. 01431"
+        },
+        {
+          "title": "TruLens",
+          "citation": "TruLens: TruLens (2023), https://www.trulens.org/trulens\\_eval/ getting\\_started/quickstarts/quickstart/"
+        },
+        {
+          "title": "ReEval: Automatic hallucination evaluation for retrieval-augmented large language models via transferable adversarial attacks",
+          "citation": "Yu, X., Cheng, H., Liu, X., Roth, D., Gao, J.: ReEval: Automatic hallucination evaluation for retrieval-augmented large language models via transferable adversarial attacks. In: Duh, K., Gomez, H., Bethard, S. (eds.) Findings of the Association for Computational Linguistics: NAACL 2024. pp. 1333-1351. Association for Computational Linguistics, Mexico City, Mexico (Jun 2024), https://aclanthology.org/2024.findings-naacl.85"
+        },
+        {
+          "title": "Evaluating rag architectures on benchmark tasks",
+          "citation": "LangChain: Evaluating rag architectures on benchmark tasks (Nov 2023), https: //langchain-ai.github.io/langchain-benchmarks/notebooks/ retrieval/langchain\\_docs\\_qa.html"
+        },
+        {
+          "title": "Best Practices for LLM Evaluation of RAG Applications",
+          "citation": "Leng, Q., Uhlenhuth, K., Polyzotis, A.: Best Practices for LLM Evaluation of RAG Applications (Dec 2023), https://www.databricks.com/blog/ LLM-auto-eval-best-practices-RAG"
+        },
+        {
+          "title": "Recall: A benchmark for llms robustness against external counterfactual knowledge",
+          "citation": "Liu, Y., Huang, L., Li, S., Chen, S., Zhou, H., Meng, F., Zhou, J., Sun, X.: Recall: A benchmark for llms robustness against external counterfactual knowledge (Nov 2023). https: //doi.org/10.48550/ARXIV.2311.08147"
+        },
+        {
+          "title": "Benchmarking large language models in retrieval-augmented generation",
+          "citation": "Chen, J., Lin, H., Han, X., Sun, L.: Benchmarking large language models in retrievalaugmented generation (Sep 2023). https://doi.org/10.48550/ARXIV.2309. 01431"
+        },
+        {
+          "title": "Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models",
+          "citation": "Lyu, Y., Li, Z., Niu, S., Xiong, F., Tang, B., Wang, W., Wu, H., Liu, H., Xu, T., Chen, E., Luo, Y., Cheng, P., Deng, H., Wang, Z., Lu, Z.: Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models (Jan 2024). https://doi. org/10.48550/ARXIV.2401.17043"
+        },
+        {
+          "title": "Feb4rag: Evaluating federated search in the context of retrieval augmented generation",
+          "citation": "Wang, S., Khramtsova, E., Zhuang, S., Zuccon, G.: Feb4rag: Evaluating federated search in the context of retrieval augmented generation (Feb 2024). https://doi.org/10. 48550/ARXIV.2402.11891"
+        },
+        {
+          "title": "Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation",
+          "citation": "Wang, S., Liu, J., Song, S., Cheng, J., Fu, Y ., Guo, P., Fang, K., Zhu, Y ., Dou, Z.: Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation (Jun 2024). https://doi.org/10.48550/ARXIV.2406.05654"
+        },
+        {
+          "title": "FiD-Light: Efficient and Effective Retrieval-Augmented Text Generation",
+          "citation": "Hofstätter, S., Chen, J., Raman, K., Zamani, H.: FiD-Light: Efficient and Effective Retrieval-Augmented Text Generation. In: Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval. pp. 14371447. SIGIR '23, Association for Computing Machinery, New York, NY, USA (Jul 2023). https://doi.org/10.1145/3539618.3591687 , https://doi.org/ 10.1145/3539618.3591687"
+        },
+        {
+          "title": "Enhancing RAG Pipelines in Haystack: Introducing DiversityRanker and LostInTheMiddleRanker",
+          "citation": "Blagojevic, V.: Enhancing RAG Pipelines in Haystack: Introducing DiversityRanker and LostInTheMiddleRanker (Aug 2023), https://towardsdatascience.com/ enhancing-rag-pipelines-in-haystack-45f14e2bc9f5"
+        },
+        {
+          "title": "Ragas: Automated evaluation of retrieval augmented generation",
+          "citation": "Es, S., James, J., Espinosa-Anke, L., Schockaert, S.: Ragas: Automated evaluation of retrieval augmented generation (Sep 2023). https://doi.org/10.48550/ARXIV. 2309.15217"
+        },
+        {
+          "title": "Recall: A benchmark for llms robustness against external counterfactual knowledge",
+          "citation": "Liu, Y., Huang, L., Li, S., Chen, S., Zhou, H., Meng, F., Zhou, J., Sun, X.: Recall: A benchmark for llms robustness against external counterfactual knowledge (Nov 2023). https: //doi.org/10.48550/ARXIV.2311.08147"
+        },
+        {
+          "title": "Ares: An automated evaluation framework for retrieval-augmented generation systems",
+          "citation": "Saad-Falcon, J., Khattab, O., Potts, C., Zaharia, M.: Ares: An automated evaluation framework for retrieval-augmented generation systems (Nov 2023). https://doi.org/10. 48550/ARXIV.2311.09476"
+        },
+        {
+          "title": "Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models",
+          "citation": "Lyu, Y., Li, Z., Niu, S., Xiong, F., Tang, B., Wang, W., Wu, H., Liu, H., Xu, T., Chen, E., Luo, Y., Cheng, P., Deng, H., Wang, Z., Lu, Z.: Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models (Jan 2024). https://doi. org/10.48550/ARXIV.2401.17043"
+        },
+        {
+          "title": "Feb4rag: Evaluating federated search in the context of retrieval augmented generation",
+          "citation": "Wang, S., Khramtsova, E., Zhuang, S., Zuccon, G.: Feb4rag: Evaluating federated search in the context of retrieval augmented generation (Feb 2024). https://doi.org/10. 48550/ARXIV.2402.11891"
+        },
+        {
+          "title": "ReEval: Automatic hallucination evaluation for retrieval-augmented large language models via transferable adversarial attacks",
+          "citation": "Yu, X., Cheng, H., Liu, X., Roth, D., Gao, J.: ReEval: Automatic hallucination evaluation for retrieval-augmented large language models via transferable adversarial attacks. In: Duh, K., Gomez, H., Bethard, S. (eds.) Findings of the Association for Computational Linguistics: NAACL 2024. pp. 1333-1351. Association for Computational Linguistics, Mexico City, Mexico (Jun 2024), https://aclanthology.org/2024.findings-naacl.85"
+        },
+        {
+          "title": "Benchmarking large language models in retrieval-augmented generation",
+          "citation": "Chen, J., Lin, H., Han, X., Sun, L.: Benchmarking large language models in retrievalaugmented generation (Sep 2023). https://doi.org/10.48550/ARXIV.2309. 01431"
+        },
+        {
+          "title": "Multihop-rag: Benchmarking retrieval-augmented generation for multihop queries",
+          "citation": "Tang, Y., Yang, Y.: Multihop-rag: Benchmarking retrieval-augmented generation for multihop queries (Jan 2024). https://doi.org/10.48550/ARXIV.2401.15391"
+        },
+        {
+          "title": "Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models",
+          "citation": "Lyu, Y., Li, Z., Niu, S., Xiong, F., Tang, B., Wang, W., Wu, H., Liu, H., Xu, T., Chen, E., Luo, Y., Cheng, P., Deng, H., Wang, Z., Lu, Z.: Crud-rag: A comprehensive chinese benchmark for retrieval-augmented generation of large language models (Jan 2024). https://doi. org/10.48550/ARXIV.2401.17043"
+        },
+        {
+          "title": "Let llms take on the latest challenges! a chinese dynamic question answering benchmark",
+          "citation": "Xu, Z., Li, Y., Ding, R., Wang, X., Chen, B., Jiang, Y., Zheng, H.T., Lu, W., Xie, P., Huang, F.: Let llms take on the latest challenges! a chinese dynamic question answering benchmark (Feb 2024). https://doi.org/10.48550/ARXIV.2402.19248"
+        },
+        {
+          "title": "Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation",
+          "citation": "Wang, S., Liu, J., Song, S., Cheng, J., Fu, Y ., Guo, P., Fang, K., Zhu, Y ., Dou, Z.: Domainrag: A chinese benchmark for evaluating domain-specific retrieval-augmented generation (Jun 2024). https://doi.org/10.48550/ARXIV.2406.05654"
+        },
+        {
+          "title": "ReEval: Automatic hallucination evaluation for retrieval-augmented large language models via transferable adversarial attacks",
+          "citation": "Yu, X., Cheng, H., Liu, X., Roth, D., Gao, J.: ReEval: Automatic hallucination evaluation for retrieval-augmented large language models via transferable adversarial attacks. In: Duh, K., Gomez, H., Bethard, S. (eds.) Findings of the Association for Computational Linguistics: NAACL 2024. pp. 1333-1351. Association for Computational Linguistics, Mexico City, Mexico (Jun 2024), https://aclanthology.org/2024.findings-naacl.85"
+        },
+        {
+          "title": "Judging llm-as-a-judge with mt-bench and chatbot arena",
+          "citation": "Zheng, L., Chiang, W.L., Sheng, Y., Zhuang, S., Wu, Z., Zhuang, Y., Lin, Z., Li, Z., Li, D., Xing, E.P., Zhang, H., Gonzalez, J.E., Stoica, I.: Judging llm-as-a-judge with mt-bench and chatbot arena (Jun 2023). https://doi.org/10.48550/ARXIV.2306.05685"
+        },
+        {
+          "title": "Best Practices for LLM Evaluation of RAG Applications",
+          "citation": "Leng, Q., Uhlenhuth, K., Polyzotis, A.: Best Practices for LLM Evaluation of RAG Applications (Dec 2023), https://www.databricks.com/blog/ LLM-auto-eval-best-practices-RAG"
+        },
+        {
+          "title": "On the opportunities of green computing: A survey",
+          "citation": "Zhou, Y., Lin, X., Zhang, X., Wang, M., Jiang, G., Lu, H., Wu, Y., Zhang, K., Yang, Z., Wang, K., Sui, Y., Jia, F., Tang, Z., Zhao, Y., Zhang, H., Yang, T., Chen, W., Mao, Y., Li, Y., Bao, D., Li, Y., Liao, H., Liu, T., Liu, J., Guo, J., Zhao, X., WEI, Y ., Qian, H., Liu, Q., Wang, X., Kin, W., Chan, Li, C., Li, Y., Yang, S., Yan, J., Mou, C., Han, S., Jin, W., Zhang, G., Zeng, X.: On the opportunities of green computing: A survey (Nov 2023)"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "Conclusion",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

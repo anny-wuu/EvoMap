@@ -1,0 +1,1643 @@
+{
+  "track": "AI Agents",
+  "paper_title": "Cognitive Architectures for Language Agents",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "Introduction",
+      "citations": [
+        {
+          "title": "Llm-powered autonomous agents",
+          "citation": "L. Weng. Llm-powered autonomous agents. lilianweng.github.io , Jun 2023. URL https://lilianweng. github.io/posts/2023-06-23-agent/ ."
+        },
+        {
+          "title": "Query2doc: Query expansion with large language models",
+          "citation": "L. Wang, N. Yang, and F. Wei. Query2doc: Query expansion with large language models. arXiv preprint arXiv:2303.07678 , 2023c."
+        },
+        {
+          "title": "The rise and potential of large language model based agents: A survey",
+          "citation": "Z. Xi, W. Chen, X. Guo, W. He, Y. Ding, B. Hong, M. Zhang, J. Wang, S. Jin, E. Zhou, et al. The rise and potential of large language model based agents: A survey. arXiv preprint arXiv:2309.07864 , 2023."
+        },
+        {
+          "title": "Language agents in the digital world: Opportunities and risks",
+          "citation": "S. Yao and K. Narasimhan. Language agents in the digital world: Opportunities and risks. princetonnlp.github.io , Jul 2023. URL https://princeton-nlp.github.io/language-agent-impact/ ."
+        },
+        {
+          "title": "Attention is all you need",
+          "citation": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin. Attention is all you need. Advances in Neural Information Processing Systems , 30, 2017."
+        },
+        {
+          "title": "Language models are few-shot learners",
+          "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, et al. Language models are few-shot learners. Advances in Neural Information Processing Systems , 33:1877-1901, 2020."
+        },
+        {
+          "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+          "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. In NAACL-HLT (1) , 2019."
+        },
+        {
+          "title": "GPT-4 technical report",
+          "citation": "OpenAI. GPT-4 technical report. arXiv preprint arXiv:2303.08774, 2023."
+        },
+        {
+          "title": "Artificial Intelligence: A Modern Approach",
+          "citation": "S. Russell and P. Norvig. Artificial Intelligence: A Modern Approach . Pearson Education Limited London, 2013."
+        },
+        {
+          "title": "Practical planning: extending the classical AI planning paradigm",
+          "citation": "D. E. Wilkins. Practical planning: extending the classical AI planning paradigm . Elsevier, 2014."
+        },
+        {
+          "title": "Reinforcement learning: An introduction",
+          "citation": "R. S. Sutton and A. G. Barto. Reinforcement learning: An introduction . MIT press, 2018."
+        },
+        {
+          "title": "Building machines that learn and think like people",
+          "citation": "B. M. Lake, T. D. Ullman, J. B. Tenenbaum, and S. J. Gershman. Building machines that learn and think like people, 2016."
+        },
+        {
+          "title": "Do as I can, not as I say: Grounding language in robotic affordances",
+          "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, C. Fu, K. Gopalakrishnan, K. Hausman, et al. Do as I can, not as I say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691 , 2022."
+        },
+        {
+          "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+          "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch. Language models as zero-shot planners: Extracting actionable knowledge for embodied agents. In International Conference on Machine Learning, pages 9118-9147, 2022b."
+        },
+        {
+          "title": "React: Synergizing reasoning and acting in language models",
+          "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+        },
+        {
+          "title": "Reasoning with language model is planning with world model",
+          "citation": "S. Hao, Y. Gu, H. Ma, J. J. Hong, Z. Wang, D. Z. Wang, and Z. Hu. Reasoning with language model is planning with world model. arXiv preprint arXiv:2305.14992 , 2023."
+        },
+        {
+          "title": "Tree of thoughts: Deliberate problem solving with large language models",
+          "citation": "S. Yao, D. Yu, J. Zhao, I. Shafran, T. L. Griffiths, Y. Cao, and K. Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601 , 2023."
+        },
+        {
+          "title": "Generative agents: Interactive simulacra of human behavior",
+          "citation": "J. S. Park, J. C. O'Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442 , 2023."
+        },
+        {
+          "title": "A survey on large language model based autonomous agents",
+          "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin, W. X. Zhao, Z. Wei, and J.-R. Wen. A survey on large language model based autonomous agents, 2023b."
+        },
+        {
+          "title": "Human problem solving",
+          "citation": "A. Newell and H. A. Simon. Human problem solving . Prentice-Hall, 1972."
+        },
+        {
+          "title": "Do as I can, not as I say: Grounding language in robotic affordances",
+          "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, C. Fu, K. Gopalakrishnan, K. Hausman, et al. Do as I can, not as I say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691 , 2022."
+        },
+        {
+          "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+          "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch. Language models as zero-shot planners: Extracting actionable knowledge for embodied agents. In International Conference on Machine Learning, pages 9118-9147, 2022b."
+        },
+        {
+          "title": "React: Synergizing reasoning and acting in language models",
+          "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+        },
+        {
+          "title": "Reflexion: Language agents with verbal reinforcement learning",
+          "citation": "N. Shinn, F. Cassano, B. Labash, A. Gopinath, K. Narasimhan, and S. Yao. Reflexion: Language agents with verbal reinforcement learning. arXiv preprint arXiv:2303.11366 , 2023."
+        },
+        {
+          "title": "A survey on large language model based autonomous agents",
+          "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin, W. X. Zhao, Z. Wei, and J.-R. Wen. A survey on large language model based autonomous agents, 2023b."
+        },
+        {
+          "title": "Symbolic architectures for cognition",
+          "citation": "A. Newell, P. S. Rosenbloom, and J. E. Laird. Symbolic architectures for cognition. Foundations of cognitive science , pages 93-131, 1989."
+        },
+        {
+          "title": "Soar: An architecture for general intelligence",
+          "citation": "J. E. Laird, A. Newell, and P. S. Rosenbloom. Soar: An architecture for general intelligence. Artificial Intelligence , 33(1):1-64, 1987."
+        },
+        {
+          "title": "Mixing language-based reasoning and code-based planning may offer the best of both worlds",
+          "citation": "Mixing language-based reasoning and code-based planning may offer the best of both worlds. Existing approaches either plan directly in natural language (Huang et al., 2022c; Ahn et al., 2022) or use LLMs to translate from natural language to structured world models (Wong et al., 2023; Liu et al., 2023a; Zhang et al., 2023a; Li et al., 2023a; Guan et al., 2023; Silver et al., 2022; 2023). Future work could integrate these: just as Soar incorporates a simulator for physical reasoning (Laird, 2022), agents may write and execute simulation code on the fly to evaluate the consequences of plans. See Section 7 for more discussion."
+        },
+        {
+          "title": "40 years of cognitive architectures: core cognitive abilities and practical applications",
+          "citation": "I. Kotseruba and J. K. Tsotsos. 40 years of cognitive architectures: core cognitive abilities and practical applications. Artificial Intelligence Review , 53(1):17-94, 2020."
+        },
+        {
+          "title": "Coderl: Mastering code generation through pretrained models and deep reinforcement learning",
+          "citation": "H. Le, Y. Wang, A. D. Gotmare, S. Savarese, and S. C. H. Hoi. Coderl: Mastering code generation through pretrained models and deep reinforcement learning. Advances in Neural Information Processing Systems , 35:21314-21328, 2022."
+        },
+        {
+          "title": "Extending machine language models toward human-level language understanding",
+          "citation": "J. L. McClelland, F. Hill, M. Rudolph, J. Baldridge, and H. Schütze. Extending machine language models toward human-level language understanding. arXiv preprint arXiv:1912.05877 , 2019."
+        },
+        {
+          "title": "Augmented language models: a survey",
+          "citation": "G. Mialon, R. Dessì, M. Lomeli, C. Nalmpantis, R. Pasunuru, R. Raileanu, B. Rozière, T. Schick, J. DwivediYu, A. Celikyilmaz, et al. Augmented language models: a survey. arXiv preprint arXiv:2302.07842 , 2023."
+        },
+        {
+          "title": "Llm-powered autonomous agents",
+          "citation": "L. Weng. Llm-powered autonomous agents. lilianweng.github.io , Jun 2023. URL https://lilianweng. github.io/posts/2023-06-23-agent/ ."
+        },
+        {
+          "title": "Query2doc: Query expansion with large language models",
+          "citation": "L. Wang, N. Yang, and F. Wei. Query2doc: Query expansion with large language models. arXiv preprint arXiv:2303.07678 , 2023c."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "Background: From Strings to Symbolic AGI",
+      "citations": [
+        {
+          "title": "Formal reductions of the general combinatorial decision problem",
+          "citation": "E. L. Post. Formal reductions of the general combinatorial decision problem. American Journal of Mathematics , 65(2):197-215, 1943."
+        },
+        {
+          "title": "Symbolic architectures for cognition",
+          "citation": "A. Newell, P. S. Rosenbloom, and J. E. Laird. Symbolic architectures for cognition. Foundations of cognitive science , pages 93-131, 1989."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Production systems for string manipulation",
+          "citations": [
+            {
+              "title": "Formal reductions of the general combinatorial decision problem",
+              "citation": "E. L. Post. Formal reductions of the general combinatorial decision problem. American Journal of Mathematics , 65(2):197-215, 1943."
+            },
+            {
+              "title": "Principia mathematica to* 56",
+              "citation": "A. N. Whitehead and B. Russell. Principia mathematica to* 56 , volume 2. Cambridge University Press, 1997."
+            },
+            {
+              "title": "A set of postulates for the foundation of logic",
+              "citation": "A. Church. A set of postulates for the foundation of logic. Annals of mathematics , pages 346-366, 1932."
+            },
+            {
+              "title": "On computable numbers, with an application to the entscheidungsproblem",
+              "citation": "A. M. Turing et al. On computable numbers, with an application to the entscheidungsproblem. J. of Math , 58(345-363):5, 1936."
+            },
+            {
+              "title": "Three models for the description of language",
+              "citation": "N. Chomsky. Three models for the description of language. IRE Transactions on information theory , 2(3): 113-124, 1956."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Control flow: From strings to algorithms",
+          "citations": [
+            {
+              "title": "The theory of algorithms",
+              "citation": "A. A. Markov. The theory of algorithms. Trudy Matematicheskogo Instituta Imeni VA Steklova , 42:3-375, 1954."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.3",
+          "sec_title": "Cognitive architectures: From algorithms to agents",
+          "citations": [
+            {
+              "title": "Mixing language-based reasoning and code-based planning may offer the best of both worlds",
+              "citation": "Mixing language-based reasoning and code-based planning may offer the best of both worlds. Existing approaches either plan directly in natural language (Huang et al., 2022c; Ahn et al., 2022) or use LLMs to translate from natural language to structured world models (Wong et al., 2023; Liu et al., 2023a; Zhang et al., 2023a; Li et al., 2023a; Guan et al., 2023; Silver et al., 2022; 2023). Future work could integrate these: just as Soar incorporates a simulator for physical reasoning (Laird, 2022), agents may write and execute simulation code on the fly to evaluate the consequences of plans. See Section 7 for more discussion."
+            },
+            {
+              "title": "40 years of cognitive architectures: core cognitive abilities and practical applications",
+              "citation": "I. Kotseruba and J. K. Tsotsos. 40 years of cognitive architectures: core cognitive abilities and practical applications. Artificial Intelligence Review , 53(1):17-94, 2020."
+            },
+            {
+              "title": "Studies in problem solving: Subject 3 on the crypt-arithmetic task DONALD+ GERALD= ROBERT",
+              "citation": "A. Newell. Studies in problem solving: Subject 3 on the crypt-arithmetic task DONALD+ GERALD= ROBERT. Technical report, Carnegie Mellon University, 1967."
+            },
+            {
+              "title": "Human problem solving",
+              "citation": "A. Newell and H. A. Simon. Human problem solving . Prentice-Hall, 1972."
+            },
+            {
+              "title": "Human problem solving",
+              "citation": "A. Newell and H. A. Simon. Human problem solving . Prentice-Hall, 1972."
+            },
+            {
+              "title": "Mapping the landscape of human-level artificial general intelligence",
+              "citation": "S. Adams, I. Arel, J. Bach, R. Coop, R. Furlan, B. Goertzel, J. S. Hall, A. Samsonovich, M. Scheutz, M. Schlesinger, et al. Mapping the landscape of human-level artificial general intelligence. AI magazine , 33 (1):25-42, 2012."
+            },
+            {
+              "title": "Desiderata for cognitive architectures",
+              "citation": "R. Sun. Desiderata for cognitive architectures. Philosophical Psychology , 17(3):341-373, 2004."
+            },
+            {
+              "title": "Physical symbol systems",
+              "citation": "A. Newell. Physical symbol systems. Cognitive science , 4(2):135-183, 1980."
+            },
+            {
+              "title": "The Newell test for a theory of cognition",
+              "citation": "J. R. Anderson and C. Lebiere. The Newell test for a theory of cognition. Behavioral and Brain Sciences , 26 (5):587-601, 2003."
+            },
+            {
+              "title": "Human memory: A proposed system and its control processes",
+              "citation": "R. C. Atkinson and R. M. Shiffrin. Human memory: A proposed system and its control processes. In Psychology of Learning and Motivation , volume 2, pages 89-195. Elsevier, 1968."
+            },
+            {
+              "title": "Working memory",
+              "citation": "A. D. Baddeley and G. Hitch. Working memory. In Psychology of Learning and Motivation , volume 8, pages 47-89. Elsevier, 1974."
+            },
+            {
+              "title": "Toward integrating cognitive linguistics and cognitive language processing",
+              "citation": "P. Lindes and J. E. Laird. Toward integrating cognitive linguistics and cognitive language processing. In Proceedings of the 14th International Conference on Cognitive Modeling (ICCM) , 2016."
+            },
+            {
+              "title": "Extending cognitive architecture with episodic memory",
+              "citation": "A. M. Nuxoll and J. E. Laird. Extending cognitive architecture with episodic memory. In Proceedings of the AAAI Conference on Artificial Intelligence , pages 1560-1564, 2007."
+            },
+            {
+              "title": "Intelligent agents for interactive simulation environments",
+              "citation": "M. Tambe, W. L. Johnson, R. M. Jones, F. Koss, J. E. Laird, P. S. Rosenbloom, and K. Schwamb. Intelligent agents for interactive simulation environments. AI magazine , 16(1):15-15, 1995."
+            },
+            {
+              "title": "Automated intelligent pilots for combat flight simulation",
+              "citation": "R. M. Jones, J. E. Laird, P. E. Nielsen, K. J. Coulter, P. Kenny, and F. V. Koss. Automated intelligent pilots for combat flight simulation. AI magazine , 20(1):27-27, 1999."
+            },
+            {
+              "title": "Cognitive robotics using the Soar cognitive architecture",
+              "citation": "J. E. Laird, K. R. Kinkade, S. Mohan, and J. Z. Xu. Cognitive robotics using the Soar cognitive architecture. In CogRob @ AAAI , 2012."
+            },
+            {
+              "title": "Acquiring grounded representations of words with situated interactive instruction",
+              "citation": "S. Mohan, A. H. Mininger, J. R. Kirk, and J. E. Laird. Acquiring grounded representations of words with situated interactive instruction. Advances in Cognitive Systems , 2:113-130, 2012."
+            },
+            {
+              "title": "Learning goal-oriented hierarchical tasks from situated interactive instruction",
+              "citation": "S. Mohan and J. Laird. Learning goal-oriented hierarchical tasks from situated interactive instruction. In Proceedings of the AAAI Conference on Artificial Intelligence , volume 28, 2014."
+            },
+            {
+              "title": "Interactive task learning for simple games",
+              "citation": "J. R. Kirk and J. E. Laird. Interactive task learning for simple games. Advances in Cognitive Systems , 3 (13-30):5, 2014."
+            },
+            {
+              "title": "A multi-domain evaluation of scaling in a general episodic memory",
+              "citation": "N. Derbinsky, J. Li, and J. Laird. A multi-domain evaluation of scaling in a general episodic memory. In Proceedings of the AAAI Conference on Artificial Intelligence , volume 26, pages 193-199, 2012."
+            },
+            {
+              "title": "Reinforcement learning: An introduction",
+              "citation": "R. S. Sutton and A. G. Barto. Reinforcement learning: An introduction . MIT press, 2018."
+            },
+            {
+              "title": "Soar-RL: Integrating reinforcement learning with Soar",
+              "citation": "S. Nason and J. E. Laird. Soar-RL: Integrating reinforcement learning with Soar. Cognitive Systems Research , 6(1):51-59, 2005."
+            },
+            {
+              "title": "Chunking in Soar: The anatomy of a general learning mechanism",
+              "citation": "J. E. Laird, P. S. Rosenbloom, and A. Newell. Chunking in Soar: The anatomy of a general learning mechanism. Machine Learning , 1:11-46, 1986."
+            },
+            {
+              "title": "Cognitive robotics using the Soar cognitive architecture",
+              "citation": "J. E. Laird, K. R. Kinkade, S. Mohan, and J. Z. Xu. Cognitive robotics using the Soar cognitive architecture. In CogRob @ AAAI , 2012."
+            },
+            {
+              "title": "Automated intelligent pilots for combat flight simulation",
+              "citation": "R. M. Jones, J. E. Laird, P. E. Nielsen, K. J. Coulter, P. Kenny, and F. V. Koss. Automated intelligent pilots for combat flight simulation. AI magazine , 20(1):27-27, 1999."
+            },
+            {
+              "title": "Intelligent agents for interactive simulation environments",
+              "citation": "M. Tambe, W. L. Johnson, R. M. Jones, F. Koss, J. E. Laird, P. S. Rosenbloom, and K. Schwamb. Intelligent agents for interactive simulation environments. AI magazine , 16(1):15-15, 1995."
+            },
+            {
+              "title": "Intelligent tutoring goes to school in the big city",
+              "citation": "K. R. Koedinger, J. R. Anderson, W. H. Hadley, M. A. Mark, et al. Intelligent tutoring goes to school in the big city. International Journal of Artificial Intelligence in Education , 8(1):30-43, 1997."
+            },
+            {
+              "title": "Language models as a knowledge source for cognitive agents",
+              "citation": "R. E. Wray, J. R. Kirk, J. E. Laird, et al. Language models as a knowledge source for cognitive agents. arXiv preprint arXiv:2109.08270 , 2021."
+            },
+            {
+              "title": "Improving Knowledge Extraction from LLMs for Robotic Task Learning through Agent Analysis",
+              "citation": "J. R. Kirk, W. Robert, P. Lindes, and J. E. Laird. Improving Knowledge Extraction from LLMs for Robotic Task Learning through Agent Analysis. arXiv preprint arXiv:2306.06770 , 2023."
+            },
+            {
+              "title": "Synergistic integration of large language models and cognitive architectures for robust ai: An exploratory analysis",
+              "citation": "O. J. Romero, J. Zimmerman, A. Steinfeld, and A. Tomasic. Synergistic integration of large language models and cognitive architectures for robust ai: An exploratory analysis. arXiv preprint arXiv:2308.09830 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.4",
+          "sec_title": "Language models and agents",
+          "citations": [
+            {
+              "title": "Mixing language-based reasoning and code-based planning may offer the best of both worlds",
+              "citation": "Mixing language-based reasoning and code-based planning may offer the best of both worlds. Existing approaches either plan directly in natural language (Huang et al., 2022c; Ahn et al., 2022) or use LLMs to translate from natural language to structured world models (Wong et al., 2023; Liu et al., 2023a; Zhang et al., 2023a; Li et al., 2023a; Guan et al., 2023; Silver et al., 2022; 2023). Future work could integrate these: just as Soar incorporates a simulator for physical reasoning (Laird, 2022), agents may write and execute simulation code on the fly to evaluate the consequences of plans. See Section 7 for more discussion."
+            },
+            {
+              "title": "Speech & language processing",
+              "citation": "D. Jurafsky. Speech &amp; language processing . Pearson Education India, 2000."
+            },
+            {
+              "title": "Attention is all you need",
+              "citation": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin. Attention is all you need. Advances in Neural Information Processing Systems , 30, 2017."
+            },
+            {
+              "title": "GPT-4 technical report",
+              "citation": "OpenAI. GPT-4 technical report. arXiv preprint arXiv:2303.08774, 2023."
+            },
+            {
+              "title": "Language models as agent models",
+              "citation": "J. Andreas. Language models as agent models. In Findings of the Association for Computational Linguistics: EMNLP 2022 , pages 5769-5779, 2022."
+            },
+            {
+              "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+              "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch. Language models as zero-shot planners: Extracting actionable knowledge for embodied agents. In International Conference on Machine Learning, pages 9118-9147, 2022b."
+            },
+            {
+              "title": "Augmented language models: a survey",
+              "citation": "G. Mialon, R. Dessì, M. Lomeli, C. Nalmpantis, R. Pasunuru, R. Raileanu, B. Rozière, T. Schick, J. DwivediYu, A. Celikyilmaz, et al. Augmented language models: a survey. arXiv preprint arXiv:2302.07842 , 2023."
+            },
+            {
+              "title": "Updating retrieval",
+              "citation": "Updating retrieval . To our knowledge, these learning options are not studied in recent language agents. Retrieval is usually considered a basic action designed with some fixed implementation (e.g., BM25 or dense retrieval), but research in query/document expansion (Nogueira et al., 2019; Wang et al., 2023c; Tang et al., 2023a) or retrieval distillion (Izacard et al., 2021) may be helpful for language agents to learn better retrieval procedures."
+            },
+            {
+              "title": "Language models enable zero-shot prediction of the effects of mutations on protein function",
+              "citation": "J. Meier, R. Rao, R. Verkuil, J. Liu, T. Sercu, and A. Rives. Language models enable zero-shot prediction of the effects of mutations on protein function. bioRxiv , 2021."
+            },
+            {
+              "title": "React: Synergizing reasoning and acting in language models",
+              "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+            },
+            {
+              "title": "WebGPT: Browser-Assisted Question-Answering with Human Feedback",
+              "citation": "R. Nakano, J. Hilton, S. Balaji, J. Wu, L. Ouyang, C. Kim, C. Hesse, S. Jain, V. Kosaraju, W. Saunders, et al. WebGPT: Browser-Assisted Question-Answering with Human Feedback. arXiv preprint arXiv:2112.09332 , 2021."
+            },
+            {
+              "title": "Do as I can, not as I say: Grounding language in robotic affordances",
+              "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, C. Fu, K. Gopalakrishnan, K. Hausman, et al. Do as I can, not as I say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691 , 2022."
+            },
+            {
+              "title": "Towards autonomous system: flexible modular production system enhanced with large language model agents",
+              "citation": "Y. Xia, M. Shenoy, N. Jazdi, and M. Weyrich. Towards autonomous system: flexible modular production system enhanced with large language model agents. arXiv preprint arXiv:2304.14721 , 2023."
+            },
+            {
+              "title": "React: Synergizing reasoning and acting in language models",
+              "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629 , 2022b."
+            },
+            {
+              "title": "Mind2Web: Towards a generalist agent for the web",
+              "citation": "X. Deng, Y. Gu, B. Zheng, S. Chen, S. Stevens, B. Wang, H. Sun, and Y. Su. Mind2Web: Towards a generalist agent for the web. arXiv preprint arXiv:2306.06070 , 2023."
+            },
+            {
+              "title": "Tree of thoughts: Deliberate problem solving with large language models",
+              "citation": "S. Yao, D. Yu, J. Zhao, I. Shafran, T. L. Griffiths, Y. Cao, and K. Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601 , 2023."
+            },
+            {
+              "title": "Reasoning with language model is planning with world model",
+              "citation": "S. Hao, Y. Gu, H. Ma, J. J. Hong, Z. Wang, D. Z. Wang, and Z. Hu. Reasoning with language model is planning with world model. arXiv preprint arXiv:2305.14992 , 2023."
+            },
+            {
+              "title": "Intercode: Standardizing and benchmarking interactive coding with execution feedback",
+              "citation": "J. Yang, A. Prabhakar, K. Narasimhan, and S. Yao. Intercode: Standardizing and benchmarking interactive coding with execution feedback. arXiv preprint arXiv:2306.14898 , 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "Connections between Language Models and Production Systems",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Language models as probabilistic production systems",
+          "citations": [
+            {
+              "title": "Language model cascades",
+              "citation": "D. Dohan, W. Xu, A. Lewkowycz, J. Austin, D. Bieber, R. G. Lopes, Y. Wu, H. Michalewski, R. A. Saurous, J. Sohl-Dickstein, et al. Language model cascades. arXiv preprint arXiv:2207.10342 , 2022."
+            },
+            {
+              "title": "Synergistic integration of large language models and cognitive architectures for robust ai: An exploratory analysis",
+              "citation": "O. J. Romero, J. Zimmerman, A. Steinfeld, and A. Tomasic. Synergistic integration of large language models and cognitive architectures for robust ai: An exploratory analysis. arXiv preprint arXiv:2308.09830 , 2023."
+            },
+            {
+              "title": "Large language models still can't plan (a benchmark for llms on planning and reasoning about change)",
+              "citation": "K. Valmeekam, A. Olmo, S. Sreedharan, and S. Kambhampati. Large language models still can't plan (a benchmark for llms on planning and reasoning about change). arXiv preprint arXiv:2206.10498 , 2022."
+            },
+            {
+              "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+              "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch. Language models as zero-shot planners: Extracting actionable knowledge for embodied agents. In International Conference on Machine Learning, pages 9118-9147, 2022b."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Prompt engineering as control flow",
+          "citations": [
+            {
+              "title": "Mind's eye: Grounded language model reasoning through simulation",
+              "citation": "R. Liu, J. Wei, S. S. Gu, T.-Y. Wu, S. Vosoughi, C. Cui, D. Zhou, and A. M. Dai. Mind's eye: Grounded language model reasoning through simulation. In The Eleventh International Conference on Learning Representations , 2023e."
+            },
+            {
+              "title": "Language models are few-shot learners",
+              "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, et al. Language models are few-shot learners. Advances in Neural Information Processing Systems , 33:1877-1901, 2020."
+            },
+            {
+              "title": "Reasoning usecases in agents can inform and reshape LLM training in terms of the types (e.g., reasoning for self-evaluation, reflection, action generation, etc.) and formats (e.g., CoT (Wei et al., 2022b), ReAct (Yao et al., 2022b), Reflexion (Shinn et al., 2023)) of training instances",
+              "citation": "Reasoning usecases in agents can inform and reshape LLM training in terms of the types (e.g., reasoning for self-evaluation, reflection, action generation, etc.) and formats (e.g., CoT (Wei et al., 2022b), ReAct (Yao et al., 2022b), Reflexion (Shinn et al., 2023)) of training instances. By default, existing LLMs are trained and optimized for NLP tasks, but agent applications have explored new modes of LLM reasoning (e.g., self-evaluation) that have proven broadly useful. LLMs trained or finetuned towards these capabilities will more likely be the backbones of future agents."
+            },
+            {
+              "title": "Large language models are zero-shot reasoners",
+              "citation": "T. Kojima, S. S. Gu, M. Reid, Y. Matsuo, and Y. Iwasawa. Large language models are zero-shot reasoners. Advances in Neural Information Processing Systems , 35:22199-22213, 2022."
+            },
+            {
+              "title": "ExpertPrompting: Instructing Large Language Models to be Distinguished Experts",
+              "citation": "B. Xu, A. Yang, J. Lin, Q. Wang, C. Zhou, Y. Zhang, and Z. Mao. ExpertPrompting: Instructing Large Language Models to be Distinguished Experts. arXiv preprint arXiv:2305.14688 , 2023c."
+            },
+            {
+              "title": "What Makes Good In-Context Examples for GPT-3",
+              "citation": "J. Liu, D. Shen, Y. Zhang, B. Dolan, L. Carin, and W. Chen. What Makes Good In-Context Examples for GPT-3 ? arXiv preprint arXiv:2101.06804 , 2021."
+            },
+            {
+              "title": "Socratic models: Composing zero-shot multimodal reasoning with language",
+              "citation": "A. Zeng, M. Attarian, B. Ichter, K. Choromanski, A. Wong, S. Welker, F. Tombari, A. Purohit, M. Ryoo, V. Sindhwani, et al. Socratic models: Composing zero-shot multimodal reasoning with language. arXiv preprint arXiv:2204.00598 , 2022."
+            },
+            {
+              "title": "Retrieval-augmented generation for knowledge-intensive NLP tasks",
+              "citation": "P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. Küttler, M. Lewis, W.-t. Yih, T. Rocktäschel, et al. Retrieval-augmented generation for knowledge-intensive NLP tasks. Advances in Neural Information Processing Systems , 33:9459-9474, 2020."
+            },
+            {
+              "title": "Constitutional AI: Harmlessness from AI feedback",
+              "citation": "Y. Bai, S. Kadavath, S. Kundu, A. Askell, J. Kernion, A. Jones, A. Chen, A. Goldie, A. Mirhoseini, C. McKinnon, et al. Constitutional AI: Harmlessness from AI feedback. arXiv preprint arXiv:2212.08073 , 2022."
+            },
+            {
+              "title": "When to make exceptions: Exploring language models as accounts of human moral judgment",
+              "citation": "Z. Jin, S. Levine, F. G. Adauto, O. Kamal, M. Sap, M. Sachan, R. Mihalcea, J. B. Tenenbaum, and B. Schölkopf. When to make exceptions: Exploring language models as accounts of human moral judgment. In A. H. Oh, A. Agarwal, D. Belgrave, and K. Cho, editors, Advances in Neural Information Processing Systems , 2022."
+            },
+            {
+              "title": "The capacity for moral self-correction in large language models",
+              "citation": "D. Ganguli, A. Askell, N. Schiefer, T. Liao, K. Lukoši¯ ut˙ e, A. Chen, A. Goldie, A. Mirhoseini, C. Olsson, D. Hernandez, et al. The capacity for moral self-correction in large language models. arXiv preprint arXiv:2302.07459 , 2023."
+            },
+            {
+              "title": "Self-refine: Iterative refinement with self-feedback",
+              "citation": "A. Madaan, N. Tandon, P. Gupta, S. Hallinan, L. Gao, S. Wiegreffe, U. Alon, N. Dziri, S. Prabhumoye, Y. Yang, et al. Self-refine: Iterative refinement with self-feedback. arXiv preprint arXiv:2303.17651 , 2023."
+            },
+            {
+              "title": "Self-critiquing models for assisting human evaluators",
+              "citation": "W. Saunders, C. Yeh, J. Wu, S. Bills, L. Ouyang, J. Ward, and J. Leike. Self-critiquing models for assisting human evaluators. arXiv preprint arXiv:2206.05802 , 2022."
+            },
+            {
+              "title": "Language models can solve computer tasks",
+              "citation": "G. Kim, P. Baldi, and S. McAleer. Language models can solve computer tasks. arXiv preprint arXiv:2303.17491 , 2023."
+            },
+            {
+              "title": "Improving Knowledge Extraction from LLMs for Robotic Task Learning through Agent Analysis",
+              "citation": "J. R. Kirk, W. Robert, P. Lindes, and J. E. Laird. Improving Knowledge Extraction from LLMs for Robotic Task Learning through Agent Analysis. arXiv preprint arXiv:2306.06770 , 2023."
+            },
+            {
+              "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+              "citation": "J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. In NAACL-HLT (1) , 2019."
+            },
+            {
+              "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+              "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch. Language models as zero-shot planners: Extracting actionable knowledge for embodied agents. In International Conference on Machine Learning, pages 9118-9147, 2022b."
+            },
+            {
+              "title": "Selection-inference: Exploiting large language models for interpretable logical reasoning",
+              "citation": "A. Creswell, M. Shanahan, and I. Higgins. Selection-inference: Exploiting large language models for interpretable logical reasoning. In The Eleventh International Conference on Learning Representations , 2023."
+            },
+            {
+              "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+              "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch. Language models as zero-shot planners: Extracting actionable knowledge for embodied agents. In International Conference on Machine Learning, pages 9118-9147, 2022b."
+            },
+            {
+              "title": "React: Synergizing reasoning and acting in language models",
+              "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+            },
+            {
+              "title": "AI chains: Transparent and controllable human-AI interaction by chaining large language model prompts",
+              "citation": "T. Wu, M. Terry, and C. J. Cai. AI chains: Transparent and controllable human-AI interaction by chaining large language model prompts. In Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems , pages 1-22, 2022b."
+            },
+            {
+              "title": "Language model cascades",
+              "citation": "D. Dohan, W. Xu, A. Lewkowycz, J. Austin, D. Bieber, R. G. Lopes, Y. Wu, H. Michalewski, R. A. Saurous, J. Sohl-Dickstein, et al. Language model cascades. arXiv preprint arXiv:2207.10342 , 2022."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "Towards cognitive language agents",
+          "citations": [
+            {
+              "title": "Do as I can, not as I say: Grounding language in robotic affordances",
+              "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, C. Fu, K. Gopalakrishnan, K. Hausman, et al. Do as I can, not as I say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691 , 2022."
+            },
+            {
+              "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+              "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch. Language models as zero-shot planners: Extracting actionable knowledge for embodied agents. In International Conference on Machine Learning, pages 9118-9147, 2022b."
+            },
+            {
+              "title": "Collaborating with language models for embodied reasoning",
+              "citation": "I. Dasgupta, C. Kaeser-Chen, K. Marino, A. Ahuja, S. Babayan, F. Hill, and R. Fergus. Collaborating with language models for embodied reasoning. In Second Workshop on Language and Reinforcement Learning , 2022."
+            },
+            {
+              "title": "React: Synergizing reasoning and acting in language models",
+              "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+            },
+            {
+              "title": "Reflexion: Language agents with verbal reinforcement learning",
+              "citation": "N. Shinn, F. Cassano, B. Labash, A. Gopinath, K. Narasimhan, and S. Yao. Reflexion: Language agents with verbal reinforcement learning. arXiv preprint arXiv:2303.11366 , 2023."
+            },
+            {
+              "title": "A survey on large language model based autonomous agents",
+              "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin, W. X. Zhao, Z. Wei, and J.-R. Wen. A survey on large language model based autonomous agents, 2023b."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "Cognitive Architectures for Language Agents (CoALA): A Conceptual Framework",
+      "citations": [
+        {
+          "title": "Flamingo: a visual language model for few-shot learning",
+          "citation": "J.-B. Alayrac, J. Donahue, P. Luc, A. Miech, I. Barr, Y. Hasson, K. Lenc, A. Mensch, K. Millican, M. Reynolds, et al. Flamingo: a visual language model for few-shot learning. Advances in Neural Information Processing Systems , 35:23716-23736, 2022."
+        },
+        {
+          "title": "Socratic models: Composing zero-shot multimodal reasoning with language",
+          "citation": "A. Zeng, M. Attarian, B. Ichter, K. Choromanski, A. Wong, S. Welker, F. Tombari, A. Purohit, M. Ryoo, V. Sindhwani, et al. Socratic models: Composing zero-shot multimodal reasoning with language. arXiv preprint arXiv:2204.00598 , 2022."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Memory",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Working memory",
+              "citations": [
+                {
+                  "title": "Self-consistency improves chain of thought reasoning in language models",
+                  "citation": "X. Wang, J. Wei, D. Schuurmans, Q. Le, E. Chi, and D. Zhou. Self-consistency improves chain of thought reasoning in language models. arXiv preprint arXiv:2203.11171, 2022b."
+                },
+                {
+                  "title": "Show your work: Scratchpads for intermediate computation with language models",
+                  "citation": "M. Nye, A. J. Andreassen, G. Gur-Ari, H. Michalewski, J. Austin, D. Bieber, D. Dohan, A. Lewkowycz, M. Bosma, D. Luan, et al. Show your work: Scratchpads for intermediate computation with language models. arXiv preprint arXiv:2112.00114, 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.2",
+              "sec_title": "Episodic memory",
+              "citations": [
+                {
+                  "title": "Learning to retrieve prompts for in-context learning",
+                  "citation": "O. Rubin, J. Herzig, and J. Berant. Learning to retrieve prompts for in-context learning. arXiv preprint arXiv:2112.08633, 2021."
+                },
+                {
+                  "title": "Memory networks",
+                  "citation": "J. Weston, S. Chopra, and A. Bordes. Memory networks. arXiv preprint arXiv:1410.3916, 2014."
+                },
+                {
+                  "title": "Generative agents: Interactive simulacra of human behavior",
+                  "citation": "J. S. Park, J. C. O'Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442, 2023."
+                },
+                {
+                  "title": "Keep CALM and explore: Language models for action generation in text-based games",
+                  "citation": "S. Yao, R. Rao, M. Hausknecht, and K. Narasimhan. Keep CALM and explore: Language models for action generation in text-based games. arXiv preprint arXiv:2010.02903, 2020."
+                },
+                {
+                  "title": "Multi-stage episodic control for strategic exploration in text games",
+                  "citation": "J. Tuyls, S. Yao, S. Kakade, and K. Narasimhan. Multi-stage episodic control for strategic exploration in text games. arXiv preprint arXiv:2201.01251, 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.3",
+              "sec_title": "Semantic memory",
+              "citations": [
+                {
+                  "title": "Retrieval-augmented generation for knowledge-intensive NLP tasks",
+                  "citation": "P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. Küttler, M. Lewis, W.-t. Yih, T. Rocktäschel, et al. Retrieval-augmented generation for knowledge-intensive NLP tasks. Advances in Neural Information Processing Systems, 33:9459-9474, 2020."
+                },
+                {
+                  "title": "Improving language models by retrieving from trillions of tokens",
+                  "citation": "S. Borgeaud, A. Mensch, J. Hoffmann, T. Cai, E. Rutherford, K. Millican, G. B. Van Den Driessche, J.-B. Lespiau, B. Damoc, A. Clark, et al. Improving language models by retrieving from trillions of tokens. In International Conference on Machine Learning, pages 2206-2240, 2022."
+                },
+                {
+                  "title": "Reading Wikipedia to answer open-domain questions",
+                  "citation": "D. Chen, A. Fisch, J. Weston, and A. Bordes. Reading Wikipedia to answer open-domain questions. arXiv preprint arXiv:1704.00051, 2017."
+                },
+                {
+                  "title": "Learning to win by reading manuals in a Monte-Carlo framework",
+                  "citation": "S. Branavan, D. Silver, and R. Barzilay. Learning to win by reading manuals in a Monte-Carlo framework. Journal of Artificial Intelligence Research, 43:661-704, 2012."
+                },
+                {
+                  "title": "Deep transfer in reinforcement learning by language grounding",
+                  "citation": "K. Narasimhan, R. Barzilay, and T. Jaakkola. Deep transfer in reinforcement learning by language grounding. In Journal of Artificial Intelligence Research (JAIR), 2018."
+                },
+                {
+                  "title": "Grounding language to entities and dynamics for generalization in reinforcement learning",
+                  "citation": "A. W. Hanjie, V. Zhong, and K. Narasimhan. Grounding language to entities and dynamics for generalization in reinforcement learning. In International Conference on Machine Learning (ICML), 2021."
+                },
+                {
+                  "title": "SILG: The Multi-domain Symbolic Interactive Language Grounding Benchmark",
+                  "citation": "V. Zhong, A. W. Hanjie, S. Wang, K. Narasimhan, and L. Zettlemoyer. SILG: The Multi-domain Symbolic Interactive Language Grounding Benchmark. Advances in Neural Information Processing Systems, 34:21505-21519, 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.4",
+              "sec_title": "Procedural memory",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Grounding actions",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.2.1",
+              "sec_title": "Physical environments",
+              "citations": [
+                {
+                  "title": "Shakey the robot",
+                  "citation": "N. J. Nilsson. Shakey the robot. Technical Note, 1984."
+                },
+                {
+                  "title": "Do as i can, not as i say: Grounding language in robotic affordances",
+                  "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, K. Gopalakrishnan, K. Hausman, A. Herzog, et al. Do as i can, not as i say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691, 2022."
+                },
+                {
+                  "title": "Flamingo: a visual language model for few-shot learning",
+                  "citation": "J. B. Alayrac, J. Donahue, P. Luc, A. Miech, I. Barr, Y. Hasson, K. Lenc, A. Mensch, K. Millican, M. Reynolds, et al. Flamingo: a visual language model for few-shot learning. Advances in Neural Information Processing Systems, 35:23716-23736, 2022."
+                },
+                {
+                  "title": "Palm-e: An embodied multimodal language model",
+                  "citation": "D. Driess, F. Xia, M. S. M. Sajjadi, C. Lynch, A. Chowdhery, B. Ichter, A. Wahid, J. Tompson, Q. Vuong, T. Yu, et al. Palm-e: An embodied multimodal language model. arXiv preprint arXiv:2303.03378, 2023."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.2",
+              "sec_title": "Dialogue with humans or other agents",
+              "citations": [
+                {
+                  "title": "Understanding natural language",
+                  "citation": "T. Winograd. Understanding natural language. Cognitive psychology, 3(1):1-191, 1972."
+                },
+                {
+                  "title": "Understanding natural language commands for robotic navigation and mobile manipulation",
+                  "citation": "S. Tellex, T. Kollar, S. Dickerson, M. Walter, A. Banerjee, S. Teller, and N. Roy. Understanding natural language commands for robotic navigation and mobile manipulation. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 25, pages 1507-1514, 2011."
+                },
+                {
+                  "title": "Teach: Task-driven embodied agents that chat",
+                  "citation": "A. Padmakumar, J. Thomason, A. Shrivastava, P. Lange, A. Narayan-Chen, S. Gella, R. Piramuthu, G. Tur, and D. Hakkani-Tur. Teach: Task-driven embodied agents that chat. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 36, pages 2017-2025, 2022."
+                },
+                {
+                  "title": "Vision-and-dialog navigation",
+                  "citation": "J. Thomason, M. Murray, M. Cakmak, and L. Zettlemoyer. Vision-and-dialog navigation. In Conference on Robot Learning, pages 394-406. PMLR, 2020."
+                },
+                {
+                  "title": "Collaborative dialogue in Minecraft",
+                  "citation": "A. Narayan-Chen, P. Jayannavar, and J. Hockenmaier. Collaborative dialogue in Minecraft. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pages 5405-5415, 2019."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.3",
+              "sec_title": "Digital environments",
+              "citations": [
+                {
+                  "title": "Interactive fiction games: A colossal adventure",
+                  "citation": "M. Hausknecht, P. Ammanabrolu, M.-A. Côté, and X. Yuan. Interactive fiction games: A colossal adventure. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 34, pages 7903-7910, 2020."
+                },
+                {
+                  "title": "Alfworld: Aligning text and embodied environments for interactive learning",
+                  "citation": "M. Shridhar, X. Yuan, M.-A. Côté, Y. Bisk, A. Trischler, and M. Hausknecht. Alfworld: Aligning text and embodied environments for interactive learning. arXiv preprint arXiv:2010.03768, 2020."
+                },
+                {
+                  "title": "React: Synergizing reasoning and acting in language models",
+                  "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+                },
+                {
+                  "title": "ToolAlpaca: Generalized Tool Learning for Language Models with 3000 Simulated Cases",
+                  "citation": "Q. Tang, Z. Deng, H. Lin, X. Han, Q. Liang, and L. Sun. ToolAlpaca: Generalized Tool Learning for Language Models with 3000 Simulated Cases. arXiv preprint arXiv:2306.05301, 2023b."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.3",
+          "sec_title": "Retrieval actions",
+          "citations": [
+            {
+              "title": "New forms of learning (and unlearning) could include fine-tuning smaller models for specific reasoning sub-tasks (Zelikman et al",
+              "citation": "New forms of learning (and unlearning) could include fine-tuning smaller models for specific reasoning sub-tasks (Zelikman et al., 2022; Huang et al., 2022a; Ahn et al., 2022), deleting unneeded memory items for 'unlearning' (Nguyen et al., 2022c), and studying the interaction effects between multiple forms of learning (Tuyls et al., 2022; Park et al., 2023; Xie et al., 2023; Khattab et al., 2022)."
+            },
+            {
+              "title": "Search engine guided neural machine translation",
+              "citation": "J. Gu, Y. Wang, K. Cho, and V. O. Li. Search engine guided neural machine translation. In Proceedings of the AAAI Conference on Artificial Intelligence , volume 32, 2018."
+            },
+            {
+              "title": "A survey on large language model based autonomous agents",
+              "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin, W. X. Zhao, Z. Wei, and J.-R. Wen. A survey on large language model based autonomous agents, 2023b."
+            },
+            {
+              "title": "Generative agents: Interactive simulacra of human behavior",
+              "citation": "J. S. Park, J. C. O'Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442 , 2023."
+            },
+            {
+              "title": "Large language models are human-level prompt engineers",
+              "citation": "Y. Zhou, A. I. Muresanu, Z. Han, K. Paster, S. Pitis, H. Chan, and J. Ba. Large language models are human-level prompt engineers. arXiv preprint arXiv:2211.01910 , 2022b."
+            },
+            {
+              "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+              "citation": "S. Zhou, F. F. Xu, H. Zhu, X. Zhou, R. Lo, A. Sridhar, X. Cheng, Y. Bisk, D. Fried, U. Alon, et al. WebArena: A Realistic Web Environment for Building Autonomous Agents. arXiv preprint arXiv:2307.13854 , 2023b."
+            },
+            {
+              "title": "Integrating retrieval and reasoning can help to better ground planning",
+              "citation": "Integrating retrieval and reasoning can help to better ground planning. Recent computational psychological models implicate an integrated process of memory recall and decision-making (Zhou et al., 2023a; Zhao et al., 2022) - suggesting that adaptive mechanisms interleaving memory search and forward simulation will allow agents to make the most of their knowledge."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.4",
+          "sec_title": "Reasoning actions",
+          "citations": [
+            {
+              "title": "React: Synergizing reasoning and acting in language models",
+              "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+            },
+            {
+              "title": "Language guided state abstractions",
+              "citation": "A. Peng, I. Sucholutsky, B. Li, T. R. Sumers, T. L. Griffiths, J. Andreas, and J. A. Shah. Language guided state abstractions. In Workshop on Social Intelligence in Humans and Robots at RSS 2023 , 2023."
+            },
+            {
+              "title": "Reflexion: Language agents with verbal reinforcement learning",
+              "citation": "N. Shinn, F. Cassano, B. Labash, A. Gopinath, K. Narasimhan, and S. Yao. Reflexion: Language agents with verbal reinforcement learning. arXiv preprint arXiv:2303.11366 , 2023."
+            },
+            {
+              "title": "Generative agents: Interactive simulacra of human behavior",
+              "citation": "J. S. Park, J. C. O'Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.5",
+          "sec_title": "Learning actions",
+          "citations": [
+            {
+              "title": "Proposal",
+              "citation": "Proposal . The proposal sub-stage generates one or more action candidates. The usual approach is to use reasoning (and optionally retrieval) to sample one (Huang et al., 2022c) or more (Chen et al., 2021; Wang et al., 2022b) external grounding actions from the LLM. For simple domains with limited actions, the proposal stage might simply include all actions (e.g., SayCan in Section 5). More sophisticated agents use if-else or while-if code structures (Wang et al., 2023a; Park et al., 2023); while agents deployed in well-defined domains may utilize structured simulators (Haslum et al., 2019) to generate plausible rollouts (Liu et al., 2023a; Dagan et al., 2023)."
+            },
+            {
+              "title": "Model-free episodic control",
+              "citation": "C. Blundell, B. Uria, A. Pritzel, Y. Li, A. Ruderman, J. Z. Leibo, J. Rae, D. Wierstra, and D. Hassabis. Model-free episodic control. arXiv preprint arXiv:1606.04460 , 2016."
+            },
+            {
+              "title": "Neural episodic control",
+              "citation": "A. Pritzel, B. Uria, S. Srinivasan, A. P. Badia, O. Vinyals, D. Hassabis, D. Wierstra, and C. Blundell. Neural episodic control. In International conference on machine learning , pages 2827-2836, 2017."
+            },
+            {
+              "title": "Go-explore: a new approach for hardexploration problems",
+              "citation": "A. Ecoffet, J. Huizinga, J. Lehman, K. O. Stanley, and J. Clune. Go-explore: a new approach for hardexploration problems. arXiv preprint arXiv:1901.10995 , 2019."
+            },
+            {
+              "title": "Multi-stage episodic control for strategic exploration in text games",
+              "citation": "J. Tuyls, S. Yao, S. Kakade, and K. Narasimhan. Multi-stage episodic control for strategic exploration in text games. arXiv preprint arXiv:2201.01251 , 2022."
+            },
+            {
+              "title": "Memory networks",
+              "citation": "J. Weston, S. Chopra, and A. Bordes. Memory networks. arXiv preprint arXiv:1410.3916 , 2014."
+            },
+            {
+              "title": "Learning to retrieve prompts for in-context learning",
+              "citation": "O. Rubin, J. Herzig, and J. Berant. Learning to retrieve prompts for in-context learning. arXiv preprint arXiv:2112.08633 , 2021."
+            },
+            {
+              "title": "Generative agents: Interactive simulacra of human behavior",
+              "citation": "J. S. Park, J. C. O'Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442 , 2023."
+            },
+            {
+              "title": "Reflexion: Language agents with verbal reinforcement learning",
+              "citation": "N. Shinn, F. Cassano, B. Labash, A. Gopinath, K. Narasimhan, and S. Yao. Reflexion: Language agents with verbal reinforcement learning. arXiv preprint arXiv:2303.11366 , 2023."
+            },
+            {
+              "title": "Generative agents: Interactive simulacra of human behavior",
+              "citation": "J. S. Park, J. C. O'Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442 , 2023."
+            },
+            {
+              "title": "Reflexion: Language agents with verbal reinforcement learning",
+              "citation": "N. Shinn, F. Cassano, B. Labash, A. Gopinath, K. Narasimhan, and S. Yao. Reflexion: Language agents with verbal reinforcement learning. arXiv preprint arXiv:2303.11366 , 2023."
+            },
+            {
+              "title": "Teaching large language models to self-debug",
+              "citation": "X. Chen, M. Lin, N. Schärli, and D. Zhou. Teaching large language models to self-debug. arXiv preprint arXiv:2304.05128 , 2023b."
+            },
+            {
+              "title": "Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing",
+              "citation": "P. Liu, W. Yuan, J. Fu, Z. Jiang, H. Hayashi, and G. Neubig. Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing. ACM Computing Surveys , 55(9), 2023d. ISSN 0360-0300."
+            },
+            {
+              "title": "A survey on large language model based autonomous agents",
+              "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin, W. X. Zhao, Z. Wei, and J.-R. Wen. A survey on large language model based autonomous agents, 2023b."
+            },
+            {
+              "title": "Imitation learning: A survey of learning methods",
+              "citation": "A. Hussein, M. M. Gaber, E. Elyan, and C. Jayne. Imitation learning: A survey of learning methods. ACM Computing Surveys (CSUR) , 50(2):1-35, 2017."
+            },
+            {
+              "title": "Reinforcement learning: An introduction",
+              "citation": "R. S. Sutton and A. G. Barto. Reinforcement learning: An introduction . MIT press, 2018."
+            },
+            {
+              "title": "Deep reinforcement learning from human preferences",
+              "citation": "P. F. Christiano, J. Leike, T. Brown, M. Martic, S. Legg, and D. Amodei. Deep reinforcement learning from human preferences. Advances in neural information processing systems , 30, 2017."
+            },
+            {
+              "title": "Training language models to follow instructions with human feedback",
+              "citation": "L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray, et al. Training language models to follow instructions with human feedback. Advances in Neural Information Processing Systems , 35:27730-27744, 2022."
+            },
+            {
+              "title": "WebGPT: Browser-Assisted Question-Answering with Human Feedback",
+              "citation": "R. Nakano, J. Hilton, S. Balaji, J. Wu, L. Ouyang, C. Kim, C. Hesse, S. Jain, V. Kosaraju, W. Saunders, et al. WebGPT: Browser-Assisted Question-Answering with Human Feedback. arXiv preprint arXiv:2112.09332 , 2021."
+            },
+            {
+              "title": "Constitutional AI: Harmlessness from AI feedback",
+              "citation": "Y. Bai, S. Kadavath, S. Kundu, A. Askell, J. Kernion, A. Jones, A. Chen, A. Goldie, A. Mirhoseini, C. McKinnon, et al. Constitutional AI: Harmlessness from AI feedback. arXiv preprint arXiv:2212.08073 , 2022."
+            },
+            {
+              "title": "Training socially aligned language models in simulated human society.",
+              "citation": "R. Liu, R. Yang, C. Jia, G. Zhang, D. Zhou, A. M. Dai, D. Yang, and S. Vosoughi. Training socially aligned language models in simulated human society. arXiv preprint arXiv:2305.16960 , 2023f."
+            },
+            {
+              "title": "Inner monologue: Embodied reasoning through planning with language models",
+              "citation": "W. Huang, F. Xia, T. Xiao, H. Chan, J. Liang, P. Florence, A. Zeng, J. Tompson, I. Mordatch, Y. Chebotar, et al. Inner monologue: Embodied reasoning through planning with language models. arXiv preprint arXiv:2207.05608 , 2022c."
+            },
+            {
+              "title": "STaR: Bootstrapping reasoning with reasoning",
+              "citation": "E. Zelikman, Y. Wu, J. Mu, and N. Goodman. STaR: Bootstrapping reasoning with reasoning. Advances in Neural Information Processing Systems , 35:15476-15488, 2022."
+            },
+            {
+              "title": "Multi-stage episodic control for strategic exploration in text games",
+              "citation": "J. Tuyls, S. Yao, S. Kakade, and K. Narasimhan. Multi-stage episodic control for strategic exploration in text games. arXiv preprint arXiv:2201.01251 , 2022."
+            },
+            {
+              "title": "Making pre-trained language models better few-shot learners",
+              "citation": "T. Gao, A. Fisch, and D. Chen. Making pre-trained language models better few-shot learners. arXiv preprint arXiv:2012.15723 , 2020."
+            },
+            {
+              "title": "APE",
+              "citation": "Updating reasoning (e.g., prompt templates; Gao et al., 2020; Zhou et al., 2022b). For example, APE (Zhou et al., 2022b) infers prompt instructions from input-output examples, then uses these instructions as part of the LLM prompt to assist task solving. Such a prompt update can be seen as a form of learning to reason."
+            },
+            {
+              "title": "APE",
+              "citation": "Updating reasoning (e.g., prompt templates; Gao et al., 2020; Zhou et al., 2022b). For example, APE (Zhou et al., 2022b) infers prompt instructions from input-output examples, then uses these instructions as part of the LLM prompt to assist task solving. Such a prompt update can be seen as a form of learning to reason."
+            },
+            {
+              "title": "Voyager",
+              "citation": "Updating grounding (e.g., code-based skills; Liang et al., 2023a; Ellis et al., 2021; Wang et al., 2023a). For example, Voyager (Wang et al., 2023a) maintains a curriculum library. Notably, current methods are limited to creating new code skills to interact with external environments."
+            },
+            {
+              "title": "Dreamcoder: Bootstrapping inductive program synthesis with wake-sleep library learning",
+              "citation": "K. Ellis, C. Wong, M. Nye, M. Sablé-Meyer, L. Morales, L. Hewitt, L. Cary, A. Solar-Lezama, and J. B. Tenenbaum. Dreamcoder: Bootstrapping inductive program synthesis with wake-sleep library learning. In Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation , pages 835-850, 2021."
+            },
+            {
+              "title": "A survey on large language model based autonomous agents",
+              "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin, W. X. Zhao, Z. Wei, and J.-R. Wen. A survey on large language model based autonomous agents, 2023b."
+            },
+            {
+              "title": "A survey on large language model based autonomous agents",
+              "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin, W. X. Zhao, Z. Wei, and J.-R. Wen. A survey on large language model based autonomous agents, 2023b."
+            },
+            {
+              "title": "Document expansion by query prediction",
+              "citation": "R. Nogueira, W. Yang, J. Lin, and K. Cho. Document expansion by query prediction, 2019."
+            },
+            {
+              "title": "Updating retrieval",
+              "citation": "Updating retrieval . To our knowledge, these learning options are not studied in recent language agents. Retrieval is usually considered a basic action designed with some fixed implementation (e.g., BM25 or dense retrieval), but research in query/document expansion (Nogueira et al., 2019; Wang et al., 2023c; Tang et al., 2023a) or retrieval distillion (Izacard et al., 2021) may be helpful for language agents to learn better retrieval procedures."
+            },
+            {
+              "title": "ToolAlpaca: Generalized Tool Learning for Language Models with 3000 Simulated Cases",
+              "citation": "Q. Tang, Z. Deng, H. Lin, X. Han, Q. Liang, and L. Sun. ToolAlpaca: Generalized Tool Learning for Language Models with 3000 Simulated Cases. arXiv preprint arXiv:2306.05301 , 2023b."
+            },
+            {
+              "title": "Unsupervised dense information retrieval with contrastive learning",
+              "citation": "G. Izacard, M. Caron, L. Hosseini, S. Riedel, P. Bojanowski, A. Joulin, and E. Grave. Unsupervised dense information retrieval with contrastive learning. arXiv preprint arXiv:2112.09118 , 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.5.1",
+              "sec_title": "Updating episodic memory with experience",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.5.2",
+              "sec_title": "Updating semantic memory with knowledge",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.5.3",
+              "sec_title": "Updating LLM parameters (procedural memory)",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.5.4",
+              "sec_title": "Updating agent code (procedural memory)",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.6",
+          "sec_title": "Decision making",
+          "citations": [
+            {
+              "title": "Language (re)modelling: Towards embodied language understanding",
+              "citation": "R. Tamari, C. Shani, T. Hope, M. R. L. Petruck, O. Abend, and D. Shahaf. Language (re)modelling: Towards embodied language understanding. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics , pages 6268-6281, Online, July 2020. Association for Computational Linguistics. doi: 10.18653/v1/2020.acl-main.559."
+            },
+            {
+              "title": "Tree of thoughts: Deliberate problem solving with large language models",
+              "citation": "S. Yao, D. Yu, J. Zhao, I. Shafran, T. L. Griffiths, Y. Cao, and K. Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601 , 2023."
+            },
+            {
+              "title": "Reasoning with language model is planning with world model",
+              "citation": "S. Hao, Y. Gu, H. Ma, J. J. Hong, Z. Wang, D. Z. Wang, and Z. Hu. Reasoning with language model is planning with world model. arXiv preprint arXiv:2305.14992 , 2023."
+            },
+            {
+              "title": "Improving Knowledge Extraction from LLMs for Robotic Task Learning through Agent Analysis",
+              "citation": "J. R. Kirk, W. Robert, P. Lindes, and J. E. Laird. Improving Knowledge Extraction from LLMs for Robotic Task Learning through Agent Analysis. arXiv preprint arXiv:2306.06770 , 2023."
+            },
+            {
+              "title": "Reflexion: Language agents with verbal reinforcement learning",
+              "citation": "N. Shinn, F. Cassano, B. Labash, A. Gopinath, K. Narasimhan, and S. Yao. Reflexion: Language agents with verbal reinforcement learning. arXiv preprint arXiv:2303.11366 , 2023."
+            },
+            {
+              "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+              "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch. Language models as zero-shot planners: Extracting actionable knowledge for embodied agents. In International Conference on Machine Learning, pages 9118-9147, 2022b."
+            },
+            {
+              "title": "Evaluating large language models trained on code",
+              "citation": "M. Chen, J. Tworek, H. Jun, Q. Yuan, H. P. d. O. Pinto, J. Kaplan, H. Edwards, Y. Burda, N. Joseph, G. Brockman, et al. Evaluating large language models trained on code. arXiv preprint arXiv:2107.03374 , 2021."
+            },
+            {
+              "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+              "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch. Language models as zero-shot planners: Extracting actionable knowledge for embodied agents. In International Conference on Machine Learning, pages 9118-9147, 2022b."
+            },
+            {
+              "title": "A survey on large language model based autonomous agents",
+              "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin, W. X. Zhao, Z. Wei, and J.-R. Wen. A survey on large language model based autonomous agents, 2023b."
+            },
+            {
+              "title": "Generative agents: Interactive simulacra of human behavior",
+              "citation": "J. S. Park, J. C. O'Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442 , 2023."
+            },
+            {
+              "title": "An introduction to the planning domain definition language",
+              "citation": "P. Haslum, N. Lipovetzky, D. Magazzeni, C. Muise, R. Brachman, F. Rossi, and P. Stone. An introduction to the planning domain definition language , volume 13. Springer, 2019."
+            },
+            {
+              "title": "Visual instruction tuning",
+              "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee. Visual instruction tuning. In NeurIPS , 2023b."
+            },
+            {
+              "title": "Dynamic Planning with a LLM",
+              "citation": "G. Dagan, F. Keller, and A. Lascarides. Dynamic Planning with a LLM. arXiv preprint arXiv:2308.06391 , 2023."
+            },
+            {
+              "title": "Do as I can, not as I say: Grounding language in robotic affordances",
+              "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, C. Fu, K. Gopalakrishnan, K. Hausman, et al. Do as I can, not as I say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691 , 2022."
+            },
+            {
+              "title": "Do as I can, not as I say: Grounding language in robotic affordances",
+              "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, C. Fu, K. Gopalakrishnan, K. Hausman, et al. Do as I can, not as I say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691 , 2022."
+            },
+            {
+              "title": "React: Synergizing reasoning and acting in language models",
+              "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+            },
+            {
+              "title": "A survey on large language model based autonomous agents",
+              "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin, W. X. Zhao, Z. Wei, and J.-R. Wen. A survey on large language model based autonomous agents, 2023b."
+            },
+            {
+              "title": "Generative agents: Interactive simulacra of human behavior",
+              "citation": "J. S. Park, J. C. O'Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442 , 2023."
+            },
+            {
+              "title": "Tree of thoughts: Deliberate problem solving with large language models",
+              "citation": "S. Yao, D. Yu, J. Zhao, I. Shafran, T. L. Griffiths, Y. Cao, and K. Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601 , 2023."
+            },
+            {
+              "title": "Tree of thoughts: Deliberate problem solving with large language models",
+              "citation": "S. Yao, D. Yu, J. Zhao, I. Shafran, T. L. Griffiths, Y. Cao, and K. Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601 , 2023."
+            },
+            {
+              "title": "Reasoning with language model is planning with world model",
+              "citation": "S. Hao, Y. Gu, H. Ma, J. J. Hong, Z. Wang, D. Z. Wang, and Z. Hu. Reasoning with language model is planning with world model. arXiv preprint arXiv:2305.14992 , 2023."
+            },
+            {
+              "title": "Reasoning with language model is planning with world model",
+              "citation": "S. Hao, Y. Gu, H. Ma, J. J. Hong, Z. Wang, D. Z. Wang, and Z. Hu. Reasoning with language model is planning with world model. arXiv preprint arXiv:2305.14992 , 2023."
+            },
+            {
+              "title": "Intercode: Standardizing and benchmarking interactive coding with execution feedback",
+              "citation": "J. Yang, A. Prabhakar, K. Narasimhan, and S. Yao. Intercode: Standardizing and benchmarking interactive coding with execution feedback. arXiv preprint arXiv:2306.14898 , 2023."
+            },
+            {
+              "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+              "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch. Language models as zero-shot planners: Extracting actionable knowledge for embodied agents. In International Conference on Machine Learning, pages 9118-9147, 2022b."
+            },
+            {
+              "title": "Toolformer: Language models can teach themselves to use tools",
+              "citation": "T. Schick, J. Dwivedi-Yu, R. Dessì, R. Raileanu, M. Lomeli, L. Zettlemoyer, N. Cancedda, and T. Scialom. Toolformer: Language models can teach themselves to use tools. arXiv preprint arXiv:2302.04761 , 2023."
+            },
+            {
+              "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+              "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch. Language models as zero-shot planners: Extracting actionable knowledge for embodied agents. In International Conference on Machine Learning, pages 9118-9147, 2022b."
+            },
+            {
+              "title": "Do as I can, not as I say: Grounding language in robotic affordances",
+              "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, C. Fu, K. Gopalakrishnan, K. Hausman, et al. Do as I can, not as I say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691 , 2022."
+            },
+            {
+              "title": "React: Synergizing reasoning and acting in language models",
+              "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+            },
+            {
+              "title": "Reflexion: Language agents with verbal reinforcement learning",
+              "citation": "N. Shinn, F. Cassano, B. Labash, A. Gopinath, K. Narasimhan, and S. Yao. Reflexion: Language agents with verbal reinforcement learning. arXiv preprint arXiv:2303.11366 , 2023."
+            },
+            {
+              "title": "Rewoo: Decoupling reasoning from observations for efficient augmented language models",
+              "citation": "B. Xu, Z. Peng, B. Lei, S. Mukherjee, Y. Liu, and D. Xu. Rewoo: Decoupling reasoning from observations for efficient augmented language models. arXiv preprint arXiv:2305.18323 , 2023b."
+            },
+            {
+              "title": "Swiftsage: A generative agent with fast and slow thinking for complex interactive tasks",
+              "citation": "B. Y. Lin, Y. Fu, K. Yang, P. Ammanabrolu, F. Brahman, S. Huang, C. Bhagavatula, Y. Choi, and X. Ren. Swiftsage: A generative agent with fast and slow thinking for complex interactive tasks. arXiv preprint arXiv:2305.17390 , 2023."
+            },
+            {
+              "title": "A survey on large language model based autonomous agents",
+              "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin, W. X. Zhao, Z. Wei, and J.-R. Wen. A survey on large language model based autonomous agents, 2023b."
+            },
+            {
+              "title": "Generative agents: Interactive simulacra of human behavior",
+              "citation": "J. S. Park, J. C. O'Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442 , 2023."
+            },
+            {
+              "title": "Tree of thoughts: Deliberate problem solving with large language models",
+              "citation": "S. Yao, D. Yu, J. Zhao, I. Shafran, T. L. Griffiths, Y. Cao, and K. Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601 , 2023."
+            },
+            {
+              "title": "Reasoning with language model is planning with world model",
+              "citation": "S. Hao, Y. Gu, H. Ma, J. J. Hong, Z. Wang, D. Z. Wang, and Z. Hu. Reasoning with language model is planning with world model. arXiv preprint arXiv:2305.14992 , 2023."
+            },
+            {
+              "title": "A survey of Monte Carlo tree search methods",
+              "citation": "C. B. Browne, E. Powley, D. Whitehouse, S. M. Lucas, P. I. Cowling, P. Rohlfshagen, S. Tavener, D. Perez, S. Samothrakis, and S. Colton. A survey of Monte Carlo tree search methods. IEEE Transactions on Computational Intelligence and AI in games , 4(1):1-43, 2012."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "Case Studies",
+      "citations": [
+        {
+          "title": "Do as I can, not as I say: Grounding language in robotic affordances",
+          "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, C. Fu, K. Gopalakrishnan, K. Hausman, et al. Do as I can, not as I say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691 , 2022."
+        },
+        {
+          "title": "React: Synergizing reasoning and acting in language models",
+          "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+        },
+        {
+          "title": "A survey on large language model based autonomous agents",
+          "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin, W. X. Zhao, Z. Wei, and J.-R. Wen. A survey on large language model based autonomous agents, 2023b."
+        },
+        {
+          "title": "Generative agents: Interactive simulacra of human behavior",
+          "citation": "J. S. Park, J. C. O'Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442 , 2023."
+        },
+        {
+          "title": "Tree of thoughts: Deliberate problem solving with large language models",
+          "citation": "S. Yao, D. Yu, J. Zhao, I. Shafran, T. L. Griffiths, Y. Cao, and K. Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601 , 2023."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "Actionable Insights",
+      "citations": [
+        {
+          "title": "Augmented language models: a survey",
+          "citation": "G. Mialon, R. Dessì, M. Lomeli, C. Nalmpantis, R. Pasunuru, R. Raileanu, B. Rozière, T. Schick, J. DwivediYu, A. Celikyilmaz, et al. Augmented language models: a survey. arXiv preprint arXiv:2302.07842 , 2023."
+        },
+        {
+          "title": "Llm-powered autonomous agents",
+          "citation": "L. Weng. Llm-powered autonomous agents. lilianweng.github.io , Jun 2023. URL https://lilianweng. github.io/posts/2023-06-23-agent/ ."
+        },
+        {
+          "title": "Query2doc: Query expansion with large language models",
+          "citation": "L. Wang, N. Yang, and F. Wei. Query2doc: Query expansion with large language models. arXiv preprint arXiv:2303.07678 , 2023c."
+        },
+        {
+          "title": "ROS: an open-source robot operating system",
+          "citation": "M. Quigley. Ros: an open-source robot operating system. In IEEE International Conference on Robotics and Automation , 2009. URL https://api.semanticscholar.org/CorpusID:6324125 ."
+        },
+        {
+          "title": "Robot operating system 2: Design, architecture, and uses in the wild",
+          "citation": "S. Macenski, T. Foote, B. Gerkey, C. Lalancette, and W. Woodall. Robot operating system 2: Design, architecture, and uses in the wild. Science Robotics , 7(66):eabm6074, 2022."
+        },
+        {
+          "title": "In academic research , standardized terms allow conceptual comparisons across works (Table 2), and open-source implementations would further facilitate modular plug-and-play and re-use",
+          "citation": "In academic research , standardized terms allow conceptual comparisons across works (Table 2), and open-source implementations would further facilitate modular plug-and-play and re-use. For example, the theoretical framework of Markov Decision Processes (Puterman, 2014) provides a standardized set of concepts and terminology (e.g., state, action, reward, transition) for reinforcement learning (Sutton and Barto, 2018). Correspondingly, empirical frameworks like OpenAI Gym (Brockman et al., 2016) provided standardized abstractions (e.g., obs, reward, done, info = env.step(action) ) that facilitate empirical RL work. Thus, it would be timely and impactful to also implement useful abstractions (e.g., Memory , Action , Agent classes) for language agents, and cast simpler agents into such an empirical CoALA framework as examples for building more complex agents."
+        },
+        {
+          "title": "Reinforcement learning: An introduction",
+          "citation": "R. S. Sutton and A. G. Barto. Reinforcement learning: An introduction . MIT press, 2018."
+        },
+        {
+          "title": "Openai gym",
+          "citation": "G. Brockman, V. Cheung, L. Pettersson, J. Schneider, J. Schulman, J. Tang, and W. Zaremba. Openai gym, 2016."
+        },
+        {
+          "title": "Machine Learning: The High Interest Credit Card of Technical Debt",
+          "citation": "D. Sculley, G. Holt, D. Golovin, E. Davydov, T. Phillips, D. Ebner, V. Chaudhary, and M. Young. Machine Learning: The High Interest Credit Card of Technical Debt. In SE4ML: Software Engineering for Machine Learning (NIPS 2014 Workshop) , 2014."
+        },
+        {
+          "title": "Large-scale machine learning systems in real-world industrial settings: A review of challenges and solutions",
+          "citation": "L. E. Lwakatare, A. Raj, I. Crnkovic, J. Bosch, and H. H. Olsson. Large-scale machine learning systems in real-world industrial settings: A review of challenges and solutions. Information and software technology , 127:106368, 2020."
+        },
+        {
+          "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+          "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch. Language models as zero-shot planners: Extracting actionable knowledge for embodied agents. In International Conference on Machine Learning, pages 9118-9147, 2022b."
+        },
+        {
+          "title": "Tree of thoughts: Deliberate problem solving with large language models",
+          "citation": "S. Yao, D. Yu, J. Zhao, I. Shafran, T. L. Griffiths, Y. Cao, and K. Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601 , 2023."
+        },
+        {
+          "title": "Reasoning with language model is planning with world model",
+          "citation": "S. Hao, Y. Gu, H. Ma, J. J. Hong, Z. Wang, D. Z. Wang, and Z. Hu. Reasoning with language model is planning with world model. arXiv preprint arXiv:2305.14992 , 2023."
+        },
+        {
+          "title": "React: Synergizing reasoning and acting in language models",
+          "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629 , 2022b."
+        },
+        {
+          "title": "A survey on large language model based autonomous agents",
+          "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin, W. X. Zhao, Z. Wei, and J.-R. Wen. A survey on large language model based autonomous agents, 2023b."
+        },
+        {
+          "title": "React: Synergizing reasoning and acting in language models",
+          "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+        },
+        {
+          "title": "Reflexion: Language agents with verbal reinforcement learning",
+          "citation": "N. Shinn, F. Cassano, B. Labash, A. Gopinath, K. Narasimhan, and S. Yao. Reflexion: Language agents with verbal reinforcement learning. arXiv preprint arXiv:2303.11366 , 2023."
+        },
+        {
+          "title": "Generative agents: Interactive simulacra of human behavior",
+          "citation": "J. S. Park, J. C. O'Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442 , 2023."
+        },
+        {
+          "title": "LangChain",
+          "citation": "LangChain. LangChain, 2022. URL http://www.langchain.com ."
+        },
+        {
+          "title": "LlamaIndex",
+          "citation": "LlamaIndex. LlamaIndex, 2023. URL http://www.llamaindex.ai ."
+        },
+        {
+          "title": "Guidance",
+          "citation": "Guidance. Guidance, 2023. URL https://github.com/guidance-ai/guidance ."
+        },
+        {
+          "title": "LangChain",
+          "citation": "Prompting frameworks like LangChain (LangChain, 2022) and LlamaIndex (LlamaIndex, 2023) can be used to define higher-level sequences of reasoning steps, reducing the burden of reasoning per LLM call and the low-level prompt crafting efforts. Structural output parsing solutions such as Guidance (Guidance, 2023) and OpenAI function calling (OpenAI, 2023b) can help update working memory variables. Defining and building good working memory modules will also be an important direction of future research. Such modules may be especially important for industry solutions where LLM reasoning needs to seamlessly integrate with large-scale code infrastructure."
+        },
+        {
+          "title": "Reasoning usecases in agents can inform and reshape LLM training in terms of the types (e.g., reasoning for self-evaluation, reflection, action generation, etc.) and formats (e.g., CoT (Wei et al., 2022b), ReAct (Yao et al., 2022b), Reflexion (Shinn et al., 2023)) of training instances",
+          "citation": "Reasoning usecases in agents can inform and reshape LLM training in terms of the types (e.g., reasoning for self-evaluation, reflection, action generation, etc.) and formats (e.g., CoT (Wei et al., 2022b), ReAct (Yao et al., 2022b), Reflexion (Shinn et al., 2023)) of training instances. By default, existing LLMs are trained and optimized for NLP tasks, but agent applications have explored new modes of LLM reasoning (e.g., self-evaluation) that have proven broadly useful. LLMs trained or finetuned towards these capabilities will more likely be the backbones of future agents."
+        },
+        {
+          "title": "React: Synergizing reasoning and acting in language models",
+          "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+        },
+        {
+          "title": "Reflexion: Language agents with verbal reinforcement learning",
+          "citation": "N. Shinn, F. Cassano, B. Labash, A. Gopinath, K. Narasimhan, and S. Yao. Reflexion: Language agents with verbal reinforcement learning. arXiv preprint arXiv:2303.11366 , 2023."
+        },
+        {
+          "title": "Retrieval augmented language model pre-training",
+          "citation": "K. Guu, K. Lee, Z. Tung, P. Pasupat, and M. Chang. Retrieval augmented language model pre-training. In International conference on machine learning , pages 3929-3938, 2020."
+        },
+        {
+          "title": "Retrieval-augmented generation for knowledge-intensive NLP tasks",
+          "citation": "P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. Küttler, M. Lewis, W.-t. Yih, T. Rocktäschel, et al. Retrieval-augmented generation for knowledge-intensive NLP tasks. Advances in Neural Information Processing Systems , 33:9459-9474, 2020."
+        },
+        {
+          "title": "Improving language models by retrieving from trillions of tokens",
+          "citation": "S. Borgeaud, A. Mensch, J. Hoffmann, T. Cai, E. Rutherford, K. Millican, G. B. Van Den Driessche, J.-B. Lespiau, B. Damoc, A. Clark, et al. Improving language models by retrieving from trillions of tokens. In International Conference on Machine Learning , pages 2206-2240, 2022."
+        },
+        {
+          "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+          "citation": "S. Zhou, F. F. Xu, H. Zhu, X. Zhou, R. Lo, A. Sridhar, X. Cheng, Y. Bisk, D. Fried, U. Alon, et al. WebArena: A Realistic Web Environment for Building Autonomous Agents. arXiv preprint arXiv:2307.13854 , 2023b."
+        },
+        {
+          "title": "Integrating retrieval and reasoning can help to better ground planning",
+          "citation": "Integrating retrieval and reasoning can help to better ground planning. Recent computational psychological models implicate an integrated process of memory recall and decision-making (Zhou et al., 2023a; Zhao et al., 2022) - suggesting that adaptive mechanisms interleaving memory search and forward simulation will allow agents to make the most of their knowledge."
+        },
+        {
+          "title": "Document expansion by query prediction",
+          "citation": "R. Nogueira, W. Yang, J. Lin, and K. Cho. Document expansion by query prediction, 2019."
+        },
+        {
+          "title": "Updating retrieval",
+          "citation": "Updating retrieval . To our knowledge, these learning options are not studied in recent language agents. Retrieval is usually considered a basic action designed with some fixed implementation (e.g., BM25 or dense retrieval), but research in query/document expansion (Nogueira et al., 2019; Wang et al., 2023c; Tang et al., 2023a) or retrieval distillion (Izacard et al., 2021) may be helpful for language agents to learn better retrieval procedures."
+        },
+        {
+          "title": "ToolAlpaca: Generalized Tool Learning for Language Models with 3000 Simulated Cases",
+          "citation": "Q. Tang, Z. Deng, H. Lin, X. Han, Q. Liang, and L. Sun. ToolAlpaca: Generalized Tool Learning for Language Models with 3000 Simulated Cases. arXiv preprint arXiv:2306.05301 , 2023b."
+        },
+        {
+          "title": "STaR: Bootstrapping reasoning with reasoning",
+          "citation": "E. Zelikman, Y. Wu, J. Mu, and N. Goodman. STaR: Bootstrapping reasoning with reasoning. Advances in Neural Information Processing Systems , 35:15476-15488, 2022."
+        },
+        {
+          "title": "Inner monologue: Embodied reasoning through planning with language models",
+          "citation": "W. Huang, F. Xia, T. Xiao, H. Chan, J. Liang, P. Florence, A. Zeng, J. Tompson, I. Mordatch, Y. Chebotar, et al. Inner monologue: Embodied reasoning through planning with language models. arXiv preprint arXiv:2207.05608 , 2022c."
+        },
+        {
+          "title": "Do as I can, not as I say: Grounding language in robotic affordances",
+          "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, C. Fu, K. Gopalakrishnan, K. Hausman, et al. Do as I can, not as I say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691 , 2022."
+        },
+        {
+          "title": "New forms of learning (and unlearning) could include fine-tuning smaller models for specific reasoning sub-tasks (Zelikman et al",
+          "citation": "New forms of learning (and unlearning) could include fine-tuning smaller models for specific reasoning sub-tasks (Zelikman et al., 2022; Huang et al., 2022a; Ahn et al., 2022), deleting unneeded memory items for 'unlearning' (Nguyen et al., 2022c), and studying the interaction effects between multiple forms of learning (Tuyls et al., 2022; Park et al., 2023; Xie et al., 2023; Khattab et al., 2022)."
+        },
+        {
+          "title": "Multi-stage episodic control for strategic exploration in text games",
+          "citation": "J. Tuyls, S. Yao, S. Kakade, and K. Narasimhan. Multi-stage episodic control for strategic exploration in text games. arXiv preprint arXiv:2201.01251 , 2022."
+        },
+        {
+          "title": "Generative agents: Interactive simulacra of human behavior",
+          "citation": "J. S. Park, J. C. O'Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442 , 2023."
+        },
+        {
+          "title": "Olagpt: Empowering llms with human-like problem-solving abilities",
+          "citation": "Y. Xie, T. Xie, M. Lin, W. Wei, C. Li, B. Kong, L. Chen, C. Zhuo, B. Hu, and Z. Li. Olagpt: Empowering llms with human-like problem-solving abilities. arXiv preprint arXiv:2305.16334 , 2023."
+        },
+        {
+          "title": "Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive NLP",
+          "citation": "O. Khattab, K. Santhanam, X. L. Li, D. Hall, P. Liang, C. Potts, and M. Zaharia. Demonstrate-search-predict: Composing retrieval and language models for knowledge-intensive NLP. arXiv preprint arXiv:2212.14024 , 2022. URL https://github.com/stanfordnlp/dspy ."
+        },
+        {
+          "title": "Evaluating large language models trained on code",
+          "citation": "M. Chen, J. Tworek, H. Jun, Q. Yuan, H. P. d. O. Pinto, J. Kaplan, H. Edwards, Y. Burda, N. Joseph, G. Brockman, et al. Evaluating large language models trained on code. arXiv preprint arXiv:2107.03374 , 2021."
+        },
+        {
+          "title": "Palm: Scaling language modeling with pathways",
+          "citation": "A. Chowdhery, S. Narang, J. Devlin, M. Bosma, G. Mishra, A. Roberts, P. Barham, H. W. Chung, C. Sutton, S. Gehrmann, et al. Palm: Scaling language modeling with pathways. arXiv preprint arXiv:2204.02311 , 2022."
+        },
+        {
+          "title": "Palm-e: An embodied multimodal language model",
+          "citation": "D. Driess, F. Xia, M. S. Sajjadi, C. Lynch, A. Chowdhery, B. Ichter, A. Wahid, J. Tompson, Q. Vuong, T. Yu, et al. Palm-e: An embodied multimodal language model. arXiv preprint arXiv:2303.03378 , 2023."
+        },
+        {
+          "title": "Do as I can, not as I say: Grounding language in robotic affordances",
+          "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, C. Fu, K. Gopalakrishnan, K. Hausman, et al. Do as I can, not as I say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691 , 2022."
+        },
+        {
+          "title": "Language agents in the digital world: Opportunities and risks",
+          "citation": "S. Yao and K. Narasimhan. Language agents in the digital world: Opportunities and risks. princetonnlp.github.io , Jul 2023. URL https://princeton-nlp.github.io/language-agent-impact/ ."
+        },
+        {
+          "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+          "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch. Language models as zero-shot planners: Extracting actionable knowledge for embodied agents. In International Conference on Machine Learning, pages 9118-9147, 2022b."
+        },
+        {
+          "title": "Do as I can, not as I say: Grounding language in robotic affordances",
+          "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, C. Fu, K. Gopalakrishnan, K. Hausman, et al. Do as I can, not as I say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691 , 2022."
+        },
+        {
+          "title": "From word models to world models: Translating from natural language to the probabilistic language of thought",
+          "citation": "L. Wong, G. Grand, A. K. Lew, N. D. Goodman, V. K. Mansinghka, J. Andreas, and J. B. Tenenbaum. From word models to world models: Translating from natural language to the probabilistic language of thought. arXiv preprint arXiv:2306.12672 , 2023."
+        },
+        {
+          "title": "Visual instruction tuning",
+          "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee. Visual instruction tuning. In NeurIPS , 2023b."
+        },
+        {
+          "title": "The wisdom of hindsight makes language models better instruction followers",
+          "citation": "T. Zhang, F. Liu, J. Wong, P. Abbeel, and J. E. Gonzalez. The wisdom of hindsight makes language models better instruction followers. arXiv preprint arXiv:2302.05206 , 2023b."
+        },
+        {
+          "title": "Multimodal foundation models: From specialists to general-purpose assistants",
+          "citation": "C. Li, Z. Gan, Z. Yang, J. Yang, L. Li, L. Wang, and J. Gao. Multimodal foundation models: From specialists to general-purpose assistants. arXiv preprint arXiv:2309.10020 , 2023b."
+        },
+        {
+          "title": "Leveraging pre-trained large language models to construct and utilize world models for model-based task planning",
+          "citation": "L. Guan, K. Valmeekam, S. Sreedharan, and S. Kambhampati. Leveraging pre-trained large language models to construct and utilize world models for model-based task planning. arXiv preprint arXiv:2305.14909 , 2023."
+        },
+        {
+          "title": "Pddl planning with pretrained large language models",
+          "citation": "T. Silver, V. Hariprasad, R. S. Shuttleworth, N. Kumar, T. Lozano-Pérez, and L. P. Kaelbling. Pddl planning with pretrained large language models. In NeurIPS 2022 Foundation Models for Decision Making Workshop , 2022."
+        },
+        {
+          "title": "Mixing language-based reasoning and code-based planning may offer the best of both worlds",
+          "citation": "Mixing language-based reasoning and code-based planning may offer the best of both worlds. Existing approaches either plan directly in natural language (Huang et al., 2022c; Ahn et al., 2022) or use LLMs to translate from natural language to structured world models (Wong et al., 2023; Liu et al., 2023a; Zhang et al., 2023a; Li et al., 2023a; Guan et al., 2023; Silver et al., 2022; 2023). Future work could integrate these: just as Soar incorporates a simulator for physical reasoning (Laird, 2022), agents may write and execute simulation code on the fly to evaluate the consequences of plans. See Section 7 for more discussion."
+        },
+        {
+          "title": "Tree of thoughts: Deliberate problem solving with large language models",
+          "citation": "S. Yao, D. Yu, J. Zhao, I. Shafran, T. L. Griffiths, Y. Cao, and K. Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601 , 2023."
+        },
+        {
+          "title": "Reasoning with language model is planning with world model",
+          "citation": "S. Hao, Y. Gu, H. Ma, J. J. Hong, Z. Wang, D. Z. Wang, and Z. Hu. Reasoning with language model is planning with world model. arXiv preprint arXiv:2305.14992 , 2023."
+        },
+        {
+          "title": "Visual instruction tuning",
+          "citation": "H. Liu, C. Li, Q. Wu, and Y. J. Lee. Visual instruction tuning. In NeurIPS , 2023b."
+        },
+        {
+          "title": "Dynamic Planning with a LLM",
+          "citation": "G. Dagan, F. Keller, and A. Lascarides. Dynamic Planning with a LLM. arXiv preprint arXiv:2308.06391 , 2023."
+        },
+        {
+          "title": "Toolllm: Facilitating large language models to master 16000+ real-world apis",
+          "citation": "Y. Qin, S. Liang, Y. Ye, K. Zhu, L. Yan, Y. Lu, Y. Lin, X. Cong, X. Tang, B. Qian, et al. Toolllm: Facilitating large language models to master 16000+ real-world apis. arXiv preprint arXiv:2307.16789 , 2023."
+        },
+        {
+          "title": "Tree of thoughts: Deliberate problem solving with large language models",
+          "citation": "S. Yao, D. Yu, J. Zhao, I. Shafran, T. L. Griffiths, Y. Cao, and K. Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601 , 2023."
+        },
+        {
+          "title": "Time spent thinking in online chess reflects the value of computation",
+          "citation": "E. Russek, D. Acosta-Kane, B. van Opheusden, M. G. Mattar, and T. Griffiths. Time spent thinking in online chess reflects the value of computation. PsyArXiv , 2022."
+        },
+        {
+          "title": "Metareasoning to improve efficiency",
+          "citation": "Metareasoning to improve efficiency. LLM calls are both slow and computationally intensive. Using LLMs for decision-making entails a balance between their computational cost and the utility of the resulting improved plan. Most LLM reasoning methods fix a search budget by specifying a depth of reasoning (Yao et al., 2023), but humans appear to adaptively allocate computation (Russek et al., 2022; Lieder and Griffiths, 2020; Callaway et al., 2022; Gershman et al., 2015). Future work should develop mechanisms to estimate the utility of planning (Laidlaw et al., 2023) and modify the decision procedure accordingly, either via amortization (fine-tuning the LLM based on the results of previous actions, e.g. Nguyen, 2023; Hamrick et al., 2019), routing among several decision sub-procedures (e.g., ReAct (Yao et al., 2022b) investigated backing off to CoT (Wei et al., 2022b) and vice versa), or updates to the decision-making procedure."
+        },
+        {
+          "title": "Metareasoning to improve efficiency",
+          "citation": "Metareasoning to improve efficiency. LLM calls are both slow and computationally intensive. Using LLMs for decision-making entails a balance between their computational cost and the utility of the resulting improved plan. Most LLM reasoning methods fix a search budget by specifying a depth of reasoning (Yao et al., 2023), but humans appear to adaptively allocate computation (Russek et al., 2022; Lieder and Griffiths, 2020; Callaway et al., 2022; Gershman et al., 2015). Future work should develop mechanisms to estimate the utility of planning (Laidlaw et al., 2023) and modify the decision procedure accordingly, either via amortization (fine-tuning the LLM based on the results of previous actions, e.g. Nguyen, 2023; Hamrick et al., 2019), routing among several decision sub-procedures (e.g., ReAct (Yao et al., 2022b) investigated backing off to CoT (Wei et al., 2022b) and vice versa), or updates to the decision-making procedure."
+        },
+        {
+          "title": "Computational rationality: A converging paradigm for intelligence in brains, minds, and machines",
+          "citation": "S. J. Gershman, E. J. Horvitz, and J. B. Tenenbaum. Computational rationality: A converging paradigm for intelligence in brains, minds, and machines. Science , 349(6245):273-278, 2015."
+        },
+        {
+          "title": "Bridging rl theory and practice with the effective horizon",
+          "citation": "C. Laidlaw, S. Russell, and A. Dragan. Bridging rl theory and practice with the effective horizon. arXiv preprint arXiv:2304.09853 , 2023."
+        },
+        {
+          "title": "New forms of learning (and unlearning) could include fine-tuning smaller models for specific reasoning sub-tasks (Zelikman et al",
+          "citation": "New forms of learning (and unlearning) could include fine-tuning smaller models for specific reasoning sub-tasks (Zelikman et al., 2022; Huang et al., 2022a; Ahn et al., 2022), deleting unneeded memory items for 'unlearning' (Nguyen et al., 2022c), and studying the interaction effects between multiple forms of learning (Tuyls et al., 2022; Park et al., 2023; Xie et al., 2023; Khattab et al., 2022)."
+        },
+        {
+          "title": "Combining q-learning and search with amortized value estimates",
+          "citation": "J. B. Hamrick, V. Bapst, A. Sanchez-Gonzalez, T. Pfaff, T. Weber, L. Buesing, and P. W. Battaglia. Combining q-learning and search with amortized value estimates. In International Conference on Learning Representations , 2019."
+        },
+        {
+          "title": "React: Synergizing reasoning and acting in language models",
+          "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+        },
+        {
+          "title": "Reasoning usecases in agents can inform and reshape LLM training in terms of the types (e.g., reasoning for self-evaluation, reflection, action generation, etc.) and formats (e.g., CoT (Wei et al., 2022b), ReAct (Yao et al., 2022b), Reflexion (Shinn et al., 2023)) of training instances",
+          "citation": "Reasoning usecases in agents can inform and reshape LLM training in terms of the types (e.g., reasoning for self-evaluation, reflection, action generation, etc.) and formats (e.g., CoT (Wei et al., 2022b), ReAct (Yao et al., 2022b), Reflexion (Shinn et al., 2023)) of training instances. By default, existing LLMs are trained and optimized for NLP tasks, but agent applications have explored new modes of LLM reasoning (e.g., self-evaluation) that have proven broadly useful. LLMs trained or finetuned towards these capabilities will more likely be the backbones of future agents."
+        },
+        {
+          "title": "How can we know when language models know? on the calibration of language models for question answering",
+          "citation": "Z. Jiang, J. Araki, H. Ding, and G. Neubig. How can we know when language models know? on the calibration of language models for question answering. Transactions of the Association for Computational Linguistics , 9:962-977, 2021."
+        },
+        {
+          "title": "Calibration and alignment",
+          "citation": "Calibration and alignment. More complex decision-making is currently bottlenecked by issues such as over-confidence and miscalibration (Jiang et al., 2021; Braverman et al., 2020; Chen et al., 2022), misalignment with human values or bias (Liang et al., 2021; Feng et al., 2023), hallucinations in self-evaluation (Shinn et al., 2023), and lack of human-in-the-loop mechanisms in face of uncertainties (Nguyen et al., 2022a; Ren et al., 2023). Solving these issues will significantly improve LLMs' utilities as agent backbones."
+        },
+        {
+          "title": "A close look into the calibration of pre-trained language models",
+          "citation": "Y. Chen, L. Yuan, G. Cui, Z. Liu, and H. Ji. A close look into the calibration of pre-trained language models. arXiv preprint arXiv:2211.00151 , 2022."
+        },
+        {
+          "title": "Updating grounding (e.g., code-based skills; Liang et al., 2023a; Ellis et al., 2021; Wang et al., 2023a). For example, Voyager (Wang et al., 2023a) maintains a curriculum library. Notably, current methods are limited to creating new code skills to interact with external environments.",
+          "citation": "Updating grounding (e.g., code-based skills; Liang et al., 2023a; Ellis et al., 2021; Wang et al., 2023a). For example, Voyager (Wang et al., 2023a) maintains a curriculum library. Notably, current methods are limited to creating new code skills to interact with external environments."
+        },
+        {
+          "title": "From pretraining data to language models to downstream tasks: Tracking the trails of political biases leading to unfair nlp models",
+          "citation": "S. Feng, C. Y. Park, Y. Liu, and Y. Tsvetkov. From pretraining data to language models to downstream tasks: Tracking the trails of political biases leading to unfair nlp models. arXiv preprint arXiv:2305.08283 , 2023."
+        },
+        {
+          "title": "Reflexion: Language agents with verbal reinforcement learning",
+          "citation": "N. Shinn, F. Cassano, B. Labash, A. Gopinath, K. Narasimhan, and S. Yao. Reflexion: Language agents with verbal reinforcement learning. arXiv preprint arXiv:2303.11366 , 2023."
+        },
+        {
+          "title": "A framework for learning to request rich and contextually useful information from humans",
+          "citation": "K. X. Nguyen, Y. Bisk, and H. D. Iii. A framework for learning to request rich and contextually useful information from humans. In International Conference on Machine Learning , pages 16553-16568, 2022b."
+        },
+        {
+          "title": "Robots that ask for help: Uncertainty alignment for large language model planners",
+          "citation": "A. Z. Ren, A. Dixit, A. Bodrova, S. Singh, S. Tu, N. Brown, P. Xu, L. Takayama, F. Xia, Z. Xu, et al. Robots that ask for help: Uncertainty alignment for large language model planners. In 7th Annual Conference on Robot Learning , 2023."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "Discussion",
+      "citations": [
+        {
+          "title": "React: Synergizing reasoning and acting in language models",
+          "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+        },
+        {
+          "title": "A survey on large language model based autonomous agents",
+          "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin, W. X. Zhao, Z. Wei, and J.-R. Wen. A survey on large language model based autonomous agents, 2023b."
+        },
+        {
+          "title": "Tree of thoughts: Deliberate problem solving with large language models",
+          "citation": "S. Yao, D. Yu, J. Zhao, I. Shafran, T. L. Griffiths, Y. Cao, and K. Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601 , 2023."
+        },
+        {
+          "title": "Do as I can, not as I say: Grounding language in robotic affordances",
+          "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, C. Fu, K. Gopalakrishnan, K. Hausman, et al. Do as I can, not as I say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691 , 2022."
+        },
+        {
+          "title": "Socratic models: Composing zero-shot multimodal reasoning with language",
+          "citation": "A. Zeng, M. Attarian, B. Ichter, K. Choromanski, A. Wong, S. Welker, F. Tombari, A. Purohit, M. Ryoo, V. Sindhwani, et al. Socratic models: Composing zero-shot multimodal reasoning with language. arXiv preprint arXiv:2204.00598 , 2022."
+        },
+        {
+          "title": "GPT-4 technical report",
+          "citation": "OpenAI. GPT-4 technical report. arXiv preprint arXiv:2303.08774, 2023."
+        },
+        {
+          "title": "Flamingo: a visual language model for few-shot learning",
+          "citation": "J.-B. Alayrac, J. Donahue, P. Luc, A. Miech, I. Barr, Y. Hasson, K. Lenc, A. Mensch, K. Millican, M. Reynolds, et al. Flamingo: a visual language model for few-shot learning. Advances in Neural Information Processing Systems , 35:23716-23736, 2022."
+        },
+        {
+          "title": "Gemini: a family of highly capable multimodal models",
+          "citation": "G. Team, R. Anil, S. Borgeaud, Y. Wu, J.-B. Alayrac, J. Yu, R. Soricut, J. Schalkwyk, A. M. Dai, A. Hauth, et al. Gemini: a family of highly capable multimodal models. arXiv preprint arXiv:2312.11805 , 2023."
+        },
+        {
+          "title": "LangChain",
+          "citation": "Prompting frameworks like LangChain (LangChain, 2022) and LlamaIndex (LlamaIndex, 2023) can be used to define higher-level sequences of reasoning steps, reducing the burden of reasoning per LLM call and the low-level prompt crafting efforts. Structural output parsing solutions such as Guidance (Guidance, 2023) and OpenAI function calling (OpenAI, 2023b) can help update working memory variables. Defining and building good working memory modules will also be an important direction of future research. Such modules may be especially important for industry solutions where LLM reasoning needs to seamlessly integrate with large-scale code infrastructure."
+        },
+        {
+          "title": "Introducing our multimodal models",
+          "citation": "R. Bavishi, E. Elsen, C. Hawthorne, M. Nye, A. Odena, A. Somani, and S. Taşırlar. Introducing our multimodal models, 2023. URL https://www.adept.ai/blog/fuyu-8b ."
+        },
+        {
+          "title": "Releasing Persimmon-8B",
+          "citation": "E. Elsen, A. Odena, M. Nye, S. Taşırlar, T. Dao, C. Hawthorne, D. Moparthi, and A. Somani. Releasing Persimmon-8B, 2023. URL https://www.adept.ai/blog/persimmon-8b ."
+        },
+        {
+          "title": "Languages are rewards: Hindsight finetuning using human feedback",
+          "citation": "H. Liu, C. Sferrazza, and P. Abbeel. Languages are rewards: Hindsight finetuning using human feedback. arXiv preprint arXiv:2302.02676 , 2023c."
+        },
+        {
+          "title": "Cogagent: A visual language model for gui agents",
+          "citation": "W. Hong, W. Wang, Q. Lv, J. Xu, W. Yu, J. Ji, Y. Wang, Z. Wang, Y. Dong, M. Ding, et al. Cogagent: A visual language model for gui agents. arXiv preprint arXiv:2312.08914 , 2023b."
+        },
+        {
+          "title": "Palm-e: An embodied multimodal language model",
+          "citation": "D. Driess, F. Xia, M. S. Sajjadi, C. Lynch, A. Chowdhery, B. Ichter, A. Wahid, J. Tompson, Q. Vuong, T. Yu, et al. Palm-e: An embodied multimodal language model. arXiv preprint arXiv:2303.03378 , 2023."
+        },
+        {
+          "title": "Do as I can, not as I say: Grounding language in robotic affordances",
+          "citation": "M. Ahn, A. Brohan, N. Brown, Y. Chebotar, O. Cortes, B. David, C. Finn, C. Fu, K. Gopalakrishnan, K. Hausman, et al. Do as I can, not as I say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691 , 2022."
+        },
+        {
+          "title": "Socratic models: Composing zero-shot multimodal reasoning with language",
+          "citation": "A. Zeng, M. Attarian, B. Ichter, K. Choromanski, A. Wong, S. Welker, F. Tombari, A. Purohit, M. Ryoo, V. Sindhwani, et al. Socratic models: Composing zero-shot multimodal reasoning with language. arXiv preprint arXiv:2204.00598 , 2022."
+        },
+        {
+          "title": "Introducing our multimodal models",
+          "citation": "R. Bavishi, E. Elsen, C. Hawthorne, M. Nye, A. Odena, A. Somani, and S. Taşırlar. Introducing our multimodal models, 2023. URL https://www.adept.ai/blog/fuyu-8b ."
+        },
+        {
+          "title": "Releasing Persimmon-8B",
+          "citation": "E. Elsen, A. Odena, M. Nye, S. Taşırlar, T. Dao, C. Hawthorne, D. Moparthi, and A. Somani. Releasing Persimmon-8B, 2023. URL https://www.adept.ai/blog/persimmon-8b ."
+        },
+        {
+          "title": "Languages are rewards: Hindsight finetuning using human feedback",
+          "citation": "H. Liu, C. Sferrazza, and P. Abbeel. Languages are rewards: Hindsight finetuning using human feedback. arXiv preprint arXiv:2302.02676 , 2023c."
+        },
+        {
+          "title": "React: Synergizing reasoning and acting in language models",
+          "citation": "S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629, 2022b."
+        },
+        {
+          "title": "Reflexion: Language agents with verbal reinforcement learning",
+          "citation": "N. Shinn, F. Cassano, B. Labash, A. Gopinath, K. Narasimhan, and S. Yao. Reflexion: Language agents with verbal reinforcement learning. arXiv preprint arXiv:2303.11366 , 2023."
+        },
+        {
+          "title": "Intercode: Standardizing and benchmarking interactive coding with execution feedback",
+          "citation": "J. Yang, A. Prabhakar, K. Narasimhan, and S. Yao. Intercode: Standardizing and benchmarking interactive coding with execution feedback. arXiv preprint arXiv:2306.14898 , 2023."
+        },
+        {
+          "title": "Tree of thoughts: Deliberate problem solving with large language models",
+          "citation": "S. Yao, D. Yu, J. Zhao, I. Shafran, T. L. Griffiths, Y. Cao, and K. Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601 , 2023."
+        },
+        {
+          "title": "Metareasoning to improve efficiency",
+          "citation": "Metareasoning to improve efficiency. LLM calls are both slow and computationally intensive. Using LLMs for decision-making entails a balance between their computational cost and the utility of the resulting improved plan. Most LLM reasoning methods fix a search budget by specifying a depth of reasoning (Yao et al., 2023), but humans appear to adaptively allocate computation (Russek et al., 2022; Lieder and Griffiths, 2020; Callaway et al., 2022; Gershman et al., 2015). Future work should develop mechanisms to estimate the utility of planning (Laidlaw et al., 2023) and modify the decision procedure accordingly, either via amortization (fine-tuning the LLM based on the results of previous actions, e.g. Nguyen, 2023; Hamrick et al., 2019), routing among several decision sub-procedures (e.g., ReAct (Yao et al., 2022b) investigated backing off to CoT (Wei et al., 2022b) and vice versa), or updates to the decision-making procedure."
+        },
+        {
+          "title": "Prioritized memory access explains planning and hippocampal replay",
+          "citation": "M. G. Mattar and N. D. Daw. Prioritized memory access explains planning and hippocampal replay. Nature Neuroscience , 21(11):1609-1617, 2018."
+        },
+        {
+          "title": "A survey on large language model based autonomous agents",
+          "citation": "L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin, W. X. Zhao, Z. Wei, and J.-R. Wen. A survey on large language model based autonomous agents, 2023b."
+        },
+        {
+          "title": "Generative agents: Interactive simulacra of human behavior",
+          "citation": "J. S. Park, J. C. O'Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442 , 2023."
+        },
+        {
+          "title": "Emergent abilities of large language models",
+          "citation": "J. Wei, Y. Tay, R. Bommasani, C. Raffel, B. Zoph, S. Borgeaud, D. Yogatama, M. Bosma, D. Zhou, D. Metzler, E. H. Chi, T. Hashimoto, O. Vinyals, P. Liang, J. Dean, and W. Fedus. Emergent abilities of large language models. Transactions on Machine Learning Research , 2022a. ISSN 2835-8856. Survey Certification."
+        },
+        {
+          "title": "Language models are unsupervised multitask learners",
+          "citation": "A. Radford, J. Wu, R. Child, D. Luan, D. Amodei, I. Sutskever, et al. Language models are unsupervised multitask learners. OpenAI blog , 1(8):9, 2019."
+        },
+        {
+          "title": "Keep CALM and explore: Language models for action generation in text-based games",
+          "citation": "S. Yao, R. Rao, M. Hausknecht, and K. Narasimhan. Keep CALM and explore: Language models for action generation in text-based games. arXiv preprint arXiv:2010.02903 , 2020."
+        },
+        {
+          "title": "Language models are few-shot learners",
+          "citation": "T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, et al. Language models are few-shot learners. Advances in Neural Information Processing Systems , 33:1877-1901, 2020."
+        },
+        {
+          "title": "GPT-4 technical report",
+          "citation": "OpenAI. GPT-4 technical report. arXiv preprint arXiv:2303.08774, 2023."
+        },
+        {
+          "title": "Self-critiquing models for assisting human evaluators",
+          "citation": "W. Saunders, C. Yeh, J. Wu, S. Bills, L. Ouyang, J. Ward, and J. Leike. Self-critiquing models for assisting human evaluators. arXiv preprint arXiv:2206.05802 , 2022."
+        },
+        {
+          "title": "Reflexion: Language agents with verbal reinforcement learning",
+          "citation": "N. Shinn, F. Cassano, B. Labash, A. Gopinath, K. Narasimhan, and S. Yao. Reflexion: Language agents with verbal reinforcement learning. arXiv preprint arXiv:2303.11366 , 2023."
+        },
+        {
+          "title": "Tree of thoughts: Deliberate problem solving with large language models",
+          "citation": "S. Yao, D. Yu, J. Zhao, I. Shafran, T. L. Griffiths, Y. Cao, and K. Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601 , 2023."
+        },
+        {
+          "title": "Self-refine: Iterative refinement with self-feedback",
+          "citation": "A. Madaan, N. Tandon, P. Gupta, S. Hallinan, L. Gao, S. Wiegreffe, U. Alon, N. Dziri, S. Prabhumoye, Y. Yang, et al. Self-refine: Iterative refinement with self-feedback. arXiv preprint arXiv:2303.17651 , 2023."
+        },
+        {
+          "title": "Teaching large language models to self-debug",
+          "citation": "X. Chen, M. Lin, N. Schärli, and D. Zhou. Teaching large language models to self-debug. arXiv preprint arXiv:2304.05128 , 2023b."
+        },
+        {
+          "title": "Metareasoning to improve efficiency",
+          "citation": "Metareasoning to improve efficiency. LLM calls are both slow and computationally intensive. Using LLMs for decision-making entails a balance between their computational cost and the utility of the resulting improved plan. Most LLM reasoning methods fix a search budget by specifying a depth of reasoning (Yao et al., 2023), but humans appear to adaptively allocate computation (Russek et al., 2022; Lieder and Griffiths, 2020; Callaway et al., 2022; Gershman et al., 2015). Future work should develop mechanisms to estimate the utility of planning (Laidlaw et al., 2023) and modify the decision procedure accordingly, either via amortization (fine-tuning the LLM based on the results of previous actions, e.g. Nguyen, 2023; Hamrick et al., 2019), routing among several decision sub-procedures (e.g., ReAct (Yao et al., 2022b) investigated backing off to CoT (Wei et al., 2022b) and vice versa), or updates to the decision-making procedure."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "Conclusion",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

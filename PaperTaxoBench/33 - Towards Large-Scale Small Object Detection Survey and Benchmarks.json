@@ -1,0 +1,2641 @@
+{
+  "track": "Object Detection",
+  "paper_title": "Towards Large-Scale Small Object Detection: Survey and Benchmarks",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "INTRODUCTION",
+      "citations": [
+        {
+          "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+          "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+        },
+        {
+          "title": "Feature pyramid networks for object detection",
+          "citation": "T. Lin, P. Doll´ ar, R. Girshick, K. He, B. Hariharan, and S. Belongie, 'Feature pyramid networks for object detection,' in CVPR , 2017, pp. 2117-2125."
+        },
+        {
+          "title": "Focal loss for dense object detection",
+          "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+        },
+        {
+          "title": "Fcos: A simple and strong anchor-free object detector",
+          "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+        },
+        {
+          "title": "End-to-end object detection with transformers",
+          "citation": "N. Carion, F. Massa, G. Synnaeve, N. Usunier, A. Kirillov, and S. Zagoruyko, 'End-to-end object detection with transformers,' in ECCV , 2020, pp. 213-229."
+        },
+        {
+          "title": "Dynamic head: Unifying object detection heads with attentions",
+          "citation": "X. Dai, Y. Chen, B. Xiao, D. Chen, M. Liu, L. Yuan, and L. Zhang, 'Dynamic head: Unifying object detection heads with attentions,' in CVPR , 2021, pp. 7373-7382."
+        },
+        {
+          "title": "Microsoft coco: Common objects in context",
+          "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+        },
+        {
+          "title": "Microsoft coco: Common objects in context",
+          "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+        },
+        {
+          "title": "Scale match for tiny person detection",
+          "citation": "X. Yu, Y. Gong, N. Jiang, Q. Ye, and Z. Han, 'Scale match for tiny person detection,' in WACV , 2020, pp. 1257-1265."
+        },
+        {
+          "title": "Wider face: A face detection benchmark",
+          "citation": "S. Yang, P. Luo, C. C. Loy, and X. Tang, 'Wider face: A face detection benchmark,' in CVPR , 2016, pp. 5525-5533."
+        },
+        {
+          "title": "Deep residual learning for image recognition",
+          "citation": "K. He, X. Zhang, S. Ren, and J. Sun, 'Deep residual learning for image recognition,' in CVPR , 2016, pp. 770-778."
+        },
+        {
+          "title": "Aggregated residual transformations for deep neural networks",
+          "citation": "S. Xie, R. Girshick, P. Doll´ ar, Z. Tu, and K. He, 'Aggregated residual transformations for deep neural networks,' in CVPR , 2017, pp. 1492-1500."
+        },
+        {
+          "title": "Res2net: A new multi-scale backbone architecture",
+          "citation": "S.-H. Gao, M.-M. Cheng, K. Zhao, X.-Y. Zhang, M.-H. Yang, and P. Torr, 'Res2net: A new multi-scale backbone architecture,' TPAMI , vol. 43, no. 2, pp. 652-662, 2021."
+        },
+        {
+          "title": "R-cnn for small object detection",
+          "citation": "C. Chen, M.-Y. Liu, O. Tuzel, and J. Xiao, 'R-cnn for small object detection,' in ACCV , 2016, pp. 214-230."
+        },
+        {
+          "title": "Scale match for tiny person detection",
+          "citation": "X. Yu, Y. Gong, N. Jiang, Q. Ye, and Z. Han, 'Scale match for tiny person detection,' in WACV , 2020, pp. 1257-1265."
+        },
+        {
+          "title": "Wider face: A face detection benchmark",
+          "citation": "S. Yang, P. Luo, C. C. Loy, and X. Tang, 'Wider face: A face detection benchmark,' in CVPR , 2016, pp. 5525-5533."
+        },
+        {
+          "title": "Object localization under single coarse point supervision",
+          "citation": "X. Yu et al. , 'Object localization under single coarse point supervision,' in CVPR , 2022, pp. 4868-4877."
+        },
+        {
+          "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+          "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+        },
+        {
+          "title": "Deep learning for generic object detection: A survey",
+          "citation": "L. Liu, W. Ouyang, X. Wang, P. Fieguth, J. Chen, X. Liu, and M. Pietik¨ ainen, 'Deep learning for generic object detection: A survey,' IJCV , vol. 128, no. 2, pp. 261-318, 2020."
+        },
+        {
+          "title": "Object detection with deep learning: A review",
+          "citation": "Z.-Q. Zhao, P. Zheng, S.-t. Xu, and X. Wu, 'Object detection with deep learning: A review,' TNNLS , vol. 30, no. 11, pp. 3212-3232, 2019."
+        },
+        {
+          "title": "Survey of pedestrian detection for advanced driver assistance systems",
+          "citation": "D. Geronimo, A. M. Lopez, A. D. Sappa, and T. Graf, 'Survey of pedestrian detection for advanced driver assistance systems,' TPAMI , vol. 32, no. 7, pp. 1239-1258, 2009."
+        },
+        {
+          "title": "Pedestrian detection: An evaluation of the state of the art",
+          "citation": "P. Dollar, C. Wojek, B. Schiele, and P. Perona, 'Pedestrian detection: An evaluation of the state of the art,' TPAMI , vol. 34, no. 4, pp. 743-761, 2011."
+        },
+        {
+          "title": "From handcrafted to deep features for pedestrian detection: A survey",
+          "citation": "J. Cao, Y. Pang, J. Xie, F. S. Khan, and L. Shao, 'From handcrafted to deep features for pedestrian detection: A survey,' TPAMI , pp. 1-1, 2021."
+        },
+        {
+          "title": "Text detection and recognition in imagery: A survey",
+          "citation": "Q. Ye and D. Doermann, 'Text detection and recognition in imagery: A survey,' TPAMI , vol. 37, no. 7, pp. 1480-1500, 2014."
+        },
+        {
+          "title": "A survey on object detection in optical remote sensing images",
+          "citation": "G. Cheng and J. Han, 'A survey on object detection in optical remote sensing images,' ISPRS J. Photogramm. Remote Sens. , vol. 117, pp. 11-28, 2016."
+        },
+        {
+          "title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+          "citation": "K. Li, G. Wan, G. Cheng, L. Meng, and J. Han, 'Object detection in optical remote sensing images: A survey and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 159, pp. 296-307, 2020."
+        },
+        {
+          "title": "Vision for looking at traffic lights: Issues, survey, and perspectives",
+          "citation": "M. Jensen et al. , 'Vision for looking at traffic lights: Issues, survey, and perspectives,' IEEE Trans. Intell. Transp. Syst. , vol. 17, no. 7, pp. 1800-1815, 2016."
+        },
+        {
+          "title": "Object detection using deep learning methods in traffic scenarios",
+          "citation": "A. Boukerche and Z. Hou, 'Object detection using deep learning methods in traffic scenarios,' ACM Comput Surv , vol. 54, no. 2, pp. 1-35, 2021."
+        },
+        {
+          "title": "Imbalance problems in object detection: A review",
+          "citation": "K. Oksuz, B. C. Cam, S. Kalkan, and E. Akbas, 'Imbalance problems in object detection: A review,' TPAMI , vol. 43, no. 10, pp. 3388-3415, 2020."
+        },
+        {
+          "title": "Weakly supervised object localization and detection: A survey",
+          "citation": "D. Zhang, J. Han, G. Cheng, and M.-H. Yang, 'Weakly supervised object localization and detection: A survey,' TPAMI , pp. 1-1, 2021."
+        },
+        {
+          "title": "Deep learning-based detection from the perspective of small or tiny objects: A survey",
+          "citation": "K. Tong and Y. Wu, 'Deep learning-based detection from the perspective of small or tiny objects: A survey,' Image Vis Comput , vol. 123, p. 104471, 2022."
+        },
+        {
+          "title": "A survey and performance evaluation of deep learning methods for small object detection",
+          "citation": "Y. Liu, P. Sun, N. Wergeles, and Y. Shang, 'A survey and performance evaluation of deep learning methods for small object detection,' Expert Syst. Appl. , vol. 172, p. 114602, 2021."
+        },
+        {
+          "title": "A survey of the four pillars for small object detection: Multiscale representation, contextual information, superresolution, and region proposal",
+          "citation": "G. Chen, 'A survey of the four pillars for small object detection: Multiscale representation, contextual information, superresolution, and region proposal,' IEEE Trans. Syst., Man, Cybern. Syst. , vol. 52, no. 2, pp. 936-953, 2022."
+        },
+        {
+          "title": "The pascal visual object classes (voc) challenge",
+          "citation": "M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman, 'The pascal visual object classes (voc) challenge,' IJCV , vol. 88, no. 2, pp. 303-338, 2010."
+        },
+        {
+          "title": "Imagenet: A large-scale hierarchical image database",
+          "citation": "J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li, and L. Fei-Fei, 'Imagenet: A large-scale hierarchical image database,' in CVPR , 2009, pp. 248-255."
+        },
+        {
+          "title": "Microsoft coco: Common objects in context",
+          "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+        },
+        {
+          "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+          "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+        },
+        {
+          "title": "The mapillary vistas dataset for semantic understanding of street scenes",
+          "citation": "G. Neuhold, T. Ollmann, S. R. Bul` o, and P. Kontschieder, 'The mapillary vistas dataset for semantic understanding of street scenes,' in ICCV , 2017, pp. 5000-5009."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "1.1",
+          "sec_title": "Comparisons with Previous Reviews",
+          "citations": [
+            {
+              "title": "Deep learning for generic object detection: A survey",
+              "citation": "L. Liu, W. Ouyang, X. Wang, P. Fieguth, J. Chen, X. Liu, and M. Pietik¨ ainen, 'Deep learning for generic object detection: A survey,' IJCV , vol. 128, no. 2, pp. 261-318, 2020."
+            },
+            {
+              "title": "Object detection with deep learning: A review",
+              "citation": "Z.-Q. Zhao, P. Zheng, S.-t. Xu, and X. Wu, 'Object detection with deep learning: A review,' TNNLS , vol. 30, no. 11, pp. 3212-3232, 2019."
+            },
+            {
+              "title": "Survey of pedestrian detection for advanced driver assistance systems",
+              "citation": "D. Geronimo, A. M. Lopez, A. D. Sappa, and T. Graf, 'Survey of pedestrian detection for advanced driver assistance systems,' TPAMI , vol. 32, no. 7, pp. 1239-1258, 2009."
+            },
+            {
+              "title": "Pedestrian detection: An evaluation of the state of the art",
+              "citation": "P. Dollar, C. Wojek, B. Schiele, and P. Perona, 'Pedestrian detection: An evaluation of the state of the art,' TPAMI , vol. 34, no. 4, pp. 743-761, 2011."
+            },
+            {
+              "title": "From handcrafted to deep features for pedestrian detection: A survey",
+              "citation": "J. Cao, Y. Pang, J. Xie, F. S. Khan, and L. Shao, 'From handcrafted to deep features for pedestrian detection: A survey,' TPAMI , pp. 1-1, 2021."
+            },
+            {
+              "title": "Text detection and recognition in imagery: A survey",
+              "citation": "Q. Ye and D. Doermann, 'Text detection and recognition in imagery: A survey,' TPAMI , vol. 37, no. 7, pp. 1480-1500, 2014."
+            },
+            {
+              "title": "A survey on object detection in optical remote sensing images",
+              "citation": "G. Cheng and J. Han, 'A survey on object detection in optical remote sensing images,' ISPRS J. Photogramm. Remote Sens. , vol. 117, pp. 11-28, 2016."
+            },
+            {
+              "title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+              "citation": "K. Li, G. Wan, G. Cheng, L. Meng, and J. Han, 'Object detection in optical remote sensing images: A survey and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 159, pp. 296-307, 2020."
+            },
+            {
+              "title": "Vision for looking at traffic lights: Issues, survey, and perspectives",
+              "citation": "M. Jensen et al. , 'Vision for looking at traffic lights: Issues, survey, and perspectives,' IEEE Trans. Intell. Transp. Syst. , vol. 17, no. 7, pp. 1800-1815, 2016."
+            },
+            {
+              "title": "Object detection using deep learning methods in traffic scenarios",
+              "citation": "A. Boukerche and Z. Hou, 'Object detection using deep learning methods in traffic scenarios,' ACM Comput Surv , vol. 54, no. 2, pp. 1-35, 2021."
+            },
+            {
+              "title": "Imbalance problems in object detection: A review",
+              "citation": "K. Oksuz, B. C. Cam, S. Kalkan, and E. Akbas, 'Imbalance problems in object detection: A review,' TPAMI , vol. 43, no. 10, pp. 3388-3415, 2020."
+            },
+            {
+              "title": "Weakly supervised object localization and detection: A survey",
+              "citation": "D. Zhang, J. Han, G. Cheng, and M.-H. Yang, 'Weakly supervised object localization and detection: A survey,' TPAMI , pp. 1-1, 2021."
+            },
+            {
+              "title": "Deep learning for generic object detection: A survey",
+              "citation": "L. Liu, W. Ouyang, X. Wang, P. Fieguth, J. Chen, X. Liu, and M. Pietik¨ ainen, 'Deep learning for generic object detection: A survey,' IJCV , vol. 128, no. 2, pp. 261-318, 2020."
+            },
+            {
+              "title": "Object detection with deep learning: A review",
+              "citation": "Z.-Q. Zhao, P. Zheng, S.-t. Xu, and X. Wu, 'Object detection with deep learning: A review,' TNNLS , vol. 30, no. 11, pp. 3212-3232, 2019."
+            },
+            {
+              "title": "Survey of pedestrian detection for advanced driver assistance systems",
+              "citation": "D. Geronimo, A. M. Lopez, A. D. Sappa, and T. Graf, 'Survey of pedestrian detection for advanced driver assistance systems,' TPAMI , vol. 32, no. 7, pp. 1239-1258, 2009."
+            },
+            {
+              "title": "Pedestrian detection: An evaluation of the state of the art",
+              "citation": "P. Dollar, C. Wojek, B. Schiele, and P. Perona, 'Pedestrian detection: An evaluation of the state of the art,' TPAMI , vol. 34, no. 4, pp. 743-761, 2011."
+            },
+            {
+              "title": "From handcrafted to deep features for pedestrian detection: A survey",
+              "citation": "J. Cao, Y. Pang, J. Xie, F. S. Khan, and L. Shao, 'From handcrafted to deep features for pedestrian detection: A survey,' TPAMI , pp. 1-1, 2021."
+            },
+            {
+              "title": "Text detection and recognition in imagery: A survey",
+              "citation": "Q. Ye and D. Doermann, 'Text detection and recognition in imagery: A survey,' TPAMI , vol. 37, no. 7, pp. 1480-1500, 2014."
+            },
+            {
+              "title": "A survey on object detection in optical remote sensing images",
+              "citation": "G. Cheng and J. Han, 'A survey on object detection in optical remote sensing images,' ISPRS J. Photogramm. Remote Sens. , vol. 117, pp. 11-28, 2016."
+            },
+            {
+              "title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+              "citation": "K. Li, G. Wan, G. Cheng, L. Meng, and J. Han, 'Object detection in optical remote sensing images: A survey and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 159, pp. 296-307, 2020."
+            },
+            {
+              "title": "Vision for looking at traffic lights: Issues, survey, and perspectives",
+              "citation": "M. Jensen et al. , 'Vision for looking at traffic lights: Issues, survey, and perspectives,' IEEE Trans. Intell. Transp. Syst. , vol. 17, no. 7, pp. 1800-1815, 2016."
+            },
+            {
+              "title": "Object detection using deep learning methods in traffic scenarios",
+              "citation": "A. Boukerche and Z. Hou, 'Object detection using deep learning methods in traffic scenarios,' ACM Comput Surv , vol. 54, no. 2, pp. 1-35, 2021."
+            },
+            {
+              "title": "Deep learning-based detection from the perspective of small or tiny objects: A survey",
+              "citation": "K. Tong and Y. Wu, 'Deep learning-based detection from the perspective of small or tiny objects: A survey,' Image Vis Comput , vol. 123, p. 104471, 2022."
+            },
+            {
+              "title": "A survey and performance evaluation of deep learning methods for small object detection",
+              "citation": "Y. Liu, P. Sun, N. Wergeles, and Y. Shang, 'A survey and performance evaluation of deep learning methods for small object detection,' Expert Syst. Appl. , vol. 172, p. 114602, 2021."
+            },
+            {
+              "title": "A survey of the four pillars for small object detection: Multiscale representation, contextual information, superresolution, and region proposal",
+              "citation": "G. Chen, 'A survey of the four pillars for small object detection: Multiscale representation, contextual information, superresolution, and region proposal,' IEEE Trans. Syst., Man, Cybern. Syst. , vol. 52, no. 2, pp. 936-953, 2022."
+            },
+            {
+              "title": "The pascal visual object classes (voc) challenge",
+              "citation": "M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman, 'The pascal visual object classes (voc) challenge,' IJCV , vol. 88, no. 2, pp. 303-338, 2010."
+            },
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "1.1.1",
+              "sec_title": "Summary of several surveys related to object detection.",
+              "citations": [
+                {
+                  "title": "Deep learning for generic object detection: A survey",
+                  "citation": "L. Liu, W. Ouyang, X. Wang, P. Fieguth, J. Chen, X. Liu, and M. Pietik¨ ainen, 'Deep learning for generic object detection: A survey,' IJCV , vol. 128, no. 2, pp. 261-318, 2020."
+                },
+                {
+                  "title": "Object detection with deep learning: A review",
+                  "citation": "Z.-Q. Zhao, P. Zheng, S.-t. Xu, and X. Wu, 'Object detection with deep learning: A review,' TNNLS , vol. 30, no. 11, pp. 3212-3232, 2019."
+                },
+                {
+                  "title": "Survey of pedestrian detection for advanced driver assistance systems",
+                  "citation": "D. Geronimo, A. M. Lopez, A. D. Sappa, and T. Graf, 'Survey of pedestrian detection for advanced driver assistance systems,' TPAMI , vol. 32, no. 7, pp. 1239-1258, 2009."
+                },
+                {
+                  "title": "Pedestrian detection: An evaluation of the state of the art",
+                  "citation": "P. Dollar, C. Wojek, B. Schiele, and P. Perona, 'Pedestrian detection: An evaluation of the state of the art,' TPAMI , vol. 34, no. 4, pp. 743-761, 2011."
+                },
+                {
+                  "title": "From handcrafted to deep features for pedestrian detection: A survey",
+                  "citation": "J. Cao, Y. Pang, J. Xie, F. S. Khan, and L. Shao, 'From handcrafted to deep features for pedestrian detection: A survey,' TPAMI , pp. 1-1, 2021."
+                },
+                {
+                  "title": "Text detection and recognition in imagery: A survey",
+                  "citation": "Q. Ye and D. Doermann, 'Text detection and recognition in imagery: A survey,' TPAMI , vol. 37, no. 7, pp. 1480-1500, 2014."
+                },
+                {
+                  "title": "A survey on object detection in optical remote sensing images",
+                  "citation": "G. Cheng and J. Han, 'A survey on object detection in optical remote sensing images,' ISPRS J. Photogramm. Remote Sens. , vol. 117, pp. 11-28, 2016."
+                },
+                {
+                  "title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+                  "citation": "K. Li, G. Wan, G. Cheng, L. Meng, and J. Han, 'Object detection in optical remote sensing images: A survey and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 159, pp. 296-307, 2020."
+                },
+                {
+                  "title": "Vision for looking at traffic lights: Issues, survey, and perspectives",
+                  "citation": "M. Jensen et al. , 'Vision for looking at traffic lights: Issues, survey, and perspectives,' IEEE Trans. Intell. Transp. Syst. , vol. 17, no. 7, pp. 1800-1815, 2016."
+                },
+                {
+                  "title": "Object detection using deep learning methods in traffic scenarios",
+                  "citation": "A. Boukerche and Z. Hou, 'Object detection using deep learning methods in traffic scenarios,' ACM Comput Surv , vol. 54, no. 2, pp. 1-35, 2021."
+                },
+                {
+                  "title": "Imbalance problems in object detection: A review",
+                  "citation": "K. Oksuz, B. C. Cam, S. Kalkan, and E. Akbas, 'Imbalance problems in object detection: A review,' TPAMI , vol. 43, no. 10, pp. 3388-3415, 2020."
+                },
+                {
+                  "title": "Weakly supervised object localization and detection: A survey",
+                  "citation": "D. Zhang, J. Han, G. Cheng, and M.-H. Yang, 'Weakly supervised object localization and detection: A survey,' TPAMI , pp. 1-1, 2021."
+                },
+                {
+                  "title": "Deep learning-based detection from the perspective of small or tiny objects: A survey",
+                  "citation": "K. Tong and Y. Wu, 'Deep learning-based detection from the perspective of small or tiny objects: A survey,' Image Vis Comput , vol. 123, p. 104471, 2022."
+                },
+                {
+                  "title": "A survey and performance evaluation of deep learning methods for small object detection",
+                  "citation": "Y. Liu, P. Sun, N. Wergeles, and Y. Shang, 'A survey and performance evaluation of deep learning methods for small object detection,' Expert Syst. Appl. , vol. 172, p. 114602, 2021."
+                },
+                {
+                  "title": "A survey of the four pillars for small object detection: Multiscale representation, contextual information, superresolution, and region proposal",
+                  "citation": "G. Chen, 'A survey of the four pillars for small object detection: Multiscale representation, contextual information, superresolution, and region proposal,' IEEE Trans. Syst., Man, Cybern. Syst. , vol. 52, no. 2, pp. 936-953, 2022."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "1.2",
+          "sec_title": "Scope",
+          "citations": [
+            {
+              "title": "Distinctive image features from scale-invariant keypoints",
+              "citation": "D. G. Lowe, 'Distinctive image features from scale-invariant keypoints,' IJCV , vol. 60, no. 2, pp. 91-110, 2004."
+            },
+            {
+              "title": "Histograms of oriented gradients for human detection",
+              "citation": "N. Dalal and B. Triggs, 'Histograms of oriented gradients for human detection,' in CVPR , 2005, pp. 886-893."
+            },
+            {
+              "title": "Speeded-up robust features (surf)",
+              "citation": "H. Bay, A. Ess, T. Tuytelaars, and L. Van Gool, 'Speeded-up robust features (surf),' Comput Vis Image Underst , vol. 110, no. 3, pp. 346-359, 2008."
+            },
+            {
+              "title": "Support-vector networks",
+              "citation": "C. Cortes and V. Vapnik, 'Support-vector networks,' Mach Learn , vol. 20, no. 3, pp. 273-297, 1995."
+            },
+            {
+              "title": "Random decision forests",
+              "citation": "T. K. Ho, 'Random decision forests,' in ICDAR , 1995, pp. 278282."
+            },
+            {
+              "title": "Imagenet classification with deep convolutional neural networks",
+              "citation": "A. Krizhevsky, I. Sutskever, and G. E. Hinton, 'Imagenet classification with deep convolutional neural networks,' in NeurIPS , 2012, pp. 1097-1105."
+            },
+            {
+              "title": "Region-based convolutional networks for accurate object detection and segmentation",
+              "citation": "R. Girshick, J. Donahue, T. Darrell, and J. Malik, 'Region-based convolutional networks for accurate object detection and segmentation,' TPAMI , vol. 38, no. 1, pp. 142-158, 2015."
+            },
+            {
+              "title": "Region-based convolutional networks for accurate object detection and segmentation",
+              "citation": "R. Girshick, J. Donahue, T. Darrell, and J. Malik, 'Region-based convolutional networks for accurate object detection and segmentation,' TPAMI , vol. 38, no. 1, pp. 142-158, 2015."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "REVIEW ON SMALL OBJECT DETECTION",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Problem Definition",
+          "citations": [
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+            },
+            {
+              "title": "Scale match for tiny person detection",
+              "citation": "X. Yu, Y. Gong, N. Jiang, Q. Ye, and Z. Han, 'Scale match for tiny person detection,' in WACV , 2020, pp. 1257-1265."
+            },
+            {
+              "title": "Wider face: A face detection benchmark",
+              "citation": "S. Yang, P. Luo, C. C. Loy, and X. Tang, 'Wider face: A face detection benchmark,' in CVPR , 2016, pp. 5525-5533."
+            },
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "2.1.1",
+              "sec_title": "Object detection aims to classify and locate instances.",
+              "citations": [
+                {
+                  "title": "Microsoft coco: Common objects in context",
+                  "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+                },
+                {
+                  "title": "Scale match for tiny person detection",
+                  "citation": "X. Yu, Y. Gong, N. Jiang, Q. Ye, and Z. Han, 'Scale match for tiny person detection,' in WACV , 2020, pp. 1257-1265."
+                },
+                {
+                  "title": "Wider face: A face detection benchmark",
+                  "citation": "S. Yang, P. Luo, C. C. Loy, and X. Tang, 'Wider face: A face detection benchmark,' in CVPR , 2016, pp. 5525-5533."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Main Challenges",
+          "citations": [
+            {
+              "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+              "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+            },
+            {
+              "title": "Feature pyramid networks for object detection",
+              "citation": "T. Lin, P. Doll´ ar, R. Girshick, K. He, B. Hariharan, and S. Belongie, 'Feature pyramid networks for object detection,' in CVPR , 2017, pp. 2117-2125."
+            },
+            {
+              "title": "Focal loss for dense object detection",
+              "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+            },
+            {
+              "title": "Fcos: A simple and strong anchor-free object detector",
+              "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+            },
+            {
+              "title": "End-to-end object detection with transformers",
+              "citation": "N. Carion, F. Massa, G. Synnaeve, N. Usunier, A. Kirillov, and S. Zagoruyko, 'End-to-end object detection with transformers,' in ECCV , 2020, pp. 213-229."
+            },
+            {
+              "title": "Dynamic head: Unifying object detection heads with attentions",
+              "citation": "X. Dai, Y. Chen, B. Xiao, D. Chen, M. Liu, L. Yuan, and L. Zhang, 'Dynamic head: Unifying object detection heads with attentions,' in CVPR , 2021, pp. 7373-7382."
+            },
+            {
+              "title": "Deep residual learning for image recognition",
+              "citation": "K. He, X. Zhang, S. Ren, and J. Sun, 'Deep residual learning for image recognition,' in CVPR , 2016, pp. 770-778."
+            },
+            {
+              "title": "Aggregated residual transformations for deep neural networks",
+              "citation": "S. Xie, R. Girshick, P. Doll´ ar, Z. Tu, and K. He, 'Aggregated residual transformations for deep neural networks,' in CVPR , 2017, pp. 1492-1500."
+            },
+            {
+              "title": "Res2net: A new multi-scale backbone architecture",
+              "citation": "S.-H. Gao, M.-M. Cheng, K. Zhao, X.-Y. Zhang, M.-H. Yang, and P. Torr, 'Res2net: A new multi-scale backbone architecture,' TPAMI , vol. 43, no. 2, pp. 652-662, 2021."
+            },
+            {
+              "title": "Learning deconvolution network for semantic segmentation",
+              "citation": "H. Noh, S. Hong, and B. Han, 'Learning deconvolution network for semantic segmentation,' in ICCV , 2015, pp. 1520-1528."
+            },
+            {
+              "title": "Discriminative region mining for object detection",
+              "citation": "L. Chen, H. Zheng, Z. Yan, and Y. Li, 'Discriminative region mining for object detection,' TMM , vol. 23, pp. 4297-4310, 2021."
+            },
+            {
+              "title": "Thundernet: Towards real-time generic object detection on mobile devices",
+              "citation": "Z. Qin, Z. Li, Z. Zhang, Y. Bao, G. Yu, Y. Peng, and J. Sun, 'Thundernet: Towards real-time generic object detection on mobile devices,' in ICCV , 2019, pp. 6717-6726."
+            },
+            {
+              "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+              "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+            },
+            {
+              "title": "Focal loss for dense object detection",
+              "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+            },
+            {
+              "title": "You only look once: Unified, real-time object detection",
+              "citation": "J. Redmon, S. Divvala, R. Girshick, and A. Farhadi, 'You only look once: Unified, real-time object detection,' in CVPR , 2016, pp. 779-788."
+            },
+            {
+              "title": "Yolov3: An incremental improvement",
+              "citation": "J. Redmon and A. Farhadi, 'Yolov3: An incremental improvement,' arXiv preprint arXiv:1804.02767 , 2018."
+            },
+            {
+              "title": "Fast r-cnn",
+              "citation": "R. Girshick, 'Fast r-cnn,' in ICCV , 2015, pp. 1440-1448."
+            },
+            {
+              "title": "Fcos: A simple and strong anchor-free object detector",
+              "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+            },
+            {
+              "title": "Objects as points",
+              "citation": "X. Zhou, D. Wang, and P. Kr¨ ahenb¨ uhl, 'Objects as points,' arXiv preprint arXiv:1904.07850 , 2019."
+            },
+            {
+              "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+              "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+            },
+            {
+              "title": "Focal loss for dense object detection",
+              "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+            },
+            {
+              "title": "Fcos: A simple and strong anchor-free object detector",
+              "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+            },
+            {
+              "title": "Objects as points",
+              "citation": "X. Zhou, D. Wang, and P. Kr¨ ahenb¨ uhl, 'Objects as points,' arXiv preprint arXiv:1904.07850 , 2019."
+            },
+            {
+              "title": "Centernet: Keypoint triplets for object detection",
+              "citation": "K. Duan, S. Bai, L. Xie, H. Qi, Q. Huang, and Q. Tian, 'Centernet: Keypoint triplets for object detection,' in ICCV , 2019, pp. 65696578."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "2.2.1",
+              "sec_title": "Information loss .",
+              "citations": [
+                {
+                  "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+                },
+                {
+                  "title": "Feature pyramid networks for object detection",
+                  "citation": "T. Lin, P. Doll´ ar, R. Girshick, K. He, B. Hariharan, and S. Belongie, 'Feature pyramid networks for object detection,' in CVPR , 2017, pp. 2117-2125."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+                },
+                {
+                  "title": "Fcos: A simple and strong anchor-free object detector",
+                  "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+                },
+                {
+                  "title": "End-to-end object detection with transformers",
+                  "citation": "N. Carion, F. Massa, G. Synnaeve, N. Usunier, A. Kirillov, and S. Zagoruyko, 'End-to-end object detection with transformers,' in ECCV , 2020, pp. 213-229."
+                },
+                {
+                  "title": "Dynamic head: Unifying object detection heads with attentions",
+                  "citation": "X. Dai, Y. Chen, B. Xiao, D. Chen, M. Liu, L. Yuan, and L. Zhang, 'Dynamic head: Unifying object detection heads with attentions,' in CVPR , 2021, pp. 7373-7382."
+                },
+                {
+                  "title": "Deep residual learning for image recognition",
+                  "citation": "K. He, X. Zhang, S. Ren, and J. Sun, 'Deep residual learning for image recognition,' in CVPR , 2016, pp. 770-778."
+                },
+                {
+                  "title": "Aggregated residual transformations for deep neural networks",
+                  "citation": "S. Xie, R. Girshick, P. Doll´ ar, Z. Tu, and K. He, 'Aggregated residual transformations for deep neural networks,' in CVPR , 2017, pp. 1492-1500."
+                },
+                {
+                  "title": "Res2net: A new multi-scale backbone architecture",
+                  "citation": "S.-H. Gao, M.-M. Cheng, K. Zhao, X.-Y. Zhang, M.-H. Yang, and P. Torr, 'Res2net: A new multi-scale backbone architecture,' TPAMI , vol. 43, no. 2, pp. 652-662, 2021."
+                },
+                {
+                  "title": "Learning deconvolution network for semantic segmentation",
+                  "citation": "H. Noh, S. Hong, and B. Han, 'Learning deconvolution network for semantic segmentation,' in ICCV , 2015, pp. 1520-1528."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.2",
+              "sec_title": "Noisy feature representation .",
+              "citations": [
+                {
+                  "title": "Discriminative region mining for object detection",
+                  "citation": "L. Chen, H. Zheng, Z. Yan, and Y. Li, 'Discriminative region mining for object detection,' TMM , vol. 23, pp. 4297-4310, 2021."
+                },
+                {
+                  "title": "Thundernet: Towards real-time generic object detection on mobile devices",
+                  "citation": "Z. Qin, Z. Li, Z. Zhang, Y. Bao, G. Yu, Y. Peng, and J. Sun, 'Thundernet: Towards real-time generic object detection on mobile devices,' in ICCV , 2019, pp. 6717-6726."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.3",
+              "sec_title": "Low tolerance for bounding box perturbation .",
+              "citations": [
+                {
+                  "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+                },
+                {
+                  "title": "You only look once: Unified, real-time object detection",
+                  "citation": "J. Redmon, S. Divvala, R. Girshick, and A. Farhadi, 'You only look once: Unified, real-time object detection,' in CVPR , 2016, pp. 779-788."
+                },
+                {
+                  "title": "Yolov3: An incremental improvement",
+                  "citation": "J. Redmon and A. Farhadi, 'Yolov3: An incremental improvement,' arXiv preprint arXiv:1804.02767 , 2018."
+                },
+                {
+                  "title": "Fast r-cnn",
+                  "citation": "R. Girshick, 'Fast r-cnn,' in ICCV , 2015, pp. 1440-1448."
+                },
+                {
+                  "title": "Fcos: A simple and strong anchor-free object detector",
+                  "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+                },
+                {
+                  "title": "Objects as points",
+                  "citation": "X. Zhou, D. Wang, and P. Kr¨ ahenb¨ uhl, 'Objects as points,' arXiv preprint arXiv:1904.07850 , 2019."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.2.4",
+              "sec_title": "Inadequate samples for training .",
+              "citations": [
+                {
+                  "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+                },
+                {
+                  "title": "Fcos: A simple and strong anchor-free object detector",
+                  "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+                },
+                {
+                  "title": "Fast r-cnn",
+                  "citation": "R. Girshick, 'Fast r-cnn,' in ICCV , 2015, pp. 1440-1448."
+                },
+                {
+                  "title": "Objects as points",
+                  "citation": "X. Zhou, D. Wang, and P. Kr¨ ahenb¨ uhl, 'Objects as points,' arXiv preprint arXiv:1904.07850 , 2019."
+                },
+                {
+                  "title": "Centernet: Keypoint triplets for object detection",
+                  "citation": "K. Duan, S. Bai, L. Xie, H. Qi, Q. Huang, and Q. Tian, 'Centernet: Keypoint triplets for object detection,' in ICCV , 2019, pp. 65696578."
+                },
+                {
+                  "title": "Spatial pyramid pooling in deep convolutional networks for visual recognition",
+                  "citation": "K. He, X. Zhang, S. Ren, and J. Sun, 'Spatial pyramid pooling in deep convolutional networks for visual recognition,' TPAMI , vol. 37, no. 9, pp. 1904-1916, 2015."
+                },
+                {
+                  "title": "Ssd: Single shot multibox detector",
+                  "citation": "W. Liu et al. , 'Ssd: Single shot multibox detector,' in ECCV , 2016, pp. 21-37."
+                },
+                {
+                  "title": "Cornernet: Detecting objects as paired keypoints",
+                  "citation": "H. Law and J. Deng, 'Cornernet: Detecting objects as paired keypoints,' in ECCV , 2018, pp. 734-750."
+                },
+                {
+                  "title": "Deformable detr: Deformable transformers for end-to-end object detection",
+                  "citation": "X. Zhu, W. Su, L. Lu, B. Li, X. Wang, and J. Dai, 'Deformable detr: Deformable transformers for end-to-end object detection,' in ICLR , 2020."
+                },
+                {
+                  "title": "Iqdet: Instance-wise quality distribution sampling for object detection",
+                  "citation": "Y. Ma, S. Liu, Z. Li, and J. Sun, 'Iqdet: Instance-wise quality distribution sampling for object detection,' in CVPR , 2021, pp. 1717-1725."
+                },
+                {
+                  "title": "Probabilistic anchor assignment with iou prediction for object detection",
+                  "citation": "K. Kim and H. S. Lee, 'Probabilistic anchor assignment with iou prediction for object detection,' in ECCV , 2020, pp. 355-371."
+                },
+                {
+                  "title": "End-to-end object detection with transformers",
+                  "citation": "N. Carion, F. Massa, G. Synnaeve, N. Usunier, A. Kirillov, and S. Zagoruyko, 'End-to-end object detection with transformers,' in ECCV , 2020, pp. 213-229."
+                },
+                {
+                  "title": "Deep learning for generic object detection: A survey",
+                  "citation": "L. Liu, W. Ouyang, X. Wang, P. Fieguth, J. Chen, X. Liu, and M. Pietik¨ ainen, 'Deep learning for generic object detection: A survey,' IJCV , vol. 128, no. 2, pp. 261-318, 2020."
+                },
+                {
+                  "title": "Object detection with deep learning: A review",
+                  "citation": "Z.-Q. Zhao, P. Zheng, S.-t. Xu, and X. Wu, 'Object detection with deep learning: A review,' TNNLS , vol. 30, no. 11, pp. 3212-3232, 2019."
+                },
+                {
+                  "title": "Microsoft coco: Common objects in context",
+                  "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+                },
+                {
+                  "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+                  "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+                },
+                {
+                  "title": "The pascal visual object classes (voc) challenge",
+                  "citation": "M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman, 'The pascal visual object classes (voc) challenge,' IJCV , vol. 88, no. 2, pp. 303-338, 2010."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "2.3",
+          "sec_title": "Review of Small Object Detection Algorithms",
+          "citations": [
+            {
+              "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+              "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+            },
+            {
+              "title": "Fast r-cnn",
+              "citation": "R. Girshick, 'Fast r-cnn,' in ICCV , 2015, pp. 1440-1448."
+            },
+            {
+              "title": "Spatial pyramid pooling in deep convolutional networks for visual recognition",
+              "citation": "K. He, X. Zhang, S. Ren, and J. Sun, 'Spatial pyramid pooling in deep convolutional networks for visual recognition,' TPAMI , vol. 37, no. 9, pp. 1904-1916, 2015."
+            },
+            {
+              "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+              "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+            },
+            {
+              "title": "Focal loss for dense object detection",
+              "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+            },
+            {
+              "title": "You only look once: Unified, real-time object detection",
+              "citation": "J. Redmon, S. Divvala, R. Girshick, and A. Farhadi, 'You only look once: Unified, real-time object detection,' in CVPR , 2016, pp. 779-788."
+            },
+            {
+              "title": "Ssd: Single shot multibox detector",
+              "citation": "W. Liu et al. , 'Ssd: Single shot multibox detector,' in ECCV , 2016, pp. 21-37."
+            },
+            {
+              "title": "Fcos: A simple and strong anchor-free object detector",
+              "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+            },
+            {
+              "title": "Objects as points",
+              "citation": "X. Zhou, D. Wang, and P. Kr¨ ahenb¨ uhl, 'Objects as points,' arXiv preprint arXiv:1904.07850 , 2019."
+            },
+            {
+              "title": "Centernet: Keypoint triplets for object detection",
+              "citation": "K. Duan, S. Bai, L. Xie, H. Qi, Q. Huang, and Q. Tian, 'Centernet: Keypoint triplets for object detection,' in ICCV , 2019, pp. 65696578."
+            },
+            {
+              "title": "Cornernet: Detecting objects as paired keypoints",
+              "citation": "H. Law and J. Deng, 'Cornernet: Detecting objects as paired keypoints,' in ECCV , 2018, pp. 734-750."
+            },
+            {
+              "title": "End-to-end object detection with transformers",
+              "citation": "N. Carion, F. Massa, G. Synnaeve, N. Usunier, A. Kirillov, and S. Zagoruyko, 'End-to-end object detection with transformers,' in ECCV , 2020, pp. 213-229."
+            },
+            {
+              "title": "Deformable detr: Deformable transformers for end-to-end object detection",
+              "citation": "X. Zhu, W. Su, L. Lu, B. Li, X. Wang, and J. Dai, 'Deformable detr: Deformable transformers for end-to-end object detection,' in ICLR , 2020."
+            },
+            {
+              "title": "Deep learning for generic object detection: A survey",
+              "citation": "L. Liu, W. Ouyang, X. Wang, P. Fieguth, J. Chen, X. Liu, and M. Pietik¨ ainen, 'Deep learning for generic object detection: A survey,' IJCV , vol. 128, no. 2, pp. 261-318, 2020."
+            },
+            {
+              "title": "Object detection with deep learning: A review",
+              "citation": "Z.-Q. Zhao, P. Zheng, S.-t. Xu, and X. Wu, 'Object detection with deep learning: A review,' TNNLS , vol. 30, no. 11, pp. 3212-3232, 2019."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "2.3.1",
+              "sec_title": "Sample-oriented methods",
+              "citations": [
+                {
+                  "title": "Iqdet: Instance-wise quality distribution sampling for object detection",
+                  "citation": "Y. Ma, S. Liu, Z. Li, and J. Sun, 'Iqdet: Instance-wise quality distribution sampling for object detection,' in CVPR , 2021, pp. 1717-1725."
+                },
+                {
+                  "title": "Probabilistic anchor assignment with iou prediction for object detection",
+                  "citation": "K. Kim and H. S. Lee, 'Probabilistic anchor assignment with iou prediction for object detection,' in ECCV , 2020, pp. 355-371."
+                },
+                {
+                  "title": "Microsoft coco: Common objects in context",
+                  "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+                },
+                {
+                  "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+                  "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+                },
+                {
+                  "title": "The pascal visual object classes (voc) challenge",
+                  "citation": "M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman, 'The pascal visual object classes (voc) challenge,' IJCV , vol. 88, no. 2, pp. 303-338, 2010."
+                },
+                {
+                  "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+                },
+                {
+                  "title": "Fcos: A simple and strong anchor-free object detector",
+                  "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+                },
+                {
+                  "title": "Objects as points",
+                  "citation": "X. Zhou, D. Wang, and P. Kr¨ ahenb¨ uhl, 'Objects as points,' arXiv preprint arXiv:1904.07850 , 2019."
+                },
+                {
+                  "title": "Centernet: Keypoint triplets for object detection",
+                  "citation": "K. Duan, S. Bai, L. Xie, H. Qi, Q. Huang, and Q. Tian, 'Centernet: Keypoint triplets for object detection,' in ICCV , 2019, pp. 65696578."
+                },
+                {
+                  "title": "Augmentation for small object detection",
+                  "citation": "M. Kisantal, Z. Wojna, J. Murawski, J. Naruniec, and K. Cho, 'Augmentation for small object detection,' arXiv preprint arXiv:1902.07296 , 2019."
+                },
+                {
+                  "title": "Rrnet: A hybrid detector for object detection in drone-captured images",
+                  "citation": "C. Chen, Y. Zhang, Q. Lv, S. Wei, X. Wang, X. Sun, and J. Dong, 'Rrnet: A hybrid detector for object detection in drone-captured images,' in ICCVW , 2019, pp. 100-108."
+                },
+                {
+                  "title": "Augmentation for small object detection",
+                  "citation": "M. Kisantal, Z. Wojna, J. Murawski, J. Naruniec, and K. Cho, 'Augmentation for small object detection,' arXiv preprint arXiv:1902.07296 , 2019."
+                },
+                {
+                  "title": "Dense and small object detection in uav vision based on cascade network",
+                  "citation": "X. Zhang, E. Izquierdo, and K. Chandramouli, 'Dense and small object detection in uav vision based on cascade network,' in ICCVW , 2019, pp. 118-126."
+                },
+                {
+                  "title": "Towards efficient detection for small objects via attention-guided detection network and data augmentation",
+                  "citation": "X. Wang, D. Zhu, and Y. Yan, 'Towards efficient detection for small objects via attention-guided detection network and data augmentation,' Sensors , vol. 22, no. 19, p. 7663, 2022."
+                },
+                {
+                  "title": "A full data augmentation pipeline for small object detection based on generative adversarial networks",
+                  "citation": "B. Bosquet et al. , 'A full data augmentation pipeline for small object detection based on generative adversarial networks,' Pattern Recognition , vol. 133, p. 108998, 2023."
+                },
+                {
+                  "title": "S 3 fd: Single shot scale-invariant face detector",
+                  "citation": "S. Zhang, X. Zhu, Z. Lei, H. Shi, X. Wang, and S. Z. Li, 'S 3 fd: Single shot scale-invariant face detector,' in ICCV , 2017, pp. 192201."
+                },
+                {
+                  "title": "Seeing small faces from robust anchor's perspective",
+                  "citation": "C. Zhu, R. Tao, K. Luu, and M. Savvides, 'Seeing small faces from robust anchor's perspective,' in CVPR , 2018, pp. 5127-5136."
+                },
+                {
+                  "title": "Dot distance for tiny object detection in aerial images",
+                  "citation": "C. Xu, J. Wang, W. Yang, and L. Yu, 'Dot distance for tiny object detection in aerial images,' in CVPRW , 2021, pp. 1192-1201."
+                },
+                {
+                  "title": "Rfla: Gaussian receptive based label assignment for tiny object detection",
+                  "citation": "C. Xu, J. Wang, W. Yang, H. Yu, L. Yu, and G.-S. Xia, 'Rfla: Gaussian receptive based label assignment for tiny object detection,' in ECCV , 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.3.2",
+              "sec_title": "Scale-aware methods",
+              "citations": [
+                {
+                  "title": "Fast feature pyramids for object detection",
+                  "citation": "P. Doll´ ar, R. Appel, S. Belongie, and P. Perona, 'Fast feature pyramids for object detection,' TPAMI , vol. 36, no. 8, pp. 15321545, 2014."
+                },
+                {
+                  "title": "Object detection with discriminatively trained partbased models",
+                  "citation": "P. F. Felzenszwalb, R. B. Girshick, D. McAllester, and D. Ramanan, 'Object detection with discriminatively trained partbased models,' TPAMI , vol. 32, no. 9, pp. 1627-1645, 2010."
+                },
+                {
+                  "title": "Pyramid methods in image processing",
+                  "citation": "E. H. Adelson, C. H. Anderson, J. R. Bergen, P. J. Burt, and J. M. Ogden, 'Pyramid methods in image processing,' RCA engineer , vol. 29, no. 6, pp. 33-41, 1984."
+                },
+                {
+                  "title": "Object instance segmentation and fine-grained localization using hypercolumns",
+                  "citation": "B. Hariharan, P. Arbelaez, R. Girshick, and J. Malik, 'Object instance segmentation and fine-grained localization using hypercolumns,' TPAMI , vol. 39, no. 4, pp. 627-639, 2016."
+                },
+                {
+                  "title": "Pyramid scene parsing network",
+                  "citation": "H. Zhao, J. Shi, X. Qi, X. Wang, and J. Jia, 'Pyramid scene parsing network,' in CVPR , 2017, pp. 6230-6239."
+                },
+                {
+                  "title": "Exploit all the layers: Fast and accurate cnn object detector with scale dependent pooling and cascaded rejection classifiers",
+                  "citation": "F. Yang, W. Choi, and Y. Lin, 'Exploit all the layers: Fast and accurate cnn object detector with scale dependent pooling and cascaded rejection classifiers,' in CVPR , 2016, pp. 2129-2137."
+                },
+                {
+                  "title": "A unified multi-scale deep convolutional neural network for fast object detection",
+                  "citation": "Z. Cai, Q. Fan, R. S. Feris, and N. Vasconcelos, 'A unified multi-scale deep convolutional neural network for fast object detection,' in ECCV , 2016, pp. 354-370."
+                },
+                {
+                  "title": "Dsfd: Dual shot face detector",
+                  "citation": "J. Li et al. , 'Dsfd: Dual shot face detector,' in CVPR , 2019, pp. 5055-5064."
+                },
+                {
+                  "title": "Yolov3: An incremental improvement",
+                  "citation": "J. Redmon and A. Farhadi, 'Yolov3: An incremental improvement,' arXiv preprint arXiv:1804.02767 , 2018."
+                },
+                {
+                  "title": "Feature pyramid networks for object detection",
+                  "citation": "T. Lin, P. Doll´ ar, R. Girshick, K. He, B. Hariharan, and S. Belongie, 'Feature pyramid networks for object detection,' in CVPR , 2017, pp. 2117-2125."
+                },
+                {
+                  "title": "Nas-fpn: Learning scalable feature pyramid architecture for object detection",
+                  "citation": "G. Ghiasi, T.-Y. Lin, and Q. V. Le, 'Nas-fpn: Learning scalable feature pyramid architecture for object detection,' in CVPR , 2019, pp. 7029-7038."
+                },
+                {
+                  "title": "Efficientdet: Scalable and efficient object detection",
+                  "citation": "M. Tan, R. Pang, and Q. V. Le, 'Efficientdet: Scalable and efficient object detection,' in CVPR , 2020, pp. 10 778-10 787."
+                },
+                {
+                  "title": "Detectors: Detecting objects with recursive feature pyramid and switchable atrous convolution",
+                  "citation": "S. Qiao, L.-C. Chen, and A. Yuille, 'Detectors: Detecting objects with recursive feature pyramid and switchable atrous convolution,' in CVPR , 2021, pp. 10 208-10 219."
+                },
+                {
+                  "title": "Scale-aware fast r-cnn for pedestrian detection",
+                  "citation": "J. Li, X. Liang, S. Shen, T. Xu, J. Feng, and S. Yan, 'Scale-aware fast r-cnn for pedestrian detection,' TMM , vol. 20, no. 4, pp. 985-996, 2017."
+                },
+                {
+                  "title": "Ssh: Single stage headless face detector",
+                  "citation": "M. Najibi, P. Samangouei, R. Chellappa, and L. S. Davis, 'Ssh: Single stage headless face detector,' in ICCV , 2017, pp. 4885-4894."
+                },
+                {
+                  "title": "Scale-aware trident networks for object detection",
+                  "citation": "Y. Li, Y. Chen, N. Wang, and Z.-X. Zhang, 'Scale-aware trident networks for object detection,' in ICCV , 2019, pp. 6053-6062."
+                },
+                {
+                  "title": "Querydet: Cascaded sparse query for accelerating high-resolution small object detection",
+                  "citation": "C. Yang, Z. Huang, and N. Wang, 'Querydet: Cascaded sparse query for accelerating high-resolution small object detection,' in CVPR , 2022, pp. 13 668-13 677."
+                },
+                {
+                  "title": "An analysis of scale invariance in object detection-snip",
+                  "citation": "B. Singh and L. S. Davis, 'An analysis of scale invariance in object detection-snip,' in CVPR , 2018, pp. 3578-3587."
+                },
+                {
+                  "title": "Sniper: Efficient multi-scale training",
+                  "citation": "B. Singh, M. Najibi, and L. S. Davis, 'Sniper: Efficient multi-scale training,' in NeurIPS , vol. 31, 2018."
+                },
+                {
+                  "title": "Autofocus: Efficient multiscale inference",
+                  "citation": "M. Najibi, B. Singh, and L. Davis, 'Autofocus: Efficient multiscale inference,' in ICCV , 2019, pp. 9745-9755."
+                },
+                {
+                  "title": "Feature pyramid networks for object detection",
+                  "citation": "T. Lin, P. Doll´ ar, R. Girshick, K. He, B. Hariharan, and S. Belongie, 'Feature pyramid networks for object detection,' in CVPR , 2017, pp. 2117-2125."
+                },
+                {
+                  "title": "Pyramid methods in image processing",
+                  "citation": "E. H. Adelson, C. H. Anderson, J. R. Bergen, P. J. Burt, and J. M. Ogden, 'Pyramid methods in image processing,' RCA engineer , vol. 29, no. 6, pp. 33-41, 1984."
+                },
+                {
+                  "title": "Scale-aware trident networks for object detection",
+                  "citation": "Y. Li, Y. Chen, N. Wang, and Z.-X. Zhang, 'Scale-aware trident networks for object detection,' in ICCV , 2019, pp. 6053-6062."
+                },
+                {
+                  "title": "Dynamic scale training for object detection",
+                  "citation": "Y. Chen et al. , 'Dynamic scale training for object detection,' arXiv preprint arXiv:2004.12432 , 2020."
+                },
+                {
+                  "title": "Scale match for tiny person detection",
+                  "citation": "X. Yu, Y. Gong, N. Jiang, Q. Ye, and Z. Han, 'Scale match for tiny person detection,' in WACV , 2020, pp. 1257-1265."
+                },
+                {
+                  "title": "Deep learning for generic object detection: A survey",
+                  "citation": "L. Liu, W. Ouyang, X. Wang, P. Fieguth, J. Chen, X. Liu, and M. Pietik¨ ainen, 'Deep learning for generic object detection: A survey,' IJCV , vol. 128, no. 2, pp. 261-318, 2020."
+                },
+                {
+                  "title": "Thundernet: Towards real-time generic object detection on mobile devices",
+                  "citation": "Z. Qin, Z. Li, Z. Zhang, Y. Bao, G. Yu, Y. Peng, and J. Sun, 'Thundernet: Towards real-time generic object detection on mobile devices,' in ICCV , 2019, pp. 6717-6726."
+                },
+                {
+                  "title": "Scale-aware trident networks for object detection",
+                  "citation": "Y. Li, Y. Chen, N. Wang, and Z.-X. Zhang, 'Scale-aware trident networks for object detection,' in ICCV , 2019, pp. 6053-6062."
+                },
+                {
+                  "title": "Path aggregation network for instance segmentation",
+                  "citation": "S. Liu, L. Qi, H. Qin, J. Shi, and J. Jia, 'Path aggregation network for instance segmentation,' in CVPR , 2018, pp. 8759-8768."
+                },
+                {
+                  "title": "Scale-transferrable object detection",
+                  "citation": "P. Zhou, B. Ni, C. Geng, J. Hu, and Y. Xu, 'Scale-transferrable object detection,' in CVPR , 2018, pp. 528-537."
+                },
+                {
+                  "title": "Face attention network: An effective face detector for the occluded faces",
+                  "citation": "J. Wang, Y. Yuan, and G. Yu, 'Face attention network: An effective face detector for the occluded faces,' arXiv preprint arXiv:1711.07246 , 2017."
+                },
+                {
+                  "title": "Feature pyramid networks for object detection",
+                  "citation": "T. Lin, P. Doll´ ar, R. Girshick, K. He, B. Hariharan, and S. Belongie, 'Feature pyramid networks for object detection,' in CVPR , 2017, pp. 2117-2125."
+                },
+                {
+                  "title": "Path aggregation network for instance segmentation",
+                  "citation": "S. Liu, L. Qi, H. Qin, J. Shi, and J. Jia, 'Path aggregation network for instance segmentation,' in CVPR , 2018, pp. 8759-8768."
+                },
+                {
+                  "title": "Mfrcnn: Incorporating multi-scale features and global information for traffic object detection",
+                  "citation": "H. Zhang, K. Wang, Y. Tian, C. Gou, and F.-Y. Wang, 'Mfrcnn: Incorporating multi-scale features and global information for traffic object detection,' IEEE Trans. Veh. Technol. , vol. 67, no. 9, pp. 8019-8030, 2018."
+                },
+                {
+                  "title": "Stairnet: Top-down semantic aggregation for accurate one shot detection",
+                  "citation": "S. Woo, S. Hwang, and I. S. Kweon, 'Stairnet: Top-down semantic aggregation for accurate one shot detection,' in WACV , 2018, pp. 1093-1102."
+                },
+                {
+                  "title": "Dssd: Deconvolutional single shot detector",
+                  "citation": "C.-Y. Fu, W. Liu, A. Ranga, A. Tyagi, and A. C. Berg, 'Dssd: Deconvolutional single shot detector,' arXiv preprint arXiv:1701.06659 , 2017."
+                },
+                {
+                  "title": "Ipg-net: Image pyramid guidance network for small object detection",
+                  "citation": "Z. Liu, G. Gao, L. Sun, and L. Fang, 'Ipg-net: Image pyramid guidance network for small object detection,' in CVPRW , 2020, pp. 4422-4430."
+                },
+                {
+                  "title": "Pyramid methods in image processing",
+                  "citation": "E. H. Adelson, C. H. Anderson, J. R. Bergen, P. J. Burt, and J. M. Ogden, 'Pyramid methods in image processing,' RCA engineer , vol. 29, no. 6, pp. 33-41, 1984."
+                },
+                {
+                  "title": "Effective fusion factor in fpn for tiny object detection",
+                  "citation": "Y. Gong, X. Yu, Y. Ding, X. Peng, J. Zhao, and Z. Han, 'Effective fusion factor in fpn for tiny object detection,' in WACV , 2021, pp. 1159-1167."
+                },
+                {
+                  "title": "Learning spatial fusion for single-shot object detection",
+                  "citation": "S. Liu, D. Huang, and Y. Wang, 'Learning spatial fusion for single-shot object detection,' arXiv preprint arXiv:1911.09516 , 2019."
+                },
+                {
+                  "title": "Sspnet: Scale selection pyramid network for tiny person detection from uav images",
+                  "citation": "M. Hong, S. Li, Y. Yang, F. Zhu, Q. Zhao, and L. Lu, 'Sspnet: Scale selection pyramid network for tiny person detection from uav images,' IEEE Geosci. Remote. Sens. Lett. , vol. 19, pp. 1-5, 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.3.3",
+              "sec_title": "Attention-based methods",
+              "citations": [
+                {
+                  "title": "State-of-the-art in visual attention modeling",
+                  "citation": "A. Borji and L. Itti, 'State-of-the-art in visual attention modeling,' TPAMI , vol. 35, no. 1, pp. 185-207, 2012."
+                },
+                {
+                  "title": "Control of goal-directed and stimulus-driven attention in the brain",
+                  "citation": "M. Corbetta and G. L. Shulman, 'Control of goal-directed and stimulus-driven attention in the brain,' Nat. Rev. Neurosci , vol. 3, no. 3, pp. 201-215, 2002."
+                },
+                {
+                  "title": "Non-local neural networks",
+                  "citation": "X. Wang, R. Girshick, A. Gupta, and K. He, 'Non-local neural networks,' in CVPR , 2018, pp. 7794-7803."
+                },
+                {
+                  "title": "Cbam: Convolutional block attention module",
+                  "citation": "S. Woo, J. Park, J.-Y. Lee, and I. S. Kweon, 'Cbam: Convolutional block attention module,' in ECCV , 2018, pp. 3-19."
+                },
+                {
+                  "title": "Squeeze-and-excitation networks",
+                  "citation": "J. Hu, L. Shen, and G. Sun, 'Squeeze-and-excitation networks,' in CVPR , 2018, pp. 7132-7141."
+                },
+                {
+                  "title": "Spatial transformer networks",
+                  "citation": "M. Jaderberg, K. Simonyan, A. Zisserman et al. , 'Spatial transformer networks,' in NeurIPS , 2015, pp. 2017-2025."
+                },
+                {
+                  "title": "Attention is all you need",
+                  "citation": "A. Vaswani et al. , 'Attention is all you need,' in NeurIPS , 2017, pp. 6000-6010."
+                },
+                {
+                  "title": "End-to-end object detection with transformers",
+                  "citation": "N. Carion, F. Massa, G. Synnaeve, N. Usunier, A. Kirillov, and S. Zagoruyko, 'End-to-end object detection with transformers,' in ECCV , 2020, pp. 213-229."
+                },
+                {
+                  "title": "Dynamic head: Unifying object detection heads with attentions",
+                  "citation": "X. Dai, Y. Chen, B. Xiao, D. Chen, M. Liu, L. Yuan, and L. Zhang, 'Dynamic head: Unifying object detection heads with attentions,' in CVPR , 2021, pp. 7373-7382."
+                },
+                {
+                  "title": "Tood: Task-aligned one-stage object detection",
+                  "citation": "C. Feng, Y. Zhong, Y. Gao, M. R. Scott, and W. Huang, 'Tood: Task-aligned one-stage object detection,' in ICCV , 2021, pp. 34903499."
+                },
+                {
+                  "title": "Ccnet: Criss-cross attention for semantic segmentation",
+                  "citation": "Z. Huang, X. Wang, L. Huang, C. Huang, Y. Wei, and W. Liu, 'Ccnet: Criss-cross attention for semantic segmentation,' in ICCV , 2019, pp. 603-612."
+                },
+                {
+                  "title": "Scrdet: Towards more robust detection for small, cluttered and rotated objects",
+                  "citation": "X. Yang, J. Yang, J. Yan, Y. Zhang, T. Zhang, Z. Guo, X. Sun, and K. Fu, 'Scrdet: Towards more robust detection for small, cluttered and rotated objects,' in ICCV , 2019, pp. 8231-8240."
+                },
+                {
+                  "title": "Fcos: A simple and strong anchor-free object detector",
+                  "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+                },
+                {
+                  "title": "An anchor-free method based on feature balancing and refinement network for multiscale ship detection in sar images",
+                  "citation": "J. Fu, X. Sun, Z. Wang, and K. Fu, 'An anchor-free method based on feature balancing and refinement network for multiscale ship detection in sar images,' IEEE Trans. Geosci. Remote Sens. , vol. 59, no. 2, pp. 1331-1344, 2021."
+                },
+                {
+                  "title": "Feature selective small object detection via knowledge-based recurrent attentive neural network",
+                  "citation": "K. Yi, Z. Jian, S. Chen, and N. Zheng, 'Feature selective small object detection via knowledge-based recurrent attentive neural network,' arXiv preprint arXiv:1803.05263 , 2018."
+                },
+                {
+                  "title": "Attention and feature fusion ssd for remote sensing object detection",
+                  "citation": "X. Lu, J. Ji, Z. Xing, and Q. Miao, 'Attention and feature fusion ssd for remote sensing object detection,' IEEE Transactions on Instrumentation and Measurement , pp. 1-9, 2021."
+                },
+                {
+                  "title": "Lightweight oriented object detection using multiscale context and enhanced channel attention in remote sensing images",
+                  "citation": "Q. Ran, Q. Wang, B. Zhao, Y. Wu, S. Pu, and Z. Li, 'Lightweight oriented object detection using multiscale context and enhanced channel attention in remote sensing images,' IEEE J. Sel. Topics Appl. Earth Observ. , vol. 14, pp. 5786-5795, 2021."
+                },
+                {
+                  "title": "Crosslayer attention network for small object detection in remote sensing imagery",
+                  "citation": "Y. Li, Q. Huang, X. Pei, Y. Chen, L. Jiao, and R. Shang, 'Crosslayer attention network for small object detection in remote sensing imagery,' IEEE J. Sel. Topics Appl. Earth Observ. , vol. 14, pp. 2148-2161, 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.3.4",
+              "sec_title": "Feature-imitation methods",
+              "citations": [
+                {
+                  "title": "Carafe: Content-aware reassembly of features",
+                  "citation": "J. Wang, K. Chen, R. Xu, Z. Liu, C. C. Loy, and D. Lin, 'Carafe: Content-aware reassembly of features,' in ICCV , 2019, pp. 30073016."
+                },
+                {
+                  "title": "Self-mimic learning for small-scale pedestrian detection",
+                  "citation": "J. Wu, C. Zhou, Q. Zhang, M. Yang, and J. Yuan, 'Self-mimic learning for small-scale pedestrian detection,' in ACMMM , 2020, pp. 2012-2020."
+                },
+                {
+                  "title": "Self-mimic learning for small-scale pedestrian detection",
+                  "citation": "J. Wu, C. Zhou, Q. Zhang, M. Yang, and J. Yuan, 'Self-mimic learning for small-scale pedestrian detection,' in ACMMM , 2020, pp. 2012-2020."
+                },
+                {
+                  "title": "Robust small-scale pedestrian detection with cued recall via memory learning",
+                  "citation": "J. U. Kim, S. Park, and Y. M. Ro, 'Robust small-scale pedestrian detection with cued recall via memory learning,' in ICCV , 2021, pp. 3030-3039."
+                },
+                {
+                  "title": "Real-time single image and video super-resolution using an efficient sub-pixel convolutional neural network",
+                  "citation": "W. Shi et al. , 'Real-time single image and video super-resolution using an efficient sub-pixel convolutional neural network,' in CVPR , 2016, pp. 1874-1883."
+                },
+                {
+                  "title": "Scale-transferrable object detection",
+                  "citation": "P. Zhou, B. Ni, C. Geng, J. Hu, and Y. Xu, 'Scale-transferrable object detection,' in CVPR , 2018, pp. 528-537."
+                },
+                {
+                  "title": "Extended feature pyramid network for small object detection",
+                  "citation": "C. Deng, M. Wang, L. Liu, Y. Liu, and Y. Jiang, 'Extended feature pyramid network for small object detection,' TMM , vol. 24, pp. 1968-1979, 2021."
+                },
+                {
+                  "title": "Self-supervised feature augmentation for large image object detection",
+                  "citation": "X. Pan et al. , 'Self-supervised feature augmentation for large image object detection,' TIP , vol. 29, pp. 6745-6758, 2020."
+                },
+                {
+                  "title": "Generative adversarial nets",
+                  "citation": "I. J. Goodfellow et al. , 'Generative adversarial nets,' in NeurIPS , 2014, pp. 2672-2680."
+                },
+                {
+                  "title": "Small-object detection in remote sensing images with end-toend edge-enhanced gan and object detector network",
+                  "citation": "J. Rabbi, N. Ray, M. Schubert, S. Chowdhury, and D. Chao, 'Small-object detection in remote sensing images with end-toend edge-enhanced gan and object detector network,' Remote Sensing , vol. 12, no. 9, 2020."
+                },
+                {
+                  "title": "Small object detection in remote sensing images with residual feature aggregation-based superresolution and object detector network",
+                  "citation": "S. M. A. Bashir and Y. Wang, 'Small object detection in remote sensing images with residual feature aggregation-based superresolution and object detector network,' Remote Sensing , vol. 13, no. 9, 2021."
+                },
+                {
+                  "title": "Extended feature pyramid network for small object detection",
+                  "citation": "C. Deng, M. Wang, L. Liu, Y. Liu, and Y. Jiang, 'Extended feature pyramid network for small object detection,' TMM , vol. 24, pp. 1968-1979, 2021."
+                },
+                {
+                  "title": "Sod-mtgan: Small object detection via multi-task generative adversarial network",
+                  "citation": "Y. Bai, Y. Zhang, M. Ding, and B. Ghanem, 'Sod-mtgan: Small object detection via multi-task generative adversarial network,' in ECCV , 2018, pp. 210-226."
+                },
+                {
+                  "title": "Finding tiny faces in the wild with generative adversarial network",
+                  "citation": "--, 'Finding tiny faces in the wild with generative adversarial network,' in CVPR , 2018, pp. 21-30."
+                },
+                {
+                  "title": "Object detection by a super-resolution method and a convolutional neural networks",
+                  "citation": "B. Na and G. C. Fox, 'Object detection by a super-resolution method and a convolutional neural networks,' in BigData , 2018, pp. 2263-2269."
+                },
+                {
+                  "title": "Better to follow, follow to be better: Towards precise supervision of feature superresolution for small object detection",
+                  "citation": "J. Noh, W. Bae, W. Lee, J. Seo, and G. Kim, 'Better to follow, follow to be better: Towards precise supervision of feature superresolution for small object detection,' in ICCV , 2019, pp. 97249733."
+                },
+                {
+                  "title": "An empirical study of context in object detection",
+                  "citation": "S. K. Divvala, D. Hoiem, J. H. Hays, A. A. Efros, and M. Hebert, 'An empirical study of context in object detection,' in CVPR , 2009, pp. 1271-1278."
+                },
+                {
+                  "title": "Perceptual generative adversarial networks for small object detection",
+                  "citation": "J. Li, X. Liang, Y. Wei, T. Xu, J. Feng, and S. Yan, 'Perceptual generative adversarial networks for small object detection,' in CVPR , 2017, pp. 1951-1959."
+                },
+                {
+                  "title": "Better to follow, follow to be better: Towards precise supervision of feature superresolution for small object detection",
+                  "citation": "J. Noh, W. Bae, W. Lee, J. Seo, and G. Kim, 'Better to follow, follow to be better: Towards precise supervision of feature superresolution for small object detection,' in ICCV , 2019, pp. 97249733."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.3.5",
+              "sec_title": "Context-modeling methods",
+              "citations": [
+                {
+                  "title": "Contextual priming for object detection",
+                  "citation": "A. Torralba, 'Contextual priming for object detection,' IJCV , vol. 53, no. 2, pp. 169-191, 2003."
+                },
+                {
+                  "title": "Pyramidbox: A contextassisted single shot face detector",
+                  "citation": "X. Tang, D. K. Du, Z. He, and J. Liu, 'Pyramidbox: A contextassisted single shot face detector,' in ECCV , 2018, pp. 812-828."
+                },
+                {
+                  "title": "An empirical study of context in object detection",
+                  "citation": "S. K. Divvala, D. Hoiem, J. H. Hays, A. A. Efros, and M. Hebert, 'An empirical study of context in object detection,' in CVPR , 2009, pp. 1271-1278."
+                },
+                {
+                  "title": "Contextual priming for object detection",
+                  "citation": "A. Torralba, 'Contextual priming for object detection,' IJCV , vol. 53, no. 2, pp. 169-191, 2003."
+                },
+                {
+                  "title": "Exploring tiny images: The roles of appearance and contextual information for machine and human object recognition",
+                  "citation": "D. Parikh, C. L. Zitnick, and T. Chen, 'Exploring tiny images: The roles of appearance and contextual information for machine and human object recognition,' TPAMI , vol. 34, no. 10, pp. 1978-1991, 2011."
+                },
+                {
+                  "title": "Context encoding for semantic segmentation",
+                  "citation": "H. Zhang, K. Dana, J. Shi, Z. Zhang, X. Wang, A. Tyagi, and A. Agrawal, 'Context encoding for semantic segmentation,' in CVPR , 2018, pp. 7151-7160."
+                },
+                {
+                  "title": "Hybrid task cascade for instance segmentation",
+                  "citation": "K. Chen et al. , 'Hybrid task cascade for instance segmentation,' in CVPR , 2019, pp. 4969-4978."
+                },
+                {
+                  "title": "Contextual priming for object detection",
+                  "citation": "A. Torralba, 'Contextual priming for object detection,' IJCV , vol. 53, no. 2, pp. 169-191, 2003."
+                },
+                {
+                  "title": "R-cnn for small object detection",
+                  "citation": "C. Chen, M.-Y. Liu, O. Tuzel, and J. Xiao, 'R-cnn for small object detection,' in ACCV , 2016, pp. 214-230."
+                },
+                {
+                  "title": "Finding tiny faces",
+                  "citation": "P. Hu and D. Ramanan, 'Finding tiny faces,' in CVPR , 2017, pp. 951-959."
+                },
+                {
+                  "title": "Pyramidbox: A contextassisted single shot face detector",
+                  "citation": "X. Tang, D. K. Du, Z. He, and J. Liu, 'Pyramidbox: A contextassisted single shot face detector,' in ECCV , 2018, pp. 812-828."
+                },
+                {
+                  "title": "Small object detection in unmanned aerial vehicle images using feature fusion and scaling-based single shot detector with spatial context analysis",
+                  "citation": "X. Liang, J. Zhang, L. Zhuo, Y. Li, and Q. Tian, 'Small object detection in unmanned aerial vehicle images using feature fusion and scaling-based single shot detector with spatial context analysis,' TCSVT , vol. 30, no. 6, pp. 1758-1770, 2020."
+                },
+                {
+                  "title": "Sinet: A scale-insensitive convolutional neural network for fast vehicle detection",
+                  "citation": "X. Hu, X. Xu, Y. Xiao, H. Chen, S. He, J. Qin, and P.-A. Heng, 'Sinet: A scale-insensitive convolutional neural network for fast vehicle detection,' IEEE Trans. Intell. Transp. Syst. , vol. 20, no. 3, pp. 1010-1019, 2019."
+                },
+                {
+                  "title": "Inside-outside net: Detecting objects in context with skip pooling and recurrent neural networks",
+                  "citation": "S. Bell, C. L. Zitnick, K. Bala, and R. Girshick, 'Inside-outside net: Detecting objects in context with skip pooling and recurrent neural networks,' in CVPR , 2016, pp. 2874-2883."
+                },
+                {
+                  "title": "A simple way to initialize recurrent networks of rectified linear units",
+                  "citation": "Q. V. Le, N. Jaitly, and G. E. Hinton, 'A simple way to initialize recurrent networks of rectified linear units,' arXiv preprint arXiv:1504.00941 , 2015."
+                },
+                {
+                  "title": "R²-CNN: Fast tiny object detection in large-scale remote sensing images",
+                  "citation": "J. Pang, C. Li, J. Shi, Z. Xu, and H. Feng, ' R 2 -cnn: Fast tiny object detection in large-scale remote sensing images,' IEEE Trans. Geosci. Remote Sens. , vol. 57, no. 8, pp. 5512-5524, 2019."
+                },
+                {
+                  "title": "Cad-net: A context-aware detection network for objects in remote sensing imagery",
+                  "citation": "G. Zhang, S. Lu, and W. Zhang, 'Cad-net: A context-aware detection network for objects in remote sensing imagery,' IEEE Trans. Geosci. Remote Sens. , vol. 57, no. 12, pp. 10 015-10 024, 2019."
+                },
+                {
+                  "title": "Mfrcnn: Incorporating multi-scale features and global information for traffic object detection",
+                  "citation": "H. Zhang, K. Wang, Y. Tian, C. Gou, and F.-Y. Wang, 'Mfrcnn: Incorporating multi-scale features and global information for traffic object detection,' IEEE Trans. Veh. Technol. , vol. 67, no. 9, pp. 8019-8030, 2018."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "2.3.6",
+              "sec_title": "Focus-and-detect methods",
+              "citations": [
+                {
+                  "title": "Clustered object detection in aerial images",
+                  "citation": "F. Yang, H. Fan, P. Chu, E. Blasch, and H. Ling, 'Clustered object detection in aerial images,' in ICCV , 2019, pp. 8311-8320."
+                },
+                {
+                  "title": "Clustered object detection in aerial images",
+                  "citation": "F. Yang, H. Fan, P. Chu, E. Blasch, and H. Ling, 'Clustered object detection in aerial images,' in ICCV , 2019, pp. 8311-8320."
+                },
+                {
+                  "title": "Coarse-grained density map guided object detection in aerial images",
+                  "citation": "C. Duan, Z. Wei, C. Zhang, S. Qu, and H. Wang, 'Coarse-grained density map guided object detection in aerial images,' in ICCVW , 2021, pp. 2789-2798."
+                },
+                {
+                  "title": "Density map guided object detection in aerial images",
+                  "citation": "C. Li, T. Yang, S. Zhu, C. Chen, and S. Guan, 'Density map guided object detection in aerial images,' in CVPRW , 2020, pp. 737-746."
+                },
+                {
+                  "title": "Object detection using clustering algorithm adaptive searching regions in aerial images",
+                  "citation": "Y. Wang, Y. Yang, and X. Zhao, 'Object detection using clustering algorithm adaptive searching regions in aerial images,' in ECCV , 2020, pp. 651-664."
+                },
+                {
+                  "title": "Edgeduet: Tiling small object detection for edge assisted autonomous mobile vision",
+                  "citation": "X. Wang, Z. Yang, J. Wu, Y. Zhao, and Z. Zhou, 'Edgeduet: Tiling small object detection for edge assisted autonomous mobile vision,' in INFOCOM , 2021, pp. 1-10."
+                },
+                {
+                  "title": "Focus-and-detect: A small object detection framework for aerial images",
+                  "citation": "O. C. Koyun, R. K. Keser, ˙ Ibrahim Batuhan Akkaya, and B. U. T¨ oreyin, 'Focus-and-detect: A small object detection framework for aerial images,' Signal Process. Image Commun. , vol. 104, p. 116675, 2022."
+                },
+                {
+                  "title": "The power of tiling for small object detection",
+                  "citation": "F. Ozge Unel, B. O. Ozkalayci, and C. Cigla, 'The power of tiling for small object detection,' in CVPRW) , 2019, pp. 582-591."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "REVIEW OF DATASETS FOR SMALL OBJECT DETECTION",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Datasets for Small Object Detection",
+          "citations": [
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+            },
+            {
+              "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+              "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+            },
+            {
+              "title": "The pascal visual object classes (voc) challenge",
+              "citation": "M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman, 'The pascal visual object classes (voc) challenge,' IJCV , vol. 88, no. 2, pp. 303-338, 2010."
+            },
+            {
+              "title": "Imagenet: A large-scale hierarchical image database",
+              "citation": "J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li, and L. Fei-Fei, 'Imagenet: A large-scale hierarchical image database,' in CVPR , 2009, pp. 248-255."
+            },
+            {
+              "title": "Wider face: A face detection benchmark",
+              "citation": "S. Yang, P. Luo, C. C. Loy, and X. Tang, 'Wider face: A face detection benchmark,' in CVPR , 2016, pp. 5525-5533."
+            },
+            {
+              "title": "Scale match for tiny person detection",
+              "citation": "X. Yu, Y. Gong, N. Jiang, Q. Ye, and Z. Han, 'Scale match for tiny person detection,' in WACV , 2020, pp. 1257-1265."
+            },
+            {
+              "title": "Eurocity persons: A novel benchmark for person detection in traffic scenes",
+              "citation": "M. Braun, S. Krebs, F. Flohr, and D. M. Gavrila, 'Eurocity persons: A novel benchmark for person detection in traffic scenes,' TPAMI , vol. 41, no. 8, pp. 1844-1861, 2019."
+            },
+            {
+              "title": "Widerperson: A diverse dataset for dense pedestrian detection in the wild",
+              "citation": "S. Zhang, Y. Xie, J. Wan, H. Xia, S. Z. Li, and G. Guo, 'Widerperson: A diverse dataset for dense pedestrian detection in the wild,' TMM , vol. 22, no. 2, pp. 380-393, 2020."
+            },
+            {
+              "title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+              "citation": "K. Li, G. Wan, G. Cheng, L. Meng, and J. Han, 'Object detection in optical remote sensing images: A survey and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 159, pp. 296-307, 2020."
+            },
+            {
+              "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+              "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+            },
+            {
+              "title": "Detecting tiny objects in aerial images: A normalized wasserstein distance and a new benchmark",
+              "citation": "C. Xu, J. Wang, W. Yang, H. Yu, L. Yu, and G.-S. Xia, 'Detecting tiny objects in aerial images: A normalized wasserstein distance and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 190, pp. 79-93, 2022."
+            },
+            {
+              "title": "Anchor-free oriented proposal generator for object detection",
+              "citation": "G. Cheng, J. Wang, K. Li, X. Xie, C. Lang, Y. Yao, and J. Han, 'Anchor-free oriented proposal generator for object detection,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+            },
+            {
+              "title": "The pascal visual object classes (voc) challenge",
+              "citation": "M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman, 'The pascal visual object classes (voc) challenge,' IJCV , vol. 88, no. 2, pp. 303-338, 2010."
+            },
+            {
+              "title": "Imagenet: A large-scale hierarchical image database",
+              "citation": "J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li, and L. Fei-Fei, 'Imagenet: A large-scale hierarchical image database,' in CVPR , 2009, pp. 248-255."
+            },
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+            },
+            {
+              "title": "Wider face: A face detection benchmark",
+              "citation": "S. Yang, P. Luo, C. C. Loy, and X. Tang, 'Wider face: A face detection benchmark,' in CVPR , 2016, pp. 5525-5533."
+            },
+            {
+              "title": "Scale match for tiny person detection",
+              "citation": "X. Yu, Y. Gong, N. Jiang, Q. Ye, and Z. Han, 'Scale match for tiny person detection,' in WACV , 2020, pp. 1257-1265."
+            },
+            {
+              "title": "Trafficsign detection and classification in the wild",
+              "citation": "Z. Zhu, D. Liang, S. Zhang, X. Huang, B. Li, and S. Hu, 'Trafficsign detection and classification in the wild,' in CVPR , 2016, pp. 2110-2118."
+            },
+            {
+              "title": "Detection and tracking meet drones challenge",
+              "citation": "P. Zhu, L. Wen, D. Du, X. Bian, H. Fan, Q. Hu, and H. Ling, 'Detection and tracking meet drones challenge,' TPAMI , pp. 1-1, 2021."
+            },
+            {
+              "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+              "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+            },
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+            },
+            {
+              "title": "R-cnn for small object detection",
+              "citation": "C. Chen, M.-Y. Liu, O. Tuzel, and J. Xiao, 'R-cnn for small object detection,' in ACCV , 2016, pp. 214-230."
+            },
+            {
+              "title": "Wider face: A face detection benchmark",
+              "citation": "S. Yang, P. Luo, C. C. Loy, and X. Tang, 'Wider face: A face detection benchmark,' in CVPR , 2016, pp. 5525-5533."
+            },
+            {
+              "title": "Eurocity persons: A novel benchmark for person detection in traffic scenes",
+              "citation": "M. Braun, S. Krebs, F. Flohr, and D. M. Gavrila, 'Eurocity persons: A novel benchmark for person detection in traffic scenes,' TPAMI , vol. 41, no. 8, pp. 1844-1861, 2019."
+            },
+            {
+              "title": "Widerperson: A diverse dataset for dense pedestrian detection in the wild",
+              "citation": "S. Zhang, Y. Xie, J. Wan, H. Xia, S. Z. Li, and G. Guo, 'Widerperson: A diverse dataset for dense pedestrian detection in the wild,' TMM , vol. 22, no. 2, pp. 380-393, 2020."
+            },
+            {
+              "title": "Scale match for tiny person detection",
+              "citation": "X. Yu, Y. Gong, N. Jiang, Q. Ye, and Z. Han, 'Scale match for tiny person detection,' in WACV , 2020, pp. 1257-1265."
+            },
+            {
+              "title": "Using fourier descriptors and spatial models for traffic sign recognition",
+              "citation": "F. Larsson and M. Felsberg, 'Using fourier descriptors and spatial models for traffic sign recognition,' in SCIA , 2011, pp. 238-249."
+            },
+            {
+              "title": "Vision-based traffic sign detection and analysis for intelligent driver assistance systems: Perspectives and survey",
+              "citation": "A. Mogelmose, M. M. Trivedi, and T. B. Moeslund, 'Vision-based traffic sign detection and analysis for intelligent driver assistance systems: Perspectives and survey,' TITS , vol. 13, no. 4, pp. 14841497, 2012."
+            },
+            {
+              "title": "Detection of traffic signs in real-world images: The German Traffic Sign Detection Benchmark",
+              "citation": "S. Houben, J. Stallkamp, J. Salmen, M. Schlipsing, and C. Igel, 'Detection of traffic signs in real-world images: The German Traffic Sign Detection Benchmark,' in IJCNN , no. 1288, 2013."
+            },
+            {
+              "title": "Trafficsign detection and classification in the wild",
+              "citation": "Z. Zhu, D. Liang, S. Zhang, X. Huang, B. Li, and S. Hu, 'Trafficsign detection and classification in the wild,' in CVPR , 2016, pp. 2110-2118."
+            },
+            {
+              "title": "A deep learning approach to traffic lights: Detection, tracking, and classification",
+              "citation": "K. Behrendt, L. Novak, and R. Botros, 'A deep learning approach to traffic lights: Detection, tracking, and classification,' in ICRA , 2017, pp. 1370-1377."
+            },
+            {
+              "title": "Orientation robust object detection in aerial images using deep convolutional neural network",
+              "citation": "H. Zhu, X. Chen, W. Dai, K. Fu, Q. Ye, and J. Jiao, 'Orientation robust object detection in aerial images using deep convolutional neural network,' in ICIP , 2015, pp. 3735-3739."
+            },
+            {
+              "title": "Vehicle detection in aerial imagery: A small target detection benchmark",
+              "citation": "S. Razakarivony and F. Jurie, 'Vehicle detection in aerial imagery: A small target detection benchmark,' J. Vis. Commun , vol. 34, pp. 187-203, 2016."
+            },
+            {
+              "title": "xview: Objects in context in overhead imagery",
+              "citation": "D. Lam et al. , 'xview: Objects in context in overhead imagery,' arXiv preprint arXiv:1802.07856 , 2018."
+            },
+            {
+              "title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+              "citation": "K. Li, G. Wan, G. Cheng, L. Meng, and J. Han, 'Object detection in optical remote sensing images: A survey and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 159, pp. 296-307, 2020."
+            },
+            {
+              "title": "The unmanned aerial vehicle benchmark: Object detection, tracking and baseline",
+              "citation": "H. Yu, G. Li, W. Zhang, Q. Huang, D. Du, Q. Tian, and N. Sebe, 'The unmanned aerial vehicle benchmark: Object detection, tracking and baseline,' IJCV , vol. 128, no. 5, pp. 1141-1159, 2020."
+            },
+            {
+              "title": "Detection and tracking meet drones challenge",
+              "citation": "P. Zhu, L. Wen, D. Du, X. Bian, H. Fan, Q. Hu, and H. Ling, 'Detection and tracking meet drones challenge,' TPAMI , pp. 1-1, 2021."
+            },
+            {
+              "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+              "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+            },
+            {
+              "title": "Detecting tiny objects in aerial images: A normalized wasserstein distance and a new benchmark",
+              "citation": "C. Xu, J. Wang, W. Yang, H. Yu, L. Yu, and G.-S. Xia, 'Detecting tiny objects in aerial images: A normalized wasserstein distance and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 190, pp. 79-93, 2022."
+            },
+            {
+              "title": "Nwpu-crowd: A large-scale benchmark for crowd counting and localization",
+              "citation": "Q. Wang, J. Gao, W. Lin, and X. Li, 'Nwpu-crowd: A large-scale benchmark for crowd counting and localization,' TPAMI , vol. 43, no. 6, pp. 2141-2149, 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.1.1",
+              "sec_title": "COCO .",
+              "citations": [
+                {
+                  "title": "The pascal visual object classes (voc) challenge",
+                  "citation": "M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman, 'The pascal visual object classes (voc) challenge,' IJCV , vol. 88, no. 2, pp. 303-338, 2010."
+                },
+                {
+                  "title": "Imagenet: A large-scale hierarchical image database",
+                  "citation": "J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li, and L. Fei-Fei, 'Imagenet: A large-scale hierarchical image database,' in CVPR , 2009, pp. 248-255."
+                },
+                {
+                  "title": "Microsoft coco: Common objects in context",
+                  "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.2",
+              "sec_title": "WiderFace .",
+              "citations": [
+                {
+                  "title": "Wider face: A face detection benchmark",
+                  "citation": "S. Yang, P. Luo, C. C. Loy, and X. Tang, 'Wider face: A face detection benchmark,' in CVPR , 2016, pp. 5525-5533."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.3",
+              "sec_title": "TinyPerson .",
+              "citations": [
+                {
+                  "title": "Scale match for tiny person detection",
+                  "citation": "X. Yu, Y. Gong, N. Jiang, Q. Ye, and Z. Han, 'Scale match for tiny person detection,' in WACV , 2020, pp. 1257-1265."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.4",
+              "sec_title": "TT100K .",
+              "citations": [
+                {
+                  "title": "Trafficsign detection and classification in the wild",
+                  "citation": "Z. Zhu, D. Liang, S. Zhang, X. Huang, B. Li, and S. Hu, 'Trafficsign detection and classification in the wild,' in CVPR , 2016, pp. 2110-2118."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.5",
+              "sec_title": "VisDrone .",
+              "citations": [
+                {
+                  "title": "Detection and tracking meet drones challenge",
+                  "citation": "P. Zhu, L. Wen, D. Du, X. Bian, H. Fan, Q. Hu, and H. Ling, 'Detection and tracking meet drones challenge,' TPAMI , pp. 1-1, 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "3.1.6",
+              "sec_title": "DOTA .",
+              "citations": [
+                {
+                  "title": "Microsoft coco: Common objects in context",
+                  "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+                },
+                {
+                  "title": "R-cnn for small object detection",
+                  "citation": "C. Chen, M.-Y. Liu, O. Tuzel, and J. Xiao, 'R-cnn for small object detection,' in ACCV , 2016, pp. 214-230."
+                },
+                {
+                  "title": "Wider face: A face detection benchmark",
+                  "citation": "S. Yang, P. Luo, C. C. Loy, and X. Tang, 'Wider face: A face detection benchmark,' in CVPR , 2016, pp. 5525-5533."
+                },
+                {
+                  "title": "Eurocity persons: A novel benchmark for person detection in traffic scenes",
+                  "citation": "M. Braun, S. Krebs, F. Flohr, and D. M. Gavrila, 'Eurocity persons: A novel benchmark for person detection in traffic scenes,' TPAMI , vol. 41, no. 8, pp. 1844-1861, 2019."
+                },
+                {
+                  "title": "Widerperson: A diverse dataset for dense pedestrian detection in the wild",
+                  "citation": "S. Zhang, Y. Xie, J. Wan, H. Xia, S. Z. Li, and G. Guo, 'Widerperson: A diverse dataset for dense pedestrian detection in the wild,' TMM , vol. 22, no. 2, pp. 380-393, 2020."
+                },
+                {
+                  "title": "Scale match for tiny person detection",
+                  "citation": "X. Yu, Y. Gong, N. Jiang, Q. Ye, and Z. Han, 'Scale match for tiny person detection,' in WACV , 2020, pp. 1257-1265."
+                },
+                {
+                  "title": "Using fourier descriptors and spatial models for traffic sign recognition",
+                  "citation": "F. Larsson and M. Felsberg, 'Using fourier descriptors and spatial models for traffic sign recognition,' in SCIA , 2011, pp. 238-249."
+                },
+                {
+                  "title": "Vision-based traffic sign detection and analysis for intelligent driver assistance systems: Perspectives and survey",
+                  "citation": "A. Mogelmose, M. M. Trivedi, and T. B. Moeslund, 'Vision-based traffic sign detection and analysis for intelligent driver assistance systems: Perspectives and survey,' TITS , vol. 13, no. 4, pp. 14841497, 2012."
+                },
+                {
+                  "title": "Detection of traffic signs in real-world images: The German Traffic Sign Detection Benchmark",
+                  "citation": "S. Houben, J. Stallkamp, J. Salmen, M. Schlipsing, and C. Igel, 'Detection of traffic signs in real-world images: The German Traffic Sign Detection Benchmark,' in IJCNN , no. 1288, 2013."
+                },
+                {
+                  "title": "Trafficsign detection and classification in the wild",
+                  "citation": "Z. Zhu, D. Liang, S. Zhang, X. Huang, B. Li, and S. Hu, 'Trafficsign detection and classification in the wild,' in CVPR , 2016, pp. 2110-2118."
+                },
+                {
+                  "title": "A deep learning approach to traffic lights: Detection, tracking, and classification",
+                  "citation": "K. Behrendt, L. Novak, and R. Botros, 'A deep learning approach to traffic lights: Detection, tracking, and classification,' in ICRA , 2017, pp. 1370-1377."
+                },
+                {
+                  "title": "Orientation robust object detection in aerial images using deep convolutional neural network",
+                  "citation": "H. Zhu, X. Chen, W. Dai, K. Fu, Q. Ye, and J. Jiao, 'Orientation robust object detection in aerial images using deep convolutional neural network,' in ICIP , 2015, pp. 3735-3739."
+                },
+                {
+                  "title": "Vehicle detection in aerial imagery: A small target detection benchmark",
+                  "citation": "S. Razakarivony and F. Jurie, 'Vehicle detection in aerial imagery: A small target detection benchmark,' J. Vis. Commun , vol. 34, pp. 187-203, 2016."
+                },
+                {
+                  "title": "xview: Objects in context in overhead imagery",
+                  "citation": "D. Lam et al. , 'xview: Objects in context in overhead imagery,' arXiv preprint arXiv:1802.07856 , 2018."
+                },
+                {
+                  "title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+                  "citation": "K. Li, G. Wan, G. Cheng, L. Meng, and J. Han, 'Object detection in optical remote sensing images: A survey and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 159, pp. 296-307, 2020."
+                },
+                {
+                  "title": "The unmanned aerial vehicle benchmark: Object detection, tracking and baseline",
+                  "citation": "H. Yu, G. Li, W. Zhang, Q. Huang, D. Du, Q. Tian, and N. Sebe, 'The unmanned aerial vehicle benchmark: Object detection, tracking and baseline,' IJCV , vol. 128, no. 5, pp. 1141-1159, 2020."
+                },
+                {
+                  "title": "Detection and tracking meet drones challenge",
+                  "citation": "P. Zhu, L. Wen, D. Du, X. Bian, H. Fan, Q. Hu, and H. Ling, 'Detection and tracking meet drones challenge,' TPAMI , pp. 1-1, 2021."
+                },
+                {
+                  "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+                  "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+                },
+                {
+                  "title": "Detecting tiny objects in aerial images: A normalized wasserstein distance and a new benchmark",
+                  "citation": "C. Xu, J. Wang, W. Yang, H. Yu, L. Yu, and G.-S. Xia, 'Detecting tiny objects in aerial images: A normalized wasserstein distance and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 190, pp. 79-93, 2022."
+                },
+                {
+                  "title": "Nwpu-crowd: A large-scale benchmark for crowd counting and localization",
+                  "citation": "Q. Wang, J. Gao, W. Lin, and X. Li, 'Nwpu-crowd: A large-scale benchmark for crowd counting and localization,' TPAMI , vol. 43, no. 6, pp. 2141-2149, 2021."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Evaluation Metrics",
+          "citations": [
+            {
+              "title": "The pascal visual object classes (voc) challenge",
+              "citation": "M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman, 'The pascal visual object classes (voc) challenge,' IJCV , vol. 88, no. 2, pp. 303-338, 2010."
+            },
+            {
+              "title": "Trafficsign detection and classification in the wild",
+              "citation": "Z. Zhu, D. Liang, S. Zhang, X. Huang, B. Li, and S. Hu, 'Trafficsign detection and classification in the wild,' in CVPR , 2016, pp. 2110-2118."
+            },
+            {
+              "title": "Tju-dhd: A diverse high-resolution dataset for object detection",
+              "citation": "Y. Pang, J. Cao, Y. Li, J. Xie, H. Sun, and J. Gong, 'Tju-dhd: A diverse high-resolution dataset for object detection,' TIP , vol. 30, pp. 207-219, 2021."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "3.2.1",
+              "sec_title": "Average Precision .",
+              "citations": [
+                {
+                  "title": "The pascal visual object classes (voc) challenge",
+                  "citation": "M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman, 'The pascal visual object classes (voc) challenge,' IJCV , vol. 88, no. 2, pp. 303-338, 2010."
+                },
+                {
+                  "title": "Trafficsign detection and classification in the wild",
+                  "citation": "Z. Zhu, D. Liang, S. Zhang, X. Huang, B. Li, and S. Hu, 'Trafficsign detection and classification in the wild,' in CVPR , 2016, pp. 2110-2118."
+                },
+                {
+                  "title": "Tju-dhd: A diverse high-resolution dataset for object detection",
+                  "citation": "Y. Pang, J. Cao, Y. Li, J. Xie, H. Sun, and J. Gong, 'Tju-dhd: A diverse high-resolution dataset for object detection,' TIP , vol. 30, pp. 207-219, 2021."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "BENCHMARKS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Data Acquisition and Annotation",
+          "citations": [
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+            },
+            {
+              "title": "Scale match for tiny person detection",
+              "citation": "X. Yu, Y. Gong, N. Jiang, Q. Ye, and Z. Han, 'Scale match for tiny person detection,' in WACV , 2020, pp. 1257-1265."
+            },
+            {
+              "title": "Detecting tiny objects in aerial images: A normalized wasserstein distance and a new benchmark",
+              "citation": "C. Xu, J. Wang, W. Yang, H. Yu, L. Yu, and G.-S. Xia, 'Detecting tiny objects in aerial images: A normalized wasserstein distance and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 190, pp. 79-93, 2022."
+            },
+            {
+              "title": "The mapillary vistas dataset for semantic understanding of street scenes",
+              "citation": "G. Neuhold, T. Ollmann, S. R. Bul` o, and P. Kontschieder, 'The mapillary vistas dataset for semantic understanding of street scenes,' in ICCV , 2017, pp. 5000-5009."
+            },
+            {
+              "title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+              "citation": "K. Li, G. Wan, G. Cheng, L. Meng, and J. Han, 'Object detection in optical remote sensing images: A survey and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 159, pp. 296-307, 2020."
+            },
+            {
+              "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+              "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+            },
+            {
+              "title": "Contextual priming for object detection",
+              "citation": "A. Torralba, 'Contextual priming for object detection,' IJCV , vol. 53, no. 2, pp. 169-191, 2003."
+            },
+            {
+              "title": "Pyramidbox: A contextassisted single shot face detector",
+              "citation": "X. Tang, D. K. Du, Z. He, and J. Liu, 'Pyramidbox: A contextassisted single shot face detector,' in ECCV , 2018, pp. 812-828."
+            },
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+            },
+            {
+              "title": "The mapillary vistas dataset for semantic understanding of street scenes",
+              "citation": "G. Neuhold, T. Ollmann, S. R. Bul` o, and P. Kontschieder, 'The mapillary vistas dataset for semantic understanding of street scenes,' in ICCV , 2017, pp. 5000-5009."
+            },
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+            },
+            {
+              "title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+              "citation": "K. Li, G. Wan, G. Cheng, L. Meng, and J. Han, 'Object detection in optical remote sensing images: A survey and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 159, pp. 296-307, 2020."
+            },
+            {
+              "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+              "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+            },
+            {
+              "title": "The pascal visual object classes (voc) challenge",
+              "citation": "M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman, 'The pascal visual object classes (voc) challenge,' IJCV , vol. 88, no. 2, pp. 303-338, 2010."
+            },
+            {
+              "title": "Imagenet: A large-scale hierarchical image database",
+              "citation": "J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li, and L. Fei-Fei, 'Imagenet: A large-scale hierarchical image database,' in CVPR , 2009, pp. 248-255."
+            },
+            {
+              "title": "Scale match for tiny person detection",
+              "citation": "X. Yu, Y. Gong, N. Jiang, Q. Ye, and Z. Han, 'Scale match for tiny person detection,' in WACV , 2020, pp. 1257-1265."
+            },
+            {
+              "title": "Wider face: A face detection benchmark",
+              "citation": "S. Yang, P. Luo, C. C. Loy, and X. Tang, 'Wider face: A face detection benchmark,' in CVPR , 2016, pp. 5525-5533."
+            },
+            {
+              "title": "The unmanned aerial vehicle benchmark: Object detection, tracking and baseline",
+              "citation": "H. Yu, G. Li, W. Zhang, Q. Huang, D. Du, Q. Tian, and N. Sebe, 'The unmanned aerial vehicle benchmark: Object detection, tracking and baseline,' IJCV , vol. 128, no. 5, pp. 1141-1159, 2020."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Definition about a valuable object .",
+              "citations": [
+                {
+                  "title": "Microsoft coco: Common objects in context",
+                  "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+                },
+                {
+                  "title": "Scale match for tiny person detection",
+                  "citation": "X. Yu, Y. Gong, N. Jiang, Q. Ye, and Z. Han, 'Scale match for tiny person detection,' in WACV , 2020, pp. 1257-1265."
+                },
+                {
+                  "title": "Detecting tiny objects in aerial images: A normalized wasserstein distance and a new benchmark",
+                  "citation": "C. Xu, J. Wang, W. Yang, H. Yu, L. Yu, and G.-S. Xia, 'Detecting tiny objects in aerial images: A normalized wasserstein distance and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 190, pp. 79-93, 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.2",
+              "sec_title": "Data source .",
+              "citations": [
+                {
+                  "title": "The mapillary vistas dataset for semantic understanding of street scenes",
+                  "citation": "G. Neuhold, T. Ollmann, S. R. Bul` o, and P. Kontschieder, 'The mapillary vistas dataset for semantic understanding of street scenes,' in ICCV , 2017, pp. 5000-5009."
+                },
+                {
+                  "title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+                  "citation": "K. Li, G. Wan, G. Cheng, L. Meng, and J. Han, 'Object detection in optical remote sensing images: A survey and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 159, pp. 296-307, 2020."
+                },
+                {
+                  "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+                  "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+                },
+                {
+                  "title": "Contextual priming for object detection",
+                  "citation": "A. Torralba, 'Contextual priming for object detection,' IJCV , vol. 53, no. 2, pp. 169-191, 2003."
+                },
+                {
+                  "title": "Pyramidbox: A contextassisted single shot face detector",
+                  "citation": "X. Tang, D. K. Du, Z. He, and J. Liu, 'Pyramidbox: A contextassisted single shot face detector,' in ECCV , 2018, pp. 812-828."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.3",
+              "sec_title": "Dataset split .",
+              "citations": [
+                {
+                  "title": "Microsoft coco: Common objects in context",
+                  "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+                },
+                {
+                  "title": "The mapillary vistas dataset for semantic understanding of street scenes",
+                  "citation": "G. Neuhold, T. Ollmann, S. R. Bul` o, and P. Kontschieder, 'The mapillary vistas dataset for semantic understanding of street scenes,' in ICCV , 2017, pp. 5000-5009."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.4",
+              "sec_title": "Instance-level annotation .",
+              "citations": [
+                {
+                  "title": "Microsoft coco: Common objects in context",
+                  "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+                },
+                {
+                  "title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+                  "citation": "K. Li, G. Wan, G. Cheng, L. Meng, and J. Han, 'Object detection in optical remote sensing images: A survey and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 159, pp. 296-307, 2020."
+                },
+                {
+                  "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+                  "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+                },
+                {
+                  "title": "The pascal visual object classes (voc) challenge",
+                  "citation": "M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman, 'The pascal visual object classes (voc) challenge,' IJCV , vol. 88, no. 2, pp. 303-338, 2010."
+                },
+                {
+                  "title": "Imagenet: A large-scale hierarchical image database",
+                  "citation": "J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li, and L. Fei-Fei, 'Imagenet: A large-scale hierarchical image database,' in CVPR , 2009, pp. 248-255."
+                },
+                {
+                  "title": "Scale match for tiny person detection",
+                  "citation": "X. Yu, Y. Gong, N. Jiang, Q. Ye, and Z. Han, 'Scale match for tiny person detection,' in WACV , 2020, pp. 1257-1265."
+                },
+                {
+                  "title": "Wider face: A face detection benchmark",
+                  "citation": "S. Yang, P. Luo, C. C. Loy, and X. Tang, 'Wider face: A face detection benchmark,' in CVPR , 2016, pp. 5525-5533."
+                },
+                {
+                  "title": "The unmanned aerial vehicle benchmark: Object detection, tracking and baseline",
+                  "citation": "H. Yu, G. Li, W. Zhang, Q. Huang, D. Du, Q. Tian, and N. Sebe, 'The unmanned aerial vehicle benchmark: Object detection, tracking and baseline,' IJCV , vol. 128, no. 5, pp. 1141-1159, 2020."
+                },
+                {
+                  "title": "Eurocity persons: A novel benchmark for person detection in traffic scenes",
+                  "citation": "M. Braun, S. Krebs, F. Flohr, and D. M. Gavrila, 'Eurocity persons: A novel benchmark for person detection in traffic scenes,' TPAMI , vol. 41, no. 8, pp. 1844-1861, 2019."
+                },
+                {
+                  "title": "Detecting tiny objects in aerial images: A normalized wasserstein distance and a new benchmark",
+                  "citation": "C. Xu, J. Wang, W. Yang, H. Yu, L. Yu, and G.-S. Xia, 'Detecting tiny objects in aerial images: A normalized wasserstein distance and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 190, pp. 79-93, 2022."
+                },
+                {
+                  "title": "Anchor-free oriented proposal generator for object detection",
+                  "citation": "G. Cheng, J. Wang, K. Li, X. Xie, C. Lang, Y. Yao, and J. Han, 'Anchor-free oriented proposal generator for object detection,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Trafficsign detection and classification in the wild",
+                  "citation": "Z. Zhu, D. Liang, S. Zhang, X. Huang, B. Li, and S. Hu, 'Trafficsign detection and classification in the wild,' in CVPR , 2016, pp. 2110-2118."
+                },
+                {
+                  "title": "Detection and tracking meet drones challenge",
+                  "citation": "P. Zhu, L. Wen, D. Du, X. Bian, H. Fan, Q. Hu, and H. Ling, 'Detection and tracking meet drones challenge,' TPAMI , pp. 1-1, 2021."
+                },
+                {
+                  "title": "Tju-dhd: A diverse high-resolution dataset for object detection",
+                  "citation": "Y. Pang, J. Cao, Y. Li, J. Xie, H. Sun, and J. Gong, 'Tju-dhd: A diverse high-resolution dataset for object detection,' TIP , vol. 30, pp. 207-219, 2021."
+                },
+                {
+                  "title": "Soda10m: A large-scale 2d self/semi-supervised object detection dataset for autonomous driving",
+                  "citation": "J. Han et al. , 'Soda10m: A large-scale 2d self/semi-supervised object detection dataset for autonomous driving,' arXiv preprint arXiv:2106.11118 , 2021."
+                },
+                {
+                  "title": "Drone-based object counting by spatially regularized regional proposal network",
+                  "citation": "M.-R. Hsieh, Y.-L. Lin, and W. H. Hsu, 'Drone-based object counting by spatially regularized regional proposal network,' in ICCV , 2017, pp. 4165-4173."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Statistical Analysis",
+          "citations": [
+            {
+              "title": "Trafficsign detection and classification in the wild",
+              "citation": "Z. Zhu, D. Liang, S. Zhang, X. Huang, B. Li, and S. Hu, 'Trafficsign detection and classification in the wild,' in CVPR , 2016, pp. 2110-2118."
+            },
+            {
+              "title": "Eurocity persons: A novel benchmark for person detection in traffic scenes",
+              "citation": "M. Braun, S. Krebs, F. Flohr, and D. M. Gavrila, 'Eurocity persons: A novel benchmark for person detection in traffic scenes,' TPAMI , vol. 41, no. 8, pp. 1844-1861, 2019."
+            },
+            {
+              "title": "Tju-dhd: A diverse high-resolution dataset for object detection",
+              "citation": "Y. Pang, J. Cao, Y. Li, J. Xie, H. Sun, and J. Gong, 'Tju-dhd: A diverse high-resolution dataset for object detection,' TIP , vol. 30, pp. 207-219, 2021."
+            },
+            {
+              "title": "Soda10m: A large-scale 2d self/semi-supervised object detection dataset for autonomous driving",
+              "citation": "J. Han et al. , 'Soda10m: A large-scale 2d self/semi-supervised object detection dataset for autonomous driving,' arXiv preprint arXiv:2106.11118 , 2021."
+            },
+            {
+              "title": "Drone-based object counting by spatially regularized regional proposal network",
+              "citation": "M.-R. Hsieh, Y.-L. Lin, and W. H. Hsu, 'Drone-based object counting by spatially regularized regional proposal network,' in ICCV , 2017, pp. 4165-4173."
+            },
+            {
+              "title": "Detection and tracking meet drones challenge",
+              "citation": "P. Zhu, L. Wen, D. Du, X. Bian, H. Fan, Q. Hu, and H. Ling, 'Detection and tracking meet drones challenge,' TPAMI , pp. 1-1, 2021."
+            },
+            {
+              "title": "Detecting tiny objects in aerial images: A normalized wasserstein distance and a new benchmark",
+              "citation": "C. Xu, J. Wang, W. Yang, H. Yu, L. Yu, and G.-S. Xia, 'Detecting tiny objects in aerial images: A normalized wasserstein distance and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 190, pp. 79-93, 2022."
+            },
+            {
+              "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+              "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+            },
+            {
+              "title": "Anchor-free oriented proposal generator for object detection",
+              "citation": "G. Cheng, J. Wang, K. Li, X. Xie, C. Lang, Y. Yao, and J. Han, 'Anchor-free oriented proposal generator for object detection,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+            },
+            {
+              "title": "Deep residual learning for image recognition",
+              "citation": "K. He, X. Zhang, S. Ren, and J. Sun, 'Deep residual learning for image recognition,' in CVPR , 2016, pp. 770-778."
+            },
+            {
+              "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+              "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+            },
+            {
+              "title": "End-to-end object detection with transformers",
+              "citation": "N. Carion, F. Massa, G. Synnaeve, N. Usunier, A. Kirillov, and S. Zagoruyko, 'End-to-end object detection with transformers,' in ECCV , 2020, pp. 213-229."
+            },
+            {
+              "title": "Survey of pedestrian detection for advanced driver assistance systems",
+              "citation": "D. Geronimo, A. M. Lopez, A. D. Sappa, and T. Graf, 'Survey of pedestrian detection for advanced driver assistance systems,' TPAMI , vol. 32, no. 7, pp. 1239-1258, 2009."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.2.1",
+              "sec_title": "Data properties of SODA-D",
+              "citations": [
+                {
+                  "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+                },
+                {
+                  "title": "Fcos: A simple and strong anchor-free object detector",
+                  "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+                },
+                {
+                  "title": "End-to-end object detection with transformers",
+                  "citation": "N. Carion, F. Massa, G. Synnaeve, N. Usunier, A. Kirillov, and S. Zagoruyko, 'End-to-end object detection with transformers,' in ECCV , 2020, pp. 213-229."
+                },
+                {
+                  "title": "Dynamic head: Unifying object detection heads with attentions",
+                  "citation": "X. Dai, Y. Chen, B. Xiao, D. Chen, M. Liu, L. Yuan, and L. Zhang, 'Dynamic head: Unifying object detection heads with attentions,' in CVPR , 2021, pp. 7373-7382."
+                },
+                {
+                  "title": "Yolov3: An incremental improvement",
+                  "citation": "J. Redmon and A. Farhadi, 'Yolov3: An incremental improvement,' arXiv preprint arXiv:1804.02767 , 2018."
+                },
+                {
+                  "title": "Objects as points",
+                  "citation": "X. Zhou, D. Wang, and P. Kr¨ ahenb¨ uhl, 'Objects as points,' arXiv preprint arXiv:1904.07850 , 2019."
+                },
+                {
+                  "title": "Centernet: Keypoint triplets for object detection",
+                  "citation": "K. Duan, S. Bai, L. Xie, H. Qi, Q. Huang, and Q. Tian, 'Centernet: Keypoint triplets for object detection,' in ICCV , 2019, pp. 65696578."
+                },
+                {
+                  "title": "Cornernet: Detecting objects as paired keypoints",
+                  "citation": "H. Law and J. Deng, 'Cornernet: Detecting objects as paired keypoints,' in ECCV , 2018, pp. 734-750."
+                },
+                {
+                  "title": "Deformable detr: Deformable transformers for end-to-end object detection",
+                  "citation": "X. Zhu, W. Su, L. Lu, B. Li, X. Wang, and J. Dai, 'Deformable detr: Deformable transformers for end-to-end object detection,' in ICLR , 2020."
+                },
+                {
+                  "title": "Cascade r-cnn: High quality object detection and instance segmentation",
+                  "citation": "Z. Cai and N. Vasconcelos, 'Cascade r-cnn: High quality object detection and instance segmentation,' TPAMI , vol. 43, no. 5, pp. 1483-1498, 2021."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.2.2",
+              "sec_title": "Data properties of SODA-A",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.3",
+          "sec_title": "Comparisons with Previous Benchmarks",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.3.1",
+              "sec_title": "SODA-D",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.3.2",
+              "sec_title": "SODA-A",
+              "citations": [
+                {
+                  "title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+                  "citation": "K. Li, G. Wan, G. Cheng, L. Meng, and J. Han, 'Object detection in optical remote sensing images: A survey and a new benchmark,' ISPRS J. Photogramm. Remote Sens. , vol. 159, pp. 296-307, 2020."
+                },
+                {
+                  "title": "Object detection in aerial images: A large-scale benchmark and challenges",
+                  "citation": "J. Ding et al. , 'Object detection in aerial images: A large-scale benchmark and challenges,' TPAMI , pp. 1-1, 2021."
+                },
+                {
+                  "title": "Detection and tracking meet drones challenge",
+                  "citation": "P. Zhu, L. Wen, D. Du, X. Bian, H. Fan, Q. Hu, and H. Ling, 'Detection and tracking meet drones challenge,' TPAMI , pp. 1-1, 2021."
+                },
+                {
+                  "title": "xview: Objects in context in overhead imagery",
+                  "citation": "D. Lam et al. , 'xview: Objects in context in overhead imagery,' arXiv preprint arXiv:1802.07856 , 2018."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "EXPERIMENTS",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "Evaluation Protocol",
+          "citations": [
+            {
+              "title": "Microsoft coco: Common objects in context",
+              "citation": "T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ ar, and C. L. Zitnick, 'Microsoft coco: Common objects in context,' in ECCV , 2014, pp. 740-755."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Implementation Details",
+          "citations": [
+            {
+              "title": "MMDetection: Open mmlab detection toolbox and benchmark",
+              "citation": "K. Chen et al. , 'MMDetection: Open mmlab detection toolbox and benchmark,' arXiv preprint arXiv:1906.07155 , 2019."
+            },
+            {
+              "title": "Mmrotate: A rotated object detection benchmark using pytorch",
+              "citation": "Y. Zhou et al. , 'Mmrotate: A rotated object detection benchmark using pytorch,' arXiv preprint arXiv:2204.13317 , 2022."
+            },
+            {
+              "title": "Deep residual learning for image recognition",
+              "citation": "K. He, X. Zhang, S. Ren, and J. Sun, 'Deep residual learning for image recognition,' in CVPR , 2016, pp. 770-778."
+            },
+            {
+              "title": "Yolox: Exceeding yolo series in 2021",
+              "citation": "Z. Ge, S. Liu, F. Wang, Z. Li, and J. Sun, 'Yolox: Exceeding yolo series in 2021,' arXiv preprint arXiv:2107.08430 , 2021."
+            },
+            {
+              "title": "Cornernet: Detecting objects as paired keypoints",
+              "citation": "H. Law and J. Deng, 'Cornernet: Detecting objects as paired keypoints,' in ECCV , 2018, pp. 734-750."
+            },
+            {
+              "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+              "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+            },
+            {
+              "title": "Cascade r-cnn: High quality object detection and instance segmentation",
+              "citation": "Z. Cai and N. Vasconcelos, 'Cascade r-cnn: High quality object detection and instance segmentation,' TPAMI , vol. 43, no. 5, pp. 1483-1498, 2021."
+            },
+            {
+              "title": "Focal loss for dense object detection",
+              "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+            },
+            {
+              "title": "Cornernet: Detecting objects as paired keypoints",
+              "citation": "H. Law and J. Deng, 'Cornernet: Detecting objects as paired keypoints,' in ECCV , 2018, pp. 734-750."
+            },
+            {
+              "title": "Objects as points",
+              "citation": "X. Zhou, D. Wang, and P. Kr¨ ahenb¨ uhl, 'Objects as points,' arXiv preprint arXiv:1904.07850 , 2019."
+            },
+            {
+              "title": "Fcos: A simple and strong anchor-free object detector",
+              "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+            },
+            {
+              "title": "Reppoints: Point set representation for object detection",
+              "citation": "Z. Yang, S. Liu, H. Hu, L. Wang, and S. Lin, 'Reppoints: Point set representation for object detection,' in ICCV , 2019, pp. 96569665."
+            },
+            {
+              "title": "Bridging the gap between anchor-based and anchor-free detection via adaptive training sample selection",
+              "citation": "S. Zhang, C. Chi, Y. Yao, Z. Lei, and S. Z. Li, 'Bridging the gap between anchor-based and anchor-free detection via adaptive training sample selection,' in CVPR , 2020, pp. 9759-9768."
+            },
+            {
+              "title": "Deformable detr: Deformable transformers for end-to-end object detection",
+              "citation": "X. Zhu, W. Su, L. Lu, B. Li, X. Wang, and J. Dai, 'Deformable detr: Deformable transformers for end-to-end object detection,' in ICLR , 2020."
+            },
+            {
+              "title": "Sparse r-cnn: End-to-end object detection with learnable proposals",
+              "citation": "P. Sun et al. , 'Sparse r-cnn: End-to-end object detection with learnable proposals,' in CVPR , 2021, pp. 14 449-14 458."
+            },
+            {
+              "title": "Yolox: Exceeding yolo series in 2021",
+              "citation": "Z. Ge, S. Liu, F. Wang, Z. Li, and J. Sun, 'Yolox: Exceeding yolo series in 2021,' arXiv preprint arXiv:2107.08430 , 2021."
+            },
+            {
+              "title": "Rfla: Gaussian receptive based label assignment for tiny object detection",
+              "citation": "C. Xu, J. Wang, W. Yang, H. Yu, L. Yu, and G.-S. Xia, 'Rfla: Gaussian receptive based label assignment for tiny object detection,' in ECCV , 2022."
+            },
+            {
+              "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+              "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+            },
+            {
+              "title": "Cascade r-cnn: High quality object detection and instance segmentation",
+              "citation": "Z. Cai and N. Vasconcelos, 'Cascade r-cnn: High quality object detection and instance segmentation,' TPAMI , vol. 43, no. 5, pp. 1483-1498, 2021."
+            },
+            {
+              "title": "Focal loss for dense object detection",
+              "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+            },
+            {
+              "title": "Cornernet: Detecting objects as paired keypoints",
+              "citation": "H. Law and J. Deng, 'Cornernet: Detecting objects as paired keypoints,' in ECCV , 2018, pp. 734-750."
+            },
+            {
+              "title": "Objects as points",
+              "citation": "X. Zhou, D. Wang, and P. Kr¨ ahenb¨ uhl, 'Objects as points,' arXiv preprint arXiv:1904.07850 , 2019."
+            },
+            {
+              "title": "Fcos: A simple and strong anchor-free object detector",
+              "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+            },
+            {
+              "title": "Reppoints: Point set representation for object detection",
+              "citation": "Z. Yang, S. Liu, H. Hu, L. Wang, and S. Lin, 'Reppoints: Point set representation for object detection,' in ICCV , 2019, pp. 96569665."
+            },
+            {
+              "title": "Bridging the gap between anchor-based and anchor-free detection via adaptive training sample selection",
+              "citation": "S. Zhang, C. Chi, Y. Yao, Z. Lei, and S. Z. Li, 'Bridging the gap between anchor-based and anchor-free detection via adaptive training sample selection,' in CVPR , 2020, pp. 9759-9768."
+            },
+            {
+              "title": "Deformable detr: Deformable transformers for end-to-end object detection",
+              "citation": "X. Zhu, W. Su, L. Lu, B. Li, X. Wang, and J. Dai, 'Deformable detr: Deformable transformers for end-to-end object detection,' in ICLR , 2020."
+            },
+            {
+              "title": "Sparse r-cnn: End-to-end object detection with learnable proposals",
+              "citation": "P. Sun et al. , 'Sparse r-cnn: End-to-end object detection with learnable proposals,' in CVPR , 2021, pp. 14 449-14 458."
+            },
+            {
+              "title": "Yolox: Exceeding yolo series in 2021",
+              "citation": "Z. Ge, S. Liu, F. Wang, Z. Li, and J. Sun, 'Yolox: Exceeding yolo series in 2021,' arXiv preprint arXiv:2107.08430 , 2021."
+            },
+            {
+              "title": "Rfla: Gaussian receptive based label assignment for tiny object detection",
+              "citation": "C. Xu, J. Wang, W. Yang, H. Yu, L. Yu, and G.-S. Xia, 'Rfla: Gaussian receptive based label assignment for tiny object detection,' in ECCV , 2022."
+            },
+            {
+              "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+              "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+            },
+            {
+              "title": "Cascade r-cnn: High quality object detection and instance segmentation",
+              "citation": "Z. Cai and N. Vasconcelos, 'Cascade r-cnn: High quality object detection and instance segmentation,' TPAMI , vol. 43, no. 5, pp. 1483-1498, 2021."
+            },
+            {
+              "title": "Focal loss for dense object detection",
+              "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+            },
+            {
+              "title": "Fcos: A simple and strong anchor-free object detector",
+              "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+            },
+            {
+              "title": "Reppoints: Point set representation for object detection",
+              "citation": "Z. Yang, S. Liu, H. Hu, L. Wang, and S. Lin, 'Reppoints: Point set representation for object detection,' in ICCV , 2019, pp. 96569665."
+            },
+            {
+              "title": "Bridging the gap between anchor-based and anchor-free detection via adaptive training sample selection",
+              "citation": "S. Zhang, C. Chi, Y. Yao, Z. Lei, and S. Z. Li, 'Bridging the gap between anchor-based and anchor-free detection via adaptive training sample selection,' in CVPR , 2020, pp. 9759-9768."
+            },
+            {
+              "title": "Sparse r-cnn: End-to-end object detection with learnable proposals",
+              "citation": "P. Sun et al. , 'Sparse r-cnn: End-to-end object detection with learnable proposals,' in CVPR , 2021, pp. 14 449-14 458."
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "5.2.1",
+              "sec_title": "Baseline results on SODA-D test-set.",
+              "citations": [
+                {
+                  "title": "Deep residual learning for image recognition",
+                  "citation": "K. He, X. Zhang, S. Ren, and J. Sun, 'Deep residual learning for image recognition,' in CVPR , 2016, pp. 770-778."
+                },
+                {
+                  "title": "Yolox: Exceeding yolo series in 2021",
+                  "citation": "Z. Ge, S. Liu, F. Wang, Z. Li, and J. Sun, 'Yolox: Exceeding yolo series in 2021,' arXiv preprint arXiv:2107.08430 , 2021."
+                },
+                {
+                  "title": "Cornernet: Detecting objects as paired keypoints",
+                  "citation": "H. Law and J. Deng, 'Cornernet: Detecting objects as paired keypoints,' in ECCV , 2018, pp. 734-750."
+                },
+                {
+                  "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+                },
+                {
+                  "title": "Cascade r-cnn: High quality object detection and instance segmentation",
+                  "citation": "Z. Cai and N. Vasconcelos, 'Cascade r-cnn: High quality object detection and instance segmentation,' TPAMI , vol. 43, no. 5, pp. 1483-1498, 2021."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+                },
+                {
+                  "title": "Objects as points",
+                  "citation": "X. Zhou, D. Wang, and P. Kr¨ ahenb¨ uhl, 'Objects as points,' arXiv preprint arXiv:1904.07850 , 2019."
+                },
+                {
+                  "title": "Fcos: A simple and strong anchor-free object detector",
+                  "citation": "Z. Tian, C. Shen, H. Chen, and T. He, 'Fcos: A simple and strong anchor-free object detector,' TPAMI , vol. 44, no. 4, pp. 1922-1933, 2022."
+                },
+                {
+                  "title": "Reppoints: Point set representation for object detection",
+                  "citation": "Z. Yang, S. Liu, H. Hu, L. Wang, and S. Lin, 'Reppoints: Point set representation for object detection,' in ICCV , 2019, pp. 96569665."
+                },
+                {
+                  "title": "Bridging the gap between anchor-based and anchor-free detection via adaptive training sample selection",
+                  "citation": "S. Zhang, C. Chi, Y. Yao, Z. Lei, and S. Z. Li, 'Bridging the gap between anchor-based and anchor-free detection via adaptive training sample selection,' in CVPR , 2020, pp. 9759-9768."
+                },
+                {
+                  "title": "Deformable detr: Deformable transformers for end-to-end object detection",
+                  "citation": "X. Zhu, W. Su, L. Lu, B. Li, X. Wang, and J. Dai, 'Deformable detr: Deformable transformers for end-to-end object detection,' in ICLR , 2020."
+                },
+                {
+                  "title": "Sparse r-cnn: End-to-end object detection with learnable proposals",
+                  "citation": "P. Sun et al. , 'Sparse r-cnn: End-to-end object detection with learnable proposals,' in CVPR , 2021, pp. 14 449-14 458."
+                },
+                {
+                  "title": "Rfla: Gaussian receptive based label assignment for tiny object detection",
+                  "citation": "C. Xu, J. Wang, W. Yang, H. Yu, L. Yu, and G.-S. Xia, 'Rfla: Gaussian receptive based label assignment for tiny object detection,' in ECCV , 2022."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.3",
+          "sec_title": "Results Analysis on SODA-D",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "5.3.1",
+              "sec_title": "Benchmarking Results",
+              "citations": [
+                {
+                  "title": "Learning roi transformer for oriented object detection in aerial images",
+                  "citation": "J. Ding, N. Xue, Y. Long, G.-S. Xia, and Q. Lu, 'Learning roi transformer for oriented object detection in aerial images,' in CVPR , 2019, pp. 2844-2853."
+                },
+                {
+                  "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+                },
+                {
+                  "title": "Oriented r-cnn for object detection",
+                  "citation": "X. Xie, G. Cheng, J. Wang, X. Yao, and J. Han, 'Oriented r-cnn for object detection,' in ICCV , 2021, pp. 3520-3529."
+                },
+                {
+                  "title": "Gliding vertex on the horizontal bounding box for multioriented object detection",
+                  "citation": "Y. Xu, M. Fu, Q. Wang, Y. Wang, K. Chen, G.-S. Xia, and X. Bai, 'Gliding vertex on the horizontal bounding box for multioriented object detection,' TPAMI , vol. 43, no. 4, pp. 1452-1459, 2021."
+                },
+                {
+                  "title": "Dual-aligned oriented detector",
+                  "citation": "G. Cheng, Y. Yao, S. Li, K. Li, X. Xie, J. Wang, X. Yao, and J. Han, 'Dual-aligned oriented detector,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+                },
+                {
+                  "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+                },
+                {
+                  "title": "Learning roi transformer for oriented object detection in aerial images",
+                  "citation": "J. Ding, N. Xue, Y. Long, G.-S. Xia, and Q. Lu, 'Learning roi transformer for oriented object detection in aerial images,' in CVPR , 2019, pp. 2844-2853."
+                },
+                {
+                  "title": "Gliding vertex on the horizontal bounding box for multioriented object detection",
+                  "citation": "Y. Xu, M. Fu, Q. Wang, Y. Wang, K. Chen, G.-S. Xia, and X. Bai, 'Gliding vertex on the horizontal bounding box for multioriented object detection,' TPAMI , vol. 43, no. 4, pp. 1452-1459, 2021."
+                },
+                {
+                  "title": "Oriented r-cnn for object detection",
+                  "citation": "X. Xie, G. Cheng, J. Wang, X. Yao, and J. Han, 'Oriented r-cnn for object detection,' in ICCV , 2021, pp. 3520-3529."
+                },
+                {
+                  "title": "Align deep features for oriented object detection",
+                  "citation": "J. Han, J. Ding, J. Li, and G.-S. Xia, 'Align deep features for oriented object detection,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Dual-aligned oriented detector",
+                  "citation": "G. Cheng, Y. Yao, S. Li, K. Li, X. Xie, J. Wang, X. Yao, and J. Han, 'Dual-aligned oriented detector,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Oriented reppoints for aerial object detection",
+                  "citation": "W. Li, Y. Chen, K. Hu, and J. Zhu, 'Oriented reppoints for aerial object detection,' in CVPR , 2022, pp. 1829-1838."
+                },
+                {
+                  "title": "Multi-oriented object detection in aerial images with double horizontal rectangles",
+                  "citation": "G. Nie and H. Huang, 'Multi-oriented object detection in aerial images with double horizontal rectangles,' TPAMI , pp. 1-13, 2022."
+                },
+                {
+                  "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+                },
+                {
+                  "title": "Learning roi transformer for oriented object detection in aerial images",
+                  "citation": "J. Ding, N. Xue, Y. Long, G.-S. Xia, and Q. Lu, 'Learning roi transformer for oriented object detection in aerial images,' in CVPR , 2019, pp. 2844-2853."
+                },
+                {
+                  "title": "Gliding vertex on the horizontal bounding box for multioriented object detection",
+                  "citation": "Y. Xu, M. Fu, Q. Wang, Y. Wang, K. Chen, G.-S. Xia, and X. Bai, 'Gliding vertex on the horizontal bounding box for multioriented object detection,' TPAMI , vol. 43, no. 4, pp. 1452-1459, 2021."
+                },
+                {
+                  "title": "Oriented r-cnn for object detection",
+                  "citation": "X. Xie, G. Cheng, J. Wang, X. Yao, and J. Han, 'Oriented r-cnn for object detection,' in ICCV , 2021, pp. 3520-3529."
+                },
+                {
+                  "title": "Align deep features for oriented object detection",
+                  "citation": "J. Han, J. Ding, J. Li, and G.-S. Xia, 'Align deep features for oriented object detection,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Dual-aligned oriented detector",
+                  "citation": "G. Cheng, Y. Yao, S. Li, K. Li, X. Xie, J. Wang, X. Yao, and J. Han, 'Dual-aligned oriented detector,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Oriented reppoints for aerial object detection",
+                  "citation": "W. Li, Y. Chen, K. Hu, and J. Zhu, 'Oriented reppoints for aerial object detection,' in CVPR , 2022, pp. 1829-1838."
+                },
+                {
+                  "title": "Multi-oriented object detection in aerial images with double horizontal rectangles",
+                  "citation": "G. Nie and H. Huang, 'Multi-oriented object detection in aerial images with double horizontal rectangles,' TPAMI , pp. 1-13, 2022."
+                },
+                {
+                  "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+                },
+                {
+                  "title": "Learning roi transformer for oriented object detection in aerial images",
+                  "citation": "J. Ding, N. Xue, Y. Long, G.-S. Xia, and Q. Lu, 'Learning roi transformer for oriented object detection in aerial images,' in CVPR , 2019, pp. 2844-2853."
+                },
+                {
+                  "title": "Gliding vertex on the horizontal bounding box for multioriented object detection",
+                  "citation": "Y. Xu, M. Fu, Q. Wang, Y. Wang, K. Chen, G.-S. Xia, and X. Bai, 'Gliding vertex on the horizontal bounding box for multioriented object detection,' TPAMI , vol. 43, no. 4, pp. 1452-1459, 2021."
+                },
+                {
+                  "title": "Oriented r-cnn for object detection",
+                  "citation": "X. Xie, G. Cheng, J. Wang, X. Yao, and J. Han, 'Oriented r-cnn for object detection,' in ICCV , 2021, pp. 3520-3529."
+                },
+                {
+                  "title": "Align deep features for oriented object detection",
+                  "citation": "J. Han, J. Ding, J. Li, and G.-S. Xia, 'Align deep features for oriented object detection,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Oriented reppoints for aerial object detection",
+                  "citation": "W. Li, Y. Chen, K. Hu, and J. Zhu, 'Oriented reppoints for aerial object detection,' in CVPR , 2022, pp. 1829-1838."
+                },
+                {
+                  "title": "Align deep features for oriented object detection",
+                  "citation": "J. Han, J. Ding, J. Li, and G.-S. Xia, 'Align deep features for oriented object detection,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Oriented reppoints for aerial object detection",
+                  "citation": "W. Li, Y. Chen, K. Hu, and J. Zhu, 'Oriented reppoints for aerial object detection,' in CVPR , 2022, pp. 1829-1838."
+                },
+                {
+                  "title": "Multi-oriented object detection in aerial images with double horizontal rectangles",
+                  "citation": "G. Nie and H. Huang, 'Multi-oriented object detection in aerial images with double horizontal rectangles,' TPAMI , pp. 1-13, 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.3.2",
+              "sec_title": "Category-Wise Results",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.3.3",
+              "sec_title": "Baseline Detectors with Different Backbones",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.3.4",
+              "sec_title": "Qualitative Results",
+              "citations": [
+                {
+                  "title": "Oriented r-cnn for object detection",
+                  "citation": "X. Xie, G. Cheng, J. Wang, X. Yao, and J. Han, 'Oriented r-cnn for object detection,' in ICCV , 2021, pp. 3520-3529."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.4",
+          "sec_title": "Results Analysis on SODA-A",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "5.4.1",
+              "sec_title": "Benchmarking Results",
+              "citations": [
+                {
+                  "title": "Learning roi transformer for oriented object detection in aerial images",
+                  "citation": "J. Ding, N. Xue, Y. Long, G.-S. Xia, and Q. Lu, 'Learning roi transformer for oriented object detection in aerial images,' in CVPR , 2019, pp. 2844-2853."
+                },
+                {
+                  "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+                },
+                {
+                  "title": "Oriented r-cnn for object detection",
+                  "citation": "X. Xie, G. Cheng, J. Wang, X. Yao, and J. Han, 'Oriented r-cnn for object detection,' in ICCV , 2021, pp. 3520-3529."
+                },
+                {
+                  "title": "Gliding vertex on the horizontal bounding box for multioriented object detection",
+                  "citation": "Y. Xu, M. Fu, Q. Wang, Y. Wang, K. Chen, G.-S. Xia, and X. Bai, 'Gliding vertex on the horizontal bounding box for multioriented object detection,' TPAMI , vol. 43, no. 4, pp. 1452-1459, 2021."
+                },
+                {
+                  "title": "Dual-aligned oriented detector",
+                  "citation": "G. Cheng, Y. Yao, S. Li, K. Li, X. Xie, J. Wang, X. Yao, and J. Han, 'Dual-aligned oriented detector,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+                },
+                {
+                  "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+                },
+                {
+                  "title": "Learning roi transformer for oriented object detection in aerial images",
+                  "citation": "J. Ding, N. Xue, Y. Long, G.-S. Xia, and Q. Lu, 'Learning roi transformer for oriented object detection in aerial images,' in CVPR , 2019, pp. 2844-2853."
+                },
+                {
+                  "title": "Gliding vertex on the horizontal bounding box for multioriented object detection",
+                  "citation": "Y. Xu, M. Fu, Q. Wang, Y. Wang, K. Chen, G.-S. Xia, and X. Bai, 'Gliding vertex on the horizontal bounding box for multioriented object detection,' TPAMI , vol. 43, no. 4, pp. 1452-1459, 2021."
+                },
+                {
+                  "title": "Oriented r-cnn for object detection",
+                  "citation": "X. Xie, G. Cheng, J. Wang, X. Yao, and J. Han, 'Oriented r-cnn for object detection,' in ICCV , 2021, pp. 3520-3529."
+                },
+                {
+                  "title": "Align deep features for oriented object detection",
+                  "citation": "J. Han, J. Ding, J. Li, and G.-S. Xia, 'Align deep features for oriented object detection,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Dual-aligned oriented detector",
+                  "citation": "G. Cheng, Y. Yao, S. Li, K. Li, X. Xie, J. Wang, X. Yao, and J. Han, 'Dual-aligned oriented detector,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Oriented reppoints for aerial object detection",
+                  "citation": "W. Li, Y. Chen, K. Hu, and J. Zhu, 'Oriented reppoints for aerial object detection,' in CVPR , 2022, pp. 1829-1838."
+                },
+                {
+                  "title": "Multi-oriented object detection in aerial images with double horizontal rectangles",
+                  "citation": "G. Nie and H. Huang, 'Multi-oriented object detection in aerial images with double horizontal rectangles,' TPAMI , pp. 1-13, 2022."
+                },
+                {
+                  "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+                },
+                {
+                  "title": "Learning roi transformer for oriented object detection in aerial images",
+                  "citation": "J. Ding, N. Xue, Y. Long, G.-S. Xia, and Q. Lu, 'Learning roi transformer for oriented object detection in aerial images,' in CVPR , 2019, pp. 2844-2853."
+                },
+                {
+                  "title": "Gliding vertex on the horizontal bounding box for multioriented object detection",
+                  "citation": "Y. Xu, M. Fu, Q. Wang, Y. Wang, K. Chen, G.-S. Xia, and X. Bai, 'Gliding vertex on the horizontal bounding box for multioriented object detection,' TPAMI , vol. 43, no. 4, pp. 1452-1459, 2021."
+                },
+                {
+                  "title": "Oriented r-cnn for object detection",
+                  "citation": "X. Xie, G. Cheng, J. Wang, X. Yao, and J. Han, 'Oriented r-cnn for object detection,' in ICCV , 2021, pp. 3520-3529."
+                },
+                {
+                  "title": "Align deep features for oriented object detection",
+                  "citation": "J. Han, J. Ding, J. Li, and G.-S. Xia, 'Align deep features for oriented object detection,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Dual-aligned oriented detector",
+                  "citation": "G. Cheng, Y. Yao, S. Li, K. Li, X. Xie, J. Wang, X. Yao, and J. Han, 'Dual-aligned oriented detector,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Oriented reppoints for aerial object detection",
+                  "citation": "W. Li, Y. Chen, K. Hu, and J. Zhu, 'Oriented reppoints for aerial object detection,' in CVPR , 2022, pp. 1829-1838."
+                },
+                {
+                  "title": "Multi-oriented object detection in aerial images with double horizontal rectangles",
+                  "citation": "G. Nie and H. Huang, 'Multi-oriented object detection in aerial images with double horizontal rectangles,' TPAMI , pp. 1-13, 2022."
+                },
+                {
+                  "title": "Faster r-cnn: Towards realtime object detection with region proposal networks",
+                  "citation": "S. Ren, K. He, R. Girshick, and J. Sun, 'Faster r-cnn: Towards realtime object detection with region proposal networks,' TPAMI , vol. 39, no. 6, pp. 1137-1149, 2017."
+                },
+                {
+                  "title": "Focal loss for dense object detection",
+                  "citation": "T. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ ar, 'Focal loss for dense object detection,' TPAMI , vol. 42, no. 2, pp. 318-327, 2020."
+                },
+                {
+                  "title": "Learning roi transformer for oriented object detection in aerial images",
+                  "citation": "J. Ding, N. Xue, Y. Long, G.-S. Xia, and Q. Lu, 'Learning roi transformer for oriented object detection in aerial images,' in CVPR , 2019, pp. 2844-2853."
+                },
+                {
+                  "title": "Gliding vertex on the horizontal bounding box for multioriented object detection",
+                  "citation": "Y. Xu, M. Fu, Q. Wang, Y. Wang, K. Chen, G.-S. Xia, and X. Bai, 'Gliding vertex on the horizontal bounding box for multioriented object detection,' TPAMI , vol. 43, no. 4, pp. 1452-1459, 2021."
+                },
+                {
+                  "title": "Oriented r-cnn for object detection",
+                  "citation": "X. Xie, G. Cheng, J. Wang, X. Yao, and J. Han, 'Oriented r-cnn for object detection,' in ICCV , 2021, pp. 3520-3529."
+                },
+                {
+                  "title": "Align deep features for oriented object detection",
+                  "citation": "J. Han, J. Ding, J. Li, and G.-S. Xia, 'Align deep features for oriented object detection,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Oriented reppoints for aerial object detection",
+                  "citation": "W. Li, Y. Chen, K. Hu, and J. Zhu, 'Oriented reppoints for aerial object detection,' in CVPR , 2022, pp. 1829-1838."
+                },
+                {
+                  "title": "Align deep features for oriented object detection",
+                  "citation": "J. Han, J. Ding, J. Li, and G.-S. Xia, 'Align deep features for oriented object detection,' IEEE Trans. Geosci. Remote Sens. , vol. 60, pp. 1-11, 2022."
+                },
+                {
+                  "title": "Oriented reppoints for aerial object detection",
+                  "citation": "W. Li, Y. Chen, K. Hu, and J. Zhu, 'Oriented reppoints for aerial object detection,' in CVPR , 2022, pp. 1829-1838."
+                },
+                {
+                  "title": "Multi-oriented object detection in aerial images with double horizontal rectangles",
+                  "citation": "G. Nie and H. Huang, 'Multi-oriented object detection in aerial images with double horizontal rectangles,' TPAMI , pp. 1-13, 2022."
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.4.2",
+              "sec_title": "Category-Wise Results",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.4.3",
+              "sec_title": "Baseline Detectors with Different Backbones",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.4.4",
+              "sec_title": "Qualitative Results",
+              "citations": [
+                {
+                  "title": "Oriented r-cnn for object detection",
+                  "citation": "X. Xie, G. Cheng, J. Wang, X. Yao, and J. Han, 'Oriented r-cnn for object detection,' in ICCV , 2021, pp. 3520-3529."
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "CONCLUSION AND OUTLOOK",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

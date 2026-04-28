@@ -1,0 +1,1681 @@
+{
+  "track": "AI Agents",
+  "paper_title": "Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "INTRODUCTION",
+      "citations": [
+        {
+          "title": "Computing machinery and intelligence",
+          "citation": "C. Machinery, 'Computing machinery and intelligence-am turing,' Mind , vol. 59, no. 236, p. 433, 1950."
+        },
+        {
+          "title": "Rt-2: Vision-language-action models transfer web knowledge to robotic control",
+          "citation": "B. Zitkovich, T. Yu, S. Xu, P. Xu, T. Xiao, F. Xia, J. Wu, P. Wohlhart, S. Welker, A. Wahid et al. , 'Rt-2: Vision-language-action models transfer web knowledge to robotic control,' in CoRL , 2023, pp. 21652183."
+        },
+        {
+          "title": "Rt-h: Action hierarchies using language",
+          "citation": "S. Belkhale, T. Ding, T. Xiao, P. Sermanet, Q. Vuong, J. Tompson, Y. Chebotar, D. Dwibedi, and D. Sadigh, 'Rt-h: Action hierarchies using language,' arXiv preprint arXiv:2403.01823 , 2024."
+        },
+        {
+          "title": "A brief overview of chatgpt: The history, status quo and potential future development",
+          "citation": "T. Wu, S. He, J. Liu, S. Sun, K. Liu, Q.-L. Han, and Y. Tang, 'A brief overview of chatgpt: The history, status quo and potential future development,' IEEE/CAA Journal of Automatica Sinica , vol. 10, no. 5, pp. 1122-1136, 2023."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "COMPARISON BETWEEN DISEMBODIED AI AND EMBODIED AI",
+      "citations": [
+        {
+          "title": "A brief overview of chatgpt: The history, status quo and potential future development",
+          "citation": "T. Wu, S. He, J. Liu, S. Sun, K. Liu, Q.-L. Han, and Y. Tang, 'A brief overview of chatgpt: The history, status quo and potential future development,' IEEE/CAA Journal of Automatica Sinica , vol. 10, no. 5, pp. 1122-1136, 2023."
+        },
+        {
+          "title": "Robogpt: an intelligent agent of making embodied long-term decisions for daily instruction tasks",
+          "citation": "Y. Chen, W. Cui, Y. Chen, M. Tan, X. Zhang, D. Zhao, and H. Wang, 'Robogpt: an intelligent agent of making embodied long-term decisions for daily instruction tasks,' arXiv preprint arXiv:2311.15649 , 2023."
+        },
+        {
+          "title": "Rt-1: Robotics transformer for real-world control at scale",
+          "citation": "A. Brohan, N. Brown, J. Carbajal, Y. Chebotar, J. Dabis, C. Finn, K. Gopalakrishnan, K. Hausman, A. Herzog, J. Hsu et al. , 'Rt-1: Robotics transformer for real-world control at scale,' arXiv preprint arXiv:2212.06817 , 2022."
+        },
+        {
+          "title": "Rt-2: Vision-language-action models transfer web knowledge to robotic control",
+          "citation": "B. Zitkovich, T. Yu, S. Xu, P. Xu, T. Xiao, F. Xia, J. Wu, P. Wohlhart, S. Welker, A. Wahid et al. , 'Rt-2: Vision-language-action models transfer web knowledge to robotic control,' in CoRL , 2023, pp. 21652183."
+        },
+        {
+          "title": "Rt-h: Action hierarchies using language",
+          "citation": "S. Belkhale, T. Ding, T. Xiao, P. Sermanet, Q. Vuong, J. Tompson, Y. Chebotar, D. Dwibedi, and D. Sadigh, 'Rt-h: Action hierarchies using language,' arXiv preprint arXiv:2403.01823 , 2024."
+        },
+        {
+          "title": "A survey of embodied ai: From simulators to research tasks",
+          "citation": "J. Duan, S. Yu, H. L. Tan, H. Zhu, and C. Tan, 'A survey of embodied ai: From simulators to research tasks,' IEEE Transactions on Emerging Topics in Computational Intelligence , vol. 6, no. 2, pp. 230-244, 2022."
+        },
+        {
+          "title": "A survey on vision-language-action models for embodied ai",
+          "citation": "Y. Ma, Z. Song, Y. Zhuang, J. Hao, and I. King, 'A survey on vision-language-action models for embodied ai,' arXiv preprint arXiv:2405.14093 , 2024."
+        },
+        {
+          "title": "Adaptive wavelet tracking control of dual-linear-motor-driven gantry stage with suppression of crossbeam rotation",
+          "citation": "H. Gao, Y. Liu, W. Sun, and X. Yu, 'Adaptive wavelet tracking control of dual-linear-motor-driven gantry stage with suppression of crossbeam rotation,' IEEE/ASME TMECH , 2023."
+        },
+        {
+          "title": "Toward general-purpose robots via foundation models: A survey and meta-analysis",
+          "citation": "Y. Hu, Q. Xie, V. Jain, J. Francis, J. Patrikar, N. Keetha, S. Kim, Y. Xie, T. Zhang, Z. Zhao et al. , 'Toward general-purpose robots via foundation models: A survey and meta-analysis,' arXiv preprint arXiv:2312.08782 , 2023."
+        },
+        {
+          "title": "Towards generalist robot learning from internet video: A survey",
+          "citation": "R. McCarthy, D. C. Tan, D. Schmidt, F. Acero, N. Herr, Y. Du, T. G. Thuruthel, and Z. Li, 'Towards generalist robot learning from internet video: A survey,' arXiv preprint arXiv:2404.19664 , 2024."
+        },
+        {
+          "title": "Learning transferable visual models from natural language supervision",
+          "citation": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark et al. , 'Learning transferable visual models from natural language supervision,' in ICML . PMLR, 2021, pp. 8748-8763."
+        },
+        {
+          "title": "Blip-2: Bootstrapping languageimage pre-training with frozen image encoders and large language models",
+          "citation": "J. Li, D. Li, S. Savarese, and S. Hoi, 'Blip-2: Bootstrapping languageimage pre-training with frozen image encoders and large language models,' in ICML . PMLR, 2023, pp. 19 730-19 742."
+        },
+        {
+          "title": "Self-supervised learning from images with a joint-embedding predictive architecture",
+          "citation": "M. Assran, Q. Duval, I. Misra, P. Bojanowski, P. Vincent, M. Rabbat, Y. LeCun, and N. Ballas, 'Self-supervised learning from images with a joint-embedding predictive architecture,' in CVPR , 2023, pp. 15 61915 629."
+        },
+        {
+          "title": "Is sora a world simulator? a comprehensive survey on general world models and beyond",
+          "citation": "Z. Zhu, X. Wang, W. Zhao, C. Min, N. Deng, M. Dou, Y. Wang, B. Shi, K. Wang, C. Zhang et al. , 'Is sora a world simulator? a comprehensive survey on general world models and beyond,' arXiv preprint arXiv:2405.03520 , 2024."
+        },
+        {
+          "title": "A survey of embodied ai: From simulators to research tasks",
+          "citation": "J. Duan, S. Yu, H. L. Tan, H. Zhu, and C. Tan, 'A survey of embodied ai: From simulators to research tasks,' IEEE Transactions on Emerging Topics in Computational Intelligence , vol. 6, no. 2, pp. 230-244, 2022."
+        },
+        {
+          "title": "A survey on vision-language-action models for embodied ai",
+          "citation": "Y. Ma, Z. Song, Y. Zhuang, J. Hao, and I. King, 'A survey on vision-language-action models for embodied ai,' arXiv preprint arXiv:2405.14093 , 2024."
+        },
+        {
+          "title": "Embodied artificial intelligence: Trends and challenges",
+          "citation": "R. Pfeifer and F. Iida, 'Embodied artificial intelligence: Trends and challenges,' Lecture notes in computer science , pp. 1-26, 2004."
+        },
+        {
+          "title": "Embodied intelligence toward future smart manufacturing in the era of ai foundation model",
+          "citation": "L. Ren, J. Dong, S. Liu, L. Zhang, and L. Wang, 'Embodied intelligence toward future smart manufacturing in the era of ai foundation model,' IEEE/ASME TMECH , pp. 1-11, 2024."
+        },
+        {
+          "title": "A survey on vision-language-action models for embodied ai",
+          "citation": "Y. Ma, Z. Song, Y. Zhuang, J. Hao, and I. King, 'A survey on vision-language-action models for embodied ai,' arXiv preprint arXiv:2405.14093 , 2024."
+        },
+        {
+          "title": "Embodied intelligence toward future smart manufacturing in the era of ai foundation model",
+          "citation": "L. Ren, J. Dong, S. Liu, L. Zhang, and L. Wang, 'Embodied intelligence toward future smart manufacturing in the era of ai foundation model,' IEEE/ASME TMECH , pp. 1-11, 2024."
+        },
+        {
+          "title": "Embodied intelligence toward future smart manufacturing in the era of ai foundation model",
+          "citation": "L. Ren, J. Dong, S. Liu, L. Zhang, and L. Wang, 'Embodied intelligence toward future smart manufacturing in the era of ai foundation model,' IEEE/ASME TMECH , pp. 1-11, 2024."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "EMBODIED ROBOTS",
+      "citations": [
+        {
+          "title": "Dynamic skill learning from human demonstration based on the human arm stiffness estimation model and riemannian dmp",
+          "citation": "Z. Liao, G. Jiang, F. Zhao, Y. Wu, Y. Yue, and X. Mei, 'Dynamic skill learning from human demonstration based on the human arm stiffness estimation model and riemannian dmp,' IEEE/ASME TMECH , vol. 28, no. 2, pp. 1149-1160, 2023."
+        },
+        {
+          "title": "A dual-arm robot cooperation framework based on a nonlinear model predictive cooperative control",
+          "citation": "X. Zhao, Y. Zhang, W. Ding, B. Tao, and H. Ding, 'A dual-arm robot cooperation framework based on a nonlinear model predictive cooperative control,' IEEE/ASME TMECH , vol. 29, no. 5, pp. 39934005, 2024."
+        },
+        {
+          "title": "Data-informed residual reinforcement learning for high-dimensional robotic tracking control",
+          "citation": "C. Li, F. Liu, Y. Wang, and M. Buss, 'Data-informed residual reinforcement learning for high-dimensional robotic tracking control,' IEEE/ASME TMECH , pp. 1-11, 2024."
+        },
+        {
+          "title": "Vision-based framework to estimate robot configuration and kinematic constraints",
+          "citation": "V. Ortenzi, N. Marturi, M. Mistry, J. Kuo, and R. Stolkin, 'Vision-based framework to estimate robot configuration and kinematic constraints,' IEEE/ASME TMECH , vol. 23, no. 5, pp. 2402-2412, 2018."
+        },
+        {
+          "title": "External torque estimation using higher order sliding-mode observer for robot manipulators",
+          "citation": "S. K. Kommuri, S. Han, and S. Lee, 'External torque estimation using higher order sliding-mode observer for robot manipulators,' IEEE/ASME TMECH , vol. 27, no. 1, pp. 513-523, 2022."
+        },
+        {
+          "title": "Passivity preservation for variable impedance control of compliant robots",
+          "citation": "E. Spyrakos-Papastavridis, P. R. N. Childs, and J. S. Dai, 'Passivity preservation for variable impedance control of compliant robots,' IEEE/ASME TMECH , vol. 25, no. 5, pp. 2342-2353, 2020."
+        },
+        {
+          "title": "Coordinating hundreds of cooperative, autonomous vehicles in warehouses",
+          "citation": "P. R. Wurman, R. D'Andrea, and M. Mountz, 'Coordinating hundreds of cooperative, autonomous vehicles in warehouses,' AI magazine , vol. 29, no. 1, pp. 9-9, 2008."
+        },
+        {
+          "title": "Genesis: A universal and generative physics engine for robotics and beyond",
+          "citation": "G. Authors, 'Genesis: A universal and generative physics engine for robotics and beyond,' December 2024. [Online]. Available: https://github.com/Genesis-Embodied-AI/Genesis"
+        },
+        {
+          "title": "Nvidia isaac sim: Robotics simulation and synthetic data",
+          "citation": "NVIDIA, 'Nvidia isaac sim: Robotics simulation and synthetic data,' 2023. [Online]. Available: https://developer.nvidia.com/isaac-sim"
+        },
+        {
+          "title": "Isaac gym: High performance gpu-based physics simulation for robot learning",
+          "citation": "V. Makoviychuk, L. Wawrzyniak, Y. Guo, M. Lu, K. Storey, M. Macklin, D. Hoeller, N. Rudin, A. Allshire, A. Handa et al. , 'Isaac gym: High performance gpu-based physics simulation for robot learning,' arXiv preprint arXiv:2108.10470 , 2021."
+        },
+        {
+          "title": "Design and use paradigms for gazebo, an open-source multi-robot simulator",
+          "citation": "N. Koenig and A. Howard, 'Design and use paradigms for gazebo, an open-source multi-robot simulator,' in IROS , vol. 3, 2004, pp. 21492154."
+        },
+        {
+          "title": "Pybullet, a python module for physics simulation for games, robotics and machine learning",
+          "citation": "E. Coumans and Y. Bai, 'Pybullet, a python module for physics simulation for games, robotics and machine learning,' 2016."
+        },
+        {
+          "title": "Webots: open-source robot simulator",
+          "citation": "Cyberbotics, 'Webots: open-source robot simulator.' [Online]. Available: https://github.com/cyberbotics/webots"
+        },
+        {
+          "title": "Mujoco: A physics engine for model-based control",
+          "citation": "E. Todorov, T. Erez, and Y. Tassa, 'Mujoco: A physics engine for model-based control,' in IROS , 2012, pp. 5026-5033."
+        },
+        {
+          "title": "Unity: A general platform for intelligent agents",
+          "citation": "A. Juliani, V.-P. Berges, E. Teng, A. Cohen, J. Harper, C. Elion, C. Goy, Y. Gao, H. Henry, M. Mattar, and D. Lange, 'Unity: A general platform for intelligent agents,' arXiv preprint arXiv:1809.02627 , 2020."
+        },
+        {
+          "title": "Airsim: High-fidelity visual and physical simulation for autonomous vehicles",
+          "citation": "S. Shah, D. Dey, C. Lovett, and A. Kapoor, 'Airsim: High-fidelity visual and physical simulation for autonomous vehicles,' in Field and Service Robotics , 2017."
+        },
+        {
+          "title": "Morse: the modular open robots simulator engine",
+          "citation": "ISAE-SUPAERO, 'Morse: the modular open robots simulator engine.'"
+        },
+        {
+          "title": "V-rep: A versatile and scalable robot simulation framework",
+          "citation": "E. Rohmer, S. P. Singh, and M. Freese, 'V-rep: A versatile and scalable robot simulation framework,' in IROS , 2013, pp. 1321-1326."
+        },
+        {
+          "title": "Vision-based adaptive trajectory tracking control of wheeled mobile robot with unknown translational external parameters",
+          "citation": "Z. Shao and J. Zhang, 'Vision-based adaptive trajectory tracking control of wheeled mobile robot with unknown translational external parameters,' IEEE/ASME TMECH , vol. 29, no. 1, pp. 358-365, 2024."
+        },
+        {
+          "title": "",
+          "citation": "differentials,' IEEE/ASME TMECH , vol. 29, no. 5, pp. 3522-3533, 2024."
+        },
+        {
+          "title": "Mechanical implementation of kinematic synergy for continual grasping generation of anthropomorphic hand",
+          "citation": "W. Chen, C. Xiong, and S. Yue, 'Mechanical implementation of kinematic synergy for continual grasping generation of anthropomorphic hand,' IEEE/ASME TMECH , vol. 20, no. 3, pp. 1249-1263, 2015."
+        },
+        {
+          "title": "Language models meet world models: Embodied experiences enhance language models",
+          "citation": "J. Xiang, T. Tao, Y. Gu, T. Shu, Z. Wang, Z. Yang, and Z. Hu, 'Language models meet world models: Embodied experiences enhance language models,' NeurIPS , vol. 36, 2024."
+        },
+        {
+          "title": "Springer handbook of robotics",
+          "citation": "B. Siciliano, O. Khatib, and T. Kr¨ oger, Springer handbook of robotics . Springer, 2008, vol. 200."
+        },
+        {
+          "title": "Bioinspired soft robotics: How do we learn from creatures?",
+          "citation": "Y. Yang, Z. He, P. Jiao, and H. Ren, 'Bioinspired soft robotics: How do we learn from creatures?' IEEE Reviews in Biomedical Engineering , 2022."
+        },
+        {
+          "title": "Exploration of underwater life with an acoustically controlled soft robotic fish",
+          "citation": "R. K. Katzschmann, J. DelPreto, R. MacCurdy, and D. Rus, 'Exploration of underwater life with an acoustically controlled soft robotic fish,' Science Robotics , vol. 3, no. 16, p. eaar3449, 2018."
+        },
+        {
+          "title": "Insectinspired ai for autonomous robots",
+          "citation": "G. C. de Croon, J. Dupeyroux, S. B. Fuller, and J. A. Marshall, 'Insectinspired ai for autonomous robots,' Science robotics , vol. 7, no. 67, p. eabl6334, 2022."
+        },
+        {
+          "title": "Ultragentle manipulation of delicate structures using a soft robotic gripper",
+          "citation": "N. R. Sinatra, C. B. Teeple, D. M. Vogt, K. K. Parker, D. F. Gruber, and R. J. Wood, 'Ultragentle manipulation of delicate structures using a soft robotic gripper,' Science Robotics , vol. 4, no. 33, p. eaax5425, 2019."
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "EMBODIED SIMULATORS",
+      "citations": [
+        {
+          "title": "Learning mobile manipulation through deep reinforcement learning",
+          "citation": "C. Wang, Q. Zhang, Q. Tian, S. Li, X. Wang, D. Lane, Y. Petillot, and S. Wang, 'Learning mobile manipulation through deep reinforcement learning,' Sensors , vol. 20, no. 3, p. 939, 2020."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "General Simulator",
+          "citations": [
+            {
+              "title": "Nvidia isaac sim: Robotics simulation and synthetic data",
+              "citation": "NVIDIA, 'Nvidia isaac sim: Robotics simulation and synthetic data,' 2023. [Online]. Available: https://developer.nvidia.com/isaac-sim"
+            },
+            {
+              "title": "Design and use paradigms for gazebo, an open-source multi-robot simulator",
+              "citation": "N. Koenig and A. Howard, 'Design and use paradigms for gazebo, an open-source multi-robot simulator,' in IROS , vol. 3, 2004, pp. 21492154."
+            },
+            {
+              "title": "Pybullet, a python module for physics simulation for games, robotics and machine learning",
+              "citation": "E. Coumans and Y. Bai, 'Pybullet, a python module for physics simulation for games, robotics and machine learning,' 2016."
+            },
+            {
+              "title": "Genesis: A universal and generative physics engine for robotics and beyond",
+              "citation": "G. Authors, 'Genesis: A universal and generative physics engine for robotics and beyond,' December 2024. [Online]. Available: https://github.com/Genesis-Embodied-AI/Genesis"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Real-Scene Based Simulators",
+          "citations": [
+            {
+              "title": "Sapien: A simulated part-based interactive environment",
+              "citation": "F. Xiang, Y. Qin, K. Mo, Y. Xia, H. Zhu, F. Liu, M. Liu, H. Jiang, Y. Yuan, H. Wang, L. Yi, A. X. Chang, L. J. Guibas, and H. Su, 'Sapien: A simulated part-based interactive environment,' in CVPR , Jun 2020."
+            },
+            {
+              "title": "Virtualhome: Simulating household activities via programs",
+              "citation": "X. Puig, K. Ra, M. Boben, J. Li, T. Wang, S. Fidler, and A. Torralba, 'Virtualhome: Simulating household activities via programs,' in CVPR , Jun 2018."
+            },
+            {
+              "title": "Ai2-thor: An interactive 3d environment for visual ai",
+              "citation": "E. Kolve, R. Mottaghi, D. Gordon, Y. Zhu, A. Gupta, and A. Farhadi, 'Ai2-thor: An interactive 3d environment for visual ai,' arXiv: Computer Vision and Pattern Recognition,arXiv: Computer Vision and Pattern Recognition , Dec 2017."
+            },
+            {
+              "title": "igibson 1.0: A simulation environment for interactive tasks in large realistic scenes",
+              "citation": "B. Shen, F. Xia, C. Li, R. Mart´ ın-Mart´ ın, L. Fan, G. Wang, C. P´ erezD'Arpino, S. Buch, S. Srivastava, L. Tchapmi, M. Tchapmi, K. Vainio, J. Wong, L. Fei-Fei, and S. Savarese, 'igibson 1.0: A simulation environment for interactive tasks in large realistic scenes,' in IROS , 2021, pp. 7520-7527."
+            },
+            {
+              "title": "Threedworld: A platform for interactive multi-modal physical simulation",
+              "citation": "C. Gan, J. Schwartz, S. Alter, M. Schrimpf, J. Traer, J. Freitas, J. Kubilius, A. Bhandwaldar, N. Haber, M. Sano, K. Kim, E. Wang, D. Mrowca, M. Lingelbach, A. Curtis, K. Feigelis, D. Bear, D. Gutfreund, D. Cox, J. DiCarlo, J. McDermott, J. Tenenbaum, and D. Yamins, 'Threedworld: A platform for interactive multi-modal physical simulation,' NeurIPS , Dec 2021."
+            },
+            {
+              "title": "Matterport3d: Learning from rgb-d data in indoor environments",
+              "citation": "A. Chang, A. Dai, T. Funkhouser, M. Halber, M. Niebner, M. Savva, S. Song, A. Zeng, and Y. Zhang, 'Matterport3d: Learning from rgb-d data in indoor environments,' in 3DV , Oct 2017."
+            },
+            {
+              "title": "Infiniteworld: A unified scalable simulation framework for general visual-language robot interaction",
+              "citation": "P. Ren, M. Li, Z. Luo, X. Song, Z. Chen, W. Liufu, Y. Yang, H. Zheng, R. Xu, Z. Huang et al. , 'Infiniteworld: A unified scalable simulation framework for general visual-language robot interaction,' arXiv preprint arXiv:2412.05789 , 2024."
+            },
+            {
+              "title": "Robogen: Towards unleashing infinite data for automated robot learning via generative simulation",
+              "citation": "Y. Wang, Z. Xian, F. Chen, T.-H. Wang, Y. Wang, K. Fragkiadaki, Z. Erickson, D. Held, and C. Gan, 'Robogen: Towards unleashing infinite data for automated robot learning via generative simulation,' arXiv:2311.01455 , Nov 2023."
+            },
+            {
+              "title": "Holodeck: Language guided generation of 3d embodied ai environments",
+              "citation": "Y. Yang, F.-Y. Sun, L. Weihs, E. VanderBilt, A. Herrasti, W. Han, J. Wu, N. Haber, R. Krishna, L. Liu et al. , 'Holodeck: Language guided generation of 3d embodied ai environments,' in CVPR , 2024, pp. 16 227-16 237."
+            },
+            {
+              "title": "Physcene: Physically interactable 3d scene synthesis for embodied ai",
+              "citation": "Y. Yang, B. Jia, P. Zhi, and S. Huang, 'Physcene: Physically interactable 3d scene synthesis for embodied ai,' in CVPR , 2024."
+            },
+            {
+              "title": "ProcTHOR: Large-Scale Embodied AI Using Procedural Generation",
+              "citation": "M. Deitke, E. VanderBilt, A. Herrasti, L. Weihs, J. Salvador, K. Ehsani, W. Han, E. Kolve, A. Farhadi, A. Kembhavi, and R. Mottaghi, 'ProcTHOR: Large-Scale Embodied AI Using Procedural Generation,' in NeurIPS , 2022, outstanding Paper Award."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "EMBODIED PERCEPTION",
+      "citations": [
+        {
+          "title": "Searching for computer vision north stars",
+          "citation": "L. Fei-Fei and R. Krishna, 'Searching for computer vision north stars,' Daedalus , vol. 151, no. 2, pp. 85-99, 2022."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "Active Visual Perception",
+          "citations": [
+            {
+              "title": "Deep learning techniques for visual slam: A survey",
+              "citation": "S. Mokssit, D. B. Licea, B. Guermah, and M. Ghogho, 'Deep learning techniques for visual slam: A survey,' IEEE Access , vol. 11, pp. 20 026-20 050, 2023."
+            },
+            {
+              "title": "Semantic visual simultaneous localization and mapping: A survey",
+              "citation": "K. Chen, J. Zhang, J. Liu, Q. Tong, R. Liu, and S. Chen, 'Semantic visual simultaneous localization and mapping: A survey,' arXiv preprint arXiv:2209.06428 , 2022."
+            },
+            {
+              "title": "A survey on deep learning based segmentation, detection and classification for 3d point clouds",
+              "citation": "P. K. Vinodkumar, D. Karabulut, E. Avots, C. Ozcinar, and G. Anbarjafari, 'A survey on deep learning based segmentation, detection and classification for 3d point clouds,' Entropy , vol. 25, no. 4, p. 635, 2023."
+            },
+            {
+              "title": "Toward general-purpose robots via foundation models: A survey and meta-analysis",
+              "citation": "Y. Hu, Q. Xie, V. Jain, J. Francis, J. Patrikar, N. Keetha, S. Kim, Y. Xie, T. Zhang, Z. Zhao et al. , 'Toward general-purpose robots via foundation models: A survey and meta-analysis,' arXiv preprint arXiv:2312.08782 , 2023."
+            },
+            {
+              "title": "Simultaneous localization and mapping: part i",
+              "citation": "H. Durrant-Whyte and T. Bailey, 'Simultaneous localization and mapping: part i,' IEEE robotics &amp; automation magazine , vol. 13, no. 2, pp. 99-110, 2006."
+            },
+            {
+              "title": "2d lidar-based slam and path planning for indoor rescue using mobile robots",
+              "citation": "X. Zhang, J. Lai, D. Xu, H. Li, and M. Fu, '2d lidar-based slam and path planning for indoor rescue using mobile robots,' Journal of Advanced Transportation , vol. 2020, no. 1, p. 8867937, 2020."
+            },
+            {
+              "title": "Gp-slam+: real-time 3d lidar slam based on improved regionalized gaussian process map reconstruction",
+              "citation": "J. Ruan, B. Li, Y. Wang, and Z. Fang, 'Gp-slam+: real-time 3d lidar slam based on improved regionalized gaussian process map reconstruction,' in IROS , 2020, pp. 5171-5178."
+            },
+            {
+              "title": "Deep learning techniques for visual slam: A survey",
+              "citation": "S. Mokssit, D. B. Licea, B. Guermah, and M. Ghogho, 'Deep learning techniques for visual slam: A survey,' IEEE Access , vol. 11, pp. 20 026-20 050, 2023."
+            },
+            {
+              "title": "Semantic visual simultaneous localization and mapping: A survey",
+              "citation": "K. Chen, J. Zhang, J. Liu, Q. Tong, R. Liu, and S. Chen, 'Semantic visual simultaneous localization and mapping: A survey,' arXiv preprint arXiv:2209.06428 , 2022."
+            },
+            {
+              "title": "Semantic visual simultaneous localization and mapping: A survey",
+              "citation": "K. Chen, J. Zhang, J. Liu, Q. Tong, R. Liu, and S. Chen, 'Semantic visual simultaneous localization and mapping: A survey,' arXiv preprint arXiv:2209.06428 , 2022."
+            },
+            {
+              "title": "Monoslam: Real-time single camera slam",
+              "citation": "A. J. Davison, I. D. Reid, N. D. Molton, and O. Stasse, 'Monoslam: Real-time single camera slam,' IEEE TPAMI , vol. 29, no. 6, pp. 10521067, 2007."
+            },
+            {
+              "title": "Orb-slam: a versatile and accurate monocular slam system",
+              "citation": "R. Mur-Artal, J. M. M. Montiel, and J. D. Tardos, 'Orb-slam: a versatile and accurate monocular slam system,' IEEE TRO , vol. 31, no. 5, pp. 1147-1163, 2015."
+            },
+            {
+              "title": "Lsd-slam: Large-scale direct monocular slam",
+              "citation": "J. Engel, T. Sch¨ ops, and D. Cremers, 'Lsd-slam: Large-scale direct monocular slam,' in ECCV . Springer, 2014, pp. 834-849."
+            },
+            {
+              "title": "Monoslam: Real-time single camera slam",
+              "citation": "A. J. Davison, I. D. Reid, N. D. Molton, and O. Stasse, 'Monoslam: Real-time single camera slam,' IEEE TPAMI , vol. 29, no. 6, pp. 10521067, 2007."
+            },
+            {
+              "title": "Orb-slam: a versatile and accurate monocular slam system",
+              "citation": "R. Mur-Artal, J. M. M. Montiel, and J. D. Tardos, 'Orb-slam: a versatile and accurate monocular slam system,' IEEE TRO , vol. 31, no. 5, pp. 1147-1163, 2015."
+            },
+            {
+              "title": "Lsd-slam: Large-scale direct monocular slam",
+              "citation": "J. Engel, T. Sch¨ ops, and D. Cremers, 'Lsd-slam: Large-scale direct monocular slam,' in ECCV . Springer, 2014, pp. 834-849."
+            },
+            {
+              "title": "Slam++: Simultaneous localisation and mapping at the level of objects",
+              "citation": "R. F. Salas-Moreno, R. A. Newcombe, H. Strasdat, P. H. Kelly, and A. J. Davison, 'Slam++: Simultaneous localisation and mapping at the level of objects,' in CVPR , 2013, pp. 1352-1359."
+            },
+            {
+              "title": "Quadricslam: Dual quadrics from object detections as landmarks in object-oriented slam",
+              "citation": "L. Nicholson, M. Milford, and N. S¨ underhauf, 'Quadricslam: Dual quadrics from object detections as landmarks in object-oriented slam,' IEEE RAL , vol. 4, no. 1, pp. 1-8, 2018."
+            },
+            {
+              "title": "So-slam: Semantic object slam with scale proportional and symmetrical texture constraints",
+              "citation": "Z. Liao, Y. Hu, J. Zhang, X. Qi, X. Zhang, and W. Wang, 'So-slam: Semantic object slam with scale proportional and symmetrical texture constraints,' IEEE RAL , vol. 7, no. 2, pp. 4008-4015, 2022."
+            },
+            {
+              "title": "Sg-slam: A real-time rgb-d visual slam toward dynamic scenes with semantic and geometric information",
+              "citation": "S. Cheng, C. Sun, S. Zhang, and D. Zhang, 'Sg-slam: A real-time rgb-d visual slam toward dynamic scenes with semantic and geometric information,' IEE TIM , vol. 72, pp. 1-12, 2022."
+            },
+            {
+              "title": "Ovd-slam: An online visual slam for dynamic environments",
+              "citation": "J. He, M. Li, Y. Wang, and H. Wang, 'Ovd-slam: An online visual slam for dynamic environments,' IEEE Sensors Journal , 2023."
+            },
+            {
+              "title": "Gsslam: Dense visual slam with 3d gaussian splatting",
+              "citation": "C. Yan, D. Qu, D. Xu, B. Zhao, Z. Wang, D. Wang, and X. Li, 'Gsslam: Dense visual slam with 3d gaussian splatting,' in CVPR , 2024, pp. 19 595-19 604."
+            },
+            {
+              "title": "Multi-view 3d object detection network for autonomous driving",
+              "citation": "X. Chen, H. Ma, J. Wan, B. Li, and T. Xia, 'Multi-view 3d object detection network for autonomous driving,' in CVPR , 2017, pp. 19071915."
+            },
+            {
+              "title": "Pointpillars: Fast encoders for object detection from point clouds",
+              "citation": "A. H. Lang, S. Vora, H. Caesar, L. Zhou, J. Yang, and O. Beijbom, 'Pointpillars: Fast encoders for object detection from point clouds,' in CVPR , 2019, pp. 12 697-12 705."
+            },
+            {
+              "title": "Multi-view convolutional neural networks for 3d shape recognition",
+              "citation": "H. Su, S. Maji, E. Kalogerakis, and E. Learned-Miller, 'Multi-view convolutional neural networks for 3d shape recognition,' in ICCV , 2015, pp. 945-953."
+            },
+            {
+              "title": "Voxnet: A 3d convolutional neural network for real-time object recognition",
+              "citation": "D. Maturana and S. Scherer, 'Voxnet: A 3d convolutional neural network for real-time object recognition,' in IROS , 2015, pp. 922-928."
+            },
+            {
+              "title": "Semantic scene completion from a single depth image",
+              "citation": "S. Song, F. Yu, A. Zeng, A. X. Chang, M. Savva, and T. Funkhouser, 'Semantic scene completion from a single depth image,' in CVPR , 2017, pp. 1746-1754."
+            },
+            {
+              "title": "4d spatio-temporal convnets: Minkowski convolutional neural networks",
+              "citation": "C. Choy, J. Gwak, and S. Savarese, '4d spatio-temporal convnets: Minkowski convolutional neural networks,' in CVPR , 2019, pp. 30753084."
+            },
+            {
+              "title": "3d semantic segmentation with submanifold sparse convolutional networks",
+              "citation": "B. Graham, M. Engelcke, and L. Van Der Maaten, '3d semantic segmentation with submanifold sparse convolutional networks,' in CVPR , 2018, pp. 9224-9232."
+            },
+            {
+              "title": "Embodiedscan: A holistic multi-modal 3d perception suite towards embodied ai",
+              "citation": "T. Wang, X. Mao, C. Zhu, R. Xu, R. Lyu, P. Li, X. Chen, W. Zhang, K. Chen, T. Xue et al. , 'Embodiedscan: A holistic multi-modal 3d perception suite towards embodied ai,' in CVPR , 2024, pp. 19 75719 767."
+            },
+            {
+              "title": "Pointnet: Deep learning on point sets for 3d classification and segmentation",
+              "citation": "C. R. Qi, H. Su, K. Mo, and L. J. Guibas, 'Pointnet: Deep learning on point sets for 3d classification and segmentation,' in CVPR , 2017, pp. 652-660."
+            },
+            {
+              "title": "Pointnet++: Deep hierarchical feature learning on point sets in a metric space",
+              "citation": "C. R. Qi, L. Yi, H. Su, and L. J. Guibas, 'Pointnet++: Deep hierarchical feature learning on point sets in a metric space,' NeurIPS , vol. 30, 2017."
+            },
+            {
+              "title": "Rethinking network design and local geometry in point cloud: A simple residual mlp framework",
+              "citation": "X. Ma, C. Qin, H. You, H. Ran, and Y. Fu, 'Rethinking network design and local geometry in point cloud: A simple residual mlp framework,' arXiv preprint arXiv:2202.07123 , 2022."
+            },
+            {
+              "title": "Point transformer",
+              "citation": "H. Zhao, L. Jiang, J. Jia, P. H. Torr, and V . Koltun, 'Point transformer,' in ICCV , 2021, pp. 16 259-16 268."
+            },
+            {
+              "title": "Swin3d: A pretrained transformer backbone for 3d indoor scene understanding",
+              "citation": "Y.-Q. Yang, Y.-X. Guo, J.-Y. Xiong, Y. Liu, H. Pan, P.-S. Wang, X. Tong, and B. Guo, 'Swin3d: A pretrained transformer backbone for 3d indoor scene understanding,' arXiv preprint arXiv:2304.06906 , 2023."
+            },
+            {
+              "title": "Point transformer v2: Grouped vector attention and partition-based pooling",
+              "citation": "X. Wu, Y. Lao, L. Jiang, X. Liu, and H. Zhao, 'Point transformer v2: Grouped vector attention and partition-based pooling,' NeurIPS , vol. 35, pp. 33 330-33 342, 2022."
+            },
+            {
+              "title": "3d-vista: Pretrained transformer for 3d vision and text alignment",
+              "citation": "Z. Zhu, X. Ma, Y. Chen, Z. Deng, S. Huang, and Q. Li, '3d-vista: Pretrained transformer for 3d vision and text alignment,' in ICCV , 2023, pp. 2911-2921."
+            },
+            {
+              "title": "An embodied generalist agent in 3d world",
+              "citation": "J. Huang, S. Yong, X. Ma, X. Linghu, P. Li, Y. Wang, Q. Li, S.-C. Zhu, B. Jia, and S. Huang, 'An embodied generalist agent in 3d world,' in ICML , 2024."
+            },
+            {
+              "title": "Unifying 3d vision-language understanding via promptable queries",
+              "citation": "Z. Zhu, Z. Zhang, X. Ma, X. Niu, Y. Chen, B. Jia, Z. Deng, S. Huang, and Q. Li, 'Unifying 3d vision-language understanding via promptable queries,' arXiv preprint arXiv:2405.11442 , 2024."
+            },
+            {
+              "title": "Pointmamba: A simple state space model for point cloud analysis",
+              "citation": "D. Liang, X. Zhou, X. Wang, X. Zhu, W. Xu, Z. Zou, X. Ye, and X. Bai, 'Pointmamba: A simple state space model for point cloud analysis,' arXiv preprint arXiv:2402.10739 , 2024."
+            },
+            {
+              "title": "Mamba3d: Enhancing local features for 3d point cloud analysis via state space model",
+              "citation": "X. Han, Y. Tang, Z. Wang, and X. Li, 'Mamba3d: Enhancing local features for 3d point cloud analysis via state space model,' arXiv preprint arXiv:2404.14966 , 2024."
+            },
+            {
+              "title": "The curious robot: Learning visual representations via physical interactions",
+              "citation": "L. Pinto, D. Gandhi, Y. Han, Y.-L. Park, and A. Gupta, 'The curious robot: Learning visual representations via physical interactions,' in ECCV , 2016, pp. 3-18."
+            },
+            {
+              "title": "Transferring implicit knowledge of non-visual object properties across heterogeneous robot morphologies",
+              "citation": "G. Tatiya, J. Francis, and J. Sinapov, 'Transferring implicit knowledge of non-visual object properties across heterogeneous robot morphologies,' in ICRA , 2023, pp. 11 315-11 321."
+            },
+            {
+              "title": "Learning to look around: Intelligently exploring unseen environments for unknown tasks",
+              "citation": "D. Jayaraman and K. Grauman, 'Learning to look around: Intelligently exploring unseen environments for unknown tasks,' in CVPR , 2018, pp. 1238-1247."
+            },
+            {
+              "title": "Neu-nbv: Next best view planning using uncertainty estimation in image-based neural rendering",
+              "citation": "L. Jin, X. Chen, J. R¨ uckin, and M. Popovi´ c, 'Neu-nbv: Next best view planning using uncertainty estimation in image-based neural rendering,' in IROS , 2023, pp. 11 305-11 312."
+            },
+            {
+              "title": "Off-policy evaluation with online adaptation for robot exploration in challenging environments",
+              "citation": "Y. Hu, J. Geng, C. Wang, J. Keller, and S. Scherer, 'Off-policy evaluation with online adaptation for robot exploration in challenging environments,' IEEE RAL , 2023."
+            },
+            {
+              "title": "Evidential active recognition: Intelligent and prudent open-world embodied perception",
+              "citation": "L. Fan, M. Liang, Y. Li, G. Hua, and Y. Wu, 'Evidential active recognition: Intelligent and prudent open-world embodied perception,' in CVPR , 2024, pp. 16 351-16 361."
+            },
+            {
+              "title": "Dspnet: Dual-vision scene perception for robust 3d question answering",
+              "citation": "J. Luo, Y. Liu, W. Chen, Z. Li, Y. Wang, G. Li, and L. Lin, 'Dspnet: Dual-vision scene perception for robust 3d question answering,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2025."
+            },
+            {
+              "title": "3daffordsplat: Efficient affordance reasoning with 3d gaussians",
+              "citation": "Z. Wei, J. Lin, Y. Liu, W. Chen, J. Luo, G. Li, and L. Lin, '3daffordsplat: Efficient affordance reasoning with 3d gaussians,' arXiv preprint arXiv:2504.11218 , 2025."
+            },
+            {
+              "title": "Attngrounder: Talking to cars with attention",
+              "citation": "V. Mittal, 'Attngrounder: Talking to cars with attention,' in ECCV . Springer, 2020, pp. 62-73."
+            },
+            {
+              "title": "Reinforced cross-modal matching and self-supervised imitation learning for vision-language navigation",
+              "citation": "X. Wang, Q. Huang, A. Celikyilmaz, J. Gao, D. Shen, Y.-F. Wang, W. Y. Wang, and L. Zhang, 'Reinforced cross-modal matching and self-supervised imitation learning for vision-language navigation,' in CVPR , 2019, pp. 6629-6638."
+            },
+            {
+              "title": "Exploring button designs for mid-air interaction in virtual reality: A hexa-metric evaluation of key representations and multi-modal cues",
+              "citation": "C. Bermejo, L. H. Lee, P. Chojecki, D. Przewozny, and P. Hui, 'Exploring button designs for mid-air interaction in virtual reality: A hexa-metric evaluation of key representations and multi-modal cues,' Proceedings of the ACM on Human-Computer Interaction , vol. 5, no. EICS, pp. 1-26, 2021."
+            },
+            {
+              "title": "Multi-view 3d object detection network for autonomous driving",
+              "citation": "X. Chen, H. Ma, J. Wan, B. Li, and T. Xia, 'Multi-view 3d object detection network for autonomous driving,' in CVPR , 2017, pp. 19071915."
+            },
+            {
+              "title": "Pointpillars: Fast encoders for object detection from point clouds",
+              "citation": "A. H. Lang, S. Vora, H. Caesar, L. Zhou, J. Yang, and O. Beijbom, 'Pointpillars: Fast encoders for object detection from point clouds,' in CVPR , 2019, pp. 12 697-12 705."
+            },
+            {
+              "title": "Multi-view convolutional neural networks for 3d shape recognition",
+              "citation": "H. Su, S. Maji, E. Kalogerakis, and E. Learned-Miller, 'Multi-view convolutional neural networks for 3d shape recognition,' in ICCV , 2015, pp. 945-953."
+            },
+            {
+              "title": "Voxnet: A 3d convolutional neural network for real-time object recognition",
+              "citation": "D. Maturana and S. Scherer, 'Voxnet: A 3d convolutional neural network for real-time object recognition,' in IROS , 2015, pp. 922-928."
+            },
+            {
+              "title": "Semantic scene completion from a single depth image",
+              "citation": "S. Song, F. Yu, A. Zeng, A. X. Chang, M. Savva, and T. Funkhouser, 'Semantic scene completion from a single depth image,' in CVPR , 2017, pp. 1746-1754."
+            },
+            {
+              "title": "4d spatio-temporal convnets: Minkowski convolutional neural networks",
+              "citation": "C. Choy, J. Gwak, and S. Savarese, '4d spatio-temporal convnets: Minkowski convolutional neural networks,' in CVPR , 2019, pp. 30753084."
+            },
+            {
+              "title": "3d semantic segmentation with submanifold sparse convolutional networks",
+              "citation": "B. Graham, M. Engelcke, and L. Van Der Maaten, '3d semantic segmentation with submanifold sparse convolutional networks,' in CVPR , 2018, pp. 9224-9232."
+            },
+            {
+              "title": "Embodiedscan: A holistic multi-modal 3d perception suite towards embodied ai",
+              "citation": "T. Wang, X. Mao, C. Zhu, R. Xu, R. Lyu, P. Li, X. Chen, W. Zhang, K. Chen, T. Xue et al. , 'Embodiedscan: A holistic multi-modal 3d perception suite towards embodied ai,' in CVPR , 2024, pp. 19 75719 767."
+            },
+            {
+              "title": "Pointnet: Deep learning on point sets for 3d classification and segmentation",
+              "citation": "C. R. Qi, H. Su, K. Mo, and L. J. Guibas, 'Pointnet: Deep learning on point sets for 3d classification and segmentation,' in CVPR , 2017, pp. 652-660."
+            },
+            {
+              "title": "Pointnet++: Deep hierarchical feature learning on point sets in a metric space",
+              "citation": "C. R. Qi, L. Yi, H. Su, and L. J. Guibas, 'Pointnet++: Deep hierarchical feature learning on point sets in a metric space,' NeurIPS , vol. 30, 2017."
+            },
+            {
+              "title": "Rethinking network design and local geometry in point cloud: A simple residual mlp framework",
+              "citation": "X. Ma, C. Qin, H. You, H. Ran, and Y. Fu, 'Rethinking network design and local geometry in point cloud: A simple residual mlp framework,' arXiv preprint arXiv:2202.07123 , 2022."
+            },
+            {
+              "title": "Point transformer",
+              "citation": "H. Zhao, L. Jiang, J. Jia, P. H. Torr, and V . Koltun, 'Point transformer,' in ICCV , 2021, pp. 16 259-16 268."
+            },
+            {
+              "title": "Swin3d: A pretrained transformer backbone for 3d indoor scene understanding",
+              "citation": "Y.-Q. Yang, Y.-X. Guo, J.-Y. Xiong, Y. Liu, H. Pan, P.-S. Wang, X. Tong, and B. Guo, 'Swin3d: A pretrained transformer backbone for 3d indoor scene understanding,' arXiv preprint arXiv:2304.06906 , 2023."
+            },
+            {
+              "title": "Point transformer v2: Grouped vector attention and partition-based pooling",
+              "citation": "X. Wu, Y. Lao, L. Jiang, X. Liu, and H. Zhao, 'Point transformer v2: Grouped vector attention and partition-based pooling,' NeurIPS , vol. 35, pp. 33 330-33 342, 2022."
+            },
+            {
+              "title": "3d-vista: Pretrained transformer for 3d vision and text alignment",
+              "citation": "Z. Zhu, X. Ma, Y. Chen, Z. Deng, S. Huang, and Q. Li, '3d-vista: Pretrained transformer for 3d vision and text alignment,' in ICCV , 2023, pp. 2911-2921."
+            },
+            {
+              "title": "An embodied generalist agent in 3d world",
+              "citation": "J. Huang, S. Yong, X. Ma, X. Linghu, P. Li, Y. Wang, Q. Li, S.-C. Zhu, B. Jia, and S. Huang, 'An embodied generalist agent in 3d world,' in ICML , 2024."
+            },
+            {
+              "title": "Unifying 3d vision-language understanding via promptable queries",
+              "citation": "Z. Zhu, Z. Zhang, X. Ma, X. Niu, Y. Chen, B. Jia, Z. Deng, S. Huang, and Q. Li, 'Unifying 3d vision-language understanding via promptable queries,' arXiv preprint arXiv:2405.11442 , 2024."
+            },
+            {
+              "title": "Pointmamba: A simple state space model for point cloud analysis",
+              "citation": "D. Liang, X. Zhou, X. Wang, X. Zhu, W. Xu, Z. Zou, X. Ye, and X. Bai, 'Pointmamba: A simple state space model for point cloud analysis,' arXiv preprint arXiv:2402.10739 , 2024."
+            },
+            {
+              "title": "Mamba3d: Enhancing local features for 3d point cloud analysis via state space model",
+              "citation": "X. Han, Y. Tang, Z. Wang, and X. Li, 'Mamba3d: Enhancing local features for 3d point cloud analysis via state space model,' arXiv preprint arXiv:2404.14966 , 2024."
+            },
+            {
+              "title": "Unifying 3d vision-language understanding via promptable queries",
+              "citation": "Z. Zhu, Z. Zhang, X. Ma, X. Niu, Y. Chen, B. Jia, Z. Deng, S. Huang, and Q. Li, 'Unifying 3d vision-language understanding via promptable queries,' arXiv preprint arXiv:2405.11442 , 2024."
+            },
+            {
+              "title": "The curious robot: Learning visual representations via physical interactions",
+              "citation": "L. Pinto, D. Gandhi, Y. Han, Y.-L. Park, and A. Gupta, 'The curious robot: Learning visual representations via physical interactions,' in ECCV , 2016, pp. 3-18."
+            },
+            {
+              "title": "Transferring implicit knowledge of non-visual object properties across heterogeneous robot morphologies",
+              "citation": "G. Tatiya, J. Francis, and J. Sinapov, 'Transferring implicit knowledge of non-visual object properties across heterogeneous robot morphologies,' in ICRA , 2023, pp. 11 315-11 321."
+            },
+            {
+              "title": "Learning to look around: Intelligently exploring unseen environments for unknown tasks",
+              "citation": "D. Jayaraman and K. Grauman, 'Learning to look around: Intelligently exploring unseen environments for unknown tasks,' in CVPR , 2018, pp. 1238-1247."
+            },
+            {
+              "title": "Evidential active recognition: Intelligent and prudent open-world embodied perception",
+              "citation": "L. Fan, M. Liang, Y. Li, G. Hua, and Y. Wu, 'Evidential active recognition: Intelligent and prudent open-world embodied perception,' in CVPR , 2024, pp. 16 351-16 361."
+            },
+            {
+              "title": "The curious robot: Learning visual representations via physical interactions",
+              "citation": "L. Pinto, D. Gandhi, Y. Han, Y.-L. Park, and A. Gupta, 'The curious robot: Learning visual representations via physical interactions,' in ECCV , 2016, pp. 3-18."
+            },
+            {
+              "title": "Transferring implicit knowledge of non-visual object properties across heterogeneous robot morphologies",
+              "citation": "G. Tatiya, J. Francis, and J. Sinapov, 'Transferring implicit knowledge of non-visual object properties across heterogeneous robot morphologies,' in ICRA , 2023, pp. 11 315-11 321."
+            },
+            {
+              "title": "Learning to look around: Intelligently exploring unseen environments for unknown tasks",
+              "citation": "D. Jayaraman and K. Grauman, 'Learning to look around: Intelligently exploring unseen environments for unknown tasks,' in CVPR , 2018, pp. 1238-1247."
+            },
+            {
+              "title": "Neu-nbv: Next best view planning using uncertainty estimation in image-based neural rendering",
+              "citation": "L. Jin, X. Chen, J. R¨ uckin, and M. Popovi´ c, 'Neu-nbv: Next best view planning using uncertainty estimation in image-based neural rendering,' in IROS , 2023, pp. 11 305-11 312."
+            },
+            {
+              "title": "Off-policy evaluation with online adaptation for robot exploration in challenging environments",
+              "citation": "Y. Hu, J. Geng, C. Wang, J. Keller, and S. Scherer, 'Off-policy evaluation with online adaptation for robot exploration in challenging environments,' IEEE RAL , 2023."
+            },
+            {
+              "title": "Evidential active recognition: Intelligent and prudent open-world embodied perception",
+              "citation": "L. Fan, M. Liang, Y. Li, G. Hua, and Y. Wu, 'Evidential active recognition: Intelligent and prudent open-world embodied perception,' in CVPR , 2024, pp. 16 351-16 361."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Visual Language Navigation",
+          "citations": [
+            {
+              "title": "Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments",
+              "citation": "P. Anderson, Q. Wu, D. Teney, J. Bruce, M. Johnson, N. Sunderhauf, I. Reid, S. Gould, and A. van den Hengel, 'Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments,' in CVPR , Jun 2018."
+            },
+            {
+              "title": "Stay on the path: Instruction fidelity in vision-and-language navigation",
+              "citation": "V. Jain, G. Magalhaes, A. Ku, A. Vaswani, E. Ie, and J. Baldridge, 'Stay on the path: Instruction fidelity in vision-and-language navigation,' in ACL , Jan 2019."
+            },
+            {
+              "title": "Beyond the Nav-Graph: Vision-and-Language Navigation in Continuous Environments",
+              "citation": "J. Krantz, E. Wijmans, A. Majumdar, D. Batra, and S. Lee, Beyond the Nav-Graph: Vision-and-Language Navigation in Continuous Environments , Jan 2020, p. 104-120."
+            },
+            {
+              "title": "Touchdown: Natural language navigation and spatial reasoning in visual street environments",
+              "citation": "H. Chen, A. Suhr, D. Misra, N. Snavely, and Y. Artzi, 'Touchdown: Natural language navigation and spatial reasoning in visual street environments,' in CVPR , Jun 2019."
+            },
+            {
+              "title": "Reverie: Remote embodied visual referring expression in real indoor environments",
+              "citation": "Y. Qi, Q. Wu, P. Anderson, X. Wang, W. Y. Wang, C. Shen, and A. van den Hengel, 'Reverie: Remote embodied visual referring expression in real indoor environments,' in CVPR , Jun 2020."
+            },
+            {
+              "title": "Soon: Scenario oriented object navigation with graph-based exploration",
+              "citation": "F. Zhu, X. Liang, Y. Zhu, Q. Yu, X. Chang, and X. Liang, 'Soon: Scenario oriented object navigation with graph-based exploration,' in CVPR , Jun 2021."
+            },
+            {
+              "title": "Find what you want: Learning demand-conditioned object attribute space for demanddriven navigation",
+              "citation": "H. Wang, A. G. H. Chen, X. Li, M. Wu, and H. Dong, 'Find what you want: Learning demand-conditioned object attribute space for demanddriven navigation,' NeurIPS , 2023."
+            },
+            {
+              "title": "Alfred: A benchmark for interpreting grounded instructions for everyday tasks",
+              "citation": "M. Shridhar, J. Thomason, D. Gordon, Y. Bisk, W. Han, R. Mottaghi, L. Zettlemoyer, and D. Fox, 'Alfred: A benchmark for interpreting grounded instructions for everyday tasks,' in CVPR , Jun 2020."
+            },
+            {
+              "title": "Homerobot: Open-vocabulary mobile manipulation",
+              "citation": "S. Yenamandra, A. Ramachandran, K. Yadav, A. Wang, M. Khanna, T. Gervet, T.-Y. Yang, V. Jain, A. Clegg, J. Turner, Z. Kira, M. Savva, A. Chang, D. Chaplot, D. Batra, R. Mottaghi, Y. Bisk, and C. Paxton, 'Homerobot: Open-vocabulary mobile manipulation,' in NeurIPS , Jun 2023."
+            },
+            {
+              "title": "Behavior-1k: A benchmark for embodied ai with 1,000 everyday activities and realistic simulation",
+              "citation": "C. Li, R. Zhang, J. Wong, C. Gokmen, S. Srivastava, R. Mart´ ın-Mart´ ın, C. Wang, G. Levine, M. Lingelbach, J. Sun et al. , 'Behavior-1k: A benchmark for embodied ai with 1,000 everyday activities and realistic simulation,' in CoRL . PMLR, 2023, pp. 80-93."
+            },
+            {
+              "title": "Visionand-dialog navigation",
+              "citation": "J. Thomason, M. Murray, M. Cakmak, and L. Zettlemoyer, 'Visionand-dialog navigation,' in CoRL . PMLR, 2020, pp. 394-406."
+            },
+            {
+              "title": "Dialfred: Dialogue-enabled agents for embodied instruction following",
+              "citation": "X. Gao, Q. Gao, R. Gong, K. Lin, G. Thattai, and G. Sukhatme, 'Dialfred: Dialogue-enabled agents for embodied instruction following,' arXiv:2202.13330 , 2022."
+            },
+            {
+              "title": "Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments",
+              "citation": "P. Anderson, Q. Wu, D. Teney, J. Bruce, M. Johnson, N. Sunderhauf, I. Reid, S. Gould, and A. van den Hengel, 'Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments,' in CVPR , Jun 2018."
+            },
+            {
+              "title": "Stay on the path: Instruction fidelity in vision-and-language navigation",
+              "citation": "V. Jain, G. Magalhaes, A. Ku, A. Vaswani, E. Ie, and J. Baldridge, 'Stay on the path: Instruction fidelity in vision-and-language navigation,' in ACL , Jan 2019."
+            },
+            {
+              "title": "Beyond the Nav-Graph: Vision-and-Language Navigation in Continuous Environments",
+              "citation": "J. Krantz, E. Wijmans, A. Majumdar, D. Batra, and S. Lee, Beyond the Nav-Graph: Vision-and-Language Navigation in Continuous Environments , Jan 2020, p. 104-120."
+            },
+            {
+              "title": "Touchdown: Natural language navigation and spatial reasoning in visual street environments",
+              "citation": "H. Chen, A. Suhr, D. Misra, N. Snavely, and Y. Artzi, 'Touchdown: Natural language navigation and spatial reasoning in visual street environments,' in CVPR , Jun 2019."
+            },
+            {
+              "title": "Reverie: Remote embodied visual referring expression in real indoor environments",
+              "citation": "Y. Qi, Q. Wu, P. Anderson, X. Wang, W. Y. Wang, C. Shen, and A. van den Hengel, 'Reverie: Remote embodied visual referring expression in real indoor environments,' in CVPR , Jun 2020."
+            },
+            {
+              "title": "Soon: Scenario oriented object navigation with graph-based exploration",
+              "citation": "F. Zhu, X. Liang, Y. Zhu, Q. Yu, X. Chang, and X. Liang, 'Soon: Scenario oriented object navigation with graph-based exploration,' in CVPR , Jun 2021."
+            },
+            {
+              "title": "Find what you want: Learning demand-conditioned object attribute space for demanddriven navigation",
+              "citation": "H. Wang, A. G. H. Chen, X. Li, M. Wu, and H. Dong, 'Find what you want: Learning demand-conditioned object attribute space for demanddriven navigation,' NeurIPS , 2023."
+            },
+            {
+              "title": "Alfred: A benchmark for interpreting grounded instructions for everyday tasks",
+              "citation": "M. Shridhar, J. Thomason, D. Gordon, Y. Bisk, W. Han, R. Mottaghi, L. Zettlemoyer, and D. Fox, 'Alfred: A benchmark for interpreting grounded instructions for everyday tasks,' in CVPR , Jun 2020."
+            },
+            {
+              "title": "Homerobot: Open-vocabulary mobile manipulation",
+              "citation": "S. Yenamandra, A. Ramachandran, K. Yadav, A. Wang, M. Khanna, T. Gervet, T.-Y. Yang, V. Jain, A. Clegg, J. Turner, Z. Kira, M. Savva, A. Chang, D. Chaplot, D. Batra, R. Mottaghi, Y. Bisk, and C. Paxton, 'Homerobot: Open-vocabulary mobile manipulation,' in NeurIPS , Jun 2023."
+            },
+            {
+              "title": "Language and visual entity relationship graph for agent navigation",
+              "citation": "Y. Hong, C. Rodriguez, Y. Qi, Q. Wu, and S. Gould, 'Language and visual entity relationship graph for agent navigation,' NeurIPS , vol. 33, pp. 7685-7696, 2020."
+            },
+            {
+              "title": "Language-guided navigation via cross-modal grounding and alternate adversarial learning",
+              "citation": "W. Zhang, C. Ma, Q. Wu, and X. Yang, 'Language-guided navigation via cross-modal grounding and alternate adversarial learning,' IEEE TCSVT , vol. 31, pp. 3469-3481, 2020."
+            },
+            {
+              "title": "Vision-language navigation policy learning and adaptation",
+              "citation": "X. Wang, Q. Huang, A. Celikyilmaz, J. Gao, D. Shen, Y.-F. Wang, W. Y. Wang, and L. Zhang, 'Vision-language navigation policy learning and adaptation,' IEEE TPAMI , vol. 43, no. 12, pp. 4205-4216, 2021."
+            },
+            {
+              "title": "FILM: Following instructions in language with modular methods",
+              "citation": "S. Y. Min, D. S. Chaplot, P. K. Ravikumar, Y. Bisk, and R. Salakhutdinov, 'FILM: Following instructions in language with modular methods,' in ICLR , 2022."
+            },
+            {
+              "title": "Lm-nav: Robotic navigation with large pre-trained models of language, vision, and action",
+              "citation": "D. Shah, B. Osinski, B. Ichter, and S. Levine, 'Lm-nav: Robotic navigation with large pre-trained models of language, vision, and action,' in CoRL , 2022."
+            },
+            {
+              "title": "Hop: Historyand-order aware pretraining for vision-and-language navigation",
+              "citation": "Y. Qiao, Y. Qi, Y. Hong, Z. Yu, P. Wang, and Q. Wu, 'Hop: Historyand-order aware pretraining for vision-and-language navigation,' in CVPR , 2022, pp. 15 397-15 406."
+            },
+            {
+              "title": "Towards learning a generalist model for embodied navigation",
+              "citation": "D. Zheng, S. Huang, L. Zhao, Y. Zhong, and L. Wang, 'Towards learning a generalist model for embodied navigation,' in CVPR , Jun 2024."
+            },
+            {
+              "title": "Fast-slow test-time adaptation for online vision-and-language navigation",
+              "citation": "J. Gao, X. Yao, and C. Xu, 'Fast-slow test-time adaptation for online vision-and-language navigation,' 2024."
+            },
+            {
+              "title": "Discuss before moving: Visual language navigation via multi-expert discussions",
+              "citation": "Y. Long, X. Li, W. Cai, and H. Dong, 'Discuss before moving: Visual language navigation via multi-expert discussions,' in ICRA , 2024."
+            },
+            {
+              "title": "Vision-and-language navigation via causal learning",
+              "citation": "R. D. M. S. C. L. Q. C. Liuyi Wang, Zongtao He, 'Vision-and-language navigation via causal learning,' in CVPR , Jun 2024."
+            },
+            {
+              "title": "Volumetric environment representation for vision-language navigation",
+              "citation": "Y. Y. Rui Liu, Wenguan Wang, 'Volumetric environment representation for vision-language navigation,' in CVPR , Jun 2024."
+            },
+            {
+              "title": "Navid: Video-based vlm plans the next step for vision-and-language navigation",
+              "citation": "J. Zhang, K. Wang, R. Xu, G. Zhou, Y. Hong, X. Fang, Q. Wu, Z. Zhang, and W. He, 'Navid: Video-based vlm plans the next step for vision-and-language navigation,' ArXiv , vol. abs/2402.15852, 2024."
+            },
+            {
+              "title": "Look before you leap: Bridging model-free and model-based reinforcement learning for planned-ahead vision-and-language navigation",
+              "citation": "X. E. Wang, W. Xiong, H. Wang, and W. Y. Wang, 'Look before you leap: Bridging model-free and model-based reinforcement learning for planned-ahead vision-and-language navigation,' in ECCV , 2018."
+            },
+            {
+              "title": "Neighbor-view enhanced model for vision and language navigation",
+              "citation": "D. An, Y. Qi, Y. Huang, Q. Wu, L. Wang, and T. Tan, 'Neighbor-view enhanced model for vision and language navigation,' in ACM MM , 2021, pp. 5101-5109."
+            },
+            {
+              "title": "Bridging the gap between learning in discrete and continuous environments for visionand-language navigation",
+              "citation": "Y. Hong, Z. Wang, Q. Wu, and S. Gould, 'Bridging the gap between learning in discrete and continuous environments for visionand-language navigation,' in CVPR , 2022, pp. 15 418-15 428."
+            },
+            {
+              "title": "March in chat: Interactive prompting for remote embodied referring expression",
+              "citation": "Y. Qiao, Y. Qi, Z. Yu, J. Liu, and Q. Wu, 'March in chat: Interactive prompting for remote embodied referring expression,' in ICCV , October 2023, pp. 15 758-15 767."
+            },
+            {
+              "title": "Lookahead exploration with neural radiance representation for continuous vision-language navigation",
+              "citation": "Z. Wang, X. Li, J. Yang, Y. Liu, J. Hu, M. Jiang, and S. Jiang, 'Lookahead exploration with neural radiance representation for continuous vision-language navigation,' in CVPR , 2024."
+            },
+            {
+              "title": "Etpnav: Evolving topological planning for vision-language navigation in continuous environments",
+              "citation": "D. An, H. Wang, W. Wang, Z. Wang, Y. Huang, K. He, and L. Wang, 'Etpnav: Evolving topological planning for vision-language navigation in continuous environments,' IEEE TPAMI , 2024."
+            },
+            {
+              "title": "Multi-level compositional reasoning for interactive instruction following",
+              "citation": "S. Bhambri, B. Kim, and J. Choi, 'Multi-level compositional reasoning for interactive instruction following,' in AAAI , vol. 37, no. 1, 2023, pp. 223-231."
+            },
+            {
+              "title": "Vision and language navigation in the real world via online visual language mapping",
+              "citation": "C. Xu, H. T. Nguyen, C. Amato, and L. L. Wong, 'Vision and language navigation in the real world via online visual language mapping,' ArXiv , vol. abs/2310.10822, 2023."
+            },
+            {
+              "title": "Behavior-1k: A benchmark for embodied ai with 1,000 everyday activities and realistic simulation",
+              "citation": "C. Li, R. Zhang, J. Wong, C. Gokmen, S. Srivastava, R. Mart´ ın-Mart´ ın, C. Wang, G. Levine, M. Lingelbach, J. Sun et al. , 'Behavior-1k: A benchmark for embodied ai with 1,000 everyday activities and realistic simulation,' in CoRL . PMLR, 2023, pp. 80-93."
+            },
+            {
+              "title": "Visionand-dialog navigation",
+              "citation": "J. Thomason, M. Murray, M. Cakmak, and L. Zettlemoyer, 'Visionand-dialog navigation,' in CoRL . PMLR, 2020, pp. 394-406."
+            },
+            {
+              "title": "Dialfred: Dialogue-enabled agents for embodied instruction following",
+              "citation": "X. Gao, Q. Gao, R. Gong, K. Lin, G. Thattai, and G. Sukhatme, 'Dialfred: Dialogue-enabled agents for embodied instruction following,' arXiv:2202.13330 , 2022."
+            },
+            {
+              "title": "Language and visual entity relationship graph for agent navigation",
+              "citation": "Y. Hong, C. Rodriguez, Y. Qi, Q. Wu, and S. Gould, 'Language and visual entity relationship graph for agent navigation,' NeurIPS , vol. 33, pp. 7685-7696, 2020."
+            },
+            {
+              "title": "Lm-nav: Robotic navigation with large pre-trained models of language, vision, and action",
+              "citation": "D. Shah, B. Osinski, B. Ichter, and S. Levine, 'Lm-nav: Robotic navigation with large pre-trained models of language, vision, and action,' in CoRL , 2022."
+            },
+            {
+              "title": "Hop: Historyand-order aware pretraining for vision-and-language navigation",
+              "citation": "Y. Qiao, Y. Qi, Y. Hong, Z. Yu, P. Wang, and Q. Wu, 'Hop: Historyand-order aware pretraining for vision-and-language navigation,' in CVPR , 2022, pp. 15 397-15 406."
+            },
+            {
+              "title": "FILM: Following instructions in language with modular methods",
+              "citation": "S. Y. Min, D. S. Chaplot, P. K. Ravikumar, Y. Bisk, and R. Salakhutdinov, 'FILM: Following instructions in language with modular methods,' in ICLR , 2022."
+            },
+            {
+              "title": "Volumetric environment representation for vision-language navigation",
+              "citation": "Y. Y. Rui Liu, Wenguan Wang, 'Volumetric environment representation for vision-language navigation,' in CVPR , Jun 2024."
+            },
+            {
+              "title": "Language-guided navigation via cross-modal grounding and alternate adversarial learning",
+              "citation": "W. Zhang, C. Ma, Q. Wu, and X. Yang, 'Language-guided navigation via cross-modal grounding and alternate adversarial learning,' IEEE TCSVT , vol. 31, pp. 3469-3481, 2020."
+            },
+            {
+              "title": "Vision-and-language navigation via causal learning",
+              "citation": "R. D. M. S. C. L. Q. C. Liuyi Wang, Zongtao He, 'Vision-and-language navigation via causal learning,' in CVPR , Jun 2024."
+            },
+            {
+              "title": "Vision-language navigation policy learning and adaptation",
+              "citation": "X. Wang, Q. Huang, A. Celikyilmaz, J. Gao, D. Shen, Y.-F. Wang, W. Y. Wang, and L. Zhang, 'Vision-language navigation policy learning and adaptation,' IEEE TPAMI , vol. 43, no. 12, pp. 4205-4216, 2021."
+            },
+            {
+              "title": "Fast-slow test-time adaptation for online vision-and-language navigation",
+              "citation": "J. Gao, X. Yao, and C. Xu, 'Fast-slow test-time adaptation for online vision-and-language navigation,' 2024."
+            },
+            {
+              "title": "Towards learning a generalist model for embodied navigation",
+              "citation": "D. Zheng, S. Huang, L. Zhao, Y. Zhong, and L. Wang, 'Towards learning a generalist model for embodied navigation,' in CVPR , Jun 2024."
+            },
+            {
+              "title": "Navid: Video-based vlm plans the next step for vision-and-language navigation",
+              "citation": "J. Zhang, K. Wang, R. Xu, G. Zhou, Y. Hong, X. Fang, Q. Wu, Z. Zhang, and W. He, 'Navid: Video-based vlm plans the next step for vision-and-language navigation,' ArXiv , vol. abs/2402.15852, 2024."
+            },
+            {
+              "title": "Towards longhorizon vision-language navigation: Platform, benchmark and method",
+              "citation": "X. Song, W. Chen, Y. Liu, W. Chen, G. Li, and L. Lin, 'Towards longhorizon vision-language navigation: Platform, benchmark and method,' in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2025."
+            },
+            {
+              "title": "Bridging the gap between learning in discrete and continuous environments for visionand-language navigation",
+              "citation": "Y. Hong, Z. Wang, Q. Wu, and S. Gould, 'Bridging the gap between learning in discrete and continuous environments for visionand-language navigation,' in CVPR , 2022, pp. 15 418-15 428."
+            },
+            {
+              "title": "Etpnav: Evolving topological planning for vision-language navigation in continuous environments",
+              "citation": "D. An, H. Wang, W. Wang, Z. Wang, Y. Huang, K. He, and L. Wang, 'Etpnav: Evolving topological planning for vision-language navigation in continuous environments,' IEEE TPAMI , 2024."
+            },
+            {
+              "title": "Neighbor-view enhanced model for vision and language navigation",
+              "citation": "D. An, Y. Qi, Y. Huang, Q. Wu, L. Wang, and T. Tan, 'Neighbor-view enhanced model for vision and language navigation,' in ACM MM , 2021, pp. 5101-5109."
+            },
+            {
+              "title": "Lookahead exploration with neural radiance representation for continuous vision-language navigation",
+              "citation": "Z. Wang, X. Li, J. Yang, Y. Liu, J. Hu, M. Jiang, and S. Jiang, 'Lookahead exploration with neural radiance representation for continuous vision-language navigation,' in CVPR , 2024."
+            },
+            {
+              "title": "Look before you leap: Bridging model-free and model-based reinforcement learning for planned-ahead vision-and-language navigation",
+              "citation": "X. E. Wang, W. Xiong, H. Wang, and W. Y. Wang, 'Look before you leap: Bridging model-free and model-based reinforcement learning for planned-ahead vision-and-language navigation,' in ECCV , 2018."
+            },
+            {
+              "title": "March in chat: Interactive prompting for remote embodied referring expression",
+              "citation": "Y. Qiao, Y. Qi, Z. Yu, J. Liu, and Q. Wu, 'March in chat: Interactive prompting for remote embodied referring expression,' in ICCV , October 2023, pp. 15 758-15 767."
+            },
+            {
+              "title": "Multi-level compositional reasoning for interactive instruction following",
+              "citation": "S. Bhambri, B. Kim, and J. Choi, 'Multi-level compositional reasoning for interactive instruction following,' in AAAI , vol. 37, no. 1, 2023, pp. 223-231."
+            },
+            {
+              "title": "Vision and language navigation in the real world via online visual language mapping",
+              "citation": "C. Xu, H. T. Nguyen, C. Amato, and L. L. Wong, 'Vision and language navigation in the real world via online visual language mapping,' ArXiv , vol. abs/2310.10822, 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "EMBODIED INTERACTION",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "6.1",
+          "sec_title": "Embodied Question Answering",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.2",
+          "sec_title": "COMPARISON OF DIFFERENT EQA DATASETS",
+          "citations": [
+            {
+              "title": "Embodied question answering",
+              "citation": "A. Das, S. Datta, G. Gkioxari, S. Lee, D. Parikh, and D. Batra, 'Embodied question answering,' in CVPR , 2018, pp. 1-10."
+            },
+            {
+              "title": "Multi-target embodied question answering",
+              "citation": "L. Yu, X. Chen, G. Gkioxari, M. Bansal, T. L. Berg, and D. Batra, 'Multi-target embodied question answering,' in CVPR , 2019, pp. 63096318."
+            },
+            {
+              "title": "Embodied question answering in photorealistic environments with point cloud perception",
+              "citation": "E. Wijmans, S. Datta, O. Maksymets, A. Das, G. Gkioxari, S. Lee, I. Essa, D. Parikh, and D. Batra, 'Embodied question answering in photorealistic environments with point cloud perception,' in CVPR , 2019, pp. 6659-6668."
+            },
+            {
+              "title": "Iqa: Visual question answering in interactive environments",
+              "citation": "D. Gordon, A. Kembhavi, M. Rastegari, J. Redmon, D. Fox, and A. Farhadi, 'Iqa: Visual question answering in interactive environments,' in CVPR , 2018, pp. 4089-4098."
+            },
+            {
+              "title": "Videonavqa: Bridging the gap between visual and embodied question answering",
+              "citation": "C. Cangea, E. Belilovsky, P. Li` o, and A. Courville, 'Videonavqa: Bridging the gap between visual and embodied question answering,' arXiv preprint arXiv:1908.04950 , 2019."
+            },
+            {
+              "title": "Sqa3d: Situated question answering in 3d scenes",
+              "citation": "X. Ma, S. Yong, Z. Zheng, Q. Li, Y. Liang, S.-C. Zhu, and S. Huang, 'Sqa3d: Situated question answering in 3d scenes,' in ICLR , 2023."
+            },
+            {
+              "title": "Knowledge-based embodied question answering",
+              "citation": "S. Tan, M. Ge, D. Guo, H. Liu, and F. Sun, 'Knowledge-based embodied question answering,' IEEE TPAMI , 2023."
+            },
+            {
+              "title": "Openeqa: Embodied question answering in the era of foundation models",
+              "citation": "A. Majumdar, A. Ajay, X. Zhang, P. Putta, S. Yenamandra, M. Henaff, S. Silwal, P. Mcvay, O. Maksymets, S. Arnaud et al. , 'Openeqa: Embodied question answering in the era of foundation models,' in CVPR , 2024, pp. 16 488-16 498."
+            },
+            {
+              "title": "Explore until confident: Efficient exploration for embodied question answering",
+              "citation": "A. Z. Ren, J. Clark, A. Dixit, M. Itkina, A. Majumdar, and D. Sadigh, 'Explore until confident: Efficient exploration for embodied question answering,' arXiv preprint arXiv:2403.15941 , 2024."
+            },
+            {
+              "title": "S-eqa: Tackling situational queries in embodied question answering",
+              "citation": "V. S. Dorbala, P. Goyal, R. Piramuthu, M. Johnston, D. Manocha, and R. Ghanadhan, 'S-eqa: Tackling situational queries in embodied question answering,' arXiv preprint arXiv:2405.04732 , 2024."
+            },
+            {
+              "title": "Beyond the destination: A novel benchmark for exploration-aware embodied question answering",
+              "citation": "K. Jiang, Y. Liu, W. Chen, J. Luo, Z. Chen, L. Pan, G. Li, and L. Lin, 'Beyond the destination: A novel benchmark for exploration-aware embodied question answering,' 2025."
+            },
+            {
+              "title": "Embodied question answering",
+              "citation": "A. Das, S. Datta, G. Gkioxari, S. Lee, D. Parikh, and D. Batra, 'Embodied question answering,' in CVPR , 2018, pp. 1-10."
+            },
+            {
+              "title": "Semantic scene completion from a single depth image",
+              "citation": "S. Song, F. Yu, A. Zeng, A. X. Chang, M. Savva, and T. Funkhouser, 'Semantic scene completion from a single depth image,' in CVPR , 2017, pp. 1746-1754."
+            },
+            {
+              "title": "Building generalizable agents with a realistic and rich 3d environment",
+              "citation": "Y. Wu, Y. Wu, G. Gkioxari, and Y. Tian, 'Building generalizable agents with a realistic and rich 3d environment,' arXiv preprint arXiv:1801.02209 , 2018."
+            },
+            {
+              "title": "Multi-target embodied question answering",
+              "citation": "L. Yu, X. Chen, G. Gkioxari, M. Bansal, T. L. Berg, and D. Batra, 'Multi-target embodied question answering,' in CVPR , 2019, pp. 63096318."
+            },
+            {
+              "title": "Embodied question answering in photorealistic environments with point cloud perception",
+              "citation": "E. Wijmans, S. Datta, O. Maksymets, A. Das, G. Gkioxari, S. Lee, I. Essa, D. Parikh, and D. Batra, 'Embodied question answering in photorealistic environments with point cloud perception,' in CVPR , 2019, pp. 6659-6668."
+            },
+            {
+              "title": "Minos: Multimodal indoor simulator for navigation in complex environments",
+              "citation": "M. Savva, A. X. Chang, A. Dosovitskiy, T. Funkhouser, and V. Koltun, 'Minos: Multimodal indoor simulator for navigation in complex environments,' arXiv preprint arXiv:1712.03931 , 2017."
+            },
+            {
+              "title": "Matterport3d: Learning from rgb-d data in indoor environments",
+              "citation": "A. Chang, A. Dai, T. Funkhouser, M. Halber, M. Niessner, M. Savva, S. Song, A. Zeng, and Y. Zhang, 'Matterport3d: Learning from rgb-d data in indoor environments,' arXiv preprint arXiv:1709.06158 , 2017."
+            },
+            {
+              "title": "Iqa: Visual question answering in interactive environments",
+              "citation": "D. Gordon, A. Kembhavi, M. Rastegari, J. Redmon, D. Fox, and A. Farhadi, 'Iqa: Visual question answering in interactive environments,' in CVPR , 2018, pp. 4089-4098."
+            },
+            {
+              "title": "Videonavqa: Bridging the gap between visual and embodied question answering",
+              "citation": "C. Cangea, E. Belilovsky, P. Li` o, and A. Courville, 'Videonavqa: Bridging the gap between visual and embodied question answering,' arXiv preprint arXiv:1908.04950 , 2019."
+            },
+            {
+              "title": "Sqa3d: Situated question answering in 3d scenes",
+              "citation": "X. Ma, S. Yong, Z. Zheng, Q. Li, Y. Liang, S.-C. Zhu, and S. Huang, 'Sqa3d: Situated question answering in 3d scenes,' in ICLR , 2023."
+            },
+            {
+              "title": "Knowledge-based embodied question answering",
+              "citation": "S. Tan, M. Ge, D. Guo, H. Liu, and F. Sun, 'Knowledge-based embodied question answering,' IEEE TPAMI , 2023."
+            },
+            {
+              "title": "Openeqa: Embodied question answering in the era of foundation models",
+              "citation": "A. Majumdar, A. Ajay, X. Zhang, P. Putta, S. Yenamandra, M. Henaff, S. Silwal, P. Mcvay, O. Maksymets, S. Arnaud et al. , 'Openeqa: Embodied question answering in the era of foundation models,' in CVPR , 2024, pp. 16 488-16 498."
+            },
+            {
+              "title": "Explore until confident: Efficient exploration for embodied question answering",
+              "citation": "A. Z. Ren, J. Clark, A. Dixit, M. Itkina, A. Majumdar, and D. Sadigh, 'Explore until confident: Efficient exploration for embodied question answering,' arXiv preprint arXiv:2403.15941 , 2024."
+            },
+            {
+              "title": "S-eqa: Tackling situational queries in embodied question answering",
+              "citation": "V. S. Dorbala, P. Goyal, R. Piramuthu, M. Johnston, D. Manocha, and R. Ghanadhan, 'S-eqa: Tackling situational queries in embodied question answering,' arXiv preprint arXiv:2405.04732 , 2024."
+            },
+            {
+              "title": "Beyond the destination: A novel benchmark for exploration-aware embodied question answering",
+              "citation": "K. Jiang, Y. Liu, W. Chen, J. Luo, Z. Chen, L. Pan, G. Li, and L. Lin, 'Beyond the destination: A novel benchmark for exploration-aware embodied question answering,' 2025."
+            },
+            {
+              "title": "Embodied question answering",
+              "citation": "A. Das, S. Datta, G. Gkioxari, S. Lee, D. Parikh, and D. Batra, 'Embodied question answering,' in CVPR , 2018, pp. 1-10."
+            },
+            {
+              "title": "Revisiting embodiedqa: A simple baseline and beyond",
+              "citation": "Y. Wu, L. Jiang, and Y. Yang, 'Revisiting embodiedqa: A simple baseline and beyond,' IEEE TIP , vol. 29, pp. 3984-3992, 2020."
+            },
+            {
+              "title": "Embodied question answering",
+              "citation": "A. Das, S. Datta, G. Gkioxari, S. Lee, D. Parikh, and D. Batra, 'Embodied question answering,' in CVPR , 2018, pp. 1-10."
+            },
+            {
+              "title": "Revisiting embodiedqa: A simple baseline and beyond",
+              "citation": "Y. Wu, L. Jiang, and Y. Yang, 'Revisiting embodiedqa: A simple baseline and beyond,' IEEE TIP , vol. 29, pp. 3984-3992, 2020."
+            },
+            {
+              "title": "Multi-agent embodied question answering in interactive environments",
+              "citation": "S. Tan, W. Xiang, H. Liu, D. Guo, and F. Sun, 'Multi-agent embodied question answering in interactive environments,' in ECCV , 2020, pp. 663-678."
+            },
+            {
+              "title": "Iqa: Visual question answering in interactive environments",
+              "citation": "D. Gordon, A. Kembhavi, M. Rastegari, J. Redmon, D. Fox, and A. Farhadi, 'Iqa: Visual question answering in interactive environments,' in CVPR , 2018, pp. 4089-4098."
+            },
+            {
+              "title": "Knowledge-based embodied question answering",
+              "citation": "S. Tan, M. Ge, D. Guo, H. Liu, and F. Sun, 'Knowledge-based embodied question answering,' IEEE TPAMI , 2023."
+            },
+            {
+              "title": "Openeqa: Embodied question answering in the era of foundation models",
+              "citation": "A. Majumdar, A. Ajay, X. Zhang, P. Putta, S. Yenamandra, M. Henaff, S. Silwal, P. Mcvay, O. Maksymets, S. Arnaud et al. , 'Openeqa: Embodied question answering in the era of foundation models,' in CVPR , 2024, pp. 16 488-16 498."
+            },
+            {
+              "title": "A frontier-based approach for autonomous exploration",
+              "citation": "B. Yamauchi, 'A frontier-based approach for autonomous exploration,' in Proceedings IEEE International Symposium on Computational Intelligence in Robotics and Automation CIRA'97.'Towards New Computational Principles for Robotics and Automation' , 1997, pp. 146-151."
+            },
+            {
+              "title": "Explore until confident: Efficient exploration for embodied question answering",
+              "citation": "A. Z. Ren, J. Clark, A. Dixit, M. Itkina, A. Majumdar, and D. Sadigh, 'Explore until confident: Efficient exploration for embodied question answering,' arXiv preprint arXiv:2403.15941 , 2024."
+            },
+            {
+              "title": "Map-based modular approach for zero-shot embodied question answering",
+              "citation": "K. Sakamoto, D. Azuma, T. Miyanishi, S. Kurita, and M. Kawanabe, 'Map-based modular approach for zero-shot embodied question answering,' arXiv preprint arXiv:2405.16559 , 2024."
+            },
+            {
+              "title": "Embodied question answering via multi-llm systems",
+              "citation": "B. Patel, V. S. Dorbala, and A. S. Bedi, 'Embodied question answering via multi-llm systems,' arXiv preprint arXiv:2406.10918 , 2024."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.3",
+          "sec_title": "Embodied Grasping",
+          "citations": [
+            {
+              "title": "Multifingered grasp planning based on gaussian process implicit surface and its partial",
+              "citation": "H. Liu, S. K. Sampath, N. Wang, and C. Yang, 'Multifingered grasp planning based on gaussian process implicit surface and its partial"
+            },
+            {
+              "title": "Edge-dependent efficient grasp rectangle search in robotic grasp detection",
+              "citation": "L. Chen, P. Huang, Y. Li, and Z. Meng, 'Edge-dependent efficient grasp rectangle search in robotic grasp detection,' IEEE/ASME TMECH , vol. 26, no. 6, pp. 2922-2931, 2021."
+            },
+            {
+              "title": "Efficient grasping from rgbd images: Learning using a new rectangle representation",
+              "citation": "Y. Jiang, S. Moseson, and A. Saxena, 'Efficient grasping from rgbd images: Learning using a new rectangle representation,' in ICRA , 2011, pp. 3304-3311."
+            },
+            {
+              "title": "Multigrippergrasp: A dataset for robotic grasping from parallel jaw grippers to dexterous hands",
+              "citation": "L. F. C. Murrilo, N. Khargonkar, B. Prabhakaran, and Y. Xiang, 'Multigrippergrasp: A dataset for robotic grasping from parallel jaw grippers to dexterous hands,' arXiv preprint arXiv:2403.09841 , 2024."
+            },
+            {
+              "title": "Language-guided robot grasping: Clip-based referring grasp synthesis in clutter",
+              "citation": "G. Tziafas, Y. Xu, A. Goel, M. Kasaei, Z. Li, and H. Kasaei, 'Language-guided robot grasping: Clip-based referring grasp synthesis in clutter,' arXiv preprint arXiv:2311.05779 , 2023."
+            },
+            {
+              "title": "Semgrasp: Semantic grasp generation via language aligned discretization",
+              "citation": "K. Li, J. Wang, L. Yang, C. Lu, and B. Dai, 'Semgrasp: Semantic grasp generation via language aligned discretization,' arXiv preprint arXiv:2404.03590 , 2024."
+            },
+            {
+              "title": "Efficient grasping from rgbd images: Learning using a new rectangle representation",
+              "citation": "Y. Jiang, S. Moseson, and A. Saxena, 'Efficient grasping from rgbd images: Learning using a new rectangle representation,' in ICRA , 2011, pp. 3304-3311."
+            },
+            {
+              "title": "End-to-end trainable deep neural network for robotic grasp detection and semantic segmentation from rgb",
+              "citation": "S. Ainetter and F. Fraundorfer, 'End-to-end trainable deep neural network for robotic grasp detection and semantic segmentation from rgb,' in ICRA , 2021, pp. 13 452-13 458."
+            },
+            {
+              "title": "Efficient grasping from rgbd images: Learning using a new rectangle representation",
+              "citation": "Y. Jiang, S. Moseson, and A. Saxena, 'Efficient grasping from rgbd images: Learning using a new rectangle representation,' in ICRA , 2011, pp. 3304-3311."
+            },
+            {
+              "title": "Acronym: A large-scale grasp dataset based on simulation",
+              "citation": "C. Eppner, A. Mousavian, and D. Fox, 'Acronym: A large-scale grasp dataset based on simulation,' in ICRA , 2021, pp. 6222-6227."
+            },
+            {
+              "title": "Language-guided robot grasping: Clip-based referring grasp synthesis in clutter",
+              "citation": "G. Tziafas, Y. Xu, A. Goel, M. Kasaei, Z. Li, and H. Kasaei, 'Language-guided robot grasping: Clip-based referring grasp synthesis in clutter,' arXiv preprint arXiv:2311.05779 , 2023."
+            },
+            {
+              "title": "Cliport: What and where pathways for robotic manipulation",
+              "citation": "M. Shridhar, L. Manuelli, and D. Fox, 'Cliport: What and where pathways for robotic manipulation,' in CoRL . PMLR, 2022, pp. 894906."
+            },
+            {
+              "title": "Efficient grasping from rgbd images: Learning using a new rectangle representation",
+              "citation": "Y. Jiang, S. Moseson, and A. Saxena, 'Efficient grasping from rgbd images: Learning using a new rectangle representation,' in ICRA , 2011, pp. 3304-3311."
+            },
+            {
+              "title": "Jacquard: A large scale dataset for robotic grasp detection",
+              "citation": "A. Depierre, E. Dellandr´ ea, and L. Chen, 'Jacquard: A large scale dataset for robotic grasp detection,' in IROS , 2018, pp. 3511-3516."
+            },
+            {
+              "title": "6-dof graspnet: Variational grasp generation for object manipulation",
+              "citation": "A. Mousavian, C. Eppner, and D. Fox, '6-dof graspnet: Variational grasp generation for object manipulation,' in ICCV , 2019, pp. 29012910."
+            },
+            {
+              "title": "Acronym: A large-scale grasp dataset based on simulation",
+              "citation": "C. Eppner, A. Mousavian, and D. Fox, 'Acronym: A large-scale grasp dataset based on simulation,' in ICRA , 2021, pp. 6222-6227."
+            },
+            {
+              "title": "Multigrippergrasp: A dataset for robotic grasping from parallel jaw grippers to dexterous hands",
+              "citation": "L. F. C. Murrilo, N. Khargonkar, B. Prabhakaran, and Y. Xiang, 'Multigrippergrasp: A dataset for robotic grasping from parallel jaw grippers to dexterous hands,' arXiv preprint arXiv:2403.09841 , 2024."
+            },
+            {
+              "title": "End-to-end trainable deep neural network for robotic grasp detection and semantic segmentation from rgb",
+              "citation": "S. Ainetter and F. Fraundorfer, 'End-to-end trainable deep neural network for robotic grasp detection and semantic segmentation from rgb,' in ICRA , 2021, pp. 13 452-13 458."
+            },
+            {
+              "title": "Language-guided robot grasping: Clip-based referring grasp synthesis in clutter",
+              "citation": "G. Tziafas, Y. Xu, A. Goel, M. Kasaei, Z. Li, and H. Kasaei, 'Language-guided robot grasping: Clip-based referring grasp synthesis in clutter,' arXiv preprint arXiv:2311.05779 , 2023."
+            },
+            {
+              "title": "Reasoning grasping via multimodal large language model",
+              "citation": "S. Jin, J. Xu, Y . Lei, and L. Zhang, 'Reasoning grasping via multimodal large language model,' arXiv preprint arXiv:2402.06798 , 2024."
+            },
+            {
+              "title": "Semgrasp: Semantic grasp generation via language aligned discretization",
+              "citation": "K. Li, J. Wang, L. Yang, C. Lu, and B. Dai, 'Semgrasp: Semantic grasp generation via language aligned discretization,' arXiv preprint arXiv:2404.03590 , 2024."
+            },
+            {
+              "title": "Language-guided robot grasping: Clip-based referring grasp synthesis in clutter",
+              "citation": "G. Tziafas, Y. Xu, A. Goel, M. Kasaei, Z. Li, and H. Kasaei, 'Language-guided robot grasping: Clip-based referring grasp synthesis in clutter,' arXiv preprint arXiv:2311.05779 , 2023."
+            },
+            {
+              "title": "Reasoning grasping via multimodal large language model",
+              "citation": "S. Jin, J. Xu, Y . Lei, and L. Zhang, 'Reasoning grasping via multimodal large language model,' arXiv preprint arXiv:2402.06798 , 2024."
+            },
+            {
+              "title": "Cliport: What and where pathways for robotic manipulation",
+              "citation": "M. Shridhar, L. Manuelli, and D. Fox, 'Cliport: What and where pathways for robotic manipulation,' in CoRL . PMLR, 2022, pp. 894906."
+            },
+            {
+              "title": "Distilled feature fields enable few-shot language-guided manipulation",
+              "citation": "W. Shen, G. Yang, A. Yu, J. Wong, L. P. Kaelbling, and P. Isola, 'Distilled feature fields enable few-shot language-guided manipulation,' in 7th Annual CoRL , 2023."
+            },
+            {
+              "title": "Language-guided robot grasping: Clip-based referring grasp synthesis in clutter",
+              "citation": "G. Tziafas, Y. Xu, A. Goel, M. Kasaei, Z. Li, and H. Kasaei, 'Language-guided robot grasping: Clip-based referring grasp synthesis in clutter,' arXiv preprint arXiv:2311.05779 , 2023."
+            },
+            {
+              "title": "Reasoning grasping via multimodal large language model",
+              "citation": "S. Jin, J. Xu, Y . Lei, and L. Zhang, 'Reasoning grasping via multimodal large language model,' arXiv preprint arXiv:2402.06798 , 2024."
+            },
+            {
+              "title": "Semgrasp: Semantic grasp generation via language aligned discretization",
+              "citation": "K. Li, J. Wang, L. Yang, C. Lu, and B. Dai, 'Semgrasp: Semantic grasp generation via language aligned discretization,' arXiv preprint arXiv:2404.03590 , 2024."
+            },
+            {
+              "title": "Distilled feature fields enable few-shot language-guided manipulation",
+              "citation": "W. Shen, G. Yang, A. Yu, J. Wong, L. P. Kaelbling, and P. Isola, 'Distilled feature fields enable few-shot language-guided manipulation,' in 7th Annual CoRL , 2023."
+            },
+            {
+              "title": "Gaussiangrasper: 3d language gaussian splatting for open-vocabulary robotic grasping",
+              "citation": "Y. Zheng, X. Chen, Y. Zheng, S. Gu, R. Yang, B. Jin, P. Li, C. Zhong, Z. Wang, L. Liu et al. , 'Gaussiangrasper: 3d language gaussian splatting for open-vocabulary robotic grasping,' arXiv preprint arXiv:2403.09637 , 2024."
+            },
+            {
+              "title": "Reasoning grasping via multimodal large language model",
+              "citation": "S. Jin, J. Xu, Y . Lei, and L. Zhang, 'Reasoning grasping via multimodal large language model,' arXiv preprint arXiv:2402.06798 , 2024."
+            },
+            {
+              "title": "Semgrasp: Semantic grasp generation via language aligned discretization",
+              "citation": "K. Li, J. Wang, L. Yang, C. Lu, and B. Dai, 'Semgrasp: Semantic grasp generation via language aligned discretization,' arXiv preprint arXiv:2404.03590 , 2024."
+            },
+            {
+              "title": "Language-guided robot grasping: Clip-based referring grasp synthesis in clutter",
+              "citation": "G. Tziafas, Y. Xu, A. Goel, M. Kasaei, Z. Li, and H. Kasaei, 'Language-guided robot grasping: Clip-based referring grasp synthesis in clutter,' arXiv preprint arXiv:2311.05779 , 2023."
+            },
+            {
+              "title": "Reasoning grasping via multimodal large language model",
+              "citation": "S. Jin, J. Xu, Y . Lei, and L. Zhang, 'Reasoning grasping via multimodal large language model,' arXiv preprint arXiv:2402.06798 , 2024."
+            },
+            {
+              "title": "Cliport: What and where pathways for robotic manipulation",
+              "citation": "M. Shridhar, L. Manuelli, and D. Fox, 'Cliport: What and where pathways for robotic manipulation,' in CoRL . PMLR, 2022, pp. 894906."
+            },
+            {
+              "title": "Distilled feature fields enable few-shot language-guided manipulation",
+              "citation": "W. Shen, G. Yang, A. Yu, J. Wong, L. P. Kaelbling, and P. Isola, 'Distilled feature fields enable few-shot language-guided manipulation,' in 7th Annual CoRL , 2023."
+            },
+            {
+              "title": "Gaussiangrasper: 3d language gaussian splatting for open-vocabulary robotic grasping",
+              "citation": "Y. Zheng, X. Chen, Y. Zheng, S. Gu, R. Yang, B. Jin, P. Li, C. Zhong, Z. Wang, L. Liu et al. , 'Gaussiangrasper: 3d language gaussian splatting for open-vocabulary robotic grasping,' arXiv preprint arXiv:2403.09637 , 2024."
+            },
+            {
+              "title": "Anygrasp: Robust and efficient grasp perception in spatial and temporal domains",
+              "citation": "H.-S. Fang, C. Wang, H. Fang, M. Gou, J. Liu, H. Yan, W. Liu, Y. Xie, and C. Lu, 'Anygrasp: Robust and efficient grasp perception in spatial and temporal domains,' IEEE TRO , 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "EMBODIED AGENT",
+      "citations": [
+        {
+          "title": "The rise and potential of large language model based agents: A survey",
+          "citation": "Z. Xi, W. Chen, X. Guo, W. He, Y. Ding, B. Hong, M. Zhang, J. Wang, S. Jin, E. Zhou et al. , 'The rise and potential of large language model based agents: A survey,' arXiv preprint arXiv:2309.07864 , 2023."
+        }
+      ],
+      "subsections": [
+        {
+          "sec_id": "7.1",
+          "sec_title": "Embodied Task Planning",
+          "citations": [
+            {
+              "title": "Pddl-the planning domain definition language",
+              "citation": "D. McDermott, M. Ghallab, A. E. Howe, C. A. Knoblock, A. Ram, M. M. Veloso, D. S. Weld, and D. E. Wilkins, 'Pddl-the planning domain definition language,' 1998."
+            },
+            {
+              "title": "The monte carlo method",
+              "citation": "N. C. Metropolis and S. M. Ulam, 'The monte carlo method.' Journal of the American Statistical Association , vol. 44 247, pp. 335-41, 1949."
+            },
+            {
+              "title": "A formal basis for the heuristic determination of minimum cost paths",
+              "citation": "P. E. Hart, N. J. Nilsson, and B. Raphael, 'A formal basis for the heuristic determination of minimum cost paths,' IEEE Trans. Syst. Sci. Cybern. , vol. 4, pp. 100-107, 1968."
+            },
+            {
+              "title": "Alfred: A benchmark for interpreting grounded instructions for everyday tasks",
+              "citation": "M. Shridhar, J. Thomason, D. Gordon, Y. Bisk, W. Han, R. Mottaghi, L. Zettlemoyer, and D. Fox, 'Alfred: A benchmark for interpreting grounded instructions for everyday tasks,' in CVPR , 2020, pp. 10 74010 749."
+            },
+            {
+              "title": "Alfworld: Aligning text and embodied environments for interactive learning",
+              "citation": "M. Shridhar, X. Yuan, M.-A. Cˆ ot´ e, Y. Bisk, A. Trischler, and M. Hausknecht, 'Alfworld: Aligning text and embodied environments for interactive learning,' arXiv preprint arXiv:2010.03768 , 2020."
+            },
+            {
+              "title": "Film: Following instructions in language with modular methods",
+              "citation": "S. Y. Min, D. S. Chaplot, P. Ravikumar, Y. Bisk, and R. Salakhutdinov, 'Film: Following instructions in language with modular methods,' arXiv preprint arXiv:2110.07342 , 2021."
+            },
+            {
+              "title": "Language models as zero-shot planners: Extracting actionable knowledge for embodied agents",
+              "citation": "W. Huang, P. Abbeel, D. Pathak, and I. Mordatch, 'Language models as zero-shot planners: Extracting actionable knowledge for embodied agents,' in ICML . PMLR, 2022, pp. 9118-9147."
+            },
+            {
+              "title": "Inner monologue: Embodied reasoning through planning with language models",
+              "citation": "W. Huang, F. Xia, T. Xiao, H. Chan, J. Liang, P. Florence, A. Zeng, J. Tompson, I. Mordatch, Y. Chebotar et al. , 'Inner monologue: Embodied reasoning through planning with language models,' in CoRL . PMLR, 2023, pp. 1769-1782."
+            },
+            {
+              "title": "Towards efficient llm grounding for embodied multi-agent collaboration",
+              "citation": "Y. Zhang, S. Yang, C. Bai, F. Wu, X. Li, X. Li, and Z. Wang, 'Towards efficient llm grounding for embodied multi-agent collaboration,' arXiv preprint arXiv:2405.14314 , 2024."
+            },
+            {
+              "title": "Open-ended instructable embodied agents with memory-augmented large language models",
+              "citation": "G. Sarch, Y. Wu, M. Tarr, and K. Fragkiadaki, 'Open-ended instructable embodied agents with memory-augmented large language models,' in EMNLP , 2023, pp. 3468-3500."
+            },
+            {
+              "title": "Skill induction and planning with latent language",
+              "citation": "P. Sharma, A. Torralba, and J. Andreas, 'Skill induction and planning with latent language,' in Annual Meeting of the Association for Computational Linguistics , 2021."
+            },
+            {
+              "title": "Progprompt: Generating situated robot task plans using large language models",
+              "citation": "I. Singh, V. Blukis, A. Mousavian, A. Goyal, D. Xu, J. Tremblay, D. Fox, J. Thomason, and A. Garg, 'Progprompt: Generating situated robot task plans using large language models,' in ICRA , 2023, pp. 11 523-11 530."
+            },
+            {
+              "title": "Code as policies: Language model programs for embodied control",
+              "citation": "J. Liang, W. Huang, F. Xia, P. Xu, K. Hausman, B. Ichter, P. R. Florence, and A. Zeng, 'Code as policies: Language model programs for embodied control,' ICRA , pp. 9493-9500, 2022."
+            },
+            {
+              "title": "Socratic models: Composing zero-shot multimodal reasoning with language",
+              "citation": "A. Zeng, M. Attarian, K. M. Choromanski, A. Wong, S. Welker, F. Tombari, A. Purohit, M. S. Ryoo, V. Sindhwani, J. Lee et al. , 'Socratic models: Composing zero-shot multimodal reasoning with language,' in ICLR , 2023."
+            },
+            {
+              "title": "Socratic planner: Inquiry-based zero-shot planning for embodied instruction following",
+              "citation": "S. Shin, J. Kim, G.-C. Kang, B.-T. Zhang et al. , 'Socratic planner: Inquiry-based zero-shot planning for embodied instruction following,' arXiv preprint arXiv:2404.15190 , 2024."
+            },
+            {
+              "title": "Inner monologue: Embodied reasoning through planning with language models",
+              "citation": "W. Huang, F. Xia, T. Xiao, H. Chan, J. Liang, P. Florence, A. Zeng, J. Tompson, I. Mordatch, Y. Chebotar et al. , 'Inner monologue: Embodied reasoning through planning with language models,' in CoRL . PMLR, 2023, pp. 1769-1782."
+            },
+            {
+              "title": "Llm-planner: Few-shot grounded planning for embodied agents with large language models",
+              "citation": "C. H. Song, J. Wu, C. Washington, B. M. Sadler, W.-L. Chao, and Y. Su, 'Llm-planner: Few-shot grounded planning for embodied agents with large language models,' ICCV , pp. 2986-2997, 2022."
+            },
+            {
+              "title": "Socratic models: Composing zero-shot multimodal reasoning with language",
+              "citation": "A. Zeng, M. Attarian, K. M. Choromanski, A. Wong, S. Welker, F. Tombari, A. Purohit, M. S. Ryoo, V. Sindhwani, J. Lee et al. , 'Socratic models: Composing zero-shot multimodal reasoning with language,' in ICLR , 2023."
+            },
+            {
+              "title": "Llm-planner: Few-shot grounded planning for embodied agents with large language models",
+              "citation": "C. H. Song, J. Wu, C. Washington, B. M. Sadler, W.-L. Chao, and Y. Su, 'Llm-planner: Few-shot grounded planning for embodied agents with large language models,' ICCV , pp. 2986-2997, 2022."
+            },
+            {
+              "title": "Embodied task planning with large language models",
+              "citation": "Z. Wu, Z. Wang, X. Xu, J. Lu, and H. Yan, 'Embodied task planning with large language models,' arXiv preprint arXiv:2307.01848 , 2023."
+            },
+            {
+              "title": "Robogpt: an intelligent agent of making embodied long-term decisions for daily instruction tasks",
+              "citation": "Y. Chen, W. Cui, Y. Chen, M. Tan, X. Zhang, D. Zhao, and H. Wang, 'Robogpt: an intelligent agent of making embodied long-term decisions for daily instruction tasks,' arXiv preprint arXiv:2311.15649 , 2023."
+            },
+            {
+              "title": "Sayplan: Grounding large language models using 3d scene graphs for scalable task planning",
+              "citation": "K. Rana, J. Haviland, S. Garg, J. Abou-Chakra, I. D. Reid, and N. S¨ underhauf, 'Sayplan: Grounding large language models using 3d scene graphs for scalable task planning,' in CoRL , 2023."
+            },
+            {
+              "title": "Conceptgraphs: Open-vocabulary 3d scene graphs for perception and planning",
+              "citation": "Q. Gu, A. Kuwajerwala, S. Morin, K. M. Jatavallabhula, B. Sen, A. Agarwal, C. Rivera, W. Paul, K. Ellis, R. Chellappa, C. Gan, C. M. de Melo, J. B. Tenenbaum, A. Torralba, F. Shkurti, and L. Paull, 'Conceptgraphs: Open-vocabulary 3d scene graphs for perception and planning,' ArXiv , vol. abs/2309.16650, 2023."
+            },
+            {
+              "title": "Robogpt: an intelligent agent of making embodied long-term decisions for daily instruction tasks",
+              "citation": "Y. Chen, W. Cui, Y. Chen, M. Tan, X. Zhang, D. Zhao, and H. Wang, 'Robogpt: an intelligent agent of making embodied long-term decisions for daily instruction tasks,' arXiv preprint arXiv:2311.15649 , 2023."
+            },
+            {
+              "title": "Embodiedgpt: Vision-language pre-training via embodied chain of thought",
+              "citation": "Y. Mu, Q. Zhang, M. Hu, W. Wang, M. Ding, J. Jin, B. Wang, J. Dai, Y. Qiao, and P. Luo, 'Embodiedgpt: Vision-language pre-training via embodied chain of thought,' NeurIPS , vol. 36, 2024."
+            },
+            {
+              "title": "An embodied generalist agent in 3d world",
+              "citation": "J. Huang, S. Yong, X. Ma, X. Linghu, P. Li, Y. Wang, Q. Li, S.-C. Zhu, B. Jia, and S. Huang, 'An embodied generalist agent in 3d world,' in ICML , 2024."
+            },
+            {
+              "title": "Embodied instruction following in unknown environments",
+              "citation": "Z. Wu, Z. Wang, X. Xu, J. Lu, and H. Yan, 'Embodied instruction following in unknown environments,' 2024."
+            },
+            {
+              "title": "Rt-2: Vision-language-action models transfer web knowledge to robotic control",
+              "citation": "B. Zitkovich, T. Yu, S. Xu, P. Xu, T. Xiao, F. Xia, J. Wu, P. Wohlhart, S. Welker, A. Wahid et al. , 'Rt-2: Vision-language-action models transfer web knowledge to robotic control,' in CoRL , 2023, pp. 21652183."
+            },
+            {
+              "title": "Rt-1: Robotics transformer for real-world control at scale",
+              "citation": "A. Brohan, N. Brown, J. Carbajal, Y. Chebotar, J. Dabis, C. Finn, K. Gopalakrishnan, K. Hausman, A. Herzog, J. Hsu et al. , 'Rt-1: Robotics transformer for real-world control at scale,' arXiv preprint arXiv:2212.06817 , 2022."
+            },
+            {
+              "title": "Palm-e: an embodied multimodal language model",
+              "citation": "D. Driess, F. Xia, M. S. Sajjadi, C. Lynch, A. Chowdhery, B. Ichter, A. Wahid, J. Tompson, Q. Vuong, T. Yu et al. , 'Palm-e: an embodied multimodal language model,' in ICML , 2023, pp. 8469-8488."
+            },
+            {
+              "title": "Chat with the environment: Interactive multimodal perception using large language models",
+              "citation": "X. Zhao, M. Li, C. Weber, M. B. Hafez, and S. Wermter, 'Chat with the environment: Interactive multimodal perception using large language models,' in IROS , 2023, pp. 3590-3596."
+            },
+            {
+              "title": "Robogpt: an intelligent agent of making embodied long-term decisions for daily instruction tasks",
+              "citation": "Y. Chen, W. Cui, Y. Chen, M. Tan, X. Zhang, D. Zhao, and H. Wang, 'Robogpt: an intelligent agent of making embodied long-term decisions for daily instruction tasks,' arXiv preprint arXiv:2311.15649 , 2023."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "7.2",
+          "sec_title": "Embodied Action Planning",
+          "citations": [
+            {
+              "title": "A survey of optimization-based task and motion planning: From classical to learning approaches",
+              "citation": "Z. Zhao, S. Cheng, Y. Ding, Z. Zhou, S. Zhang, D. Xu, and Y. Zhao, 'A survey of optimization-based task and motion planning: From classical to learning approaches,' IEEE/ASME TMECH , pp. 1-27, 2024."
+            },
+            {
+              "title": "Llm-planner: Few-shot grounded planning for embodied agents with large language models",
+              "citation": "C. H. Song, J. Wu, C. Washington, B. M. Sadler, W.-L. Chao, and Y. Su, 'Llm-planner: Few-shot grounded planning for embodied agents with large language models,' ICCV , pp. 2986-2997, 2022."
+            },
+            {
+              "title": "Do as i can, not as i say: Grounding language in robotic affordances",
+              "citation": "A. Brohan, Y. Chebotar, C. Finn, K. Hausman, A. Herzog, D. Ho, J. Ibarz, A. Irpan, E. Jang, R. Julian et al. , 'Do as i can, not as i say: Grounding language in robotic affordances,' in CoRL , 2023, pp. 287-318."
+            },
+            {
+              "title": "Code as policies: Language model programs for embodied control",
+              "citation": "J. Liang, W. Huang, F. Xia, P. Xu, K. Hausman, B. Ichter, P. R. Florence, and A. Zeng, 'Code as policies: Language model programs for embodied control,' ICRA , pp. 9493-9500, 2022."
+            },
+            {
+              "title": "Reflexion: an autonomous agent with dynamic memory and self-reflection",
+              "citation": "N. Shinn, B. Labash, and A. Gopinath, 'Reflexion: an autonomous agent with dynamic memory and self-reflection,' ArXiv , vol. abs/2303.11366, 2023."
+            },
+            {
+              "title": "Describe, explain, plan and select: Interactive planning with large language models enables open-world multi-task agents",
+              "citation": "Z. Wang, S. Cai, A. Liu, X. Ma, and Y. Liang, 'Describe, explain, plan and select: Interactive planning with large language models enables open-world multi-task agents,' ArXiv , vol. abs/2302.01560, 2023."
+            },
+            {
+              "title": "Rt-2: Vision-language-action models transfer web knowledge to robotic control",
+              "citation": "B. Zitkovich, T. Yu, S. Xu, P. Xu, T. Xiao, F. Xia, J. Wu, P. Wohlhart, S. Welker, A. Wahid et al. , 'Rt-2: Vision-language-action models transfer web knowledge to robotic control,' in CoRL , 2023, pp. 21652183."
+            },
+            {
+              "title": "Embodiedgpt: Vision-language pre-training via embodied chain of thought",
+              "citation": "Y. Mu, Q. Zhang, M. Hu, W. Wang, M. Ding, J. Jin, B. Wang, J. Dai, Y. Qiao, and P. Luo, 'Embodiedgpt: Vision-language pre-training via embodied chain of thought,' NeurIPS , vol. 36, 2024."
+            },
+            {
+              "title": "Open x-embodiment: Robotic learning datasets and rt-x models",
+              "citation": "Q. Vuong, S. Levine, H. R. Walke, K. Pertsch, A. Singh, R. Doshi, C. Xu, J. Luo, L. Tan, D. Shah et al. , 'Open x-embodiment: Robotic learning datasets and rt-x models,' in Towards Generalist Robots: Learning Paradigms for Scalable Skill Acquisition@ CoRL2023 , 2023."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "SIM-TO-REAL ADAPTATION",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "8.1",
+          "sec_title": "Embodied World Model",
+          "citations": [
+            {
+              "title": "World models",
+              "citation": "D. Ha and J. Schmidhuber, 'World models,' arXiv preprint arXiv:1803.10122 , 2018."
+            },
+            {
+              "title": "Is sora a world simulator? a comprehensive survey on general world models and beyond",
+              "citation": "Z. Zhu, X. Wang, W. Zhao, C. Min, N. Deng, M. Dou, Y. Wang, B. Shi, K. Wang, C. Zhang et al. , 'Is sora a world simulator? a comprehensive survey on general world models and beyond,' arXiv preprint arXiv:2405.03520 , 2024."
+            },
+            {
+              "title": "Pandora: Towards general world model with natural language actions and video states",
+              "citation": "J. Xiang, G. Liu, Y. Gu, Q. Gao, Y. Ning, Y. Zha, Z. Feng, T. Tao, S. Hao, Y. Shi et al. , 'Pandora: Towards general world model with natural language actions and video states,' arXiv preprint arXiv:2406.09455 , 2024."
+            },
+            {
+              "title": "3d-vla: A 3d vision-language-action generative world model",
+              "citation": "H. Zhen, X. Qiu, P. Chen, J. Yang, X. Yan, Y. Du, Y. Hong, and C. Gan, '3d-vla: A 3d vision-language-action generative world model,' arXiv preprint arXiv:2403.09631 , 2024."
+            },
+            {
+              "title": "Diffusion world model",
+              "citation": "Z. Ding, A. Zhang, Y. Tian, and Q. Zheng, 'Diffusion world model,' arXiv preprint arXiv:2402.03570 , 2024."
+            },
+            {
+              "title": "Pandora: Towards general world model with natural language actions and video states",
+              "citation": "J. Xiang, G. Liu, Y. Gu, Q. Gao, Y. Ning, Y. Zha, Z. Feng, T. Tao, S. Hao, Y. Shi et al. , 'Pandora: Towards general world model with natural language actions and video states,' arXiv preprint arXiv:2406.09455 , 2024."
+            },
+            {
+              "title": "3d-vla: A 3d vision-language-action generative world model",
+              "citation": "H. Zhen, X. Qiu, P. Chen, J. Yang, X. Yan, Y. Du, Y. Hong, and C. Gan, '3d-vla: A 3d vision-language-action generative world model,' arXiv preprint arXiv:2403.09631 , 2024."
+            },
+            {
+              "title": "Self-supervised learning from images with a joint-embedding predictive architecture",
+              "citation": "M. Assran, Q. Duval, I. Misra, P. Bojanowski, P. Vincent, M. Rabbat, Y. LeCun, and N. Ballas, 'Self-supervised learning from images with a joint-embedding predictive architecture,' in CVPR , 2023, pp. 15 61915 629."
+            },
+            {
+              "title": "Mc-jepa: A joint-embedding predictive architecture for self-supervised learning of motion and content features",
+              "citation": "A. Bardes, J. Ponce, and Y. LeCun, 'Mc-jepa: A joint-embedding predictive architecture for self-supervised learning of motion and content features,' arXiv preprint arXiv:2307.12698 , 2023."
+            },
+            {
+              "title": "A-jepa: Joint-embedding predictive architecture can listen",
+              "citation": "Z. Fei, M. Fan, and J. Huang, 'A-jepa: Joint-embedding predictive architecture can listen,' arXiv preprint arXiv:2311.15830 , 2023."
+            },
+            {
+              "title": "Point-jepa: A joint embedding predictive architecture for self-supervised learning on point cloud",
+              "citation": "A. Saito and J. Poovvancheri, 'Point-jepa: A joint embedding predictive architecture for self-supervised learning on point cloud,' arXiv preprint arXiv:2404.16432 , 2024."
+            },
+            {
+              "title": "Learning and leveraging world models in visual representation learning",
+              "citation": "Q. Garrido, M. Assran, N. Ballas, A. Bardes, L. Najman, and Y. LeCun, 'Learning and leveraging world models in visual representation learning,' arXiv preprint arXiv:2403.00504 , 2024."
+            },
+            {
+              "title": "ivideogpt: Interactive videogpts are scalable world models",
+              "citation": "J. Wu, S. Yin, N. Feng, X. He, D. Li, J. Hao, and M. Long, 'ivideogpt: Interactive videogpts are scalable world models,' arXiv preprint arXiv:2405.15223 , 2024."
+            },
+            {
+              "title": "Irasim: Learning interactive real-robot action simulators",
+              "citation": "F. Zhu, H. Wu, S. Guo, Y. Liu, C. Cheang, and T. Kong, 'Irasim: Learning interactive real-robot action simulators,' arXiv preprint arXiv:2406.14540 , 2024."
+            },
+            {
+              "title": "Spatiotemporal predictive pre-training for robotic motor control",
+              "citation": "J. Yang, B. Liu, J. Fu, B. Pan, G. Wu, and L. Wang, 'Spatiotemporal predictive pre-training for robotic motor control,' arXiv preprint arXiv:2403.05304 , 2024."
+            },
+            {
+              "title": "Mudreamer: Learning predictive world models without reconstruction",
+              "citation": "M. Burchi and R. Timofte, 'Mudreamer: Learning predictive world models without reconstruction,' arXiv preprint arXiv:2405.15083 , 2024."
+            },
+            {
+              "title": "A path towards autonomous machine intelligence version 0.9. 2, 2022-06-27",
+              "citation": "Y. LeCun, 'A path towards autonomous machine intelligence version 0.9. 2, 2022-06-27,' Open Review , vol. 62, no. 1, pp. 1-62, 2022."
+            },
+            {
+              "title": "ivideogpt: Interactive videogpts are scalable world models",
+              "citation": "J. Wu, S. Yin, N. Feng, X. He, D. Li, J. Hao, and M. Long, 'ivideogpt: Interactive videogpts are scalable world models,' arXiv preprint arXiv:2405.15223 , 2024."
+            },
+            {
+              "title": "Spatiotemporal predictive pre-training for robotic motor control",
+              "citation": "J. Yang, B. Liu, J. Fu, B. Pan, G. Wu, and L. Wang, 'Spatiotemporal predictive pre-training for robotic motor control,' arXiv preprint arXiv:2403.05304 , 2024."
+            },
+            {
+              "title": "Mudreamer: Learning predictive world models without reconstruction",
+              "citation": "M. Burchi and R. Timofte, 'Mudreamer: Learning predictive world models without reconstruction,' arXiv preprint arXiv:2405.15083 , 2024."
+            },
+            {
+              "title": "Self-supervised learning from images with a joint-embedding predictive architecture",
+              "citation": "M. Assran, Q. Duval, I. Misra, P. Bojanowski, P. Vincent, M. Rabbat, Y. LeCun, and N. Ballas, 'Self-supervised learning from images with a joint-embedding predictive architecture,' in CVPR , 2023, pp. 15 61915 629."
+            },
+            {
+              "title": "Mc-jepa: A joint-embedding predictive architecture for self-supervised learning of motion and content features",
+              "citation": "A. Bardes, J. Ponce, and Y. LeCun, 'Mc-jepa: A joint-embedding predictive architecture for self-supervised learning of motion and content features,' arXiv preprint arXiv:2307.12698 , 2023."
+            },
+            {
+              "title": "Learning and leveraging world models in visual representation learning",
+              "citation": "Q. Garrido, M. Assran, N. Ballas, A. Bardes, L. Najman, and Y. LeCun, 'Learning and leveraging world models in visual representation learning,' arXiv preprint arXiv:2403.00504 , 2024."
+            },
+            {
+              "title": "Introduction to latent variable energybased models: A path towards autonomous machine intelligence",
+              "citation": "A. Dawid and Y. LeCun, 'Introduction to latent variable energybased models: A path towards autonomous machine intelligence,' arXiv preprint arXiv:2306.02572 , 2023."
+            },
+            {
+              "title": "Mudreamer: Learning predictive world models without reconstruction",
+              "citation": "M. Burchi and R. Timofte, 'Mudreamer: Learning predictive world models without reconstruction,' arXiv preprint arXiv:2405.15083 , 2024."
+            },
+            {
+              "title": "Real2sim2real: Self-supervised learning of physical single-step dynamic actions for planar robot casting",
+              "citation": "V. Lim, H. Huang, L. Y. Chen, J. Wang, J. Ichnowski, D. Seita, M. Laskey, and K. Goldberg, 'Real2sim2real: Self-supervised learning of physical single-step dynamic actions for planar robot casting,' in ICRA , 2022, pp. 8282-8289."
+            },
+            {
+              "title": "Elastogen: 4d generative elastodynamics",
+              "citation": "Y. Feng, Y. Shang, X. Feng, L. Lan, S. Zhe, T. Shao, H. Wu, K. Zhou, H. Su, C. Jiang et al. , 'Elastogen: 4d generative elastodynamics,' arXiv preprint arXiv:2405.15056 , 2024."
+            },
+            {
+              "title": "One2-3-45: Any single image to 3d mesh in 45 seconds without per-shape optimization",
+              "citation": "M. Liu, C. Xu, H. Jin, L. Chen, M. Varma T, Z. Xu, and H. Su, 'One2-3-45: Any single image to 3d mesh in 45 seconds without per-shape optimization,' NeurIPS , vol. 36, 2024."
+            },
+            {
+              "title": "From word models to world models: Translating from natural language to the probabilistic language of thought",
+              "citation": "L. Wong, G. Grand, A. K. Lew, N. D. Goodman, V. K. Mansinghka, J. Andreas, and J. B. Tenenbaum, 'From word models to world models: Translating from natural language to the probabilistic language of thought,' arXiv preprint arXiv:2306.12672 , 2023."
+            },
+            {
+              "title": "Holodeck: Language guided generation of 3d embodied ai environments",
+              "citation": "Y. Yang, F.-Y. Sun, L. Weihs, E. VanderBilt, A. Herrasti, W. Han, J. Wu, N. Haber, R. Krishna, L. Liu et al. , 'Holodeck: Language guided generation of 3d embodied ai environments,' in CVPR , 2024, pp. 16 227-16 237."
+            },
+            {
+              "title": "Legent: Open platform for embodied agents",
+              "citation": "Z. Cheng, Z. Wang, J. Hu, S. Hu, A. Liu, Y. Tu, P. Li, L. Shi, Z. Liu, and M. Sun, 'Legent: Open platform for embodied agents,' arXiv preprint arXiv:2404.18243 , 2024."
+            },
+            {
+              "title": "Grutopia: Dream general robots in a city at scale",
+              "citation": "H. Wang, J. Chen, W. Huang, Q. Ben, T. Wang, B. Mi, T. Huang, S. Zhao, Y. Chen, S. Yang et al. , 'Grutopia: Dream general robots in a city at scale,' arXiv preprint arXiv:2407.10943 , 2024."
+            },
+            {
+              "title": "Cosmos world foundation model platform for physical ai",
+              "citation": "N. Agarwal, A. Ali, M. Bala, Y. Balaji, E. Barker, T. Cai, P. Chattopadhyay, Y. Chen, Y. Cui, Y. Ding et al. , 'Cosmos world foundation model platform for physical ai,' arXiv preprint arXiv:2501.03575 , 2025."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "8.2",
+          "sec_title": "Data Collection and Training",
+          "citations": [
+            {
+              "title": "Open x-embodiment: Robotic learning datasets and rt-x models",
+              "citation": "Q. Vuong, S. Levine, H. R. Walke, K. Pertsch, A. Singh, R. Doshi, C. Xu, J. Luo, L. Tan, D. Shah et al. , 'Open x-embodiment: Robotic learning datasets and rt-x models,' in Towards Generalist Robots: Learning Paradigms for Scalable Skill Acquisition@ CoRL2023 , 2023."
+            },
+            {
+              "title": "Universal manipulation interface: In-the-wild robot teaching without in-the-wild robots",
+              "citation": "C. Chi, Z. Xu, C. Pan, E. Cousineau, B. Burchfiel, S. Feng, R. Tedrake, and S. Song, 'Universal manipulation interface: In-the-wild robot teaching without in-the-wild robots,' arXiv preprint arXiv:2402.10329 , 2024."
+            },
+            {
+              "title": "Mobile aloha: Learning bimanual mobile manipulation with low-cost whole-body teleoperation",
+              "citation": "Z. Fu, T. Z. Zhao, and C. Finn, 'Mobile aloha: Learning bimanual mobile manipulation with low-cost whole-body teleoperation,' arXiv preprint arXiv:2401.02117 , 2024."
+            },
+            {
+              "title": "Human-agent joint learning for efficient robot manipulation skill acquisition",
+              "citation": "S. Luo, Q. Peng, J. Lv, K. Hong, K. R. Driggs-Campbell, C. Lu, and Y.-L. Li, 'Human-agent joint learning for efficient robot manipulation skill acquisition,' arXiv preprint arXiv:2407.00299 , 2024."
+            },
+            {
+              "title": "Cliport: What and where pathways for robotic manipulation",
+              "citation": "M. Shridhar, L. Manuelli, and D. Fox, 'Cliport: What and where pathways for robotic manipulation,' in CoRL . PMLR, 2022, pp. 894906."
+            },
+            {
+              "title": "Transporter networks: Rearranging the visual world for robotic manipulation",
+              "citation": "A. Zeng, P. Florence, J. Tompson, S. Welker, J. Chien, M. Attarian, T. Armstrong, I. Krasin, D. Duong, V. Sindhwani et al. , 'Transporter networks: Rearranging the visual world for robotic manipulation,' in CoRL . PMLR, 2021, pp. 726-747."
+            },
+            {
+              "title": "Gapartnet: Cross-category domain-generalizable object perception and manipulation via generalizable and actionable parts",
+              "citation": "H. Geng, H. Xu, C. Zhao, C. Xu, L. Yi, S. Huang, and H. Wang, 'Gapartnet: Cross-category domain-generalizable object perception and manipulation via generalizable and actionable parts,' in CVPR , 2023, pp. 7081-7091."
+            },
+            {
+              "title": "Semgrasp: Semantic grasp generation via language aligned discretization",
+              "citation": "K. Li, J. Wang, L. Yang, C. Lu, and B. Dai, 'Semgrasp: Semantic grasp generation via language aligned discretization,' arXiv preprint arXiv:2404.03590 , 2024."
+            },
+            {
+              "title": "Reconciling reality through simulation: A realto-sim-to-real approach for robust manipulation",
+              "citation": "M. Torne, A. Simeonov, Z. Li, A. Chan, T. Chen, A. Gupta, and P. Agrawal, 'Reconciling reality through simulation: A realto-sim-to-real approach for robust manipulation,' arXiv preprint arXiv:2403.03949 , 2024."
+            },
+            {
+              "title": "Transic: Sim-toreal policy transfer by learning from online correction",
+              "citation": "Y. Jiang, C. Wang, R. Zhang, J. Wu, and L. Fei-Fei, 'Transic: Sim-toreal policy transfer by learning from online correction,' arXiv preprint arXiv:2405.10315 , 2024."
+            },
+            {
+              "title": "Domain randomization for transferring deep neural networks from simulation to the real world",
+              "citation": "J. Tobin, R. Fong, A. Ray, J. Schneider, W. Zaremba, and P. Abbeel, 'Domain randomization for transferring deep neural networks from simulation to the real world,' in IROS , 2017, pp. 23-30."
+            },
+            {
+              "title": "Sim-to-real reinforcement learning for deformable object manipulation",
+              "citation": "J. Matas, S. James, and A. J. Davison, 'Sim-to-real reinforcement learning for deformable object manipulation,' in CoRL . PMLR, 2018, pp. 734-743."
+            },
+            {
+              "title": "Sim2real transfer for reinforcement learning without dynamics randomization",
+              "citation": "M. Kaspar, J. D. M. Osorio, and J. Bock, 'Sim2real transfer for reinforcement learning without dynamics randomization,' in IROS , 2020, pp. 4383-4388."
+            },
+            {
+              "title": "Preparing for the unknown: Learning a universal policy with online system identification",
+              "citation": "W. Yu, J. Tan, C. K. Liu, and G. Turk, 'Preparing for the unknown: Learning a universal policy with online system identification,' arXiv preprint arXiv:1702.02453 , 2017."
+            },
+            {
+              "title": "Natural language can help bridge the sim2real gap",
+              "citation": "A. Yu, A. Foote, R. Mooney, and R. Mart´ ın-Mart´ ın, 'Natural language can help bridge the sim2real gap,' arXiv preprint arXiv:2405.10020 , 2024."
+            },
+            {
+              "title": "All robots in one: A new standard and unified dataset for versatile, general-purpose embodied agents",
+              "citation": "Z. Wang, H. Zheng, Y. Nie, W. Xu, Q. Wang, H. Ye, Z. Li, K. Zhang, X. Cheng, W. Dong et al. , 'All robots in one: A new standard and unified dataset for versatile, general-purpose embodied agents,' arXiv preprint arXiv:2408.10899 , 2024."
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "9",
+      "sec_title": "CHALLENGES AND FUTURE DIRECTIONS",
+      "citations": [],
+      "subsections": []
+    },
+    {
+      "sec_id": "10",
+      "sec_title": "CONCLUSION",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}

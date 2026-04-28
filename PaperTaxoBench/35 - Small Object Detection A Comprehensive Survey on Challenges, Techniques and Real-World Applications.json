@@ -1,0 +1,977 @@
+{
+  "track": "Object Detection",
+  "paper_title": "Small Object Detection: A Comprehensive Survey on Challenges, Techniques and Real-World Applications",
+  "outline": [
+    {
+      "sec_id": "1",
+      "sec_title": "Introduction",
+      "citations": [
+        {
+          "title": "Towards Large-Scale Small Object Detection: Survey and Benchmarks",
+          "citation": "Cheng, G., Yuan, X., Yao, X., Yan, K., Zeng, Q., Xie, X., &amp; Han, J (2023) Towards Large-Scale Small Object Detection: Survey and Benchmarks. IEEE Transactions on Pattern Analysis and Machine Intelligence, 45(11): 13467-13488. https://doi.org/10.1109/TPAMI.2023.3290594"
+        },
+        {
+          "title": "Small object detection in diverse application landscapes: a survey",
+          "citation": "Iqra, Giri, K. J., &amp; Javed, M (2024) Small object detection in diverse application landscapes: a survey. Multimedia Tools and Applications 26:88645-88680. https://doi.org/10.1007/s11042024-18866-w"
+        },
+        {
+          "title": "Deep learning-based small object detection: A survey",
+          "citation": "Feng,  Q.,  Xu,  X.,  &amp;  Wang,  Z  (2023)  Deep  learning-based  small  object  detection: A  survey. Mathematical Biosciences and Engineering 20(4),: 6551-6590. https://doi.org/10.3934/mbe.2023282"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "2",
+      "sec_title": "Definitions and Background",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "2.1",
+          "sec_title": "Pixel-Based Definitions",
+          "citations": [
+            {
+              "title": "RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images",
+              "citation": "Chen, C., Zeng, W., Zhang, X., Zhou, Y., Yu, J., Chang, Y ., &amp; Wang, F (2024) RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images. IEEE Transactions on Geoscience and Remote Sensing. https://doi.org/10.1109/TGRS.2024.3482358"
+            },
+            {
+              "title": "MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images",
+              "citation": "Jiang, L., Yuan, B., Du, J., Chen, B., Xie, H., Tian, J., &amp; Yuan, Z (2024) MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images. IEEE Transactions on Instrumentation and Measurement, 73: 1-14. https://doi.org/10.1109/TIM.2024.3381272"
+            },
+            {
+              "title": "LA-YOLO: Bidirectional Adaptive Feature Fusion Approach for Small Object Detection of Insulator Self-explosion Defects",
+              "citation": "Liu, B., &amp; Jiang, W (2024) LA-YOLO: Bidirectional Adaptive Feature Fusion Approach for Small Object Detection of Insulator Self-explosion Defects. IEEE Transactions on Power Delivery. https://doi.org/10.1109/TPWRD.2024.3467915"
+            },
+            {
+              "title": "ScorePillar: A Real-Time Small Object Detection Method Based on Pillar Scoring of Lidar Measurement",
+              "citation": "Cao, Z., Wang, T., Sun, P., Cao, F., Shao, S., &amp; Wang, S (2024) ScorePillar: A Real-Time Small Object Detection Method Based on Pillar Scoring of Lidar Measurement. IEEE Transactions on Instrumentation and Measurement 73: 1-13. https://doi.org/10.1109/TIM.2024.3378251"
+            },
+            {
+              "title": "Object feedback and feature information retention for small object detection in intelligent transportation scenes",
+              "citation": "Tian, D., Han, Y., &amp; Wang, S (2024) Object feedback and feature information retention for small object detection in intelligent transportation scenes. Expert Systems with Applications 238: 121811. https://doi.org/10.1016/J.ESWA.2023.121811"
+            },
+            {
+              "title": "SOLO-Net: A Sparser but Wiser Method for Small Object Detection in Remote-Sensing Images",
+              "citation": "Lei, M., &amp; Liu, X (2024) SOLO-Net: A Sparser but Wiser Method for Small Object Detection in Remote-Sensing Images. IEEE Geoscience and Remote Sensing Letters 21:1-5. https://doi.org/10.1109/LGRS.2023.3337807"
+            },
+            {
+              "title": "ScorePillar: A Real-Time Small Object Detection Method Based on Pillar Scoring of Lidar Measurement",
+              "citation": "Cao, Z., Wang, T., Sun, P., Cao, F., Shao, S., &amp; Wang, S (2024) ScorePillar: A Real-Time Small Object Detection Method Based on Pillar Scoring of Lidar Measurement. IEEE Transactions on Instrumentation and Measurement 73: 1-13. https://doi.org/10.1109/TIM.2024.3378251"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.2",
+          "sec_title": "Relative Size Criteria",
+          "citations": [
+            {
+              "title": "MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images",
+              "citation": "Jiang, L., Yuan, B., Du, J., Chen, B., Xie, H., Tian, J., &amp; Yuan, Z (2024) MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images. IEEE Transactions on Instrumentation and Measurement, 73: 1-14. https://doi.org/10.1109/TIM.2024.3381272"
+            },
+            {
+              "title": "A Small-Object Detection Model Based on Improved YOLOv8s for UAV Image Scenarios",
+              "citation": "Ni, J., Zhu, S., Tang, G., Ke, C., &amp; Wang, T (2024) A Small-Object Detection Model Based on Improved  YOLOv8s for UAV Image Scenarios. Remote Sensing 2024 16:2465. https://doi.org/10.3390/RS16132465"
+            },
+            {
+              "title": "Small object detection using deep feature learning and feature fusion network",
+              "citation": "Tong, K., &amp; Wu, Y (2024) Small object detection using deep feature learning and feature fusion network. Engineering Applications of Artificial Intelligence 132: 107931. https://doi.org/10.1016/J.ENGAPPAI.2024.107931"
+            },
+            {
+              "title": "Small Object Detection in Remote Sensing Images Based on Redundant Feature Removal and Progressive Regression",
+              "citation": "Yang, Y., Zang, B., Song, C., Li, B., Lang, Y ., Zhang, W., &amp; Huo, P (2024) Small Object Detection in  Remote  Sensing  Images  Based  on  Redundant  Feature  Removal  and  Progressive Regression. IEEE Transactions on Geoscience and Remote Sensing, 62. https://doi.org/10.1109/TGRS.2024.3417960"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.3",
+          "sec_title": "Categorization of Small Objects",
+          "citations": [
+            {
+              "title": "RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images",
+              "citation": "Chen, C., Zeng, W., Zhang, X., Zhou, Y., Yu, J., Chang, Y ., &amp; Wang, F (2024) RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images. IEEE Transactions on Geoscience and Remote Sensing. https://doi.org/10.1109/TGRS.2024.3482358"
+            },
+            {
+              "title": "Small object detection using deep feature learning and feature fusion network",
+              "citation": "Tong, K., &amp; Wu, Y (2024) Small object detection using deep feature learning and feature fusion network. Engineering Applications of Artificial Intelligence 132: 107931. https://doi.org/10.1016/J.ENGAPPAI.2024.107931"
+            },
+            {
+              "title": "A Small-Object Detection Based Scheme for Multiplexed Frequency Hopping Recognition in Complex Electromagnetic Interference",
+              "citation": "Chen, Z., Shi, Y., Wang, Y., Jiang, L., Yu, X., &amp; Li, X (2024) A Small-Object Detection Based Scheme  for  Multiplexed  Frequency  Hopping  Recognition  in  Complex  Electromagnetic Interference. IEEE Communications Letters, 28(4): 902-906. https://doi.org/10.1109/LCOMM.2024.3363167"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "2.4",
+          "sec_title": "Challenges Highlighted by Definitions",
+          "citations": [
+            {
+              "title": "Improved YOLOv8 algorithms for small object detection in aerial imagery",
+              "citation": "Feng, F., Hu, Y ., Li, W., &amp; Yang, F (2024) Improved YOLOv8 algorithms for small object detection in aerial imagery. Journal of King Saud University - Computer and Information Sciences,"
+            },
+            {
+              "title": "An efficient model for small object detection in the maritime environment",
+              "citation": "Shao, Z., Yin, Y., Lyu, H., Guedes Soares, C., Cheng, T., Jing, Q., &amp; Yang, Z (2024) An efficient model for small object detection in the maritime environment. Applied Ocean Research 152: 104194. https://doi.org/10.1016/J.APOR.2024.104194"
+            },
+            {
+              "title": "Improved YOLOv8 algorithms for small object detection in aerial imagery",
+              "citation": "Feng, F., Hu, Y ., Li, W., &amp; Yang, F (2024) Improved YOLOv8 algorithms for small object detection in aerial imagery. Journal of King Saud University - Computer and Information Sciences,"
+            },
+            {
+              "title": "An efficient model for small object detection in the maritime environment",
+              "citation": "Shao, Z., Yin, Y., Lyu, H., Guedes Soares, C., Cheng, T., Jing, Q., &amp; Yang, Z (2024) An efficient model for small object detection in the maritime environment. Applied Ocean Research 152: 104194. https://doi.org/10.1016/J.APOR.2024.104194"
+            },
+            {
+              "title": "Improved YOLOv8 algorithms for small object detection in aerial imagery",
+              "citation": "Feng, F., Hu, Y ., Li, W., &amp; Yang, F (2024) Improved YOLOv8 algorithms for small object detection in aerial imagery. Journal of King Saud University - Computer and Information Sciences,"
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "3",
+      "sec_title": "Challenges in SOD",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "3.1",
+          "sec_title": "Limited Appearance Information and Occlusion",
+          "citations": [
+            {
+              "title": "TA-YOLO: a lightweight small object detection model based on multi-dimensional trans-attention module for remote sensing images",
+              "citation": "Li, M., Chen, Y., Zhang, T., &amp; Huang, W (2024) TA-YOLO: a lightweight small object detection model  based  on  multi-dimensional  trans-attention  module  for  remote  sensing  images. Complex  and  Intelligent  Systems  10(4):  5459-5473.  https://doi.org/10.1007/S40747-02401448-6/TABLES/7"
+            },
+            {
+              "title": "A small object detection method with context information for high altitude images",
+              "citation": "Ma, Z.,  Zhou,  L., Wu,  D.,  &amp;  Zhang,  X  (2025) A  small  object  detection  method  with  context information for high altitude images. Pattern Recognition Letters 188: 22-28. https://doi.org/10.1016/J.PATREC.2024.11.027"
+            },
+            {
+              "title": "An Efficient Rep-Style GaussianWasserstein Network: Improved UAV Infrared Small Object Detection for Urban Road Surveillance and Safety",
+              "citation": "Aibibu,  T.,  Lan,  J.,  Zeng,  Y .,  Lu,  W.,  &amp;  Gu,  N  (2023b)  An  Efficient  Rep-Style  GaussianWasserstein  Network:  Improved  UAV  Infrared  Small  Object  Detection  for  Urban  Road Surveillance and Safety. Remote Sensing 2024 16:25. https://doi.org/10.3390/RS16010025"
+            },
+            {
+              "title": "A small object detection method with context information for high altitude images",
+              "citation": "Ma, Z.,  Zhou,  L., Wu,  D.,  &amp;  Zhang,  X  (2025) A  small  object  detection  method  with  context information for high altitude images. Pattern Recognition Letters 188: 22-28. https://doi.org/10.1016/J.PATREC.2024.11.027"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.2",
+          "sec_title": "Challenges in Localization and Scale Variation",
+          "citations": [
+            {
+              "title": "TA-YOLO: a lightweight small object detection model based on multi-dimensional trans-attention module for remote sensing images",
+              "citation": "Li, M., Chen, Y., Zhang, T., &amp; Huang, W (2024) TA-YOLO: a lightweight small object detection model  based  on  multi-dimensional  trans-attention  module  for  remote  sensing  images. Complex  and  Intelligent  Systems  10(4):  5459-5473.  https://doi.org/10.1007/S40747-02401448-6/TABLES/7"
+            },
+            {
+              "title": "RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images",
+              "citation": "Chen, C., Zeng, W., Zhang, X., Zhou, Y., Yu, J., Chang, Y ., &amp; Wang, F (2024) RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images. IEEE Transactions on Geoscience and Remote Sensing. https://doi.org/10.1109/TGRS.2024.3482358"
+            },
+            {
+              "title": "Multi-YOLOv8: An infrared moving small object detection model based on YOLOv8 for air vehicle",
+              "citation": "Sun, S., Mo, B., Xu, J., Li, D., Zhao, J., &amp; Han, S (2024) Multi-YOLOv8: An infrared moving small  object  detection  model  based  on  YOLOv8  for  air  vehicle.  Neurocomputing  588: 127685. https://doi.org/10.1016/J.NEUCOM.2024.127685"
+            },
+            {
+              "title": "Small object detection in unmanned aerial",
+              "citation": "Song, G., Du, H., Zhang, X., Bao, F., &amp; Zhang, Y (2024) Small object detection in unmanned aerial"
+            },
+            {
+              "title": "Libra-SOD: Balanced label assignment for small object detection",
+              "citation": "Zhou, Z., &amp; Zhu, Y (2024) Libra-SOD: Balanced label assignment for small object detection. Knowledge-Based Systems 302: 112353. https://doi.org/10.1016/J.KNOSYS.2024.112353"
+            },
+            {
+              "title": "LARS: Remote Sensing Small Object Detection Network Based on Adaptive Channel Attention and Large Kernel Adaptation",
+              "citation": "Li, Y., Yang, Y ., An, Y ., Sun, Y ., &amp; Zhu, Z (2024) LARS: Remote Sensing Small Object Detection Network  Based  on  Adaptive  Channel  Attention  and  Large  Kernel  Adaptation.  Remote Sensing 2024 16(16): 2906. https://doi.org/10.3390/RS16162906"
+            },
+            {
+              "title": "A Lightweight Small Object Detection Method Based on Multilayer Coordination Federated Intelligence for Coal Mine IoVT",
+              "citation": "Wu, J., Zheng, R., Jiang, J., Tian, Z., Chen, W., Wang, Z., Yu, F. R., &amp; Leung, V. C. M (2024) A Lightweight Small Object Detection Method Based on Multilayer Coordination Federated Intelligence  for  Coal  Mine  IoVT.  IEEE  Internet  of  Things  Journal  11:  20072-20087. https://doi.org/10.11"
+            },
+            {
+              "title": "A Small-Object Detection Based Scheme for Multiplexed Frequency Hopping Recognition in Complex Electromagnetic Interference",
+              "citation": "Chen, Z., Shi, Y., Wang, Y., Jiang, L., Yu, X., &amp; Li, X (2024) A Small-Object Detection Based Scheme  for  Multiplexed  Frequency  Hopping  Recognition  in  Complex  Electromagnetic Interference. IEEE Communications Letters, 28(4): 902-906. https://doi.org/10.1109/LCOMM.2024.3363167"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.3",
+          "sec_title": "Inefficiency in Feature Learning and Background Interference",
+          "citations": [
+            {
+              "title": "TA-YOLO: a lightweight small object detection model based on multi-dimensional trans-attention module for remote sensing images",
+              "citation": "Li, M., Chen, Y., Zhang, T., &amp; Huang, W (2024) TA-YOLO: a lightweight small object detection model  based  on  multi-dimensional  trans-attention  module  for  remote  sensing  images. Complex  and  Intelligent  Systems  10(4):  5459-5473.  https://doi.org/10.1007/S40747-02401448-6/TABLES/7"
+            },
+            {
+              "title": "RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images",
+              "citation": "Chen, C., Zeng, W., Zhang, X., Zhou, Y., Yu, J., Chang, Y ., &amp; Wang, F (2024) RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images. IEEE Transactions on Geoscience and Remote Sensing. https://doi.org/10.1109/TGRS.2024.3482358"
+            },
+            {
+              "title": "Small Object Detection in UAV Remote Sensing Images Based on Intra-Group Multi-Scale Fusion Attention and Adaptive Weighted Feature Fusion Mechanism",
+              "citation": "Yuan, Z., Gong, J., Guo, B., Wang, C., Liao, N., Song, J., &amp; Wu, Q (2019) Small Object Detection in  UAV Remote Sensing Images Based on Intra-Group Multi-Scale Fusion Attention and Adaptive Weighted Feature Fusion Mechanism 22:4265. https://doi.org/10.3390/rs16224265"
+            },
+            {
+              "title": "ESL-YOLO: Small Object Detection with Effective Feature Enhancement and Spatial-Context-Guided Fusion Network for Remote Sensing",
+              "citation": "Zheng, X., Qiu, Y., Zhang, G., Lei, T., &amp; Jiang, P (2024)  ESL-YOLO: Small Object Detection with  Effective  Feature  Enhancement  and  Spatial-Context-Guided  Fusion  Network  for Remote Sensing. Remote Sensing 2024 16:4374. https://doi.org/10.3390/RS16234374"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.4",
+          "sec_title": "Limitations of Popular Detection Methods",
+          "citations": [
+            {
+              "title": "LA-YOLO: Bidirectional Adaptive Feature Fusion Approach for Small Object Detection of Insulator Self-explosion Defects",
+              "citation": "Liu, B., &amp; Jiang, W (2024) LA-YOLO: Bidirectional Adaptive Feature Fusion Approach for Small Object Detection of Insulator Self-explosion Defects. IEEE Transactions on Power Delivery. https://doi.org/10.1109/TPWRD.2024.3467915"
+            },
+            {
+              "title": "TA-YOLO: a lightweight small object detection model based on multi-dimensional trans-attention module for remote sensing images",
+              "citation": "Li, M., Chen, Y., Zhang, T., &amp; Huang, W (2024) TA-YOLO: a lightweight small object detection model  based  on  multi-dimensional  trans-attention  module  for  remote  sensing  images. Complex  and  Intelligent  Systems  10(4):  5459-5473.  https://doi.org/10.1007/S40747-02401448-6/TABLES/7"
+            },
+            {
+              "title": "RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images",
+              "citation": "Chen, C., Zeng, W., Zhang, X., Zhou, Y., Yu, J., Chang, Y ., &amp; Wang, F (2024) RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images. IEEE Transactions on Geoscience and Remote Sensing. https://doi.org/10.1109/TGRS.2024.3482358"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.5",
+          "sec_title": "High Computational Costs and Hardware Resource Limitations",
+          "citations": [
+            {
+              "title": "MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images",
+              "citation": "Jiang, L., Yuan, B., Du, J., Chen, B., Xie, H., Tian, J., &amp; Yuan, Z (2024) MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images. IEEE Transactions on Instrumentation and Measurement, 73: 1-14. https://doi.org/10.1109/TIM.2024.3381272"
+            },
+            {
+              "title": "LA-YOLO: Bidirectional Adaptive Feature Fusion Approach for Small Object Detection of Insulator Self-explosion Defects",
+              "citation": "Liu, B., &amp; Jiang, W (2024) LA-YOLO: Bidirectional Adaptive Feature Fusion Approach for Small Object Detection of Insulator Self-explosion Defects. IEEE Transactions on Power Delivery. https://doi.org/10.1109/TPWRD.2024.3467915"
+            },
+            {
+              "title": "Small object detection in unmanned aerial",
+              "citation": "Song, G., Du, H., Zhang, X., Bao, F., &amp; Zhang, Y (2024) Small object detection in unmanned aerial"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.6",
+          "sec_title": "Inconsistent Performance Across Different Scales and Datasets",
+          "citations": [
+            {
+              "title": "MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images",
+              "citation": "Jiang, L., Yuan, B., Du, J., Chen, B., Xie, H., Tian, J., &amp; Yuan, Z (2024) MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images. IEEE Transactions on Instrumentation and Measurement, 73: 1-14. https://doi.org/10.1109/TIM.2024.3381272"
+            },
+            {
+              "title": "Small object detection using deep feature learning and feature fusion network",
+              "citation": "Tong, K., &amp; Wu, Y (2024) Small object detection using deep feature learning and feature fusion network. Engineering Applications of Artificial Intelligence 132: 107931. https://doi.org/10.1016/J.ENGAPPAI.2024.107931"
+            },
+            {
+              "title": "MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images",
+              "citation": "Jiang, L., Yuan, B., Du, J., Chen, B., Xie, H., Tian, J., &amp; Yuan, Z (2024) MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images. IEEE Transactions on Instrumentation and Measurement, 73: 1-14. https://doi.org/10.1109/TIM.2024.3381272"
+            },
+            {
+              "title": "Libra-SOD: Balanced label assignment for small object detection",
+              "citation": "Zhou, Z., &amp; Zhu, Y (2024) Libra-SOD: Balanced label assignment for small object detection. Knowledge-Based Systems 302: 112353. https://doi.org/10.1016/J.KNOSYS.2024.112353"
+            },
+            {
+              "title": "A size-distinguishing miniature electromagnetic tomography sensor for small object detection",
+              "citation": "Zou, X., She, S., Xia, Z., Shao, Y ., Zhang, Z., Chen, Z., Zheng, X., Yu, K., &amp; Yin, W (2024) A sizedistinguishing miniature electromagnetic tomography sensor for small object detection. NDT &amp; E International 148: 103219. https://doi.org/10.1016/J.NDTEINT.2024.103219"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "3.7",
+          "sec_title": "Solutions and Emerging Approaches",
+          "citations": [
+            {
+              "title": "RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images",
+              "citation": "Chen, C., Zeng, W., Zhang, X., Zhou, Y., Yu, J., Chang, Y ., &amp; Wang, F (2024) RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images. IEEE Transactions on Geoscience and Remote Sensing. https://doi.org/10.1109/TGRS.2024.3482358"
+            },
+            {
+              "title": "Object feedback and feature information retention for small object detection in intelligent transportation scenes",
+              "citation": "Tian, D., Han, Y., &amp; Wang, S (2024) Object feedback and feature information retention for small object detection in intelligent transportation scenes. Expert Systems with Applications 238: 121811. https://doi.org/10.1016/J.ESWA.2023.121811"
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "4",
+      "sec_title": "Deep Learning Techniques for SOD",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "4.1",
+          "sec_title": "Recent Trends",
+          "citations": [
+            {
+              "title": "Multiple Teachers-Meticulous Student: A Domain Adaptive Meta-Knowledge Distillation Model for Medical Image Classification",
+              "citation": "Nabavi, S., Anvari Hamedani, K., Ebrahimi Moghaddam, M., Ali Abin, A., Frangi, A. F., &amp; Author, C  (2024)  Multiple  Teachers-Meticulous  Student:  A  Domain  Adaptive  Meta-Knowledge Distillation Model for Medical Image Classification. https://arxiv.org/abs/2403.11226v2"
+            },
+            {
+              "title": "Statistical Distance-Guided Unsupervised Domain Adaptation for Automated Multi-Class Cardiovascular Magnetic Resonance Image Quality Assessment",
+              "citation": "Nabavi, S., Hamedani, K. A., Moghaddam, M. E., Abin, A. A., &amp; Frangi, A. F (2024) Statistical Distance-Guided Unsupervised Domain Adaptation for Automated Multi-Class Cardiovascular Magnetic Resonance Image Quality Assessment. https://arxiv.org/abs/2409.00375v1"
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.1.1",
+              "sec_title": "Model Optimization and Lightweight Architectures",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.2",
+              "sec_title": "Feature Fusion and Multi-Scale Detection",
+              "citations": [
+                {
+                  "title": "MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images",
+                  "citation": "Jiang, L., Yuan, B., Du, J., Chen, B., Xie, H., Tian, J., &amp; Yuan, Z (2024) MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images. IEEE Transactions on Instrumentation and Measurement, 73: 1-14. https://doi.org/10.1109/TIM.2024.3381272"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.3",
+              "sec_title": "Anchor-Free and Transformer-Based Approaches",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.4",
+              "sec_title": "Advanced Data Augmentation Techniques",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.5",
+              "sec_title": "Integration of Multi-Modal and Multi-Domain Data",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.1.6",
+              "sec_title": "Knowledge Distillation and Self-Supervised Learning",
+              "citations": [],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.2",
+          "sec_title": "Neural Network Architecture",
+          "citations": [
+            {
+              "title": "RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images",
+              "citation": "Chen, C., Zeng, W., Zhang, X., Zhou, Y., Yu, J., Chang, Y ., &amp; Wang, F (2024) RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images. IEEE Transactions on Geoscience and Remote Sensing. https://doi.org/10.1109/TGRS.2024.3482358"
+            },
+            {
+              "title": "ScorePillar: A Real-Time Small Object Detection Method Based on Pillar Scoring of Lidar Measurement",
+              "citation": "Cao, Z., Wang, T., Sun, P., Cao, F., Shao, S., &amp; Wang, S (2024) ScorePillar: A Real-Time Small Object Detection Method Based on Pillar Scoring of Lidar Measurement. IEEE Transactions on Instrumentation and Measurement 73: 1-13. https://doi.org/10.1109/TIM.2024.3378251"
+            },
+            {
+              "title": "Object feedback and feature information retention for small object detection in intelligent transportation scenes",
+              "citation": "Tian, D., Han, Y., &amp; Wang, S (2024) Object feedback and feature information retention for small object detection in intelligent transportation scenes. Expert Systems with Applications 238: 121811. https://doi.org/10.1016/J.ESWA.2023.121811"
+            },
+            {
+              "title": "ScorePillar: A Real-Time Small Object Detection Method Based on Pillar Scoring of Lidar Measurement",
+              "citation": "Cao, Z., Wang, T., Sun, P., Cao, F., Shao, S., &amp; Wang, S (2024) ScorePillar: A Real-Time Small Object Detection Method Based on Pillar Scoring of Lidar Measurement. IEEE Transactions on Instrumentation and Measurement 73: 1-13. https://doi.org/10.1109/TIM.2024.3378251"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "4.3",
+          "sec_title": "Clarity and Visual Information Improvement",
+          "citations": [
+            {
+              "title": "RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images",
+              "citation": "Chen, C., Zeng, W., Zhang, X., Zhou, Y., Yu, J., Chang, Y ., &amp; Wang, F (2024) RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images. IEEE Transactions on Geoscience and Remote Sensing. https://doi.org/10.1109/TGRS.2024.3482358"
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "4.3.1",
+              "sec_title": "SR for Image Quality Enhancement",
+              "citations": [
+                {
+                  "title": "A novel knowledge distillation framework for enhancing small object detection in blurry environments with unmanned aerial vehicle-assisted images",
+                  "citation": "Jobaer,  S., Tang,  X.  S.,  Zhang, Y .,  Li,  G.,  &amp; Ahmed,  F  (2025) A  novel  knowledge  distillation framework for enhancing small object detection in blurry environments with unmanned aerial vehicle-assisted images. Complex and Intelligent Systems 11(1):1-27. https://doi.org/10.1007/S40747"
+                },
+                {
+                  "title": "Small Object Detection in Remote Sensing Images Based on Redundant Feature Removal and Progressive Regression",
+                  "citation": "Yang, Y., Zang, B., Song, C., Li, B., Lang, Y ., Zhang, W., &amp; Huo, P (2024) Small Object Detection in  Remote  Sensing  Images  Based  on  Redundant  Feature  Removal  and  Progressive Regression. IEEE Transactions on Geoscience and Remote Sensing, 62. https://doi.org/10.1109/TGRS.2024.3417960"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.3.2",
+              "sec_title": "Utilizing Multi-Scale Information",
+              "citations": [
+                {
+                  "title": "Small object detection in unmanned aerial",
+                  "citation": "Song, G., Du, H., Zhang, X., Bao, F., &amp; Zhang, Y (2024) Small object detection in unmanned aerial"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.3.3",
+              "sec_title": "Fusion of Information Across Network Layers",
+              "citations": [
+                {
+                  "title": "MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images",
+                  "citation": "Jiang, L., Yuan, B., Du, J., Chen, B., Xie, H., Tian, J., &amp; Yuan, Z (2024) MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images. IEEE Transactions on Instrumentation and Measurement, 73: 1-14. https://doi.org/10.1109/TIM.2024.3381272"
+                },
+                {
+                  "title": "GCPDFFNet: Small Object Detection for Rice Blast Recognition",
+                  "citation": "Xie, D., Ye, W., Pan, Y ., Wang, J., Qiu, H., Wang, H., Li, Z., &amp; Chen, T (2024) GCPDFFNet: Small Object Detection for Rice Blast Recognition 114:1490-1501. https://doi.org/10.1094/PHYTO-09-23-0326-R"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.4",
+          "sec_title": "Data Augmentation and Synthetic Data",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.4.1",
+              "sec_title": "Data Augmentation Techniques for SOD",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.4.2",
+              "sec_title": "Synthetic Data Generation for SOD",
+              "citations": [
+                {
+                  "title": "Object feedback and feature information retention for small object detection in intelligent transportation scenes",
+                  "citation": "Tian, D., Han, Y., &amp; Wang, S (2024) Object feedback and feature information retention for small object detection in intelligent transportation scenes. Expert Systems with Applications 238: 121811. https://doi.org/10.1016/J.ESWA.2023.121811"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.4.3",
+              "sec_title": "Advantages of Data Augmentation and Synthetic Data in SOD",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.4.4",
+              "sec_title": "Challenges and Research Directions",
+              "citations": [
+                {
+                  "title": "Small Object Detection in Unmanned Aerial Vehicle Images Using Feature Fusion and Scaling-Based Single Shot Detector with Spatial Context Analysis",
+                  "citation": "Liang, X., Zhang, J., Zhuo, L., Li, Y., &amp; Tian, Q (2020) Small Object Detection in Unmanned Aerial Vehicle Images Using Feature Fusion and Scaling-Based Single Shot Detector with Spatial Context Analysis. IEEE Transactions on Circuits and Systems for Video Technology 30(6): 1758-1770. https://do"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "4.5",
+          "sec_title": "Multi-task and Transfer Learning",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "4.5.1",
+              "sec_title": "Multi-Task Learning for SOD",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.5.2",
+              "sec_title": "Transfer Learning for SOD",
+              "citations": [
+                {
+                  "title": "A Heatmap-Supplemented R-CNN Trained Using an Inflated IoU for Small Object Detection",
+                  "citation": "Butler, J., &amp; Leung, H (2024) A Heatmap-Supplemented R-CNN Trained Using an Inflated IoU for Small Object Detection. Remote Sensing 2024 16:4065. https://doi.org/10.3390/RS16214065"
+                },
+                {
+                  "title": "A novel knowledge distillation framework for enhancing small object detection in blurry environments with unmanned aerial vehicle-assisted images",
+                  "citation": "Jobaer,  S., Tang,  X.  S.,  Zhang, Y .,  Li,  G.,  &amp; Ahmed,  F  (2025) A  novel  knowledge  distillation framework for enhancing small object detection in blurry environments with unmanned aerial vehicle-assisted images. Complex and Intelligent Systems 11(1):1-27. https://doi.org/10.1007/S40747"
+                },
+                {
+                  "title": "ScorePillar: A Real-Time Small Object Detection Method Based on Pillar Scoring of Lidar Measurement",
+                  "citation": "Cao, Z., Wang, T., Sun, P., Cao, F., Shao, S., &amp; Wang, S (2024) ScorePillar: A Real-Time Small Object Detection Method Based on Pillar Scoring of Lidar Measurement. IEEE Transactions on Instrumentation and Measurement 73: 1-13. https://doi.org/10.1109/TIM.2024.3378251"
+                },
+                {
+                  "title": "An Efficient Rep-Style GaussianWasserstein Network: Improved UAV Infrared Small Object Detection for Urban Road Surveillance and Safety",
+                  "citation": "Aibibu,  T.,  Lan,  J.,  Zeng,  Y .,  Lu,  W.,  &amp;  Gu,  N  (2023b)  An  Efficient  Rep-Style  GaussianWasserstein  Network:  Improved  UAV  Infrared  Small  Object  Detection  for  Urban  Road Surveillance and Safety. Remote Sensing 2024 16:25. https://doi.org/10.3390/RS16010025"
+                },
+                {
+                  "title": "Object feedback and feature information retention for small object detection in intelligent transportation scenes",
+                  "citation": "Tian, D., Han, Y., &amp; Wang, S (2024) Object feedback and feature information retention for small object detection in intelligent transportation scenes. Expert Systems with Applications 238: 121811. https://doi.org/10.1016/J.ESWA.2023.121811"
+                },
+                {
+                  "title": "A size-distinguishing miniature electromagnetic tomography sensor for small object detection",
+                  "citation": "Zou, X., She, S., Xia, Z., Shao, Y ., Zhang, Z., Chen, Z., Zheng, X., Yu, K., &amp; Yin, W (2024) A sizedistinguishing miniature electromagnetic tomography sensor for small object detection. NDT &amp; E International 148: 103219. https://doi.org/10.1016/J.NDTEINT.2024.103219"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "4.5.3",
+              "sec_title": "Integration of Multi-Task and Transfer Learning",
+              "citations": [
+                {
+                  "title": "ScorePillar: A Real-Time Small Object Detection Method Based on Pillar Scoring of Lidar Measurement",
+                  "citation": "Cao, Z., Wang, T., Sun, P., Cao, F., Shao, S., &amp; Wang, S (2024) ScorePillar: A Real-Time Small Object Detection Method Based on Pillar Scoring of Lidar Measurement. IEEE Transactions on Instrumentation and Measurement 73: 1-13. https://doi.org/10.1109/TIM.2024.3378251"
+                },
+                {
+                  "title": "Small Object Detection in UAV Remote Sensing Images Based on Intra-Group Multi-Scale Fusion Attention and Adaptive Weighted Feature Fusion Mechanism",
+                  "citation": "Yuan, Z., Gong, J., Guo, B., Wang, C., Liao, N., Song, J., &amp; Wu, Q (2019) Small Object Detection in  UAV Remote Sensing Images Based on Intra-Group Multi-Scale Fusion Attention and Adaptive Weighted Feature Fusion Mechanism 22:4265. https://doi.org/10.3390/rs16224265"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "5",
+      "sec_title": "Datasets and Evaluation Metrics",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "5.1",
+          "sec_title": "Datasets",
+          "citations": [
+            {
+              "title": "MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images",
+              "citation": "Jiang, L., Yuan, B., Du, J., Chen, B., Xie, H., Tian, J., &amp; Yuan, Z (2024) MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images. IEEE Transactions on Instrumentation and Measurement, 73: 1-14. https://doi.org/10.1109/TIM.2024.3381272"
+            },
+            {
+              "title": "Small object detection using deep feature learning and feature fusion network",
+              "citation": "Tong, K., &amp; Wu, Y (2024) Small object detection using deep feature learning and feature fusion network. Engineering Applications of Artificial Intelligence 132: 107931. https://doi.org/10.1016/J.ENGAPPAI.2024.107931"
+            },
+            {
+              "title": "MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images",
+              "citation": "Jiang, L., Yuan, B., Du, J., Chen, B., Xie, H., Tian, J., &amp; Yuan, Z (2024) MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images. IEEE Transactions on Instrumentation and Measurement, 73: 1-14. https://doi.org/10.1109/TIM.2024.3381272"
+            },
+            {
+              "title": "A size-distinguishing miniature electromagnetic tomography sensor for small object detection",
+              "citation": "Zou, X., She, S., Xia, Z., Shao, Y ., Zhang, Z., Chen, Z., Zheng, X., Yu, K., &amp; Yin, W (2024) A sizedistinguishing miniature electromagnetic tomography sensor for small object detection. NDT &amp; E International 148: 103219. https://doi.org/10.1016/J.NDTEINT.2024.103219"
+            }
+          ],
+          "subsections": [
+            {
+              "sec_id": "5.1.1",
+              "sec_title": "Aerial Image Datasets",
+              "citations": [],
+              "subsections": [
+                {
+                  "sec_id": "5.1.1.1",
+                  "sec_title": "VisDrone",
+                  "citations": [],
+                  "subsections": []
+                },
+                {
+                  "sec_id": "5.1.1.2",
+                  "sec_title": "DIOR",
+                  "citations": [
+                    {
+                      "title": "Object detection in optical remote sensing images: A survey and a new benchmark",
+                      "citation": "Li, K., Wan, G., Cheng, G., Meng, L., &amp; Han, J (2020) Object detection in optical remote sensing images: A survey and  a  new  benchmark. ISPRS Journal of Photogrammetry and Remote Sensing 159: 296-307. https://doi.org/10.1016/J.ISPRSJPRS.2019.11.023"
+                    }
+                  ],
+                  "subsections": []
+                },
+                {
+                  "sec_id": "5.1.1.3",
+                  "sec_title": "DOTA",
+                  "citations": [
+                    {
+                      "title": "Object Detection in Aerial Images: A Large-Scale Benchmark and Challenges",
+                      "citation": "Ding, J., Xue, N., Xia, G. S., Bai, X., Yang, W., Yang, M. Y., Belongie, S., Luo, J., Datcu, M., Pelillo, M., &amp; Zhang, L (2022) Object Detection in Aerial Images: A Large-Scale Benchmark and Challenges. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(11): 7778-7796. https://do"
+                    }
+                  ],
+                  "subsections": []
+                },
+                {
+                  "sec_id": "5.1.1.4",
+                  "sec_title": "VEDAI",
+                  "citations": [
+                    {
+                      "title": "Vehicle detection in aerial imagery : A small target detection benchmark",
+                      "citation": "Razakarivony, S., &amp; Jurie, F (2016) Vehicle detection in aerial imagery : A small target detection benchmark.  Journal  of  Visual  Communication  and  Image  Representation  34:  187-203. https://doi.org/10.1016/J.JVCIR.2015.11.002"
+                    }
+                  ],
+                  "subsections": []
+                }
+              ]
+            },
+            {
+              "sec_id": "5.1.2",
+              "sec_title": "UAV-Based Datasets",
+              "citations": [],
+              "subsections": [
+                {
+                  "sec_id": "5.1.2.1",
+                  "sec_title": "UAVDT",
+                  "citations": [
+                    {
+                      "title": "Scale Match for Tiny Person Detection",
+                      "citation": "Yu, X., Gong, Y., Jiang, N., Ye, Q., &amp; Han, Z (2020) Scale Match for Tiny Person Detection  12571265. https://github.com/ucas-vg/TinyBenchmark"
+                    }
+                  ],
+                  "subsections": []
+                },
+                {
+                  "sec_id": "5.1.2.2",
+                  "sec_title": "SODA-D",
+                  "citations": [],
+                  "subsections": []
+                },
+                {
+                  "sec_id": "5.1.2.3",
+                  "sec_title": "DroneCrowd",
+                  "citations": [
+                    {
+                      "title": "Detection, Tracking, and Counting Meets Drones in Crowds: A Benchmark",
+                      "citation": "Wen, L., Du, D., Zhu, P., Hu, Q., Wang, Q., Bo, L., &amp; Lyu, S (2021) Detection, Tracking, and Counting Meets Drones in Crowds: A Benchmark (pp. 7812-7821)."
+                    }
+                  ],
+                  "subsections": []
+                }
+              ]
+            },
+            {
+              "sec_id": "5.1.3",
+              "sec_title": "Autonomous Driving Datasets",
+              "citations": [],
+              "subsections": [
+                {
+                  "sec_id": "5.1.3.1",
+                  "sec_title": "BDD100K",
+                  "citations": [],
+                  "subsections": []
+                },
+                {
+                  "sec_id": "5.1.3.2",
+                  "sec_title": "KITTI",
+                  "citations": [
+                    {
+                      "title": "KITTI-360: A Novel Dataset and Benchmarks for Urban Scene Understanding in 2D and 3D",
+                      "citation": "Liao, Y., Xie, J., &amp; Geiger, A (2021) KITTI-360: A Novel Dataset and Benchmarks for Urban Scene Understanding in 2D and 3D. IEEE Transactions on Pattern Analysis and Machine Intelligence, 45(3): 3292-3310. https://doi.org/10.1109/TPAMI.2022.3179507"
+                    }
+                  ],
+                  "subsections": []
+                }
+              ]
+            },
+            {
+              "sec_id": "5.1.4",
+              "sec_title": "Specialized Datasets for SOD",
+              "citations": [],
+              "subsections": [
+                {
+                  "sec_id": "5.1.4.1",
+                  "sec_title": "TinyPerson",
+                  "citations": [],
+                  "subsections": []
+                },
+                {
+                  "sec_id": "5.1.4.2",
+                  "sec_title": "WSODD",
+                  "citations": [],
+                  "subsections": []
+                },
+                {
+                  "sec_id": "5.1.4.3",
+                  "sec_title": "AI-TOD",
+                  "citations": [],
+                  "subsections": []
+                }
+              ]
+            },
+            {
+              "sec_id": "5.1.5",
+              "sec_title": "Synthetic Datasets",
+              "citations": [
+                {
+                  "title": "A Small-Object Detection Based Scheme for Multiplexed Frequency Hopping Recognition in Complex Electromagnetic Interference",
+                  "citation": "Chen, Z., Shi, Y., Wang, Y., Jiang, L., Yu, X., &amp; Li, X (2024) A Small-Object Detection Based Scheme  for  Multiplexed  Frequency  Hopping  Recognition  in  Complex  Electromagnetic Interference. IEEE Communications Letters, 28(4): 902-906. https://doi.org/10.1109/LCOMM.2024.3363167"
+                }
+              ],
+              "subsections": [
+                {
+                  "sec_id": "5.1.5.1",
+                  "sec_title": "Motion Blur Synthetic Dataset",
+                  "citations": [],
+                  "subsections": []
+                },
+                {
+                  "sec_id": "5.1.5.2",
+                  "sec_title": "Self-Collected Datasets",
+                  "citations": [
+                    {
+                      "title": "A size-distinguishing miniature electromagnetic tomography sensor for small object detection",
+                      "citation": "Zou, X., She, S., Xia, Z., Shao, Y ., Zhang, Z., Chen, Z., Zheng, X., Yu, K., &amp; Yin, W (2024) A sizedistinguishing miniature electromagnetic tomography sensor for small object detection. NDT &amp; E International 148: 103219. https://doi.org/10.1016/J.NDTEINT.2024.103219"
+                    }
+                  ],
+                  "subsections": []
+                }
+              ]
+            },
+            {
+              "sec_id": "5.1.6",
+              "sec_title": "Comparative Insights and Challenges",
+              "citations": [
+                {
+                  "title": "MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images",
+                  "citation": "Jiang, L., Yuan, B., Du, J., Chen, B., Xie, H., Tian, J., &amp; Yuan, Z (2024) MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images. IEEE Transactions on Instrumentation and Measurement, 73: 1-14. https://doi.org/10.1109/TIM.2024.3381272"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.1.7",
+              "sec_title": "Future Directions",
+              "citations": [
+                {
+                  "title": "An effective method for small objects detection based on MDFFAM and LKSPP",
+                  "citation": "Xu, Z.,  Xu, Y.,  &amp; Wang,  M  (2024) An  effective  method  for  small  objects  detection  based  on MDFFAM and LKSPP. Scientific  Reports  2024  14:1-14.  https://doi.org/10.1038/s41598024-60745-9"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "sec_id": "5.2",
+          "sec_title": "Evaluation Metrics",
+          "citations": [],
+          "subsections": [
+            {
+              "sec_id": "5.2.1",
+              "sec_title": "Metrics Commonly Used Across General Object Detection",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.2.2",
+              "sec_title": "Metrics for Size-Specific Detection",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.2.3",
+              "sec_title": "Tracking-Specific Metrics",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.2.4",
+              "sec_title": "Core Metrics for Precision and Recall",
+              "citations": [],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.2.5",
+              "sec_title": "Specialized Metrics for Small Object Datasets",
+              "citations": [
+                {
+                  "title": "Enhancing Representation Learning With Spatial Transformation and Early Convolution for Reinforcement Learning-Based Small Object Detection",
+                  "citation": "Fang, F., Liang, W., Cheng, Y., Xu, Q., &amp; Lim, J. H (2024) Enhancing Representation Learning With  Spatial  Transformation  and  Early  Convolution  for  Reinforcement  Learning-Based Small Object Detection. IEEE Transactions on Circuits and Systems for Video Technology, 34(1): 315-328. https://"
+                },
+                {
+                  "title": "A size-distinguishing miniature electromagnetic tomography sensor for small object detection",
+                  "citation": "Zou, X., She, S., Xia, Z., Shao, Y ., Zhang, Z., Chen, Z., Zheng, X., Yu, K., &amp; Yin, W (2024) A sizedistinguishing miniature electromagnetic tomography sensor for small object detection. NDT &amp; E International 148: 103219. https://doi.org/10.1016/J.NDTEINT.2024.103219"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.2.6",
+              "sec_title": "Dataset-Specific Metric Implementation",
+              "citations": [
+                {
+                  "title": "SONet: A small object detection network for power line inspection based on YOLOv8",
+                  "citation": "Shi,  W.,  Lyu,  X.,  &amp;  Han,  L  (2024)  SONet: A  small  object  detection  network  for  power  line inspection based on YOLOv8. IEEE Transactions on Power Delivery. https://doi.org/10.1109/TPWRD.2024.3450185"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "sec_id": "5.2.7",
+              "sec_title": "Computational Efficiency Metrics",
+              "citations": [
+                {
+                  "title": "Enhancing Representation Learning With Spatial Transformation and Early Convolution for Reinforcement Learning-Based Small Object Detection",
+                  "citation": "Fang, F., Liang, W., Cheng, Y., Xu, Q., &amp; Lim, J. H (2024) Enhancing Representation Learning With  Spatial  Transformation  and  Early  Convolution  for  Reinforcement  Learning-Based Small Object Detection. IEEE Transactions on Circuits and Systems for Video Technology, 34(1): 315-328. https://"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sec_id": "6",
+      "sec_title": "Applications and Real-world Use Cases",
+      "citations": [],
+      "subsections": [
+        {
+          "sec_id": "6.1",
+          "sec_title": "Remote Sensing and Aerial Surveillance",
+          "citations": [
+            {
+              "title": "LARS: Remote Sensing Small Object Detection Network Based on Adaptive Channel Attention and Large Kernel Adaptation",
+              "citation": "Li, Y., Yang, Y ., An, Y ., Sun, Y ., &amp; Zhu, Z (2024) LARS: Remote Sensing Small Object Detection Network  Based  on  Adaptive  Channel  Attention  and  Large  Kernel  Adaptation.  Remote Sensing 2024 16(16): 2906. https://doi.org/10.3390/RS16162906"
+            },
+            {
+              "title": "ESL-YOLO: Small Object Detection with Effective Feature Enhancement and Spatial-Context-Guided Fusion Network for Remote Sensing",
+              "citation": "Zheng, X., Qiu, Y., Zhang, G., Lei, T., &amp; Jiang, P (2024)  ESL-YOLO: Small Object Detection with  Effective  Feature  Enhancement  and  Spatial-Context-Guided  Fusion  Network  for Remote Sensing. Remote Sensing 2024 16:4374. https://doi.org/10.3390/RS16234374"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.2",
+          "sec_title": "UAV and Drone Applications",
+          "citations": [
+            {
+              "title": "RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images",
+              "citation": "Chen, C., Zeng, W., Zhang, X., Zhou, Y., Yu, J., Chang, Y ., &amp; Wang, F (2024) RSDS: A Specialized Loss Calculation Method for Dense Small Object Detection in Remote Sensing Images. IEEE Transactions on Geoscience and Remote Sensing. https://doi.org/10.1109/TGRS.2024.3482358"
+            },
+            {
+              "title": "LA-YOLO: Bidirectional Adaptive Feature Fusion Approach for Small Object Detection of Insulator Self-explosion Defects",
+              "citation": "Liu, B., &amp; Jiang, W (2024) LA-YOLO: Bidirectional Adaptive Feature Fusion Approach for Small Object Detection of Insulator Self-explosion Defects. IEEE Transactions on Power Delivery. https://doi.org/10.1109/TPWRD.2024.3467915"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.3",
+          "sec_title": "Autonomous Systems",
+          "citations": [
+            {
+              "title": "LA-YOLO: Bidirectional Adaptive Feature Fusion Approach for Small Object Detection of Insulator Self-explosion Defects",
+              "citation": "Liu, B., &amp; Jiang, W (2024) LA-YOLO: Bidirectional Adaptive Feature Fusion Approach for Small Object Detection of Insulator Self-explosion Defects. IEEE Transactions on Power Delivery. https://doi.org/10.1109/TPWRD.2024.3467915"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.4",
+          "sec_title": "Industrial Applications",
+          "citations": [
+            {
+              "title": "An effective method for small objects detection based on MDFFAM and LKSPP",
+              "citation": "Xu, Z.,  Xu, Y.,  &amp; Wang,  M  (2024) An  effective  method  for  small  objects  detection  based  on MDFFAM and LKSPP. Scientific  Reports  2024  14:1-14.  https://doi.org/10.1038/s41598024-60745-9"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.5",
+          "sec_title": "Surveillance and Security",
+          "citations": [],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.6",
+          "sec_title": "Environmental and Natural Resource Monitoring",
+          "citations": [
+            {
+              "title": "Improved YOLOv8 algorithms for small object detection in aerial imagery",
+              "citation": "Feng, F., Hu, Y ., Li, W., &amp; Yang, F (2024) Improved YOLOv8 algorithms for small object detection in aerial imagery. Journal of King Saud University - Computer and Information Sciences,"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.7",
+          "sec_title": "Medical Imaging and Biological Analysis",
+          "citations": [
+            {
+              "title": "A size-distinguishing miniature electromagnetic tomography sensor for small object detection",
+              "citation": "Zou, X., She, S., Xia, Z., Shao, Y ., Zhang, Z., Chen, Z., Zheng, X., Yu, K., &amp; Yin, W (2024) A sizedistinguishing miniature electromagnetic tomography sensor for small object detection. NDT &amp; E International 148: 103219. https://doi.org/10.1016/J.NDTEINT.2024.103219"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.8",
+          "sec_title": "Maritime and Oceanographic Applications",
+          "citations": [
+            {
+              "title": "An efficient model for small object detection in the maritime environment",
+              "citation": "Shao, Z., Yin, Y., Lyu, H., Guedes Soares, C., Cheng, T., Jing, Q., &amp; Yang, Z (2024) An efficient model for small object detection in the maritime environment. Applied Ocean Research 152: 104194. https://doi.org/10.1016/J.APOR.2024.104194"
+            },
+            {
+              "title": "An efficient model for small object detection in the maritime environment",
+              "citation": "Shao, Z., Yin, Y., Lyu, H., Guedes Soares, C., Cheng, T., Jing, Q., &amp; Yang, Z (2024) An efficient model for small object detection in the maritime environment. Applied Ocean Research 152: 104194. https://doi.org/10.1016/J.APOR.2024.104194"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.9",
+          "sec_title": "Intelligent Transportation Systems",
+          "citations": [
+            {
+              "title": "MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images",
+              "citation": "Jiang, L., Yuan, B., Du, J., Chen, B., Xie, H., Tian, J., &amp; Yuan, Z (2024) MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images. IEEE Transactions on Instrumentation and Measurement, 73: 1-14. https://doi.org/10.1109/TIM.2024.3381272"
+            },
+            {
+              "title": "MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images",
+              "citation": "Jiang, L., Yuan, B., Du, J., Chen, B., Xie, H., Tian, J., &amp; Yuan, Z (2024) MFFSODNet: Multiscale Feature Fusion Small Object Detection Network for UAV Aerial Images. IEEE Transactions on Instrumentation and Measurement, 73: 1-14. https://doi.org/10.1109/TIM.2024.3381272"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "sec_id": "6.10",
+          "sec_title": "Specialized Applications in Agriculture and Forestry",
+          "citations": [
+            {
+              "title": "ESL-YOLO: Small Object Detection with Effective Feature Enhancement and Spatial-Context-Guided Fusion Network for Remote Sensing",
+              "citation": "Zheng, X., Qiu, Y., Zhang, G., Lei, T., &amp; Jiang, P (2024)  ESL-YOLO: Small Object Detection with  Effective  Feature  Enhancement  and  Spatial-Context-Guided  Fusion  Network  for Remote Sensing. Remote Sensing 2024 16:4374. https://doi.org/10.3390/RS16234374"
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "sec_id": "7",
+      "sec_title": "Future Directions",
+      "citations": [
+        {
+          "title": "A Small-Object Detection Based Scheme for Multiplexed Frequency Hopping Recognition in Complex Electromagnetic Interference",
+          "citation": "Chen, Z., Shi, Y., Wang, Y., Jiang, L., Yu, X., &amp; Li, X (2024) A Small-Object Detection Based Scheme  for  Multiplexed  Frequency  Hopping  Recognition  in  Complex  Electromagnetic Interference. IEEE Communications Letters, 28(4): 902-906. https://doi.org/10.1109/LCOMM.2024.3363167"
+        },
+        {
+          "title": "An effective method for small objects detection based on MDFFAM and LKSPP",
+          "citation": "Xu, Z.,  Xu, Y.,  &amp; Wang,  M  (2024) An  effective  method  for  small  objects  detection  based  on MDFFAM and LKSPP. Scientific  Reports  2024  14:1-14.  https://doi.org/10.1038/s41598024-60745-9"
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "sec_id": "8",
+      "sec_title": "Conclusion",
+      "citations": [],
+      "subsections": []
+    }
+  ]
+}
