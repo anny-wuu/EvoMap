@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://href-inclusive-moments-thesis.trycloudflare.com"><b>🚀 Try the Demo</b></a> ·
+  <a href="https://sauce-repository-reviews-thermal.trycloudflare.com"><b>🚀 Try the Demo</b></a> ·
   <a href="./PaperTaxoBench/"><b>📊 PaperTaxoBench</b></a>
 </p>
 
@@ -30,7 +30,7 @@ This design enables users to inspect the overall topic structure, identify repre
 
 We provide an online demo for interacting with the EvoMap system.
 
-👉 **[Click Here to Access the Demo](https://href-inclusive-moments-thesis.trycloudflare.com)**
+👉 **[Click Here to Access the Demo](https://sauce-repository-reviews-thermal.trycloudflare.com)**
 
 Through the demo, users can explore how EvoMap transforms a research topic into a structured literature map, including a hierarchical taxonomy, representative papers, temporal evolution patterns, and citation-intent-aware paper relations.
 
